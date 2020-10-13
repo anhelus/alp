@@ -1,0 +1,35 @@
+site_name: Informatica - Corso di Laurea in Matematica - UniBa
+nav:
+  - Home: 00_intro_corso.md
+  - Algoritmi: 01_intro_algoritmi.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition # notes make pretty
+  - attr_list
+  - footnotes
+  - meta # page-specific context
+  - toc:
+      permalink: true # inserts an anchor
+  - sane_lists # better ul and ol
+  - nl2br # newline hard break
+  - pymdownx.betterem: # better italic and bold
+      smart_enable: asterisk
+  - pymdownx.caret # insert text and superscript
+  - pymdownx.details # details and summary; work with admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight: # better code, instead of CodeHilite           <--------
+      linenums: false
+  - pymdownx.inlinehilite # like codehilite but inline
+  - pymdownx.magiclink # auto links
+  - pymdownx.mark # highlight text
+  - pymdownx.smartsymbols # special symbols
+  - pymdownx.superfences: # nest code blocks under other blocks   <-------
+  - pymdownx.tasklist: # better tasks lists
+      custom_checkbox: true
+  - pymdownx.tabbed # auto tabs
+  - pymdownx.tilde # strike through cross out text
