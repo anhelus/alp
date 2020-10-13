@@ -1,4 +1,4 @@
-## Cosa è un problema?
+## Formulare un problema
 
 Possiamo iniziare la nostra dissertazione partendo dalla definizione del concetto di _problema_.
 
@@ -6,24 +6,55 @@ Il De Mauro lo definisce come un:
 
 > _quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza_
 
-Analizziamo brevemente questa definizione.
+Questa definizione ci dà tutti gli elementi necessari a *formulare* un problema. Analizziamoli nel dettaglio insieme.
 
-Un problema è, per prima cosa, un _quesito da risolvere_. Esempi concreti possono essere quindi quesiti come:
+### Il problema come *compito*
+
+Un problema è, per prima cosa, un _quesito_, o un _compito_, che _necessita di una risoluzione_. Esempi concreti possono essere quindi:
 
 - _"Come montare il mobile che abbiamo appena acquistato dall'IKEA?"_
 - _"Come calcolare l'area di un triangolo rettangolo?"_
 - _"Come dimostrare l'ipotesi di Riemann?"_
-  sL'ultimo esempio, in particolare, è un _grosso_ problema.
 
-Consultando il De Mauro,
+Tra questi esempi, ovviamente, ce ne sono almeno due che probabilmente non sono di facile soluzione.
 
-Partiamo nella nostra dissertazione dalla definizione di Problema
+### Il *risolutore*
 
-Quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza.
+Per risolvere un problema è necessario ricorrere ad uno o più _enti_, propriamente intesi come _esecutori_ o _risolutori_ del problema. Tornando agli esempi precedenti, il risolutore del primo problema è, ovviamente, chi monta il mobile, quello per il secondo problema è invece lo studente (o la calcolatrice), mentre nel terzo caso abbiamo il matematico teorico che risolve (o confuta) l'ipotesi di Riemann.
 
-Risolvere un problema
-Sì, ma cosa significa risolvere un problema? Dal punto di vista pratico, significa compiere un insieme (finito) di attività per ottenere l’effetto desiderato.
-Esistono diverse soluzioni ad un problema.
+### Gli *elementi noti* e le _condizioni fissate_
+
+Il problema può essere risolto soltanto partendo da _elementi noti_. Questo significa, intuitivamente, avere la conoscenza di una serie di _condizioni iniziali_ dalle quali partire per risolvere il problema.
+
+Al solito, riprendiamo i nostri esempi.
+
+Per montare il nostro mobile dell'IKEA, avremo bisogno di conoscere una serie di condizioni iniziali, come ad esempio:
+
+* dove collocare il mobile;
+* quali e quanti pezzi ci sono nella confezione;
+* di che attrezzi necessitiamo.
+
+A questi, possiamo aggiungere alcune _condizioni_ che vogliamo rispettare, come ad esempio il voler completare la costruzione del mobile in un paio d'ore al massimo, o il provare a non rompere nulla.
+
+Analogamente, per calcolare l'area di un triangolo rettangolo, dovremo conoscerne base ed altezza, e rispettare i vincoli imposti dalla geometria di base.
+
+La determinazione degli elementi noti e delle condizioni fissate per la dimostrazione dell'ipotesi di Riemann è lasciata come banale esercizio al lettore.
+
+## Risolvere un problema
+
+Abbiamo visto che per formulare un problema dobbiamo determinare il quesito da risolvere, capire chi (o cosa) lo risolverà, ed infine esplorare le condizioni iniziali e gli eventuali vincoli.
+
+Ciò ci permette però di 
+
+Abbiamo quin
+
+
+
+Abbiamo quindi visto che la formulazione di un problema 
+
+Per risolvere un problema, 
+
+
 
 Problem solving
 Il problem solving prevede il passaggio dalla formulazione del problema all’individuazione di un metodo risolutivo.

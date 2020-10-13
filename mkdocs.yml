@@ -1,7 +1,7 @@
 site_name: Informatica - Corso di Laurea in Matematica - UniBa
 nav:
-  - Home: 00_intro_corso.md
-  - Algoritmi: 01_intro_algoritmi.md
+  - Home: 00_intro.md
+  - Algoritmi: 01_algoritmi.md
 
 theme:
   name: material
