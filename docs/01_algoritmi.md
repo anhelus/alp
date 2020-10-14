@@ -6,9 +6,9 @@ Il De Mauro lo definisce come un:
 
 > _quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza_
 
-Questa definizione ci dà tutti gli elementi necessari a *formulare* un problema. Analizziamoli nel dettaglio insieme.
+Questa definizione ci dà tutti gli elementi necessari a _formulare_ un problema. Analizziamoli nel dettaglio insieme.
 
-### Il problema come *compito*
+### Il problema come _compito_
 
 Un problema è, per prima cosa, un _quesito_, o un _compito_, che _necessita di una risoluzione_. Esempi concreti possono essere quindi:
 
@@ -18,11 +18,11 @@ Un problema è, per prima cosa, un _quesito_, o un _compito_, che _necessita di 
 
 Tra questi esempi, ovviamente, ce ne sono almeno due che probabilmente non sono di facile soluzione.
 
-### Il *risolutore*
+### Il _risolutore_
 
 Per risolvere un problema è necessario ricorrere ad uno o più _enti_, propriamente intesi come _esecutori_ o _risolutori_ del problema. Tornando agli esempi precedenti, il risolutore del primo problema è, ovviamente, chi monta il mobile, quello per il secondo problema è invece lo studente (o la calcolatrice), mentre nel terzo caso abbiamo il matematico teorico che risolve (o confuta) l'ipotesi di Riemann.
 
-### Gli *elementi noti* e le _condizioni fissate_
+### Gli _elementi noti_ e le _condizioni fissate_
 
 Il problema può essere risolto soltanto partendo da _elementi noti_. Questo significa, intuitivamente, avere la conoscenza di una serie di _condizioni iniziali_ dalle quali partire per risolvere il problema.
 
@@ -30,9 +30,9 @@ Al solito, riprendiamo i nostri esempi.
 
 Per montare il nostro mobile dell'IKEA, avremo bisogno di conoscere una serie di condizioni iniziali, come ad esempio:
 
-* dove collocare il mobile;
-* quali e quanti pezzi ci sono nella confezione;
-* di che attrezzi necessitiamo.
+- dove collocare il mobile;
+- quali e quanti pezzi ci sono nella confezione;
+- di che attrezzi necessitiamo.
 
 A questi, possiamo aggiungere alcune _condizioni_ che vogliamo rispettare, come ad esempio il voler completare la costruzione del mobile in un paio d'ore al massimo, o il provare a non rompere nulla.
 
@@ -42,80 +42,60 @@ La determinazione degli elementi noti e delle condizioni fissate per la dimostra
 
 ## Risolvere un problema
 
-Abbiamo visto che per formulare un problema dobbiamo determinare il quesito da risolvere, capire chi (o cosa) lo risolverà, ed infine esplorare le condizioni iniziali e gli eventuali vincoli.
+Come abbiamo visto, formulare un problema implica determinare il quesito da risolvere (il "cosa?"), l'esecutore della risoluzione (il "chi?") e lo stato di partenza (in maniera non proprio ortodossa, il "da dove?").
 
-Ciò ci permette però di 
+Risolvere il problema, però, significa andare oltre alla sua formulazione, allo scopo di individuare un apposito _metodo di risoluzione_. Dal punto di vista formale, possiamo esprimere questo passaggio come la ricerca di una funzione che colleghi lo spazio dei problemi allo spazio delle soluzioni; in parole povere, queste prevedono l'individuazione di tutti gli step necessari alla risoluzione del problema.
 
-Abbiamo quin
+INSERIRE FIGURA
 
+La possibilità di costruire il metodo di risoluzione è legata a diverse parti fondamentali, ed in particolare:
 
-
-Abbiamo quindi visto che la formulazione di un problema 
-
-Per risolvere un problema, 
-
-
-
-Problem solving
-Il problem solving prevede il passaggio dalla formulazione del problema all’individuazione di un metodo risolutivo.
-
-La formulazione di un problema è imprescindibile: dobbiamo sempre e comunque sapere da che punto dobbiamo partire.
-
-Immaginiamo, ad esempio di voler capire come organizzare la nostra libreria. Per prima cosa, occorre formulare il problema, ovvero capire “cosa” fare.
-
-Una possibile formulazione del problema è la seguente:
-
-Dati n libri, disposti in modo casuale, organizzarli in ordine alfabetico in modo che non ve ne siano più di dieci per ciascuno scaffale.
-
-Nella precedente formulazione, alquanto informale, notiamo alcuni aspetti: in primis, stabiliamo quella che è una vera e propria condizione iniziale, legata al fatto che i nostri libri sono disposti in maniera casuale. Successivamente, individuiamo un obiettivo, ovvero quello di organizzare i libri in ordine alfabetico. In questo caso specifico, inotlre, abbiamo anche a che fare con un vincolo, legato al fatto che non ci devono essere più di dieci libri su ciascuno scaffale.
-
-Formulare un problema significa individuarlo da un punto di vista più o meno formale.
-FARE ESEMPI
-
-Dopo che il problema è stato formulato, si deve costruire un metodo di soluzione del problema. In pratica, occorre individuare gli step necessari alla sua risoluzione.
-
-Una volta individuati, occorre eseguire la soluzione. Questa può essere “delegata” ad un esecutore: questi deve essere in grado di comprendere la descrizione della soluzione, ed eseguire contestualmente le operazioni richieste.
-
-La costruione del metodo risolutivo è legata:
-
-alle operazioni semplici disponibili
-alle modalità secondo cui queste operazioni possono essere composte per realizzare operazioni più complesse
-sequeza (una dopo l’altra)
-parallelo (contemporaneamente, o comunque in un’opportuna finrestra temporale)
-
-Dati
-Descrizione (anche parziale) di una situazione iniziale e di un obiettivo
-
-I dati possono essere descritti in un linguaggio naturale, che permetta di descrivere situazioni (oggetti) e differenze tra diverse situazioni.
+- le operazioni atomiche disponibili;
+- il modo in cui queste operazioni possono essere "composte" per realizzare delle operazioni più complesse, ovvero sequenza (un'operazione eseguita dopo l'altra) e parallelo (due o più operazioni eseguite contemporaneamente, o comunque in un'opportuna finestra temporale).
 
 Insieme di operatori applicabili a situazioni per trasformarle in nuove situazioni
 espressi in un linguaggio che fa riferimento al processo
 ogni sequenza di operatore è a sua volta un operatore composto
 
-La soluzione è un operatore (composto) nel linguaggio di proceso che trasformaa loggetto che descrive la situazione iniziale in quello che descrive la situazione desiderata.
+## Di cosa ha bisogno un problema per la sua risoluzione?
 
-Per algoritmo si intende la serie di prescrizioni o istruzioni che specifica l’insieme delle azioni da compiere per poter risolvere un problema.
+### Dati
 
-Un esempio di algoritmo sono, per esempio, le istruzioni per il montaggio dei mobili IKEA.
+Per prima cosa, abbiamo bisogno dei _dati_ del problema. I dati rappresentano la descrizione, anche parziale, della _situazione iniziale_ e dell'_obiettivo_. Normalmente, i dati possono essere descritti in un linguaggio naturale, che permette di descrivere situazioni (oggetti) e differenze tra diverse situazioni.
 
-Proviamo a caratterizzare un semplice problema matematico, ovvero il calcolo del Massimo Comun Divisore.
+### Soluzione
 
-Problema
+La soluzione è un operatore (composto) nel linguaggio di processo che trasforma l'oggetto che descrive la situazione iniziale in quello che descrive la situazione desiderata. Per algoritmo si intende la serie di prescrizioni o istruzioni che specifica l’insieme delle azioni da compiere per poter risolvere un problema.
 
-Formulazione: Dati due numeri interi n ed m, individuare il Massimo Comun Divisore.
+## Un esempio
 
-Dati
-Sia n il maggiore tra i due, ed m il minore.
+Facciamo un esempio. Proviamo a formulare e risolvere un semplice problema matematico, ovvero il calcolo del Massimo Comun Divisore.
 
-Algoritmo risolutivo
-Dividendo n per m, si ottiene un quoziente q ed un rest r.
-Ripetiamo l’operazione preceente con m ed r al posto rispettivamente di n ed m.
+### Formulazione del problema
 
-Quando si ottiene r = 0, l’algoritmo si arresta, ed il resto ottenuto all’interazione precedente è il MCD ricercato.
+> Dati due numeri interi _n_ ed _m_, individuare il _Massimo Comun Divisore_ (_MCD_).
 
-ESEMPIO DI CALCOLO
+### Dati
 
-Proprietà degli algoritmi
+Sia _n_ il maggiore tra i due numeri, ed _m_ il minore.
+
+### Algoritmo risolutivo
+
+1. Dividere _n_ per _m_. Il risultato di questa operazione è rappresentato da un quoziente _q_ ed un resto _r_.
+2. Reiterare l'operazione precedente ponendo _n = m_ ed _m = r_.
+3. Se _r = 0_, l'algoritmo si arresta; il valore di _r_ ottenuto all'iterazione precedente è il MCD ricercato.
+
+### Esempio numerico
+
+DA FARE
+
+## Caratteristiche degli algoritmi risolutivi
+
+Le caratteristiche degli algoritmi risolutive sono principalmente quattro.
+
+### Finitezza
+
+Gli algoritmi devono essere _finiti_, sia dal punto di vista _spaziale_, sia dal punto di vista _temporale_. Ciò significa che un algoritmo deve essere esprimibile in uno
 
 Gli algoritmi sono:
 Finitezza

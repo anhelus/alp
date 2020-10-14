@@ -2,13 +2,15 @@
 
 Possiamo definire la disciplina dell'_informatica_ partendo dall'analisi dell'etimologia della parola stessa.
 
-Notiamo infatti come **informatica** derivi dall'unione delle parole ***info****rmazione* ed *auto****matica***: stiamo quindi parlando di una disciplina che concerne l'_elaborazione automatica_ delle _informazioni_. E' però utile sottolinearne anche la natura prettamente scientifica, rimarcata nella definizione inglese del termine, ovvero _computer science_; a partire da queste nozioni, possiamo arrivare ad una definizione "empirica" del tipo:
+Notiamo infatti come **informatica** derivi dall'unione delle parole **\*info\*\***rmazione* ed *auto\***_matica_**: stiamo quindi parlando di una disciplina che concerne l'_elaborazione automatica_ delle _informazioni_. E' però utile sottolinearne anche la natura prettamente scientifica, rimarcata nella definizione inglese del termine, ovvero _computer science_; a partire da queste nozioni, possiamo arrivare ad una definizione "empirica" del tipo:
 
 > L'informatica è la disciplina scientifica che si occupa di elaborazione automatica delle informazioni.
 
-E' quindi interessante sottolineare la *dualità* dell'informatica. Da un lato, abbiamo aspetti prettamente pratici, che riguardano la trasmissione, condivisione ed elaborazione automatica delle informazioni disponibili in un sistema; dall'altro, vi sono aspetti teorici, legati ad esempio alle parti logico-matematiche che studiano le nozioni dietro all'elaborazione degli algoritmi di calcolo eseguibili in maniera automatica.
+La scienza che si occupa dell'ordinamento, del trattamento e della trasmissione delle informazioni per mezzo dell'elaborazione elettronica, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.
 
-## Le informazioni
+E' quindi interessante sottolineare la _dualità_ dell'informatica. Da un lato, abbiamo aspetti prettamente pratici, che riguardano la trasmissione, condivisione ed elaborazione automatica delle informazioni disponibili in un sistema; dall'altro, vi sono aspetti teorici, legati ad esempio alle parti logico-matematiche che studiano le nozioni dietro all'elaborazione degli algoritmi di calcolo eseguibili in maniera automatica.
+
+## Il concetto di informazione
 
 Va bene, ma quali informazioni si elaborano nei sistemi informatici?
 
@@ -20,9 +22,9 @@ Un sistema informatico è quello della nostra palestra, che ci indica quando dob
 
 Ed un sistema informatico è quello che gestisce le informazioni presenti nel nostro account Facebook, suggerendoci amicizie ed influenzando in maniera subconscia i nostri gusti.
 
-Tutti questi sistemi hanno un punto di contatto in comune: l'elaboratore, o, nell'accezione più comune del termine, il *computer*.
+Tutti questi sistemi hanno un punto di contatto in comune: l'elaboratore, o, nell'accezione più comune del termine, il _computer_.
 
-## Il computer
+## I sistemi di elaborazione
 
 Il computer è lo strumento che normalmente deleghiamo all'elaborazione e gestione delle informazioni.
 
@@ -34,8 +36,8 @@ Per usare un adagio comune nel mondo dell'informatica, l'hardware è la parte ch
 
 L'informatico, nell'accezione comune, è il tuttologo che, dal suo altare collocato dietro ad un monitor, è in grado di risolvere qualsiasi problema del mondo moderno con la semplice imposizione dello sguardo.
 
-In realtà, però, questo non è vero. Così come non esiste un medico specializzato nella cura di ogni malattia, nessun informatico conosce a menadito tutti gli aspetti del mondo dei calcolatori elettronici: vi sono quindi figure specializzate nella riparazione dei computer, informatici più avvezzi al controllo delle reti di telecomunicazioni, sistemisti, esperti di cybersecurity, system architects, UX/UI designer e, infine, i più bistrattati tra tutti, i *programmatori*.
+In realtà, però, questo non è vero. Così come non esiste un medico specializzato nella cura di ogni malattia, nessun informatico conosce a menadito tutti gli aspetti del mondo dei calcolatori elettronici: vi sono quindi figure specializzate nella riparazione dei computer, informatici più avvezzi al controllo delle reti di telecomunicazioni, sistemisti, esperti di cybersecurity, system architects, UX/UI designer e, infine, i più bistrattati tra tutti, i _programmatori_.
 
-Il loro ruolo è però fondamentale: infatti, sono delegati alla scrittura del software che permetterà all'hardware di *elaborare le informazioni*. A grandi linee, possiamo paragonarli a degli *artigiani digitali*: sono i tecnici che sono dietro al funzionamento di tutto ciò che permette al mondo moderno di andare avanti, comunicando, commerciando ed interagendo da dietro ad un monitor senza soluzione di continuità.
+Il loro ruolo è però fondamentale: infatti, sono delegati alla scrittura del software che permetterà all'hardware di _elaborare le informazioni_. A grandi linee, possiamo paragonarli a degli _artigiani digitali_: sono i tecnici che sono dietro al funzionamento di tutto ciò che permette al mondo moderno di andare avanti, comunicando, commerciando ed interagendo da dietro ad un monitor senza soluzione di continuità.
 
 Possiamo quindi ben dire che, senza i programmatori, e conseguentemente il software da loro scritto, non avremmo potuto probabilmente vedere nulla di quello che abbiamo dato per scontato negli ultimi cinquanta anni.
