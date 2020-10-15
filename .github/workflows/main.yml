@@ -2,9 +2,9 @@ name: Publish docs using MkDocs
 
 on:
 	push:
-		branches: [main]
+		branches: [master]
 	pull_request:
-		branches: [main]
+		branches: [master]
 jobs:
 	build:
 		name: Build and Publish docs
@@ -24,4 +24,5 @@ jobs:
 				pip install mkdocs-material
 			- name: Deploy
 			  run: |
-				git pull mkdocs gh-deploy
+				git pull
+				mkdocs gh-deploy
