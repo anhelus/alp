@@ -2,9 +2,9 @@ name: Publish docs using MkDocs
 
 on:
 	push:
-		branches: [master]
+		branches: [main]
 	pull_request:
-		branches: [master]
+		branches: [main]
 jobs:
 	build:
 		name: Build and Publish docs
