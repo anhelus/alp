@@ -1,0 +1,447 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.0.2">
+    
+    
+      
+        <title>Introduzione all'Informatica - Informatica - Corso di Laurea in Matematica - UniBa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.38780c08.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.3f72e892.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#una-definizione-di-informatica" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Informatica - Corso di Laurea in Matematica - UniBa
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Introduzione all'Informatica
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Informatica - Corso di Laurea in Matematica - UniBa
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduzione all'Informatica
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Introduzione all'Informatica
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#una-definizione-di-informatica" class="md-nav__link">
+    Una definizione di informatica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-concetto-di-informazione" class="md-nav__link">
+    Il concetto di informazione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-sistemi-di-elaborazione" class="md-nav__link">
+    I sistemi di elaborazione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-ruolo-dellinformatico" class="md-nav__link">
+    Il ruolo dell'informatico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riferimenti" class="md-nav__link">
+    Riferimenti
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01_algoritmi/" class="md-nav__link">
+      Introduzione agli Algoritmi
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#una-definizione-di-informatica" class="md-nav__link">
+    Una definizione di informatica
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-concetto-di-informazione" class="md-nav__link">
+    Il concetto di informazione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#i-sistemi-di-elaborazione" class="md-nav__link">
+    I sistemi di elaborazione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-ruolo-dellinformatico" class="md-nav__link">
+    Il ruolo dell'informatico
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#riferimenti" class="md-nav__link">
+    Riferimenti
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Introduzione all'Informatica</h1>
+                
+                <h2 id="una-definizione-di-informatica">Una definizione di <em>informatica</em><a class="headerlink" href="#una-definizione-di-informatica" title="Permanent link">&para;</a></h2>
+<p>Dare una definizione alla disciplina dell'<em>informatica</em> può aiutare a comprenderne la natura. Per farlo, partiamo da una breve analisi dell'etimologia della parola stessa.</p>
+<p>Il termine è infatti il corrispondente italiano del francese <em>informatique</em>, nato dalla contrazione delle parole <em>information</em> ed <em>automatique</em> [1]. Possiamo quindi arrivare ad una prima, informale, definizione della disciplina dell'informatica:</p>
+<div class="admonition note">
+<p class="admonition-title">Definizione (v0.1)</p>
+<p><em>L'informatica è la disciplina che si occupa di automatizzare l'informazione.</em></p>
+</div>
+<p>La precedente definizione è effettivamente un po' vaga; cerchiamo quindi di dare qualche ulteriore dettaglio.</p>
+<p>In primis, è importante sottolineare la natura <em>scientifica</em> dell'informatica, come rimarcato nella definizione inglese del termine, ovvero <em>computer science</em>. L'informatica, infatti, si basa su solide fondamenta scientifiche, gettate in larga parte dai "genitori" della disciplina che, guardacaso, annoverano diversi illustri matematici (Alan Turing su tutti).</p>
+<p>Possiamo quindi arricchire la prima versione della nostra definizione come segue:</p>
+<p>!!! note "Definizione (v0.2)<br />
+<em>L'informatica è la disciplina scientifica che si occupa di tutto ciò che concerne l'elaborazione automatica delle informazioni.</em></p>
+<p>Appurato quindi </p>
+<blockquote>
+<p>L'informatica è la disciplina scientifica che si occupa di elaborazione automatica delle informazioni.</p>
+</blockquote>
+<p>La scienza che si occupa dell'ordinamento, del trattamento e della trasmissione delle informazioni per mezzo dell'elaborazione elettronica, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.</p>
+<p>E' quindi interessante sottolineare la <em>dualità</em> dell'informatica. Da un lato, abbiamo aspetti prettamente pratici, che riguardano la trasmissione, condivisione ed elaborazione automatica delle informazioni disponibili in un sistema; dall'altro, vi sono aspetti teorici, legati ad esempio alle parti logico-matematiche che studiano le nozioni dietro all'elaborazione degli algoritmi di calcolo eseguibili in maniera automatica.</p>
+<h2 id="il-concetto-di-informazione">Il concetto di informazione<a class="headerlink" href="#il-concetto-di-informazione" title="Permanent link">&para;</a></h2>
+<p>Va bene, ma quali informazioni si elaborano nei sistemi informatici?</p>
+<p>Al giorno d'oggi, parliamo di informazioni di qualsiasi tipo. Un sistema informatico è ad esempio quello offerto da Amazon, che ci offre informazioni sui prodotti in vendita.</p>
+<p>Un sistema informatico è quello offerto dalla NASA, che ci offre informazioni in tempo reale sullo stato del firmamento che possiamo osservare nelle notti serene.</p>
+<p>Un sistema informatico è quello della nostra palestra, che ci indica quando dobbiamo rinnovare il mensile prima che ci venga negato l'accesso.</p>
+<p>Ed un sistema informatico è quello che gestisce le informazioni presenti nel nostro account Facebook, suggerendoci amicizie ed influenzando in maniera subconscia i nostri gusti.</p>
+<p>Tutti questi sistemi hanno un punto di contatto in comune: l'elaboratore, o, nell'accezione più comune del termine, il <em>computer</em>.</p>
+<p>L’Informazione può avere molteplici definizioni.<br />
+In generale, è associata ai concetti di conoscenza ed esperienza:<br />
+informazione è ad esempio il contenuto di questo corso, così come l’esperienza necessaria a progettare un’automobile, o a montare un mobile IKEA.<br />
+Tuttavia, esistono altre definizioni.<br />
+Ad esempio, secondo Shannon, l’Informazione è alla base del processo comunicativo.<br />
+Esiste anche la Teoria dell’Informazione, le cui implicazioni sono alla base delle reti di telecomunicazioni.<br />
+In questo caso, si cerca di caratterizzare, a partire da delle basi matematiche, i fenomeni legati alla trasmissione delle informazioni su un canale di comunicazione.<br />
+Fondamentale è in tal senso il concetto di entropia, intesa non nel senso “classico” ma piuttosto come numero di bit necessari a trasmettere l’informazione.</p>
+<h2 id="i-sistemi-di-elaborazione">I sistemi di elaborazione<a class="headerlink" href="#i-sistemi-di-elaborazione" title="Permanent link">&para;</a></h2>
+<p>Il computer è lo strumento che normalmente deleghiamo all'elaborazione e gestione delle informazioni.</p>
+<p>Un computer (e, per estensione, qualsiasi sistema informatico) è composto da due parti: da un lato abbiamo l'hardware, che rappresenta l'insieme di componenti elettroniche digitali che permettono all'informazione di fluire sotto forma di flusso di elettroni, e dall'altro abbiamo il software, che offre un'interfaccia "semplificata" agli utenti umani per coordinare al meglio le informazioni che scorrono nell'hardware.</p>
+<p>Per usare un adagio comune nel mondo dell'informatica, l'hardware è la parte che è possibile prendere a calci, mentre il software è quella contro cui si può solo gridare contro. Molto spesso, però, le nostre tribolazioni derivano dall'opera congiunta di entrambe le realtà.</p>
+<h2 id="il-ruolo-dellinformatico">Il ruolo dell'informatico<a class="headerlink" href="#il-ruolo-dellinformatico" title="Permanent link">&para;</a></h2>
+<p>L'informatico, nell'accezione comune, è il tuttologo che, dal suo altare collocato dietro ad un monitor, è in grado di risolvere qualsiasi problema del mondo moderno con la semplice imposizione dello sguardo.</p>
+<p>In realtà, però, questo non è vero. Così come non esiste un medico specializzato nella cura di ogni malattia, nessun informatico conosce a menadito tutti gli aspetti del mondo dei calcolatori elettronici: vi sono quindi figure specializzate nella riparazione dei computer, informatici più avvezzi al controllo delle reti di telecomunicazioni, sistemisti, esperti di cybersecurity, system architects, UX/UI designer e, infine, i più bistrattati tra tutti, i <em>programmatori</em>.</p>
+<p>Il loro ruolo è però fondamentale: infatti, sono delegati alla scrittura del software che permetterà all'hardware di <em>elaborare le informazioni</em>. A grandi linee, possiamo paragonarli a degli <em>artigiani digitali</em>: sono i tecnici che sono dietro al funzionamento di tutto ciò che permette al mondo moderno di andare avanti, comunicando, commerciando ed interagendo da dietro ad un monitor senza soluzione di continuità.</p>
+<p>Possiamo quindi ben dire che, senza i programmatori, e conseguentemente il software da loro scritto, non avremmo potuto probabilmente vedere nulla di quello che abbiamo dato per scontato negli ultimi cinquanta anni.</p>
+<h2 id="riferimenti">Riferimenti<a class="headerlink" href="#riferimenti" title="Permanent link">&para;</a></h2>
+<p>[1] <a href="https://it.wikipedia.org/wiki/Informatica">Pagina di Wikipedia sull'informatica</a></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Home
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../01_algoritmi/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Introduzione agli Algoritmi
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.77e55a48.min.js"></script>
+      <script src="../assets/javascripts/bundle.9554a270.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
