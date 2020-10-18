@@ -1,0 +1,345 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>Architettura dei Calcolatori - Informatica - Corso di Laurea in Matematica - UniBa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#architettura-dei-calcolatori" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Informatica - Corso di Laurea in Matematica - UniBa
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Architettura dei Calcolatori
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Informatica - Corso di Laurea in Matematica - UniBa
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../01_intro/" class="md-nav__link">
+      Introduzione all'Informatica
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../02_algoritmi/" class="md-nav__link">
+      Gli Algoritmi
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#il-modello-di-von-neumann" class="md-nav__link">
+    Il modello di von Neumann
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="architettura-dei-calcolatori">Architettura dei Calcolatori<a class="headerlink" href="#architettura-dei-calcolatori" title="Permanent link">&para;</a></h1>
+<p>La conoscenza dell'architettura del calcolatore può</p>
+<p>L'architettura di un calcolatore è basata su </p>
+<h2 id="il-modello-di-von-neumann">Il modello di von Neumann<a class="headerlink" href="#il-modello-di-von-neumann" title="Permanent link">&para;</a></h2>
+<p>L'architettura di un computer è basata sul modlelo porposto da John von Neumann alla metà degli anni '40 del secolo scorso.</p>
+<p>Questa architettura prevede tre entità logiche:</p>
+<ul>
+<li>memoria</li>
+<li>Centra Processing Unit, che comprende<br />
+        - control unit<br />
+        - ALU (Arithmetic Logic Unit)</li>
+<li>dispositivi di input/utput</li>
+</ul>
+<p>Le informazioni (dati) viaggiano tra le componenti mediante un <em>bus</em></p>
+<h1 id="cpu">cpu<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h1>
+<p>è la componente che acquisisce, interpreta ed esegue le istruzioni dei programmi</p>
+<p>Si componea sua volta di:<br />
+- control unit, responsabile del prelievo e della decodifica delle istruzioni, oltre che dell'invio dei segnali di controllo<br />
+- arithmetic logic unit, per l'esecuzione delle operazioni aritmetiche e logiche<br />
+- alcune varianti dle modello prevedono anche un clock</p>
+<p>Dal punto di vista operativo, la CPU fa uso di alcuni registri:</p>
+<ul>
+<li>elementi di memoria i cui valori possono essere aceduti in lettura e scrittura molto velocemente</li>
+<li>CIR: Current Instruction Register / contiene l'istruzione in corsodi esecuzione</li>
+<li>PC (Program Counter) - contiene l'indirizzo della prossima istruzioen del programma in esecuzione</li>
+</ul>
+<h1 id="memoria">Memoria<a class="headerlink" href="#memoria" title="Permanent link">&para;</a></h1>
+<p>E' la memoria cenrale, di lavoro, da non confondersi con la memoria di massa in cui vengono immagazzinati dati e programmi quando non in uso.<br />
+Contiene gli elementi che il computer sta usando nella corrente elaborazione, e precisamente </p>
+<ul>
+<li>le istruzioni del programma in corso di esecuzione</li>
+<li>i dati necessari all'esecuzione di quel programma</li>
+</ul>
+<p>si può immaginare la memoria come costituita da tante celle, ognuna identificata univocamente dal proprio indirizzo</p>
+<p>I/O</p>
+<p>Sono i dispositivi con cui rispettivamente</p>
+<ul>
+<li>vengono forniti dati e programmi al computer</li>
+<li>vengono prododotti dal computer i risultati dell'elaborazione</li>
+</ul>
+<h1 id="supporto">SUpporto<a class="headerlink" href="#supporto" title="Permanent link">&para;</a></h1>
+<p>La machcina di Von Neuman è una macchina astratta, un modello per realizzare macchine reali.<br />
+Per questo non vengono enfatizzati ulteriori elementi logici che pure osno necessari, come ad esempio <br />
+-</p>
+<ul>
+<li>bus e clock di sistema</li>
+<li>memorie di massa</li>
+<li>interfacce di rete...</li>
+</ul>
+<p>Nel modello di von Neumann è implicita la separazione della memoria dalla unità di elaborazione, definendo quello che viene chiamato stored-program computer. Inizialmente, infatti questi due blocchi erano unici ed avevano una memoria programma  fissa. Ad esempio, un  calcolatore desktop (in principio) si presentava come una macchina in grado di eseguire operazioni matematiche, ma sarebbe stato impossibile usare un word processor oppure eseguire dei video games. Tale macchina rappresentò una grande innovazione; la possibilità di trattare le istruzioni come fossero dati permise lo sviluppo di assembler e compilatori.  Era così possibile “scrivere programmi che scrivono programmi”. Chiaramente, la possibilità di modificare programmi è anche uno  svantaggio: se si sbaglia indirizzo di memoria si rischia di sovrascrivere il firmware e ciò può comportare anche il danneggiamento irreversibile della macchina. Un altro problema tipico di queste macchine è rappresentato dal buffer overflow. Per risolvere il problema si può pensare di implementare alcune forme di protezione della memoria. Il termine deriva dall’articolo scritto dal matematico John von Neumann nel giugno del 1945, che trattava per primo una macchina stored-program gereral purpouse (denominata EDVAC). La separazione della CPU dalla memoria ha però portato a quello che è oggi conosciuto come collo di bottiglia di von Neumann. Il throughput  (cioè la velocità di trasferimento dei dati) tra unità di elaborazione e memoria è molto minore rispetto alla quantità di dati trasferiti. Inoltre, il throughput è molto minore rispetto alla frequenza operativa della CPU. Queste considerazioni determinano  una seria limitazione nella velocità effettiva di esecuzione delle istruzioni. In presenza di operazioni di accesso alla memoria la CPU deve continuamente attendere che tali dati arrivino. Attualmente le frequenze operative e la dimensione della memoria aumenta ad un tasso esponenziale, mentre  il  throughput  avanza molto lentamente,  rendendo sempre più  marcato questo collo di bottiglia.</p>
+<h1 id="larchitettura-harvard">L'architettura Harvard<a class="headerlink" href="#larchitettura-harvard" title="Permanent link">&para;</a></h1>
+<p>Per superare i limiti imposti dal modello di von Neuman,, venne introdotta l'architettura Harvard, che presuppne la separazione della memoria programma da quella dati. Il termine deriva dalla macchina Harvard Mark I.</p>
+<p>PoicHé nell'architettura di von Neumann il blocco di memoria ed il relativo percorso sono unici, non è possibile leggere allo stesso tempo una istruzione ed un dato. In un computer con architettura Harvard questoo è invece possibile.</p>
+<p>Questo rappresentò uan rivoluzione, perché permise di superare i limiti imposti dall'archietttura di von Neumann. INfatti, la CPU è in grado di effettuare il fetch dell'istruzione successiva contemporaneamente al completamento di quella corrente. Da qui allo sviluppo di sistemi basati su pipeline il passo è breve.</p>
+<p>Ovviamente, rispetto ad una macchina di von Neumann, quella Harvard risulta più complessa dal punto di vista implementativo e circuitale. Questo si traduce in un costo superiore.</p>
+<h1 id="le-moderne-cpu">LE MODERNE CPU<a class="headerlink" href="#le-moderne-cpu" title="Permanent link">&para;</a></h1>
+<p>Non si deve pensare che l'architettura di von Neumann sia completamente scomparsa a favore di quella Harvard. le moderne CPU fanno spesso uso di memorie più velici (cache) ma con dimensioni ridotte, allo scopo di bufferizzare i dati dalla memoria principale (off-chip). L'architettura implementata in questi casi è una soluzione mista: per l'accesso della CPU alla cache è usata l'architettura Harvard, mentre si usa la von Neumann per gli eventuali accessi alla memoria off-chip.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -8,19 +8,19 @@
       
       
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
     
     
       
-        <title>Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>Esecuzione di programmi - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.bc7e593a.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.ab28b872.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
         
       
     
@@ -55,6 +55,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#esecuzione-di-programmi" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -64,7 +69,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="/." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -81,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              
+              Esecuzione di programmi
             
           </span>
         </div>
@@ -138,7 +143,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -155,7 +160,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/." class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Home
     </a>
   </li>
@@ -167,7 +172,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/01_intro/" class="md-nav__link">
+    <a href="../01_intro/" class="md-nav__link">
       Introduzione all'Informatica
     </a>
   </li>
@@ -179,7 +184,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/02_algoritmi/" class="md-nav__link">
+    <a href="../02_algoritmi/" class="md-nav__link">
       Gli Algoritmi
     </a>
   </li>
@@ -192,12 +197,49 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                <h1 id="esecuzione-di-programmi">Esecuzione di programmi<a class="headerlink" href="#esecuzione-di-programmi" title="Permanent link">&para;</a></h1>
+<p>La macchina di von Neumann è in grado di eseguire programmi espressi in un opportuno linguaggio macchina<br />
+- per le macchine reali, il linguaggio macchina è codificato secondo codici binari o esadecimali</p>
+<p>Si suppone che il programma da eseguiresia caricato in memoria prima dell'esecuzione. può essere quindi caricato a partire da qualche memoria di massa su cui è stato precedentemente registratot, fornito in input dal programmatore, etc</p>
+<p>Si suppone che il programma sia suddiviso logicamente in due parti.</p>
+<p>una parte di <em>dati</em>, di <em>I/O</em> e di supporto, calcolati e temporanei, su cui operano le istruzioni;</p>
+<p>ed una parte logica, rappresentativa dell'insieme delle istruzioni che devono essere eseguite</p>
+<h1 id="ciclo-fetch-decode-execute">Ciclo Fetch-Decode-Execute<a class="headerlink" href="#ciclo-fetch-decode-execute" title="Permanent link">&para;</a></h1>
+<p>L'esecuzione del programma avviene ripetendo iterativamente le fasi di </p>
+<ul>
+<li>Acquisizione (fetch) dell'istruzione da eseguire</li>
+<li>Interpretazione (DECODE) dell'istruzione</li>
+<li>Esecuzione (EXECUTE)</li>
+</ul>
+<p>In pratica:</p>
+<ul>
+<li>il contenuto del PC viene caricato nel CIR</li>
+<li>il PC viene aggiornato con l'indirizzo dell'istruzione successiva,</li>
+<li>l'istruzione del CIR viene decodificata ed eseguita, eventualmente accedendo ai dati</li>
+</ul>
+                
+              
               
                 
 
@@ -227,20 +269,20 @@
       
     </div>
     
-      <script src="/assets/javascripts/vendor.6a3d08fc.min.js"></script>
-      <script src="/assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "/",
+          base: "..",
           features: [],
           search: Object.assign({
-            worker: "/assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
-        <script src="/js/config.js"></script>
+        <script src="../js/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
