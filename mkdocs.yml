@@ -1,8 +1,11 @@
 site_name: Informatica - Corso di Laurea in Matematica - UniBa
 nav:
   - Home: index.md
-  - Introduzione all'Informatica: 00_intro.md
-  - Introduzione agli Algoritmi: 01_algoritmi.md
+  - Introduzione all'Informatica: 01_intro.md
+  - Gli Algoritmi: 02_algoritmi.md
+#   - Architettura dei Calcolatori: 03_architettura.md
+#   - Esecuzione dei programmi: 04_esecuzione.md
+#   - Rappresentazione dei dati: 05_rappresentazione.md
 
 theme:
   name: material
@@ -16,6 +19,8 @@ markdown_extensions:
       permalink: true # inserts an anchor
   - sane_lists # better ul and ol
   - nl2br # newline hard break
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.betterem: # better italic and bold
       smart_enable: asterisk
   - pymdownx.caret # insert text and superscript
@@ -34,3 +39,8 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed # auto tabs
   - pymdownx.tilde # strike through cross out text
+
+extra_javascript:
+  - js/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
