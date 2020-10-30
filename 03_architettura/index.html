@@ -13,7 +13,7 @@
     
     
       
-        <title>Architettura dei Calcolatori - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>03 architettura - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
@@ -56,7 +56,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#architettura-dei-calcolatori" class="md-skip">
+        <a href="#un-po-di-storia" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Architettura dei Calcolatori
+              03 architettura
             
           </span>
         </div>
@@ -159,34 +159,60 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Concetti Introduttivi
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Concetti Introduttivi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
-      Home
+    <a href="../01_introduttivi/01_intro/" class="md-nav__link">
+      01 - Introduzione all'Informatica
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
-    <a href="../01_intro/" class="md-nav__link">
-      Introduzione all'Informatica
+    <a href="../01_introduttivi/02_algoritmi/" class="md-nav__link">
+      02 - Gli Algoritmi
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
-    <a href="../02_algoritmi/" class="md-nav__link">
-      Gli Algoritmi
+    <a href="../01_introduttivi/03_rappresentazione/" class="md-nav__link">
+      03 - Rappresentazione dei dati
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -207,21 +233,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#il-modello-di-von-neumann" class="md-nav__link">
-    Il modello di von Neumann
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -233,63 +244,97 @@
               
                 
                 
-                <h1 id="architettura-dei-calcolatori">Architettura dei Calcolatori<a class="headerlink" href="#architettura-dei-calcolatori" title="Permanent link">&para;</a></h1>
-<p>La conoscenza dell'architettura del calcolatore può</p>
-<p>L'architettura di un calcolatore è basata su </p>
-<h2 id="il-modello-di-von-neumann">Il modello di von Neumann<a class="headerlink" href="#il-modello-di-von-neumann" title="Permanent link">&para;</a></h2>
-<p>L'architettura di un computer è basata sul modlelo porposto da John von Neumann alla metà degli anni '40 del secolo scorso.</p>
-<p>Questa architettura prevede tre entità logiche:</p>
+                <h2 id="un-po-di-storia">Un po' di storia<a class="headerlink" href="#un-po-di-storia" title="Permanent link">&para;</a></h2>
+<p>Le origini del concetto di <em>calcolatore</em> (o, nell'accezione comune del termine, <em>computer</em>) possono essere fatte risalire alla storia antica, con invenzioni come l'<em>abaco</em>, ovvero dei veri e propri strumenti di supporto che permettevano all'operatore umano di svolgere in maniera più rapida calcoli anche complessi.</p>
+<p>Il calcolatore si è poi evoluto in età moderna: si è passati dalle prime sperimentazioni, come le macchine di Pascal e di Leibniz, alle prime <em>calcolatrici</em>, per arrivare al primo modello (teorico) di dispositivo <em>programmabile</em>, ovvero in grado di adattarsi a compiti anche molto diversi tra loro, che si deve al matematico britannico Charles Babbage con la sua Macchina Analitica, progettata nel 1833, e considerata il primo progetto di <em>computer</em> nella storia.</p>
+<p>Nei decenni successivi, vennero introdotti diversi tipi di calcolatori analogici. Successivamente, si passò alla concettualizzazione della <em>macchina di Turing</em>, per poi arrivare ai computer meccanici ed elettromeccanici, ed infine alle architetture digitali ed elettroniche, basate su transistor e circuiti integrati ad altissima densità.</p>
+<p>Le prossime frontiere sono probabilmente quelle dettate dal <em>quantum computing</em>, che potrebbero rivoluzionare completamente l'idea attuale di elaborazione, rendedo vetusta qualsiasi applicazione dell'informatica odierna.</p>
+<p>Tuttavia, nessuno degli scenari verificatisi negli ultimi 80 anni si sarebbe potuto realizzare se John von Neumann (un altro matematico) non avesse proposto la sua <em>architettura</em>.</p>
+<h2 id="larchitettura-di-von-neumann">L'architettura di von Neumann<a class="headerlink" href="#larchitettura-di-von-neumann" title="Permanent link">&para;</a></h2>
+<p>Il modello proposto da John von Neumann è unanimamente riconosciuto come la base sulla quale sono basate le moderne architetture dei calcolatori.</p>
+<p>Elaborato negli anni '40 del secolo scorso, prevede la presenza di quattro entità principali:</p>
 <ul>
-<li>memoria</li>
-<li>Centra Processing Unit, che comprende<br />
-        - control unit<br />
-        - ALU (Arithmetic Logic Unit)</li>
-<li>dispositivi di input/utput</li>
+<li>la <em>Central Processing Unit</em> (<em>CPU</em>);</li>
+<li>la <em>memoria</em>;</li>
+<li>i <em>dispositivi di input/output</em>;</li>
+<li>il <em>bus di comunicazione</em>.</li>
 </ul>
-<p>Le informazioni (dati) viaggiano tra le componenti mediante un <em>bus</em></p>
-<h1 id="cpu">cpu<a class="headerlink" href="#cpu" title="Permanent link">&para;</a></h1>
-<p>è la componente che acquisisce, interpreta ed esegue le istruzioni dei programmi</p>
-<p>Si componea sua volta di:<br />
-- control unit, responsabile del prelievo e della decodifica delle istruzioni, oltre che dell'invio dei segnali di controllo<br />
-- arithmetic logic unit, per l'esecuzione delle operazioni aritmetiche e logiche<br />
-- alcune varianti dle modello prevedono anche un clock</p>
-<p>Dal punto di vista operativo, la CPU fa uso di alcuni registri:</p>
+<p>SCHEMA MACCHINA DI VON NEUMANN</p>
+<p>Le informazioni viaggiano tra i diversi componenti mediante un "canale" chiamato <em>bus</em>.</p>
+<p>Vediamo nel dettaglio le singole parti.</p>
+<h3 id="central-processing-unit">Central Processing Unit<a class="headerlink" href="#central-processing-unit" title="Permanent link">&para;</a></h3>
+<h4 id="componenti-fondamentali">Componenti fondamentali<a class="headerlink" href="#componenti-fondamentali" title="Permanent link">&para;</a></h4>
+<p>La CPU è il "cuore" della macchina di von Neumann, ed è a sua volta divisa in due parti:</p>
 <ul>
-<li>elementi di memoria i cui valori possono essere aceduti in lettura e scrittura molto velocemente</li>
-<li>CIR: Current Instruction Register / contiene l'istruzione in corsodi esecuzione</li>
-<li>PC (Program Counter) - contiene l'indirizzo della prossima istruzioen del programma in esecuzione</li>
+<li>una <em>control unit</em>, responsabile per il prelievo (fetch) e decodifica (decode) delle istruzioni;</li>
+<li>una <em>processing unit</em>, responsabile dell'esecuzione delle operazioni aritmetiche e logiche.</li>
 </ul>
-<h1 id="memoria">Memoria<a class="headerlink" href="#memoria" title="Permanent link">&para;</a></h1>
-<p>E' la memoria cenrale, di lavoro, da non confondersi con la memoria di massa in cui vengono immagazzinati dati e programmi quando non in uso.<br />
-Contiene gli elementi che il computer sta usando nella corrente elaborazione, e precisamente </p>
+<p>La <em>control unit</em> contiene al suo interno due <em>registri</em> (ovvero piccole sezioni di memoria rapidamente accessibili) fondamentali, ovvero:</p>
 <ul>
-<li>le istruzioni del programma in corso di esecuzione</li>
-<li>i dati necessari all'esecuzione di quel programma</li>
+<li>il <em>Current Instruction Register</em> (<em>CIR</em>), che contiene l'istruzione attualmente in esecuzione;</li>
+<li>il <em>Program Counter</em>, che contiene l'indirizzo dell'istruzione successiva del programma in esecuzione.</li>
 </ul>
-<p>si può immaginare la memoria come costituita da tante celle, ognuna identificata univocamente dal proprio indirizzo</p>
-<p>I/O</p>
-<p>Sono i dispositivi con cui rispettivamente</p>
+<p>La <em>processing unit</em> è invece composta da:</p>
 <ul>
-<li>vengono forniti dati e programmi al computer</li>
-<li>vengono prododotti dal computer i risultati dell'elaborazione</li>
+<li>una <em>Arithmetic Logic Unit</em> (<em>ALU</em>), ovvero l'unità delegata alla gestione delle operazioni aritmetiche e logiche;</li>
+<li>una serie di <em>registri</em> che memorizzano le operazioni fondamentali e più utilizzate dalla macchina.</li>
 </ul>
-<h1 id="supporto">SUpporto<a class="headerlink" href="#supporto" title="Permanent link">&para;</a></h1>
-<p>La machcina di Von Neuman è una macchina astratta, un modello per realizzare macchine reali.<br />
-Per questo non vengono enfatizzati ulteriori elementi logici che pure osno necessari, come ad esempio <br />
--</p>
+<p>Alcune varianti della CPU prevedono anche la presenza di un segnale di clock.</p>
+<h3 id="memoria">Memoria<a class="headerlink" href="#memoria" title="Permanent link">&para;</a></h3>
+<p>Rappresenta la memoria "centrale" del sistema, di lavoro. Il suo ruolo è assimilabile a quello delle <em>RAM</em>, in quanto contiene tutti i dati e le istruzioni necessarie alla corretta esecuzione del programma attuale. E' importante non confondere questa memoria con la memoria di massa (ovvero gli hard disk o gli SSD), nella quale sono immagazzinati i dati ed i programmi quando questi non sono in uso.</p>
+<p>La memoria dialoga principalmente con la CPU, ed il suo compito consiste nell'agire da "magazzino", accessibile in maniera rapida (anche se non tanto rapida quanto i registri) dalla CPU, allo scopo di recuperare i dati necessari all'esecuzione del programma attuale.</p>
+<h3 id="dispositivi-di-inputoutput">Dispositivi di Input/Output<a class="headerlink" href="#dispositivi-di-inputoutput" title="Permanent link">&para;</a></h3>
+<p>Sono i dispositivi con cui, rispettivamente, sono <em>forniti dati e programmi</em> alla CPU (Input) e vengono restituiti dalla CPU i <em>risultati dell'elaborazione</em>. E' interessante notare come una memoria di massa possa fungere sia da dispositivo di input, sia da dispositivo di output.</p>
+<h3 id="bus">Bus<a class="headerlink" href="#bus" title="Permanent link">&para;</a></h3>
+<p>Il <em>bus</em> è il mezzo con cui i vari componenti della macchina di von Neumann comunicano tra loro.</p>
+<p>TODO:</p>
+<h2 id="funzionamento">Funzionamento<a class="headerlink" href="#funzionamento" title="Permanent link">&para;</a></h2>
+<h1 id="esecuzione-di-programmi">Esecuzione di programmi<a class="headerlink" href="#esecuzione-di-programmi" title="Permanent link">&para;</a></h1>
+<p>La macchina di von Neumann è in grado di eseguire programmi espressi in un opportuno linguaggio macchina<br />
+- per le macchine reali, il linguaggio macchina è codificato secondo codici binari o esadecimali</p>
+<p>Si suppone che il programma da eseguiresia caricato in memoria prima dell'esecuzione. può essere quindi caricato a partire da qualche memoria di massa su cui è stato precedentemente registratot, fornito in input dal programmatore, etc</p>
+<p>Si suppone che il programma sia suddiviso logicamente in due parti.</p>
+<p>una parte di <em>dati</em>, di <em>I/O</em> e di supporto, calcolati e temporanei, su cui operano le istruzioni;</p>
+<p>ed una parte logica, rappresentativa dell'insieme delle istruzioni che devono essere eseguite</p>
+<h1 id="ciclo-fetch-decode-execute">Ciclo Fetch-Decode-Execute<a class="headerlink" href="#ciclo-fetch-decode-execute" title="Permanent link">&para;</a></h1>
+<p>L'esecuzione del programma avviene ripetendo iterativamente le fasi di </p>
 <ul>
-<li>bus e clock di sistema</li>
-<li>memorie di massa</li>
-<li>interfacce di rete...</li>
+<li>Acquisizione (fetch) dell'istruzione da eseguire</li>
+<li>Interpretazione (DECODE) dell'istruzione</li>
+<li>Esecuzione (EXECUTE)</li>
 </ul>
-<p>Nel modello di von Neumann è implicita la separazione della memoria dalla unità di elaborazione, definendo quello che viene chiamato stored-program computer. Inizialmente, infatti questi due blocchi erano unici ed avevano una memoria programma  fissa. Ad esempio, un  calcolatore desktop (in principio) si presentava come una macchina in grado di eseguire operazioni matematiche, ma sarebbe stato impossibile usare un word processor oppure eseguire dei video games. Tale macchina rappresentò una grande innovazione; la possibilità di trattare le istruzioni come fossero dati permise lo sviluppo di assembler e compilatori.  Era così possibile “scrivere programmi che scrivono programmi”. Chiaramente, la possibilità di modificare programmi è anche uno  svantaggio: se si sbaglia indirizzo di memoria si rischia di sovrascrivere il firmware e ciò può comportare anche il danneggiamento irreversibile della macchina. Un altro problema tipico di queste macchine è rappresentato dal buffer overflow. Per risolvere il problema si può pensare di implementare alcune forme di protezione della memoria. Il termine deriva dall’articolo scritto dal matematico John von Neumann nel giugno del 1945, che trattava per primo una macchina stored-program gereral purpouse (denominata EDVAC). La separazione della CPU dalla memoria ha però portato a quello che è oggi conosciuto come collo di bottiglia di von Neumann. Il throughput  (cioè la velocità di trasferimento dei dati) tra unità di elaborazione e memoria è molto minore rispetto alla quantità di dati trasferiti. Inoltre, il throughput è molto minore rispetto alla frequenza operativa della CPU. Queste considerazioni determinano  una seria limitazione nella velocità effettiva di esecuzione delle istruzioni. In presenza di operazioni di accesso alla memoria la CPU deve continuamente attendere che tali dati arrivino. Attualmente le frequenze operative e la dimensione della memoria aumenta ad un tasso esponenziale, mentre  il  throughput  avanza molto lentamente,  rendendo sempre più  marcato questo collo di bottiglia.</p>
-<h1 id="larchitettura-harvard">L'architettura Harvard<a class="headerlink" href="#larchitettura-harvard" title="Permanent link">&para;</a></h1>
-<p>Per superare i limiti imposti dal modello di von Neuman,, venne introdotta l'architettura Harvard, che presuppne la separazione della memoria programma da quella dati. Il termine deriva dalla macchina Harvard Mark I.</p>
-<p>PoicHé nell'architettura di von Neumann il blocco di memoria ed il relativo percorso sono unici, non è possibile leggere allo stesso tempo una istruzione ed un dato. In un computer con architettura Harvard questoo è invece possibile.</p>
-<p>Questo rappresentò uan rivoluzione, perché permise di superare i limiti imposti dall'archietttura di von Neumann. INfatti, la CPU è in grado di effettuare il fetch dell'istruzione successiva contemporaneamente al completamento di quella corrente. Da qui allo sviluppo di sistemi basati su pipeline il passo è breve.</p>
-<p>Ovviamente, rispetto ad una macchina di von Neumann, quella Harvard risulta più complessa dal punto di vista implementativo e circuitale. Questo si traduce in un costo superiore.</p>
-<h1 id="le-moderne-cpu">LE MODERNE CPU<a class="headerlink" href="#le-moderne-cpu" title="Permanent link">&para;</a></h1>
-<p>Non si deve pensare che l'architettura di von Neumann sia completamente scomparsa a favore di quella Harvard. le moderne CPU fanno spesso uso di memorie più velici (cache) ma con dimensioni ridotte, allo scopo di bufferizzare i dati dalla memoria principale (off-chip). L'architettura implementata in questi casi è una soluzione mista: per l'accesso della CPU alla cache è usata l'architettura Harvard, mentre si usa la von Neumann per gli eventuali accessi alla memoria off-chip.</p>
+<p>In pratica:</p>
+<ul>
+<li>il contenuto del PC viene caricato nel CIR</li>
+<li>il PC viene aggiornato con l'indirizzo dell'istruzione successiva,</li>
+<li>l'istruzione del CIR viene decodificata ed eseguita, eventualmente accedendo ai dati</li>
+</ul>
+<p>FINE<br />
+TODO:</p>
+<h2 id="limportanza-della-macchina-di-von-neumann">L'importanza della macchina di von Neumann<a class="headerlink" href="#limportanza-della-macchina-di-von-neumann" title="Permanent link">&para;</a></h2>
+<h3 id="i-primi-computer">I primi computer<a class="headerlink" href="#i-primi-computer" title="Permanent link">&para;</a></h3>
+<p>I primi computer non avevano una memoria propriamente intesa: i programmi infatti erano spesso "cablati" nella logica della macchina. Di conseguenza, un computer progettato per eseguire (ad esempio) determinati calcoli matematici, non poteva essere usato per scrivere, a meno di <em>riprogrammarlo</em>. Questo significava ovviamente imbarcarsi in una procedura lunga, tediosa e complessa, spesso con implicazioni anche di tipo meccanico (ovvero, necessità di ricablare i collegamenti tra le diverse parti della macchina). Per fare un esempio, modificare il programma in esecuzione su una macchina ENIAC (il primo computer <em>general-purpose</em>) richiedeva circa tre settimane.</p>
+<p>La macchina di von Neumann permise di superare questo limite introducendo il concetto di <em>stored-program computer</em>, inteso come calcolatore in grado di memorizzare le istruzioni da eseguire in forma elettronica, ottica, o comunque <em>facilmente accessibile</em>. Questo, ovviamente, derivava dalla struttura stessa della macchina, che non implicava una completa integrazione di CPU e memoria, le quali erano bensì separate ed indipendenti. Va da sé che riscrivere la memoria non comportava la riprogrammazione completa della CPU, con un notevole vantaggio in termini di accessibilità e riprogrammabilità del calcolatore.</p>
+<h3 id="il-collo-di-bottiglia-di-von-neumann">Il collo di bottiglia di von Neumann<a class="headerlink" href="#il-collo-di-bottiglia-di-von-neumann" title="Permanent link">&para;</a></h3>
+<p>La macchina di von Neumann soffre di un notevole limite, legato principalmente al rapporto tra la <em>velocità della CPU</em> ed il <em>transfer rate</em> della memoria. Il problema principale è legato al fatto che, nel corso del tempo, la velocità delle CPU è aumentata seguendo per molti anni la cosiddetta <em>legge di Moore</em>, mentre le evoluzioni delle memorie si sono concentrate sulla loro <em>densità</em> (ovvero sul quantitativo di memoria disponibile) piuttosto che sul <em>throughput</em> (ovvero sul quantitativo di dati che è possibile trasferire dalla memoria verso la CPU). Questo fenomeno è detto <em>collo di bottiglia di von Neumann</em>, o <em>von Neumann bottleneck</em>.</p>
+<p>La conseguenza di questo fenomeno sta nel fatto che le <em>CPU elaborano troppe informazioni rispetto a quelle che la memoria può inviare</em>, e quindi i processori si ritrovano a "dover attendere" le istruzioni fornite dalla memoria, lasciando che preziosi cicli di clock passino inutilizzati.</p>
+<p>Per mitigare questo fenomeno, nel tempo sono stati elaborati diversi approcci, come:</p>
+<ul>
+<li>creare delle memorie <em>cache</em>, di dimensioni limitate rispetto alle RAM, ma comunque molto più veloci;</li>
+<li>fare in modo che dati ed istruzioni viaggino su percorsi differenti, riducendo la congestione sul bus;</li>
+<li>usare degli algoritmi di <em>branch prediction</em>, che tentano di prevedere quali istruzioni saranno usate successivamente, precaricandole dalla memoria.</li>
+</ul>
+<p>Nonostante questi "escamotage", però, la soluzione al <em>von Neumann bottleneck</em> arrivò introducendo un'altra architettura.</p>
+<h2 id="larchitettura-harvard">L'architettura Harvard<a class="headerlink" href="#larchitettura-harvard" title="Permanent link">&para;</a></h2>
+<p>Inizialmente implementata sulla macchina <em>Harvard Mark I</em>, l'<em>architettura Harvard</em> venne introdotta per superare i limiti imposti dal modello di von Neumann, separando la memoria dedicata ai programmi (<em>instruction memory</em>) da quella dedicata ai dati (<em>data memory</em>).</p>
+<h3 id="differenze-con-larchitettura-di-von-neumann">Differenze con l'architettura di von Neumann<a class="headerlink" href="#differenze-con-larchitettura-di-von-neumann" title="Permanent link">&para;</a></h3>
+<p>L'architettura Harvard permette di superare il collo di bottiglia intrinseco nell'architettura di von Neumann permettendo alla CPU di leggere un'istruzione contemporaneamente all'accesso ai dati, anche senza utilizzare una cache; ciò significa che, al costo di una complessità circuitale superiore, un computer basato su architettura Harvard è più veloce di uno basato sull'architettura di von Neumann.</p>
+<h3 id="larchitettura-harvard-modificata">L'architettura Harvard modificata<a class="headerlink" href="#larchitettura-harvard-modificata" title="Permanent link">&para;</a></h3>
+<p>Una <em>architettura Harvard modificata</em> è definita in modo molto vago, ma vi sono tre diverse possibilità.</p>
+<p>Queste architetture sono la <em>Split Cache</em>, <em>access Instruction Memory as Data</em>, e <em>Read Instructions from Data Memory</em>.</p>
+<h4 id="access-instruction-memory-as-data">Access Instruction Memory as Data<a class="headerlink" href="#access-instruction-memory-as-data" title="Permanent link">&para;</a></h4>
+<p>Questa architettura ricorda l'architettura Harvard standard, ma con uno speciale insieme di istruzioni che permettono di leggere le costanti dalla memoria legata </p>
+<p>A modified Harvard architecture machine is very much like a Harvard architecture machine, but it relaxes the strict separation between instruction and data while still letting the CPU concurrently access two (or more) memory buses. The most common modification includes separate instruction and data caches backed by a common address space. While the CPU executes from cache, it acts as a pure Harvard machine. When accessing backing memory, it acts like a von Neumann machine (where code can be moved around like data, which is a powerful technique). This modification is widespread in modern processors, such as the ARM architecture, Power ISA and x86 processors. It is sometimes loosely called a Harvard architecture, overlooking the fact that it is actually "modified".</p>
                 
               
               

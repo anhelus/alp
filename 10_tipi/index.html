@@ -13,7 +13,7 @@
     
     
       
-        <title>rappresentazione dei dati - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>10 tipi - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
@@ -56,7 +56,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#rappresentazione-dei-dati" class="md-skip">
+        <a href="#tipi-di-dato" class="md-skip">
           Skip to content
         </a>
       
@@ -86,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              rappresentazione dei dati
+              10 tipi
             
           </span>
         </div>
@@ -159,34 +159,60 @@
       
 
 
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Concetti Introduttivi
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Concetti Introduttivi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
   <li class="md-nav__item">
-    <a href=".." class="md-nav__link">
-      Home
+    <a href="../01_introduttivi/01_intro/" class="md-nav__link">
+      01 - Introduzione all'Informatica
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
-    <a href="../01_intro/" class="md-nav__link">
-      Introduzione all'Informatica
+    <a href="../01_introduttivi/02_algoritmi/" class="md-nav__link">
+      02 - Gli Algoritmi
     </a>
   </li>
 
-    
-      
-      
-      
+        
+          
+          
+          
 
 
   <li class="md-nav__item">
-    <a href="../02_algoritmi/" class="md-nav__link">
-      Gli Algoritmi
+    <a href="../01_introduttivi/03_rappresentazione/" class="md-nav__link">
+      03 - Rappresentazione dei dati
     </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -204,8 +230,21 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tipi-di-dato" class="md-nav__link">
+    Tipi di dato
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -218,99 +257,77 @@
               
                 
                 
-                <h1 id="rappresentazione-dei-dati">rappresentazione dei dati<a class="headerlink" href="#rappresentazione-dei-dati" title="Permanent link">&para;</a></h1>
-<p>Tutte le informazioni (dati e istruzioni) in un computer sono rappresentate in forma binaria (ovvero come sequenza finita di simboli '0' ed '1')</p>
-<p>L'unità di informazione è il <em>bit</em>, contrazione di <em>binary digit</em>.</p>
-<p>Un bit può assumere solo i valori 0 oppure 1.</p>
-<p>Una sequenza di 8 bit costituisce un byte: un byte può assumere uno tra 2^8 valori.</p>
-<p>Una <em>parola</em> (word) è composta da N byte, con N dipendente dallo specifico contesto</p>
-<h1 id="dati-numerici">dati numerici<a class="headerlink" href="#dati-numerici" title="Permanent link">&para;</a></h1>
-<p>Data la finitezza della macchina computer, tutte le informazioni che in essosi possono rappresentare sono necessariamente finite.</p>
-<p>Qando ad esempio si parla di insieme dei numeri interi, si intende un'approsismazione finita di N.</p>
-<p>Siamo abituati a pensare (e usare) i numeri interi in forma decimale e posizionale.</p>
-<p>Decimale, perché espressi in base 10, facendo usso di dieci simboli (0, 1, 2,3, etc.)</p>
-<p>posizionale perché la posizione in cui compare un simbolo è fondamentale per la sua interpretazione.</p>
-<p>Ad esempio, il numero 12 ed il numero 21 sono rappresentati mediante gli stessi simboli 1 e 2, ma disposizioni in posizioni diverse.</p>
-<p>Sia <span class="arithmatex">\(N\)</span> un generico numero intero ad <span class="arithmatex">\(n\)</span> simboli. In forma decimale e posizionale è possibile esprimerlo come:</p>
-<div class="arithmatex">\[
-N = a_n a_{n-1} a_{n-2} ... a_2 a_1 a_0
-\]</div>
-<p>Esprimendo <span class="arithmatex">\(N\)</span> in base <span class="arithmatex">\(b\)</span>:</p>
-<div class="arithmatex">\[
-N_b = a_n * b^n + a_{n-1} * b^{n-1} + ... + a_1 * b + a_0
-\]</div>
-<p>Ad esempio:</p>
-<div class="arithmatex">\[
-N = 485_{10} = (4 * 10^2 + 8 * 10 + 5)_{10}
-\]</div>
-<p>Volendo rappresentare N in base 2:</p>
-<div class="arithmatex">\[
-N = 485
-\]</div>
-<p>Per prima cosa, dividiamo il numero decimale per 2.</p>
-<div class="arithmatex">\[
-N / 2 = 485 / 2 = 242 * 2 + 1
-\]</div>
-<p>Il risultato della divisione ha resto 1; questo sarà il primo bit del nostro numero converito (chiamato anche Least Significant Bit, o LSB, o bit meno significativo).</p>
-<p>Continuiamo a dividere:</p>
-<div class="arithmatex">\[
-242 / 2 = 121 * 2 + 0
-\]</div>
-<p>Il secondo bit è pari a 0.</p>
-<p>Reiterando la procedura:</p>
-<div class="arithmatex">\[
-\begin{eqnarray}
-121 / 2 &amp;= 60 * 2 + 1 \\
-60 / 2 &amp;= 30 * 2 + 0 \\
-30 / 2 &amp;= 15 * 2 + 0 \\
-15 / 2 &amp;= 7 * 2 + 1 \\
-7 / 2 &amp;= 3 * 2 + 1 \\
-3 / 2 &amp;= 1 * 2 + 1 \\
-1 / 2 &amp;= 0 * 2 + 1
-\end{eqnarray}
-\]</div>
-<p>La rappresentazione risulta quindi essere data da:</p>
-<div class="arithmatex">\[
-N_10 = 485_{10} = (111100101)_2
-\]</div>
-<p>Contrariamente all'LSB, la prima cifra è chiamata Most Significant Bit (MSB).</p>
-<h1 id="rappresentazione-di-interi">Rappresentazione di Interi<a class="headerlink" href="#rappresentazione-di-interi" title="Permanent link">&para;</a></h1>
-<p>Possiamo considerare due casi:</p>
-<ul>
-<li>interi senza segno - unsigned integer: si intendono solo i positivi</li>
-<li>interi con segno - signed ingteger: siintendono i positivi ed i negativi</li>
-</ul>
-<p>Immaginiamo che il computer possa utilizzare una word di N byte per rappresentare un intero (sia signed che unsigned) : N byte = N * 8 bit = Wbit</p>
-<p>Avendo a disposizione W bit è possibile rappresentare i valori binari da 0 a 2^W-1</p>
-<p>Nel caso si voglia rappresentare gli interi signed il bit più significativo viene utilizzato per indicare il segno</p>
-<p>Convenzionalmente, 0 è per il + ed 1 èer il meno.</p>
-<p>In tal caso, quindi, con W bit si possono rappresentare gli interi compresi tra (-2^W-1 - 1) e + (2 ^ W-1 - 1)</p>
-<h1 id="numeri-rali">Numeri rali<a class="headerlink" href="#numeri-rali" title="Permanent link">&para;</a></h1>
-<p>Nell'ambito di un computer, l'approssimazione di <span class="arithmatex">\(\mathbb{R}\)</span> espressa da "numeri reali" indica più precisamente un'approssimazione (finita) dei numeri razionali.</p>
-<p>Concettulamente, un numero "reale" è rappresentato dalla giustapposizione di due numeri:</p>
-<ul>
-<li>se W bit sono disponibili, i primi W<em>r indicano la parte intera, i rimanenti W</em>f la parte frazionaria. Tale rappresentazione è detta a virgola fissa (fixed point).</li>
-</ul>
-<p>La modalità di rappresentazione più diffusa è quella a virgola mobile (floating point), che utilizza due valori.</p>
-<p>Il primo è la <em>mantissa</em>, interpretato come numero frazionario tra -1 ed 1, il secondo è la caratteristica, usato come esponente.</p>
-<p>Si basa sulla notazione esponenziale, secondo cui </p>
-<div class="arithmatex">\[
-r = m * b^c
-\]</div>
-<h1 id="rappresentazione-di-caratteri">Rappresentazione di Caratteri<a class="headerlink" href="#rappresentazione-di-caratteri" title="Permanent link">&para;</a></h1>
-<p>Anche i caratteri sono rappresentati mediante codici binari.</p>
-<p>Più in generale si parla di "simboli" per specificare oltre agli usuali caratteri alfabetici, anche i simboli che idnicano:</p>
-<ul>
-<li>le cifre (decimali)</li>
-<li>la punteggiatura</li>
-<li>i simboli speciali (blank, carriage return, linefed, ...)</li>
-</ul>
-<p>Per poter codificare univocamente i caratteri è necessaria una corrispondenza biunivoca tra questi e un opportuno sottoinieme degli interi:</p>
-<p>-standard ASCII<br />
- - UNICODE</p>
-<h2 id="unicode">UNICODE<a class="headerlink" href="#unicode" title="Permanent link">&para;</a></h2>
-<p>Codifica di tutti i caratteri possibili - delle lingue attualmente vive - di alcune lingue morte</p>
-<p>Più di 110 k caratteri.</p>
+                  <h1>10 tipi</h1>
+                
+                <h2 id="tipi-di-dato">Tipi di dato<a class="headerlink" href="#tipi-di-dato" title="Permanent link">&para;</a></h2>
+<p>Per <em>tipo di dato</em> si intende il formato che un dato può assumere.</p>
+<p>Il tipo di dato è estremamente importante principalemtne per due motivi:</p>
+<ol>
+<li>il tipo di dato è legato al flusso logico del programma</li>
+<li>il tipo di dato controlla la quantità di memoria allocata ed utilizzata nel corso del programma.</li>
+</ol>
+<p>Esistono diversi tipi di dati, i più comuni sono riassunti in tabella.</p>
+<table>
+<thead>
+<tr>
+<th>Denominazione</th>
+<th>Spazio occupato</th>
+<th>Descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>byte</code></td>
+<td>8 bit</td>
+<td>Rappresenta un singolo byte. Può assumere valori compresi tra <span class="arithmatex">\(0\)</span> e <span class="arithmatex">\(2^8\)</span>.</td>
+</tr>
+<tr>
+<td><code>short</code></td>
+<td>16 bit</td>
+<td>Rappresenta un tipo di dato intero con precisione a 16 bit.</td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>32 bit</td>
+<td>Rappresenta un dato di tipo intero con segno.</td>
+</tr>
+<tr>
+<td><code>uint</code></td>
+<td>32 bit</td>
+<td>Rappresenta un tipo di dato intero senza segno (<em>unsigned</em>)</td>
+</tr>
+<tr>
+<td><code>long</code></td>
+<td>64 bit</td>
+<td>Rappresenta un tipo di dato intero con precisione a 64 bit.</td>
+</tr>
+<tr>
+<td><code>float</code></td>
+<td>32 bit</td>
+<td>Rappresenta un tipo di dato reale con precisione a 32 bit</td>
+</tr>
+<tr>
+<td><code>double</code></td>
+<td>64 bit</td>
+<td>dato reale</td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td>1 bit</td>
+<td>rappresenta un valore nell'algebra booleana (ovvero uno <code>0</code> o un <code>1</code>)</td>
+</tr>
+<tr>
+<td><code>char</code></td>
+<td>NON RICORDO</td>
+<td>rappresenta un singolo carattere</td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
                 
               
               

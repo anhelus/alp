@@ -1,0 +1,431 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.0">
+    
+    
+      
+        <title>08 turing - Informatica - Corso di Laurea in Matematica - UniBa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.bc7e593a.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab28b872.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduzione" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Informatica - Corso di Laurea in Matematica - UniBa
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              08 turing
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Informatica - Corso di Laurea in Matematica - UniBa
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
+      Concetti Introduttivi
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Concetti Introduttivi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_introduttivi/01_intro/" class="md-nav__link">
+      01 - Introduzione all'Informatica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_introduttivi/02_algoritmi/" class="md-nav__link">
+      02 - Gli Algoritmi
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_introduttivi/03_rappresentazione/" class="md-nav__link">
+      03 - Rappresentazione dei dati
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione" class="md-nav__link">
+    Introduzione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempio" class="md-nav__link">
+    Esempio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complesista-spaziotemporale" class="md-nav__link">
+    Complesistà spazio/temporale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linguaggi-accettati" class="md-nav__link">
+    Linguaggi accettati
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#progettare-una-macchina-di-turing" class="md-nav__link">
+    Progettare una macchina di Turing
+  </a>
+  
+    <nav class="md-nav" aria-label="Progettare una macchina di Turing">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#esempio-1" class="md-nav__link">
+    Esempio 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>08 turing</h1>
+                
+                <h2 id="introduzione">Introduzione<a class="headerlink" href="#introduzione" title="Permanent link">&para;</a></h2>
+<p>Una <em>macchina di Turing</em> è un'astrazione matematica che consiste di un nastro a lunghezza infinita diviso in celle sul quale è dato un certo input. Consiste di una testina che legge il nastro di ingresso. Un registro memorizza lo stato della macchina di Turing. Dopo aver letto un simbolo in input, ed averlo rimpiazzato con un altro simbolo, cambia il suo stato interno, e si sposta di una cella a destra o sinistra. Se la macchina di Turing raggiunge lo stato finale, la stringa in input viene accettata; alternativamente, viene rigettata.</p>
+<p>Una macchina di turing può essere descritta formalmente come una tupla <span class="arithmatex">\((Q, X, \Sigma, \delta, q_0, B, F)\)</span> dove:</p>
+<ul>
+<li><span class="arithmatex">\(Q\)</span> è un insieme finito di stati</li>
+<li><span class="arithmatex">\(X\)</span> è l'alfabeto del nastro</li>
+<li><span class="arithmatex">\(\Sigma\)</span> è l'alfabeto in input</li>
+<li><span class="arithmatex">\(\delta\)</span> è una funzione di transizione</li>
+<li>q_0 è lo stato iniziale</li>
+<li>B è il simbolo vuoto</li>
+<li>F è l'insieme finale degli stati</li>
+</ul>
+<p>In particolare, la funzione <span class="arithmatex">\(\delta\)</span> è definita come segue:</p>
+<div class="arithmatex">\[
+\delta: Q \times X \leftarrow Q \times X \
+\]</div>
+<h2 id="esempio">Esempio<a class="headerlink" href="#esempio" title="Permanent link">&para;</a></h2>
+<p>Consideriamo una machcina di Turing <span class="arithmatex">\(M\)</span> del tipo:</p>
+<div class="arithmatex">\[
+M = (Q, X, \Sigma, \delta, q_0, B, F)
+\]</div>
+<p>con: </p>
+<ul>
+<li><span class="arithmatex">\(Q={q_0, q_1, q_2, q_f}\)</span></li>
+<li><span class="arithmatex">\(X={a,b}\)</span></li>
+<li><span class="arithmatex">\(\Sigma={1}\)</span></li>
+<li>q_0=<span class="arithmatex">\({q_0}\)</span></li>
+<li>F = <span class="arithmatex">\({q_f}\)</span></li>
+</ul>
+<p><span class="arithmatex">\(\delta\)</span> è data da:</p>
+<p>| | |</p>
+<h2 id="complesista-spaziotemporale">Complesistà spazio/temporale<a class="headerlink" href="#complesista-spaziotemporale" title="Permanent link">&para;</a></h2>
+<p>Per una macchina di turing la complessità temporale si riferisce alla misura del numero di volte che il nastro si muove quando la macchina è inizializzata per alcuni siboli di input, e la complessità spaziale è il numero di celle del nastro scritte.</p>
+<p>La complessità temporale è:</p>
+<div class="arithmatex">\[T(n) = O(n log n)\]</div>
+<p>mentre quella spaziale:</p>
+<div class="arithmatex">\[S(n) = O(n)\]</div>
+<h2 id="linguaggi-accettati">Linguaggi accettati<a class="headerlink" href="#linguaggi-accettati" title="Permanent link">&para;</a></h2>
+<p>Una TM accetta un linguaggio se entra in uno stato finale per una qualunque stringa di ingresso <span class="arithmatex">\(w\)</span>.</p>
+<p>Una TM decide un linguaggio se lo accetta ed entra in uno stato di reject per un qualsiasi input che non è nel linugaggio. Un linguaggio è ricorsivo se dcidibile da una macchina di Truing.</p>
+<p>Ci possono essere casi nei quali una TM non si ferma. Questa TM acceetta il linguaggio, ma non lo giudica decidibile.</p>
+<h2 id="progettare-una-macchina-di-turing">Progettare una macchina di Turing<a class="headerlink" href="#progettare-una-macchina-di-turing" title="Permanent link">&para;</a></h2>
+<p>Le linee guida per la progettazione di una macchina di Turing sono le seguenti.</p>
+<h3 id="esempio-1">Esempio 1<a class="headerlink" href="#esempio-1" title="Permanent link">&para;</a></h3>
+<p>Progettare una TM per riconoscere tutte le stringhe che hanno un numero di a dispari.</p>
+<p>Soluzione</p>
+<p>La macchina di Turing può essere costruita come segue.</p>
+<ul>
+<li>sia q_1 lo stato iniziale.</li>
+<li>se M è in q<em>1, sulla scansione di a, entra nello stato di q</em>2 e scive B (blank)</li>
+<li>se M è in q<em>2, sulla scansioen di a, entra nello stato q</em>1 e scrive B</li>
+<li>dalle mosse precedenti, possiamo vedere che M enra lo stato q<em>1 se effettua la scansione di un numero pari di a, e entra lo stato q</em>2 se scandeisc eun numero dispari di a. Quindi q_2 è l'unico stato accettato.</li>
+</ul>
+<p>Di conseguenza:</p>
+<div class="arithmatex">\[
+T = {{q_1, q_2}, {1}, {1, B}, \delta, q_1, B, {q_2}}
+\]</div>
+<p>con <span class="arithmatex">\(\delta\)</span> dato da:</p>
+<table>
+<thead>
+<tr>
+<th>Simbolo</th>
+<th>stato q_1</th>
+<th>stato q_2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>BRq_2</td>
+<td>BRq_1</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.6a3d08fc.min.js"></script>
+      <script src="../assets/javascripts/bundle.71201edf.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
