@@ -54,7 +54,7 @@ Il lettore più attento noterà che manca ancora un elemento fondamentale, ovver
 
 Dal punto di vista formale, l'individuazione del metodo di risoluzione può essere espressa come una *relazione univoca* che associa ad ogni elemento dello spazio dei problemi (o meglio, delle *classi di problemi*, come sarà più chiaro in seguito) $\mathbb{P}$ uno o più elementi dello spazio delle soluzioni $\mathbb{S}$. Questo è rappresentato dal seguente diagramma di Eulero-Venn:
 
-INSERIRE DIAGRAMMA DI EULERO-VENN
+![diag_rel_prob_sol](../assets/images/rel_prob_sol.jpg)
 
 Informalmente, possiamo dire che *per ogni problema* (se risolvibile) *esiste almeno una soluzione*.
 
@@ -141,29 +141,18 @@ c_2 &= 4 \\
 \end{eqnarray}
 $$
 
-#### Step 1
+#### Passi dell'algoritmo
 
 $$
-{c_1}^2 = 9
+\begin{eqnarray}
+\text{Step 1} & \rightarrow & {c_1}^2 = 9 = v_1 \\
+\text{Step 2} & \rightarrow & {c_2}^2 = 16 = v_2 \\
+\text{Step 3} & \rightarrow & v_1 + v_2 = 25 = v_3 \\
+\text{Step 4} & \rightarrow & \sqrt{v_3} = 5 = v_4
+\end{eqnarray}
 $$
 
-#### Step 2
-
-$$
-{c_2}^2 = 16
-$$
-
-#### Step 3
-
-$$
-{c_1}^2 + {c_2}^2 = 25
-$$
-
-#### Step 1
-
-$$
-\sqrt{{c_1}^2 + {c_2}^2} = 5 = i
-$$
+Il risultato è $v_4 = 5$.
 
 ## Caratteristiche degli algoritmi risolutivi
 

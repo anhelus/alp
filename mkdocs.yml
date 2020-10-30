@@ -1,11 +1,20 @@
 site_name: Informatica - Corso di Laurea in Matematica - UniBa
 nav:
-  - Home: index.md
-  - Introduzione all'Informatica: 01_intro.md
-  - Gli Algoritmi: 02_algoritmi.md
-#   - Architettura dei Calcolatori: 03_architettura.md
-#   - Esecuzione dei programmi: 04_esecuzione.md
-#   - Rappresentazione dei dati: 05_rappresentazione.md
+  - Concetti Introduttivi:
+    - 01 - Introduzione all'Informatica: 01_introduttivi/01_intro.md
+    - 02 - Gli Algoritmi: 01_introduttivi/02_algoritmi.md
+    - 03 - Rappresentazione dei dati: 01_introduttivi/03_rappresentazione.md
+#   - L'Hardware:
+    # - 04 - Architettura dei Calcolatori: 03_architettura.md
+    # - 05 - Reti di Calcolatori: 05_reti.md
+#   - I Linguaggi:
+    # - 06 - Linguaggi di programmazione: 06_linguaggi.md
+    # - 07 - Compilatori e interpreti: 07_traduttori.md
+#   -  Linguaggi di programmazione:
+#     - 06 - Linguaggi: 06_linguaggi.md
+#     - 07 - Traduttori: 07_traduttori.md
+#   - 08 - Macchina di Turing: 08_turing.md
+#   - 09 - Complessità computazionale: 09_complessita.md
 
 theme:
   name: material
