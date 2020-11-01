@@ -3,18 +3,18 @@ nav:
   - Concetti Introduttivi:
     - 01 - Introduzione all'Informatica: 01_introduttivi/01_intro.md
     - 02 - Gli Algoritmi: 01_introduttivi/02_algoritmi.md
-    - 03 - Rappresentazione dei dati: 01_introduttivi/03_rappresentazione.md
+    # - 03 - Diagrammi di flusso: 01_introduttivi/03_diagrammi.md
+    - 04 - Rappresentazione dei dati: 01_introduttivi/03_rappresentazione.md
 #   - L'Hardware:
-    # - 04 - Architettura dei Calcolatori: 03_architettura.md
-    # - 05 - Reti di Calcolatori: 05_reti.md
-#   - I Linguaggi:
-    # - 06 - Linguaggi di programmazione: 06_linguaggi.md
-    # - 07 - Compilatori e interpreti: 07_traduttori.md
-#   -  Linguaggi di programmazione:
-#     - 06 - Linguaggi: 06_linguaggi.md
-#     - 07 - Traduttori: 07_traduttori.md
-#   - 08 - Macchina di Turing: 08_turing.md
-#   - 09 - Complessità computazionale: 09_complessita.md
+#     - 05 - Architettura dei Calcolatori: 02_hardware/01_architettura.md
+#     - 06 - Reti di Calcolatori: 02_hardware/02_reti.md
+#   - Linguaggi:
+#     - 07 - Linguaggi di Programmazione: 03_linguaggi/01_linguaggi.md
+#     - 08 - Traduttori: 03_linguaggi/02_traduttori.md
+  - Programmazione:
+    - 09 - Variabili: 04_programmazione/01_variabili.md
+    - 10 - Funzioni: 04_programmazione/02_funzioni.md
+    # - 11 - Programmazione strutturata: 04_programmazione/03_strutturata.md
 
 theme:
   name: material
