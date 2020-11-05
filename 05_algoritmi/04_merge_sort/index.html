@@ -8,19 +8,19 @@
       
       
       
-      <link rel="shortcut icon" href="/assets/images/favicon.png">
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
     
     
       
-        <title>Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>04 merge sort - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.19190aaf.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19190aaf.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.24b84193.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.24b84193.min.css">
         
       
     
@@ -55,6 +55,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#introduzione-al-problema" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -64,7 +69,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
-    <a href="/." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+    <a href="../.." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -81,7 +86,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              
+              04 merge sort
             
           </span>
         </div>
@@ -138,7 +143,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+    <a href="../.." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -176,7 +181,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/01_introduttivi/01_intro/" class="md-nav__link">
+    <a href="../../01_introduttivi/01_intro/" class="md-nav__link">
       01 - Introduzione all'Informatica
     </a>
   </li>
@@ -188,7 +193,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/01_introduttivi/02_algoritmi/" class="md-nav__link">
+    <a href="../../01_introduttivi/02_algoritmi/" class="md-nav__link">
       02 - Gli Algoritmi
     </a>
   </li>
@@ -200,7 +205,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/01_introduttivi/03_rappresentazione.md" class="md-nav__link">
+    <a href="../../01_introduttivi/03_rappresentazione.md" class="md-nav__link">
       04 - Rappresentazione dei dati
     </a>
   </li>
@@ -238,7 +243,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/04_programmazione/02_variabili/" class="md-nav__link">
+    <a href="../../04_programmazione/02_variabili/" class="md-nav__link">
       10 - Variabili
     </a>
   </li>
@@ -250,7 +255,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/04_programmazione/03_funzioni/" class="md-nav__link">
+    <a href="../../04_programmazione/03_funzioni/" class="md-nav__link">
       11 - Funzioni
     </a>
   </li>
@@ -262,7 +267,7 @@
 
 
   <li class="md-nav__item">
-    <a href="/04_programmazione/04_complessita/" class="md-nav__link">
+    <a href="../../04_programmazione/04_complessita/" class="md-nav__link">
       12 - Complessità computazionale
     </a>
   </li>
@@ -280,12 +285,105 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione-al-problema" class="md-nav__link">
+    Introduzione al problema
+  </a>
+  
+    <nav class="md-nav" aria-label="Introduzione al problema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#paradigma-divide-et-impera" class="md-nav__link">
+    Paradigma divide-et-impera
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    Descrizione dell'algoritmo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pseudocodice" class="md-nav__link">
+    Pseudocodice
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#diagramma-di-flusso" class="md-nav__link">
+    Diagramma di flusso
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisi-computazionale" class="md-nav__link">
+    Analisi computazionale
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
-
+                
+                
+                  <h1>04 merge sort</h1>
+                
+                <h2 id="introduzione-al-problema">Introduzione al problema<a class="headerlink" href="#introduzione-al-problema" title="Permanent link">&para;</a></h2>
+<p>I due algoritmi di ordinamento che abbiamo visto finora, ovvero il selection sort e l'insertion sort, hanno dei tempi di esecuzione nel caso peggiore di <span class="arithmatex">\(O(n^2)\)</span>. Quando la dimensione dell'array in ingresso è abbastanza grande, questi algoritmi possono metterci parecchio ad essere eseguiti. Il nostro obiettivo è quello di ridurre questo tempo: a questo scopo, cerchiamo altri algoritmi.</p>
+<h3 id="paradigma-divide-et-impera">Paradigma divide-et-impera<a class="headerlink" href="#paradigma-divide-et-impera" title="Permanent link">&para;</a></h3>
+<p>I due algoritmi che cerchiamo, chiamati merge e quick sort, sono basati su un approccio ricorsivo chiamato <em>divide-et-impera</em>. Questo approccio si occupa di dividere un problema in diversi sotto problemi che risultano essere simili al problema originario. UNa volta divisi, l'approccio risolve ciascuno dei singoli problemi, e quindi combina le soluzioni per risolvere il problema originario.</p>
+<p>Ovviamente, dato che viene usato un approccio ricorsivo, ogni sottoproblema deve essere più piccolo di quello originario, e ci deve essere un caso base per ciascuno di essi. Possiamo schematizzare l'algoritmo divide et impera come avente tre diverse parti:</p>
+<ol>
+<li><strong>Divide</strong>: la prima parte suddivide il problema in diversi sotto problemi che rappresentano delle istanze più piccole del problema stesso.</li>
+<li><strong>Impera</strong>: i sotto problemi sono risoilti in maniera riciorsiva. Se sono abbastanza piccoli, risolvere il sottoproblema come caso base.</li>
+<li><strong>Combinare</strong> le soluzioni ai sottoproblemi in quella al problema originario.</li>
+</ol>
+<p>Si possono visualizzare questi passi in questo modo, con l'algoritmo che crea due sottoproblemi:</p>
+<p><img alt="divide_1" src="../../assets/images/05_algoritmi/04_merge_sort/divide_impera_1.png" /></p>
+<p>Se abbiamo più di due step ricorsivi:</p>
+<p><img alt="divide_2" src="../../assets/images/05_algoritmi/04_merge_sort/divide_impera_2.png" /></p>
+<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
+<p>TODO: da qui<br />
+<a href="https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort">https://www.khanacademy.org/computing/computer-science/algorithms/merge-sort/a/overview-of-merge-sort</a></p>
+<h2 id="pseudocodice">Pseudocodice<a class="headerlink" href="#pseudocodice" title="Permanent link">&para;</a></h2>
+<h2 id="diagramma-di-flusso">Diagramma di flusso<a class="headerlink" href="#diagramma-di-flusso" title="Permanent link">&para;</a></h2>
+<h2 id="analisi-computazionale">Analisi computazionale<a class="headerlink" href="#analisi-computazionale" title="Permanent link">&para;</a></h2>
+                
+              
               
                 
 
@@ -315,20 +413,20 @@
       
     </div>
     
-      <script src="/assets/javascripts/vendor.7e0ee788.min.js"></script>
-      <script src="/assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
-          base: "/",
+          base: "../..",
           features: [],
           search: Object.assign({
-            worker: "/assets/javascripts/worker/search.4ac00218.min.js"
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>
       
-        <script src="/js/config.js"></script>
+        <script src="../../js/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
