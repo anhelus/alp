@@ -12,9 +12,18 @@ nav:
 #     - 07 - Linguaggi di Programmazione: 03_linguaggi/01_linguaggi.md
 #     - 08 - Traduttori: 03_linguaggi/02_traduttori.md
   - Programmazione:
-    - 09 - Variabili: 04_programmazione/01_variabili.md
-    - 10 - Funzioni: 04_programmazione/02_funzioni.md
-    # - 11 - Programmazione strutturata: 04_programmazione/03_strutturata.md
+    # - 09 - Programmazione strutturata: 04_programmazione/01_strutturata.md
+    - 10 - Variabili: 04_programmazione/02_variabili.md
+    - 11 - Funzioni: 04_programmazione/03_funzioni.md
+    - 12 - Complessità computazionale: 04_programmazione/04_complessita.md
+#   - Algoritmi:
+#     - 13 - Ricerca dicotomica: 05_algoritmi/01_binary_search.md
+#   - Automi:
+# - 13 - Grammatiche
+#     - 13 - Automi: 05_automi/01_automi.md
+#     - 14 - Macchina di Turing: 05_automi/02_turing.md
+#   - Il linguaggio C:
+#     - 01 - Introduzione al C: 06_linguaggio_c/01_introduzione.md
 
 theme:
   name: material

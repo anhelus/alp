@@ -1,3 +1,16 @@
+## Dal GOTO alla Programmazione Strutturata
+
+## Il teorema di Bohm-Jacopini
+
+TODO: RIVEDERE
+
+Il teorema di Bohm-Jacopini dice che:
+orema di Böhm-Jacopini, enunciato nel 1966[1] dagli informatici Corrado Böhm e Giuseppe Jacopini, è un teorema di informatica teorica il quale afferma che qualunque algoritmo può essere implementato in fase di programmazione (in diagramma di flusso, pseudocodice o codice sorgente) utilizzando tre sole strutture dette strutture di controllo: la sequenza, la selezione ed il ciclo (iterazione), da applicare ricorsivamente alla composizione di istruzioni elementari (ad esempio, istruzioni eseguibili con il modello di base della macchina di Turing).
+
+Le implicazioni sono ovviamente importanti.
+
+Questo teorema ha un interesse anche teorico, in quanto i linguaggi di programmazione tendono a dotarsi di più tipi di istruzioni di larga portata per evitare che i programmatori debbano occuparsi di istruzioni di portata molto minuta e quindi dispersive per quanto attiene alla padronanza delle finalità dell'algoritmo (esistono però linguaggi minimalisti, come Brainfuck, che si attengono alla lettera al teorema). Il suo valore va visto nella sua capacità di fornire indicazioni generali per le attività di progettazione di nuovi linguaggi e di strategie di programmazione. In effetti, esso ha contribuito alla critica dell'uso sconsiderato delle istruzioni go to e alla definizione delle linee guida della programmazione strutturata che si sono avuti intorno al 1970.
+
 I *diagrammi di flusso* sono delle rappresentazioni grafiche del flusso di esecuzione di un algoritmo imperativo.
 
 ## Flussi
@@ -84,14 +97,3 @@ L'ultimo tipo di struttura di controllo che esiste è il *ciclo*, o *iterazione*
 #### Istruzione For
 
 #### Istruzione While
-
-## Il teorema di Bohm-Jacopini
-
-TODO: RIVEDERE
-
-Il teorema di Bohm-Jacopini dice che:
-orema di Böhm-Jacopini, enunciato nel 1966[1] dagli informatici Corrado Böhm e Giuseppe Jacopini, è un teorema di informatica teorica il quale afferma che qualunque algoritmo può essere implementato in fase di programmazione (in diagramma di flusso, pseudocodice o codice sorgente) utilizzando tre sole strutture dette strutture di controllo: la sequenza, la selezione ed il ciclo (iterazione), da applicare ricorsivamente alla composizione di istruzioni elementari (ad esempio, istruzioni eseguibili con il modello di base della macchina di Turing).
-
-Le implicazioni sono ovviamente importanti.
-
-Questo teorema ha un interesse anche teorico, in quanto i linguaggi di programmazione tendono a dotarsi di più tipi di istruzioni di larga portata per evitare che i programmatori debbano occuparsi di istruzioni di portata molto minuta e quindi dispersive per quanto attiene alla padronanza delle finalità dell'algoritmo (esistono però linguaggi minimalisti, come Brainfuck, che si attengono alla lettera al teorema). Il suo valore va visto nella sua capacità di fornire indicazioni generali per le attività di progettazione di nuovi linguaggi e di strategie di programmazione. In effetti, esso ha contribuito alla critica dell'uso sconsiderato delle istruzioni go to e alla definizione delle linee guida della programmazione strutturata che si sono avuti intorno al 1970.
