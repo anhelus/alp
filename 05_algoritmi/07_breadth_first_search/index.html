@@ -14,7 +14,7 @@
     
     
       
-        <title>15 - Selection sort - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>07 breadth first search - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
@@ -57,7 +57,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduzione-al-problema" class="md-skip">
+        <a href="#descrizione-dellalgoritmo" class="md-skip">
           Skip to content
         </a>
       
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              15 - Selection sort
+              07 breadth first search
             
           </span>
         </div>
@@ -319,12 +319,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
     <label class="md-nav__link" for="nav-3">
       Algoritmi
@@ -354,52 +352,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        15 - Selection sort
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-    
-    <a href="./" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../02_selection_sort/" class="md-nav__link">
       15 - Selection sort
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#introduzione-al-problema" class="md-nav__link">
-    Introduzione al problema
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
-    Descrizione dell'algoritmo
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -466,15 +423,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduzione-al-problema" class="md-nav__link">
-    Introduzione al problema
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    Descrizione dell'algoritmo
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
-    Descrizione dell'algoritmo
+  <a href="#analisi-della-bfs" class="md-nav__link">
+    Analisi della BFS
   </a>
   
 </li>
@@ -492,60 +449,34 @@
               
                 
                 
-                  <h1>15 - Selection sort</h1>
+                  <h1>07 breadth first search</h1>
                 
-                <h2 id="introduzione-al-problema">Introduzione al problema<a class="headerlink" href="#introduzione-al-problema" title="Permanent link">&para;</a></h2>
-<p>Ordinare una lista di elementi (ovviamente dello stesso tipo) può aiutare ad individuare rapidamente un certo elemento della stessa. In tal senso, esistono diversi algoritmi, chiamati <em>algoritmi di ordinamento</em> (o, in inglese, <em>sorting algorithms</em>).</p>
-<p>Il primo, e più semplice, algoritmo di ordinamento è chiamato <em>selection sort</em>. Per comprenderne il funzionamento, ricorriamo (al solito) ai nostri cari Alice e Bob.</p>
-<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
-<p>Il selection sort è un algoritmo <em>iterativo</em>: ad ogni iterazione, viene analizzato un elemento della lista</p>
-<p>L'idea alla base del selection sort è quella di *scambia</p>
-<p>Invece di sviluppare il tema d’anno di Informatica, Alice e Bob decidono di prendersi il pomeriggio libero, e si imbattono nel vecchio mazzo di carte del cugino di Bob.</p>
-<p>“Alice, ricordi il caffè che ho perso l’altra volta? Beh, ho in mente un modo per riaverlo indietro.”<br />
-“Dimmi pure. Cosa hai in mente?”<br />
-“Scommetto che non riesci a trovare una maniera algoritmica per ordinare questo vecchio mazzo.”<br />
-“Scommessa accettata.”</p>
-<p>Alice, che ricordiamo essere una assidua frequentatrice del corso di Informatica, inizia facendo queste mosse.</p>
-<p>Per prima cosa, dispone tutte le carte presenti nel mazzo lungo un’unica fila. A quel punto, inizia a cercare la carta più piccola, e la posiziona al primo posto.<br />
-Successivamente, suddivide la fila in due: a sinistra mette le carte già ordinate (ovvero, la prima carta), ed a destra quelle ancora da ordinare.<br />
-A quel punto, prende dalla fila di destra la carta più piccola, e la posiziona immediatamente a destra dell’ultimo elemento della fila di sinistra. Fatto questo, reitera questa procedura fino a che la fila di destra non è completamente vuota, mentre quella di sinistra ha al suo interno tutte le carte ordinate.</p>
-<p>“Ok, Alice, hai ordinato le carte, ma non vedo alcun algoritmo.”<br />
-“E’ qui che ti sbagli, mio caro.”</p>
-<p>Ed Alice, pregustando la vittoria, elenca a Bob le istruzioni che ha eseguito, dimostrando che la procedura che ha eseguito è modellabile secondo l’algoritmo di selection sort.</p>
-<p>Sia x un array di n elementi interi.<br />
-Associare ad i il primo indice dell’array (0), ed a j l’ultimo (n-1).<br />
-Associare ad una variabile il valore di x(0), e supporre che sia il valore minore.<br />
-Confrontare tutti gli elementi di x(k), con k che va da 1 ad n - 1, con x(0). Aggiornare il valore di x(0) nel caso x(k) minore di x (0).<br />
-Incrementare di 1 il valore di i.<br />
-Ritornare all’istruzione 4 fino a che i == j.</p>
-<p>Un esempio pratico<br />
-Immaginiamo di avere un array con valori [12, 4, 8, 7, 2]. Per prima cosa, vediamo che il valore di i sarà pari a 0, mentre j sarà pari a 4.</p>
-<p>A questo punto, poniamo min = x(0) = 12. Vediamo che x(1) = 4 è minore di 12, per cui il valore min viene aggiornato, e risulta essere pari a 4. Andiamo avanti, e compiamo soltanto un altro aggiornamento, ovvero quando vediamo che x(4) minore di min. A questo punto, inseriamo x(0) all’estrema sinistra (posizione i).</p>
-<p>Aggiorniamo il valore di i ad 1, e reiteriamo la procedura, fino ad ottenere l’array finale:</p>
-<p>[12, 4, 8, 7, 2]<br />
-i = 0; j = 4;<br />
-min = x(0) = 12;<br />
-min = x(4) = 2;<br />
-new = [2, 12, 4, 8, 7]<br />
-i = 1;<br />
-min = x(1) = 12;<br />
-min = x(2) = 4;<br />
-new = [2, 4, 12, 8, 7]<br />
-i = 2;<br />
-min = x(2) = 12;<br />
-min = x(4) = 7;<br />
-new = [2, 4, 7, 12, 8]<br />
-i = 3;<br />
-min = x(3) = 12;<br />
-min = x(4) = 8;<br />
-new = [2, 4, 7, 8, 12]<br />
-return</p>
-<p>TODO FLOW CHART</p>
-<p>Analisi dell’algoritmo<br />
-Il selection sort itera su tutti gli indici di un array. Supponiamo di avere un array di n elementi; avremo (ovviamente) n indici.</p>
-<p>Per capire quante operazioni sono necessarie per completare l’operazione di ordinamento, dobbiamo contare il numero di confronti necessari ad individuare l’elemento minore attualmente presente nell’array. In particolare, alla prima iterazione, quando i = 0, avremo la necessità di effettuare n operazioni, una per ogni elemento dell’array. Alla seconda iterazione, quando i = 1, dovremo fare n - 1 confronti; alla terza, basteranno n - 2 confronti, e così via. Ciò significa che avremo bisogno di n + (n-1) + … + 2 + 1 confronti; ciò equivale ad una serie aritmetica pari a (n^2/2) + n/2. La complessità di caso peggiore tiene però conto di un limite asintoticamente superiore di questa serie, che è pari ad n^2; ciò significa che saremo in una situazione per cui la complessità computazionale è pari ad O(n^2).</p>
-<p>Nota <br />
-Una complessità di questo tipo ci permette di notare che il tempo richiesto all’esecuzione dell’algoritmo cresce molto velocemente al crescere del numero di elementi dell’array. Con n = 10, infatti, avremo bisogno di 100 unità di tempo. Supponendo che un’unità di tempo sia pari ad un microsecondo, avremo bisogno di 0.1 secondi. Se n = 100, allora avremo bisogno di 10 secondi. Se n = 1.000, invece, avremo bisogno di 1.000 secondi (ovvero quasi 17 minuti!).</p>
+                <h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
+<p>L'algoritmo di <em>breadth-first search</em> (o ricerca in ampiezza) assegna due valori ad ogni vertice <span class="arithmatex">\(v\)</span> in un albero <span class="arithmatex">\(G\)</span>.</p>
+<p>Il primo valore è la <em>distanza</em>, che ci dà il numeor minimo di archi in un qualsiasi percorso presente dal vertice sorgente al vertice <span class="arithmatex">\(v\)</span>.</p>
+<p>Il seocndo è il vertice <em>predecessore</em> di <span class="arithmatex">\(v\)</span> lunco il percorso più breve dal vertice sorgente. Il predecessore del sorgente, ovviamente, non c'è.</p>
+<p>Se non vi è alcun path dal vertice sorgente al vertice <span class="arithmatex">\(v\)</span>, la distnaza di <span class="arithmatex">\(v\)</span> è infinita ed il suo predecessore non esiste.</p>
+<p>TODO: esempio vertice isolato</p>
+<p>Nella BFS, impostiamo inizialmente la distanza ed il predecessore di ogni vertice al valore null. Iniziamo a cercare dal nodo sorgente, e vi assegniamo una distanza pari a 0. Quindi, visitiamo tutti i vicini del nodo sorgente, e vi assegnamo una distanza di 1, impostando il predecessore come sorgente. Quindi, visitiamo tutti i vicini dei vertici la cui distanza è 1 e che nono sono stati viistati prima, e diamo a ciascuno di quesi vertici una distanza di 2, ed impostiamo il loro predecessore come l vertice a partire dal quale abbiamo fatto la visita. Procediamo iterativamente con questa procedura fino a che tutti i veritci raggiungibili dal nodo radice non sono stati visitati, sempre visitando tutti i vertici a distanza <span class="arithmatex">\(k\)</span> dalla sorgente prima di visitare un qualsiasi vertice a distanza di <span class="arithmatex">\(k + 1\)</span>.</p>
+<p>TODO: ESEMPIO SU ALBERO</p>
+<p>Una volta completato l'esempio, possono sorgere un paio di domande. la prima è come determianre se un vertice è già stato visitato. Questo è in realtà semplice: la distanza di un vertice è nulla prima che è stata visitata, nel qual momento assume un valore numerico. Quindi, quando siesaminano i vicini di un vertice, visitiamo solo quelli la cui distanza è auttlamente a null.</p>
+<p>L'altra domanda è come tener traccia di quali vertici sono già stati visitati ma che devono essere ancora analizzati. Si usa in questo caso una coda.</p>
+<p>In particoalre, quando visitiamo un vertice, lo mettiamo in una coda. All'inizio, mettiamo nella coda il vertice sorgente perché è sempre il primo che visiteremo. Per decidere quale vertice vgisitare in seguito, scegliamo il vertice che è stato maggiormente in coda, e lo rimuoviamo dalla coda - in altre parole, usiamo il vertice che viene restituito dall'operazione di dequeue().</p>
+<p>TODO: esempio su albero</p>
+<p>Notiamo che, in ogni momento, la coda o contiene tutti i vertici alla stessa distanza, o contiene i vertici con distanza <span class="arithmatex">\(k\)</span> seguiti dai vertici con distanza <span class="arithmatex">\(k + 1\)</span>. In questo modo, ci assicuriamo di visitare tutti i vertici a distanza <span class="arithmatex">\(k\)</span> prima di visitare un qualsiasi vertice a distanza <span class="arithmatex">\(k + 1\)</span>.</p>
+<h2 id="analisi-della-bfs">Analisi della BFS<a class="headerlink" href="#analisi-della-bfs" title="Permanent link">&para;</a></h2>
+<p>Quanto impiega la BFS per un grafo con un insieme di vertici <span class="arithmatex">\(V\)</span> ed un insieme di archi <span class="arithmatex">\(E\)</span>? La risposta è un tempo pari a <span class="arithmatex">\(O(V + E)\)</span>.</p>
+<p>Vediamo il perché. Ipotizziamo che <span class="arithmatex">\(|E| \geq |V|\)</span>, che è il caso per la maggior parte dei grafi, specialmente quelli per i quali eseguiamo la BFS. Quindi:</p>
+<div class="arithmatex">\[
+|V| + |E| \leq |E| + |E| = 2 \times |E|
+\]</div>
+<p>Dato che ignoriamo i fattori costanti nella notazione asintotica, vediamo che quando <span class="arithmatex">\(|E| \geq |V|\)</span>, allora <span class="arithmatex">\(O(V + E)\)</span> è in pratica <span class="arithmatex">\(O(E)\)</span>. Se, però, abbiamo <span class="arithmatex">\(|E| &lt; |V|\)</span>, allora:</p>
+<div class="arithmatex">\[
+|V| + |E| \leq |V| + |V| = 2 \times |V|
+\]</div>
+<p>per cui <span class="arithmatex">\(O(V + E)\)</span> significa in realtà <span class="arithmatex">\(O(V)\)</span>. Possiamo mettere i casi insieme dicendo che <span class="arithmatex">\(O(V + E)\)</span> significa <span class="arithmatex">\(O(max(V, E))\)</span>.</p>
+<p>In generale, se abbiamo dei parametri <span class="arithmatex">\(x\)</span> ed <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(O(x + y)\)</span> significa in realtà <span class="arithmatex">\(O(max(x, y))\)</span>.</p>
+<p>Perché la BFS quindi viene eseguita in <span class="arithmatex">\(O(V+E)\)</span>? E' necessario <span class="arithmatex">\(O(V)\)</span> per inizializzare la distanza ed i predecessori per ciascun vertice. Ognif vertice è visitato almeno una volta, perchè soltanto la prima volta che viene raggiunto la sua distanza è pari a <code>null</code>, per cui ogni vertice è messo nella coda almeno una volta. Dal momento in cui esaminiamo gli archi indicednti s un vertice solo quando lo usiamo come putno di partenza, ogni edge è esaminato almeno due volte, una per ognuno dei veritci su cui incide. Di conseguenza, la BFS spende <span class="arithmatex">\(O(V+E)\)</span> tempo visitando i vertici.</p>
                 
               
               
@@ -560,41 +491,6 @@ Una complessità di questo tipo ci permette di notare che il tempo richiesto all
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
-        
-          <a href="../01_binary_search/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Previous
-                </span>
-                14 - Ricerca dicotomica
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../03_insertion_sort/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                16 - Insertion sort
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
