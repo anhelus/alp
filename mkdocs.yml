@@ -13,7 +13,7 @@ nav:
 #     - 08 - Traduttori: 03_linguaggi/02_traduttori.md
   - Programmazione:
     # - 09 - Programmazione strutturata: 04_programmazione/01_strutturata.md
-    - 10 - Ricorsione: 04_programmazione/02_ricorsione.md
+    # - 10 - Ricorsione: 04_programmazione/02_ricorsione.md
     - 11 - Variabili: 04_programmazione/03_variabili.md
     - 12 - Funzioni: 04_programmazione/04_funzioni.md
     - 13 - Complessità computazionale: 04_programmazione/05_complessita.md
