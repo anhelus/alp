@@ -12,16 +12,16 @@ nav:
 #     - 07 - Linguaggi di Programmazione: 03_linguaggi/01_linguaggi.md
 #     - 08 - Traduttori: 03_linguaggi/02_traduttori.md
   - Programmazione:
-    - 09 - Programmazione strutturata: 04_programmazione/01_strutturata.md
+    # - 09 - Programmazione strutturata: 04_programmazione/01_strutturata.md
     - 10 - Ricorsione: 04_programmazione/02_ricorsione.md
     - 11 - Variabili: 04_programmazione/03_variabili.md
     - 12 - Funzioni: 04_programmazione/04_funzioni.md
     - 13 - Complessità computazionale: 04_programmazione/05_complessita.md
     - 14 - Strutture dati: 04_programmazione/06_strutture_dati.md
   - Algoritmi:
-    - 14 - Ricerca dicotomica: 05_algoritmi/01_binary_search.md
-    - 15 - Selection sort: 05_algoritmi/02_selection_sort.md
-    - 16 - Insertion sort: 05_algoritmi/03_insertion_sort.md
+    #- 14 - Ricerca dicotomica: 05_algoritmi/01_binary_search.md
+    #- 15 - Selection sort: 05_algoritmi/02_selection_sort.md
+    #- 16 - Insertion sort: 05_algoritmi/03_insertion_sort.md
     - 17 - Merge sort: 05_algoritmi/04_merge_sort.md
     - 18 - Quick sort: 05_algoritmi/05_quick_sort.md
 #   - Automi:
