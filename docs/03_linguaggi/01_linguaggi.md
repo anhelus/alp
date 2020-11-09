@@ -64,18 +64,6 @@ A differenza dei linguaggi ad alto livello, quelli a *basso livello* sono più v
 !!! nota "Nota sulla gestione delle risorse"
 	I meccanismi di gestione delle risorse dei linguaggi ad alto livello non sono "poco efficienti". Tutt'altro: essendo scritti da ottimi programmatori, sono molto spesso estremamente più performanti rispetto a quelli che scriverebbe lo sviluppatore quadratico medio. Tuttavia, questi meccanismi sono, giocoforza, **generici**, dato che devono adattarsi all'intero ventaglio dei possibili algoritmi implementabili dal linguaggio di programmazione. La genericità determina, in specifiche e limitate circostanze, uno svantaggio, che potrebbe rendere preferibile un maggior controllo sulle risorse della macchina. E' importante sottolineare comunque come la maggior parte dei linguaggi di programmazione ad alto livello offra metodi specifici per gestire questo tipo di situazioni.
 
-### Strutture dati
-
-I linguaggi di programmazione sfruttano il concetto di *struttura dati* ci permettono di organizzare, gestire e memorizzare dati in maniera efficiente. Entrando nel dettaglio, le strutture dati sono delle *collezioni* di diversi valori, che caratterizzano anche le *relazioni* tra di essi e le *operazioni* che vi possono essere applicate.
-
-Esistono diverse tipologie di strutture dati, ognuna delle quali adatta ad un certo utilizzo. Vediamone alcune.
-
-* *Array*: questa struttura dati è concettualmente assimibilabile ad un *vettore* di elementi, tipicamente (ma non necessariamente, a seconda del linguaggio) dello stesso tipo, organizzati secondo un ordine specifico, e ridimensionabili a seconda delle esigenze. E' possibile accedere ad ogni elemento dell'array mediate un apposito *indice* intero.
-* *Linked List* (o più semplicemente *liste*): sono delle collezioni di elementi, tipicamente dello stesso tipo. Ogni elemento della lista è chiamato *nodo*, e contiene al suo interno le informazioni riguardanti sia il valore associato a quell'elemento, sia un riferimento al nodo successivo nella lista. Concettualmente, lista ed array sono molto simili; tuttavia, la lista offre un vantaggio fondamentale, legato al fatto che è possibile inserire o rimuovere un elemento dalla lista in maniera più efficiente rispetto all'effettuare la stessa operazione su di un array.
-* *Struct* (o anche *tupla*): sono delle strutture dati in cui ogni record è un valore che contiene altri valori (chiamati *membri* o *campi*), tipicamente in numero e sequenza fissi, indicizzati usando esclusivamente i nomi.
-* *Union*: sono delle strutture dati che specificano quale, tra un certo numero di tipi primitivi, può essere memorizzato in una sua istanza. Si contrappongono alle struct, in quanto ammettono un unico valore per volta.
-* *Oggetto*: struttura dati che contiene un certo numero di campi (come una struct) e vari metodi che operano direttamente sui contenuti dei dati.
-
 ### Linguaggi imperativi vs. linguaggi dichiarativi
 
 In generale, è possibile operare un'ulteriore distinzione tra linguaggi di programmazione, in base alle modalità con cui viene definita la serie di operazioni che il programma dovrà eseguire.

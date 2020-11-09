@@ -1,90 +1,74 @@
-https://www.tutorialspoint.com/automata_theory/turing_machine_introduction.htm
+## Modelli di calcolo
 
-## Introduzione
+Prima di specializzarci nella costruzione di algoritmi (e poi di programmi) per un particolare calcolatore è bene convincersi che non esiste un unico modello di calcolo.
 
-Una *macchina di Turing* è un'astrazione matematica che consiste di un nastro a lunghezza infinita diviso in celle sul quale è dato un certo input. Consiste di una testina che legge il nastro di ingresso. Un registro memorizza lo stato della macchina di Turing. Dopo aver letto un simbolo in input, ed averlo rimpiazzato con un altro simbolo, cambia il suo stato interno, e si sposta di una cella a destra o sinistra. Se la macchina di Turing raggiunge lo stato finale, la stringa in input viene accettata; alternativamente, viene rigettata.
+Ogni modello richiede un differente approccio alla soluzione dei problemi, proponendo un modello teorico di macchina di calcolo (esecutore) con caratteristiche e capacità differenti.
 
-Una macchina di turing può essere descritta formalmente come una tupla $(Q, X, \Sigma, \delta, q_0, B, F)$ dove:
+Basarsi su un modello di macchina astratta è necessario per poter confrontare l'efficienza di due differenti algoritmi, a prescindere dalla loro implementazione e dalla velocità del computer su cui eseguiremo il programma codificato in linguaggio macchina.
 
-* $Q$ è un insieme finito di stati
-* $X$ è l'alfabeto del nastro
-* $\Sigma$ è l'alfabeto in input
-* $\delta$ è una funzione di transizione
-* q_0 è lo stato iniziale
-* B è il simbolo vuoto
-* F è l'insieme finale degli stati
+Basandoci su un modello di calcolo astratto, ma semplificato, è più semplice dimostrare in termini rigorosi la correttezza di un detertminato algoritmo.
 
-In particolare, la funzione $\delta$ è definita come segue:
+## Macchina di Turing
 
-$$
-\delta: Q \times X \leftarrow Q \times X \
-$$
+Ideata nel 1936 dal matematico inglese Alan Turing, una delle figure più iomportanti che hanno contribuito alla definizione ed allo sviluppo dell'informatica.
 
-## Esempio
+E' una macchina astratta basata su due componenti:
 
-Consideriamo una machcina di Turing $M$ del tipo:
+* un nastro infinito (da questa caratteristica ne segue il fatto che la macchina di Turing non è realizzabile nella pratica) su cui la macchina può leggere e scrivere mediante 
+* una testina di lettura e scrittura che, scorrendo sul nastro, è in grado di kleggerne e modificarne il contenuto
 
-$$
-M = (Q, X, \Sigma, \delta, q_0, B, F)
-$$
+La macchina di Turing è un Automa a Stati Finiti Deterministico.
 
-con: 
+Il funzionamento della macchina è basato sul cambiamento di stato sulla base del contenuto (del simbolo) che è presente sul nastro in corrispondenza della testina di lettura/scrittura.
 
-* $Q={q_0, q_1, q_2, q_f}$
-* $X={a,b}$
-* $\Sigma={1}$
-* q_0=${q_0}$
-* F = ${q_f}$
+Dopo aver letto il contenuto della posizione corrente del nastro, la macchina, sulla base dello stato in cui si trova, è in grado di passare in un altro stato, scrivere qualcosa enlla posizione corrente del nastro, ed infine spostarsi a destra o a sinistra sul nastro stesso.
 
-$\delta$ è data da:
+Il *nasto è infinito*, mentre gli stati sono in quantità finita (è un automa a stati finiti deterministico).
 
-| | |
+Il fatto che sia deterministico sta ad indicare che ad ogni coppia "stato/simbolo" che viene incontrata dalla macchina è univocmaente detremrinata l'azione e lo stato compiuto dalla macchina stessa. In questo modo la macchina può eseguire solo un'operazione per volta.
 
-## Complesistà spazio/temporale
 
-Per una macchina di turing la complessità temporale si riferisce alla misura del numero di volte che il nastro si muove quando la macchina è inizializzata per alcuni siboli di input, e la complessità spaziale è il numero di celle del nastro scritte.
 
-La complessità temporale è:
+# problemi
 
-$$T(n) = O(n log n)$$
+per ogni problema che si intende risolvere è necessario progettare una macchina di Turing adeguata.
 
-mentre quella spaziale:
+Per farlo è necessario definrie:
 
-$$S(n) = O(n)$$
+* l'alfabeto dei simboi che è possibile leggeere e scrivere sul nastro infinito
+* gli stati in cui si può torvare la macchina
+* le transizioni da uno stato ad un altro
+* lo stato iiziale ed un insieme di stati finali
 
-## Linguaggi accettati
+Per rappresentare l'automa possiamo disegnare un grafo degli stati, ovvvero una matrice di transizione.
 
-Una TM accetta un linguaggio se entra in uno stato finale per una qualunque stringa di ingresso $w$.
+*Esempio*
 
-Una TM decide un linguaggio se lo accetta ed entra in uno stato di reject per un qualsiasi input che non è nel linugaggio. Un linguaggio è ricorsivo se dcidibile da una macchina di Truing.
+Letta una stringa di caratteri alfabetici, stabilire se termina con la lettera "a"
 
-Ci possono essere casi nei quali una TM non si ferma. Questa TM acceetta il linguaggio, ma non lo giudica decidibile.
+*Alfabeto*: a,b,c, ..., x, y, z, # (con # fine della stringa)
 
-## Progettare una macchina di Turing
+Strategia risolutiva
 
-Le linee guida per la progettazione di una macchina di Turing sono le seguenti.
+* Partendo dal primo carattere della stringa, scorrere verso destra il nastro fino a quando non incontro il carattere #
+* ogni volta che trovo un carattere a la macchina si pone in uno stato di preallarme (S_1) e torna nello stato di "quiete (S_o) quando incontra una lettera dalla b alla z.
 
-### Esempio 1
+Se quando incontra il # si trova nello stato So allora la stringa non termina con la lettera a, e passa in $S_2$. Altrimenti, se si trova in $S_1$, vuol dire che la stringa termian con la lettera *a* e passa in $S3$.
 
-Progettare una TM per riconoscere tutte le stringhe che hanno un numero di a dispari.
+TODO: grafo degli stati
 
-Soluzione
+La matrice di transizione è la seguente
 
-La macchina di Turing può essere costruita come segue.
+|   | $S_0$ | $S_1$ | $S_2$ | $S_3$ |
+| - | ----- | ----- | ----- | ----- |
+| a | -, $D_x$, $S_1$ | -, $D_x$, $S_1$, | / | / |
+| b-z | -, $D_x$, $S_0$ | -, $D_x$, $S_0$ | / | / |
+| # | -, -, $S_2$ | -, -, $S_3$ | **No** | **Sì** |
 
-* sia q_1 lo stato iniziale.
-* se M è in q_1, sulla scansione di a, entra nello stato di q_2 e scive B (blank)
-* se M è in q_2, sulla scansioen di a, entra nello stato q_1 e scrive B
-* dalle mosse precedenti, possiamo vedere che M enra lo stato q_1 se effettua la scansione di un numero pari di a, e entra lo stato q_2 se scandeisc eun numero dispari di a. Quindi q_2 è l'unico stato accettato.
+## Tesi di Church-Turing
 
-Di conseguenza:
+Anche assumendo altri modelli di calcolo, diversi dalla macchina di Turing, si afferma che tutti questi modelli sono fra loro equivalenti.
 
-$$
-T = {{q_1, q_2}, {1}, {1, B}, \delta, q_1, B, {q_2}}
-$$
+Un problema calcolabile secondo il modello della macchina di Turing è calcolabile anche rispetto ad altri modelli.
 
-con $\delta$ dato da:
 
-| Simbolo | stato q_1 | stato q_2 |
-| ------- | --------- | --------- |
-| a | BRq_2 | BRq_1 |
