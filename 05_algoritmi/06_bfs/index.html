@@ -14,7 +14,7 @@
     
     
       
-        <title>07 breadth first search - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>06 bfs - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
@@ -35,6 +35,8 @@
       
     
     
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -87,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              07 breadth first search
+              06 bfs
             
           </span>
         </div>
@@ -206,7 +208,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_introduttivi/03_rappresentazione.md" class="md-nav__link">
+    <a href="../../01_introduttivi/04_rappresentazione/" class="md-nav__link">
       04 - Rappresentazione dei dati
     </a>
   </li>
@@ -341,6 +343,132 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Modelli di calcolo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Modelli di calcolo" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Modelli di calcolo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_modelli/01_turing/" class="md-nav__link">
+      20 - Macchina di Turing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Linguaggio C
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linguaggio C" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Linguaggio C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07_linguaggio_c/01_introduzione/" class="md-nav__link">
+      01 - Introduzione al C
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Appendici
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Appendici
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../appendici/vs_code_guide/" class="md-nav__link">
+      A - Guida alla configurazione di Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../appendici/vs_community_guide/" class="md-nav__link">
+      B - Guida alla configurazione di Visual Studio Community
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -367,6 +495,19 @@
     Descrizione dell'algoritmo
   </a>
   
+    <nav class="md-nav" aria-label="Descrizione dell'algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bfs-sugli-alberi" class="md-nav__link">
+    BFS sugli alberi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
         <li class="md-nav__item">
@@ -389,10 +530,29 @@
               
                 
                 
-                  <h1>07 breadth first search</h1>
+                  <h1>06 bfs</h1>
                 
                 <h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
-<p>L'algoritmo di <em>breadth-first search</em> (o ricerca in ampiezza) assegna due valori ad ogni vertice <span class="arithmatex">\(v\)</span> in un albero <span class="arithmatex">\(G\)</span>.</p>
+<p>La <strong>ricerca in ampiezza</strong>, o, in inglese, <strong>breath-first search</strong> (<strong>BFS</strong>), è un algoritmo di ricerca che lavora su grafi e, per estensione, alberi.</p>
+<p>Le sue applicazioni sono svariate: può ad esempio, trovare i collegamenti tra due nodi ad una distanza pari a <span class="arithmatex">\(k\)</span>, oppure individuare i nodi adiacenti all'interno di una rete, o, ancora, trovare il cammino minimo tra due nodi.</p>
+<p>Per far questo, la BFS opera "attraversando" tutti i nodi presenti ad una data distanza dal nodo sorgente. Una volta esplorati questi nodi, la distanza viene incrementata, ed i nodi a distanza immediatamente maggiore sono esplorati. In tal senso, esistono diverse possibili implementazioni della BFS; quella che esploreremo prevede l'utilizzo di una <em>coda</em>.</p>
+<p>Per semplicità, comunque, partiremo vedendo l'applicazione della BFS sugli alberi.</p>
+<h3 id="bfs-sugli-alberi">BFS sugli alberi<a class="headerlink" href="#bfs-sugli-alberi" title="Permanent link">&para;</a></h3>
+<p>Visualizzare l'applicazione della BFS su un albero è molto semplice. Supponiamo di dover considerare il seguente albero.</p>
+<p><img alt="starting_tree" src="../../assets/images/05_algoritmi/06_bfs/starting_tree.png# images" /></p>
+<p>La BFS opera considerando due parametri:</p>
+<ol>
+<li>il nodo attualmente ispezionato;</li>
+<li>i <em>figli</em> di questo nodo, ovvero quelli adiacenti al nodo attualmente attraversato.</li>
+</ol>
+<p>In particolare, alla prima iterazione il nodo attualmente ispezionato è proprio i</p>
+<ol>
+<li>il nodo <em>radice</em>, ovvero quello da cui parte la ricerca;</li>
+<li>la <em>distanza</em> dal nodo radice, ovvero il numero di archi che separano un dato nodo dal nodo radice;</li>
+<li>il <em>predecessore</em> del nodo </li>
+</ol>
+<p>Il primo nodo che dovremo considerare è quello relativo al nodo radice, ovvero il nodo <span class="arithmatex">\(1\)</span>. </p>
+<p>Il primo valore che andremo a considerare è proprio quello relativo al nodo radice, ovvero il nodo <span class="arithmatex">\(1\)</span>.</p>
 <p>Il primo valore è la <em>distanza</em>, che ci dà il numeor minimo di archi in un qualsiasi percorso presente dal vertice sorgente al vertice <span class="arithmatex">\(v\)</span>.</p>
 <p>Il seocndo è il vertice <em>predecessore</em> di <span class="arithmatex">\(v\)</span> lunco il percorso più breve dal vertice sorgente. Il predecessore del sorgente, ovviamente, non c'è.</p>
 <p>Se non vi è alcun path dal vertice sorgente al vertice <span class="arithmatex">\(v\)</span>, la distnaza di <span class="arithmatex">\(v\)</span> è infinita ed il suo predecessore non esiste.</p>

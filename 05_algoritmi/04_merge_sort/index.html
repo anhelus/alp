@@ -36,6 +36,8 @@
     
     
     
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
     
       
     
@@ -206,7 +208,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../01_introduttivi/03_rappresentazione.md" class="md-nav__link">
+    <a href="../../01_introduttivi/04_rappresentazione/" class="md-nav__link">
       04 - Rappresentazione dei dati
     </a>
   </li>
@@ -437,6 +439,132 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+    
+    <label class="md-nav__link" for="nav-4">
+      Modelli di calcolo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Modelli di calcolo" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Modelli di calcolo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_modelli/01_turing/" class="md-nav__link">
+      20 - Macchina di Turing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Linguaggio C
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linguaggio C" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Linguaggio C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07_linguaggio_c/01_introduzione/" class="md-nav__link">
+      01 - Introduzione al C
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Appendici
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Appendici
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../appendici/vs_code_guide/" class="md-nav__link">
+      A - Guida alla configurazione di Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../appendici/vs_community_guide/" class="md-nav__link">
+      B - Guida alla configurazione di Visual Studio Community
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -550,7 +678,7 @@
 <li><strong>combine</strong>: combiniamo le soluzioni ai sottoproblemi, arrivando a quella del problema originario.</li>
 </ol>
 <p>Schematizzando:</p>
-<p><img alt="divide_conquer" src="../../assets/images/05_algoritmi/04_merge_sort/divide_conquer.png" /></p>
+<p><img alt="divide_conquer" src="../../assets/images/05_algoritmi/04_merge_sort/divide_conquer.png# images" /></p>
 <h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
 <p>Abbiamo già detto come il <strong>merge sort</strong> si basi su un approccio di tipo divide-and-conquer. </p>
 <p>Di conseguenza, partendo dal nostro solito problema (ovvero, l'ordinamento di un array), dobbiamo definire il <em>sotto-problema da risolvere</em>. Banalmente, questo potrà essere proprio quello di ordinare ciascun sotto-array in cui viene scomposto il nostro array originario.</p>
@@ -582,9 +710,9 @@ array[l,r] = [8, 5, 12, 7, 4]
 </ol>
 <p>Avremo quindi il secondo livello. In questo passo, l'array <code>array[0,1]</code> avrà ancora due elementi, per cui sarà necessario suddividerlo ulteriormente; stesso vale per <code>array[2,4]</code>.</p>
 <p>Arrivando in fondo, avremo la scomposizione di ogni array a livello di singolo elemento. Ciò comporta che si arriverà ad un certo punto ad una situazione in cui tutti gli array sotto esame saranno composti da un unico elemento, come mostrato in figura.</p>
-<p><img alt="divide_step" src="../../assets/images/05_algoritmi/04_merge_sort/divide_step.png" /></p>
+<p><img alt="divide_step" src="../../assets/images/05_algoritmi/04_merge_sort/divide_step.png# images" /></p>
 <p>A questo punto, ci si è ricondotti in ogni situazione al caso base. Potrà quindi avvenire lo step <em>conquer</em>, dove saranno ordinati i diversi sotto-array, ed infine lo step <em>combine</em>, che combinerà i risultati in uscita dal <em>conquer</em>. Questo processo è mostrato in figura.</p>
-<p><img alt="conquer_step" src="../../assets/images/05_algoritmi/04_merge_sort/conquer_step.png" /></p>
+<p><img alt="conquer_step" src="../../assets/images/05_algoritmi/04_merge_sort/conquer_step.png# images" /></p>
 <p>Notiamo come, dal punto di vista logico, i passaggi <em>divide</em> e <em>conquer</em> del merge sort siano in realtà abbastanza semplici. Il punto "complesso", quello dove avviene l'ordinamento vero è proprio, è il <em>combine</em>.</p>
 <h4 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h4>
 <p>Il passo <em>combine</em> è quello che ci permette di "unire" due sotto-array adiacenti, ovvero <code>array[l, q]</code> ed <code>array[q+1, r]</code>, in un singolo array ordinato.</p>
