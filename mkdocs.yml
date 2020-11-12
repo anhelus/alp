@@ -4,7 +4,7 @@ nav:
     - 01 - Introduzione all'Informatica: 01_introduttivi/01_intro.md
     - 02 - Gli Algoritmi: 01_introduttivi/02_algoritmi.md
     # - 03 - Diagrammi di flusso: 01_introduttivi/03_diagrammi.md
-    - 04 - Rappresentazione dei dati: 01_introduttivi/03_rappresentazione.md
+    - 04 - Rappresentazione dei dati: 01_introduttivi/04_rappresentazione.md
 #   - L'Hardware:
 #     - 05 - Architettura dei Calcolatori: 02_hardware/01_architettura.md
 #     - 06 - Reti di Calcolatori: 02_hardware/02_reti.md
@@ -24,12 +24,14 @@ nav:
     #- 16 - Insertion sort: 05_algoritmi/03_insertion_sort.md
     - 17 - Merge sort: 05_algoritmi/04_merge_sort.md
     - 18 - Quick sort: 05_algoritmi/05_quick_sort.md
-#   - Automi:
-# - 13 - Grammatiche
-#     - 13 - Automi: 05_automi/01_automi.md
-#     - 14 - Macchina di Turing: 05_automi/02_turing.md
-#   - Il linguaggio C:
-#     - 01 - Introduzione al C: 06_linguaggio_c/01_introduzione.md
+    # - 19 - Breadth-first search: 05_algoritmi/06_bfs.md
+  - Modelli di calcolo:
+    - 20 - Macchina di Turing: 06_modelli/01_turing.md
+  - Linguaggio C:
+    - 01 - Introduzione al C: 07_linguaggio_c/01_introduzione.md
+  - Appendici:
+    - A - Guida alla configurazione di Visual Studio Code: appendici/vs_code_guide.md
+    - B - Guida alla configurazione di Visual Studio Community: appendici/vs_community_guide.md
 
 theme:
   name: material
@@ -68,3 +70,6 @@ extra_javascript:
   - js/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css

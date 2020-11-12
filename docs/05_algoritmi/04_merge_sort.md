@@ -12,7 +12,7 @@ E' quindi possibile schematizzare il paradigma in tre parti:
 
 Schematizzando:
 
-![divide_conquer](../assets/images/05_algoritmi/04_merge_sort/divide_conquer.png)
+![divide_conquer](../assets/images/05_algoritmi/04_merge_sort/divide_conquer.png# images)
 
 ## Descrizione dell'algoritmo
 
@@ -61,11 +61,11 @@ Avremo quindi il secondo livello. In questo passo, l'array `array[0,1]` avrà an
 
 Arrivando in fondo, avremo la scomposizione di ogni array a livello di singolo elemento. Ciò comporta che si arriverà ad un certo punto ad una situazione in cui tutti gli array sotto esame saranno composti da un unico elemento, come mostrato in figura.
 
-![divide_step](../assets/images/05_algoritmi/04_merge_sort/divide_step.png)
+![divide_step](../assets/images/05_algoritmi/04_merge_sort/divide_step.png# images)
 
 A questo punto, ci si è ricondotti in ogni situazione al caso base. Potrà quindi avvenire lo step *conquer*, dove saranno ordinati i diversi sotto-array, ed infine lo step *combine*, che combinerà i risultati in uscita dal *conquer*. Questo processo è mostrato in figura.
 
-![conquer_step](../assets/images/05_algoritmi/04_merge_sort/conquer_step.png)
+![conquer_step](../assets/images/05_algoritmi/04_merge_sort/conquer_step.png# images)
 
 Notiamo come, dal punto di vista logico, i passaggi *divide* e *conquer* del merge sort siano in realtà abbastanza semplici. Il punto "complesso", quello dove avviene l'ordinamento vero è proprio, è il *combine*.
 

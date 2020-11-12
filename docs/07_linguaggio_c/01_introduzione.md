@@ -1,54 +1,12 @@
 ## Cosa è C?
 
-C è un linguaggio ad alto livello inizialmente sviluppato da Dennis M. Ritchie per sviluppare il sistema operativo UNIX ai Bell Labs. La sua prima implementazione risale al 1972, su un computer DEC PDP-11.
+Il linguaggio C è un linguaggio ad alto livello inizialmente sviluppato da Dennis M. Ritchie nell'ambito dello sviluppo del sistema operativo UNIX ai Bell Labs. La sua prima implementazione risale al 1972 su un computer DEC PDP-11. Il primo draft disponibile venne reso disponibile al grande pubblico nel 1978, in quello che è conosciuto al giorno d'oggi come *K&R standard*; venne poi formalizzato dall'*American National Standard Institute* (*ANSI*) nel 1988.
 
-C is a general-purpose, high-level language that was originally developed by Dennis M. Ritchie to develop the UNIX operating system at Bell Labs. C was originally first implemented on the DEC PDP-11 computer in 1972.
+Al giorno d'oggi, C è uno dei linguaggi di programmazioni maggiormente utilizzati. Le sue applicazioni sono estese, e vanno dai sistemi operativi, ai compilatori, ai text editor, passando per database e programmi ottimizzati per smartphone.
 
-In 1978, Brian Kernighan and Dennis Ritchie produced the first publicly available description of C, now known as the K&R standard.
+Vediamo insieme la struttura di un primo programma in C.
 
-The UNIX operating system, the C compiler, and essentially all UNIX application programs have been written in C. C has now become a widely used professional language for various reasons −
-
-Easy to learn
-Structured language
-It produces efficient programs
-It can handle low-level activities
-It can be compiled on a variety of computer platforms
-Facts about C
-C was invented to write an operating system called UNIX.
-
-C is a successor of B language which was introduced around the early 1970s.
-
-The language was formalized in 1988 by the American National Standard Institute (ANSI).
-
-The UNIX OS was totally written in C.
-
-Today C is the most widely used and popular System Programming Language.
-
-Most of the state-of-the-art software have been implemented using C.
-
-Today's most popular Linux OS and RDBMS MySQL have been written in C.
-
-Why use C?
-C was initially used for system development work, particularly the programs that make-up the operating system. C was adopted as a system development language because it produces code that runs nearly as fast as the code written in assembly language. Some examples of the use of C might be −
-
-Operating Systems
-Language Compilers
-Assemblers
-Text Editors
-Print Spoolers
-Network Drivers
-Modern Programs
-Databases
-Language Interpreters
-Utilities
-C Programs
-A C program can vary from 3 lines to millions of lines and it should be written into one or more text files with extension ".c"; for example, hello.c. You can use "vi", "vim" or any other text editor to write your C program into a file.
-
-This tutorial assumes that you know how to edit a text file and how to write source code inside a program file.
-
-## Struttura di un programma in C
-
-### Hello, World!
+## Hello, C!
 
 La *Via dell'Informatico* ci impone di partire in maniera abbastanza classica, andando a definire un primo, rudimentale, ma famigerato programma: l'*Hello, World*.
 
@@ -63,6 +21,46 @@ int main() {
 }
 ```
 
-Ecco fatto.
+Ecco fatto, semplice, vero?
 
-Ma, nonostante la sua apparente semplicità, in queste poche righe di codice sono racchiusi tutti i concetti necessari a scrivere programmi ben più complicati. Vediamoli insieme.
+Beh, certo, però, nonostante la loro semplicità, in queste poche righe di codice sono racchiusi tutti i concetti fondamentali a scrivere programmi ben più complessi.
+
+Vediamole una ad una.
+
+### `#include`
+
+La prima istruzione è una *direttiva*. Se ricordate, è proprio una di quelle parti di codice che vengono *pre-elaborate* dal compilatore.
+
+In particolare, questa è una direttiva `include`, che prevede un parametro che può essere incluso tra i simboli `<` e `>`, oppure tra doppi apici, e rappresenta il nome di un file. Quando il compilatore incontra una `include`, cerca il file specificato (in questo caso, `stdio.h`, che fa parte dello "standard" dettato dal C), e ne copia integralmente il contenuto nel file che andrà poi al front end del compilatore.
+
+L'uso dei simboli `<` e `>` non è intercambiabile con quello dei doppi apici: infatti, nel primo caso, la ricerca avviene all'interno della directory in cui si trovano i file di intestazione della libreria standard di C (torneremo in avanti sul concetto di libreria), mentre nel secondo la ricerca avviene all'interno della directory corrente.
+
+### `int main()`
+
+Questa istruzione è la firma di una particolare funzione, ovvero il `main()`.
+
+La funzione `main` sarebbe una normalissima funzione, se non fosse per un piccolo dettaglio: rappresenta infatti il *punto di accesso* di un programma, ovvero la parte di codice che verrà effettivamente eseguita a runtime, richiamando e componendo alla bisogna le altre istruzioni e funzioni invocate dal programma.
+
+### `// Questo è un commento`
+
+Le istruzioni che hanno preposti due caratteri di slash (`//`) sono chiamate *commenti*. Queste righe permettono al programmatore di inserire dei "suggerimenti" per spiegare meglio il codice ad altri sviluppatori (o per ricordare in futuro cosa si era fatto).
+
+Questo tipo di commento è a singola linea; esistono anche i commenti multilinea:
+
+```c
+/*
+ * Questo è un commento multilinea!
+ */
+
+// E questo è un commento a linea singola!
+```
+
+### `printf("Hello, World! \n")`
+
+Questa istruzione richiama una funzione integrata nel file `stdio.h` che abbiamo invocato in precedenza nella direttiva `include`, ovvero la funzione `printf`. Questa accetta in ingresso una stringa (logicamente equivalente ad un array di char), ovvero `"Hello, World! \n"`, e la stampa a schermo (spesso in una shell).
+
+Interessante notare la presenza di un *escape character*, ovvero `\n`, che indica al compilatore di andare a capo dopo il termine della stringa.
+
+### `return 0`
+
+La funzione `main()` prevede in uscita un valore intero; di conseguenza, il `return 0` indica il termine del `main()` stesso. Per convenzione, il `return 0` indica il successo del programma, mentre altri valori di ritorno possono indicare degli errori intercorsi durante l'esecuzione.
