@@ -33,6 +33,8 @@ nav:
     - A - Guida alla configurazione di Visual Studio Code: appendici/a_vs_code_guide.md
     - B - Guida alla configurazione di Visual Studio Community: appendici/b_vs_community_guide.md
     - C - Esempio tema d'anno: appendici/c_esempio_tema.md
+  - Esercizi:
+    - Linguaggio C: esercizi/linguaggio_c.md
 
 theme:
   name: material

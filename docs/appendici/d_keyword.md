@@ -1,6 +1,7 @@
 ## Lista di keyword per il linguaggio C
 
-La presente lista è in aggiornamento.
+!!! note "Nota"
+	La lista è in aggiornamento.
 
 | Keyword | Uso |
 | ------- | ----------- |
