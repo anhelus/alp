@@ -1,8 +1,0 @@
-﻿  programma.cpp
-programma.obj : error LNK2019: riferimento al simbolo esterno "int __cdecl aggiungi(int,int)" (?aggiungi@@YAHHH@Z) non risolto nella funzione _main
-    Suggerimento sui simboli che sono stati definiti per cui potrebbe esistere una corrispondenza:
-      _aggiungi
-programma.obj : error LNK2019: riferimento al simbolo esterno "int __cdecl moltiplica(int,int)" (?moltiplica@@YAHHH@Z) non risolto nella funzione _main
-    Suggerimento sui simboli che sono stati definiti per cui potrebbe esistere una corrispondenza:
-      _moltiplica
-C:\Users\acard\Documents\Repos\Personali\courses\Informatica\samples\Linguaggio C\Modularity\Debug\Modularity.exe : fatal error LNK1120: 2 esterni non risolti
