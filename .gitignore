@@ -9,5 +9,5 @@
 .history/
 
 # VS
-.vs/
-Debug/
+.vs/*
+Debug/*
