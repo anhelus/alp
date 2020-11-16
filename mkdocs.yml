@@ -30,8 +30,9 @@ nav:
   - Linguaggio C:
     - 01 - Introduzione al C: 07_linguaggio_c/01_introduzione.md
   - Appendici:
-    - A - Guida alla configurazione di Visual Studio Code: appendici/vs_code_guide.md
-    - B - Guida alla configurazione di Visual Studio Community: appendici/vs_community_guide.md
+    - A - Guida alla configurazione di Visual Studio Code: appendici/a_vs_code_guide.md
+    - B - Guida alla configurazione di Visual Studio Community: appendici/b_vs_community_guide.md
+    - C - Esempio tema d'anno: appendici/c_esempio_tema.md
 
 theme:
   name: material
