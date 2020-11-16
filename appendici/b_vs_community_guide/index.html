@@ -14,7 +14,7 @@
     
     
       
-        <title>02 selection sort - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>B - Guida alla configurazione di Visual Studio Community - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#introduzione-al-problema" class="md-skip">
+        <a href="#installazione-e-configurazione-di-cc" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              02 selection sort
+              B - Guida alla configurazione di Visual Studio Community
             
           </span>
         </div>
@@ -317,7 +317,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../04_merge_sort/" class="md-nav__link">
+    <a href="../../05_algoritmi/04_merge_sort/" class="md-nav__link">
       17 - Merge sort
     </a>
   </li>
@@ -329,7 +329,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../05_quick_sort/" class="md-nav__link">
+    <a href="../../05_algoritmi/05_quick_sort/" class="md-nav__link">
       18 - Quick sort
     </a>
   </li>
@@ -418,10 +418,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
     <label class="md-nav__link" for="nav-6">
       Appendici
       <span class="md-nav__icon md-icon"></span>
@@ -440,7 +442,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../appendici/a_vs_code_guide/" class="md-nav__link">
+    <a href="../a_vs_code_guide/" class="md-nav__link">
       A - Guida alla configurazione di Visual Studio Code
     </a>
   </li>
@@ -450,11 +452,65 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../appendici/b_vs_community_guide/" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        B - Guida alla configurazione di Visual Studio Community
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
       B - Guida alla configurazione di Visual Studio Community
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#installazione-e-configurazione-di-cc" class="md-nav__link">
+    Installazione e configurazione di C/C++
+  </a>
+  
+    <nav class="md-nav" aria-label="Installazione e configurazione di C/C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installazione-del-supporto" class="md-nav__link">
+    Installazione del supporto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-di-un-progetto" class="md-nav__link">
+    Creazione di un progetto
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -464,7 +520,7 @@
 
 
   <li class="md-nav__item">
-    <a href="../../appendici/c_esempio_tema/" class="md-nav__link">
+    <a href="../c_esempio_tema/" class="md-nav__link">
       C - Esempio tema d'anno
     </a>
   </li>
@@ -497,16 +553,29 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#introduzione-al-problema" class="md-nav__link">
-    Introduzione al problema
+  <a href="#installazione-e-configurazione-di-cc" class="md-nav__link">
+    Installazione e configurazione di C/C++
+  </a>
+  
+    <nav class="md-nav" aria-label="Installazione e configurazione di C/C++">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installazione-del-supporto" class="md-nav__link">
+    Installazione del supporto
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
-    Descrizione dell'algoritmo
+        
+          <li class="md-nav__item">
+  <a href="#creazione-di-un-progetto" class="md-nav__link">
+    Creazione di un progetto
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -523,60 +592,40 @@
               
                 
                 
-                  <h1>02 selection sort</h1>
+                  <h1>B - Guida alla configurazione di Visual Studio Community</h1>
                 
-                <h2 id="introduzione-al-problema">Introduzione al problema<a class="headerlink" href="#introduzione-al-problema" title="Permanent link">&para;</a></h2>
-<p>Ordinare una lista di elementi (ovviamente dello stesso tipo) può aiutare ad individuare rapidamente un certo elemento della stessa. In tal senso, esistono diversi algoritmi, chiamati <em>algoritmi di ordinamento</em> (o, in inglese, <em>sorting algorithms</em>).</p>
-<p>Il primo, e più semplice, algoritmo di ordinamento è chiamato <em>selection sort</em>. Per comprenderne il funzionamento, ricorriamo (al solito) ai nostri cari Alice e Bob.</p>
-<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
-<p>Il selection sort è un algoritmo <em>iterativo</em>: ad ogni iterazione, viene analizzato un elemento della lista</p>
-<p>L'idea alla base del selection sort è quella di *scambia</p>
-<p>Invece di sviluppare il tema d’anno di Informatica, Alice e Bob decidono di prendersi il pomeriggio libero, e si imbattono nel vecchio mazzo di carte del cugino di Bob.</p>
-<p>“Alice, ricordi il caffè che ho perso l’altra volta? Beh, ho in mente un modo per riaverlo indietro.”<br />
-“Dimmi pure. Cosa hai in mente?”<br />
-“Scommetto che non riesci a trovare una maniera algoritmica per ordinare questo vecchio mazzo.”<br />
-“Scommessa accettata.”</p>
-<p>Alice, che ricordiamo essere una assidua frequentatrice del corso di Informatica, inizia facendo queste mosse.</p>
-<p>Per prima cosa, dispone tutte le carte presenti nel mazzo lungo un’unica fila. A quel punto, inizia a cercare la carta più piccola, e la posiziona al primo posto.<br />
-Successivamente, suddivide la fila in due: a sinistra mette le carte già ordinate (ovvero, la prima carta), ed a destra quelle ancora da ordinare.<br />
-A quel punto, prende dalla fila di destra la carta più piccola, e la posiziona immediatamente a destra dell’ultimo elemento della fila di sinistra. Fatto questo, reitera questa procedura fino a che la fila di destra non è completamente vuota, mentre quella di sinistra ha al suo interno tutte le carte ordinate.</p>
-<p>“Ok, Alice, hai ordinato le carte, ma non vedo alcun algoritmo.”<br />
-“E’ qui che ti sbagli, mio caro.”</p>
-<p>Ed Alice, pregustando la vittoria, elenca a Bob le istruzioni che ha eseguito, dimostrando che la procedura che ha eseguito è modellabile secondo l’algoritmo di selection sort.</p>
-<p>Sia x un array di n elementi interi.<br />
-Associare ad i il primo indice dell’array (0), ed a j l’ultimo (n-1).<br />
-Associare ad una variabile il valore di x(0), e supporre che sia il valore minore.<br />
-Confrontare tutti gli elementi di x(k), con k che va da 1 ad n - 1, con x(0). Aggiornare il valore di x(0) nel caso x(k) minore di x (0).<br />
-Incrementare di 1 il valore di i.<br />
-Ritornare all’istruzione 4 fino a che i == j.</p>
-<p>Un esempio pratico<br />
-Immaginiamo di avere un array con valori [12, 4, 8, 7, 2]. Per prima cosa, vediamo che il valore di i sarà pari a 0, mentre j sarà pari a 4.</p>
-<p>A questo punto, poniamo min = x(0) = 12. Vediamo che x(1) = 4 è minore di 12, per cui il valore min viene aggiornato, e risulta essere pari a 4. Andiamo avanti, e compiamo soltanto un altro aggiornamento, ovvero quando vediamo che x(4) minore di min. A questo punto, inseriamo x(0) all’estrema sinistra (posizione i).</p>
-<p>Aggiorniamo il valore di i ad 1, e reiteriamo la procedura, fino ad ottenere l’array finale:</p>
-<p>[12, 4, 8, 7, 2]<br />
-i = 0; j = 4;<br />
-min = x(0) = 12;<br />
-min = x(4) = 2;<br />
-new = [2, 12, 4, 8, 7]<br />
-i = 1;<br />
-min = x(1) = 12;<br />
-min = x(2) = 4;<br />
-new = [2, 4, 12, 8, 7]<br />
-i = 2;<br />
-min = x(2) = 12;<br />
-min = x(4) = 7;<br />
-new = [2, 4, 7, 12, 8]<br />
-i = 3;<br />
-min = x(3) = 12;<br />
-min = x(4) = 8;<br />
-new = [2, 4, 7, 8, 12]<br />
-return</p>
-<p>TODO FLOW CHART</p>
-<p>Analisi dell’algoritmo<br />
-Il selection sort itera su tutti gli indici di un array. Supponiamo di avere un array di n elementi; avremo (ovviamente) n indici.</p>
-<p>Per capire quante operazioni sono necessarie per completare l’operazione di ordinamento, dobbiamo contare il numero di confronti necessari ad individuare l’elemento minore attualmente presente nell’array. In particolare, alla prima iterazione, quando i = 0, avremo la necessità di effettuare n operazioni, una per ogni elemento dell’array. Alla seconda iterazione, quando i = 1, dovremo fare n - 1 confronti; alla terza, basteranno n - 2 confronti, e così via. Ciò significa che avremo bisogno di n + (n-1) + … + 2 + 1 confronti; ciò equivale ad una serie aritmetica pari a (n^2/2) + n/2. La complessità di caso peggiore tiene però conto di un limite asintoticamente superiore di questa serie, che è pari ad n^2; ciò significa che saremo in una situazione per cui la complessità computazionale è pari ad O(n^2).</p>
-<p>Nota <br />
-Una complessità di questo tipo ci permette di notare che il tempo richiesto all’esecuzione dell’algoritmo cresce molto velocemente al crescere del numero di elementi dell’array. Con n = 10, infatti, avremo bisogno di 100 unità di tempo. Supponendo che un’unità di tempo sia pari ad un microsecondo, avremo bisogno di 0.1 secondi. Se n = 100, allora avremo bisogno di 10 secondi. Se n = 1.000, invece, avremo bisogno di 1.000 secondi (ovvero quasi 17 minuti!).</p>
+                <h2 id="installazione-e-configurazione-di-cc">Installazione e configurazione di C/C++<a class="headerlink" href="#installazione-e-configurazione-di-cc" title="Permanent link">&para;</a></h2>
+<p>Una volta installato il software Visual Studio Community (VS), reperibile al seguente <a href="https://visualstudio.microsoft.com/it/downloads/">link</a>, dovremo configurarlo per poter lanciare il compilatore nei diversi linguaggi che utilizzeremo durante le esercitazioni.</p>
+<h3 id="installazione-del-supporto">Installazione del supporto<a class="headerlink" href="#installazione-del-supporto" title="Permanent link">&para;</a></h3>
+<p>Per prima cosa, installiamo gli strumenti per lo sviluppo di applicazioni in C e C++. Eseguiamo il programma <strong>Visual Studio Installer</strong> dal menu Start. Si aprirà una schermata come la seguente:</p>
+<p><img alt="vs_workloads" src="../../assets/images/appendici/vs_workloads.png" /></p>
+<p>Dal menu che si apre, selezioniamo l'opzione <strong>Sviluppo di applicazioni desktop con C++</strong> mediante il segno di spunta.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Qualora non dovesse aprirsi la schermata precedente, ma una schermata in cui sono mostrate tutte le possibili installazioni di Visual Studio, selezioniamo l'opzione <strong>Modifica</strong>.</p>
+</div>
+<h3 id="creazione-di-un-progetto">Creazione di un progetto<a class="headerlink" href="#creazione-di-un-progetto" title="Permanent link">&para;</a></h3>
+<p>Una volta installati i tool per lo sviluppo, eseguiamo il programma <strong>Visual Studio 2019</strong> dal menu Start. Si aprirà la seguente schermata:</p>
+<p><img alt="vs_comm_create_proj" src="../../assets/images/appendici/vs_community/create_proj.png" /></p>
+<p>Selezioniamo l'opzione <strong>Crea un nuovo progetto</strong>. Apparirà la seguente schermata:</p>
+<p><img alt="vs_comm_select_proj" src="../../assets/images/appendici/vs_community/select_proj.png" /></p>
+<p>Selezioniamo prima <strong>App console C++</strong> a sinistra, e poi <strong>Progetto vuoto</strong> o <strong>App Console</strong> a destra. Scegliamo quindi l'opzione <strong>Avanti</strong>.</p>
+<p>Diamo un nome al progetto (ad esempio, <strong>Primo progetto</strong>) ed alla soluzione (ad esempio, <strong>Prima soluzione</strong>), scegliamo la cartella in cui salvare il tutto, e scegliamo l'opzione <strong>Crea</strong>.</p>
+<p>Se abbiamo scelto <strong>App Console</strong>, apparirà già un progetto di esempio. Qualora scegliessimo <strong>Progetto vuoto</strong>, apparirà la seguente schermata.</p>
+<p><img alt="vs_comm_empty_proj" src="../../assets/images/appendici/vs_community/empty_proj.png" /></p>
+<p>In quest'ultimo caso, selezioniamo clicchiamo con il destro sulla cartella (mostrata nel menu a destra) chiamata <strong>File di origine</strong> e selezioniamo dal menu che appare <strong>Aggiungi &gt; Nuovo Elemento</strong>. Da qui possiamo creare direttamente un file C++, oppure un file C modificandone manualmente l'estensione. Creiamo un file chiamato <code>HelloWorld.c</code> ed aggiungiamolo al nostro progetto.</p>
+<p><img alt="vs_comm_create_source" src="../../assets/images/appendici/vs_community/create_source.png" /></p>
+<p>Aggiungiamo il seguente codice:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World! </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Eseguiamo il nostro programma premendo Ctrl + F5, oppure scegliendo l'opzione <strong>Avvia senza eseguire Debug</strong> dal menu <strong>Debug</strong>. Se tutto è andato a buon fine, apparirà la seguente finestra:</p>
+<p><img alt="vs_comm_hello_world" src="../../assets/images/appendici/vs_community/hello_world.png" /></p>
                 
               
               
@@ -591,6 +640,41 @@ Una complessità di questo tipo ci permette di notare che il tempo richiesto all
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../a_vs_code_guide/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                A - Guida alla configurazione di Visual Studio Code
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../c_esempio_tema/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                C - Esempio tema d'anno
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
