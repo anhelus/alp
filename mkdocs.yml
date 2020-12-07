@@ -1,12 +1,11 @@
 site_name: Informatica - Corso di Laurea in Matematica - UniBa
 nav:
   - Home: index.md
-  - Materiale del corso: 00_materiale/programma.md
   - Modalità di esame:
       - Modalità standard: 01_esami/standard.md
       - Tema d'anno:
           - Introduzione: 01_esami/tema_anno/intro.md
-          - Valutazione: 01_esami/tema_anno/modalita_valutazione.md
+          - Valutazione: 01_esami/tema_anno/valutazione.md
           - FAQ: 01_esami/tema_anno/faq.md
           - A.A. 2020/2021:
               - Date rilevanti: 01_esami/tema_anno/2020-2021/date.md
@@ -15,35 +14,41 @@ nav:
               - Traccia: 01_esami/tema_anno/esempio/traccia.md
               - Parte Prima: 01_esami/tema_anno/esempio/parte_prima.md
               - Parte Seconda: 01_esami/tema_anno/esempio/parte_seconda.md
-  - Concetti Introduttivi:
-      - 01 - Introduzione all'Informatica: 02_dispense/01_introduttivi/01_intro.md
-      - 02 - Gli Algoritmi: 02_dispense/01_introduttivi/02_algoritmi.md
-      # - 03 - Diagrammi di flusso: 01_introduttivi/03_diagrammi.md
-      - 04 - Rappresentazione dei dati: 02_dispense/01_introduttivi/04_rappresentazione.md
-  #   - L'Hardware:
-  #     - 05 - Architettura dei Calcolatori: 02_hardware/01_architettura.md
-  #     - 06 - Reti di Calcolatori: 02_hardware/02_reti.md
-  #   - Linguaggi:
-  #     - 07 - Linguaggi di Programmazione: 03_linguaggi/01_linguaggi.md
-  #     - 08 - Traduttori: 03_linguaggi/02_traduttori.md
-  - Programmazione:
-      # - 09 - Programmazione strutturata: 04_programmazione/01_strutturata.md
-      # - 10 - Ricorsione: 04_programmazione/02_ricorsione.md
-      - 11 - Variabili: 02_dispense/04_programmazione/03_variabili.md
-      - 12 - Funzioni: 02_dispense/04_programmazione/04_funzioni.md
-      - 13 - Complessità computazionale: 02_dispense/04_programmazione/05_complessita.md
-      - 14 - Strutture dati: 02_dispense/04_programmazione/06_strutture_dati.md
-  - Algoritmi:
-      #- 14 - Ricerca dicotomica: 05_algoritmi/01_binary_search.md
-      #- 15 - Selection sort: 05_algoritmi/02_selection_sort.md
-      #- 16 - Insertion sort: 05_algoritmi/03_insertion_sort.md
-      - 17 - Merge sort: 02_dispense/05_algoritmi/04_merge_sort.md
-      - 18 - Quick sort: 02_dispense/05_algoritmi/05_quick_sort.md
-    # - 19 - Breadth-first search: 05_algoritmi/06_bfs.md
-  - Modelli di calcolo:
-      - 20 - Macchina di Turing: 02_dispense/06_modelli/01_turing.md
-  - Linguaggio C:
-      - 01 - Introduzione al C: 02_dispense/07_linguaggio_c/01_introduzione.md
+  - Dispense:
+      - Slides proiettate a lezione: 00_materiale/programma.md
+      - Teoria:
+          - Concetti Introduttivi:
+              - 01 - Introduzione all'Informatica: 02_dispense/01_introduttivi/01_intro.md
+              - 02 - Gli Algoritmi: 02_dispense/01_introduttivi/02_algoritmi.md
+              # - 03 - Diagrammi di flusso: 01_introduttivi/03_diagrammi.md
+              - 04 - Rappresentazione dei dati: 02_dispense/01_introduttivi/04_rappresentazione.md
+          #   - L'Hardware:
+          #     - 05 - Architettura dei Calcolatori: 02_hardware/01_architettura.md
+          #     - 06 - Reti di Calcolatori: 02_hardware/02_reti.md
+          #   - Linguaggi:
+          #     - 07 - Linguaggi di Programmazione: 03_linguaggi/01_linguaggi.md
+          #     - 08 - Traduttori: 03_linguaggi/02_traduttori.md
+          - Programmazione:
+              # - 09 - Programmazione strutturata: 04_programmazione/01_strutturata.md
+              # - 10 - Ricorsione: 04_programmazione/02_ricorsione.md
+              - 11 - Variabili: 02_dispense/04_programmazione/03_variabili.md
+              - 12 - Funzioni: 02_dispense/04_programmazione/04_funzioni.md
+              - 13 - Complessità computazionale: 02_dispense/04_programmazione/05_complessita.md
+              - 14 - Strutture dati: 02_dispense/04_programmazione/06_strutture_dati.md
+          - Algoritmi:
+              #- 14 - Ricerca dicotomica: 05_algoritmi/01_binary_search.md
+              #- 15 - Selection sort: 05_algoritmi/02_selection_sort.md
+              #- 16 - Insertion sort: 05_algoritmi/03_insertion_sort.md
+              - 17 - Merge sort: 02_dispense/05_algoritmi/04_merge_sort.md
+              - 18 - Quick sort: 02_dispense/05_algoritmi/05_quick_sort.md
+            # - 19 - Breadth-first search: 05_algoritmi/06_bfs.md
+          - Modelli di calcolo:
+              - 20 - Macchina di Turing: 02_dispense/06_modelli/01_turing.md
+      - Programmazione:
+          - Linguaggio C:
+              - 01 - Introduzione al C: 02_dispense/07_linguaggio_c/01_introduzione.md
+          - Linguaggio C++:
+              - 01 - C vs. C++: 02_dispense/08_linguaggio_cpp/01_c_vs_cpp.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md

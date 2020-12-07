@@ -1,6 +1,6 @@
-## Parte Prima - Analisi del problema
+Le quattro differenti parti in cui è strutturato il tema d'anno saranno valutate come segue.
 
-La parte prima prevede che il gruppo fornisca, relativamente al problema, i seguenti dettagli, il cui obiettivo e valutazione sono descritti di seguito.
+## Parte Prima - Analisi del problema
 
 | Topic                              | Valutazione della capacità di...                                         | Punteggio    |
 | ---------------------------------- | ------------------------------------------------------------------------ | ------------ |
@@ -35,3 +35,5 @@ La parte prima prevede che il gruppo fornisca, relativamente al problema, i segu
 | Documentazione del programma           | ...esposizione delle funzioni e dell'uso del programma ad utenti terzi | 0 - 4 punti  |
 | Stile (commenti, modularità, etc.)     | ...adesione alle best practices considerate per il linguaggio Python   | 0 - 4 punti  |
 | Coerenza con flow chart e pseudocodice | ...implementazione a partire da un dato documento di design            | 0 - 4 punti  |
+
+Il risultato finale sarà dato dalla media delle valutazioni ottenute nelle quattro parti.
