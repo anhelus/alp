@@ -1,0 +1,1435 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>02 - Gli Algoritmi - Informatica - Corso di Laurea in Matematica - UniBa</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.196e0c26.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#formulare-un-problema" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../../.." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-header-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Informatica - Corso di Laurea in Matematica - UniBa
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              02 - Gli Algoritmi
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Informatica - Corso di Laurea in Matematica - UniBa" class="md-nav__button md-logo" aria-label="Informatica - Corso di Laurea in Matematica - UniBa">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Informatica - Corso di Laurea in Matematica - UniBa
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../.." class="md-nav__link">
+      Home
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../../00_materiale/programma/" class="md-nav__link">
+      Materiale del corso
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <label class="md-nav__link" for="nav-3">
+      Modalità di esame
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Modalità di esame" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Modalità di esame
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/standard/" class="md-nav__link">
+      Modalità standard
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2" type="checkbox" id="nav-3-2" >
+    <label class="md-nav__link" for="nav-3-2">
+      Tema d'anno
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Tema d'anno" data-md-level="2">
+      <label class="md-nav__title" for="nav-3-2">
+        <span class="md-nav__icon md-icon"></span>
+        Tema d'anno
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/intro/" class="md-nav__link">
+      Introduzione
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/modalita_valutazione/" class="md-nav__link">
+      Valutazione
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/faq/" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-4" type="checkbox" id="nav-3-2-4" >
+    <label class="md-nav__link" for="nav-3-2-4">
+      A.A. 2020/2021
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="A.A. 2020/2021" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-4">
+        <span class="md-nav__icon md-icon"></span>
+        A.A. 2020/2021
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/2020-2021/date/" class="md-nav__link">
+      Date rilevanti
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/2020-2021/documenti/" class="md-nav__link">
+      Documenti
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-2-5" type="checkbox" id="nav-3-2-5" >
+    <label class="md-nav__link" for="nav-3-2-5">
+      Esempio
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Esempio" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-2-5">
+        <span class="md-nav__icon md-icon"></span>
+        Esempio
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/esempio/traccia/" class="md-nav__link">
+      Traccia
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/esempio/parte_prima/" class="md-nav__link">
+      Parte Prima
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
+      Parte Seconda
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    <label class="md-nav__link" for="nav-4">
+      Concetti Introduttivi
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        <span class="md-nav__icon md-icon"></span>
+        Concetti Introduttivi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../01_intro/" class="md-nav__link">
+      01 - Introduzione all'Informatica
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        02 - Gli Algoritmi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      02 - Gli Algoritmi
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formulare-un-problema" class="md-nav__link">
+    Formulare un problema
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulare un problema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-problema-come-compito" class="md-nav__link">
+    Il problema come compito
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lente-risolutore" class="md-nav__link">
+    L'ente risolutore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gli-elementi-noti-e-le-condizioni-fissate" class="md-nav__link">
+    Gli elementi noti e le condizioni fissate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risolvere-un-problema" class="md-nav__link">
+    Risolvere un problema
+  </a>
+  
+    <nav class="md-nav" aria-label="Risolvere un problema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemi-e-soluzioni" class="md-nav__link">
+    Problemi e soluzioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costruire-la-soluzione" class="md-nav__link">
+    Costruire la soluzione
+  </a>
+  
+    <nav class="md-nav" aria-label="Costruire la soluzione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operazioni-atomiche" class="md-nav__link">
+    Operazioni atomiche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinare-operazioni-atomiche" class="md-nav__link">
+    Combinare operazioni atomiche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determinare-linsieme-di-operatori" class="md-nav__link">
+    Determinare l'insieme di operatori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-soluzione-ad-algoritmo" class="md-nav__link">
+    Da soluzione ad algoritmo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-esempio" class="md-nav__link">
+    Un esempio
+  </a>
+  
+    <nav class="md-nav" aria-label="Un esempio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulazione-del-problema" class="md-nav__link">
+    Formulazione del problema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dati" class="md-nav__link">
+    Dati
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-risolutivo-in-operazioni-atomiche-o-quasi" class="md-nav__link">
+    Algoritmo risolutivo (in operazioni atomiche, o quasi)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esempio-numerico" class="md-nav__link">
+    Esempio numerico
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempio numerico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dati_1" class="md-nav__link">
+    Dati
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passi-dellalgoritmo" class="md-nav__link">
+    Passi dell'algoritmo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caratteristiche-degli-algoritmi-risolutivi" class="md-nav__link">
+    Caratteristiche degli algoritmi risolutivi
+  </a>
+  
+    <nav class="md-nav" aria-label="Caratteristiche degli algoritmi risolutivi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-cinque-caratteristiche-principali" class="md-nav__link">
+    Le cinque caratteristiche principali
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determinismo" class="md-nav__link">
+    Determinismo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-output-e-variabili" class="md-nav__link">
+    Input, Output e Variabili
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_rappresentazione/" class="md-nav__link">
+      04 - Rappresentazione dei dati
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+    <label class="md-nav__link" for="nav-5">
+      Programmazione
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Programmazione" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon"></span>
+        Programmazione
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_programmazione/03_variabili/" class="md-nav__link">
+      11 - Variabili
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_programmazione/04_funzioni/" class="md-nav__link">
+      12 - Funzioni
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_programmazione/05_complessita/" class="md-nav__link">
+      13 - Complessità computazionale
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../04_programmazione/06_strutture_dati/" class="md-nav__link">
+      14 - Strutture dati
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+    <label class="md-nav__link" for="nav-6">
+      Algoritmi
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Algoritmi" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon"></span>
+        Algoritmi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05_algoritmi/04_merge_sort/" class="md-nav__link">
+      17 - Merge sort
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../05_algoritmi/05_quick_sort/" class="md-nav__link">
+      18 - Quick sort
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
+    <label class="md-nav__link" for="nav-7">
+      Modelli di calcolo
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Modelli di calcolo" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon"></span>
+        Modelli di calcolo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../06_modelli/01_turing/" class="md-nav__link">
+      20 - Macchina di Turing
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
+    <label class="md-nav__link" for="nav-8">
+      Linguaggio C
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linguaggio C" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon"></span>
+        Linguaggio C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../07_linguaggio_c/01_introduzione/" class="md-nav__link">
+      01 - Introduzione al C
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+    <label class="md-nav__link" for="nav-9">
+      Appendici
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon"></span>
+        Appendici
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9-1" type="checkbox" id="nav-9-1" >
+    <label class="md-nav__link" for="nav-9-1">
+      Configurazioni
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Configurazioni" data-md-level="2">
+      <label class="md-nav__title" for="nav-9-1">
+        <span class="md-nav__icon md-icon"></span>
+        Configurazioni
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../03_appendici/configurazioni/a_vs_code_guide/" class="md-nav__link">
+      Visual Studio Code
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../03_appendici/configurazioni/b_vs_community_guide/" class="md-nav__link">
+      Visual Studio Community
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10" >
+    <label class="md-nav__link" for="nav-10">
+      Esercizi
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Esercizi" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon"></span>
+        Esercizi
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../04_esercizi/linguaggio_c/" class="md-nav__link">
+      Linguaggio C
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#formulare-un-problema" class="md-nav__link">
+    Formulare un problema
+  </a>
+  
+    <nav class="md-nav" aria-label="Formulare un problema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-problema-come-compito" class="md-nav__link">
+    Il problema come compito
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lente-risolutore" class="md-nav__link">
+    L'ente risolutore
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gli-elementi-noti-e-le-condizioni-fissate" class="md-nav__link">
+    Gli elementi noti e le condizioni fissate
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#risolvere-un-problema" class="md-nav__link">
+    Risolvere un problema
+  </a>
+  
+    <nav class="md-nav" aria-label="Risolvere un problema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#problemi-e-soluzioni" class="md-nav__link">
+    Problemi e soluzioni
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#costruire-la-soluzione" class="md-nav__link">
+    Costruire la soluzione
+  </a>
+  
+    <nav class="md-nav" aria-label="Costruire la soluzione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operazioni-atomiche" class="md-nav__link">
+    Operazioni atomiche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#combinare-operazioni-atomiche" class="md-nav__link">
+    Combinare operazioni atomiche
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determinare-linsieme-di-operatori" class="md-nav__link">
+    Determinare l'insieme di operatori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#da-soluzione-ad-algoritmo" class="md-nav__link">
+    Da soluzione ad algoritmo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#un-esempio" class="md-nav__link">
+    Un esempio
+  </a>
+  
+    <nav class="md-nav" aria-label="Un esempio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#formulazione-del-problema" class="md-nav__link">
+    Formulazione del problema
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dati" class="md-nav__link">
+    Dati
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algoritmo-risolutivo-in-operazioni-atomiche-o-quasi" class="md-nav__link">
+    Algoritmo risolutivo (in operazioni atomiche, o quasi)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#esempio-numerico" class="md-nav__link">
+    Esempio numerico
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempio numerico">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dati_1" class="md-nav__link">
+    Dati
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passi-dellalgoritmo" class="md-nav__link">
+    Passi dell'algoritmo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#caratteristiche-degli-algoritmi-risolutivi" class="md-nav__link">
+    Caratteristiche degli algoritmi risolutivi
+  </a>
+  
+    <nav class="md-nav" aria-label="Caratteristiche degli algoritmi risolutivi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#le-cinque-caratteristiche-principali" class="md-nav__link">
+    Le cinque caratteristiche principali
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#determinismo" class="md-nav__link">
+    Determinismo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#input-output-e-variabili" class="md-nav__link">
+    Input, Output e Variabili
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>02 - Gli Algoritmi</h1>
+                
+                <h2 id="formulare-un-problema">Formulare un problema<a class="headerlink" href="#formulare-un-problema" title="Permanent link">&para;</a></h2>
+<p>Per comprendere gli algoritmi, partiamo definendo il concetto di <em>problema</em>.</p>
+<p>In tal senso, il dizionario De Mauro - Paravia ci viene in aiuto definendolo come:</p>
+<div class="admonition quote">
+<p class="admonition-title">Definizione di problema</p>
+</div>
+<p><em>...quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza.</em></p>
+<p>Questa definizione ci dà gli elementi necessari alla formulazione compiuta di un problema. Analizziamoli più nel dettaglio.</p>
+<h3 id="il-problema-come-compito">Il problema come <em>compito</em><a class="headerlink" href="#il-problema-come-compito" title="Permanent link">&para;</a></h3>
+<p>Un problema è dunque in primis un <em>quesito</em> (o, analogamente, un <em>compito</em>) che necessita di una <em>risoluzione</em> (o <em>svolgimento</em>). Esempi concreti di problema sono:</p>
+<ul>
+<li><em>"Come montare il mobile che abbiamo appena acquistato dall'IKEA?"</em></li>
+<li><em>"Come calcolare l'ipotenusa di un triangolo rettangolo?"</em></li>
+<li><em>"Come dimostrare l'ipotesi di Riemann?"</em></li>
+</ul>
+<p>Possiamo vedere che i problemi possono essere di ogni tipo e difficoltà; sono tutti accomunati però dal fatto che, <em>qualora siano risolvibili</em>, per farlo è necessario adoperare un <em>algoritmo</em>.</p>
+<h3 id="lente-risolutore">L'<em>ente risolutore</em><a class="headerlink" href="#lente-risolutore" title="Permanent link">&para;</a></h3>
+<p>La risoluzione del problema è delegata ad un o più <em>enti</em>, propriamente intesi come <em>esecutori</em> di una serie di step necessari a risolvere il problema.</p>
+<p>Rimanendo agli esempi precedenti, il risolutore del primo problema è il montatore del mobile; quello per il secondo è lo studente che calcola l'area del triangolo mediante il teorema di Pitagora; nel terzo caso invece abbiamo il matematico teorico, che dimostra (o confuta) l'ipotesi di Riemann.</p>
+<h3 id="gli-elementi-noti-e-le-condizioni-fissate">Gli <em>elementi noti</em> e le <em>condizioni fissate</em><a class="headerlink" href="#gli-elementi-noti-e-le-condizioni-fissate" title="Permanent link">&para;</a></h3>
+<p>La risoluzione del problema non può prescindere dalla conoscenza degli <em>elementi noti</em> e delle <em>condizioni fissate</em> per lo stesso. Intuitivamente, questo significa <em>conoscere lo stato del mondo</em> a partire dal quale dovremo risolvere il problema.</p>
+<p>Torniamo ai nostri esempi.</p>
+<p>In primis, per montare il mobile IKEA, avremo bisogno della conoscenza di dettagli quali:</p>
+<ul>
+<li>collocazione desiderata del mobile;</li>
+<li>numero e tipo di pezzi nella confezione del mobile;</li>
+<li>attrezzi di cui abbiamo bisogno.</li>
+</ul>
+<p>Oltre questo, potrebbero esserci alcune <em>condizioni</em> da rispettare, come ad esempio cercare (invano) di montare il mobile prima che tramonti il sole, o il provare a non rompere nulla.</p>
+<p>Analogamente, per calcolare l'area di un triangolo rettangolo, dovremo conoscerne base ed altezza, e rispettare i vincoli imposti dalla geometria di base.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+</div>
+<p>La determinazione degli elementi noti e delle condizioni fissate per la dimostrazione dell'ipotesi di Riemann è lasciata come banale esercizio al lettore.</p>
+<h2 id="risolvere-un-problema">Risolvere un problema<a class="headerlink" href="#risolvere-un-problema" title="Permanent link">&para;</a></h2>
+<p>La formulazione di un problema implica quindi la determinazione del <em>cosa</em> (il quesito da risolvere), del <em>chi</em> (l'esecutore materiale della risoluzione) e del <em>da dove</em> (lo stato di partenza e le condizioni fissate). In particolare, diamo a questi ultimi il nome di <em>dati</em>: i dati caratterizzano, anche parzialmente, lo stato iniziale del mondo, e possono essere forniti in un linguaggio naturale che permetta di descrivere delle <em>situazioni</em>, o <em>stati</em>, e le differenze tra di essi.</p>
+<h3 id="problemi-e-soluzioni">Problemi e soluzioni<a class="headerlink" href="#problemi-e-soluzioni" title="Permanent link">&para;</a></h3>
+<p>Il lettore più attento noterà che manca ancora un elemento fondamentale, ovvero il <em>come</em>. Questo è definito individuando un apposito <em>metodo di risoluzione</em> o, più semplicemente, una <em>soluzione</em> al problema.</p>
+<p>Dal punto di vista formale, l'individuazione del metodo di risoluzione può essere espressa come una <em>relazione univoca</em> che associa ad ogni elemento dello spazio dei problemi (o meglio, delle <em>classi di problemi</em>, come sarà più chiaro in seguito) <span class="arithmatex">\(\mathbb{P}\)</span> uno o più elementi dello spazio delle soluzioni <span class="arithmatex">\(\mathbb{S}\)</span>. Questo è rappresentato dal seguente diagramma di Eulero-Venn:</p>
+<p><img alt="diag_rel_prob_sol" src="../../../assets/images/rel_prob_sol.jpg" /></p>
+<p>Informalmente, possiamo dire che <em>per ogni problema</em> (se risolvibile) <em>esiste almeno una soluzione</em>.</p>
+<h3 id="costruire-la-soluzione">Costruire la soluzione<a class="headerlink" href="#costruire-la-soluzione" title="Permanent link">&para;</a></h3>
+<p>Il compito del risolutore è quindi quello di "costruire", o "individuare", la soluzione. La possibilità di farlo è legata ad alcune condizioni fondamentali, ovvero:</p>
+<ul>
+<li>le operazioni <em>atomiche</em> disponibili;</li>
+<li>il modo in cui le operazioni di cui sopra possono essere combinate per realizzare operazioni più complesse.</li>
+</ul>
+<h4 id="operazioni-atomiche">Operazioni atomiche<a class="headerlink" href="#operazioni-atomiche" title="Permanent link">&para;</a></h4>
+<p>Per operazione "atomica" intendiamo un'operazione che non è possibile <em>semplificare</em> (ovvero suddividere) in alcun modo. Esempi di operazione atomica possono essere:</p>
+<ul>
+<li>sommare due numeri;</li>
+<li>fare un passo in avanti;</li>
+<li>finalizzare una transazione sul proprio conto corrente bancario.</li>
+</ul>
+<p>Esempi di operazioni <em>non</em> atomiche sono invece:</p>
+<ul>
+<li>risolvere un'equazione di secondo grado;</li>
+<li>correre per dieci metri;</li>
+<li>effettuare un versamento ed un prelievo sul proprio conto corrente bancario.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota sulla somma</p>
+</div>
+<p>Il lettore più zelante potrebbe pensare che una somma è suddivisibile usando l'inverso della proprietà associativa. Ciò porterebbe però a scomporre una somma in due somme, che potrebbero essere scomposte in tre somme, e via dicendo. Questa operazione risulta essere controproducente, oltre che contraria al senso comune; si invita quindi il lettore zelante ad adeguarsi al senso comune ed evitare una</p>
+<div class="admonition note">
+<p class="admonition-title">Nota sul conto corrente bancario</p>
+</div>
+<p>La singola transazione sul proprio corrente bancario è in realtà scomponibile, dal punto di vista informatico, in un gran numero di operazioni atomiche: il correntista, infatti, effettua l'autenticazione, completa un form, finalizza la transazione e la esegue. Dato che tutte queste operazioni devono però essere necessariamente <em>completate</em> in un ordine ben definito, i sistemi bancari le vedono come un'unica operazione, che è possibile annullare qualora sopravvenga un problema qualsiasi (problemi di autenticazione, rete non disponibile, mancanza di energia elettrica su uno dei sistemi, etc.).</p>
+<h4 id="combinare-operazioni-atomiche">Combinare operazioni atomiche<a class="headerlink" href="#combinare-operazioni-atomiche" title="Permanent link">&para;</a></h4>
+<p>Le operazioni atomiche possono essere combinate in due modi:</p>
+<ul>
+<li>effettuandole in <em>sequenza</em> (come nel caso del versamento e del prelievo sul proprio conto corrente bancario);</li>
+<li>effettuandole in <em>parallelo</em>.</li>
+</ul>
+<p>Nel secondo caso, più operazioni vengono eseguite contemporaneamente. Ciò comporta però la necessità di due problemi principali, ovvero:</p>
+<ul>
+<li><em>mantenere indipendenti le singole operazioni</em>;</li>
+<li><em>coordinare più esecutori</em>, o <em>suddividere il tempo di un esecutore in modo che "simuli" il parallelismo</em>.</li>
+</ul>
+<p>Il primo problema è di importanza cruciale. Immaginate di voler montare assieme a vostro cugino due mobili IKEA allo stesso tempo, ma di avere a disposizione un unico cacciavite: cosa succede se usate il cacciavite e questo contestualmente serve al cugino? O, ancora peggio se, avendo a disposizione un cacciavite a punte intercambiabili, ne modificate la punta da stella a brucola senza avvertire il povero cugino?</p>
+<p>Il secondo è meno evidente, ma altrettanto degno di attenzione. Infatti, voi e vostro cugino dovrete necessariamente coordinarvi per non urtarvi, usare gli stessi attrezzi, e via dicendo. L'alternativa sarebbe fare a meno del cugino, e simulare il parallelismo montando i due mobili da voi contemporaneamente; in questo caso, però, il tempo che impieghereste è sicuramente maggiore, ed avreste la necessità di ottimizzare le operazioni da fare cercando di minimizzare lo sforzo necessario a terminare i lavori.</p>
+<h4 id="determinare-linsieme-di-operatori">Determinare l'insieme di operatori<a class="headerlink" href="#determinare-linsieme-di-operatori" title="Permanent link">&para;</a></h4>
+<p>Individuare le operazioni atomiche e trovare dei modi per combinarle permette quindi di definire un <em>insieme di operatori</em> che possono essere applicati ad un problema per modificarne lo stato (idealmente, da "aperto" a "risolto", considerando eventualmente gli step intermedi). Per essere comprensibili dal risolutore, questi operatori dovranno essere espressi in un <em>linguaggio</em> che faccia riferimento <em>esplicito</em> al contesto del problema.</p>
+<h4 id="da-soluzione-ad-algoritmo">Da <em>soluzione</em> ad <em>algoritmo</em><a class="headerlink" href="#da-soluzione-ad-algoritmo" title="Permanent link">&para;</a></h4>
+<p>La soluzione sarà quindi definita come un operatore composto nel linguaggio di processo, il cui compito è trasformare lo stato iniziale del mondo (ovvero problema aperto) in quello che definisce la situazione desiderata (ovvero problema risolto).</p>
+<p>L'algoritmo è la serie di istruzioni che specifica l'insieme delel azioni che è necessario compiere per risolvere il problema.</p>
+<h2 id="un-esempio">Un esempio<a class="headerlink" href="#un-esempio" title="Permanent link">&para;</a></h2>
+<p>Facciamo un esempio. Proviamo a formulare e risolvere un semplice problema matematico, ovvero il calcolo dell'ipotenusa di un triangolo rettangolo.</p>
+<h3 id="formulazione-del-problema">Formulazione del problema<a class="headerlink" href="#formulazione-del-problema" title="Permanent link">&para;</a></h3>
+<p><em>Dati due numeri interi <span class="arithmatex">\(c_1\)</span> e <span class="arithmatex">\(c_2\)</span>, rappresentanti le lunghezze dei due cateti di un triangolo rettangolo <span class="arithmatex">\(T\)</span>, calcolarne l'ipotenusa <span class="arithmatex">\(i\)</span>.</em></p>
+<h3 id="dati">Dati<a class="headerlink" href="#dati" title="Permanent link">&para;</a></h3>
+<p>Sia <span class="arithmatex">\(c_1\)</span> la lunghezza del primo cateto, e <span class="arithmatex">\(c_2\)</span> quella del secondo.</p>
+<h3 id="algoritmo-risolutivo-in-operazioni-atomiche-o-quasi">Algoritmo risolutivo (in operazioni atomiche, o quasi)<a class="headerlink" href="#algoritmo-risolutivo-in-operazioni-atomiche-o-quasi" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Calcolare il quadrato di <span class="arithmatex">\(c_1\)</span>.</li>
+<li>Calcolare il quadrato di <span class="arithmatex">\(c_2\)</span>.</li>
+<li>Sommare i quadrati calcolati ai punti <strong>1</strong> e <strong>2</strong>.</li>
+<li>Calcolare la radice quadrata della somma ottenuta al punto <strong>3</strong>.</li>
+</ol>
+<h3 id="esempio-numerico">Esempio numerico<a class="headerlink" href="#esempio-numerico" title="Permanent link">&para;</a></h3>
+<h4 id="dati_1">Dati<a class="headerlink" href="#dati_1" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\begin{eqnarray}
+c_1 &amp;= 3 \\
+c_2 &amp;= 4 \\
+\end{eqnarray}
+\]</div>
+<h4 id="passi-dellalgoritmo">Passi dell'algoritmo<a class="headerlink" href="#passi-dellalgoritmo" title="Permanent link">&para;</a></h4>
+<div class="arithmatex">\[
+\begin{eqnarray}
+\text{Step 1} &amp; \rightarrow &amp; {c_1}^2 = 9 = v_1 \\
+\text{Step 2} &amp; \rightarrow &amp; {c_2}^2 = 16 = v_2 \\
+\text{Step 3} &amp; \rightarrow &amp; v_1 + v_2 = 25 = v_3 \\
+\text{Step 4} &amp; \rightarrow &amp; \sqrt{v_3} = 5 = v_4
+\end{eqnarray}
+\]</div>
+<p>Il risultato è <span class="arithmatex">\(v_4 = 5\)</span>.</p>
+<h2 id="caratteristiche-degli-algoritmi-risolutivi">Caratteristiche degli algoritmi risolutivi<a class="headerlink" href="#caratteristiche-degli-algoritmi-risolutivi" title="Permanent link">&para;</a></h2>
+<h3 id="le-cinque-caratteristiche-principali">Le cinque caratteristiche principali<a class="headerlink" href="#le-cinque-caratteristiche-principali" title="Permanent link">&para;</a></h3>
+<p>Un algoritmo è contraddistinto da cinque caratteristiche principali.</p>
+<ol>
+<li><em>finitezza</em>: gli algoritmi sono <em>finiti</em>, sia dal punto di vista <em>spaziale</em>, sia da quello <em>temporale</em>;</li>
+<li><em>generalità</em>: gli algoritmi sono <em>generici</em>, ovvero rappresentano una soluzione ad un'intera classe di problemi;</li>
+<li><em>completezza</em>: gli algoritmi sono <em>completi</em>, e quindi possono risolvere tutte le istanze del problema;</li>
+<li><em>non ambiguità</em>: gli algoritmi <em>non sono ambigui</em>, e ciò comporta che tutte le istruzioni sono univoche e ben interpretabili;</li>
+<li><em>eseguibilità</em>: gli algoritmi sono <em>eseguibili</em>, nel senso che l'esecutore deve (potenzialmente) essere in grado di eseguire ogni singolo passo dell'algoritmo.</li>
+</ol>
+<p>Tornando al nostro esempio, il metodo di individuazione dell'ipotenusa rispetta le condizioni perchè:</p>
+<ol>
+<li>può essere risolto in un numero di passi finito, che non occupa uno spazio (ad esempio su carta o nella memoria di un computer) infinito;</li>
+<li>può risolvere ogni problema di determinazione dell'ipotenusa, anche cambiando i valori dei cateti (a patto ovviamente che si tratti sempre di un triangolo rettangolo, e che quindi si sia nell'ambito della stessa classe dei problemi);</li>
+<li>le istruzioni sono chiare e non equivocabili;</li>
+<li>le istruzioni possono essere eseguite da chiunque sia in grado di calcolare un quadrato ed una radice quadrata.</li>
+</ol>
+<p>In merito alla 4, è interessante notare come, probabilmente, nessun manuale IKEA (o affini) sia algoritmico.</p>
+<h3 id="determinismo">Determinismo<a class="headerlink" href="#determinismo" title="Permanent link">&para;</a></h3>
+<p>Un algoritmo si dice <em>deterministico</em> quando al momento dell'esecuzione di ogni istruzione è nota l'istruzione successiva. Ciò comporta che eseguire due volte un algoritmo deterministico sugli stessi dati produce gli stessi effetti. L'algoritmo di esempio è a tutti gli effetti un algoritmo deterministico.</p>
+<p>Gli algoritmi non deterministici sono invece affetti da fenomeni di tipo casuale, o stocastico; sono in genere algoritmi avanzati, usati perlopiù in applicazioni di statistica e machine learning, che non tratteremo durante questo corso.</p>
+<h3 id="input-output-e-variabili">Input, Output e Variabili<a class="headerlink" href="#input-output-e-variabili" title="Permanent link">&para;</a></h3>
+<p>Generalmente, i dati in ingresso ad un algoritmo sono anche chiamati <em>input</em> dell'algoritmo, mentre la "risposta" che restituisce l'algoritmo stesso è chiamata <em>output</em>.</p>
+<p>E' importante sottolineare come gli algoritmi possano accettare sia input sia output <em>anche non numerici</em>.</p>
+<p>Un esempio è dato dall'algoritmo per determinare se una stringa è palindroma: questo accetta come dati una serie di caratteri, e dà una risposta di tipo binario (VERO o FALSO).</p>
+<p>Oltre ad input ed output, gli algoritmi spesso utilizzano dei dati di <em>supporto</em>, chiamati <em>variabili</em>. Ne tratteremo molto più estesamente durante il prosieguo del corso.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../01_intro/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                01 - Introduzione all'Informatica
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../04_rappresentazione/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                04 - Rappresentazione dei dati
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
