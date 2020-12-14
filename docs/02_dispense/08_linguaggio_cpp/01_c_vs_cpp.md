@@ -25,13 +25,13 @@ Altra cosa importante da considerare è il supporto ai tipi definiti dall'utente
 
 In ultimo, a differenza del C, il C++ è in grado di gestire situazioni inattese grazie al meccanismo delle **eccezioni**, che ci permettono di "verificare" il risultato di una serie di istruzioni, gestendo direttamente nel codice sorgente eventuali errori insorti.
 
-## Diffeernze legate alla OOP
+## Differenze legate alla OOP
 
 Ed è qui che arriviamo al "succo" delle differenze tra C e C++, ovvero quelle che nascono dall'adesione di quest'ultimo al paradigma OOP. Vediamole brevemente riassunte nella seguente tabella.
 
 | Argomento                          | C                       | C++                       |
 | ---------------------------------- | ----------------------- | ------------------------- |
-| Namespace                          | Non definito            | Definito                  |
+| Namespace                          | Non presente            | Presente                  |
 | Allocazione dinamica della memoria | `malloc()` e `calloc()` | `new()` e `delete()`      |
 | Rapporto tra variabili e funzioni  | Separate                | Incapsulate negli oggetti |
 | Modificatori di accesso            | No                      | Sì                        |

@@ -49,6 +49,8 @@ nav:
               - 01 - Introduzione al C: 02_dispense/07_linguaggio_c/01_introduzione.md
           - Linguaggio C++:
               - 01 - C vs. C++: 02_dispense/08_linguaggio_cpp/01_c_vs_cpp.md
+              - 02 - Alcune definizioni (in C++!): 02_dispense/08_linguaggio_cpp/02_definizioni.md
+              - 03 - Le classi: 02_dispense/08_linguaggio_cpp/03_classi.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md

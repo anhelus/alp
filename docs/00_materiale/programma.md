@@ -1,5 +1,8 @@
 ## Dispense e slides
 
+!!! note "Nota"
+	Questa sezione è in continuo aggiornamento.
+
 Il programma del Corso si articola come segue:
 
 | Argomento                  | Slides                            |
@@ -40,16 +43,15 @@ Il programma del Corso si articola come segue:
 | 05 - Array                       | :no_entry: | [:link:](slides/programmazione/linguaggio_c/23_array)       |
 | 06 - Puntatori                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/24_puntatori)   |
 | 07 - I/O e file                  | :no_entry: | [:link:](slides/programmazione/linguaggio_c/25_file)        |
-| 08 - Typedef, Struct ed Union    | :no_entry: | :no_entry:                                                  |
+| 08 - Typedef, Struct ed Union    | :no_entry: | [:link:](slides/programmazione/linguaggio_c/26_struct_union)|
 
 ### Parte 3: Cenni al linguaggio C++
 
 | Argomento                                  | Dispense   | Slides     |
 | ------------------------------------------ | ---------- | ---------- |
-| 01 - Dal C al C++                          | :no_entry: | :no_entry: |
-| 02 - Programmazione orientata agli oggetti | :no_entry: | :no_entry: |
-| 03 - La Standard Template Library          | :no_entry: | :no_entry: |
-| 04 - Templates                             | :no_entry: | :no_entry: |
+| 01 - Dal C al C++                          | [:link:](../02_dispense/08_linguaggio_cpp/01_c_vs_cpp.md)    | [:link:](slides/programmazione/linguaggio_cpp/27_c_vs_cpp) |
+| 02 - Alcune definizioni (in C++!)          | [:link:](../02_dispense/08_linguaggio_cpp/02_definizioni.md) | [:link:](slides/programmazione/linguaggio_cpp/28_def_cpp)  |
+| 03 - Le classi                             | [:link:](../02_dispense/08_linguaggio_cpp/03_classi.md)      | [:link:](slides/programmazione/linguaggio_cpp/29_classi)   |
 
 ### Parte 4: Cenni al linguaggio Python
 
@@ -58,7 +60,7 @@ Il programma del Corso si articola come segue:
 ### Testi di riferimento
 
 !!! note "Nota"
-Questi testi sono _consigliati_. Ciò non implica che sia necessario seguirli in maniera _pedissequa_, ma che occorre intenderli come materiale da usare per motivi di approfondimento personale. Ciò comporta due conseguenze: la prima è che il corso non segue un testo di riferimento, quanto piuttosto le dispense e le slide proiettate a lezione; la seconda, più rilevante per lo Studente, è che per superare l'esame basta seguire queste ultime.
+	Questi testi sono _consigliati_. Ciò non implica che sia necessario seguirli in maniera _pedissequa_, ma che occorre intenderli come materiale da usare per motivi di approfondimento personale. Ciò comporta due conseguenze: la prima è che il corso non segue un testo di riferimento, quanto piuttosto le dispense e le slide proiettate a lezione; la seconda, più rilevante per lo Studente, è che per superare l'esame basta seguire queste ultime.
 
 #### Testi integrativi (per l'approfondimento della materia)
 
@@ -85,7 +87,7 @@ Questi testi sono da considerarsi come dei buoni approfondimenti qualora si deci
 ### Esercizi di approfondimento
 
 !!! note "Note"
-Alcuni di questi esercizi fanno riferimento a materiale _esterno_ al corso. Il Docente non è responsabile per, né proprietario dei, contenuti presenti a questi link. Inoltre, questi esercizi _non_ sono rappresentativi di tracce di esame, presenti, future o passate.
+	Alcuni di questi esercizi fanno riferimento a materiale _esterno_ al corso. Il Docente non è responsabile per, né proprietario dei, contenuti presenti a questi link. Inoltre, questi esercizi _non_ sono rappresentativi di tracce di esame, presenti, future o passate.
 
 #### Diagrammi di flusso
 

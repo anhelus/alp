@@ -18,3 +18,11 @@ error C2513: 'int': nessuna variabile dichiarata prima di '='
 Per una lista di keyword usate nei vari linguaggi, controllare l'appendice D.
 
 ## Modularità, prototipi e file header
+
+### Funzioni e procedure
+
+In C++, così come nel C, la diferenza tra *funzioni* e *procedure* è solo teorica.
+
+Le procedure, in programmazione puramente procedrale, sono blocchi che espletano una determinata operazione senza produrre un valore di ritorno. Le funzioni, invece, mutuano il concetto matematico di relazione, ed associano ad un elemento del proprio dominio (variabili e parametri) un elemento di un codominio (valore di ritorno).
+
+Ecco quindi come il `void` assume un significato diverso: una procedura è un tipo particolare di funzione che non ha codominio, e quindi presenta un valore di ritorno `void`.

@@ -41,7 +41,7 @@ Il diagramma di flusso è mostrato nella figura seguente:
 ![flow_chart](../../../assets/images/appendici/c_tema_anno/flow_chart_sample.png)
 
 !!! note "Nota"
-Nel diagramma di flusso le frecce in rosso sulle selezioni indicano un `FALSE`, mentre quelle in blu un `TRUE`.
+    Nel diagramma di flusso le frecce in rosso sulle selezioni indicano un `FALSE`, mentre quelle in blu un `TRUE`.
 
 ## Analisi computazionale
 

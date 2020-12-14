@@ -22,22 +22,22 @@ Il programma è strutturato come segue:
 
 Segue una breve descrizione dei singoli file di intestazione.
 
-| File        | Descrizione                                           |
-| ----------- | ----------------------------------------------------- |
-| `ioutils.h` | Contiene delle utility di supporto all'I/O.           |
-| `parsing.h` | Contiene delle utility di supporto al parsing.        |
-| `sorting.h` | Contiene delle utility di supporto al selection sort. |
+| File        | Descrizione                                           | Link al codice                                                                  |
+| ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `ioutils.h` | Contiene delle utility di supporto all'I/O.           | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/header/ioutils.h) |
+| `parsing.h` | Contiene delle utility di supporto al parsing.        | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/header/parsing.h) |
+| `sorting.h` | Contiene delle utility di supporto al selection sort. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/header/sorting.h) |
 
 ### File di origine (sorgenti)
 
 Segue una breve descrizione dei singoli file di origine.
 
-| File        | Descrizione                                                              |
-| ----------- | ------------------------------------------------------------------------ |
-| `ioutils.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. |
-| `parsing.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. |
-| `sorting.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. |
-| `source.c`  | Contiene il programma principale.                                        |
+| File        | Descrizione                                                              | Link al codice                                                                    |
+| ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
+| `ioutils.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/ioutils.c) |
+| `parsing.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/parsing.c) |
+| `sorting.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/sorting.c) |
+| `source.c`  | Contiene il programma principale.                                        | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/source.c)  |
 
 ### File di risorse
 
@@ -119,4 +119,4 @@ Ecco un esempio di file di input.
 [10, 4, 3, 2]
 ```
 
-Il file andrà posizionato nella stessa cartella dell'eseguibile.
+Il file andrà posizionato nella stessa cartella dell'eseguibile.s
