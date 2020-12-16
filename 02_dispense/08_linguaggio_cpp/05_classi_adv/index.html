@@ -14,7 +14,7 @@
     
     
       
-        <title>05 classi adv - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>05 - Le classi (parte due) - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
@@ -59,7 +59,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#copia-di-oggetti" class="md-skip">
+        <a href="#le-classi-parte-due" class="md-skip">
           Skip to content
         </a>
       
@@ -89,7 +89,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              05 classi adv
+              05 - Le classi (parte due)
             
           </span>
         </div>
@@ -381,10 +381,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     <label class="md-nav__link" for="nav-3">
       Dispense
       <span class="md-nav__icon md-icon"></span>
@@ -658,10 +660,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     <label class="md-nav__link" for="nav-3-3">
       Programmazione
       <span class="md-nav__icon md-icon"></span>
@@ -715,10 +719,12 @@
           
           
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2" >
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2" checked>
     <label class="md-nav__link" for="nav-3-3-2">
       Linguaggio C++
       <span class="md-nav__icon md-icon"></span>
@@ -762,8 +768,97 @@
 
   <li class="md-nav__item">
     <a href="../03_classi/" class="md-nav__link">
-      03 - Le classi
+      03 - Le classi (parte uno)
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../04_definizioni_adv/" class="md-nav__link">
+      04 - Alcune definizioni (più avanzate)
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        05 - Le classi (parte due)
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      05 - Le classi (parte due)
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#copiare-un-oggetto" class="md-nav__link">
+    Copiare un oggetto
+  </a>
+  
+    <nav class="md-nav" aria-label="Copiare un oggetto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shallow-copy-e-deep-copy" class="md-nav__link">
+    Shallow copy e deep copy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operatore-di-assegnazione-di-copia" class="md-nav__link">
+    Operatore di assegnazione di copia
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#allocazione-dinamica-di-nuovi-oggetti" class="md-nav__link">
+    Allocazione dinamica di nuovi oggetti
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -907,6 +1002,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -915,23 +1012,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#copia-di-oggetti" class="md-nav__link">
-    Copia di oggetti
+  <a href="#copiare-un-oggetto" class="md-nav__link">
+    Copiare un oggetto
   </a>
   
-    <nav class="md-nav" aria-label="Copia di oggetti">
+    <nav class="md-nav" aria-label="Copiare un oggetto">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#semantica-del-costruttore-di-copia" class="md-nav__link">
-    semantica del costruttore di copia
+  <a href="#shallow-copy-e-deep-copy" class="md-nav__link">
+    Shallow copy e deep copy
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#operatore-di-assegnamento-di-copia" class="md-nav__link">
-    Operatore di assegnamento di copia
+  <a href="#operatore-di-assegnazione-di-copia" class="md-nav__link">
+    Operatore di assegnazione di copia
   </a>
   
 </li>
@@ -942,15 +1039,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#costruttore-di-spostamento" class="md-nav__link">
-    Costruttore di spostamento
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#allocazione-dinamica" class="md-nav__link">
-    ALLOCAZIONE DINAMICA
+  <a href="#allocazione-dinamica-di-nuovi-oggetti" class="md-nav__link">
+    Allocazione dinamica di nuovi oggetti
   </a>
   
 </li>
@@ -968,80 +1058,106 @@
               
                 
                 
-                  <h1>05 classi adv</h1>
-                
-                <h2 id="copia-di-oggetti">Copia di oggetti<a class="headerlink" href="#copia-di-oggetti" title="Permanent link">&para;</a></h2>
-<p>Lo stnadard C++ prevede uno strumento apposito per effettuare la copia degli oggetti, chiamato <strong>costuttore di copia</strong>, che condivide le stesse particolarità della firma di un costruttore ordinario, ma si caratterizza per il fatto che il primo dei suoi parametri è un riferimetno ad un oggetto della stessa classe, mentre i parametri aggiuntivi, se presenti, sono opzionali.</p>
-<p>Il compilatore provvede alla generazione autoamtica di un costruttore di copia.</p>
-<p>Vediamo un costruttore di copia per la nostra classe.</p>
-<div class="highlight"><pre><span></span><code><span class="n">PersonaBase</span><span class="p">(</span><span class="k">const</span> <span class="n">Persona</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
-
-<span class="n">Persona</span><span class="o">::</span><span class="n">PersonaBase</span><span class="p">(</span><span class="n">comst</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span>
+                <h1 id="le-classi-parte-due">Le classi (parte due)<a class="headerlink" href="#le-classi-parte-due" title="Permanent link">&para;</a></h1>
+<h2 id="copiare-un-oggetto">Copiare un oggetto<a class="headerlink" href="#copiare-un-oggetto" title="Permanent link">&para;</a></h2>
+<p>Copiare un oggetto di un tipo non primitivo non è un'operazione così semplice come copiarne uno di tipo primitivo. Di solito, infatti, per copiare un valore basta usare l'operatore di assegnamento; le classi, invece, necessitano della definizione di un apposito <strong>costruttore di copia</strong>, il quale condivide buona parte delle caratteristiche di un costruttore ordinario, a meno di due caratteristiche:</p>
+<ol>
+<li>il primo dei parametri (obbligatorio) è una reference ad un'istanza della classe;</li>
+<li>la presenza di eventuali parametri aggiuntivi è opzionale.</li>
+</ol>
+<p>Vediamo un esempio di costruttore di copia per le classi PersonaBase e Vettore:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// persona.h</span>
+<span class="n">PersonaBase</span><span class="p">(</span><span class="k">const</span> <span class="n">Persona</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+<span class="c1">// persona.cpp</span>
+<span class="n">Persona</span><span class="o">::</span><span class="n">PersonaBase</span><span class="p">(</span><span class="k">const</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span>
 <span class="p">{</span>
+    <span class="n">setNome</span><span class="p">(</span><span class="n">other</span><span class="p">.)</span>
     <span class="n">nome</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getNome</span><span class="p">();</span>
     <span class="n">cognome</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getCognome</span><span class="p">();</span>
     <span class="n">eta</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getEta</span><span class="p">();</span>
 <span class="p">}</span>
+<span class="c1">// vettore.h</span>
+<span class="n">Vettore</span><span class="p">(</span><span class="k">const</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">altro</span><span class="p">);</span>
+<span class="c1">// vettore.cpp</span>
+<span class="n">Vettore</span><span class="o">::</span><span class="n">Vettore</span><span class="p">(</span><span class="k">const</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">altro</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">setModulo</span><span class="p">(</span><span class="n">altro</span><span class="p">.</span><span class="n">modulo</span><span class="p">);</span>
+    <span class="n">setAngolo</span><span class="p">(</span><span class="n">altro</span><span class="p">.</span><span class="n">angolo</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>L'uso standard di un costruttore di copia è quindi il seguente:</p>
-<div class="highlight"><pre><span></span><code><span class="n">PersonaBase</span> <span class="nf">truce</span><span class="p">(</span><span class="s">&quot;truce&quot;</span><span class="p">,</span> <span class="s">&quot;baldazzi&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
-<span class="n">PersonaBase</span> <span class="nf">truceClone</span><span class="p">(</span><span class="n">truce</span><span class="p">);</span>
-</code></pre></div>
-<p>E' importante sottolineare come il const viene usato perché un rvalue associato ad una const reference può sopravvivere al di là dell'istruzione in cui è contenuto. In altre parole, il costruttore di copia può essere usato non solo su un lvalue, ma anche sul risultato di un'espressione:</p>
-<div class="highlight"><pre><span></span><code><span class="n">PersonaBase</span> <span class="nf">copiaPersona</span><span class="p">(</span><span class="n">persona</span><span class="p">(</span><span class="s">&quot;pippo&quot;</span><span class="p">,</span> <span class="s">&quot;de pippi&quot;</span><span class="p">,</span> <span class="mi">1</span><span class="p">));</span>  <span class="c1">// Ok</span>
-</code></pre></div>
-<p>Nella precedente, alla varaibile copiaPersona viene assegnato il risultato di un'espressione, cioè un valore temporaneo. Se non usassimo il qualificatore cosnt, avremmo un errore di compilazione.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>C++ non impone l'uso della parola chiave <code>const</code> in un costruttore di copia. Omettendola, però, non è possibile utilizzare la forma precedente.</p>
-</div>
-<h3 id="semantica-del-costruttore-di-copia">semantica del costruttore di copia<a class="headerlink" href="#semantica-del-costruttore-di-copia" title="Permanent link">&para;</a></h3>
-<p>il costruttore di copia non è differente da quello generato in maniera automatica dal compilatore. Infatti, la semantica generalmente applicata è quella della copia <em>membro a membro</em>.</p>
-<p>Ciò non vale però quando una classe contiene dati membro che sono puntatori o reference: in questo caso, la copia si definisce come <em>superficiale</em> (shallow). in questo caso, un'istanza della classe eed una sua copia shallow sono legate, perché una modofica fatta ad un dato membro puntatore o reference di una si riflette automaticamente nell'altra.</p>
-<p>In questi casi è necessario quindi implementare una deep copy:</p>
-<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">PersonaBase</span> <span class="p">{</span>
+<p>E' importante sottolineare la presenza della parola chiave <code>const</code>. I motivi possono essere molteplici; i più semplici hanno a che fare con il fatto che non ha molto senso modificare l'oggetto copiato, o anche che vogliamo essere in grado di copiare oggetti dichiarati come costanti; per i più complessi, invece, possiamo rifarci ad un interessante articolo di <a href="https://herbsutter.com/2008/01/01/gotw-88-a-candidate-for-the-most-important-const/">Herb Sutter</a>.</p>
+<h3 id="shallow-copy-e-deep-copy">Shallow copy e deep copy<a class="headerlink" href="#shallow-copy-e-deep-copy" title="Permanent link">&para;</a></h3>
+<p>E' importante sottolineare come i due costruttori di copia che abbiamo specificato non siano differenti da quelli generati in maniera automatica dal compilatore; infatti, l'idea generale è quella di effettuare una copia <em>membro a membro</em>, usando una tecnica chiamata <em>shallow copy</em> (copia superficiale).</p>
+<p>La shallow copy non può però essere usata nel caso la classe contenga attributi come puntatori o reference. Infatti, in questo caso, creeremmo un legame tra le due istanze, in quanto una modifica all'attributo puntato dalla variabile copiata si ripercuterebbe sullo stesso attributo della variabile risultato della copia, e viceversa. Di conseguenza, in questi casi si utilizza una tecnica chiamata <em>deep copy</em>. Nel caso fosse presente il solito puntatore alla nostra età:</p>
+<div class="highlight"><pre><span></span><code><span class="k">class</span> <span class="nc">Vettore</span> <span class="p">{</span>
     <span class="c1">// ...</span>
     <span class="k">private</span><span class="o">:</span>
-        <span class="kt">int</span> <span class="o">*</span><span class="n">puntatoreEta</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="o">*</span><span class="n">puntatoreModulo</span><span class="p">;</span>
 <span class="p">}</span>
 
-<span class="n">PersonaBase</span><span class="o">::</span><span class="n">PersonaBase</span><span class="p">(</span><span class="k">const</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span>
+<span class="n">Vettore</span><span class="p">(</span><span class="k">const</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">altro</span><span class="p">)</span>
 <span class="p">{</span>
     <span class="c1">// shallow copy</span>
-    <span class="n">nome</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getNome</span><span class="p">();</span>
-    <span class="n">cognome</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getNome</span><span class="p">();</span>
-    <span class="n">eta</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getEta</span><span class="p">();</span>
+    <span class="n">modulo</span> <span class="o">=</span> <span class="n">altro</span><span class="p">.</span><span class="n">modulo</span><span class="p">;</span>
+    <span class="n">angolo</span> <span class="o">=</span> <span class="n">altro</span><span class="p">.</span><span class="n">angolo</span><span class="p">;</span>
     <span class="c1">// deep copy</span>
-    <span class="n">puntatoreEta</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">int</span><span class="p">;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">puntatoreEta</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
-        <span class="o">*</span><span class="n">puntatoreEta</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="n">puntatoreEta</span><span class="p">);</span>
+    <span class="n">puntatoreModulo</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">double</span><span class="p">;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">altro</span><span class="p">.</span><span class="n">puntatoreModulo</span> <span class="o">!=</span> <span class="k">nullptr</span><span class="p">)</span> <span class="p">{</span>
+        <span class="o">*</span><span class="n">puntatoreModulo</span> <span class="o">=</span> <span class="o">*</span><span class="p">(</span><span class="n">altro</span><span class="p">.</span><span class="n">puntatoreModulo</span><span class="p">);</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
-<p>Nella deep copy, viene prima allcoata la memoria per l'attributo puntatoreEta, e successivamente viene copiato in essa il valore puntato da other.ptr.</p>
-<h3 id="operatore-di-assegnamento-di-copia">Operatore di assegnamento di copia<a class="headerlink" href="#operatore-di-assegnamento-di-copia" title="Permanent link">&para;</a></h3>
-<p>Quando si parla di copia, oltre al costruttore, occorre tenere in conto un altro costrutto, ovvero l'operatore di assegnamento di copia <code>=</code>.</p>
-<p>Questo entra in gioco ogni volta che ad un oggetto viene riassegnato un valore in una fase successiva alla sua dichiarazione.</p>
-<p>AD esempio:</p>
+<p>La deep copy prevede quindi due step:</p>
+<ol>
+<li>nel primo step, viene allocata memoria per l'attributo da copiare;</li>
+<li>nel secondo step, viene copiato nella memoria allocata il valore puntato dall'oggetto da copiare.</li>
+</ol>
+<h3 id="operatore-di-assegnazione-di-copia">Operatore di assegnazione di copia<a class="headerlink" href="#operatore-di-assegnazione-di-copia" title="Permanent link">&para;</a></h3>
+<p>La copia di un oggetto deve tener conto, oltre che del costruttore, anche dell'operatore di assegnazione, ovvero <code>=</code>, che entra in gioco ogni volta che ad un oggetto viene assegnato un valore successivamente alla sua inizializzazione, come in questo caso:</p>
 <div class="highlight"><pre><span></span><code><span class="n">PersonaBase</span> <span class="nf">piero</span><span class="p">(</span><span class="s">&quot;piero&quot;</span><span class="p">,</span> <span class="s">&quot;scamarcio&quot;</span><span class="p">,</span> <span class="mi">18</span><span class="p">);</span>
 <span class="n">PersonaBase</span> <span class="nf">tizio</span><span class="p">(</span><span class="s">&quot;una&quot;</span><span class="p">,</span> <span class="s">&quot;persona&quot;</span><span class="p">,</span> <span class="mi">22</span><span class="p">);</span>
 <span class="n">tizio</span> <span class="o">=</span> <span class="n">piero</span><span class="p">;</span>
-</code></pre></div>
-<p>In C++, gli operatori son assimilabili a delle funzioni operanti su argomenti di tipo ben preciso; per questo, è possibile effettuarne l'overload. Tuttavia, possiamo definire questo operatore come membro di una classe:</p>
-<div class="highlight"><pre><span></span><code><span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
 
-<span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="p">{</span>
+<span class="n">Vettore</span> <span class="nf">v1</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">);</span>
+<span class="n">Vettore</span> <span class="nf">v2</span><span class="p">(</span><span class="mf">15.0</span><span class="p">,</span> <span class="mf">60.0</span><span class="p">);</span>
+<span class="n">v2</span> <span class="o">=</span> <span class="n">v1</span><span class="p">;</span>
+</code></pre></div>
+<p>Per definirlo, possiamo sfruttare il concetto di overload di operatore. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// persona.h</span>
+<span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">);</span>
+<span class="c1">// persona.cpp</span>
+<span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">PersonaBase</span><span class="o">&amp;</span> <span class="n">other</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">nome</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getNome</span><span class="p">();</span>
     <span class="n">cognome</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getCognome</span><span class="p">();</span>
     <span class="n">eta</span> <span class="o">=</span> <span class="n">other</span><span class="p">.</span><span class="n">getEta</span><span class="p">();</span>
     <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
 <span class="p">}</span>
+
+<span class="c1">// geometria.h</span>
+<span class="n">Vettore</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">altro</span><span class="p">);</span>
+<span class="c1">// geometria.cpp</span>
+<span class="n">Vettore</span><span class="o">&amp;</span> <span class="k">operator</span><span class="o">=</span><span class="p">(</span><span class="k">const</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">altro</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">modulo</span> <span class="o">=</span> <span class="n">altro</span><span class="p">.</span><span class="n">modulo</span><span class="p">;</span>
+    <span class="n">angolo</span> <span class="o">=</span> <span class="n">altro</span><span class="p">.</span><span class="n">angolo</span><span class="p">;</span>
+    <span class="k">return</span> <span class="o">*</span><span class="k">this</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
-<p>Notiamo come la firma dell'operatore <code>=</code> presenti delle analogie con quella del costruttore di copia, e la sua implementazione è identica; ciò che cambia nei fatti è l'istruzione return *this.</p>
-<p>Notiamo inoltre che l'operatore di assegnamento viene generato automaticamente dal compilatore, e quindi valgono le considerazioni fatte altrove.</p>
-<h2 id="costruttore-di-spostamento">Costruttore di spostamento<a class="headerlink" href="#costruttore-di-spostamento" title="Permanent link">&para;</a></h2>
-<p>Utilizzare in modo eccessivo il costruttore di copia causa un degrado delle prestazioni generali del programma. Di conseguenza, onde evitare eccessivi decadimenti nelle prestazioni, gli ultimi standard hanno introdotto delle opportune modifiche con il <em>costruttore di spostamento</em>.</p>
-<h2 id="allocazione-dinamica">ALLOCAZIONE DINAMICA<a class="headerlink" href="#allocazione-dinamica" title="Permanent link">&para;</a></h2>
+<p>Notiamo la presenza di numerose analogie con il costruttore di copia, tra cui firma, sintassi e generazione automatica da parte del compilatore. L'unica differenza tangibile sta nel fatto che l'operatore di assegnazione restituisce il valore puntato dal puntatore <code>this</code>, ovvero l'istanza che abbiamo appena definito.</p>
+<h2 id="allocazione-dinamica-di-nuovi-oggetti">Allocazione dinamica di nuovi oggetti<a class="headerlink" href="#allocazione-dinamica-di-nuovi-oggetti" title="Permanent link">&para;</a></h2>
+<p>In precedenza abbiamo visto come utilizzare costruttori e distruttori per inizializzare nuove istanze di una classe. Questo tipo di inizializzazione è però statica; è possibile definire un'allocazione dinamica degli oggetti utilizzando appositamente i puntatori e le keyword <code>new</code> e <code>delete</code>. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// main.cpp</span>
+<span class="n">PersonaBase</span> <span class="o">*</span><span class="n">pb</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PersonaBase</span><span class="p">(</span><span class="s">&quot;Piero&quot;</span><span class="p">,</span> <span class="s">&quot;Scamarcio&quot;</span><span class="p">,</span> <span class="mi">21</span><span class="p">);</span>
+<span class="k">delete</span> <span class="n">pb</span><span class="p">;</span>
+
+<span class="n">Vettore</span> <span class="o">*</span><span class="n">v</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vettore</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">);</span>
+<span class="c1">//...</span>
+<span class="k">delete</span> <span class="n">v</span><span class="p">;</span>
+</code></pre></div>
+<p>Notiamo come l'inizializzazione dinamica della variabile preveda che alla keyword <code>new</code> segua uno dei costruttori in overload, assieme ad una lista di argomenti contenuti tra parentesi tonde.</p>
+<p>Per accedere ai membri ed alle funzioni dell'oggetto istanziato dinamicamente, dovremo usare l'operatore freccia <code>-&gt;</code>, come avevamo già visto quando abbiamo parlato delle <code>struct</code></p>
+<p>Quindi:</p>
+<div class="highlight"><pre><span></span><code><span class="n">pb</span><span class="o">-&gt;</span><span class="n">setNome</span><span class="p">(</span><span class="s">&quot;Pietro&quot;</span><span class="p">);</span>
+</code></pre></div>
                 
               
               
@@ -1056,6 +1172,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../04_definizioni_adv/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                04 - Alcune definizioni (più avanzate)
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../../03_appendici/configurazioni/a_vs_code_guide/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Visual Studio Code
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
