@@ -50,7 +50,9 @@ nav:
           - Linguaggio C++:
               - 01 - C vs. C++: 02_dispense/08_linguaggio_cpp/01_c_vs_cpp.md
               - 02 - Alcune definizioni (in C++!): 02_dispense/08_linguaggio_cpp/02_definizioni.md
-              - 03 - Le classi: 02_dispense/08_linguaggio_cpp/03_classi.md
+              - 03 - Le classi (parte uno): 02_dispense/08_linguaggio_cpp/03_classi.md
+              - 04 - Alcune definizioni (più avanzate): 02_dispense/08_linguaggio_cpp/04_definizioni_adv.md
+              - 05 - Le classi (parte due): 02_dispense/08_linguaggio_cpp/05_classi_adv.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md

@@ -1,7 +1,5 @@
 #include <stdio.h>
 
-
-
 int main() {
 
 typedef int* int_pointer;
