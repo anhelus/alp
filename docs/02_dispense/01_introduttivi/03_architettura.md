@@ -1,3 +1,5 @@
+# L'architettura dei calcolatori
+
 ## Un po' di storia
 
 Le origini del concetto di *calcolatore* (o, nell'accezione comune del termine, *computer*) possono essere fatte risalire alla storia antica, con invenzioni come l'*abaco*, ovvero dei veri e propri strumenti di supporto che permettevano all'operatore umano di svolgere in maniera più rapida calcoli anche complessi.
@@ -12,20 +14,25 @@ Tuttavia, nessuno degli scenari verificatisi negli ultimi 80 anni si sarebbe pot
 
 ## L'architettura di von Neumann
 
-Il modello proposto da John von Neumann è unanimamente riconosciuto come la base sulla quale sono basate le moderne architetture dei calcolatori.
+Le architetture precedenti alla definizione della *macchina di von Neumann* sono anche conosciute come *architetture non programmabili*. Questo implica che queste macchine, a meno di non procedere al ricablaggio manuale della logica "insita" all'interno delle stesse, non potevano modificare il loro funzionamento: per fare un esempio un po' "estremo", un calcolatore pensato per effettuare le addizioni non poteva essere usato per svolgere le divisioni!
 
-Elaborato negli anni '40 del secolo scorso, prevede la presenza di quattro entità principali:
+!!!note "Nota"
+	Questo esempio è volutamente "estremo": anche le calcolatrici più basilari implementano per lo meno le quattro operazioni aritmetiche fondamentali.
 
-- la *Central Processing Unit* (*CPU*);
-- la *memoria*;
-- i *dispositivi di input/output*;
-- il *bus di comunicazione*.
+Il modello proposto da John von Neumann, quindi, è quello unanimamente riconosciuto come la base sulla quale sono basate le moderne architture dei calcolatori, ed ha avuto un ruolo fondamentale nella definizione del paradigma di *stored-program computer*, ovvero di macchine *riprogrammabili*.
 
-SCHEMA MACCHINA DI VON NEUMANN
+![von_neumann](../../assets/images/02_dispense/01_teoria/03_architettura/von_neumann.png)
 
-Le informazioni viaggiano tra i diversi componenti mediante un "canale" chiamato *bus*.
+L'architettura di von Neumann, mostrata nell'immagine precedente, consta di quattro entità fondamentali, ovvero:
 
-Vediamo nel dettaglio le singole parti.
+* una *Central Processing Unit*, più comunemente nota come CPU, a sua volta composta da una *Control Unit* (CU) ed una *Arithmetic Logic Unit* (ALU);
+* una unità di memoria;
+* uno o più dispositivi di *input* ed *output*;
+* un *bus di comunicazione*.
+
+Vediamo nel dettaglio ciascuna di queste parti.
+
+TODO: da qui
 
 ### Central Processing Unit
 
@@ -63,11 +70,13 @@ Sono i dispositivi con cui, rispettivamente, sono *forniti dati e programmi* all
 Il *bus* è il mezzo con cui i vari componenti della macchina di von Neumann comunicano tra loro.
 
 TODO:
+
 ## Funzionamento
 
 # Esecuzione di programmi
 
 La macchina di von Neumann è in grado di eseguire programmi espressi in un opportuno linguaggio macchina
+
 - per le macchine reali, il linguaggio macchina è codificato secondo codici binari o esadecimali
 
 Si suppone che il programma da eseguiresia caricato in memoria prima dell'esecuzione. può essere quindi caricato a partire da qualche memoria di massa su cui è stato precedentemente registratot, fornito in input dal programmatore, etc
@@ -80,7 +89,7 @@ ed una parte logica, rappresentativa dell'insieme delle istruzioni che devono es
 
 # Ciclo Fetch-Decode-Execute
 
-L'esecuzione del programma avviene ripetendo iterativamente le fasi di 
+L'esecuzione del programma avviene ripetendo iterativamente le fasi di
 
 - Acquisizione (fetch) dell'istruzione da eseguire
 - Interpretazione (DECODE) dell'istruzione
@@ -133,6 +142,6 @@ Queste architetture sono la *Split Cache*, *access Instruction Memory as Data*, 
 
 #### Access Instruction Memory as Data
 
-Questa architettura ricorda l'architettura Harvard standard, ma con uno speciale insieme di istruzioni che permettono di leggere le costanti dalla memoria legata 
+Questa architettura ricorda l'architettura Harvard standard, ma con uno speciale insieme di istruzioni che permettono di leggere le costanti dalla memoria legata
 
 A modified Harvard architecture machine is very much like a Harvard architecture machine, but it relaxes the strict separation between instruction and data while still letting the CPU concurrently access two (or more) memory buses. The most common modification includes separate instruction and data caches backed by a common address space. While the CPU executes from cache, it acts as a pure Harvard machine. When accessing backing memory, it acts like a von Neumann machine (where code can be moved around like data, which is a powerful technique). This modification is widespread in modern processors, such as the ARM architecture, Power ISA and x86 processors. It is sometimes loosely called a Harvard architecture, overlooking the fact that it is actually "modified".

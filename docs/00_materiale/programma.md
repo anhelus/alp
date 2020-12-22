@@ -36,22 +36,27 @@ Il programma del Corso si articola come segue:
 
 | Argomento                        | Dispense   | Slides                                                      |
 | -------------------------------- | ---------- | ----------------------------------------------------------- |
-| 01 - Hello, C!                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/19_hello)       |
-| 02 - Alcune definizioni          | :no_entry: | [:link:](slides/programmazione/linguaggio_c/20_definizioni) |
-| 03 - Visibilità di una variabile | :no_entry: | [:link:](slides/programmazione/linguaggio_c/21_visibilita)  |
-| 04 - Operatori                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/22_operatori)   |
-| 05 - Array                       | :no_entry: | [:link:](slides/programmazione/linguaggio_c/23_array)       |
-| 06 - Puntatori                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/24_puntatori)   |
-| 07 - I/O e file                  | :no_entry: | [:link:](slides/programmazione/linguaggio_c/25_file)        |
-| 08 - Typedef, Struct ed Union    | :no_entry: | [:link:](slides/programmazione/linguaggio_c/26_struct_union)|
+| 19 - Hello, C!                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/19_hello.pdf)       |
+| 20 - Alcune definizioni          | :no_entry: | [:link:](slides/programmazione/linguaggio_c/20_definizioni.pdf) |
+| 21 - Visibilità di una variabile | :no_entry: | [:link:](slides/programmazione/linguaggio_c/21_visibilita.pdf)  |
+| 22 - Operatori                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/22_operatori.pdf)   |
+| 23 - Array                       | :no_entry: | [:link:](slides/programmazione/linguaggio_c/23_array.pdf)       |
+| 24 - Puntatori                   | :no_entry: | [:link:](slides/programmazione/linguaggio_c/24_puntatori.pdf)   |
+| 25 - I/O e file                  | :no_entry: | [:link:](slides/programmazione/linguaggio_c/25_file.pdf)        |
+| 26 - Typedef, Struct ed Union    | :no_entry: | [:link:](slides/programmazione/linguaggio_c/26_struct_union.pdf)|
 
 ### Parte 3: Cenni al linguaggio C++
 
-| Argomento                                  | Dispense   | Slides     |
-| ------------------------------------------ | ---------- | ---------- |
-| 01 - Dal C al C++                          | [:link:](../02_dispense/08_linguaggio_cpp/01_c_vs_cpp.md)    | [:link:](slides/programmazione/linguaggio_cpp/27_c_vs_cpp) |
-| 02 - Alcune definizioni (in C++!)          | [:link:](../02_dispense/08_linguaggio_cpp/02_definizioni.md) | [:link:](slides/programmazione/linguaggio_cpp/28_def_cpp)  |
-| 03 - Le classi                             | [:link:](../02_dispense/08_linguaggio_cpp/03_classi.md)      | [:link:](slides/programmazione/linguaggio_cpp/29_classi)   |
+| Argomento                            | Dispense   | Slides     |
+| ------------------------------------ | ---------- | ---------- |
+| 27 - Dal C al C++                    | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/01_c_vs_cpp.md)    	 | [:link:](slides/programmazione/linguaggio_cpp/27_c_vs_cpp.pdf) 		|
+| 28 - Alcune definizioni (in C++!)    | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/02_definizioni.md) 	 | [:link:](slides/programmazione/linguaggio_cpp/28_def_cpp.pdf)  		|
+| 29 - Le classi (parte 1)             | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/03_classi.md)      	 | [:link:](slides/programmazione/linguaggio_cpp/29_classi.pdf)   		|
+| 30 - Alcune definizioni (avanzate!)  | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/04_definizioni_adv.md) | [:link:](slides/programmazione/linguaggio_cpp/30_definizioni_adv.pdf)|
+| 31 - Le classi (parte 2)             | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/05_classi_adv.md)  	 | [:link:](slides/programmazione/linguaggio_cpp/31_classi_adv.pdf)   	|
+| 32 - I metodi (alcuni cenni)         | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/06_metodi.md)          | [:link:](slides/programmazione/linguaggio_cpp/32_metodi.pdf)   		|
+| 33 - Ereditarietà  				   | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/07_ereditarieta.md) 	 | [:link:](slides/programmazione/linguaggio_cpp/33_ereditarieta.pdf) 	|
+| 34 - Container	  				   | [:link:](../02_dispense/programmazione/02_linguaggio_cpp/09_container.md) 	 	 | [:link:](slides/programmazione/linguaggio_cpp/34_container.pdf) 		|
 
 ### Parte 4: Cenni al linguaggio Python
 

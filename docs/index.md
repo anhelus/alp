@@ -16,7 +16,7 @@ Il corso si terrà il **lunedì** ed il **mercoledì** dalle **12:00** alle **14
 Il ricevimento avverrà il **lunedì** ed il **mercoledì** dalle **16:30** alle **17:30** nell'ufficio del docente, sito presso la sede di Ex-Architettura del Dipartimento di Ingegneria Elettronica e dell'Informazione, stanza 4.12.
 
 !!! note "Nota"
-_A causa dell'emergenza COVID-19, il ricevimento deve essere necessariamente concordato a mezzo e-mail; è inoltre preferibile evitare il ricevimento in presenza, optando per comunicazioni telematiche a mezzo e-mail, Skype o Microsoft Teams._
+	_A causa dell'emergenza COVID-19, il ricevimento deve essere necessariamente concordato a mezzo e-mail; è inoltre preferibile evitare il ricevimento in presenza, optando per comunicazioni telematiche a mezzo e-mail, Skype o Microsoft Teams._
 
 ## Modalità di svolgimento delle lezioni
 

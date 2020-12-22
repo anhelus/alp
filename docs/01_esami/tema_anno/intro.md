@@ -24,3 +24,8 @@
 ## Comunicazioni
 
 Le comunicazioni avverranno esclusivamente **a mezzo mail istituzionale** con il **referente** di ciascun gruppo.
+
+## Modalità di consegna
+
+* La **prima parte** del tema d'anno andrà consegnata a **mezzo mail** in uno/due file in formato **PDF/A** (non modificabile). Conterrà descrizione del problema, descrizione di input ed output, analisi computazionale, pseudocodice e diagramma di flusso.
+* Le **successive parti** del tema d'anno andranno consegnate a **mezzo mail** fornendo una breve guida e descrizione (vedi esempi), oltre che il codice sorgente ed (opzionalmente) un eseguibile. Il sorgente dovrà essere fornito preferibilmente sotto forma di solution per Visual Studio Community 2019; in alternativa, dovranno essere fornite le istruzioni per implementarlo in tal senso. Inoltre, sarà necessario fornire un file in formato PDF/A contenente una copia testuale del codice sorgente.

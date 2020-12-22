@@ -46,13 +46,17 @@ nav:
               - 20 - Macchina di Turing: 02_dispense/06_modelli/01_turing.md
       - Programmazione:
           - Linguaggio C:
-              - 01 - Introduzione al C: 02_dispense/07_linguaggio_c/01_introduzione.md
+              - 01 - Introduzione al C: 02_dispense/programmazione/01_linguaggio_c/01_introduzione.md
           - Linguaggio C++:
-              - 01 - C vs. C++: 02_dispense/08_linguaggio_cpp/01_c_vs_cpp.md
-              - 02 - Alcune definizioni (in C++!): 02_dispense/08_linguaggio_cpp/02_definizioni.md
-              - 03 - Le classi (parte uno): 02_dispense/08_linguaggio_cpp/03_classi.md
-              - 04 - Alcune definizioni (più avanzate): 02_dispense/08_linguaggio_cpp/04_definizioni_adv.md
-              - 05 - Le classi (parte due): 02_dispense/08_linguaggio_cpp/05_classi_adv.md
+              - 01 - C vs. C++: 02_dispense/programmazione/02_linguaggio_cpp/01_c_vs_cpp.md
+              - 02 - Alcune definizioni (in C++!): 02_dispense/programmazione/02_linguaggio_cpp/02_definizioni.md
+              - 03 - Le classi (parte uno): 02_dispense/programmazione/02_linguaggio_cpp/03_classi.md
+              - 04 - Alcune definizioni (più avanzate): 02_dispense/programmazione/02_linguaggio_cpp/04_definizioni_adv.md
+              - 05 - Le classi (parte due): 02_dispense/programmazione/02_linguaggio_cpp/05_classi_adv.md
+              - 06 - Dettagli sui metodi: 02_dispense/programmazione/02_linguaggio_cpp/06_metodi.md
+              - 07 - Ereditarietà: 02_dispense/programmazione/02_linguaggio_cpp/07_ereditarieta.md
+              - 08 - Polimorfismo: 02_dispense/programmazione/02_linguaggio_cpp/08_polimorfismo.md
+              - 09 - Container ed iteratori: 02_dispense/programmazione/02_linguaggio_cpp/09_container.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md

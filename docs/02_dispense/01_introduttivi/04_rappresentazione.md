@@ -3,7 +3,7 @@
 Le informazioni contenute all'interno di un calcolatore, siano esse dati o istruzioni, sono rappresentate in forma _binaria_ come sequenze finite di simboli `0` ed `1`. Questa notazione permette di definire una delle nozioni fondamentali su cui è basata l'informatica, ovvero quella di _bit_, contrazione di _binary digit_ (cifra binaria):
 
 !!! quote "Bit"
-_Il bit è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori `0` (falso) o `1` (vero)._
+	_Il bit è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori `0` (falso) o `1` (vero)._
 
 ![byte](../../assets/images/04_rappresentazione/byte.png){: align=center }
 
@@ -41,7 +41,7 @@ $$
 Esprimendo $N$ in base $b$:
 
 $$
-N_b = a_n * b^n + a_{n-1} * b^{n-1} + ... + a_1 * b + a_0
+N_b = a_n *b^n + a_{n-1}* b^{n-1} + ... + a_1 * b + a_0
 $$
 
 Per fare un semplice esempio:
