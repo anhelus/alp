@@ -69,16 +69,16 @@ int main()
 {
 	vector<int> vettore = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 	cout << "Itero usando la un valore massimo predefinito." << endl;
-	for (int i=0; i<10; i++)
+	for (int i = 0; i < 10; i++)
 	{
 		cout << vettore[i] << endl;
 	}
 	
 	cout << "Itero usando la funzione size." << endl;
 	
-	for (int i=0; i<v.size(); i++)
+	for (int i = 0; i < v.size(); i++)
 	{
-		cout << persone[i].getNome() << persone[i].getCognome() << endl;
+		cout << vettore[i] << endl;
 	}
 	
 	return 0;
@@ -113,7 +113,7 @@ Un iterator si usa in modo molto simile: infatti, viene definito sul container d
 
 ```cpp
 vector<int> vettore = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
-for (vector<int>::iterator it = vettore.begin(); it != vettore.end(); it)
+for (vector<int>::iterator it = vettore.begin(); it != vettore.end(); it++)
 {
 	cout << *it << endl;
 }
