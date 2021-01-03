@@ -10,15 +10,15 @@
       
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
     
     
       
-        <title>10 file - Informatica - Corso di Laurea in Matematica - UniBa</title>
+        <title>10 - File in C++ - Informatica - Corso di Laurea in Matematica - UniBa</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.73f7c429.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#la-gestione-dei-file-in-c" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -87,7 +92,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              10 file
+              10 - File in C++
             
           </span>
         </div>
@@ -410,12 +415,14 @@
       
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Dispense
@@ -722,12 +729,14 @@
           
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3" type="checkbox" id="nav-3-3" checked>
     
     <label class="md-nav__link" for="nav-3-3">
       Programmazione
@@ -788,12 +797,14 @@
           
 
 
+  
+
 
   
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2" >
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-2" type="checkbox" id="nav-3-3-2" checked>
     
     <label class="md-nav__link" for="nav-3-3-2">
       Linguaggio C++
@@ -920,6 +931,174 @@
   <li class="md-nav__item">
     <a href="../09_container/" class="md-nav__link">
       09 - Container ed iteratori
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        10 - File in C++
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      10 - File in C++
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esempio-1-copia-di-file-riga-per-riga" class="md-nav__link">
+    Esempio 1: Copia di file riga per riga
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempio 1: Copia di file riga per riga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header-e-namespace" class="md-nav__link">
+    Header e namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-apertura-del-file-in-input" class="md-nav__link">
+    Step 1: Apertura del file in input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-verifica-dellesistenza-del-file" class="md-nav__link">
+    Step 2: Verifica dell'esistenza del file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-apertura-del-file-in-output" class="md-nav__link">
+    Step 3: Apertura del file in output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-copia-del-file-riga-per-riga" class="md-nav__link">
+    Step 4: Copia del file riga per riga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice-completo" class="md-nav__link">
+    Codice completo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempio-2-copia-carattere-per-carattere" class="md-nav__link">
+    Esempio 2: Copia carattere per carattere
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempio 2: Copia carattere per carattere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-4-copia-del-file-carattere-per-carattere" class="md-nav__link">
+    Step 4: Copia del file carattere per carattere
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-combinare-i-due-esempi" class="md-nav__link">
+    Bonus: combinare i due esempi
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3-3-3" type="checkbox" id="nav-3-3-3" >
+    
+    <label class="md-nav__link" for="nav-3-3-3">
+      Linugaggio Python
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Linugaggio Python" data-md-level="3">
+      <label class="md-nav__title" for="nav-3-3-3">
+        <span class="md-nav__icon md-icon"></span>
+        Linugaggio Python
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../03_linguaggio_python/01_intro/" class="md-nav__link">
+      01 - Introduzione al Python
     </a>
   </li>
 
@@ -1072,15 +1251,344 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esempio-1-copia-di-file-riga-per-riga" class="md-nav__link">
+    Esempio 1: Copia di file riga per riga
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempio 1: Copia di file riga per riga">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#header-e-namespace" class="md-nav__link">
+    Header e namespace
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-1-apertura-del-file-in-input" class="md-nav__link">
+    Step 1: Apertura del file in input
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-2-verifica-dellesistenza-del-file" class="md-nav__link">
+    Step 2: Verifica dell'esistenza del file
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-3-apertura-del-file-in-output" class="md-nav__link">
+    Step 3: Apertura del file in output
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-4-copia-del-file-riga-per-riga" class="md-nav__link">
+    Step 4: Copia del file riga per riga
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codice-completo" class="md-nav__link">
+    Codice completo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#esempio-2-copia-carattere-per-carattere" class="md-nav__link">
+    Esempio 2: Copia carattere per carattere
+  </a>
+  
+    <nav class="md-nav" aria-label="Esempio 2: Copia carattere per carattere">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-4-copia-del-file-carattere-per-carattere" class="md-nav__link">
+    Step 4: Copia del file carattere per carattere
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bonus-combinare-i-due-esempi" class="md-nav__link">
+    Bonus: combinare i due esempi
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>10 file</h1>
-                
-                
+                <h1 id="la-gestione-dei-file-in-c">La gestione dei file in C++<a class="headerlink" href="#la-gestione-dei-file-in-c" title="Permanent link">&para;</a></h1>
+<p>La gestione dei file in C++ (e, ovviamente, dei relativi stream di I/O) ricalca in parte il modello usato per il C, con delle classi specifiche per l'interazione con il file system, ovvero <code>ofstream</code> (usata per le operazioni di sola scrittura), <code>ifstream</code> (usata per le operazioni di sola lettura), ed <code>fstream</code> (usata per entrambi i tipi di operazioni). Proprio come nel C vi è un'analogia tra, ad esempio, <code>printf</code> ed <code>fprintf</code>, nel C++ troviamo numerose analogie tra le classi prima citate e le classi <code>ostream</code> ed <code>istream</code>, che ricordiamo essere delegate alla gestione dell'I/O da riga di comando.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Queste "analogie" sono rese possibili dal fatto che in realtà <code>ofstream</code> ed <code>ifstream</code> sono classi derivate da <code>ostream</code> ed <code>istream</code>, mentre <code>fstream</code> deriva da <code>iostream</code>, a sua volta classe derivata da <code>istream</code> ed <code>ostream</code>.</p>
+</div>
+<p>Vediamo brevemente un paio di esempi.</p>
+<h2 id="esempio-1-copia-di-file-riga-per-riga">Esempio 1: Copia di file riga per riga<a class="headerlink" href="#esempio-1-copia-di-file-riga-per-riga" title="Permanent link">&para;</a></h2>
+<p>Un caso comune è quello che riguarda la copia di un file di testo riga per riga. Immaginiamo quindi di avere un file di testo in input (al solito, chiamiamolo <strong>input.txt</strong>), e volerlo copiare (quindi, leggere riga per riga, e scrivere il contenuto su un altro file). Chiameremo il file di output <strong>output.txt</strong>. Per la prima parte, useremo la classe <code>ifstream</code>, mentre per la seconda parte la classe <code>ostream</code>.</p>
+<h3 id="header-e-namespace">Header e namespace<a class="headerlink" href="#header-e-namespace" title="Permanent link">&para;</a></h3>
+<p>Per prima cosa, ricordiamoci di includere gli header necessari, e di specificare l'utilizzo del namespace <code>std</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+</code></pre></div>
+<h3 id="step-1-apertura-del-file-in-input">Step 1: Apertura del file in input<a class="headerlink" href="#step-1-apertura-del-file-in-input" title="Permanent link">&para;</a></h3>
+<p>Fatto questo, dovremo istanziare un oggetto di classe <code>ifstream</code>. Utilizziamo la sintassi seguente:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Header</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+<span class="hll">    <span class="n">ifstream</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;input.txt&quot;</span><span class="p">)</span>
+</span>    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>L'istruzione è alquanto semplice da interpretare: stiamo infatti creando una variabile <code>input</code> associata ad un oggetto di classe <code>ifstream</code> che si occupa di leggere il contenuto del file <strong>input.txt</strong>.</p>
+<h3 id="step-2-verifica-dellesistenza-del-file">Step 2: Verifica dell'esistenza del file<a class="headerlink" href="#step-2-verifica-dellesistenza-del-file" title="Permanent link">&para;</a></h3>
+<p>I più attenti avranno notato che, a differenza del C, dove si usava una verifica del valore restituito dalla <code>fopen</code> per appurare che il file esistesse, qui non abbiamo effettuato alcun controllo. In realtà, questo non avrebbe molto senso: stiamo comunque creando una variabile di classe <code>ifstream</code>, e ciò non dipende dal valore passato (sotto forma peraltro di stringa) al costruttore. Come fare, quindi?</p>
+<p>Una soluzione è quella di verificare la possibilità di aprire il file mediante la funzione <code>is_open()</code>. Questa funzione infatti ci indica se il file è stato correttamente aperto e, ovviamente, qualora questo non sia avvenuto, potremo tranquillamente desumere che il file non esiste, o che vi è stato un qualche altro tipo di problema. Modifichiamo quindi il nostro codice come segue:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Header</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">ifstream</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;input.txt&quot;</span><span class="p">)</span>
+<span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="n">intput</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span><span class="hll">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Il file esiste!&quot;</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+</span><span class="hll">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Il file non esiste!&quot;</span><span class="p">;</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Effettueremo un controllo analogo anche sui file in apertura.</p>
+</div>
+<h3 id="step-3-apertura-del-file-in-output">Step 3: Apertura del file in output<a class="headerlink" href="#step-3-apertura-del-file-in-output" title="Permanent link">&para;</a></h3>
+<p>Possiamo quindi passare ad aprire il file su cui andremo a copiare i contenuti del file di input. Per farlo, creeremo una variabile di classe <code>ofstream</code>, che chiameremo <code>output</code>, e che creerà (se non esiste) il file <strong>output.txt</strong>. Verificheremo anche che il file sia stato effettivamente creato richiamando il metodo <code>is_open()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Header</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1">// ...</span>
+<span class="hll">        <span class="n">ofstream</span> <span class="n">output</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+</span><span class="hll">        <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span>            <span class="c1">// ...</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Di default, <code>ofstream</code> apre i file in modalità <em>truncate</em>, il che significa che il contenuto esistente del file sarà sovrascritto. E' tuttavia possibile specificare, come nel C, la modalità di apertura del file, tra quelle definite nella <a href="https://en.cppreference.com/w/cpp/io/ios_base/openmode">libreria standard C++</a>.</p>
+</div>
+<h3 id="step-4-copia-del-file-riga-per-riga">Step 4: Copia del file riga per riga<a class="headerlink" href="#step-4-copia-del-file-riga-per-riga" title="Permanent link">&para;</a></h3>
+<p>Modifichiamo l'istruzione precedentemente alla riga 8 (ovvero, l'istruzione condizionale annidata) in questo modo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// Header</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="hll">    <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span><span class="hll">        <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+</span><span class="hll">        <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</span><span class="hll">        <span class="k">while</span> <span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">output</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+</span><span class="hll">            <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span><span class="hll">            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linea &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">row</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; copiata&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span><span class="hll">            <span class="n">row</span><span class="o">++</span><span class="p">;</span>
+</span><span class="hll">        <span class="p">}</span>
+</span><span class="hll">        <span class="n">output</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+</span><span class="hll">    <span class="p">}</span>
+</span>    <span class="c1">// ...</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In primis, notiamo l'utilizzo della funzione <code>getline()</code>, che accetta in ingresso la variabile <code>input</code> ed una stringa, che chiameremo <code>line</code>, e che rappresenta un contenitore per il contenuto della riga specifica. Di norma, la <code>getline()</code> restituisce un riferimento allo stream passato come argomento (ovvero <code>input</code>); tuttavia, nel nostro caso, lo useremo come valore booleano per valutare l'effettiva esistenza dello stream. Inoltre, usiamo il metodo <code>good()</code> sullo stream relativo all'oggetto <code>output</code>, in modo da verificarne lo stato.</p>
+<p>L'unico fattore di nota all'interno del ciclo <code>while</code> è legato al fatto che utilizziamo lo stream relativo all'oggetto <code>output</code> esattamente allo stesso modo in cui usiamo lo stream relativo all'output su riga di comando. Nello specifico, dopo aver copiato l'i-ma riga del file <strong>input.txt</strong> in <strong>output.txt</strong>, manderemo su riga di comando un messaggio di conferma dell'avvenuta copia della riga. Notiamo infine il metodo <code>close()</code>, che serve per chiudere un file (e rilasciare le relative risorse occupate).</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Il metodo <code>close()</code> va chiamato <strong>su ogni variabile associata ad uno stream su file</strong>. Ergo, anche sul file che sta venendo letto!</p>
+</div>
+<h3 id="codice-completo">Codice completo<a class="headerlink" href="#codice-completo" title="Permanent link">&para;</a></h3>
+<p>Il codice completo per la copia del file è mostrato di seguito.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">ifstream</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;inpput.txt&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;File letto correttamente.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">ofstream</span> <span class="n">output</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+            <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+            <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+            <span class="k">while</span> <span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">output</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+                <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+                <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linea &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">row</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; copiata&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+                <span class="n">row</span><span class="o">++</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="n">output</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Errore nella lettura del file.&quot;</span><span class="p">;</span>
+        <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_SUCCESS</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="esempio-2-copia-carattere-per-carattere">Esempio 2: Copia carattere per carattere<a class="headerlink" href="#esempio-2-copia-carattere-per-carattere" title="Permanent link">&para;</a></h2>
+<p>Un altro esempio è quello che vede la copia di un file carattere per carattere. Notiamo che gli step 1 - 3 di questo esempio sono analoghi a quelli dell'esempio precedente, a meno del mancato utilizzo dell'header <code>string</code>, questa volta non necessario.</p>
+<p>Di conseguenza, rivediamo esclusivamente lo step 4.</p>
+<h3 id="step-4-copia-del-file-carattere-per-carattere">Step 4: Copia del file carattere per carattere<a class="headerlink" href="#step-4-copia-del-file-carattere-per-carattere" title="Permanent link">&para;</a></h3>
+<p>La parte interessata dalle modifiche è quella evidenziata nel listato successivo.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">ifstream</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;input.txt&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">ofstream</span> <span class="n">output</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+<span class="hll">        <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+</span><span class="hll">            <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+</span><span class="hll">            <span class="k">while</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">output</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+</span><span class="hll">                <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="p">{</span>
+</span><span class="hll">                    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Carattere &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; copiato&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span><span class="hll">                <span class="p">}</span>
+</span><span class="hll">                <span class="k">else</span> <span class="p">{</span>
+</span><span class="hll">                    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Impossibile copiare il carattere &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+</span><span class="hll">                    <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+</span><span class="hll">                <span class="p">}</span>
+</span><span class="hll">            <span class="p">}</span>
+</span><span class="hll">            <span class="n">output</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+</span>        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Errore di I/O sul file di output.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Errore di I/O sul file di input.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_SUCCESS</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Notiamo innanzitutto la funzione <code>get()</code> che, in maniera simile alla <code>getline()</code>, scandisce il file associato alla variabile <code>input</code>, questa volta carattere per carattere. Notiamo una differenza: laddove la <code>getline()</code> prende due parametri in ingresso, la <code>get()</code> viene chiamata direttamente sulla variabile associata al file di input, ed accetta come parametro esclusivamente il riferimento al carattere attualmente scandito.</p>
+<p>Dopo la <code>get()</code>, troviamo una chiamata alla funzione "duale", ovvero la <code>put()</code>, che (prevedibilmente) si occupa di scrivere il carattere passato in ingresso sul file di output.</p>
+<h2 id="bonus-combinare-i-due-esempi">Bonus: combinare i due esempi<a class="headerlink" href="#bonus-combinare-i-due-esempi" title="Permanent link">&para;</a></h2>
+<p>Di seguito il codice per un possibile approccio alla combinazione dei due esempi precedenti.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;fstream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string&gt;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span>
+
+<span class="c1">// Funzione per la copia carattere per carattere. Ricordare il passaggio per reference!</span>
+<span class="kt">void</span> <span class="nf">char_copy</span><span class="p">(</span><span class="n">ifstream</span><span class="o">&amp;</span> <span class="n">input</span><span class="p">,</span> <span class="n">ofstream</span><span class="o">&amp;</span> <span class="n">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">char</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="n">c</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">output</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">put</span><span class="p">(</span><span class="n">c</span><span class="p">))</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Carattere &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; copiato&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Impossibile copiare il carattere &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">c</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="c1">// Funzione per la copia riga per riga. Ricordare il passaggio per reference!</span>
+<span class="kt">void</span> <span class="nf">row_copy</span><span class="p">(</span><span class="n">ifstream</span><span class="o">&amp;</span> <span class="n">input</span><span class="p">,</span> <span class="n">ofstream</span><span class="o">&amp;</span> <span class="n">output</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">string</span> <span class="n">line</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">row</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">getline</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">line</span><span class="p">)</span> <span class="o">&amp;&amp;</span> <span class="n">output</span><span class="p">.</span><span class="n">good</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">output</span> <span class="o">&lt;&lt;</span> <span class="n">line</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Linea &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">row</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; copiata&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">row</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Inserire 0 per lettura riga a riga, ed 1 per lettura carattere per carattere.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">char_or_row</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">char_or_row</span><span class="p">;</span>
+    <span class="n">ifstream</span> <span class="n">input</span><span class="p">(</span><span class="s">&quot;input.txt&quot;</span><span class="p">);</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">input</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+        <span class="n">ofstream</span> <span class="n">output</span><span class="p">(</span><span class="s">&quot;output.txt&quot;</span><span class="p">);</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">output</span><span class="p">.</span><span class="n">is_open</span><span class="p">())</span> <span class="p">{</span>
+            <span class="k">if</span> <span class="p">(</span><span class="n">char_or_row</span><span class="p">)</span> <span class="p">{</span>
+                <span class="n">char_copy</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">output</span><span class="p">);</span>
+            <span class="p">}</span>
+            <span class="k">else</span> <span class="p">{</span>
+                <span class="n">row_copy</span><span class="p">(</span><span class="n">input</span><span class="p">,</span> <span class="n">output</span><span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Errore di I/O sul file di output.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+            <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">input</span><span class="p">.</span><span class="n">close</span><span class="p">();</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="p">{</span>
+        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Errore di I/O sul file di input.&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+        <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_FAILURE</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">exit</span><span class="p">(</span><span class="n">EXIT_SUCCESS</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
                 
               
               
@@ -1095,6 +1603,41 @@
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../09_container/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                09 - Container ed iteratori
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../03_linguaggio_python/01_intro/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                01 - Introduzione al Python
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
