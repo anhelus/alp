@@ -1,8 +1,8 @@
-site_name: Informatica - Corso di Laurea in Matematica - UniBa
+site_name: Corso di Informatica - Angelo Cardellicchio
 nav:
   - Home: index.md
-  - Modalità di esame:
-      - Modalità standard: 01_esami/standard.md
+  - Esami:
+      - Modalità standard: 01_esami/standard/intro.md
       - Tema d'anno:
           - Introduzione: 01_esami/tema_anno/intro.md
           - Valutazione: 01_esami/tema_anno/valutazione.md

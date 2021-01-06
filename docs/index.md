@@ -1,6 +1,6 @@
-# Informatica - CdL in Matematica (UniBa 20/21)
+# Corso di Informatica
 
-Benvenuti!
+Benvenuti! Queste sono le informazioni generali sul corso.
 
 ## Indirizzi utili
 
@@ -11,12 +11,30 @@ Contatto Skype: **angelo_cardellicchio**
 
 Il corso si terrà il **lunedì** ed il **mercoledì** dalle **12:00** alle **14:00**.
 
-## Ricevimento
+## Modalità di ricevimento
 
 Il ricevimento avverrà il **lunedì** ed il **mercoledì** dalle **16:30** alle **17:30** nell'ufficio del docente, sito presso la sede di Ex-Architettura del Dipartimento di Ingegneria Elettronica e dell'Informazione, stanza 4.12.
 
-!!! note "Nota"
-	_A causa dell'emergenza COVID-19, il ricevimento deve essere necessariamente concordato a mezzo e-mail; è inoltre preferibile evitare il ricevimento in presenza, optando per comunicazioni telematiche a mezzo e-mail, Skype o Microsoft Teams._
+Il ricevimento deve essere concordato **a mezzo mail istituzionale**, usando come oggetto il seguente:
+
+```
+[RICEVIMENTO] - NOME_COGNOME
+```
+
+dove `NOME_COGNOME` sono il nome ed il cognome dello studente.
+
+Nel corpo della mail, deve essere specificato l'orario ed il giorno per il quale ci si intende prenotare per il ricevimento, assieme ad eventuali necessità specifiche.
+
+E' possibile (e preferibile) richiedere direttamente dei chiarimenti a mezzo mail istituzionale. In questo caso, l'oggetto dovrà essere il seguente:
+
+```
+[CHIARIMENTI] - NOME_COGNOME
+```
+
+Il corpo della mail, come ovvio, è libero.
+
+!!! note "Nota A.A. 2020/2021"
+	_A causa dell'emergenza COVID-19, il ricevimento non avverrà in presenza, ma esclusivamente a mezzo Microsoft Teams._
 
 ## Modalità di svolgimento delle lezioni
 
