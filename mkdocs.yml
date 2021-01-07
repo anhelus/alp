@@ -1,19 +1,24 @@
 site_name: Corso di Informatica - Angelo Cardellicchio
 nav:
-  - Home: index.md
-  - Esami:
-      - Modalità standard: 01_esami/standard/intro.md
-      - Tema d'anno:
-          - Introduzione: 01_esami/tema_anno/intro.md
-          - Valutazione: 01_esami/tema_anno/valutazione.md
-          - FAQ: 01_esami/tema_anno/faq.md
-          - A.A. 2020/2021:
-              - Date rilevanti: 01_esami/tema_anno/2020-2021/date.md
-              - Documenti: 01_esami/tema_anno/2020-2021/documenti.md
-          - Esempio:
-              - Traccia: 01_esami/tema_anno/esempio/traccia.md
-              - Parte Prima: 01_esami/tema_anno/esempio/parte_prima.md
-              - Parte Seconda: 01_esami/tema_anno/esempio/parte_seconda.md
+  - Home del corso: index.md
+  - Informazioni sul corso:
+    - Ricevimento: ricevimento.md
+    - Comunicare col docente: comunicazioni.md
+    - Bacheca avvisi: bacheca.md
+    - Esami:
+        - Modalità standard: 01_esami/standard/intro.md
+        - Tema d'anno:
+            - Introduzione: 01_esami/tema_anno/intro.md
+            - Valutazione: 01_esami/tema_anno/valutazione.md
+            - FAQ: 01_esami/tema_anno/faq.md
+            - A.A. 2020/2021:
+                - Date rilevanti: 01_esami/tema_anno/2020-2021/date.md
+                - Documenti: 01_esami/tema_anno/2020-2021/documenti.md
+                - Chiarimenti: 01_esami/tema_anno/2020-2021/chiarimenti.md
+            - Esempio:
+                - Traccia: 01_esami/tema_anno/esempio/traccia.md
+                - Parte Prima: 01_esami/tema_anno/esempio/parte_prima.md
+                - Parte Seconda: 01_esami/tema_anno/esempio/parte_seconda.md
   - Dispense:
       - Slides proiettate a lezione: 00_materiale/programma.md
       - Teoria:
