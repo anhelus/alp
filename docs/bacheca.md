@@ -1,5 +1,13 @@
 # Avvisi
 
+## 08/01/2021 - Note sulla consultazione seconda prova
+
+Si sottolinea che:
+
+* durante la consultazione della seconda prova si potrà, *opzionalmente*, rispondere ad alcune domande, volte ad effettuare delle verifiche di natura integrativa rispetto alla prova stessa. Ciò significa che il voto attualmente riportato *non* è definitivo, ma potrà essere suscettibile di modifiche a seguito dell'(*eventuale*) verifica orale;
+* tale verifica è possibile per *tutti* quelli che si prenoteranno per la consultazione;
+* gli orari indicati per la consultazione potranno essere estesi in base al numero di richieste pervenute entro i termini stabiliti.
+
 ## 07/01/2021 - Risultati seconda prova
 
 A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_seconda_prova.pdf) sono disponibili i risultati relativi alla seconda prova.

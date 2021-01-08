@@ -70,3 +70,6 @@ I seguenti bonus sono applicati nella valutazione complessiva degli esoneri.
 
 !!!note "Nota"
 	I precedenti bonus **non concorrono** all'acquisizione della sufficienza o della lode.
+
+!!!note "Nota sulla correzione del codice"
+	Le verifiche della seconda, terza e quarta parte del tema d'anno prevedono prevalentemente il test di funzionamento del programma, con conseguente evidenziazione di eventuali bug o feature mancanti, che vanno a concorrere alla valutazione secondo le modalità esplicitate sul sito del corso. Una verifica stretta del codice non sarà effettuata, se non in situazioni eccezionali ed individuate discrezionalmente.

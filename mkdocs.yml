@@ -65,6 +65,7 @@ nav:
               - 10 - File in C++: 02_dispense/programmazione/02_linguaggio_cpp/10_file.md
           - Linugaggio Python:
               - 01 - Introduzione al Python: 02_dispense/programmazione/03_linguaggio_python/01_intro.md
+              - 02 - Programmare in Python: 02_dispense/programmazione/03_linguaggio_python/02_programmare.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md
