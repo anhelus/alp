@@ -52,12 +52,14 @@
 | 32 - I metodi (alcuni cenni)        | [:link:](slides/programmazione/linguaggio_cpp/32_metodi.pdf)          |
 | 33 - Ereditarietà                   | [:link:](slides/programmazione/linguaggio_cpp/33_ereditarieta.pdf)    |
 | 34 - Container                      | [:link:](slides/programmazione/linguaggio_cpp/34_container.pdf)       |
+| 35 - La gestione dei file in C++    | [:link:](slides/programmazione/linguaggio_cpp/35_file_cpp.pdf)        |
 
 ## Parte 4: Cenni al linguaggio Python
 
-| Argomento  | Slides     |
-| ---------- | ---------- |
-| :no-entry: | :no-entry: |
+| Argomento                   | Slides                                                                      |
+| --------------------------- | --------------------------------------------------------------------------- |
+| 36 - Introduzione al Python | [:link:](slides/programmazione/linguaggio_python/36_intro_python.pdf)       |
+| 37 - Programmare in Python  | [:link:](slides/programmazione/linguaggio_python/37_programmare_python.pdf) |
 
 ## Riferimenti esterni
 
@@ -91,7 +93,7 @@ Questi testi sono da considerarsi come dei buoni approfondimenti qualora si deci
 ### Esercizi di approfondimento
 
 !!! note "Note"
-Alcuni di questi esercizi fanno riferimento a materiale _esterno_ al corso. Il Docente non è responsabile per, né proprietario dei, contenuti presenti a questi link. Inoltre, questi esercizi _non_ sono rappresentativi di tracce di esame, presenti, future o passate.
+	Alcuni di questi esercizi fanno riferimento a materiale _esterno_ al corso. Il Docente non è responsabile per, né proprietario dei, contenuti presenti a questi link. Inoltre, questi esercizi _non_ sono rappresentativi di tracce di esame, presenti, future o passate.
 
 #### Diagrammi di flusso
 

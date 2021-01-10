@@ -2,6 +2,10 @@
 
 ## 10/01/2021
 
+### Aggiornamento voti
+
+Sono state inserite le votazioni dei gruppi mancanti.
+
 ### Calendario verifiche 11/01/2021
 
 | Orario | Gruppo              |
@@ -18,6 +22,10 @@ All'orario prestabilito, l'interessato riceverà una chiamata su Microsoft Teams
 
 !!!note "Nota"
 	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili *nei 15 minuti antecedenti e successivi all'orario di convocazione segnalato*.
+
+### Materiale necessario per Python
+
+Per il corretto svolgimento delle prossime lezioni è necessario installare l'interprete Python dal sito ufficiale, avendo cura di aggiungerlo al proprio path di sistema ([qui](https://docs.python.org/3/using/windows.html) le istruzioni per Windows; [qui](https://docs.python.org/3/using/mac.html) le istruzioni per Mac; [qui](https://docs.python.org/3/using/unix.html#on-linux) quelle per Linux, sul quale dovrebbe comunque essere già configurato di default).
 
 ## 08/01/2021 - Note sulla consultazione seconda prova
 

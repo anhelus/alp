@@ -1,6 +1,6 @@
-## Il concetto di stream
+# Il concetto di stream
 
-Il linguaggio C (e, di conseguenza, anche il C++) adotta il concetto di _stream_ come base per favorire i meccanismi di input ed output rispettivamente da e verso l'utente.
+Il linguaggio C (e, come vedremo, anche il C++) adotta il concetto di _stream_ come base per favorire i meccanismi di input ed output rispettivamente da e verso l'utente.
 
 ## Cosa è un file?
 
@@ -154,6 +154,9 @@ scanf("%d %f", &x, &y)
 ```
 
 leggerà un intero ed un decimale andandoli a mettere nelle variabili x ed y rispettivamente.
+
+!!!note "Nota"
+	In realtà, l'uso di `scanf` è sconsigliato. Per maggiori informazioni, [leggete qui](https://stackoverflow.com/questions/3744776/simple-c-scanf-does-not-work).
 
 ### fscanf
 

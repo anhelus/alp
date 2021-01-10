@@ -1,6 +1,6 @@
 # Programmare in Python
 
-## Note fondamentali
+## Note fondamentali sulla sintassi
 
 Abbiamo già accennato al fatto che il linguaggio Python sfrutta ampiamente il concetto di duck typing. Ecco alcuni altri concetti da tenere in considerazione dal punto di vista sintattico.
 
@@ -16,7 +16,7 @@ In Python:
 
 In C e C++, il termine di un'istruzione è contrassegnato dal carattere `;` (il punto e virgola); in Python, invece, è necessario andare a capo.
 
-### Ambito del codice
+### Ambito del codice e tabulazione
 
 In C e C++, l'ambito era definito mediante le parentesi graffe. In Python, invece, è definito mediante le tabulazioni; come regola generale, il codice indentato allo stesso livello di tabulazione appartiene allo stesso ambito.
 
@@ -160,13 +160,13 @@ Dal punto di vista semantico, il ciclo `while` è, a differenza del `for`, analo
 
 === "Python"
 	```python
-	>>> i = True
-	>>> while (i):
-	...     if randint(-5, 5) > 0:
-	...         print("Continuo!")
-	...     else:
-	...         print("Esco!")
-	...             i = False
+>>> i = True
+>>> while (i):
+...     if randint(-5, 5) > 0:
+...         print("Continuo!")
+...     else:
+...         print("Esco!")
+...             i = False
 	```
 
 === "C/C++"
