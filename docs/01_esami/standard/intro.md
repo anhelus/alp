@@ -12,7 +12,7 @@
 
 A meno di comunicazione contraria, gli studenti fuori corso possono sostenere **esclusivamente** questa modalità di esame. I quesiti saranno opportunamente ritarati tenendo in considerazione i programmi degli anni precedenti.
 
-## Date di appello (provvisorie)
+## Date di appello
 
 ### Anno Accademico 2020/2021
 

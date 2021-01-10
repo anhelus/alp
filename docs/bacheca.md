@@ -1,5 +1,24 @@
 # Avvisi
 
+## 10/01/2021
+
+### Calendario verifiche 11/01/2021
+
+| Orario | Gruppo              |
+| ------ | ------              |
+| 16:30  | MADDALENA - MARTINO |
+| 16:45  | POSA                |
+| 17:00  | SALLUSTIO           |
+| 17:15  | RESTA - CAPPELLANO  |
+| 17:30  | MIOLA               |
+| 17:45  | LEONETTI            |
+| 18:00  | CAPODIFERRO         |
+
+All'orario prestabilito, l'interessato riceverà una chiamata su Microsoft Teams da parte del docente.
+
+!!!note "Nota"
+	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili *nei 15 minuti antecedenti e successivi all'orario di convocazione segnalato*.
+
 ## 08/01/2021 - Note sulla consultazione seconda prova
 
 Si sottolinea che:

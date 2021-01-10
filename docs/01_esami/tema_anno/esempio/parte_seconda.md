@@ -22,22 +22,22 @@ Il programma è strutturato come segue:
 
 Segue una breve descrizione dei singoli file di intestazione.
 
-| File        | Descrizione                                           | Link al codice                                                                  |
-| ----------- | ----------------------------------------------------- | ------------------------------------------------------------------------------- |
-| `ioutils.h` | Contiene delle utility di supporto all'I/O.           | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/header/ioutils.h) |
-| `parsing.h` | Contiene delle utility di supporto al parsing.        | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/header/parsing.h) |
-| `sorting.h` | Contiene delle utility di supporto al selection sort. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/header/sorting.h) |
+| File        | Descrizione                                           | Link al codice                                                                                                        |
+| ----------- | ----------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| `ioutils.h` | Contiene delle utility di supporto all'I/O.           | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/ioutils.h) |
+| `parsing.h` | Contiene delle utility di supporto al parsing.        | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/parsing.h) |
+| `sorting.h` | Contiene delle utility di supporto al selection sort. | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/sorting.h) |
 
 ### File di origine (sorgenti)
 
 Segue una breve descrizione dei singoli file di origine.
 
-| File        | Descrizione                                                              | Link al codice                                                                    |
-| ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------- |
-| `ioutils.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/ioutils.c) |
-| `parsing.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/parsing.c) |
-| `sorting.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/sorting.c) |
-| `source.c`  | Contiene il programma principale.                                        | [:link:](../../../00_materiale/codice/prova_anno/linguaggio_c/sorgenti/source.c)  |
+| File        | Descrizione                                                              | Link al codice                                                                                                        |
+| ----------- | ------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------- |
+| `ioutils.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/ioutils.c) |
+| `parsing.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/parsing.c) |
+| `sorting.c` | Contiene l'implementazione delle funzioni descritte nell'header omonimo. | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/sorting.c) |
+| `source.c`  | Contiene il programma principale.                                        | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20C/source.c)  |
 
 ### File di risorse
 
@@ -74,22 +74,22 @@ Segue una breve descrizione dei singoli file di risorce.
 
 ## Funzionamento del programma
 
-1. Recarsi nella cartella dove è posizionato l'eseguibile fornito usando PowerShell o la Command Prompt.
+1.  Recarsi nella cartella dove è posizionato l'eseguibile fornito usando PowerShell o la Command Prompt.
 
         cd folder_selection_sort
 
-2. Lanciare il programma.
+2.  Lanciare il programma.
 
         SelectionSort.exe
 
-3. Il programma richiederà di scegliere tra la selezione di un file (mediante il carattere `f`) o quella della riga di comando (mediante il carattere `r`).
+3.  Il programma richiederà di scegliere tra la selezione di un file (mediante il carattere `f`) o quella della riga di comando (mediante il carattere `r`).
 
     a. Se viene selezionato il file, occorre inserire un nome valido. Il file dovrà essere inserito all'interno della cartella del programma, ed avere estensione `.txt`. All'interno del file dovrà già essere stato inserito un array.
     b. Se viene selezionata la riga di comando, occorre inserire un array.
 
     I formati validi sono del tipo `[el_1, el_2, ..., el_n]` oppure `{el_1, el_2, ..., el_n}`.
 
-4. Il programma provvederà a stampare a schermo il risultato dell'algoritmo di ordinamento.
+4.  Il programma provvederà a stampare a schermo il risultato dell'algoritmo di ordinamento.
 
 ### Esempio di funzionamento
 
