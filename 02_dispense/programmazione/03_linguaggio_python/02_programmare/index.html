@@ -10,7 +10,7 @@
       
       
       <link rel="shortcut icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.4">
     
     
       
@@ -18,10 +18,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3b61ea93.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.15aa0b43.min.css">
       
         
-        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.39b8e14a.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.75751829.min.css">
         
       
     
@@ -467,6 +467,19 @@
   <li class="md-nav__item">
     <a href="../../../../01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
       Parte Seconda
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../../../01_esami/tema_anno/esempio/parte_terza/" class="md-nav__link">
+      Parte Terza
     </a>
   </li>
 
@@ -1109,11 +1122,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#note-fondamentali" class="md-nav__link">
-    Note fondamentali
+  <a href="#note-fondamentali-sulla-sintassi" class="md-nav__link">
+    Note fondamentali sulla sintassi
   </a>
   
-    <nav class="md-nav" aria-label="Note fondamentali">
+    <nav class="md-nav" aria-label="Note fondamentali sulla sintassi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1131,8 +1144,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ambito-del-codice" class="md-nav__link">
-    Ambito del codice
+  <a href="#ambito-del-codice-e-tabulazione" class="md-nav__link">
+    Ambito del codice e tabulazione
   </a>
   
 </li>
@@ -1429,11 +1442,11 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#note-fondamentali" class="md-nav__link">
-    Note fondamentali
+  <a href="#note-fondamentali-sulla-sintassi" class="md-nav__link">
+    Note fondamentali sulla sintassi
   </a>
   
-    <nav class="md-nav" aria-label="Note fondamentali">
+    <nav class="md-nav" aria-label="Note fondamentali sulla sintassi">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1451,8 +1464,8 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ambito-del-codice" class="md-nav__link">
-    Ambito del codice
+  <a href="#ambito-del-codice-e-tabulazione" class="md-nav__link">
+    Ambito del codice e tabulazione
   </a>
   
 </li>
@@ -1590,7 +1603,7 @@
                 
                 
                 <h1 id="programmare-in-python">Programmare in Python<a class="headerlink" href="#programmare-in-python" title="Permanent link">&para;</a></h1>
-<h2 id="note-fondamentali">Note fondamentali<a class="headerlink" href="#note-fondamentali" title="Permanent link">&para;</a></h2>
+<h2 id="note-fondamentali-sulla-sintassi">Note fondamentali sulla sintassi<a class="headerlink" href="#note-fondamentali-sulla-sintassi" title="Permanent link">&para;</a></h2>
 <p>Abbiamo già accennato al fatto che il linguaggio Python sfrutta ampiamente il concetto di duck typing. Ecco alcuni altri concetti da tenere in considerazione dal punto di vista sintattico.</p>
 <h3 id="uso-delle-parentesi">Uso delle parentesi<a class="headerlink" href="#uso-delle-parentesi" title="Permanent link">&para;</a></h3>
 <p>In Python:</p>
@@ -1601,7 +1614,7 @@
 </ul>
 <h3 id="termine-delle-istruzioni">Termine delle istruzioni<a class="headerlink" href="#termine-delle-istruzioni" title="Permanent link">&para;</a></h3>
 <p>In C e C++, il termine di un'istruzione è contrassegnato dal carattere <code>;</code> (il punto e virgola); in Python, invece, è necessario andare a capo.</p>
-<h3 id="ambito-del-codice">Ambito del codice<a class="headerlink" href="#ambito-del-codice" title="Permanent link">&para;</a></h3>
+<h3 id="ambito-del-codice-e-tabulazione">Ambito del codice e tabulazione<a class="headerlink" href="#ambito-del-codice-e-tabulazione" title="Permanent link">&para;</a></h3>
 <p>In C e C++, l'ambito era definito mediante le parentesi graffe. In Python, invece, è definito mediante le tabulazioni; come regola generale, il codice indentato allo stesso livello di tabulazione appartiene allo stesso ambito.</p>
 <h2 id="programmazione-strutturata">Programmazione strutturata<a class="headerlink" href="#programmazione-strutturata" title="Permanent link">&para;</a></h2>
 <p>Abbiamo visto che in C ed in C++ la sintassi per l'utilizzo delle strutture di controllo è comune; questo ricordiamo essere un effetto legato al fatto che il C++ altro non è se non un "superset" di istruzioni del C.</p>
@@ -1718,17 +1731,25 @@
 </div>
 <h4 id="ciclo-while">Ciclo <code>while</code><a class="headerlink" href="#ciclo-while" title="Permanent link">&para;</a></h4>
 <p>Dal punto di vista semantico, il ciclo <code>while</code> è, a differenza del <code>for</code>, analogo alla controparte C/C++. Anche in questo caso, quello che cambia è la sintassi, come mostrato nel seguente blocco di codice:</p>
-<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Python</label><div class="tabbed-content">
-<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="p">):</span>
-<span class="o">...</span>     <span class="k">if</span> <span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-<span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Continuo!&quot;</span><span class="p">)</span>
-<span class="o">...</span>     <span class="k">else</span><span class="p">:</span>
-<span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esco!&quot;</span><span class="p">)</span>
-<span class="o">...</span>             <span class="n">i</span> <span class="o">=</span> <span class="kc">False</span>
-</code></pre></div>
+<div class="tabbed-set" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Python</label><div class="tabbed-content">
+<p>```python</p>
 </div>
-<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">C/C++</label><div class="tabbed-content">
+</div>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>i = True<br />
+while (i):<br />
+...     if randint(-5, 5) &gt; 0:<br />
+...         print("Continuo!")<br />
+...     else:<br />
+...         print("Esco!")<br />
+...             i = False<br />
+    ```</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<div class="tabbed-set" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">C/C++</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
 
@@ -1800,7 +1821,7 @@ Esco!
 </code></pre></div>
 <h4 id="istruzioni-break-e-continue">Istruzioni <code>break</code> e <code>continue</code><a class="headerlink" href="#istruzioni-break-e-continue" title="Permanent link">&para;</a></h4>
 <p>Le istruzioni <code>break</code> e <code>continue</code> sono analoghe a quelle implementate in linguaggio C/C++, e permettono, rispettivamente, di uscire dal ciclo o di saltare all'iterazione successiva. Ad esempio:</p>
-<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Python</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="p">(</span><span class="kc">True</span><span class="p">):</span>
 <span class="o">...</span>     <span class="k">if</span> <span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 <span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Continuo!&quot;</span><span class="p">)</span>
@@ -1810,7 +1831,7 @@ Esco!
 <span class="o">...</span>         <span class="k">break</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">C/C++</label><div class="tabbed-content">
+<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">C/C++</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
 
@@ -1983,8 +2004,8 @@ Esco!
       
     </div>
     
-      <script src="../../../../assets/javascripts/vendor.08c56446.min.js"></script>
-      <script src="../../../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      <script src="../../../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
