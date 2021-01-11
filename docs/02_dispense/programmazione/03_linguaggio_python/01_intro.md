@@ -1,5 +1,8 @@
 # Introduzione a Python
 
+!!!note "Nota"
+	Queste lezioni seguono il percorso tracciato dal tutorial ufficiale di Python. Di conseguenza, aderiscono alle licenze [PSF e Zero-Clause BSD License](https://docs.python.org/3/license.html).
+
 ## Premessa: Python e tipizzazione
 
 ### Tipizzazione dinamica

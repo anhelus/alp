@@ -1,10 +1,6 @@
 # Avvisi
 
-## 10/01/2021
-
-### Aggiornamento voti
-
-Sono state inserite le votazioni dei gruppi mancanti.
+## 11/01/2021
 
 ### Calendario verifiche 11/01/2021
 
@@ -17,11 +13,18 @@ Sono state inserite le votazioni dei gruppi mancanti.
 | 17:30  | MIOLA               |
 | 17:45  | LEONETTI            |
 | 18:00  | CAPODIFERRO         |
+| 18:15  | PISCITELLI          |
 
 All'orario prestabilito, l'interessato riceverà una chiamata su Microsoft Teams da parte del docente.
 
 !!!note "Nota"
-	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili *nei 15 minuti antecedenti e successivi all'orario di convocazione segnalato*.
+	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili *nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato*.
+
+## 10/01/2021
+
+### Aggiornamento voti
+
+Sono state inserite le votazioni dei gruppi mancanti.
 
 ### Materiale necessario per Python
 
@@ -49,4 +52,4 @@ A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_seconda_
 
 Per prenotarsi per la verifica e/o la consultazione della seconda prova, attenersi strettamente alle modalità indicate nella sezione "Consultazione seconda prova" della scheda delle [comunicazioni con il docente](./comunicazioni.md#consultazione-seconda-prova).
 
-Il calendario delle revisioni sarà stilato in base alle richieste pervenute **entro e non oltre** le ore 12:00 di lunedì 11/01/2020.
+Il calendario delle revisioni sarà stilato in base alle richieste pervenute **entro e non oltre** le ore 11:00 di lunedì 11/01/2020.

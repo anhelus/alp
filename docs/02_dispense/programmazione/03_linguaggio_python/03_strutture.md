@@ -1,105 +1,79 @@
-# Strutture dati in Python
+# Ancora sulle strutture dati in Python
 
-5.1. More on Lists
-The list data type has some more methods. Here are all of the methods of list objects:
+## Liste come stack e code
 
-list.append(x)
-Add an item to the end of the list. Equivalent to a[len(a):] = [x].
+Python mette a disposione un'estesa serie di metodi di accesso, inserimento e gestione delle liste, disponibili a [questo indirizzo](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists).
 
-list.extend(iterable)
-Extend the list by appending all the items from the iterable. Equivalent to a[len(a):] = iterable.
+E' interessante quindi notare come sia possibile costruire uno stack o una coda in maniera estremamente semplice; vediamo come.
 
-list.insert(i, x)
-Insert an item at a given position. The first argument is the index of the element before which to insert, so a.insert(0, x) inserts at the front of the list, and a.insert(len(a), x) is equivalent to a.append(x).
+### Stack
 
-list.remove(x)
-Remove the first item from the list whose value is equal to x. It raises a ValueError if there is no such item.
+Ricordiamo che uno stack adotta una strategia di accesso del tipo LIFO; ciò significa quindi che il primo elemento ad essere servito sarà quello in cima allo stack. Potremo quindi usare il metodo `append()` per inserire l'elemento in cima alla lista, ed il metodo `pop()` per recuperarlo.
 
-list.pop([i])
-Remove the item at the given position in the list, and return it. If no index is specified, a.pop() removes and returns the last item in the list. (The square brackets around the i in the method signature denote that the parameter is optional, not that you should type square brackets at that position. You will see this notation frequently in the Python Library Reference.)
+```python
+>>> s = [1,2,3]
+>>> s.append(4)
+>>> s
+[1, 2, 3, 4]
+>>> e = s.pop()
+>>> e
+4
+>>> s
+[1, 2, 3]
+```
 
-list.clear()
-Remove all items from the list. Equivalent to del a[:].
+### Coda
 
-list.index(x[, start[, end]])
-Return zero-based index in the list of the first item whose value is equal to x. Raises a ValueError if there is no such item.
+Per le code, che ricordiamo adottare una strategia del tipo FIFO, abbiamo due possibilità. La prima è quella di usare i metodi `insert()` e `pop()` come segue:
 
-The optional arguments start and end are interpreted as in the slice notation and are used to limit the search to a particular subsequence of the list. The returned index is computed relative to the beginning of the full sequence rather than the start argument.
+```python
+from time import time
 
-list.count(x)
-Return the number of times x appears in the list.
+def queue_classica(queue, pushed=1):
+	t1 = time()
+	queue.insert(0, pushed)
+	queue.pop(0)
+	t2 = time()
+	print(t2-t1)
+```
 
-list.sort(*, key=None, reverse=False)
-Sort the items of the list in place (the arguments can be used for sort customization, see sorted() for their explanation).
+Notiamo che stiamo usando `insert(0, pushed)` per inserire l'elemento `pushed` in cima alla coda, ed il metodo `pop(0)` per estrarre detto elemento.
 
-list.reverse()
-Reverse the elements of the list in place.
+Lo svantaggio principale di questo approccio sta nel fatto che le operazioni di `insert()` e di `pop()` possono essere rallentate dalla necessità di riallocare lo spazio occupato dagli elementi della lista.
 
-list.copy()
-Return a shallow copy of the list. Equivalent to a[:].
+Un altro modo è quello di usare una `deque`, definita nella libreria `collections`, ovvero una struttura Python progettata specificamente per "velocizzare" le operazioni di `append()` e `pop()` *da entrambi i capi* della struttura dati:
 
-An example that uses most of the list methods:
+```python
+from collections import deque
 
->>>
->>> fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
->>> fruits.count('apple')
-2
->>> fruits.count('tangerine')
-0
->>> fruits.index('banana')
-3
->>> fruits.index('banana', 4)  # Find next banana starting a position 4
-6
->>> fruits.reverse()
->>> fruits
-['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange']
->>> fruits.append('grape')
->>> fruits
-['banana', 'apple', 'kiwi', 'banana', 'pear', 'apple', 'orange', 'grape']
->>> fruits.sort()
->>> fruits
-['apple', 'apple', 'banana', 'banana', 'grape', 'kiwi', 'orange', 'pear']
->>> fruits.pop()
-'pear'
-You might have noticed that methods like insert, remove or sort that only modify the list have no return value printed – they return the default None. 1 This is a design principle for all mutable data structures in Python.
+def queue_con_deque(queue, pushed=1):
+	t1 = time()
+	queue.append(pushed)
+	queue.popleft()
+	t2 = time()
+	print(t2-t1)
+```
 
-Another thing you might notice is that not all data can be sorted or compared. For instance, [None, 'hello', 10] doesn’t sort because integers can’t be compared to strings and None can’t be compared to other types. Also, there are some types that don’t have a defined ordering relation. For example, 3+4j < 5+7j isn’t a valid comparison.
+Proviamo a chiamare le due funzioni (abbiamo già integrato nel corpo ciò che serve a cronometrarle):
 
-5.1.1. Using Lists as Stacks
-The list methods make it very easy to use a list as a stack, where the last element added is the first element retrieved (“last-in, first-out”). To add an item to the top of the stack, use append(). To retrieve an item from the top of the stack, use pop() without an explicit index. For example:
+```python
+queue = list(range(1000000000))
+queue_d = deque(queue)
 
->>>
->>> stack = [3, 4, 5]
->>> stack.append(6)
->>> stack.append(7)
->>> stack
-[3, 4, 5, 6, 7]
->>> stack.pop()
-7
->>> stack
-[3, 4, 5, 6]
->>> stack.pop()
-6
->>> stack.pop()
-5
->>> stack
-[3, 4]
-5.1.2. Using Lists as Queues
-It is also possible to use a list as a queue, where the first element added is the first element retrieved (“first-in, first-out”); however, lists are not efficient for this purpose. While appends and pops from the end of list are fast, doing inserts or pops from the beginning of a list is slow (because all of the other elements have to be shifted by one).
+queue_classica(queue)
+queue_con_deque(queue_d)
 
-To implement a queue, use collections.deque which was designed to have fast appends and pops from both ends. For example:
+>>> Tempo necessario con queue classica: 0.016004323959350586
+>>> Tempo necessario con deque: 0.0
+```
 
->>>
->>> from collections import deque
->>> queue = deque(["Eric", "John", "Michael"])
->>> queue.append("Terry")           # Terry arrives
->>> queue.append("Graham")          # Graham arrives
->>> queue.popleft()                 # The first to arrive now leaves
-'Eric'
->>> queue.popleft()                 # The second to arrive now leaves
-'John'
->>> queue                           # Remaining queue in order of arrival
-deque(['Michael', 'Terry', 'Graham'])
+Notiamo quindi che l'uso di una lista classica richiede un tempo maggiore rispetto all'uso di una deque.
+
+!!!note "Nota"
+	E' importante notare che stiamo considerando soltanto le operazioni su coda. Qualora considerassimo anche il cast di tipo, potremmo avere risultati differenti; è per questo consigliabile usare una struttura di tipo deque soltanto qualora ci siano *numerose* operazioni di `push()` e `pop()` dalla coda.
+
+## List comprehension
+
 5.1.3. List Comprehensions
 List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a subsequence of those elements that satisfy a certain condition.
 
@@ -233,25 +207,7 @@ In the real world, you should prefer built-in functions to complex flow statemen
 [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
 See Unpacking Argument Lists for details on the asterisk in this line.
 
-5.2. The del statement
-There is a way to remove an item from a list given its index instead of its value: the del statement. This differs from the pop() method which returns a value. The del statement can also be used to remove slices from a list or clear the entire list (which we did earlier by assignment of an empty list to the slice). For example:
-
->>>
->>> a = [-1, 1, 66.25, 333, 333, 1234.5]
->>> del a[0]
->>> a
-[1, 66.25, 333, 333, 1234.5]
->>> del a[2:4]
->>> a
-[1, 66.25, 1234.5]
->>> del a[:]
->>> a
-[]
-del can also be used to delete entire variables:
-
->>>
->>> del a
-Referencing the name a hereafter is an error (at least until another value is assigned to it). We’ll find other uses for del later.
+## Tuple
 
 5.3. Tuples and Sequences
 We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two examples of sequence data types (see Sequence Types — list, tuple, range). Since Python is an evolving language, other sequence data types may be added. There is also another standard sequence data type: the tuple.
@@ -303,6 +259,8 @@ The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the val
 >>>
 >>> x, y, z = t
 This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
+
+## Dizionari
 
 5.5. Dictionaries
 Another useful data type built into Python is the dictionary (see Mapping Types — dict). Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like append() and extend().
