@@ -74,236 +74,303 @@ Notiamo quindi che l'uso di una lista classica richiede un tempo maggiore rispet
 
 ## List comprehension
 
-5.1.3. List Comprehensions
-List comprehensions provide a concise way to create lists. Common applications are to make new lists where each element is the result of some operations applied to each member of another sequence or iterable, or to create a subsequence of those elements that satisfy a certain condition.
+Un modo "rapido" ed efficace per la creazione di una lista è dato dalla tecnica chiamata *list comprehension*, permettendo di sostituire (quasi completamente) l'uso del classico ciclo `for`.
 
-For example, assume we want to create a list of squares, like:
+La list comprehension "base" assume questa forma:
 
->>>
->>> squares = []
->>> for x in range(10):
-...     squares.append(x**2)
-...
->>> squares
+```python
+lista_output = [f(elemento) for elemento in lista_input]
+```
+
+In pratica, la lista di uscita (`lista_output`) sarà ottenuta applicando ad ogni `elemento` della lista di ingresso (`lista_input`) la funzione `f()`.
+
+La sintassi può essere estesa incorporando un'istruzione condizionale. Ad esempio, l'istruzione nella forma:
+
+```python
+lista_output_if = [f(elemento) for elemento in lista_input if condizione]
+```
+
+farà in modo che `f()` sia chiamata esclusivamente sugli elementi che soddisfano `condizione`. Invece:
+
+```python
+lista_output_if_else = [f(elemento) if condizione else g(elemento) for elemento in lista_input]
+```
+
+invocherà `f()` sugli elementi che soddisfano `condizione`, e la funzione `g()` su tutti gli elementi che non la soddisfano.
+
+!!!note "Nota"
+	Per essere precisi, più che `lista_input`, sarebbe opportuno parlare di *sequenza*, o *iterabile*, di input.
+
+Facciamo qualche esempio.
+
+### Esempio 1: estrazione dei nomi
+
+Supponiamo di voler selezionare tutti i nomi che iniziano con la lettera "B". Vediamo come farlo con un classico ciclo `for`:
+
+```python
+# Estrazione dei nomi che iniziano con "B" mediante ciclo for
+lista_nomi = ["Jax Teller", "Walter White", "Billy Butcher", "Luke Skywalker", "Bobby Singer", "Johnny Lawrence"]
+
+output = []
+for nome in lista_nomi:
+	if nomi[0] == "B":
+		output.append(nome)
+print(output)
+['Billy Butcher', 'Bobby Singer']
+```
+
+Vediamo ora una notazione più compatta usando una list comprehension:
+
+```python
+# Estrazione dei nomi che iniziano con "B" mediante list comprehension
+output = [nome for nome in lista_nomi if nome[0] == "B"]
+print(output)
+['Billy Butcher', 'Bobby Singer']
+```
+
+### Esempio 2: calcolo dei quadrati
+
+Possiamo usare una list comprehension anche per calcolare una lista di numeri passando una funzione precedentemente definita. Ad esempio, se volessimo calcolare una successione di quadrati, potremmo usare un ciclo `for`:
+
+```python
+# Estrazione dei quadrati mediante ciclo for
+def quadrato(numero):
+	return numero ** 2
+
+output = []
+for i in range(10):
+	output.append(quadrato(i))
+print(output)
 [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
-Note that this creates (or overwrites) a variable named x that still exists after the loop completes. We can calculate the list of squares without any side effects using:
+```
 
-squares = list(map(lambda x: x**2, range(10)))
-or, equivalently:
+```python
+# Estrazione dei quadrati mediante list comprehension
+output = [quadrato(i) for i in range(10)]
+print(output)
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+```
 
-squares = [x**2 for x in range(10)]
-which is more concise and readable.
+### Esempio 3: lista dei numeri pari e dispari
 
-A list comprehension consists of brackets containing an expression followed by a for clause, then zero or more for or if clauses. The result will be a new list resulting from evaluating the expression in the context of the for and if clauses which follow it. For example, this listcomp combines the elements of two lists if they are not equal:
+Vediamo infine come usare la list comprehension per caratterizzare tutti i numeri pari e dispari fino a 10. Partiamo, al solito, con il risultato ottenuto usando un ciclo `for`:
 
->>>
->>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
-[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
-and it’s equivalent to:
+```python
+# Lista dei pari e dispari mediante ciclo for
+output = []
+for i in range(1, 10):
+	if i % 2 == 0:
+		output.append("{} è pari".format(i))
+	else:
+		output.append("{} è dispari".format(i))
+print(output)
+['1 è dispari', '2 è pari', '3 è dispari', '4 è pari', '5 è dispari', '6 è pari', '7 è dispari', '8 è pari', '9 è dispari']
+```
 
->>>
->>> combs = []
->>> for x in [1,2,3]:
-...     for y in [3,1,4]:
-...         if x != y:
-...             combs.append((x, y))
-...
->>> combs
-[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
-Note how the order of the for and if statements is the same in both these snippets.
+```python
+# Lista dei pari e dispari mediante list comprehension
+output = ["{} è pari".format(i) if i % 2 == 0 else "{} è dispari".format(i) for i in range(1, 10)]
+print(output)
+['1 è dispari', '2 è pari', '3 è dispari', '4 è pari', '5 è dispari', '6 è pari', '7 è dispari', '8 è pari', '9 è dispari']
+```
 
-If the expression is a tuple (e.g. the (x, y) in the previous example), it must be parenthesized.
+#### Assignment expression
 
->>>
->>> vec = [-4, -2, 0, 2, 4]
+Le list comprehension sono pensate per favorire approcci puramente *iterativi*. E' pertanto abbastanza complesso (seppur non impossibile) implementare delle forme di ricorsione. Per ovviare a questo, è possibile usare una nuova funzionalità, introdotta a paritre da Python 3.8, e chiamata *assignment expression*.
 
->>> # create a new list with the values doubled
+Formalmente, l'assignment expression permette di *assegnare* e *restituire* un valore all'interno di una singola istruzione, mediante il cosiddetto *walrus operator*:
 
->>> [x*2 for x in vec]
-[-8, -4, 0, 4, 8]
+```python
+>>> print(enjoy := True)
+True
+```
 
->>> # filter the list to exclude negative numbers
+Usando in maniera opportuna questo operatore, possiamo usare una sorta di "approccio ricorsivo" alla list comprehension.
 
->>> [x for x in vec if x >= 0]
-[0, 2, 4]
+Partiamo definendo i valori di $F_0$ ed $F_1$ per la sequenza di Fibonacci:
 
->>> # apply a function to all the elements
+```python
+>>> fib = [0, 1]
+```
 
->>> [abs(x) for x in vec]
-[4, 2, 0, 2, 4]
+Vediamo adesso cosa accade se proviamo ad usare una assignment expression, mediante la quale restituiamo una lista che ha come *primo valore* quello al *secondo* indice della precedente, ed al *secondo* la somma espressa da Fibonacci:
 
->>> # call a method on each element
+```python
+>>> (fib := [fib[1], fib[0] + fib[1]])
+>>> # Fibonacci ha cambiato valore!
+>>> fib
+[1, 1]
+```
 
->>> freshfruit = ['  banana', '  loganberry ', 'passion fruit  ']
->>> [weapon.strip() for weapon in freshfruit]
-['banana', 'loganberry', 'passion fruit']
+A questo punto, possiamo selezionare soltanto il secondo valore della lista ottenuta mediante assignment expression. Per farlo, usiamo la condizione booleana `and`:
 
->>> # create a list of 2-tuples like (number, square)
+```python
+>>> (fib := [fib[1], fib[0] + fib[1]]) and fib[1]
+1
+```
 
->>> [(x, x**2) for x in range(6)]
-[(0, 0), (1, 1), (2, 4), (3, 9), (4, 16), (5, 25)]
+Possiamo quindi combinare tutto usando una list comprehension e *concatenando* i risultati che abbiamo ottenuto:
 
->>> # the tuple must be parenthesized, otherwise an error is raised
+```python
+>>> fib = [0, 1]
+>>> fib += [(fib := [fib[1], fib[0] + fib[1]]) and fib[1] for i in range(10)]
+>>> fib
+[0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+```
 
->>> [x, x**2 for x in range(6)]
-  File "<stdin>", line 1, in <module>
-    [x, x**2 for x in range(6)]
-               ^
-SyntaxError: invalid syntax
-
->>> # flatten a list using a listcomp with two 'for'
-
->>> vec = [[1,2,3], [4,5,6], [7,8,9]]
->>> [num for elem in vec for num in elem]
-[1, 2, 3, 4, 5, 6, 7, 8, 9]
-List comprehensions can contain complex expressions and nested functions:
-
->>>
->>> from math import pi
->>> [str(round(pi, i)) for i in range(1, 6)]
-['3.1', '3.14', '3.142', '3.1416', '3.14159']
-5.1.4. Nested List Comprehensions
-The initial expression in a list comprehension can be any arbitrary expression, including another list comprehension.
-
-Consider the following example of a 3x4 matrix implemented as a list of 3 lists of length 4:
-
->>>
->>> matrix = [
-...     [1, 2, 3, 4],
-...     [5, 6, 7, 8],
-...     [9, 10, 11, 12],
-... ]
-The following list comprehension will transpose rows and columns:
-
->>>
->>> [[row[i] for row in matrix] for i in range(4)]
-[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
-As we saw in the previous section, the nested listcomp is evaluated in the context of the for that follows it, so this example is equivalent to:
-
->>>
->>> transposed = []
->>> for i in range(4):
-...     transposed.append([row[i] for row in matrix])
-...
->>> transposed
-[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
-which, in turn, is the same as:
-
->>>
->>> transposed = []
->>> for i in range(4):
-...     # the following 3 lines implement the nested listcomp
-...     transposed_row = []
-...     for row in matrix:
-...         transposed_row.append(row[i])
-...     transposed.append(transposed_row)
-...
->>> transposed
-[[1, 5, 9], [2, 6, 10], [3, 7, 11], [4, 8, 12]]
-In the real world, you should prefer built-in functions to complex flow statements. The zip() function would do a great job for this use case:
-
->>>
->>> list(zip(*matrix))
-[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
-See Unpacking Argument Lists for details on the asterisk in this line.
+!!!note "Nota"
+	Esistono ovviamente altri approcci, alcuni dei quali sfruttano un modulo estremamente utile chiamato `itertools`.
 
 ## Tuple
 
-5.3. Tuples and Sequences
-We saw that lists and strings have many common properties, such as indexing and slicing operations. They are two examples of sequence data types (see Sequence Types — list, tuple, range). Since Python is an evolving language, other sequence data types may be added. There is also another standard sequence data type: the tuple.
+Le *tuple* sono il terzo tipo di sequenze "standard" disponibile in Python, e consistono di una serie di valori separati da una lettera.
+Ad esempio:
 
-A tuple consists of a number of values separated by commas, for instance:
+```python
+>>> tupla = ('hello', 'world', 12)
+>>> tupla
+('hello', 'world', 12)
+```
 
->>>
->>> t = 12345, 54321, 'hello!'
->>> t[0]
-12345
->>> t
-(12345, 54321, 'hello!')
+Così come per le liste, uno dei valori della tupla può essere a sua volta una tupla:
 
->>> # Tuples may be nested
+```python
+>>> tupla = ('hello', 'world', (1, 2))
+>>> tupla
+('hello', 'world', (1, 2))
+```
 
-... u = t, (1, 2, 3, 4, 5)
->>> u
-((12345, 54321, 'hello!'), (1, 2, 3, 4, 5))
+E' però importante sottolineare che, a differenza delle liste (e come le stringhe), le tuple sono *immutabili*.
 
->>> # Tuples are immutable
+!!!note "Nota"
+	Il fatto che le tuple siano immutabili non implica che non possano contenere al loro interno oggetti mutabili. Ad esempio:
+	> ```python
+ 	  >>> tupla = ('hello', 'world', [1, 2, 3])
+	  >>> tupla[2]
+	  [1, 2, 3]
+	  >>> tupla[2] = [1, 2, 3, 4] 				# errore!
+	  Traceback (most recent call last):
+	  File "<stdin>", line 1, in <module>
+	  TypeError: 'tuple' object does not support item assignment
+	  >>> tupla[2][0] = 2						# ok
+	  >>> tupla
+	  ('hello', 'world', [2, 2, 3])
+	  ```
 
-... t[0] = 88888
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: 'tuple' object does not support item assignment
-
->>> # but they can contain mutable objects
-
-... v = ([1, 2, 3], [3, 2, 1])
->>> v
-([1, 2, 3], [3, 2, 1])
-As you see, on output tuples are always enclosed in parentheses, so that nested tuples are interpreted correctly; they may be input with or without surrounding parentheses, although often parentheses are necessary anyway (if the tuple is part of a larger expression). It is not possible to assign to the individual items of a tuple, however it is possible to create tuples which contain mutable objects, such as lists.
-
-Though tuples may seem similar to lists, they are often used in different situations and for different purposes. Tuples are immutable, and usually contain a heterogeneous sequence of elements that are accessed via unpacking (see later in this section) or indexing (or even by attribute in the case of namedtuples). Lists are mutable, and their elements are usually homogeneous and are accessed by iterating over the list.
-
-A special problem is the construction of tuples containing 0 or 1 items: the syntax has some extra quirks to accommodate these. Empty tuples are constructed by an empty pair of parentheses; a tuple with one item is constructed by following a value with a comma (it is not sufficient to enclose a single value in parentheses). Ugly, but effective. For example:
-
->>>
->>> empty = ()
->>> singleton = 'hello',    # <-- note trailing comma
->>> len(empty)
-0
->>> len(singleton)
-1
->>> singleton
-('hello',)
-The statement t = 12345, 54321, 'hello!' is an example of tuple packing: the values 12345, 54321 and 'hello!' are packed together in a tuple. The reverse operation is also possible:
-
->>>
->>> x, y, z = t
-This is called, appropriately enough, sequence unpacking and works for any sequence on the right-hand side. Sequence unpacking requires that there are as many variables on the left side of the equals sign as there are elements in the sequence. Note that multiple assignment is really just a combination of tuple packing and sequence unpacking.
+!!!tip "Tuple e liste"
+	E' facile osservare come tuple e liste siano tra loro molto simili a livello sintattico, e differiscano principalmente per il fatto che le prime sono immutabili, mentre le seconde no. Idealmente, è bene usare le tuple per elementi di tipo eterogeneo, che devono essere esclusivamente acceduti, mentre le liste vanno usate per elementi omogenei, che devono essere modificati all'occorrenza.
 
 ## Dizionari
 
-5.5. Dictionaries
-Another useful data type built into Python is the dictionary (see Mapping Types — dict). Dictionaries are sometimes found in other languages as “associative memories” or “associative arrays”. Unlike sequences, which are indexed by a range of numbers, dictionaries are indexed by keys, which can be any immutable type; strings and numbers can always be keys. Tuples can be used as keys if they contain only strings, numbers, or tuples; if a tuple contains any mutable object either directly or indirectly, it cannot be used as a key. You can’t use lists as keys, since lists can be modified in place using index assignments, slice assignments, or methods like append() and extend().
+L'ultimo tipo di dati che vale la pena affrontare in Python sono i *dizionari*, che abbiamo già visto in C e C++ con il nome di [array associativi](../02_dispense/programmazione/02_linguaggio_cpp/09_container/#associative-container).
 
-It is best to think of a dictionary as a set of key: value pairs, with the requirement that the keys are unique (within one dictionary). A pair of braces creates an empty dictionary: {}. Placing a comma-separated list of key:value pairs within the braces adds initial key:value pairs to the dictionary; this is also the way dictionaries are written on output.
+I dizionari sono quindi indicizzati non mediante un classico indice numerico, ma mediante delle *chiavi*, che devono necessariamente essere immutabili (ovvero stringhe, numeri e tuple, che però al loro interno non possono contenere elementi mutabili come liste). Ad ogni chiave, come negli array associativi, corrisponde un determinato *valore*, che è arbitrario e può essere di qualsiasi tipo. Di conseguenza, un concetto comunemente associato ai dizionari è quello di *coppie chiave - valore*.
 
-The main operations on a dictionary are storing a value with some key and extracting the value given the key. It is also possible to delete a key:value pair with del. If you store using a key that is already in use, the old value associated with that key is forgotten. It is an error to extract a value using a non-existent key.
+Vediamo come creare un dizionario:
 
-Performing list(d) on a dictionary returns a list of all the keys used in the dictionary, in insertion order (if you want it sorted, just use sorted(d) instead). To check whether a single key is in the dictionary, use the in keyword.
+```python
+>>> dizionario = {}             			# creo un dizionario vuoto
+>>> dizionario
+{}
+```
 
-Here is a small example using a dictionary:
+Possiamo quindi inserire una serie di chiavi, associandovi un determinato valore:
 
+```python
+>>> dizionario['k'] = 'v'			# aggiungo la chiave "k" a cui è associato il valore "v"
+>>> dizionario
+{'k': 'v'}
+>>> dizionario[1] = 'n'				# aggiungo la chiave 1 a cui è associato il valore "n"
+>>> dizionario
+{'k': 'v', 1: 'n'}
+```
+
+Per accedere al valore associato ad una chiave:
+
+```python
+>>> dizionario[1]
+'n'
+```
+
+### Accedere a chiavi e valori
+
+E' possibile avere la lista delle chiavi di un dizionario mediante il metodo `keys()`, che restituisce un oggetto di tipo `dict_keys`, convertibile in lista:
+
+```python
+>>> chiavi = dizionario.keys()
+>>> chiavi
+dict_keys(['k', 1])					# non è una lista!
+>>> list(chiavi)
+['k', 1]							# è una lista!
+```
+
+In modo analogo, si può accedere a tutti i valori presenti nel dizionario mediante il metodo `values()`, che restituirà un oggetto di tipo `dict_values`, da convertire anch'esso in lista:
+
+```python
+>>> valori = dizionario.values()
+>>> valori
+dict_values(['k', 'n'])				# non è una lista!
+>>> list(valori)
+['k', 'n']							# è una lista!
+```
+
+Possiamo accedere anche a tutte le coppie chiave - valore mediante il metodo `items()`, che ci restituisce un oggetto di tipo `dict_items`, il quale può essere convertito in una lista di tuple:
+
+```python
+>>> coppie = dizionario.items()
+>>> coppie
+dict_items([('k', 'v'), (1, 'n')])	# non è una lista!
+>>> list(coppie)
+[('k', 'v'), (1, 'n')]				# lista di tuple!
 >>>
->>> tel = {'jack': 4098, 'sape': 4139}
->>> tel['guido'] = 4127
->>> tel
-{'jack': 4098, 'sape': 4139, 'guido': 4127}
->>> tel['jack']
-4098
->>> del tel['sape']
->>> tel['irv'] = 4127
->>> tel
-{'jack': 4098, 'guido': 4127, 'irv': 4127}
->>> list(tel)
-['jack', 'guido', 'irv']
->>> sorted(tel)
-['guido', 'irv', 'jack']
->>> 'guido' in tel
-True
->>> 'jack' not in tel
-False
-The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+```
 
->>>
->>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
-{'sape': 4139, 'guido': 4127, 'jack': 4098}
-In addition, dict comprehensions can be used to create dictionaries from arbitrary key and value expressions:
+### Creare un dizionario non vuoto
 
->>>
->>> {x: x**2 for x in (2, 4, 6)}
-{2: 4, 4: 16, 6: 36}
-When the keys are simple strings, it is sometimes easier to specify pairs using keyword arguments:
+Abbiamo diversi modi per creare un dizionario non vuoto. Il primo, più semplice, è quello di dichiarare nell'operatore `{}` le coppie chiave - valore iniziali:
 
->>>
->>> dict(sape=4139, guido=4127, jack=4098)
-{'sape': 4139, 'guido': 4127, 'jack': 4098}
+```python
+>>> dizionario = { 'k1': 1, 'k2': 2 }
+>>> dizionario
+{'k1': 1, 'k2': 2}
+```
+
+#### Uso della funzione `zip`
+
+Possiamo poi usare la funzione `zip` per creare un dizionario a partire da due liste:
+
+```python
+>>> chiavi = ['k1', 'k2']
+>>> valori = [1, 2]
+>>> dizionario = dict(zip(chiavi, valori))
+>>> dizionario
+{'k1': 1, 'k2': 2}
+```
+
+#### Dict comprehension
+
+Possiamo ottenere un dizionario a partire da un altro oggetto iterabile (sia esso una sequenza o un altro dizionario) usando la *dict comprehension*, che ha una forma del tipo:
+
+```python
+output = { chiave: valore for valore in iterabile }
+```
+
+Possiamo ad esempio creare un dizionario contenente come chiave i numeri da 1 a 9, e come valori corrispondenti i quadrati degli stessi:
+
+```python
+>>> quadrati = {str(i): i ** 2 for i in range(1, 10)}
+>>> quadrati
+{'1': 1, '2': 4, '3': 9, '4': 16, '5': 25, '6': 36, '7': 49, '8': 64, '9': 81}
+```
+
+Oppure, possiamo creare un dizionario a partire da un altro dizionario, usando le stesse regole condizionali viste con la list comprehension:
+
+```python
+>>> dizionario = {'Jax Teller': 27, 'Walter White': 52, 'Billy Butcher': 41, 'Luke Skywalker': 79, 'Bobby Singer': 68, 'Johnny Lawrence': 49}
+>>> vecchio_o_giovane = { k: 'vecchio' if v > 50 else 'giovane' for (k, v) in dizionario.items() }
+>>> vecchio_o_giovane
+{'Jax Teller': 'giovane', 'Walter White': 'vecchio', 'Billy Butcher': 'giovane', 'Luke Skywalker': 'vecchio', 'Bobby Singer': 'vecchio', 'Johnny Lawrence': 'giovane'}
+```
+
+!!!note "Nota"
+	Per iterare sul dizionario originale, usiamo il metodo `items()` che, come visto in precedenza, ci restituisce un oggetto di tipo `dict_items` il quale è, per l'appunto, iterabile.
