@@ -74,22 +74,22 @@ Segue una breve descrizione dei singoli file di risorce.
 
 ## Funzionamento del programma
 
-1.  Recarsi nella cartella dove è posizionato l'eseguibile fornito usando PowerShell o la Command Prompt.
+1. Recarsi nella cartella dove è posizionato l'eseguibile fornito usando PowerShell o la Command Prompt.
 
         cd folder_selection_sort
 
-2.  Lanciare il programma.
+2. Lanciare il programma.
 
         SelectionSort.exe
 
-3.  Il programma richiederà di scegliere tra la selezione di un file (mediante il carattere `f`) o quella della riga di comando (mediante il carattere `r`).
+3. Il programma richiederà di scegliere tra la selezione di un file (mediante il carattere `f`) o quella della riga di comando (mediante il carattere `r`).
 
     a. Se viene selezionato il file, occorre inserire un nome valido. Il file dovrà essere inserito all'interno della cartella del programma, ed avere estensione `.txt`. All'interno del file dovrà già essere stato inserito un array.
     b. Se viene selezionata la riga di comando, occorre inserire un array.
 
     I formati validi sono del tipo `[el_1, el_2, ..., el_n]` oppure `{el_1, el_2, ..., el_n}`.
 
-4.  Il programma provvederà a stampare a schermo il risultato dell'algoritmo di ordinamento.
+4. Il programma provvederà a stampare a schermo il risultato dell'algoritmo di ordinamento.
 
 ### Esempio di funzionamento
 
@@ -119,4 +119,4 @@ Ecco un esempio di file di input.
 [10, 4, 3, 2]
 ```
 
-Il file andrà posizionato nella stessa cartella dell'eseguibile.s
+Il file andrà posizionato nella stessa cartella dell'eseguibile.

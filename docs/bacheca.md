@@ -1,5 +1,9 @@
 # Avvisi
 
+## 13/01/2021 - Risultati definitivi seconda prova
+
+I risultati disponibili a [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_seconda_prova.pdf), e riportati nella sezione **File > Seconda prova** del canale **Temi anno** di Microsoft Teams, sono da considerarsi definitivi per ciò che concerne la seconda prova.
+
 ## 11/01/2021
 
 ### Calendario verifiche 11/01/2021
