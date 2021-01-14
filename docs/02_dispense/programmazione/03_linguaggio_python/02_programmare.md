@@ -160,13 +160,13 @@ Dal punto di vista semantico, il ciclo `while` è, a differenza del `for`, analo
 
 === "Python"
 	```python
->>> i = True
->>> while (i):
-...     if randint(-5, 5) > 0:
-...         print("Continuo!")
-...     else:
-...         print("Esco!")
-...             i = False
+	>>> i = True
+	>>> while (i):
+	...     if randint(-5, 5) > 0:
+	...         print("Continuo!")
+	...     else:
+	...         print("Esco!")
+	...             i = False
 	```
 
 === "C/C++"

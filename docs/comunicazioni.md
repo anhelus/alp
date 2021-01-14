@@ -99,10 +99,12 @@ Nel caso si reputi opportuno e/o necessario condividere un link a Google Drive, 
 * un file, in formato **PDF/A**, contenente la documentazione richiesta per la prova, e denominato *Documentazione Traccia NUMERO_TRACCIA - NUMERO_PROVA*;
 * un file, in formato **PDF/A**, contenente una copia carbone del codice sorgente, e denominato *Codice Traccia NUMERO_TRACCIA - NUMERO_PROVA*;
 * **una ed una sola** tra queste quattro alternative:
-  * la solution di Visual Studio Community utilizzata per sviluppare il software, comprensiva del codice sorgente **esattamente come salvata sul proprio file system**;
-  * il codice sorgente (ovvero tutti i file con estensione .c e .h necessari alla compilazione del codice);
-  * l'eseguibile da sottoporre a valutazione;
-  * un link al servizio esterno [repl.it](https://repl.it) (o simile) contenente il software da valutare.
+  	* la solution di Visual Studio Community utilizzata per sviluppare il software, comprensiva del codice sorgente **esattamente come salvata sul proprio file system**;
+  	* il codice sorgente (ovvero tutti i file con estensione .c e .h necessari alla compilazione del codice);
+  	* l'eseguibile da sottoporre a valutazione;
+  	* un link al servizio esterno [repl.it](https://repl.it) (o simile) contenente il software da valutare.
+
+Si consiglia inoltre di inserire un file di testo di esempio per le procedure di I/O.
 
 Si noti che:
 
@@ -116,10 +118,12 @@ Nel caso si reputi opportuno e/o necessario mandare la prova in allegato, occorr
 * un file, in formato **PDF/A**, contenente la documentazione richiesta per la prova, e denominato *Documentazione Traccia NUMERO_TRACCIA - NUMERO_PROVA*;
 * un file, in formato **PDF/A**, contenente una copia carbone del codice sorgente, e denominato *Codice Traccia NUMERO_TRACCIA - NUMERO_PROVA*;
 * **una ed una sola** tra queste quattro alternative:
-  * la solution di Visual Studio Community utilizzata per sviluppare il software, comprensiva del codice sorgente **esattamente come salvata sul proprio file system**;
-  * il codice sorgente (ovvero tutti i file con estensione .c e .h necessari alla compilazione del codice);
-  * l'eseguibile da sottoporre a valutazione;
-  * un link al servizio esterno [repl.it](https://repl.it) (o simile) contenente il software da valutare.
+  	* la solution di Visual Studio Community utilizzata per sviluppare il software, comprensiva del codice sorgente **esattamente come salvata sul proprio file system**;
+  	* il codice sorgente (ovvero tutti i file con estensione .c e .h necessari alla compilazione del codice);
+  	* l'eseguibile da sottoporre a valutazione;
+  	* un link al servizio esterno [repl.it](https://repl.it) (o simile) contenente il software da valutare.
+
+Si consiglia inoltre di inserire un file di testo di esempio per le procedure di I/O.
 
 Si noti che:
 
@@ -146,6 +150,8 @@ Nel caso si reputi opportuno e/o necessario condividere un link ad un servizio d
 * un file, in formato **PDF/A**, contenente una copia carbone del codice sorgente, e denominato *Codice Traccia NUMERO_TRACCIA - QUARTA_PROVA*;
 * il file o la cartella Python da sottoporre a valutazione.
 
+Si consiglia inoltre di inserire un file di testo di esempio per le procedure di I/O.
+
 Si noti che:
 
 1. **non saranno considerati ulteriori file e/o file differenti. La mancanza di questi tre file invalida la prova**;
@@ -158,6 +164,8 @@ Nel caso si reputi opportuno e/o necessario mandare la prova in allegato, occorr
 * un file, in formato **PDF/A**, contenente la documentazione richiesta per la prova, e denominato *Documentazione Traccia NUMERO_TRACCIA - QUARTA_PROVA*;
 * un file, in formato **PDF/A**, contenente una copia carbone del codice sorgente, e denominato *Codice Traccia NUMERO_TRACCIA - QUARTA_PROVA*;
 * il file o la cartella Python da sottoporre a valutazione.
+
+Si consiglia inoltre di inserire un file di testo di esempio per le procedure di I/O.
 
 Si noti che:
 

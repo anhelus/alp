@@ -12,6 +12,9 @@
 
 A meno di comunicazione contraria, gli studenti fuori corso possono sostenere **esclusivamente** questa modalità di esame. I quesiti saranno opportunamente ritarati tenendo in considerazione i programmi degli anni precedenti.
 
+!!!note "Nota"
+	Si raccomanda di *prenotarsi per l'esame* mediante le opportune modalità e di *munirsi di documento di riconoscimento* (carta di identità). In caso contrario, non sarà possibile sostenere l'esame.
+
 ## Date di appello
 
 ### Anno Accademico 2020/2021

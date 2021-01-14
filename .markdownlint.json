@@ -4,5 +4,6 @@
 	"no-hard-tabs": false,
 	"no-space-in-code": false,
 	"no-duplicate-header": false,
-	"code-block-style": false
+	"code-block-style": false,
+	"ul-indent": false
 }
