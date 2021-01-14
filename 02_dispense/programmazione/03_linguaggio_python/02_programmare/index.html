@@ -1757,25 +1757,17 @@
 </div>
 <h4 id="ciclo-while">Ciclo <code>while</code><a class="headerlink" href="#ciclo-while" title="Permanent link">&para;</a></h4>
 <p>Dal punto di vista semantico, il ciclo <code>while</code> è, a differenza del <code>for</code>, analogo alla controparte C/C++. Anche in questo caso, quello che cambia è la sintassi, come mostrato nel seguente blocco di codice:</p>
-<div class="tabbed-set" data-tabs="4:1"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Python</label><div class="tabbed-content">
-<p>```python</p>
+<div class="tabbed-set" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><label for="__tabbed_4_1">Python</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">i</span> <span class="o">=</span> <span class="kc">True</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span><span class="p">):</span>
+<span class="o">...</span>     <span class="k">if</span> <span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Continuo!&quot;</span><span class="p">)</span>
+<span class="o">...</span>     <span class="k">else</span><span class="p">:</span>
+<span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Esco!&quot;</span><span class="p">)</span>
+<span class="o">...</span>             <span class="n">i</span> <span class="o">=</span> <span class="kc">False</span>
+</code></pre></div>
 </div>
-</div>
-<blockquote>
-<blockquote>
-<blockquote>
-<p>i = True<br />
-while (i):<br />
-...     if randint(-5, 5) &gt; 0:<br />
-...         print("Continuo!")<br />
-...     else:<br />
-...         print("Esco!")<br />
-...             i = False<br />
-    ```</p>
-</blockquote>
-</blockquote>
-</blockquote>
-<div class="tabbed-set" data-tabs="5:1"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">C/C++</label><div class="tabbed-content">
+<input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><label for="__tabbed_4_2">C/C++</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
 
@@ -1847,7 +1839,7 @@ Esco!
 </code></pre></div>
 <h4 id="istruzioni-break-e-continue">Istruzioni <code>break</code> e <code>continue</code><a class="headerlink" href="#istruzioni-break-e-continue" title="Permanent link">&para;</a></h4>
 <p>Le istruzioni <code>break</code> e <code>continue</code> sono analoghe a quelle implementate in linguaggio C/C++, e permettono, rispettivamente, di uscire dal ciclo o di saltare all'iterazione successiva. Ad esempio:</p>
-<div class="tabbed-set" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><label for="__tabbed_6_1">Python</label><div class="tabbed-content">
+<div class="tabbed-set" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><label for="__tabbed_5_1">Python</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="k">while</span> <span class="p">(</span><span class="kc">True</span><span class="p">):</span>
 <span class="o">...</span>     <span class="k">if</span> <span class="n">randint</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
 <span class="o">...</span>         <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Continuo!&quot;</span><span class="p">)</span>
@@ -1857,7 +1849,7 @@ Esco!
 <span class="o">...</span>         <span class="k">break</span>
 </code></pre></div>
 </div>
-<input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><label for="__tabbed_6_2">C/C++</label><div class="tabbed-content">
+<input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><label for="__tabbed_5_2">C/C++</label><div class="tabbed-content">
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cstdlib&gt;</span><span class="cp"></span>
 
