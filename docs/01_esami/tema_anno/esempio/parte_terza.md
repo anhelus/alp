@@ -49,7 +49,7 @@ Segue una breve descrizione dei singoli file di risorce.
 | ----------- | ---------------------------------------------- |
 | `array.txt` | Contiene un esempio per l'input di un vettore. |
 
-## Descrizione sintetica dei file
+## Descrizione dettagliata dei file
 
 ### `ioutils`
 

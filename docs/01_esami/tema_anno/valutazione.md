@@ -73,3 +73,20 @@ I seguenti bonus sono applicati nella valutazione complessiva degli esoneri.
 
 !!!note "Nota sulla correzione del codice"
 	Le verifiche della seconda, terza e quarta parte del tema d'anno prevedono prevalentemente il test di funzionamento del programma, con conseguente evidenziazione di eventuali bug o feature mancanti, che vanno a concorrere alla valutazione secondo le modalità esplicitate sul sito del corso. Una verifica stretta del codice non sarà effettuata, se non in situazioni eccezionali ed individuate discrezionalmente.
+
+## Voto finale e verbalizzazione
+
+Al termine delle quattro prove, sarà assegnato a ciascun gruppo un voto parziale, assieme ad una scheda di valutazione (strettamente personale). Tale voto sarà dato dalla media dei voti ottenuti nelle quattro prove. Gli studenti che intendessero verbalizzarlo, dovranno iscriversi ad una tra le date d'appello successive mediante le modalità standard riportate da Esse3.
+
+Il giorno dell'appello, gli studenti potranno:
+
+- accettare il voto degli esoneri;
+- richiedere una valutazione orale integrativa.
+
+La valutazione orale integrativa è **strettamente personale**: ciò significa i membri di un gruppo dovranno necessariamente richiederla (e sottoporvisi) separatamente. Le modalità e le date per l'orale saranno stabilite di volta in volta in base a richieste pervenute e disponibilità del docente.
+
+Si noti che la valutazione orale integrativa per il tema d'anno potrà far oscillare il voto di un massimo di **tre punti**, **sia in positivo, sia in negativo**.
+
+### Conseguimento della lode
+
+In casi eccezionali, è possibile assegnare la lode agli studenti meritevoli. Per ottenerla, sarà necessario sottoporsi alla valutazione orale integrativa secondo le modalità prima indicate.

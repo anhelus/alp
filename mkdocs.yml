@@ -6,7 +6,8 @@ nav:
       - Comunicare col docente: comunicazioni.md
       - Bacheca avvisi: bacheca.md
       - Esami:
-          - Modalità standard: 01_esami/standard/intro.md
+          - Modalità standard:
+              - Introduzione: 01_esami/standard/intro.md
           - Tema d'anno:
               - Introduzione: 01_esami/tema_anno/intro.md
               - Valutazione: 01_esami/tema_anno/valutazione.md
@@ -20,6 +21,7 @@ nav:
                   - Parte Prima: 01_esami/tema_anno/esempio/parte_prima.md
                   - Parte Seconda: 01_esami/tema_anno/esempio/parte_seconda.md
                   - Parte Terza: 01_esami/tema_anno/esempio/parte_terza.md
+                  - Parte Quarta: 01_esami/tema_anno/esempio/parte_quarta.md
   - Dispense:
       - Slides proiettate a lezione: 00_materiale/programma.md
       - Teoria:
@@ -69,12 +71,15 @@ nav:
               - 02 - Programmare in Python: 02_dispense/programmazione/03_linguaggio_python/02_programmare.md
               - 03 - Strutture Dati: 02_dispense/programmazione/03_linguaggio_python/03_strutture.md
               - 04 - Moduli: 02_dispense/programmazione/03_linguaggio_python/04_moduli.md
+              - 05 - Classi e concetti avanzati: 02_dispense/programmazione/03_linguaggio_python/05_classi.md
+              - 06 - I/O in Python: 02_dispense/programmazione/03_linguaggio_python/06_file.md
+              - 07 - Cenni ai test: 02_dispense/programmazione/03_linguaggio_python/07_test.md
+              - 08 - Cenni a NumPy: 02_dispense/programmazione/03_linguaggio_python/08_numpy.md
+  - Esercizi: 01_esami/standard/esercizi.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md
           - Visual Studio Community: 03_appendici/configurazioni/b_vs_community_guide.md
-  - Esercizi:
-      - Linguaggio C: 04_esercizi/linguaggio_c.md
 
 theme:
   name: material

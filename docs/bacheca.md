@@ -1,6 +1,12 @@
 # Avvisi
 
-## 13/01/2021 - Risultati definitivi seconda prova
+## 17/01/2021
+
+Per gli studenti interessati, saranno a breve resi disponibili [qui](./01_esami/standard/esercizi.md) alcuni esercizi "sulla scia" di quelli proponibili per la valutazione della parte pratica durante l'esame scritto.
+
+## 13/01/2021
+
+### Risultati definitivi seconda prova
 
 I risultati disponibili a [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_seconda_prova.pdf), e riportati nella sezione **File > Seconda prova** del canale **Temi anno** di Microsoft Teams, sono da considerarsi definitivi per ciò che concerne la seconda prova.
 
@@ -8,21 +14,28 @@ I risultati disponibili a [questo indirizzo](./01_esami/tema_anno/2020-2021/docu
 
 ### Calendario verifiche 11/01/2021
 
-| Orario | Gruppo              |
-| ------ | ------              |
-| 16:30  | MADDALENA - MARTINO |
-| 16:45  | POSA                |
-| 17:00  | SALLUSTIO           |
-| 17:15  | RESTA - CAPPELLANO  |
-| 17:30  | MIOLA               |
-| 17:45  | LEONETTI            |
-| 18:00  | CAPODIFERRO         |
-| 18:15  | PISCITELLI          |
+| Orario | Gruppo                                   |
+| ------ | ---------------------------------------- |
+| 16:30  | MADDALENA - MARTINO                      |
+| 16:45  | POSA                                     |
+| 17:00  | SALLUSTIO                                |
+| 17:15  | RESTA - CAPPELLANO                       |
+| 17:30  | MIOLA                                    |
+| 17:45  | LEONETTI                                 |
+| 18:00  | CAPODIFERRO                              |
+| 18:15  | <del>PISCITELLI</del> (mancata risposta) |
+| 18:30  | ROSELLI - GADALETA                       |
+
+### Calendario verifiche 18/01/2021
+
+| Orario | Gruppo |
+| ------ | ------ |
+| 16:30  | BUCCI  |
 
 All'orario prestabilito, l'interessato riceverà una chiamata su Microsoft Teams da parte del docente.
 
 !!!note "Nota"
-	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili *nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato*.
+	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
 
 ## 10/01/2021
 
@@ -38,9 +51,9 @@ Per il corretto svolgimento delle prossime lezioni è necessario installare l'in
 
 Si sottolinea che:
 
-* durante la consultazione della seconda prova si potrà, *opzionalmente*, rispondere ad alcune domande, volte ad effettuare delle verifiche di natura integrativa rispetto alla prova stessa. Ciò significa che il voto attualmente riportato *non* è definitivo, ma potrà essere suscettibile di modifiche a seguito dell'(*eventuale*) verifica orale;
-* tale verifica è possibile per *tutti* quelli che si prenoteranno per la consultazione;
-* gli orari indicati per la consultazione potranno essere estesi in base al numero di richieste pervenute entro i termini stabiliti.
+- durante la consultazione della seconda prova si potrà, _opzionalmente_, rispondere ad alcune domande, volte ad effettuare delle verifiche di natura integrativa rispetto alla prova stessa. Ciò significa che il voto attualmente riportato _non_ è definitivo, ma potrà essere suscettibile di modifiche a seguito dell'(_eventuale_) verifica orale;
+- tale verifica è possibile per _tutti_ quelli che si prenoteranno per la consultazione;
+- gli orari indicati per la consultazione potranno essere estesi in base al numero di richieste pervenute entro i termini stabiliti.
 
 ## 07/01/2021 - Risultati seconda prova
 
@@ -50,7 +63,7 @@ A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_seconda_
 	I risultati sono relativi soltanto ai gruppi dei quali risulta essere pervenuta la seconda prova. In caso di discrepanze, è necessario inviare una mail secondo le modalità illustrate nella sezione "Comunicazioni relative a temi d'anno" della scheda delle [comunicazioni con il docente](./comunicazioni.md#comunicazioni-relative-a-temi-danno).
 
 !!!note "Parzialità dei risultati"
-	I risultati mostrati sono *definitivi*, a meno dei gruppi per i quali è necessaria o consigliata una verifica. Nel caso di verifica consigliata, questa è opzionale e, qualora si opti per non farla, diventa definitiva a partire dalle ore 12:00 di lunedì 11/01/2020. Nel caso di verifica necessaria, è obbligatorio prenotarsi, pena la perdita del tema d'anno.
+	I risultati mostrati sono _definitivi_, a meno dei gruppi per i quali è necessaria o consigliata una verifica. Nel caso di verifica consigliata, questa è opzionale e, qualora si opti per non farla, diventa definitiva a partire dalle ore 12:00 di lunedì 11/01/2020. Nel caso di verifica necessaria, è obbligatorio prenotarsi, pena la perdita del tema d'anno.
 
 ### Consultazione seconda prova
 

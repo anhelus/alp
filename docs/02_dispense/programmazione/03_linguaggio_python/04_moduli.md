@@ -106,5 +106,16 @@ Python ha diversi moduli appartenenti ad una libreria standard, analogamente a q
 
 Ovviamente, fare una lista esaustiva è pressoché inutile, oltre che ridondante, per cui si rimanda alla [Python Library Reference](https://docs.python.org/3/library/).
 
-!!!note "Breve cenno ai package"
-	Esiste un ulteriore livello nella struttura di un programma (o libreria) Python, ovvero quello definito dai *package*. In breve, questi sono dei veri e propri "contenitori" di moduli, che permettono di raggruppare moduli tra loro coerenti, di modo da facilitarne successivamente l'accesso ed il recupero. Nella pratica, i package sono delle cartelle sul file system, contenenti al loro interno una serie di moduli ed un file (spesso lasciato vuoto) chiamato `__init__.py`, che permette all'interprete di riconoscere quella cartella come package.
+## Package
+
+Chiudiamo con un accenno ad un ulteriore livello possibile nella struttura dei file di un programma (o libreria) Python, ovvero quello definito mediante i *package*.
+
+In breve, questi sono dei veri e propri "contenitori" di moduli, che permettono di raggruppare moduli tra loro coerenti, di modo da facilitarne successivamente l'accesso ed il recupero; nella pratica, i package sono delle cartelle sul file system, contenenti al loro interno una serie di moduli ed un file (spesso lasciato vuoto) chiamato `__init__.py`, che permette all'interprete di riconoscere quella cartella come package.
+
+L'accesso ad un modulo interno ad un package avviene modificando la direttiva `import` come segue:
+
+```python
+import nome_package.nome_modulo
+# oppure...
+from nome_package.nome_modulo import nome_funzione
+```

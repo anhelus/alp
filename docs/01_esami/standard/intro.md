@@ -10,10 +10,10 @@
 
 ## Studenti fuori corso
 
-A meno di comunicazione contraria, gli studenti fuori corso possono sostenere **esclusivamente** questa modalità di esame. I quesiti saranno opportunamente ritarati tenendo in considerazione i programmi degli anni precedenti.
+Gli studenti fuori corso possono sostenere **esclusivamente** questa modalità di esame. I quesiti saranno opportunamente ritarati tenendo in considerazione i programmi degli anni precedenti.
 
 !!!note "Nota"
-	Si raccomanda di *prenotarsi per l'esame* mediante le opportune modalità e di *munirsi di documento di riconoscimento* (carta di identità). In caso contrario, non sarà possibile sostenere l'esame.
+	Si raccomanda di _prenotarsi per l'esame_ mediante le opportune modalità e di _munirsi di documento di riconoscimento_ (carta di identità). In caso contrario, non sarà possibile sostenere l'esame.
 
 ## Date di appello
 
@@ -31,3 +31,24 @@ A meno di comunicazione contraria, gli studenti fuori corso possono sostenere **
 | 01/09/2021 | 09:00-10:30 | N.D.    |
 | 20/09/2021 | 09:00-10:30 | N.D.    |
 | 17/11/2021 | 15:00-16:30 | N.D.    |
+
+## Tracce di appello (risolte)
+
+| Data       | Traccia | Risoluzione |
+| ---------- | ------- | ----------- |
+| 25/01/2021 | N.D.    | N.D.        |
+| 09/02/2021 | N.D.    | N.D.        |
+| 25/02/2021 | N.D.    | N.D.        |
+| 20/04/2021 | N.D.    | N.D.        |
+| 25/06/2021 | N.D.    | N.D.        |
+| 12/07/2021 | N.D.    | N.D.        |
+| 29/07/2021 | N.D.    | N.D.        |
+| 01/09/2021 | N.D.    | N.D.        |
+| 20/09/2021 | N.D.    | N.D.        |
+| 17/11/2021 | N.D.    | N.D.        |
+
+## Prepararsi all'appello
+
+Per prepararsi a sostenere l'appello, è necessario e sufficiente il materiale presente sul sito del corso, che è da considerarsi comunque come integrativo e complementare rispetto alle lezioni frontali.
+
+Sono inoltre disponibili a [questo indirizzo](./esercizi.md) alcuni esercizi preparatori.
