@@ -2,7 +2,7 @@
 
 ## Struttura del codice
 
-Il programma è strutturato come segue:
+Di seguito, la struttura su file system del codice sorgente.
 
 ```
 |---File di intestazione
@@ -188,32 +188,5 @@ In questo file è definito il namespace `sorting`, contenente le seguenti funzio
 
 4. Il programma provvederà a stampare a schermo il risultato dell'algoritmo di ordinamento.
 
-### Esempio di funzionamento
-
-```shell
-$ cd folder_selection_sort
-$ SelectionSort.exe
-% Enter 'f' to use a text file, or 'r' to use shell. 			-> r
-$ Please enter array values:									-> [10, 4, 3, 2]
-$ Sorted vector:
-$ 2       3       4       10
-```
-
-```shell
-$ cd folder_selection_sort
-$ SelectionSort.exe
-% Enter 'f' to use a text file, or 'r' to use shell. 			-> f
-$ Please enter file name: 	 									-> array.txt
-$ Sorted vector:
-$ 1       2       3       3       4       7       8       12      51      66
-```
-
-### File di input
-
-Ecco un esempio di file di input.
-
-```shell
-[10, 4, 3, 2]
-```
-
-Il file andrà posizionato nella stessa cartella dell'eseguibile.
+!!!note "Nota"
+	Si omette, per brevità, la parte relativa all'esempio di funzionamento ed al file da passare in input, in quanto sostanzialmente identica a quella proposta per la seconda parte.

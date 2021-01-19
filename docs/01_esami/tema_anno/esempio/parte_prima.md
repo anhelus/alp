@@ -1,4 +1,4 @@
-## Descrizione del problema
+# Descrizione del problema
 
 Il problema concerne l'utilizzo della tecnica di selection sort per ordinare un vettore ad $n$ elementi.
 
