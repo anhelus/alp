@@ -23,6 +23,7 @@ Segue una sintetica descrizione dei package presenti sull'applicazione.
 | ------------ | ------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
 | `algorithms` | Contiene tutti gli algoritmi utilizzati dal programma. | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/tree/master/Tema%20di%20esempio/Linguaggio%20Python/app/algorithms) |
 | `utils`      | Contiene le utility utilizzate dal programma.          | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/tree/master/Tema%20di%20esempio/Linguaggio%20Python/app/utils)      |
+| `run.py` | Script di esecuzione del programma | [:link:](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Tema%20di%20esempio/Linguaggio%20Python/app/run.py) |
 
 ## Moduli
 
