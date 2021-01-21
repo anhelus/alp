@@ -53,6 +53,9 @@ L'esame si svolge in **presenza**, fino al raggiungimento della capacità progra
 
 E' possibile tuttavia concordare, secondo le direttive indicate dall'Università, e reperibili [qui](https://www.uniba.it/coronavirus), la modalità di svolgimento online. Questa **non** è attiva di default, e va concordata secondo le modalità [qui](../../comunicazioni.md) descritte.
 
+!!!note "Nota"
+	Tale modalità è valida **esclusivamente** per la data del 25/01/2021. Seguiranno aggiornamenti in base alle ulteriori disposizioni dell'Ateneo.
+
 ## Prepararsi all'appello
 
 Per prepararsi a sostenere l'appello, è necessario e sufficiente il materiale presente sul sito del corso, che è da considerarsi comunque come integrativo e complementare rispetto alle lezioni frontali.
