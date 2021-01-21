@@ -76,11 +76,14 @@ I seguenti bonus sono applicati nella valutazione complessiva degli esoneri.
 
 ## Voto finale e verbalizzazione
 
-Al termine delle quattro prove, sarà assegnato a ciascun gruppo un voto parziale, assieme ad una scheda di valutazione (strettamente personale). Tale voto sarà dato dalla media dei voti ottenuti nelle quattro prove. Gli studenti che intendessero verbalizzarlo, dovranno iscriversi ad una tra le date d'appello successive mediante le modalità standard riportate da Esse3.
+Al termine delle quattro prove, sarà assegnato a ciascun gruppo un voto parziale, assieme ad una scheda di valutazione (questa in forma strettamente privata, indirizzata esclusivamente ai membri del gruppo). Tale voto sarà dato dalla media dei voti ottenuti nelle quattro prove. Gli studenti che intendessero verbalizzarlo, dovranno iscriversi ad una tra le date d'appello successive mediante le modalità standard riportate da Esse3.
+
+!!!note "Nota"
+	Si sottolinea come il voto comunicato al termine degli esoneri sia **parziale**, e non finale: quest'ultimo sarà comunicato soltanto a seguito dell'iscrizione all'appello.
 
 Il giorno dell'appello, gli studenti potranno:
 
-- accettare il voto degli esoneri;
+- accettare il voto **finale** degli esoneri;
 - richiedere una valutazione orale integrativa.
 
 La valutazione orale integrativa è **strettamente personale**: ciò significa i membri di un gruppo dovranno necessariamente richiederla (e sottoporvisi) separatamente. Le modalità e le date per l'orale saranno stabilite di volta in volta in base a richieste pervenute e disponibilità del docente.
