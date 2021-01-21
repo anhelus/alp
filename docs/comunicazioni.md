@@ -8,6 +8,16 @@ Di seguito, alcune regole da seguire per la comunicazione a mezzo mail con il do
 !!!note "Nota"
 	Non aderire a queste semplici convenzioni **non assicura** la ricezione di una risposta alle mail inviate.
 
+## Esame online
+
+E' possibile, secondo quanto stabilito e consultabile sul sito dell'Università degli Studi di Bari, optare per lo svolgimento online dell'esame standard in caso di situazioni di necessità.
+
+Per farlo, è necessario inviare al docente una mail. In questo caso, l'oggetto dovrà essere il seguente:
+
+```
+[ESAME SCRITTO ONLINE] - NOME_COGNOME - MATRICOLA - ANNO ACCADEMICO
+```
+
 ## Ricevimento
 
 E' necessario prenotare il ricevimento. In questo caso, l'oggetto dovrà essere il seguente:

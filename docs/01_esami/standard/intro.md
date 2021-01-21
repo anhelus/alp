@@ -47,6 +47,12 @@ Gli studenti fuori corso possono sostenere **esclusivamente** questa modalità d
 | 20/09/2021 | N.D.    | N.D.        |
 | 17/11/2021 | N.D.    | N.D.        |
 
+## Svolgimento dell'esame
+
+L'esame si svolge in **presenza**, fino al raggiungimento della capacità programmata del 50% dell'aula.
+
+E' possibile tuttavia concordare, secondo le direttive indicate dall'Università, e reperibili [qui](https://www.uniba.it/coronavirus), la modalità di svolgimento online. Questa **non** è attiva di default, e va concordata secondo le modalità [qui](../../comunicazioni.md) descritte.
+
 ## Prepararsi all'appello
 
 Per prepararsi a sostenere l'appello, è necessario e sufficiente il materiale presente sul sito del corso, che è da considerarsi comunque come integrativo e complementare rispetto alle lezioni frontali.
