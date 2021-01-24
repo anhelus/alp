@@ -6,5 +6,6 @@
 	"no-duplicate-header": false,
 	"code-block-style": false,
 	"ul-indent": false,
-	"no-inline-html": false
+	"no-inline-html": false,
+	"no-space-in-emphasis": false
 }

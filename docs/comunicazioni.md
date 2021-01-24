@@ -1,12 +1,14 @@
 # Comunicazioni con il docente
 
-Di seguito, alcune regole da seguire per la comunicazione a mezzo mail con il docente.
+Di seguito, alcune regole da seguire per la comunicazione a mezzo mail con il docente, resesi necessaria per uniformare le comunicazioni telematiche.
 
-!!!note "Nota"
-	L'istituzione di questa modalità di comunicazione si è resa necessaria per uniformare e gestire al meglio le comunicazioni telematiche. In questa maniera, il flusso delle email viene smistato al meglio, permettendo una migliore interazione tra studente e docente.
+!!!Warning "Attenzione"
+	Per motivi organizzativi, non sarà data risposta ai messaggi che non si adattino a queste convenzioni.
 
-!!!note "Nota"
-	Non aderire a queste semplici convenzioni **non assicura** la ricezione di una risposta alle mail inviate.
+!!!note "Convenzioni utilizzate"
+	* `NOME_COGNOME`: nome e cognome dello studente.
+	* `REFERENTE_GRUPPO`: nome e cognome del referente del gruppo.
+	* `ANNO_ACCADEMICO`: anno accademico di riferimento.
 
 ## Esame online
 
@@ -26,8 +28,6 @@ E' necessario prenotare il ricevimento. In questo caso, l'oggetto dovrà essere 
 [RICEVIMENTO] - NOME_COGNOME
 ```
 
-dove `NOME_COGNOME` sono il nome ed il cognome dello studente.
-
 Il corpo della mail deve essere vuoto. Il ricevimento sarà assegnato nella **prima data utile tra quelle disponibili allo stesso**, come indicato nella [sezione relativa al ricevimento](./ricevimento.md).
 
 ## Richiesta chiarimenti
@@ -38,9 +38,7 @@ E' possibile richiedere direttamente dei chiarimenti relativi agli argomenti tra
 [CHIARIMENTI] - NOME_COGNOME
 ```
 
-dove `NOME_COGNOME` sono il nome ed il cognome dello studente.
-
-Il corpo della mail, come ovvio, è libero!
+Il corpo della mail è libero.
 
 ## Informazioni su esami
 
@@ -50,9 +48,7 @@ E' possibile richiedere direttamente dei chiarimenti relativi alle modalità di 
 [ESAMI] - NOME_COGNOME
 ```
 
-dove `NOME_COGNOME` sono il nome ed il cognome dello studente.
-
-Il corpo della mail, come ovvio, è libero!
+Il corpo della mail è libero.
 
 ## Comunicazioni relative a temi d'anno
 
@@ -61,8 +57,6 @@ E' possibile richiedere direttamente dei chiarimenti relativi ai temi d'anno, ol
 ```
 [TEMA ANNO] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
 ```
-
-dove `REFERENTE_GRUPPO` sono il nome ed il cognome del referente del gruppo.
 
 Il corpo della mail, come ovvio, è libero!
 
@@ -77,8 +71,6 @@ L'oggetto della mail **deve** essere strutturato come segue:
 ```
 [PRIMA PROVA] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
 ```
-
-dove `REFERENTE_GRUPPO` sono il nome ed il cognome del referente del gruppo, mentre `ANNO_ACCADEMICO` è l'anno accademico di riferimento.
 
 Il corpo della mail deve essere vuoto.
 
@@ -97,8 +89,6 @@ per la seconda prova o
 ```
 [TERZA PROVA] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
 ```
-
-dove `REFERENTE_GRUPPO` sono il nome ed il cognome del referente del gruppo, mentre `ANNO_ACCADEMICO` è l'anno accademico di riferimento.
 
 La mail deve essere conforme ad una tra le seguenti possibilità. **Si noti che le possibilità sono mutualmente esclusive.**
 
@@ -148,8 +138,6 @@ L'oggetto della mail **deve** essere strutturato come segue:
 [QUARTA PROVA] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
 ```
 
-dove `REFERENTE_GRUPPO` sono il nome ed il cognome del referente del gruppo, mentre `ANNO_ACCADEMICO` è l'anno accademico di riferimento.
-
 La mail deve essere conforme ad una tra le seguenti possibilità. **Si noti che le possibilità sono mutualmente esclusive.**
 
 #### Possibilità 3.1: link a servizi di storage
@@ -185,7 +173,7 @@ Si noti che:
 !!!note "Nota"
 	Ad ogni prova ricevuta **sarà sempre data una conferma**. E' però strettamente necessario **evitare di richiedere questa conferma**, ed in generale **evitare assolutamente l'invio di mail multiple**.
 
-## Verifica tema d'anno
+## Consultazione tema d'anno
 
 ### Consultazione seconda prova
 
@@ -206,6 +194,23 @@ Per prenotarsi per la verifica, occorre inviare una email al docente con il segu
 [VERIFICA SECONDA PROVA] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
 ```
 
-dove `REFERENTE_GRUPPO` sono il nome ed il cognome del referente del gruppo, mentre `ANNO_ACCADEMICO` è l'anno accademico di riferimento.
+Il corpo della mail deve essere lasciato privo di testo.
+
+### Consultazione terza prova
+
+La visione della seconda prova sarà possibile nelle seguenti date:
+
+| Data       | Orario        |
+| ---------- | ------------- |
+| 25/01/2021 | 16:30 - 17:30 |
+| 27/01/2021 | 16:30 - 17:30 |
+| 01/02/2021 | 16:30 - 17:30 |
+| 03/02/2021 | 16:30 - 17:30 |
+
+La visione avverrà mediante Microsoft Teams. Per prenotarsi per la verifica, occorre inviare una email al docente con il seguente oggetto:
+
+```
+[VERIFICA TERZA PROVA] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
+```
 
 Il corpo della mail deve essere lasciato privo di testo.

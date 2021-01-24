@@ -10,5 +10,5 @@ Sono disponibili per la consultazione i seguenti documenti.
 | Gruppi e tracce assegnate           | [:link:](documenti/gruppi.pdf)              	|
 | Esiti prima prova                   | [:link:](documenti/risultato_prima_prova.pdf)	|
 | Esiti seconda prova                 | [:link:](documenti/risultato_seconda_prova.pdf) |
-| Esiti terza prova                   | :no_entry:                                  	|
+| Esiti terza prova                   | [:link:](documenti/risultato_terza_prova.pdf)	|
 | Esiti quarta prova                  | :no_entry:                                  	|

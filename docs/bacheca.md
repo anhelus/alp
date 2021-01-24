@@ -1,5 +1,16 @@
 # Avvisi
 
+## 25/01/2021 - Risultati terza prova
+
+A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_terza_prova.pdf) sono disponibili i risultati relativi alla terza prova.
+
+Si prega di consultare le modalità [qui indicate](./comunicazioni.md#consultazione-terza-prova) per conoscere le modalità di consultazione della terza prova.
+
+!!!note "Note"
+	* I risultati riportati sono definitivi.
+	* I membri dei gruppi di cui non è stato ricevuto il contributo perdono il tema d'anno, a meno che non possano dimostrare l'effettivo invio entro la data prestabilita.
+	* I membri dei gruppi che hanno ricevuto un'insufficienza non perdono il tema d'anno.
+
 ## 17/01/2021
 
 Per gli studenti interessati, saranno a breve resi disponibili [qui](./01_esami/standard/esercizi.md) alcuni esercizi "sulla scia" di quelli proponibili per la valutazione della parte pratica durante l'esame scritto.

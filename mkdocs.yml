@@ -114,6 +114,11 @@ markdown_extensions:
   - pymdownx.tabbed # auto tabs
   - pymdownx.tilde # strike through cross out text
 
+plugin:
+  - search
+  - encryptcontent: {}
+
+
 extra_javascript:
   - js/config.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
