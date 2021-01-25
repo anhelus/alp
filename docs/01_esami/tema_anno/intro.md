@@ -23,8 +23,8 @@
 
 ## Richiesta chiarimenti e/o altre comunicazioni
 
-Le comunicazioni avverranno esclusivamente **a mezzo mail istituzionale** con il **referente** di ciascun gruppo, secondo le modalità specificate nella sezione relativa alle [comunicazioni con il docente](../../comunicazioni.md#comunicazioni-relative-a-temi-danno).
+Le comunicazioni avverranno esclusivamente **a mezzo mail istituzionale** con il **referente** di ciascun gruppo, secondo le modalità specificate nella sezione relativa alle [comunicazioni con il docente](../../comunicazioni/temi.md#comunicazioni-relative-a-temi-danno).
 
 ## Modalità di consegna
 
-Tutte le parti del tema d'anno andranno consegnate **a mezzo mail istituzionale**. Le modalità di consegna sono specificate nella sezione relativa alle [comunicazioni con il docente](../../comunicazioni.md#consegna-temi-danno).
+Tutte le parti del tema d'anno andranno consegnate **a mezzo mail istituzionale**. Le modalità di consegna sono specificate nella sezione relativa alle [comunicazioni con il docente](../../comunicazioni/temi.md#consegna-temi-danno).

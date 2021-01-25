@@ -51,7 +51,7 @@ Gli studenti fuori corso possono sostenere **esclusivamente** questa modalità d
 
 L'esame si svolge in **presenza**, fino al raggiungimento della capacità programmata del 50% dell'aula.
 
-E' possibile tuttavia concordare, secondo le direttive indicate dall'Università, e reperibili [qui](https://www.uniba.it/coronavirus), la modalità di svolgimento online. Questa **non** è attiva di default, e va concordata secondo le modalità [qui](../../comunicazioni.md) descritte.
+E' possibile tuttavia concordare, secondo le direttive indicate dall'Università, e reperibili [qui](https://www.uniba.it/coronavirus), la modalità di svolgimento online. Questa **non** è attiva di default, e va concordata secondo le modalità [qui](../../comunicazioni/standard.md) descritte.
 
 !!!note "Nota"
 	Tale modalità è valida **esclusivamente** per la data del 25/01/2021. Seguiranno aggiornamenti in base alle ulteriori disposizioni dell'Ateneo.

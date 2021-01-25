@@ -4,16 +4,16 @@
 **A**: No, non è possibile chiedere un cambio di traccia, né che la stessa venga modificata, a meno che non si verifichi che alcuni argomenti non siano oggettivamente alla portata di uno studente di Matematica del primo anno.
 
 **Q**: **Ho notato delle imprecisioni nella traccia. Le segnalo?**
-**A**: Assolutamente sì, è possibile farlo secondo le modalità specificate nella sezione delle [comunicazioni con il docente](../../comunicazioni.md#comunicazioni-relative-a-temi-danno).
+**A**: Assolutamente sì, è possibile farlo secondo le modalità specificate nella sezione delle [comunicazioni con il docente](../../comunicazioni/temi.md#comunicazioni-relative-a-temi-danno).
 
 **Q**: **Ho notato che esistono delle condizioni che la traccia non tiene in considerazione. Posso trattarle nel corso del tema d'anno?**
 **A**: Assolutamente sì; trattare condizioni non previste dalla traccia in maniera corretta permette una migliore valutazione complessiva dell'esame.
 
 **Q:** **Come consegno il tema d'anno?**
-**A:** Consultare le modalità specificate nella sezione delle [comunicazioni con il docente](../../comunicazioni.md#consegna-temi-danno).
+**A:** Consultare le modalità specificate nella sezione delle [comunicazioni con il docente](../../comunicazioni/temi.md#consegna-temi-danno).
 
 **Q:** **Posso chiedere chiarimenti sulla traccia?**
-**A:** Assolutamente sì. Ricevere un chiarimento ed un esempio di funzionamento è pieno diritto dello studente. E' possibile farlo secondo le modalità specificate nella sezione delle [comunicazioni con il docente](../../comunicazioni.md#comunicazioni-relative-a-temi-danno).
+**A:** Assolutamente sì. Ricevere un chiarimento ed un esempio di funzionamento è pieno diritto dello studente. E' possibile farlo secondo le modalità specificate nella sezione delle [comunicazioni con il docente](../../comunicazioni/temi.md#comunicazioni-relative-a-temi-danno).
 
 **Q:** **Posso usare funzioni non trattate a lezione?**
 **A:** Assolutamente sì, tenendo presente che se si usano funzioni presenti nelle librerie standard dei diversi linguaggi non saranno eseguiti ulteriori controlli. Tuttavia, qualora si utilizzino librerie terze, sarà verificata l'attendibilità delle suddette.

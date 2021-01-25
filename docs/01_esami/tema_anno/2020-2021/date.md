@@ -15,8 +15,8 @@ Per tutte le date rilevanti, consultare la tabella successiva.
 | _23 dicembre 2020_ | Comunicazione esiti prima parte del tema d'anno (tutti i gruppi) | :x:     |
 | _30 dicembre 2020_ | Consegna seconda parte del tema d'anno (tutti i gruppi)          | :x:     |
 | _07 gennaio 2021_  | Comunicazione esiti seconda parte tema d'anno (tutti i gruppi)   | :x:     |
-| _18 gennaio 2021_  | Consegna terza parte tema d'anno (tutti i gruppi)                |         |
-| _25 gennaio 2021_  | Comunicazione esiti terza parte del tema d'anno (tutti i gruppi) |         |
+| _18 gennaio 2021_  | Consegna terza parte tema d'anno (tutti i gruppi)                | :x:     |
+| _25 gennaio 2021_  | Comunicazione esiti terza parte del tema d'anno (tutti i gruppi) | :x:     |
 | _03 febbraio 2021_ | Consegna quarta parte tema d'anno (tutti i gruppi)               |         |
 | _08 febbraio 2021_ | Comunicazione esiti quarta parte del tema d'anno (tutti i gruppi)|         |
 

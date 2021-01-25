@@ -1,10 +1,12 @@
 site_name: Corso di Informatica - Angelo Cardellicchio
 nav:
   - Home del corso: index.md
+  - Bacheca avvisi: bacheca.md
   - Informazioni sul corso:
       - Ricevimento: ricevimento.md
-      - Comunicare col docente: comunicazioni.md
-      - Bacheca avvisi: bacheca.md
+      - Comunicare col docente:
+        - Varie: comunicazioni/standard.md
+        - Sui temi d'anno: comunicazioni/temi.md
       - Esami:
           - Modalità standard:
               - Introduzione: 01_esami/standard/intro.md

@@ -1,6 +1,6 @@
-# Comunicazioni con il docente
+# Comunicazioni relative a temi d'anno
 
-Di seguito, alcune regole da seguire per la comunicazione a mezzo mail con il docente, resesi necessaria per uniformare le comunicazioni telematiche.
+Di seguito, alcune regole da seguire per la comunicazione a mezzo mail con il docente relative ai temi d'anno.
 
 !!!Warning "Attenzione"
 	Per motivi organizzativi, non sarà data risposta ai messaggi che non si adattino a queste convenzioni.
@@ -10,47 +10,7 @@ Di seguito, alcune regole da seguire per la comunicazione a mezzo mail con il do
 	* `REFERENTE_GRUPPO`: nome e cognome del referente del gruppo.
 	* `ANNO_ACCADEMICO`: anno accademico di riferimento.
 
-## Esame online
-
-E' possibile, secondo quanto stabilito e consultabile sul sito dell'Università degli Studi di Bari, optare per lo svolgimento online dell'esame standard in caso di situazioni di necessità.
-
-Per farlo, è necessario inviare al docente una mail. In questo caso, l'oggetto dovrà essere il seguente:
-
-```
-[ESAME SCRITTO ONLINE] - NOME_COGNOME - MATRICOLA - ANNO ACCADEMICO
-```
-
-## Ricevimento
-
-E' necessario prenotare il ricevimento. In questo caso, l'oggetto dovrà essere il seguente:
-
-```
-[RICEVIMENTO] - NOME_COGNOME
-```
-
-Il corpo della mail deve essere vuoto. Il ricevimento sarà assegnato nella **prima data utile tra quelle disponibili allo stesso**, come indicato nella [sezione relativa al ricevimento](./ricevimento.md).
-
-## Richiesta chiarimenti
-
-E' possibile richiedere direttamente dei chiarimenti relativi agli argomenti trattati durante il corso. In questo caso, l'oggetto dovrà essere il seguente:
-
-```
-[CHIARIMENTI] - NOME_COGNOME
-```
-
-Il corpo della mail è libero.
-
-## Informazioni su esami
-
-E' possibile richiedere direttamente dei chiarimenti relativi alle modalità di esame, oltre che esporre problemi generici relativi, ad esempio, alle propedeuticità. In questo caso, l'oggetto dovrà essere il seguente:
-
-```
-[ESAMI] - NOME_COGNOME
-```
-
-Il corpo della mail è libero.
-
-## Comunicazioni relative a temi d'anno
+## Chiarimenti
 
 E' possibile richiedere direttamente dei chiarimenti relativi ai temi d'anno, oltre che esporre problemi generici. In questo caso, l'oggetto dovrà essere il seguente:
 
@@ -202,8 +162,8 @@ La visione della seconda prova sarà possibile nelle seguenti date:
 
 | Data       | Orario        |
 | ---------- | ------------- |
-| 25/01/2021 | 16:30 - 17:30 |
 | 27/01/2021 | 16:30 - 17:30 |
+| 28/01/2021 | 16:30 - 17:30 |
 | 01/02/2021 | 16:30 - 17:30 |
 | 03/02/2021 | 16:30 - 17:30 |
 
