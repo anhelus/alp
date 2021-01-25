@@ -167,7 +167,7 @@ La visione della seconda prova sarà possibile nelle seguenti date:
 | 01/02/2021 | 16:30 - 17:30 |
 | 03/02/2021 | 16:30 - 17:30 |
 
-La visione avverrà mediante Microsoft Teams. Per prenotarsi per la verifica, occorre inviare una email al docente con il seguente oggetto:
+La visione avverrà mediante Microsoft Teams. Per prenotarsi per la verifica, occorre inviare una email al docente con il seguente oggetto entro e non oltre il 26/01/2021:
 
 ```
 [VERIFICA TERZA PROVA] - REFERENTE_GRUPPO - ANNO_ACCADEMICO
