@@ -1,5 +1,20 @@
 # Avvisi
 
+## 26/01/2021
+
+### Calendario verifiche 27/01/2021
+
+| Orario | Gruppo               |
+| ------ | -------------------- |
+| 16:30  | DE PALMA - LIVRIERI  |
+| 16:45  | ORLANDINO - COSTANZO |
+| 17:00  | D'ADDATO - LAMORGESE |
+
+All'orario prestabilito, gli interessati riceveranno una chiamata su Microsoft Teams da parte del docente.
+
+!!!note "Nota"
+	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
+
 ## 25/01/2021 - Risultati terza prova
 
 A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_terza_prova.pdf) sono disponibili i risultati relativi alla terza prova.
@@ -12,7 +27,7 @@ Si prega di consultare le modalità [qui indicate](./comunicazioni/temi.md#consu
 
 ## 17/01/2021
 
-Per gli studenti interessati, saranno a breve resi disponibili [qui](./01_esami/standard/esercizi.md) alcuni esercizi "sulla scia" di quelli proponibili per la valutazione della parte pratica durante l'esame scritto.
+Per gli studenti interessati, saranno a breve resi disponibili [qui](./01_esami/standard/esercizi/scritto.md) alcuni esercizi "sulla scia" di quelli proponibili per la valutazione della parte pratica durante l'esame scritto.
 
 ## 13/01/2021
 

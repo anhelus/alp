@@ -77,7 +77,9 @@ nav:
               - 06 - I/O in Python: 02_dispense/programmazione/03_linguaggio_python/06_file.md
               - 07 - Cenni ai test: 02_dispense/programmazione/03_linguaggio_python/07_test.md
               - 08 - Cenni a NumPy: 02_dispense/programmazione/03_linguaggio_python/08_numpy.md
-  - Esercizi: 01_esami/standard/esercizi.md
+  - Esercizi: 
+    - Esercizi di programmazione: 01_esami/standard/esercizi/programmazione.md
+    - Esercizi per l'esame: 01_esami/standard/esercizi/scritto.md
   - Appendici:
       - Configurazioni:
           - Visual Studio Code: 03_appendici/configurazioni/a_vs_code_guide.md
