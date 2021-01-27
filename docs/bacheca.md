@@ -9,6 +9,7 @@
 | 16:30  | DE PALMA - LIVRIERI  |
 | 16:45  | ORLANDINO - COSTANZO |
 | 17:00  | D'ADDATO - LAMORGESE |
+| 17:15  | BUCCI                |
 
 All'orario prestabilito, gli interessati riceveranno una chiamata su Microsoft Teams da parte del docente.
 
