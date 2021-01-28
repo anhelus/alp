@@ -112,7 +112,7 @@ int main ()
 }
 ```
 
-## Esercizio 4 (dall *Quesito n.ro 2 dell'appello del 25/01/2021")
+## Esercizio 4 (dal *Quesito n.ro 2 dell'appello del 25/01/2021*)
 
 Si scriva (inoltre) un esempio di funzione per ciascuna delle due tipologie di istruzione.
 
