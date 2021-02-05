@@ -76,15 +76,16 @@ I seguenti bonus sono applicati nella valutazione complessiva degli esoneri.
 
 ## Voto finale e verbalizzazione
 
-Al termine delle quattro prove, sarà assegnato a ciascun gruppo un voto parziale, assieme ad una scheda di valutazione (questa in forma strettamente privata, indirizzata esclusivamente ai membri del gruppo). Tale voto sarà dato dalla media dei voti ottenuti nelle quattro prove. Gli studenti che intendessero verbalizzarlo, dovranno iscriversi ad una tra le date d'appello successive mediante le modalità standard riportate da Esse3.
+Al termine delle quattro prove, sarà assegnato a ciascun gruppo un voto parziale, assieme ad una scheda di valutazione (questa in forma strettamente privata, consultabile su richiesta dai membri del gruppo in fase di comunicazione del voto). Tale voto sarà dato dalla media dei voti ottenuti nelle quattro prove. Gli studenti che intendessero verbalizzarlo, dovranno iscriversi ad una tra le date d'appello successive mediante le modalità standard riportate da Esse3.
 
 !!!note "Nota"
-	Si sottolinea come il voto comunicato al termine degli esoneri sia **parziale**, e non finale: quest'ultimo sarà comunicato soltanto a seguito dell'iscrizione all'appello.
+	Si sottolinea come il voto comunicato al termine degli esoneri **non sarà in formato numerico**, ma piuttosto associato ad una valutazione di tipo **descrittivo**: il primo sarà comunicato soltanto a seguito dell'iscrizione all'appello, e secondo modalità stabilite di volta in volta.
 
 Il giorno dell'appello, gli studenti potranno:
 
-- accettare il voto **finale** degli esoneri;
-- richiedere una valutazione orale integrativa.
+- accettare il voto finale degli esoneri;
+- rifiutare il voto finale degli esoneri, sostenendo l'esame integrale;
+- richiedere una valutazione orale integrativa, vertente sull'intero programma del corso.
 
 La valutazione orale integrativa è **strettamente personale**: ciò significa i membri di un gruppo dovranno necessariamente richiederla (e sottoporvisi) separatamente. Le modalità e le date per l'orale saranno stabilite di volta in volta in base a richieste pervenute e disponibilità del docente.
 
