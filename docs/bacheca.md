@@ -6,6 +6,10 @@
 
 A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_complessivo.pdf) sono disponibili i risultati complessivi per le prove di esonero. All'interno del documento, sono illustrate le modalità con cui sarà possibile verbalizzare il voto; per ulteriori chiarimenti, si prega di usare le modalità standard di comunicazione per i temi d'anno.
 
+#### Aggiornamento
+
+Sono disponibili alcuni aggiornamenti al documento, grazie all'integrazione dei risultati per gli studenti N.P., oltre che ad alcune ulteriori chiarificazioni.
+
 ## 26/01/2021
 
 ### Calendario verifiche 27/01/2021
