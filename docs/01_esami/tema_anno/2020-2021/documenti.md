@@ -11,4 +11,4 @@ Sono disponibili per la consultazione i seguenti documenti.
 | Esiti prima prova                   | [:link:](documenti/risultato_prima_prova.pdf)	|
 | Esiti seconda prova                 | [:link:](documenti/risultato_seconda_prova.pdf) |
 | Esiti terza prova                   | [:link:](documenti/risultato_terza_prova.pdf)	|
-| Esiti quarta prova                  | :no_entry:                                  	|
+| Esiti quarta prova                  | [:link:](documenti/risultato_complessivo.pdf)	|

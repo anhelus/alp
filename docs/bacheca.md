@@ -1,5 +1,11 @@
 # Avvisi
 
+## 05/02/2021
+
+### Risultati prove di esonero
+
+A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_complessivo.pdf) sono disponibili i risultati complessivi per le prove di esonero. All'interno del documento, sono illustrate le modalità con cui sarà possibile verbalizzare il voto; per ulteriori chiarimenti, si prega di usare le modalità standard di comunicazione per i temi d'anno.
+
 ## 26/01/2021
 
 ### Calendario verifiche 27/01/2021
@@ -16,7 +22,9 @@ All'orario prestabilito, gli interessati riceveranno una chiamata su Microsoft T
 !!!note "Nota"
 	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
 
-## 25/01/2021 - Risultati terza prova
+## 25/01/2021
+
+### Risultati terza prova
 
 A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_terza_prova.pdf) sono disponibili i risultati relativi alla terza prova.
 

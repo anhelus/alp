@@ -17,8 +17,8 @@ Per tutte le date rilevanti, consultare la tabella successiva.
 | _07 gennaio 2021_  | Comunicazione esiti seconda parte tema d'anno (tutti i gruppi)   | :x:     |
 | _18 gennaio 2021_  | Consegna terza parte tema d'anno (tutti i gruppi)                | :x:     |
 | _25 gennaio 2021_  | Comunicazione esiti terza parte del tema d'anno (tutti i gruppi) | :x:     |
-| _03 febbraio 2021_ | Consegna quarta parte tema d'anno (tutti i gruppi)               |         |
-| _08 febbraio 2021_ | Comunicazione esiti quarta parte del tema d'anno (tutti i gruppi)|         |
+| _03 febbraio 2021_ | Consegna quarta parte tema d'anno (tutti i gruppi)               | :x:     |
+| _08 febbraio 2021_ | Comunicazione esiti quarta parte del tema d'anno (tutti i gruppi)| :x:     |
 
 !!! note "Post Scriptum"
 	**Il mancato rispetto delle date indicate prevede l’esclusione automatica dalla modalità a tema d’anno.**
