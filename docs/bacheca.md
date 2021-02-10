@@ -1,5 +1,46 @@
 # Avvisi
 
+## 10/02/2021
+
+### Traccia 09/02/2021
+
+E' disponibile a [questo indirizzo](./01_esami/standard/tracce/appello_09_02_2021.pdf) la traccia dell'appello del 09 febbraio 2021.
+
+### Elenco studenti non abilitati alla verbalizzazione
+
+Al momento, i seguenti studenti hanno *superato* l'esonero, ma non sono in grado di verbalizzarlo per motivi legati alla presenza di propedeuticità:
+
+* **ALBANO** Israel;
+* **AMORUSO** Maria Pia;
+* **SALLUSTIO** Roberta.
+
+In caso di inesattezze o integrazioni, si prega di comunicarle entro **giovedì 12** usando il tag `[ESAMI]`, secondo le modalità [qui esplicate](./comunicazioni/standard.md#informazioni-su-esami).
+
+### Calendario verifiche e visualizzazioni della quarta prova 11/02/2021
+
+| Orario | Gruppo          | Tipo            |
+| ------ | --------------- | --------------- |
+| 17:00  | RAGUSEO - LONGO | Verifica        |
+| 17:30  | DI CUIA - FESTA | Visualizzazione |
+
+### Calendario prove orali (solo esonerandi)
+
+| Data ed orario | Nominativo |
+| -------------- | ---------- |
+| 15/02 - 17:30  | PESCE      |
+| 15/02 - 18:00  | ROSELLI    |
+
+Si noti che:
+
+* la prova orale si svolgerà interamente mediante Microsoft Teams;
+* lo studente dovrà essere inquadrato durante lo svolgimento della prova, assieme ad ampia parte dell'ambiente in cui si trova;
+* lo schermo dello studente dovrà essere condiviso;
+* non è ammesso l'uso di altri schermi o dispositivi durante la prova;
+* é necessario mostrare un documento identificativo prima dell'inizio della prova.
+
+!!!note "Nota"
+	La prova orale dura *indicativamente* 30 minuti; si raccomanda ad entrambi gli studenti di essere disponibili **a partire dalle 17:30**.
+
 ## 05/02/2021
 
 ### Risultati prove di esonero
