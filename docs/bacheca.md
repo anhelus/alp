@@ -1,5 +1,18 @@
 # Avvisi
 
+## 11/02/2021
+
+### Risultati appello 09/02/2021
+
+Di seguito i risultati relativi all'appello del 09 febbraio:
+
+| Nominativo       | Voto  | Esercizio 1 | Esercizio 2 | Esercizio 3 | Esercizio 4 |
+| ---------------- | ----- | ----------- | ----------- | ----------- | ----------- |
+| CARONE Micaela   | 21/30 | 8/10        | 6/7         | 3/3         | 4/10        |
+| SCARDIGNO Marino | 18/30 | N.P.        | 6/7         | 3/3         | 9/10        |
+
+Sarà possibile richiedere l'integrazione orale e/o la visione del compito inviando una mail **entro e non oltre le ore 16:30 di venerdì 12 febbraio**.
+
 ## 10/02/2021
 
 ### Traccia 09/02/2021
@@ -12,9 +25,11 @@ Al momento, i seguenti studenti hanno *superato* l'esonero, ma non sono in grado
 
 * **ALBANO** Israel;
 * **AMORUSO** Maria Pia;
+* **MILANO** Santina;
+* **RELLA** Arianna;
 * **SALLUSTIO** Roberta.
 
-In caso di inesattezze o integrazioni, si prega di comunicarle entro **giovedì 12** usando il tag `[ESAMI]`, secondo le modalità [qui esplicate](./comunicazioni/standard.md#informazioni-su-esami).
+In caso di inesattezze o integrazioni, si prega di comunicarle entro **giovedì 11** usando il tag `[ESAMI]`, secondo le modalità [qui esplicate](./comunicazioni/standard.md#informazioni-su-esami).
 
 ### Calendario verifiche e visualizzazioni della quarta prova 11/02/2021
 
