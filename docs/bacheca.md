@@ -1,5 +1,9 @@
 # Avvisi
 
+## 15/02/2021
+
+Si invitano gli studenti definiti come *non abilitati* a **verificare** la loro situazione. Tale verifica è, come ovvio, **interamente delegata allo studente**.
+
 ## 11/02/2021
 
 ### Risultati appello 09/02/2021
