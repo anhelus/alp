@@ -1370,6 +1370,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#esercizio-5-dal-quesito-nro-2-dellappello-del-09022021" class="md-nav__link">
+    Esercizio 5 (dal Quesito n.ro 2 dell'appello del 09/02/2021)
+  </a>
+  
+    <nav class="md-nav" aria-label="Esercizio 5 (dal Quesito n.ro 2 dell'appello del 09/02/2021)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risoluzione_4" class="md-nav__link">
+    Risoluzione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1571,6 +1591,26 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#esercizio-5-dal-quesito-nro-2-dellappello-del-09022021" class="md-nav__link">
+    Esercizio 5 (dal Quesito n.ro 2 dell'appello del 09/02/2021)
+  </a>
+  
+    <nav class="md-nav" aria-label="Esercizio 5 (dal Quesito n.ro 2 dell'appello del 09/02/2021)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#risoluzione_4" class="md-nav__link">
+    Risoluzione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1676,6 +1716,21 @@ def funzione(a: int, b: int):
 <p>Si scriva (inoltre) un esempio di funzione per ciascuna delle due tipologie di istruzione.</p>
 <h3 id="risoluzione_3">Risoluzione<a class="headerlink" href="#risoluzione_3" title="Permanent link">&para;</a></h3>
 <p>Si può consultare una possibile risoluzione a <a href="https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Esercizi%20Esame%20Scritto/Appello%2025-01-2021/esercizio_2.c">questo link</a>.</p>
+<h2 id="esercizio-5-dal-quesito-nro-2-dellappello-del-09022021">Esercizio 5 (dal <em>Quesito n.ro 2 dell'appello del 09/02/2021</em>)<a class="headerlink" href="#esercizio-5-dal-quesito-nro-2-dellappello-del-09022021" title="Permanent link">&para;</a></h2>
+<p>Si utilizzi lo strumento descrittivo dei diagrammi di flusso per rappresentare la selezione di tutte le parole che iniziano con la lettera A dalle seguenti: <em>Abaco</em>, <em>Geometria</em>, <em>Matematica</em>, <em>Aritmetica</em>, <em>Trigonometria</em>.</p>
+<h3 id="risoluzione_4">Risoluzione<a class="headerlink" href="#risoluzione_4" title="Permanent link">&para;</a></h3>
+<p>Una possibile risoluzione è mostrata nel seguente diagramma di flusso.</p>
+<p><img alt="flow_chart_es_5" src="../../../../assets/images/esercizi/es_5/flow_chart.png" /></p>
+<p>I passi sono i seguenti:</p>
+<ol>
+<li>legge la lista di parole in ingresso, e salvala in una variabile chiamata <code>words</code>;</li>
+<li>crea un contatore <code>cnt</code> ed una lista <code>a_words</code> (vuota) che conterrà le parole che iniziano con la lettera <em>a</em>;</li>
+<li>fino a che <code>cnt &lt; len(words)</code>:<br />
+    a. seleziona la parola attuale (<code>word</code>);<br />
+    b. se la prima lettera è <em>a</em>, allora aggiungi <code>word</code> ad <code>a_words</code>;<br />
+    c. incrementa il contatore <code>cnt</code>;</li>
+<li>restituisci in output <code>a_words</code>.</li>
+</ol>
                 
               
               
