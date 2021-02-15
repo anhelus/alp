@@ -119,3 +119,23 @@ Si scriva (inoltre) un esempio di funzione per ciascuna delle due tipologie di i
 ### Risoluzione
 
 Si può consultare una possibile risoluzione a [questo link](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Esercizi%20Esame%20Scritto/Appello%2025-01-2021/esercizio_2.c).
+
+## Esercizio 5 (dal *Quesito n.ro 2 dell'appello del 09/02/2021*)
+
+Si utilizzi lo strumento descrittivo dei diagrammi di flusso per rappresentare la selezione di tutte le parole che iniziano con la lettera A dalle seguenti: *Abaco*, *Geometria*, *Matematica*, *Aritmetica*, *Trigonometria*.
+
+### Risoluzione
+
+Una possibile risoluzione è mostrata nel seguente diagramma di flusso.
+
+![flow_chart_es_5](../../../assets/images/esercizi/es_5/flow_chart.png)
+
+I passi sono i seguenti:
+
+1. legge la lista di parole in ingresso, e salvala in una variabile chiamata `words`;
+2. crea un contatore `cnt` ed una lista `a_words` (vuota) che conterrà le parole che iniziano con la lettera *a*;
+3. fino a che `cnt < len(words)`:
+	a. seleziona la parola attuale (`word`);
+	b. se la prima lettera è *a*, allora aggiungi `word` ad `a_words`;
+	c. incrementa il contatore `cnt`;
+4. restituisci in output `a_words`.

@@ -37,7 +37,7 @@ Gli studenti fuori corso possono sostenere **esclusivamente** questa modalità d
 | Data       | Traccia                                   |
 | ---------- | ----------------------------------------- |
 | 25/01/2021 | [:link:](./tracce/appello_25_01_2021.pdf) |
-| 09/02/2021 | N.D.                                      |
+| 09/02/2021 | [:link:](./tracce/appello_09_02_2021.pdf) |
 | 25/02/2021 | N.D.                                      |
 | 20/04/2021 | N.D.                                      |
 | 25/06/2021 | N.D.                                      |
