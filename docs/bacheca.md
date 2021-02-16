@@ -4,6 +4,23 @@
 
 Si invitano gli studenti definiti come *non abilitati* a **verificare** la loro situazione. Tale verifica è, come ovvio, **interamente delegata allo studente**.
 
+### Aggiornamento 16/02/2021
+
+Stanno venendo effettuate verifice **estese** riguardanti la situazione individuale di ciascuno dei prenotati all'appello. Chiunque risulti con debito formativo, non avendolo previamente segnalato, dovrà **sostenere l'esame una volta riparato il debito**, iscrivendosi ad una data **successiva alla riparazione dello stesso**.
+
+Gli studenti che hanno segnalato alla data odierna il debito formativo sono:
+
+| Nome      | Cognome   |
+| --------- | --------- |
+| ALBANO    | ISRAEL    |
+| AMORUSO   | MARIA PIA |
+| MILANO    | SANTINA   |
+| PICCOLO   | ANGELA    |
+| RELLA     | ARIANNA   |
+| SALLUSTIO | ROBERTA   |
+
+Ovviamente, la pubblicazione dei risultati d'esame subirà dei ritardi dipendenti da queste verifiche.
+
 ## 11/02/2021
 
 ### Risultati appello 09/02/2021
@@ -22,16 +39,6 @@ Sarà possibile richiedere l'integrazione orale e/o la visione del compito invia
 ### Traccia 09/02/2021
 
 E' disponibile a [questo indirizzo](./01_esami/standard/tracce/appello_09_02_2021.pdf) la traccia dell'appello del 09 febbraio 2021.
-
-### Elenco studenti non abilitati alla verbalizzazione
-
-Al momento, i seguenti studenti hanno *superato* l'esonero, ma non sono in grado di verbalizzarlo per motivi legati alla presenza di propedeuticità:
-
-* **ALBANO** Israel;
-* **AMORUSO** Maria Pia;
-* **MILANO** Santina;
-* **RELLA** Arianna;
-* **SALLUSTIO** Roberta.
 
 In caso di inesattezze o integrazioni, si prega di comunicarle entro **giovedì 11** usando il tag `[ESAMI]`, secondo le modalità [qui esplicate](./comunicazioni/standard.md#informazioni-su-esami).
 
