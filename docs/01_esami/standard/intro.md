@@ -23,7 +23,7 @@ Gli studenti fuori corso possono sostenere **esclusivamente** questa modalità d
 | ---------- | ----------- | ------- |
 | 25/01/2021 | 15:00-16:30 | Aula I  |
 | 09/02/2021 | 09:00-10:30 | Aula VI |
-| 25/02/2021 | 09:00-10:30 | N.D.    |
+| 25/02/2021 | 09:00-10:30 | Aula VII|
 | 20/04/2021 | 15:00-16:30 | N.D.    |
 | 25/06/2021 | 09:00-10:30 | N.D.    |
 | 12/07/2021 | 09:00-10:30 | N.D.    |
@@ -38,7 +38,7 @@ Gli studenti fuori corso possono sostenere **esclusivamente** questa modalità d
 | ---------- | ----------------------------------------- |
 | 25/01/2021 | [:link:](./tracce/appello_25_01_2021.pdf) |
 | 09/02/2021 | [:link:](./tracce/appello_09_02_2021.pdf) |
-| 25/02/2021 | N.D.                                      |
+| 25/02/2021 | [:link:](./tracce/appello_25_02_2021.pdf) |
 | 20/04/2021 | N.D.                                      |
 | 25/06/2021 | N.D.                                      |
 | 12/07/2021 | N.D.                                      |

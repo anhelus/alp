@@ -79,7 +79,7 @@ Si noti che:
 - é necessario mostrare un documento identificativo prima dell'inizio della prova.
 
 !!!note "Nota"
-La prova orale dura _indicativamente_ 30 minuti; si raccomanda ad entrambi gli studenti di essere disponibili **a partire dalle 17:30**.
+	La prova orale dura _indicativamente_ 30 minuti; si raccomanda ad entrambi gli studenti di essere disponibili **a partire dalle 17:30**.
 
 ## 05/02/2021
 
@@ -105,7 +105,7 @@ Sono disponibili alcuni aggiornamenti al documento, grazie all'integrazione dei 
 All'orario prestabilito, gli interessati riceveranno una chiamata su Microsoft Teams da parte del docente.
 
 !!!note "Nota"
-Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
+	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
 
 ## 25/01/2021
 
@@ -116,8 +116,7 @@ A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_terza_pr
 Si prega di consultare le modalità [qui indicate](./comunicazioni/temi.md#consultazione-terza-prova) per conoscere le modalità di consultazione della terza prova.
 
 !!!note "Note"
-_ I membri dei gruppi di cui non è stato ricevuto il contributo perdono il tema d'anno (a meno che non possano dimostrare l'effettivo invio entro la data prestabilita).
-_ I membri dei gruppi che hanno ricevuto un'insufficienza non perdono il tema d'anno.
+	I membri dei gruppi di cui non è stato ricevuto il contributo perdono il tema d'anno (a meno che non possano dimostrare l'effettivo invio entro la data prestabilita). I membri dei gruppi che hanno ricevuto un'insufficienza non perdono il tema d'anno.
 
 ## 17/01/2021
 
@@ -154,7 +153,7 @@ I risultati disponibili a [questo indirizzo](./01_esami/tema_anno/2020-2021/docu
 All'orario prestabilito, l'interessato riceverà una chiamata su Microsoft Teams da parte del docente.
 
 !!!note "Nota"
-Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
+	Gli orari indicati nella tabella sono indicativi, e suscettibili a variazioni. L'invito è quello di essere raggiungibili _nei 30 minuti antecedenti e successivi all'orario di convocazione segnalato_.
 
 ## 10/01/2021
 
@@ -179,10 +178,10 @@ Si sottolinea che:
 A [questo indirizzo](./01_esami/tema_anno/2020-2021/documenti/risultato_seconda_prova.pdf) sono disponibili i risultati relativi alla seconda prova.
 
 !!!note "Nominativi riportati"
-I risultati sono relativi soltanto ai gruppi dei quali risulta essere pervenuta la seconda prova. In caso di discrepanze, è necessario inviare una mail secondo le modalità illustrate nella sezione "Comunicazioni relative a temi d'anno" della scheda delle [comunicazioni con il docente](./comunicazioni/temi.md#comunicazioni-relative-a-temi-danno).
+	I risultati sono relativi soltanto ai gruppi dei quali risulta essere pervenuta la seconda prova. In caso di discrepanze, è necessario inviare una mail secondo le modalità illustrate nella sezione "Comunicazioni relative a temi d'anno" della scheda delle [comunicazioni con il docente](./comunicazioni/temi.md#comunicazioni-relative-a-temi-danno).
 
 !!!note "Parzialità dei risultati"
-I risultati mostrati sono _definitivi_, a meno dei gruppi per i quali è necessaria o consigliata una verifica. Nel caso di verifica consigliata, questa è opzionale e, qualora si opti per non farla, diventa definitiva a partire dalle ore 12:00 di lunedì 11/01/2020. Nel caso di verifica necessaria, è obbligatorio prenotarsi, pena la perdita del tema d'anno.
+	I risultati mostrati sono _definitivi_, a meno dei gruppi per i quali è necessaria o consigliata una verifica. Nel caso di verifica consigliata, questa è opzionale e, qualora si opti per non farla, diventa definitiva a partire dalle ore 12:00 di lunedì 11/01/2020. Nel caso di verifica necessaria, è obbligatorio prenotarsi, pena la perdita del tema d'anno.
 
 ### Consultazione seconda prova
 
