@@ -130,3 +130,9 @@ extra_javascript:
 
 extra_css:
   - stylesheets/extra.css
+
+copyright: Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+
+google_analytics:
+  - G-J2XESD8WDV
+  - auto
