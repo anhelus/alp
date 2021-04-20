@@ -1,5 +1,16 @@
 # Avvisi
 
+## 20/04/2021
+
+### Chiarimenti verbalizzazione esoneri
+
+Si ribadisce che:
+
+1. **non** sono necessarie ulteriori azioni da parte di chi ha sostenuto con successo l'esonero; 
+2. ai fini della verbalizzazione, ci si potrà iscrivere ad **uno qualsiasi** degli appelli fino a novembre, **non inviando mail multiple**;
+3. la verbalizzazione avviene **con le stesse modalità viste per gli altri esami**: verrà pubblicato, **il prima possibile** (e quindi **non immediatamente**) il voto su ESSE3, e questo dovrà essere accettato o rifiutato dall'interessato/a;
+4. qualsiasi problema legato ad una mancata verbalizzazione **è da verificarsi in prima istanza con la segreteria**, in quanto non saranno effettuati preventivamente ulteriori controlli sulla situazione personale di ciascun interessato.
+
 ## 25/02/2021
 
 ### Traccia 25/02/2021
