@@ -10,7 +10,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.2">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-7.1.3">
     
     
       
@@ -18,7 +18,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.6f955dcd.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e35208c4.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ef6f36e2.min.css">
@@ -1587,7 +1587,7 @@
 <div class="highlight"><pre><span></span><code><span class="c1">// geometria.h</span>
 <span class="cp">#ifndef GEOMETRIA_H</span>
 <span class="cp">#define GEOMETRIA_H</span>
-<span class="k">namespace</span> <span class="n">Geometria</span> <span class="p">{</span>
+<span class="k">namespace</span> <span class="nn">Geometria</span> <span class="p">{</span>
     <span class="k">class</span> <span class="nc">Vettore</span><span class="p">;</span>
 <span class="p">}</span>
 
@@ -1610,7 +1610,7 @@
 <span class="cp">#include</span> <span class="cpf">&quot;geometria.h&quot;</span><span class="c1">;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;cmath&gt;</span><span class="cp"></span>
 
-<span class="k">using</span> <span class="k">namespace</span> <span class="n">Geometria</span><span class="p">;</span>
+<span class="k">using</span> <span class="k">namespace</span> <span class="nn">Geometria</span><span class="p">;</span>
 
 <span class="n">Vettore</span><span class="o">::</span><span class="n">Vettore</span><span class="p">()</span> <span class="p">{</span>
     <span class="n">setModulo</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
@@ -1641,7 +1641,7 @@
 <span class="n">Vettore</span> <span class="n">Vettore</span><span class="o">::</span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="k">const</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">op</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">double</span> <span class="n">res_angolo</span> <span class="o">=</span> <span class="n">abs</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span> <span class="o">-</span> <span class="n">op</span><span class="p">.</span><span class="n">angolo</span><span class="p">);</span>
     <span class="kt">double</span> <span class="n">norma</span> <span class="o">=</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span> <span class="o">*</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="n">op</span><span class="p">.</span><span class="n">modulo</span> <span class="o">*</span> <span class="n">op</span><span class="p">.</span><span class="n">modulo</span><span class="p">)</span> <span class="o">-</span> <span class="p">(</span><span class="mi">2</span> <span class="o">*</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span> <span class="o">*</span> <span class="n">op</span><span class="p">.</span><span class="n">modulo</span> <span class="o">*</span> <span class="n">cos</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span><span class="p">));</span>
-    <span class="k">return</span> <span class="nf">Vettore</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">norma</span><span class="p">),</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span> <span class="o">+</span> <span class="n">op</span><span class="p">.</span><span class="n">angolo</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">Vettore</span><span class="p">(</span><span class="n">sqrt</span><span class="p">(</span><span class="n">norma</span><span class="p">),</span> <span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span> <span class="o">+</span> <span class="n">op</span><span class="p">.</span><span class="n">angolo</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Proviamo ad invocare l'operatore somma usando la sintassi infissa:</p>
@@ -1662,7 +1662,7 @@
 <span class="n">Vettore</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="kt">double</span> <span class="n">modulo</span><span class="p">);</span>
 <span class="c1">// geometria.cpp</span>
 <span class="n">Vettore</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="kt">double</span> <span class="n">modulo</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nf">Vettore</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span> <span class="o">+</span> <span class="n">modulo</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">Vettore</span><span class="p">(</span><span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span> <span class="o">+</span> <span class="n">modulo</span><span class="p">,</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span><span class="p">);</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Provando a verificare la commutatività dell'operatore precedente, noteremo un errore a runtime:</p>
@@ -1690,11 +1690,11 @@
 <span class="c1">// geometria.cpp</span>
 <span class="n">Vettore</span> <span class="n">Geometria</span><span class="o">::</span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">right</span><span class="p">,</span> <span class="kt">double</span> <span class="n">left</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">return</span> <span class="nf">Vettore</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">.</span><span class="n">getAngolo</span><span class="p">());</span>
+    <span class="k">return</span> <span class="n">Vettore</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">.</span><span class="n">getAngolo</span><span class="p">());</span>
 <span class="p">}</span>
 <span class="n">Vettore</span> <span class="n">Geometria</span><span class="o">::</span><span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="kt">double</span> <span class="n">right</span><span class="p">,</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">left</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">return</span> <span class="nf">Vettore</span><span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">right</span><span class="p">,</span> <span class="n">left</span><span class="p">.</span><span class="n">getAngolo</span><span class="p">());</span>
+    <span class="k">return</span> <span class="n">Vettore</span><span class="p">(</span><span class="n">left</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">right</span><span class="p">,</span> <span class="n">left</span><span class="p">.</span><span class="n">getAngolo</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
 <p>Il problema principale è che stiamo duplicando gli overload per ogni operatore, con tutto quello che ne consegue. Un modo più "elegante" di procedere è usare un apposito costruttore, che accetti soltanto il valore del modulo:</p>
@@ -1707,7 +1707,7 @@
     <span class="n">setAngolo</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="n">Vettore</span> <span class="k">operator</span><span class="o">+</span><span class="p">(</span><span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">right</span><span class="p">,</span> <span class="n">Vettore</span><span class="o">&amp;</span> <span class="n">left</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nf">Vettore</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">left</span><span class="p">.</span><span class="n">getModulo</span><span class="p">());</span>
+    <span class="k">return</span> <span class="n">Vettore</span><span class="p">(</span><span class="n">right</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">left</span><span class="p">.</span><span class="n">getModulo</span><span class="p">());</span>
 <span class="p">}</span>
 </code></pre></div>
 <div class="admonition note">
