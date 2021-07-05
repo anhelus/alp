@@ -1,0 +1,2006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>08 - Cenni a NumPy - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+  
+
+
+
+  
+  
+
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-J2XESD8WDV",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#numpy-e-manipolazione-di-array" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              08 - Cenni a NumPy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bacheca.html" class="md-nav__link">
+        Bacheca avvisi
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Informazioni sul corso
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Informazioni sul corso" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Informazioni sul corso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ricevimento.html" class="md-nav__link">
+        Ricevimento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Comunicare col docente
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Comunicare col docente" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Comunicare col docente
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comunicazioni/standard.html" class="md-nav__link">
+        Varie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comunicazioni/temi.html" class="md-nav__link">
+        Sui temi d'anno
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Esami
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Esami" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Esami
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_3_1">
+        Modalità standard
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Modalità standard" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Modalità standard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/intro.html" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_3_2">
+        Tema d'anno
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tema d'anno" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tema d'anno
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/intro.html" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/valutazione.html" class="md-nav__link">
+        Valutazione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/faq.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_4" type="checkbox" id="__nav_3_3_2_4" >
+      
+      <label class="md-nav__link" for="__nav_3_3_2_4">
+        A.A. 2020/2021
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="A.A. 2020/2021" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          A.A. 2020/2021
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/date.html" class="md-nav__link">
+        Date rilevanti
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/documenti.html" class="md-nav__link">
+        Documenti
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/chiarimenti.html" class="md-nav__link">
+        Chiarimenti
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_5" type="checkbox" id="__nav_3_3_2_5" >
+      
+      <label class="md-nav__link" for="__nav_3_3_2_5">
+        Esempio
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Esempio" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Esempio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/traccia.html" class="md-nav__link">
+        Traccia
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_prima.html" class="md-nav__link">
+        Parte Prima
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_seconda.html" class="md-nav__link">
+        Parte Seconda
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_terza.html" class="md-nav__link">
+        Parte Terza
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_quarta.html" class="md-nav__link">
+        Parte Quarta
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Dispense
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dispense" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Dispense
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_materiale/programma.html" class="md-nav__link">
+        Slides proiettate a lezione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Teoria
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
+      
+      <label class="md-nav__link" for="__nav_4_2_1">
+        Concetti Introduttivi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Concetti Introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/01_intro.html" class="md-nav__link">
+        01 - Introduzione all'Informatica
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/02_algoritmi.html" class="md-nav__link">
+        02 - Gli Algoritmi
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/04_rappresentazione.html" class="md-nav__link">
+        04 - Rappresentazione dei dati
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2_2">
+        Programmazione
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmazione" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/03_variabili.html" class="md-nav__link">
+        11 - Variabili
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/04_funzioni.html" class="md-nav__link">
+        12 - Funzioni
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/05_complessita.html" class="md-nav__link">
+        13 - Complessità computazionale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/06_strutture_dati.html" class="md-nav__link">
+        14 - Strutture dati
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
+      
+      <label class="md-nav__link" for="__nav_4_2_3">
+        Algoritmi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Algoritmi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algoritmi/04_merge_sort.html" class="md-nav__link">
+        17 - Merge sort
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algoritmi/05_quick_sort.html" class="md-nav__link">
+        18 - Quick sort
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" type="checkbox" id="__nav_4_2_4" >
+      
+      <label class="md-nav__link" for="__nav_4_2_4">
+        Modelli di calcolo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Modelli di calcolo" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Modelli di calcolo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_modelli/01_turing.html" class="md-nav__link">
+        20 - Macchina di Turing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Programmazione
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmazione" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
+      
+      <label class="md-nav__link" for="__nav_4_3_1">
+        Linguaggio C
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linguaggio C" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linguaggio C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_linguaggio_c/01_introduzione.html" class="md-nav__link">
+        01 - Introduzione al C
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
+      
+      <label class="md-nav__link" for="__nav_4_3_2">
+        Linguaggio C++
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linguaggio C++" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linguaggio C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/01_c_vs_cpp.html" class="md-nav__link">
+        01 - C vs. C++
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/02_definizioni.html" class="md-nav__link">
+        02 - Alcune definizioni (in C++!)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/03_classi.html" class="md-nav__link">
+        03 - Le classi (parte uno)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/04_definizioni_adv.html" class="md-nav__link">
+        04 - Alcune definizioni (più avanzate)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/05_classi_adv.html" class="md-nav__link">
+        05 - Le classi (parte due)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/06_metodi.html" class="md-nav__link">
+        06 - Dettagli sui metodi
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/07_ereditarieta.html" class="md-nav__link">
+        07 - Ereditarietà
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/08_polimorfismo.html" class="md-nav__link">
+        08 - Polimorfismo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/09_container.html" class="md-nav__link">
+        09 - Container ed iteratori
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02_linguaggio_cpp/10_file.html" class="md-nav__link">
+        10 - File in C++
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" checked>
+      
+      <label class="md-nav__link" for="__nav_4_3_3">
+        Linugaggio Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linugaggio Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linugaggio Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_intro.html" class="md-nav__link">
+        01 - Introduzione al Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_programmare.html" class="md-nav__link">
+        02 - Programmare in Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_strutture.html" class="md-nav__link">
+        03 - Strutture Dati
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_moduli.html" class="md-nav__link">
+        04 - Moduli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_classi.html" class="md-nav__link">
+        05 - Classi e concetti avanzati
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="06_file.html" class="md-nav__link">
+        06 - I/O in Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_test.html" class="md-nav__link">
+        07 - Cenni ai test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          08 - Cenni a NumPy
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="08_numpy.html" class="md-nav__link md-nav__link--active">
+        08 - Cenni a NumPy
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-e-numpy" class="md-nav__link">
+    Cosa è NumPy?
+  </a>
+  
+    <nav class="md-nav" aria-label="Cosa è NumPy?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installazione-di-numpy" class="md-nav__link">
+    Installazione di NumPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-di-numpy" class="md-nav__link">
+    Uso di NumPy
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso di NumPy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importazione-di-numpy" class="md-nav__link">
+    Importazione di NumPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-di-un-array" class="md-nav__link">
+    Creazione di un array
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione di un array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creazione-diretta" class="md-nav__link">
+    Creazione diretta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-di-ndarray" class="md-nav__link">
+    Uso di ndarray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-arange" class="md-nav__link">
+    Funzione arange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensioni-dellarray" class="md-nav__link">
+    Dimensioni dell'array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operazioni-elementari" class="md-nav__link">
+    Operazioni elementari
+  </a>
+  
+    <nav class="md-nav" aria-label="Operazioni elementari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#somma-di-array" class="md-nav__link">
+    Somma di array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prodotto-di-array" class="md-nav__link">
+    Prodotto di array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexing-e-slicing" class="md-nav__link">
+    Indexing e slicing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-di-un-array" class="md-nav__link">
+    Tipo di un array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-di-array" class="md-nav__link">
+    Copia di array
+  </a>
+  
+    <nav class="md-nav" aria-label="Copia di array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shallow-copy" class="md-nav__link">
+    Shallow copy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-copy" class="md-nav__link">
+    Deep copy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algebra-matriciale" class="md-nav__link">
+    Algebra matriciale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Esercizi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Esercizi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Esercizi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/esercizi/programmazione.html" class="md-nav__link">
+        Esercizi di programmazione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/esercizi/scritto.html" class="md-nav__link">
+        Esercizi per l'esame
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Appendici
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Appendici
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        Configurazioni
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configurazioni" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Configurazioni
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_appendici/configurazioni/a_vs_code_guide.html" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_appendici/configurazioni/b_vs_community_guide.html" class="md-nav__link">
+        Visual Studio Community
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cosa-e-numpy" class="md-nav__link">
+    Cosa è NumPy?
+  </a>
+  
+    <nav class="md-nav" aria-label="Cosa è NumPy?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#installazione-di-numpy" class="md-nav__link">
+    Installazione di NumPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-di-numpy" class="md-nav__link">
+    Uso di NumPy
+  </a>
+  
+    <nav class="md-nav" aria-label="Uso di NumPy">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importazione-di-numpy" class="md-nav__link">
+    Importazione di NumPy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-di-un-array" class="md-nav__link">
+    Creazione di un array
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione di un array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creazione-diretta" class="md-nav__link">
+    Creazione diretta
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uso-di-ndarray" class="md-nav__link">
+    Uso di ndarray
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#funzione-arange" class="md-nav__link">
+    Funzione arange
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dimensioni-dellarray" class="md-nav__link">
+    Dimensioni dell'array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operazioni-elementari" class="md-nav__link">
+    Operazioni elementari
+  </a>
+  
+    <nav class="md-nav" aria-label="Operazioni elementari">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#somma-di-array" class="md-nav__link">
+    Somma di array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prodotto-di-array" class="md-nav__link">
+    Prodotto di array
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#indexing-e-slicing" class="md-nav__link">
+    Indexing e slicing
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo-di-un-array" class="md-nav__link">
+    Tipo di un array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copia-di-array" class="md-nav__link">
+    Copia di array
+  </a>
+  
+    <nav class="md-nav" aria-label="Copia di array">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shallow-copy" class="md-nav__link">
+    Shallow copy
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#deep-copy" class="md-nav__link">
+    Deep copy
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#algebra-matriciale" class="md-nav__link">
+    Algebra matriciale
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="numpy-e-manipolazione-di-array">NumPy e manipolazione di array<a class="headerlink" href="#numpy-e-manipolazione-di-array" title="Permanent link">&para;</a></h1>
+<h2 id="cosa-e-numpy">Cosa è NumPy?<a class="headerlink" href="#cosa-e-numpy" title="Permanent link">&para;</a></h2>
+<p>NumPy è una libreria per la manipolazione di array in Python.</p>
+<h3 id="installazione-di-numpy">Installazione di NumPy<a class="headerlink" href="#installazione-di-numpy" title="Permanent link">&para;</a></h3>
+<p>Iniziamo installandola mediante il <em>package manager</em> integrato di Python da riga di comando, chiamato <code>pip</code>:</p>
+<div class="highlight"><pre><span></span><code>pip install numpy
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>In questa maniera, Numpy sarà installato globalmente.</p>
+</div>
+<p>Una volta completata l'installazione, potremo accedere alle variabili, classi e funzioni definite dalla libreria.</p>
+<h3 id="uso-di-numpy">Uso di NumPy<a class="headerlink" href="#uso-di-numpy" title="Permanent link">&para;</a></h3>
+<h4 id="importazione-di-numpy">Importazione di NumPy<a class="headerlink" href="#importazione-di-numpy" title="Permanent link">&para;</a></h4>
+<p>Iniziamo importando <code>numpy</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Notiamo l'utilizzo del modulo sotto forma di alias.</p>
+</div>
+<h4 id="creazione-di-un-array">Creazione di un array<a class="headerlink" href="#creazione-di-un-array" title="Permanent link">&para;</a></h4>
+<p>Esistono diversi modi per creare un array.</p>
+<h5 id="creazione-diretta">Creazione diretta<a class="headerlink" href="#creazione-diretta" title="Permanent link">&para;</a></h5>
+<p>Il primo è crearlo direttamente come oggetto di tipo <code>array</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Si utilizza la notazione <code>np</code> a causa del fatto che <code>numpy</code> è stato importato con suddetto alias. Se questo non fosse avvenuto, sarebbe stato necessario usare <code>numpy.array</code>.</p>
+</div>
+<h5 id="uso-di-ndarray">Uso di <code>ndarray</code><a class="headerlink" href="#uso-di-ndarray" title="Permanent link">&para;</a></h5>
+<p>Gli array NumPy sono un'istanza della classe <code>ndarray</code>. Possiamo quindi crearne uno richiamandola direttamente:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">f</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ndarray</span><span class="p">(</span><span class="n">shape</span><span class="o">=</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">2</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">f</span>
+<span class="n">array</span><span class="p">([[</span><span class="mf">5.e-324</span><span class="p">,</span> <span class="mf">5.e-324</span><span class="p">],</span>
+       <span class="p">[</span><span class="mf">0.e+000</span><span class="p">,</span> <span class="mf">0.e+000</span><span class="p">]])</span>
+</code></pre></div>
+<h5 id="funzione-arange">Funzione <code>arange</code><a class="headerlink" href="#funzione-arange" title="Permanent link">&para;</a></h5>
+<p>La funzione <code>arange</code> è analoga alla funzione <code>range</code> di Python, ma restituisce un array NumPy invece di una lista.</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">])</span>
+</code></pre></div>
+<h5 id="dimensioni-dellarray">Dimensioni dell'array<a class="headerlink" href="#dimensioni-dellarray" title="Permanent link">&para;</a></h5>
+<p>Un array in NumPy può essere ad <span class="arithmatex">\(n\)</span> dimensioni:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">one_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">one_d</span>
+<span class="n">array</span><span class="p">([</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">two_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">two_d</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">6</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">8</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">three_d</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">27</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">three_d</span>
+<span class="n">array</span><span class="p">([[[</span> <span class="mi">0</span><span class="p">,</span>  <span class="mi">1</span><span class="p">,</span>  <span class="mi">2</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">3</span><span class="p">,</span>  <span class="mi">4</span><span class="p">,</span>  <span class="mi">5</span><span class="p">],</span>
+        <span class="p">[</span> <span class="mi">6</span><span class="p">,</span>  <span class="mi">7</span><span class="p">,</span>  <span class="mi">8</span><span class="p">]],</span>
+
+       <span class="p">[[</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">11</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">12</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">14</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">17</span><span class="p">]],</span>
+
+       <span class="p">[[</span><span class="mi">18</span><span class="p">,</span> <span class="mi">19</span><span class="p">,</span> <span class="mi">20</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">21</span><span class="p">,</span> <span class="mi">22</span><span class="p">,</span> <span class="mi">23</span><span class="p">],</span>
+        <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">25</span><span class="p">,</span> <span class="mi">26</span><span class="p">]]])</span>
+</code></pre></div>
+<p>Nell'esempio precedente, <code>one_d</code> è un esempio di array monodimensionale, <code>two_d</code> bidimensionale (matrice) e <code>three_d</code> tridimensionale (tensore). Notiamo l'uso della funzione <code>reshape</code> che accetta come parametri una serie di interi, dove l'i-mo intero rappresenta il numero di elementi della i-ma dimensione dell'array. Quest'ultima è facilmente verificabile mediante l'attributo <code>shape</code>, ovvero una tupla che restituisce il numero di dimensioni dell'array:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">three_d</span><span class="o">.</span><span class="n">shape</span>
+<span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="operazioni-elementari">Operazioni elementari<a class="headerlink" href="#operazioni-elementari" title="Permanent link">&para;</a></h4>
+<h5 id="somma-di-array">Somma di array<a class="headerlink" href="#somma-di-array" title="Permanent link">&para;</a></h5>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="mi">15</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span><span class="mi">21</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">36</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">36</span><span class="p">,</span> <span class="mi">36</span><span class="p">,</span> <span class="mi">36</span><span class="p">]])</span>
+</code></pre></div>
+<h5 id="prodotto-di-array">Prodotto di array<a class="headerlink" href="#prodotto-di-array" title="Permanent link">&para;</a></h5>
+<p>Prodotto elemento per elemento:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">180</span><span class="p">,</span> <span class="mi">203</span><span class="p">,</span> <span class="mi">224</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">243</span><span class="p">,</span> <span class="mi">260</span><span class="p">,</span> <span class="mi">275</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">288</span><span class="p">,</span> <span class="mi">299</span><span class="p">,</span> <span class="mi">308</span><span class="p">]])</span>
+</code></pre></div>
+<p>Prodotto matriciale:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">a</span> <span class="o">@</span> <span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">561</span><span class="p">,</span>  <span class="mi">540</span><span class="p">,</span>  <span class="mi">519</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">804</span><span class="p">,</span>  <span class="mi">774</span><span class="p">,</span>  <span class="mi">744</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">1047</span><span class="p">,</span> <span class="mi">1008</span><span class="p">,</span>  <span class="mi">969</span><span class="p">]])</span>
+</code></pre></div>
+<h4 id="indexing-e-slicing">Indexing e slicing<a class="headerlink" href="#indexing-e-slicing" title="Permanent link">&para;</a></h4>
+<p>Le operazioni di indexing e slicing sono analoghe a quelle viste per le liste:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">2</span><span class="p">,:]</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">30</span><span class="p">,</span>  <span class="mi">29</span><span class="p">,</span>  <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mi">27</span><span class="p">,</span>  <span class="mi">26</span><span class="p">,</span>  <span class="mi">25</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span>
+<span class="mi">30</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
+</code></pre></div>
+<p>Notiamo che gli array NumPy sono mutabili.</p>
+<h4 id="tipo-di-un-array">Tipo di un array<a class="headerlink" href="#tipo-di-un-array" title="Permanent link">&para;</a></h4>
+<p>A differenza delle liste, gli array NumPy sono tipizzati:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;stringa&#39;</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s2">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">ValueError</span><span class="p">:</span> <span class="n">invalid</span> <span class="n">literal</span> <span class="k">for</span> <span class="nb">int</span><span class="p">()</span> <span class="k">with</span> <span class="n">base</span> <span class="mi">10</span><span class="p">:</span> <span class="s1">&#39;stringa&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.1</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="nb">type</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">])</span>
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">&#39;</span><span class="nc">numpy</span><span class="o">.</span><span class="n">int32</span><span class="s1">&#39;&gt;</span>
+</code></pre></div>
+<p>Viene però effettuato un cast automatico nel tipo assegnato agli elementi dell'array:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+</code></pre></div>
+<h4 id="copia-di-array">Copia di array<a class="headerlink" href="#copia-di-array" title="Permanent link">&para;</a></h4>
+<p>La copia di un array con l'operatore di assegnazione la creazione di un alias:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">c</span> <span class="o">=</span> <span class="n">b</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">60</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">c</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+</code></pre></div>
+<p>Notiamo quindi come b e c siano due alias per gli stessi dati.</p>
+<h5 id="shallow-copy">Shallow copy<a class="headerlink" href="#shallow-copy" title="Permanent link">&para;</a></h5>
+<p>La shallow copy (ovvero la copia per reference) produce effetti analoghi ed avviene mediante il metodo <code>view()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">d</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">view</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">60</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">30</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">d</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+</code></pre></div>
+<h5 id="deep-copy">Deep copy<a class="headerlink" href="#deep-copy" title="Permanent link">&para;</a></h5>
+<p>La deep copy (ovvero la copia per valore) avviene mediante il metodo <code>copy()</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">e</span> <span class="o">=</span> <span class="n">b</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">b</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">e</span>
+<span class="n">array</span><span class="p">([[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">29</span><span class="p">,</span> <span class="mi">28</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">27</span><span class="p">,</span> <span class="mi">26</span><span class="p">,</span> <span class="mi">25</span><span class="p">],</span>
+       <span class="p">[</span><span class="mi">24</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">22</span><span class="p">]])</span>
+</code></pre></div>
+<h4 id="algebra-matriciale">Algebra matriciale<a class="headerlink" href="#algebra-matriciale" title="Permanent link">&para;</a></h4>
+<p>NumPy offre diverse operazioni di algebra matriciale. Ad esempio, è possibile invertire una matrice:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">inv</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="n">array</span><span class="p">([[</span><span class="o">-</span><span class="mf">0.03448276</span><span class="p">,</span>  <span class="mf">0.06896552</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.03448276</span><span class="p">],</span>
+       <span class="p">[</span> <span class="mf">0.06896552</span><span class="p">,</span> <span class="o">-</span><span class="mf">7.47126437</span><span class="p">,</span>  <span class="mf">8.40229885</span><span class="p">],</span>
+       <span class="p">[</span><span class="o">-</span><span class="mf">0.03448276</span><span class="p">,</span>  <span class="mf">7.73563218</span><span class="p">,</span> <span class="o">-</span><span class="mf">8.70114943</span><span class="p">]])</span>
+</code></pre></div>
+<p>oppure calcolarne la norma di Frobenius:</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">norm</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="mf">72.42237223399962</span>
+</code></pre></div>
+<p>Per un elenco completo delle funzioni, si rimanda alla <a href="https://numpy.org/doc/">reference di NumPy</a>.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="07_test.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 07 - Cenni ai test" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              07 - Cenni ai test
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../../01_esami/standard/esercizi/programmazione.html" class="md-footer__link md-footer__link--next" aria-label="Next: Esercizi di programmazione" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Esercizi di programmazione
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>Corso di Informatica - Angelo Cardellicchio</title>
+        <title>17 - Merge sort - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
       
     
@@ -36,7 +36,7 @@
     
     
     
-      <link rel="stylesheet" href="stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
     
       
@@ -66,7 +66,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#corso-di-informatica" class="md-skip">
+        <a href="#il-paradigma-divide-et-impera-divide-and-conquer" class="md-skip">
           Skip to content
         </a>
       
@@ -85,7 +85,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+    <a href="../../index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -104,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home del corso
+              17 - Merge sort
             
           </span>
         </div>
@@ -165,7 +165,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+    <a href="../../index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -182,51 +182,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Home del corso
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="index.html" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../index.html" class="md-nav__link">
         Home del corso
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#informazioni-utili" class="md-nav__link">
-    Informazioni utili
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -239,7 +199,7 @@
   
   
     <li class="md-nav__item">
-      <a href="bacheca.html" class="md-nav__link">
+      <a href="../../bacheca.html" class="md-nav__link">
         Bacheca avvisi
       </a>
     </li>
@@ -275,7 +235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ricevimento.html" class="md-nav__link">
+      <a href="../../ricevimento.html" class="md-nav__link">
         Ricevimento
       </a>
     </li>
@@ -308,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="comunicazioni/standard.html" class="md-nav__link">
+      <a href="../../comunicazioni/standard.html" class="md-nav__link">
         Varie
       </a>
     </li>
@@ -320,7 +280,7 @@
   
   
     <li class="md-nav__item">
-      <a href="comunicazioni/temi.html" class="md-nav__link">
+      <a href="../../comunicazioni/temi.html" class="md-nav__link">
         Sui temi d'anno
       </a>
     </li>
@@ -380,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/standard/intro.html" class="md-nav__link">
+      <a href="../../01_esami/standard/intro.html" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -419,7 +379,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/intro.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/intro.html" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -431,7 +391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/valutazione.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/valutazione.html" class="md-nav__link">
         Valutazione
       </a>
     </li>
@@ -443,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/faq.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/faq.html" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -476,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/2020-2021/date.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/2020-2021/date.html" class="md-nav__link">
         Date rilevanti
       </a>
     </li>
@@ -488,7 +448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/2020-2021/documenti.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/2020-2021/documenti.html" class="md-nav__link">
         Documenti
       </a>
     </li>
@@ -500,7 +460,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/2020-2021/chiarimenti.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/2020-2021/chiarimenti.html" class="md-nav__link">
         Chiarimenti
       </a>
     </li>
@@ -539,7 +499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/esempio/traccia.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/esempio/traccia.html" class="md-nav__link">
         Traccia
       </a>
     </li>
@@ -551,7 +511,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/esempio/parte_prima.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/esempio/parte_prima.html" class="md-nav__link">
         Parte Prima
       </a>
     </li>
@@ -563,7 +523,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/esempio/parte_seconda.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/esempio/parte_seconda.html" class="md-nav__link">
         Parte Seconda
       </a>
     </li>
@@ -575,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/esempio/parte_terza.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/esempio/parte_terza.html" class="md-nav__link">
         Parte Terza
       </a>
     </li>
@@ -587,7 +547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/tema_anno/esempio/parte_quarta.html" class="md-nav__link">
+      <a href="../../01_esami/tema_anno/esempio/parte_quarta.html" class="md-nav__link">
         Parte Quarta
       </a>
     </li>
@@ -624,12 +584,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       <label class="md-nav__link" for="__nav_4">
         Dispense
@@ -647,7 +609,7 @@
   
   
     <li class="md-nav__item">
-      <a href="00_materiale/programma.html" class="md-nav__link">
+      <a href="../../00_materiale/programma.html" class="md-nav__link">
         Slides proiettate a lezione
       </a>
     </li>
@@ -657,12 +619,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" checked>
       
       <label class="md-nav__link" for="__nav_4_2">
         Teoria
@@ -701,7 +665,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/01_introduttivi/01_intro.html" class="md-nav__link">
+      <a href="../01_introduttivi/01_intro.html" class="md-nav__link">
         01 - Introduzione all'Informatica
       </a>
     </li>
@@ -713,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/01_introduttivi/02_algoritmi.html" class="md-nav__link">
+      <a href="../01_introduttivi/02_algoritmi.html" class="md-nav__link">
         02 - Gli Algoritmi
       </a>
     </li>
@@ -725,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/01_introduttivi/04_rappresentazione.html" class="md-nav__link">
+      <a href="../01_introduttivi/04_rappresentazione.html" class="md-nav__link">
         04 - Rappresentazione dei dati
       </a>
     </li>
@@ -764,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/04_programmazione/03_variabili.html" class="md-nav__link">
+      <a href="../04_programmazione/03_variabili.html" class="md-nav__link">
         11 - Variabili
       </a>
     </li>
@@ -776,7 +740,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/04_programmazione/04_funzioni.html" class="md-nav__link">
+      <a href="../04_programmazione/04_funzioni.html" class="md-nav__link">
         12 - Funzioni
       </a>
     </li>
@@ -788,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/04_programmazione/05_complessita.html" class="md-nav__link">
+      <a href="../04_programmazione/05_complessita.html" class="md-nav__link">
         13 - Complessità computazionale
       </a>
     </li>
@@ -800,7 +764,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/04_programmazione/06_strutture_dati.html" class="md-nav__link">
+      <a href="../04_programmazione/06_strutture_dati.html" class="md-nav__link">
         14 - Strutture dati
       </a>
     </li>
@@ -816,12 +780,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" checked>
       
       <label class="md-nav__link" for="__nav_4_2_3">
         Algoritmi
@@ -837,11 +803,107 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="02_dispense/05_algoritmi/04_merge_sort.html" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          17 - Merge sort
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="04_merge_sort.html" class="md-nav__link md-nav__link--active">
         17 - Merge sort
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#il-paradigma-divide-et-impera-divide-and-conquer" class="md-nav__link">
+    Il paradigma Divide-et-Impera (Divide-and-Conquer)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    Descrizione dell'algoritmo
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrizione dell'algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-esempio" class="md-nav__link">
+    Un esempio
+  </a>
+  
+    <nav class="md-nav" aria-label="Un esempio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    Merging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisi-computazionale" class="md-nav__link">
+    Analisi computazionale
+  </a>
+  
+    <nav class="md-nav" aria-label="Analisi computazionale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-combine" class="md-nav__link">
+    Passo combine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisi-di-caso-peggiore" class="md-nav__link">
+    Analisi di caso peggiore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -851,7 +913,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/05_algoritmi/05_quick_sort.html" class="md-nav__link">
+      <a href="05_quick_sort.html" class="md-nav__link">
         18 - Quick sort
       </a>
     </li>
@@ -890,7 +952,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/06_modelli/01_turing.html" class="md-nav__link">
+      <a href="../06_modelli/01_turing.html" class="md-nav__link">
         20 - Macchina di Turing
       </a>
     </li>
@@ -956,7 +1018,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/01_linguaggio_c/01_introduzione.html" class="md-nav__link">
+      <a href="../programmazione/01_linguaggio_c/01_introduzione.html" class="md-nav__link">
         01 - Introduzione al C
       </a>
     </li>
@@ -995,7 +1057,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/01_c_vs_cpp.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/01_c_vs_cpp.html" class="md-nav__link">
         01 - C vs. C++
       </a>
     </li>
@@ -1007,7 +1069,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/02_definizioni.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/02_definizioni.html" class="md-nav__link">
         02 - Alcune definizioni (in C++!)
       </a>
     </li>
@@ -1019,7 +1081,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/03_classi.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/03_classi.html" class="md-nav__link">
         03 - Le classi (parte uno)
       </a>
     </li>
@@ -1031,7 +1093,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/04_definizioni_adv.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/04_definizioni_adv.html" class="md-nav__link">
         04 - Alcune definizioni (più avanzate)
       </a>
     </li>
@@ -1043,7 +1105,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/05_classi_adv.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/05_classi_adv.html" class="md-nav__link">
         05 - Le classi (parte due)
       </a>
     </li>
@@ -1055,7 +1117,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/06_metodi.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/06_metodi.html" class="md-nav__link">
         06 - Dettagli sui metodi
       </a>
     </li>
@@ -1067,7 +1129,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/07_ereditarieta.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/07_ereditarieta.html" class="md-nav__link">
         07 - Ereditarietà
       </a>
     </li>
@@ -1079,7 +1141,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/08_polimorfismo.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/08_polimorfismo.html" class="md-nav__link">
         08 - Polimorfismo
       </a>
     </li>
@@ -1091,7 +1153,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/09_container.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/09_container.html" class="md-nav__link">
         09 - Container ed iteratori
       </a>
     </li>
@@ -1103,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/02_linguaggio_cpp/10_file.html" class="md-nav__link">
+      <a href="../programmazione/02_linguaggio_cpp/10_file.html" class="md-nav__link">
         10 - File in C++
       </a>
     </li>
@@ -1142,7 +1204,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/01_intro.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/01_intro.html" class="md-nav__link">
         01 - Introduzione al Python
       </a>
     </li>
@@ -1154,7 +1216,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/02_programmare.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/02_programmare.html" class="md-nav__link">
         02 - Programmare in Python
       </a>
     </li>
@@ -1166,7 +1228,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/03_strutture.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/03_strutture.html" class="md-nav__link">
         03 - Strutture Dati
       </a>
     </li>
@@ -1178,7 +1240,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/04_moduli.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/04_moduli.html" class="md-nav__link">
         04 - Moduli
       </a>
     </li>
@@ -1190,7 +1252,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/05_classi.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/05_classi.html" class="md-nav__link">
         05 - Classi e concetti avanzati
       </a>
     </li>
@@ -1202,7 +1264,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/06_file.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/06_file.html" class="md-nav__link">
         06 - I/O in Python
       </a>
     </li>
@@ -1214,7 +1276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/07_test.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/07_test.html" class="md-nav__link">
         07 - Cenni ai test
       </a>
     </li>
@@ -1226,7 +1288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="02_dispense/programmazione/03_linguaggio_python/08_numpy.html" class="md-nav__link">
+      <a href="../programmazione/03_linguaggio_python/08_numpy.html" class="md-nav__link">
         08 - Cenni a NumPy
       </a>
     </li>
@@ -1280,7 +1342,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/standard/esercizi/programmazione.html" class="md-nav__link">
+      <a href="../../01_esami/standard/esercizi/programmazione.html" class="md-nav__link">
         Esercizi di programmazione
       </a>
     </li>
@@ -1292,7 +1354,7 @@
   
   
     <li class="md-nav__item">
-      <a href="01_esami/standard/esercizi/scritto.html" class="md-nav__link">
+      <a href="../../01_esami/standard/esercizi/scritto.html" class="md-nav__link">
         Esercizi per l'esame
       </a>
     </li>
@@ -1355,7 +1417,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_appendici/configurazioni/a_vs_code_guide.html" class="md-nav__link">
+      <a href="../../03_appendici/configurazioni/a_vs_code_guide.html" class="md-nav__link">
         Visual Studio Code
       </a>
     </li>
@@ -1367,7 +1429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="03_appendici/configurazioni/b_vs_community_guide.html" class="md-nav__link">
+      <a href="../../03_appendici/configurazioni/b_vs_community_guide.html" class="md-nav__link">
         Visual Studio Community
       </a>
     </li>
@@ -1402,8 +1464,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1412,9 +1472,69 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#informazioni-utili" class="md-nav__link">
-    Informazioni utili
+  <a href="#il-paradigma-divide-et-impera-divide-and-conquer" class="md-nav__link">
+    Il paradigma Divide-et-Impera (Divide-and-Conquer)
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    Descrizione dell'algoritmo
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrizione dell'algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#un-esempio" class="md-nav__link">
+    Un esempio
+  </a>
+  
+    <nav class="md-nav" aria-label="Un esempio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#merging" class="md-nav__link">
+    Merging
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisi-computazionale" class="md-nav__link">
+    Analisi computazionale
+  </a>
+  
+    <nav class="md-nav" aria-label="Analisi computazionale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-combine" class="md-nav__link">
+    Passo combine
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analisi-di-caso-peggiore" class="md-nav__link">
+    Analisi di caso peggiore
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1431,47 +1551,109 @@
               
                 
                 
-                <h1 id="corso-di-informatica">Corso di Informatica<a class="headerlink" href="#corso-di-informatica" title="Permanent link">&para;</a></h1>
-<p>Benvenuti! In questa pagina sono disponibili alcune informazioni di carattere generale sul corso.</p>
-<h2 id="informazioni-utili">Informazioni utili<a class="headerlink" href="#informazioni-utili" title="Permanent link">&para;</a></h2>
-<table>
-<thead>
-<tr>
-<th>Argomento</th>
-<th>Link - informazioni</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Email del docente</td>
-<td>E-mail del docente: <a href="mailto:angelo.cardellicchio@uniba.it">angelo.cardellicchio@uniba.it</a></td>
-</tr>
-<tr>
-<td>Orari del corso</td>
-<td>Il corso si terrà il <strong>lunedì</strong> ed il <strong>mercoledì</strong> dalle <strong>12:00</strong> alle <strong>14:00</strong>.</td>
-</tr>
-<tr>
-<td>Ricevimento</td>
-<td>Le informazioni relative ai ricevimenti sono disponibili a questo <a href="ricevimento.html">link</a>.</td>
-</tr>
-<tr>
-<td>Comunicazioni con il docente</td>
-<td>Le informazioni relative alle modalità di comunicazione con il docente sono disponibili a questo <a href="comunicazioni/standard.html">link</a>.</td>
-</tr>
-<tr>
-<td>Svolgimento delle lezioni</td>
-<td>Le lezioni sono svolte in modalità mista (50% degli studenti in Aula, 50% collegati da remoto). Il Corso sarà tenuto in Aula I del Dipartimento di Matematica.</td>
-</tr>
-<tr>
-<td>Prerequisiti</td>
-<td>Non sono necessari particolari prerequisiti per l'accesso al corso. E' comunque previsto l'utilizzo di un computer personale per lo svolgimento degli esercizi assegnati durante il corso.</td>
-</tr>
-<tr>
-<td>Bacheca degli avvisi</td>
-<td>Gli avvisi inerenti il corso sono disponibili a questo <a href="bacheca.html">link</a>.</td>
-</tr>
-</tbody>
-</table>
+                  <h1>17 - Merge sort</h1>
+                
+                <h2 id="il-paradigma-divide-et-impera-divide-and-conquer">Il paradigma Divide-et-Impera (Divide-and-Conquer)<a class="headerlink" href="#il-paradigma-divide-et-impera-divide-and-conquer" title="Permanent link">&para;</a></h2>
+<p>Prima di introdurre questo algoritmo ed il successivo, è opportuno parlare dell'approccio su cui sono basati, chiamato <strong>divide-et-impera</strong> o, in inglese, <strong>divide-and-conquer</strong>. Useremo la notazione inglese perché fa più "stile", ovviamente.</p>
+<p>Il paradigma divide-and-conquer è puramente ricorsivo: infatti, divide un problema in diversi sotto-problemi, che risultano essere riconducibili al caso originario, pur rimanendo meno complessi. Una volta ricondottisi ai singoli casi base, l'approccio risolve ciascuno dei singoli problemi, combinando le soluzioni per risolvere il problema originario.</p>
+<p>E' quindi possibile schematizzare il paradigma in tre parti:</p>
+<ol>
+<li><strong>divide</strong>: suddividiamo il problema in diversi sotto problemi, che rappresentano delle istanze più piccole del problema originario.</li>
+<li><strong>conquer</strong>: risolviamo ogni sotto-problema, se riconducibile ad un caso base.</li>
+<li><strong>combine</strong>: combiniamo le soluzioni ai sottoproblemi, arrivando a quella del problema originario.</li>
+</ol>
+<p>Schematizzando:</p>
+<p><img alt="divide_conquer" src="../../assets/images/05_algoritmi/04_merge_sort/divide_conquer.png# images" /></p>
+<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
+<p>Abbiamo già detto come il <strong>merge sort</strong> si basi su un approccio di tipo divide-and-conquer.</p>
+<p>Di conseguenza, partendo dal nostro solito problema (ovvero, l'ordinamento di un array), dobbiamo definire il <em>sotto-problema da risolvere</em>. Banalmente, questo potrà essere proprio quello di ordinare ciascun sotto-array in cui viene scomposto il nostro array originario.</p>
+<p>Utilizziamo in tal senso una notazione specifica per indicare il sotto-array che va dall'elemento di indice <span class="arithmatex">\(l\)</span> all'elemento di indice <span class="arithmatex">\(r\)</span>, denotandolo con <code>array[l, r]</code>. Per fare un esempio, se il nostro array iniziale fosse:</p>
+<div class="highlight"><pre><span></span><code>array = [8, 5, 12, 7, 4];
+</code></pre></div>
+<p>allora:</p>
+<div class="highlight"><pre><span></span><code>l = 0;
+r = 2;
+array[l,r] = [8, 5, 12];
+</code></pre></div>
+<p>Il merge sort utilizza l'approccio divide-and-conquer come segue:</p>
+<ol>
+<li><strong>divide</strong>: trova il valore <span class="arithmatex">\(q\)</span> intermedio tra <span class="arithmatex">\(l\)</span> ed <span class="arithmatex">\(r\)</span>. Se <span class="arithmatex">\(q\)</span> è dispari, lo approssimiamo all'intero inferiore;</li>
+<li><strong>conquer</strong>: ordina i due sotto-array creati dal passo <em>divide</em>. Ciò significa che si agirà su <code>array[l,q]</code> ed <code>array[q+1,r]</code>;</li>
+<li><strong>combine</strong>: unisci i due sotto-array in uno singolo <code>array[l, r]</code>.</li>
+</ol>
+<p>Ovviamente, come tutti i problemi ricorsivi, avremo bisogno di un caso base. Ciò avviene quando gli array risultanti dal passo <em>conquer</em> hanno meno di due elementi, ovvero quando <span class="arithmatex">\(l \geq r\)</span>: questo è ovviamente legato al fatto che un array vuoto o con un solo elemento è già ordinato di suo.</p>
+<h3 id="un-esempio">Un esempio<a class="headerlink" href="#un-esempio" title="Permanent link">&para;</a></h3>
+<p>Vediamo un esempio di utilizzo del merge sort. In tal senso, usiamo il nostro solito array con valori <code>[8, 5, 12, 7, 4]</code>.</p>
+<p>Al primo livello, l'array da considerare è quello completo, e quindi:</p>
+<div class="highlight"><pre><span></span><code>l = 0;
+r = 4;
+array[l,r] = [8, 5, 12, 7, 4]
+</code></pre></div>
+<ol>
+<li><strong>divide</strong>: in questo passo, calcoliamo <span class="arithmatex">\(q=2\)</span>;</li>
+<li><strong>conquer</strong>: in questo passo, notiamo che i due array non sono riconducibili ad un caso base, per cui ripetiamo il <em>divide</em>;</li>
+</ol>
+<p>Avremo quindi il secondo livello. In questo passo, l'array <code>array[0,1]</code> avrà ancora due elementi, per cui sarà necessario suddividerlo ulteriormente; stesso vale per <code>array[2,4]</code>.</p>
+<p>Arrivando in fondo, avremo la scomposizione di ogni array a livello di singolo elemento. Ciò comporta che si arriverà ad un certo punto ad una situazione in cui tutti gli array sotto esame saranno composti da un unico elemento, come mostrato in figura.</p>
+<p><img alt="divide_step" src="../../assets/images/05_algoritmi/04_merge_sort/divide_step.png# images" /></p>
+<p>A questo punto, ci si è ricondotti in ogni situazione al caso base. Potrà quindi avvenire lo step <em>conquer</em>, dove saranno ordinati i diversi sotto-array, ed infine lo step <em>combine</em>, che combinerà i risultati in uscita dal <em>conquer</em>. Questo processo è mostrato in figura.</p>
+<p><img alt="conquer_step" src="../../assets/images/05_algoritmi/04_merge_sort/conquer_step.png# images" /></p>
+<p>Notiamo come, dal punto di vista logico, i passaggi <em>divide</em> e <em>conquer</em> del merge sort siano in realtà abbastanza semplici. Il punto "complesso", quello dove avviene l'ordinamento vero è proprio, è il <em>combine</em>.</p>
+<h4 id="merging">Merging<a class="headerlink" href="#merging" title="Permanent link">&para;</a></h4>
+<p>Il passo <em>combine</em> è quello che ci permette di "unire" due sotto-array adiacenti, ovvero <code>array[l, q]</code> ed <code>array[q+1, r]</code>, in un singolo array ordinato.</p>
+<p>Supponiamo che l'array iniziale <code>array[l, r]</code> abbia <span class="arithmatex">\(n\)</span> elementi. E' necessario esaminare ciascuno di essi, per cui, nel caso migliore, potremo sperare in un tempo per l'unione in un <span class="arithmatex">\(O(n)\)</span>.</p>
+<p>Detto questo chiamiamo, per comodità, <code>array[l,q]</code> con il nome di <code>left</code>, ed <code>array[q+1, r]</code> con il nome di <code>right</code>.</p>
+<p>Vogliamo fare in modo che nell'elemento più a sinistra di <code>array</code>, ovvero <code>array[l]</code>, venga inserito l'elemento più minore presente sia in <code>left</code> sia in <code>right</code>. Ovviamente, dato che <code>left</code> e <code>right</code> si suppongono ordinati, il valore più piccolo può essere, all'inizio, o in <code>left[0]</code> o in <code>right[0]</code>.</p>
+<p>Possiamo usare quindi tre variabili per indicizzare gli array:</p>
+<ul>
+<li><code>i</code> indicizza il primo elemento di <code>left</code> non ancora copiato in <code>array</code>. Inizialmente, <code>i = 0</code>;</li>
+<li><code>j</code> indicizza il primo elemento di <code>right</code> non ancora copiato in <code>array</code>. Inizialmente, <code>j = 0</code>;</li>
+<li><code>k</code> indicizza la posizione successiva di <code>array</code> in cui copiare. Inizialmente, <code>k = l</code>.</li>
+</ul>
+<p>In pratica, avremo un ciclo all'interno del quale verranno reiterate le seguenti istruzioni:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span> <span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span> <span class="p">{</span>
+    <span class="n">array</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">];</span>
+    <span class="n">j</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="n">array</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="n">i</span><span class="o">++</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">k</span><span class="o">++</span><span class="p">;</span>
+</code></pre></div>
+<p>Potrà ovviamente accadere che uno tra <code>left</code> e <code>right</code> si "svuoti" per primo; di conseguenza, dato che l'altro è comunque ordinato, potremo semplicemente limitarci a copiarlo integralmente negli elementi restanti di <code>array</code>, senza la necessità di effettuare alcuna ulteriore comparazione.</p>
+<!-- ## Pseudocodice
+
+```
+mergeSort(array[], l, r)
+STEP 1: if r > l
+STEP 2:     m = floor((l + r)/2)            // Trovo valor medio tra gli estremi
+STEP 3:     mergeSort(array, l, m)          // Chiamo la funzione mergeSort sulla prima metà dell'array
+STEP 4:     mergeSort(array, m+1, r)        // Chiamo la funzione mergeSort sulla seconda metà dell'array
+STEP 5:     merge(array, l, m, r)           // Combino le due metà trovate negli step 3 e 4
+``` -->
+
+<h2 id="analisi-computazionale">Analisi computazionale<a class="headerlink" href="#analisi-computazionale" title="Permanent link">&para;</a></h2>
+<h3 id="passo-combine">Passo combine<a class="headerlink" href="#passo-combine" title="Permanent link">&para;</a></h3>
+<p>Verifichiamo che il costo legato allo step <em>combine</em> sia in <span class="arithmatex">\(O(n)\)</span>.</p>
+<p>L'operazione di unione avviene in tre parti:</p>
+<ol>
+<li>nella prima, creiamo i due array <code>left</code> e <code>right</code>;</li>
+<li>fino a che ci sono degli elementi non copiati da <code>left</code> o <code>right</code> in <code>array</code>, compariamo il primo elemento non ancora copiato di <code>left</code> a quello non ancora copiato di <code>right</code>, e copiamo il minore in <code>array</code>;</li>
+<li>una volta che abbiamo copiato tutti gli elementi da <code>left</code> (o <code>right</code>) in <code>array</code>, copiamo ogni elemento rimanente da <code>right</code> (o <code>left</code>) in <code>array</code>.</li>
+</ol>
+<p>E' chiaro che, al massimo, dovremo effettuare <code>n</code> comparazioni ed <code>n</code> operazioni di copia. Ciò significa che, al più, avremo <span class="arithmatex">\(2 \cdot n\)</span> operazioni, per cui la complessità sarà in un <span class="arithmatex">\(O(n)\)</span>.</p>
+<h3 id="analisi-di-caso-peggiore">Analisi di caso peggiore<a class="headerlink" href="#analisi-di-caso-peggiore" title="Permanent link">&para;</a></h3>
+<p>Per effettuare l'analisi della complessità globale dell'algoritmo, consideriamo i tempi di esecuzione di ciascuno degli step coinvolti. Assumiamo, al solito, di stare ordinando un array ad <span class="arithmatex">\(n\)</span> elementi.</p>
+<ul>
+<li>Nel passo <em>divide</em>, abbiamo bisogno di un tempo costante, ed indipendente dalla dimensione degli array coinvolti. Infatti, stiamo semplicemente calcolando il valore medio tra <code>l</code> ed <code>r</code>, per cui abbiamo bisogno di un'unica operazione.</li>
+<li>Nel passo <em>conquer</em>, ordiniamo ricorsivamente due sotto-array di approsimativamente <span class="arithmatex">\(n/2\)</span> elementi.</li>
+<li>Nel passo <em>combine</em>, uniamo <span class="arithmatex">\(n\)</span> elementi, ed abbiamo già verificato avere bisogno di un <span class="arithmatex">\(O(n)\)</span>.</li>
+</ul>
+<p>Considerando i passi <em>divide</em> e <em>combine</em> assieme, notiamo che il tempo necessario al <em>divide</em> è trascurabile, per cui possiamo considerare solo quello per il <em>combine</em>. Resta da calcolare il tempo necessario al <em>conquer</em>.</p>
+<p>Per mantenere le cose semplici, consideriamo <span class="arithmatex">\(n\)</span> pari e potenza di due (nel caso <span class="arithmatex">\(n\)</span> sia dispari, il calcolo della complessità non cambia molto). Notiamo poi che l'esecuzione del merge sort su un array ad <span class="arithmatex">\(n\)</span> elementi richiederà (approssimativamente) lo stesso tempo dell'esecuzione di due merge sort su array ad <span class="arithmatex">\(n/2\)</span> elementi, ciascuno dei quali richiede il doppio dell'esecuzione del merge sort su un array ad <span class="arithmatex">\(n/4\)</span> elementi, e così via.</p>
+<p>Ricordando che il merge sort può essere visto come un albero binario, è evidente come ad ogni livello successivo dell'albero il numero di problemi <em>raddoppi</em>, mentre il tempo necessario alla risoluzione di un singolo problema si <em>dimezzi</em>. Questi due effetti si annullano reciprocamente, per cui potremo dire che, ad ogni livello, avremo bisogno al più di <span class="arithmatex">\(n\)</span> operazioni.</p>
+<p>Il tempo totale necessario è quindi considerando un <span class="arithmatex">\(O(n)\)</span> per ogni livello dell'albero prodotto dal merge sort. Con <span class="arithmatex">\(c\)</span> livelli, avremo che il tempo totale necessario sarà al più <span class="arithmatex">\(c \cdot n\)</span>.</p>
+<p>Qual è quindi il valore di <span class="arithmatex">\(c\)</span>? Dato che stiamo parlando di un albero binario, e che stiamo considerando un valore di <span class="arithmatex">\(n\)</span> pari e potenza di due, sappiamo che <span class="arithmatex">\(c = log_2n\)</span>. Di conseguenza, il tempo necessario per il merge sort sarà dato da <span class="arithmatex">\(n\)</span> (ovvero il numero di operazioni da effettuare a ciascun livello) moltiplicato per <span class="arithmatex">\(c\)</span> (il numero di livelli), ovvero un <span class="arithmatex">\(O(n \cdot log_n2)\)</span>.</p>
                 
               
               
@@ -1490,15 +1672,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../04_programmazione/06_strutture_dati.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 14 - Strutture dati" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              14 - Strutture dati
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="bacheca.html" class="md-footer__link md-footer__link--next" aria-label="Next: Bacheca avvisi" rel="next">
+        <a href="05_quick_sort.html" class="md-footer__link md-footer__link--next" aria-label="Next: 18 - Quick sort" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Bacheca avvisi
+              18 - Quick sort
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1531,12 +1728,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
-        <script src="js/config.js"></script>
+        <script src="../../js/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

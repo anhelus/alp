@@ -1,0 +1,1753 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
+    
+    
+      
+        <title>06 - Dettagli sui metodi - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+  
+
+
+
+  
+  
+
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-J2XESD8WDV",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#classi-e-funzioni" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              06 - Dettagli sui metodi
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../index.html" title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../index.html" class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bacheca.html" class="md-nav__link">
+        Bacheca avvisi
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Informazioni sul corso
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Informazioni sul corso" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Informazioni sul corso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ricevimento.html" class="md-nav__link">
+        Ricevimento
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Comunicare col docente
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Comunicare col docente" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Comunicare col docente
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comunicazioni/standard.html" class="md-nav__link">
+        Varie
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comunicazioni/temi.html" class="md-nav__link">
+        Sui temi d'anno
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Esami
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Esami" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Esami
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
+      
+      <label class="md-nav__link" for="__nav_3_3_1">
+        Modalità standard
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Modalità standard" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Modalità standard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/intro.html" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_3_2">
+        Tema d'anno
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tema d'anno" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tema d'anno
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/intro.html" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/valutazione.html" class="md-nav__link">
+        Valutazione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/faq.html" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_4" type="checkbox" id="__nav_3_3_2_4" >
+      
+      <label class="md-nav__link" for="__nav_3_3_2_4">
+        A.A. 2020/2021
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="A.A. 2020/2021" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          A.A. 2020/2021
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/date.html" class="md-nav__link">
+        Date rilevanti
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/documenti.html" class="md-nav__link">
+        Documenti
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/chiarimenti.html" class="md-nav__link">
+        Chiarimenti
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_5" type="checkbox" id="__nav_3_3_2_5" >
+      
+      <label class="md-nav__link" for="__nav_3_3_2_5">
+        Esempio
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Esempio" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Esempio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/traccia.html" class="md-nav__link">
+        Traccia
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_prima.html" class="md-nav__link">
+        Parte Prima
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_seconda.html" class="md-nav__link">
+        Parte Seconda
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_terza.html" class="md-nav__link">
+        Parte Terza
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_quarta.html" class="md-nav__link">
+        Parte Quarta
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Dispense
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dispense" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Dispense
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_materiale/programma.html" class="md-nav__link">
+        Slides proiettate a lezione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2">
+        Teoria
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
+      
+      <label class="md-nav__link" for="__nav_4_2_1">
+        Concetti Introduttivi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Concetti Introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/01_intro.html" class="md-nav__link">
+        01 - Introduzione all'Informatica
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/02_algoritmi.html" class="md-nav__link">
+        02 - Gli Algoritmi
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/04_rappresentazione.html" class="md-nav__link">
+        04 - Rappresentazione dei dati
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
+      
+      <label class="md-nav__link" for="__nav_4_2_2">
+        Programmazione
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmazione" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/03_variabili.html" class="md-nav__link">
+        11 - Variabili
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/04_funzioni.html" class="md-nav__link">
+        12 - Funzioni
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/05_complessita.html" class="md-nav__link">
+        13 - Complessità computazionale
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/06_strutture_dati.html" class="md-nav__link">
+        14 - Strutture dati
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
+      
+      <label class="md-nav__link" for="__nav_4_2_3">
+        Algoritmi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Algoritmi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algoritmi/04_merge_sort.html" class="md-nav__link">
+        17 - Merge sort
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algoritmi/05_quick_sort.html" class="md-nav__link">
+        18 - Quick sort
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" type="checkbox" id="__nav_4_2_4" >
+      
+      <label class="md-nav__link" for="__nav_4_2_4">
+        Modelli di calcolo
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Modelli di calcolo" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Modelli di calcolo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_modelli/01_turing.html" class="md-nav__link">
+        20 - Macchina di Turing
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" checked>
+      
+      <label class="md-nav__link" for="__nav_4_3">
+        Programmazione
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Programmazione" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
+      
+      <label class="md-nav__link" for="__nav_4_3_1">
+        Linguaggio C
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linguaggio C" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linguaggio C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01_linguaggio_c/01_introduzione.html" class="md-nav__link">
+        01 - Introduzione al C
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" checked>
+      
+      <label class="md-nav__link" for="__nav_4_3_2">
+        Linguaggio C++
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linguaggio C++" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linguaggio C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="01_c_vs_cpp.html" class="md-nav__link">
+        01 - C vs. C++
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="02_definizioni.html" class="md-nav__link">
+        02 - Alcune definizioni (in C++!)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="03_classi.html" class="md-nav__link">
+        03 - Le classi (parte uno)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="04_definizioni_adv.html" class="md-nav__link">
+        04 - Alcune definizioni (più avanzate)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="05_classi_adv.html" class="md-nav__link">
+        05 - Le classi (parte due)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          06 - Dettagli sui metodi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="06_metodi.html" class="md-nav__link md-nav__link--active">
+        06 - Dettagli sui metodi
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-membro" class="md-nav__link">
+    Funzioni membro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-inline" class="md-nav__link">
+    Funzioni inline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-const" class="md-nav__link">
+    Funzioni const
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-static" class="md-nav__link">
+    Funzioni static
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-parola-chiave-friend" class="md-nav__link">
+    La parola chiave friend
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="07_ereditarieta.html" class="md-nav__link">
+        07 - Ereditarietà
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="08_polimorfismo.html" class="md-nav__link">
+        08 - Polimorfismo
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="09_container.html" class="md-nav__link">
+        09 - Container ed iteratori
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="10_file.html" class="md-nav__link">
+        10 - File in C++
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      
+      <label class="md-nav__link" for="__nav_4_3_3">
+        Linugaggio Python
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Linugaggio Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linugaggio Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/01_intro.html" class="md-nav__link">
+        01 - Introduzione al Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/02_programmare.html" class="md-nav__link">
+        02 - Programmare in Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/03_strutture.html" class="md-nav__link">
+        03 - Strutture Dati
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/04_moduli.html" class="md-nav__link">
+        04 - Moduli
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/05_classi.html" class="md-nav__link">
+        05 - Classi e concetti avanzati
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/06_file.html" class="md-nav__link">
+        06 - I/O in Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/07_test.html" class="md-nav__link">
+        07 - Cenni ai test
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03_linguaggio_python/08_numpy.html" class="md-nav__link">
+        08 - Cenni a NumPy
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      <label class="md-nav__link" for="__nav_5">
+        Esercizi
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Esercizi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Esercizi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/esercizi/programmazione.html" class="md-nav__link">
+        Esercizi di programmazione
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/esercizi/scritto.html" class="md-nav__link">
+        Esercizi per l'esame
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      <label class="md-nav__link" for="__nav_6">
+        Appendici
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Appendici
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      <label class="md-nav__link" for="__nav_6_1">
+        Configurazioni
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Configurazioni" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Configurazioni
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_appendici/configurazioni/a_vs_code_guide.html" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_appendici/configurazioni/b_vs_community_guide.html" class="md-nav__link">
+        Visual Studio Community
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-membro" class="md-nav__link">
+    Funzioni membro
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-inline" class="md-nav__link">
+    Funzioni inline
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-const" class="md-nav__link">
+    Funzioni const
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funzioni-static" class="md-nav__link">
+    Funzioni static
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#la-parola-chiave-friend" class="md-nav__link">
+    La parola chiave friend
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="classi-e-funzioni">Classi e funzioni<a class="headerlink" href="#classi-e-funzioni" title="Permanent link">&para;</a></h1>
+<h2 id="funzioni-membro">Funzioni membro<a class="headerlink" href="#funzioni-membro" title="Permanent link">&para;</a></h2>
+<p>Finora abbiamo parlato diverse volte del concetto di <em>funzione membro</em>: esempi sono costruttori, distruttori ed operatori, tutti dotati di una sintassi ben definita a causa delle peculiarità del loro compito. Tuttavia, le funzioni membro non hanno necessariamente delle caratteristiche particolari: in realtà, qualsiasi funzione può essere definita come funzione membro.</p>
+<p>Ciò non significa però che non vi siano differenze tra le funzioni generiche (quelle dichiarate all'esterno di una classe) e le funzioni membro: queste sussistono infatti soprattutto nell'<em>ambito</em> e <em>visibilità</em>, oltre che di capacità di accedere ai membri della classe (ricordiamo che ad ogni funzione membro viene implicitamente passato il puntatore <code>this</code>). In particolare:</p>
+<ul>
+<li>una funzione membro non può essere invocata se non su un'istanza della classe di appartenenza;</li>
+<li>grazie al puntatore <code>this</code>, la funzione membro ha accesso non solo ai parametri di input ed alle variabili dichiarate localmente, ma anche a tutti gli attributi e le funzioni della classe di appartenenza.</li>
+</ul>
+<p>E' inoltre importante una corretta gestione dei modificatori di accesso delle funzioni membro, soprattutto in sede di <em>refactoring</em> del codice. Infatti, le funzioni dichiarate con il modificatore <code>public</code> sono molto spesso invocate al di fuori della classe su specifiche istanze della stessa; in tal senso, bisogna tener presente che, modificando il nome della funzione membro, si influenzerà il comportamento di <em>tutto il codice chiamante</em>.</p>
+<p>Immaginiamo ad esempio di usare in questo modo la nostra classe <code>Vettore</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// main.cpp</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+    <span class="n">Vettore</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vettore</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">);</span>
+    <span class="n">Vettore</span> <span class="n">v2</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vettore</span><span class="p">(</span><span class="mf">5.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">);</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">v1</span><span class="p">.</span><span class="n">getAngolo</span><span class="p">()</span> <span class="o">==</span> <span class="n">v2</span><span class="p">.</span><span class="n">getAngolo</span><span class="p">())</span> <span class="p">{</span>
+        <span class="c1">// I due vettori sono paralleli, la somma dei moduli è più semplice</span>
+        <span class="kt">double</span> <span class="n">sommaModuli</span> <span class="o">=</span> <span class="n">v1</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">+</span> <span class="n">v2</span><span class="p">.</span><span class="n">getModulo</span><span class="p">();</span> 
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Immaginiamo quindi di decidere, per un motivo qualsiasi, di modificare le firme dei getter in questo modo:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// vettore.h</span>
+<span class="k">class</span> <span class="nc">Vettore</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="kt">double</span> <span class="n">angolo</span><span class="p">();</span>        <span class="c1">// Precedentemente getAngolo()</span>
+        <span class="kt">double</span> <span class="nf">modulo</span><span class="p">();</span>        <span class="c1">// Precedentemente getModulo()</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Cosa accadrebbe al codice chiamante (ovvero al <code>main.cpp</code>)? Beh, chiaramente avremmo un errore in fase di compilazione!</p>
+<p>Adesso, come al solito, stiamo considerando casi abbastanza "ristretti"; qualora però dovessimo sviluppare delle <em>grosse</em> librerie, magari utilizzate da diversi sviluppatori (anche esterni), allora una qualsiasi modifica, anche di scarsa rilevanza come questa, potrebbe causare errori e problemi, con la conseguenza di richiedere tempo (e denaro) per la loro risoluzione. Ovviamente, ci sono casi in cui queste situazioni diventano inevitabili; tuttavia, è sempre bene essere consapevoli di quelle che sono le proprie responsabilità nell'effettuare modifiche, ed attenersi quanto più possibile alle <em>best practices</em> (che, in soldoni, ci chiedono di aderire il più possibile al principio dell'incapsulamento)!</p>
+<h2 id="funzioni-inline">Funzioni <code>inline</code><a class="headerlink" href="#funzioni-inline" title="Permanent link">&para;</a></h2>
+<p>Una possibile forma di ottimizzazione del codice prevede l'applicazione alle funzioni della parola chiave <code>inline</code>, rappresentativa di una direttiva al compilatore che, se eseguita, permette di sostituire nel codice compilato la chiamata a funzione con il corpo della stessa. Se da un lato questo può migliorare le prestazioni, dall'altro ovviamente influenza le dimensioni dell'eseguibile finale, per cui va usata con un certo giudizio; inoltre, l'effettivo impatto sulle prestazioni dipende anche dal compilatore, che potrebbe anche ignorare (totalmente o in parte) la direttiva, o applicarla a metodi che non l'abbiano esplicitamente definita.</p>
+<p>La sintassi per la definizione di una generica funzione inline è la seguente:</p>
+<div class="highlight"><pre><span></span><code><span class="kr">inline</span> <span class="kt">int</span> <span class="nf">somma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">somma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>E' ovviamente possibile definire un metodo inline direttamente in una classe. Per farlo, possiamo specificarlo nell'header; ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// geometria.h</span>
+<span class="k">class</span> <span class="nc">Vettore</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="kr">inline</span> <span class="kt">double</span> <span class="n">getModulo</span><span class="p">()</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span><span class="p">;</span>
+        <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Un altro modo è specificarlo nel file sorgente, ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// geometria.h</span>
+<span class="k">class</span> <span class="nc">Vettore</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="kt">double</span> <span class="n">getModulo</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// geometria.cpp</span>
+<span class="c1">// Dovremo ridefinirlo in ogni sorgente in cui lo utilizziamo!</span>
+<span class="kr">inline</span> <span class="kt">double</span> <span class="n">Vettore</span><span class="o">::</span><span class="n">getModulo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Tuttavia, quando si definisce una funzione inline, è necessario che il corpo della stessa sia presente in ogni <strong>unità di compilazione</strong>. Questo implica la necessità di includere la definizione del metodo inline o direttamente nell'header, oppure in ognuno dei file sorgenti in cui la funzione viene invocata. Scegliendo il secondo metodo, quindi, il nostro <code>main</code> assumerà una forma del tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometria.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="nn">std</span><span class="p">;</span>
+
+<span class="c1">// Rimuovendo questa definizione, avremo un errore di compilazione</span>
+<span class="kr">inline</span> <span class="kt">double</span> <span class="nf">Vettore::getModulo</span><span class="p">()</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">Vettore</span> <span class="n">v1</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vettore</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mf">45.0</span><span class="p">);</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">v1</span><span class="p">.</span><span class="n">getModulo</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>E' chiaro come entrambe le opzioni non siano esattamente "ottimali". Nel primo caso, infatti, stiamo violando uno dei principi della OOP, ovvero quello di incapsulamento, in quanto esponiamo all'interno di un interfaccia i dettagli dell'implementazione. Nel secondo, invece, dovremo ripetere il sorgente della funzione inline in ogni sorgente che la usa, con tutto ciò che ne consegue in termini di possibili errori e prolissità del codice. Di conseguenza, l'uso di questa particolare tecnica di ottimizzazione deve rimanere confinato al campo del "soltanto se indispensabile".</p>
+</div>
+<h2 id="funzioni-const">Funzioni <code>const</code><a class="headerlink" href="#funzioni-const" title="Permanent link">&para;</a></h2>
+<p>Abbiamo visto gli effetti della parola chiave <code>const</code> quando applicata ad una variabile. Applicandola però alla firma di una funzione membro, avrà l'effetto di inibire la modifica del membro stesso (ovviamente all'interno della funzione). In tal senso, l'esempio classico che è possibile fare è sui getter, che di solito vengono "decorati" con la keyword <code>const</code> per garantire che non vi siano effetti collaterali. Nel nostro caso:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// geometria.h</span>
+<span class="k">class</span> <span class="nc">Geometria</span><span class="o">::</span><span class="n">Vettore</span>
+<span class="p">{</span>
+    <span class="c1">//...</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="kt">double</span> <span class="n">modulo</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="n">angolo</span><span class="p">;</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="kt">double</span> <span class="n">getModulo</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+        <span class="kt">double</span> <span class="nf">getAngolo</span><span class="p">()</span> <span class="k">const</span><span class="p">;</span>
+        <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="c1">// geometria.cpp</span>
+<span class="kt">double</span> <span class="n">Vettore</span><span class="o">::</span><span class="n">getModulo</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">modulo</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kt">double</span> <span class="n">Vettore</span><span class="o">::</span><span class="n">getAngolo</span><span class="p">()</span> <span class="k">const</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="o">-&gt;</span><span class="n">angolo</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h2 id="funzioni-static">Funzioni <code>static</code><a class="headerlink" href="#funzioni-static" title="Permanent link">&para;</a></h2>
+<p>Le funzioni contrassegnate con la keyword <code>static</code> possono essere invocate <em>senza</em> la necessità di istanziare un oggetto della classe di appartenenza. Come conseguenza, si dice che i metodi statici sono <em>relativi alla classe</em>, e non alle singole istanze della stessa; ciò comporta quindi che all'interno dei metodi statici ci si possa riferire <em>esclusivamente</em> agli attributi statici della classe.</p>
+<p>Supponiamo, ad esempio, di voler inserire un riferimento allo spazio cartesiano nel quale sono contenuti i nostri vettori; dato che questo risulta essere comune, potremo usare un attributo ed una funzione statici per ottenerli:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// geometria.h</span>
+<span class="k">class</span> <span class="nc">Punto</span> <span class="p">{</span>
+    <span class="c1">// ...</span>
+<span class="p">}</span>
+
+<span class="k">class</span> <span class="nc">Vettore</span> <span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="k">static</span> <span class="n">Punto</span> <span class="n">origine</span><span class="p">;</span>
+    <span class="k">public</span><span class="o">:</span>
+        <span class="k">static</span> <span class="n">Punto</span> <span class="n">getOrigine</span><span class="p">();</span>
+<span class="p">}</span>
+
+<span class="c1">// geometria.cpp</span>
+<span class="n">Punto</span> <span class="n">Vettore</span><span class="o">::</span><span class="n">getOrigine</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="k">return</span> <span class="n">origine</span><span class="p">;</span>
+<span class="p">}</span>
+
+
+<span class="c1">// main.cpp</span>
+<span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&quot;geometria.h&quot;</span><span class="cp"></span>
+
+<span class="k">using</span> <span class="k">namespace</span> <span class="nn">std</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">Vettore</span><span class="o">::</span><span class="n">getOrigine</span><span class="p">()</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Alcune note:</p>
+<ul>
+<li>le funzioni membro static di una classe sono accessibili mediante l'uso dell'operatore di scope;</li>
+<li>il qualificatore static appare nella dichiarazione della funzione membro, ma <strong>non</strong> nella sua definizione;</li>
+<li>i metodi statici non possono essere contestualmente <code>const</code>.</li>
+</ul>
+<h2 id="la-parola-chiave-friend">La parola chiave <code>friend</code><a class="headerlink" href="#la-parola-chiave-friend" title="Permanent link">&para;</a></h2>
+<p>Chiudiamo questa carrellata introducendo il modificatore <code>friend</code>, che può essere assegnato a funzioni o classi che, pur non facendo parte dell'ambito della classe presso la quale vengono dichiarati, possono accedere ai membri della stessa indipendentemente dal qualificatore di accesso.</p>
+<p>Immaginiamo ad esempio di definire una classe <code>SpazioVettoriale</code>, che per motivi implementativi deve poter accedere ai singoli vettori che compongono la sua base. Potremo quindi definirla come classe <code>friend</code> del singolo vettore:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// geometria.h</span>
+<span class="k">class</span> <span class="nc">Vettore</span> <span class="p">{</span>
+    <span class="k">private</span><span class="o">:</span>
+        <span class="c1">// ...</span>
+        <span class="k">friend</span> <span class="k">class</span> <span class="nc">SpazioVettoriale</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>In questo modo, la classe <code>SpazioVettoriale</code> potrà accedere ai membri <code>private</code> dei vettori.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Questo esempio apperentemente va in contrasto con le regole di incapsulamento dettate dalla OOP. Tuttavia, ed in situazioni complesse, l'utilizzo di una funzione o classe <code>friend</code> può risolvere numerosi grattacapi imposti da un'interpretazione troppo "rigida" dei dettami imposti dalla programmazione orientata agli oggetti.</p>
+</div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="05_classi_adv.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 05 - Le classi (parte due)" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              05 - Le classi (parte due)
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="07_ereditarieta.html" class="md-footer__link md-footer__link--next" aria-label="Next: 07 - Ereditarietà" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              07 - Ereditarietà
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      
+        <script src="../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
