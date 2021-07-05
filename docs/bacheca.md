@@ -1,5 +1,11 @@
 # Avvisi
 
+## 25/04/2021
+
+### Cambio modalità di esame
+
+Si informano gli interessati che, a partire dall'appello del 12 luglio, l'esame sarà costituito da una prova orale.
+
 ## 20/04/2021
 
 ### Chiarimenti verbalizzazione esoneri
