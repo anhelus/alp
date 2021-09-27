@@ -1,0 +1,1984 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
+    
+    
+      
+        <title>02 reti - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    
+      
+  
+
+
+
+  
+  
+
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-J2XESD8WDV",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV"></script>
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#reti-di-telecomunicazione-cosa-sono-ed-a-che-servono" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              02 reti
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../bacheca/" class="md-nav__link">
+        Bacheca avvisi
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Informazioni sul corso
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Informazioni sul corso" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Informazioni sul corso
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ricevimento/" class="md-nav__link">
+        Ricevimento
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_2">
+          Comunicare col docente
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Comunicare col docente" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Comunicare col docente
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comunicazioni/standard/" class="md-nav__link">
+        Varie
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../comunicazioni/temi/" class="md-nav__link">
+        Sui temi d'anno
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3">
+          Esami
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Esami" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Esami
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_1" type="checkbox" id="__nav_3_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_1">
+          Modalità standard
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modalità standard" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Modalità standard
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2" type="checkbox" id="__nav_3_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2">
+          Tema d'anno
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tema d'anno" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Tema d'anno
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/intro/" class="md-nav__link">
+        Introduzione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/valutazione/" class="md-nav__link">
+        Valutazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/faq/" class="md-nav__link">
+        FAQ
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_4" type="checkbox" id="__nav_3_3_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2_4">
+          A.A. 2020/2021
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="A.A. 2020/2021" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          A.A. 2020/2021
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/date/" class="md-nav__link">
+        Date rilevanti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/documenti/" class="md-nav__link">
+        Documenti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/2020-2021/chiarimenti/" class="md-nav__link">
+        Chiarimenti
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3_2_5" type="checkbox" id="__nav_3_3_2_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3_3_2_5">
+          Esempio
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Esempio" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_3_2_5">
+          <span class="md-nav__icon md-icon"></span>
+          Esempio
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/traccia/" class="md-nav__link">
+        Traccia
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_prima/" class="md-nav__link">
+        Parte Prima
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
+        Parte Seconda
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_terza/" class="md-nav__link">
+        Parte Terza
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/tema_anno/esempio/parte_quarta/" class="md-nav__link">
+        Parte Quarta
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Dispense
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Dispense" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Dispense
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../00_materiale/programma/" class="md-nav__link">
+        Slides proiettate a lezione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2" type="checkbox" id="__nav_4_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_1" type="checkbox" id="__nav_4_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_1">
+          Concetti Introduttivi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Concetti Introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Concetti Introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/01_intro/" class="md-nav__link">
+        01 - Introduzione all'Informatica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/02_algoritmi/" class="md-nav__link">
+        02 - Gli Algoritmi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../01_introduttivi/04_rappresentazione/" class="md-nav__link">
+        04 - Rappresentazione dei dati
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_2" type="checkbox" id="__nav_4_2_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_2">
+          Programmazione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmazione" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_2">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/03_variabili/" class="md-nav__link">
+        11 - Variabili
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/04_funzioni/" class="md-nav__link">
+        12 - Funzioni
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/05_complessita/" class="md-nav__link">
+        13 - Complessità computazionale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_programmazione/06_strutture_dati/" class="md-nav__link">
+        14 - Strutture dati
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_3" type="checkbox" id="__nav_4_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_3">
+          Algoritmi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Algoritmi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Algoritmi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algoritmi/04_merge_sort/" class="md-nav__link">
+        17 - Merge sort
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../05_algoritmi/05_quick_sort/" class="md-nav__link">
+        18 - Quick sort
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_2_4" type="checkbox" id="__nav_4_2_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_2_4">
+          Modelli di calcolo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Modelli di calcolo" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_2_4">
+          <span class="md-nav__icon md-icon"></span>
+          Modelli di calcolo
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../06_modelli/01_turing/" class="md-nav__link">
+        20 - Macchina di Turing
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3" type="checkbox" id="__nav_4_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3">
+          Programmazione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Programmazione" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_1" type="checkbox" id="__nav_4_3_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_1">
+          Linguaggio C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linguaggio C" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_1">
+          <span class="md-nav__icon md-icon"></span>
+          Linguaggio C
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/01_linguaggio_c/01_introduzione/" class="md-nav__link">
+        01 - Introduzione al C
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_2" type="checkbox" id="__nav_4_3_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_2">
+          Linguaggio C++
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linguaggio C++" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Linguaggio C++
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/01_c_vs_cpp/" class="md-nav__link">
+        01 - C vs. C++
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/02_definizioni/" class="md-nav__link">
+        02 - Alcune definizioni (in C++!)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/03_classi/" class="md-nav__link">
+        03 - Le classi (parte uno)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/04_definizioni_adv/" class="md-nav__link">
+        04 - Alcune definizioni (più avanzate)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/05_classi_adv/" class="md-nav__link">
+        05 - Le classi (parte due)
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/06_metodi/" class="md-nav__link">
+        06 - Dettagli sui metodi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/07_ereditarieta/" class="md-nav__link">
+        07 - Ereditarietà
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/08_polimorfismo/" class="md-nav__link">
+        08 - Polimorfismo
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/09_container/" class="md-nav__link">
+        09 - Container ed iteratori
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/02_linguaggio_cpp/10_file/" class="md-nav__link">
+        10 - File in C++
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_3_3" type="checkbox" id="__nav_4_3_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4_3_3">
+          Linugaggio Python
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Linugaggio Python" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Linugaggio Python
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/01_intro/" class="md-nav__link">
+        01 - Introduzione al Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/02_programmare/" class="md-nav__link">
+        02 - Programmare in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/03_strutture/" class="md-nav__link">
+        03 - Strutture Dati
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/04_moduli/" class="md-nav__link">
+        04 - Moduli
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/05_classi/" class="md-nav__link">
+        05 - Classi e concetti avanzati
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/06_file/" class="md-nav__link">
+        06 - I/O in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/07_test/" class="md-nav__link">
+        07 - Cenni ai test
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../programmazione/03_linguaggio_python/08_numpy/" class="md-nav__link">
+        08 - Cenni a NumPy
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Esercizi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Esercizi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Esercizi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/esercizi/programmazione/" class="md-nav__link">
+        Esercizi di programmazione
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_esami/standard/esercizi/scritto/" class="md-nav__link">
+        Esercizi per l'esame
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6">
+          Appendici
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Appendici
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_1" type="checkbox" id="__nav_6_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6_1">
+          Configurazioni
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Configurazioni" data-md-level="2">
+        <label class="md-nav__title" for="__nav_6_1">
+          <span class="md-nav__icon md-icon"></span>
+          Configurazioni
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_appendici/configurazioni/a_vs_code_guide/" class="md-nav__link">
+        Visual Studio Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_appendici/configurazioni/b_vs_community_guide/" class="md-nav__link">
+        Visual Studio Community
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#reti-di-telecomunicazione-cosa-sono-ed-a-che-servono" class="md-nav__link">
+    Reti di telecomunicazione: cosa sono ed a che servono?
+  </a>
+  
+    <nav class="md-nav" aria-label="Reti di telecomunicazione: cosa sono ed a che servono?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#alcune-definizioni" class="md-nav__link">
+    Alcune definizioni
+  </a>
+  
+    <nav class="md-nav" aria-label="Alcune definizioni">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#commutazione-di-circuito-vs-commutazione-di-pacchetto" class="md-nav__link">
+    Commutazione di circuito vs. commutazione di pacchetto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#topologia-di-rete" class="md-nav__link">
+    Topologia di rete
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standardizzazione" class="md-nav__link">
+    Standardizzazione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#il-modello-isoosi" class="md-nav__link">
+    Il modello ISO/OSI
+  </a>
+  
+    <nav class="md-nav" aria-label="Il modello ISO/OSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-livelli-del-modello-isoosi" class="md-nav__link">
+    I livelli del modello ISO/OSI
+  </a>
+  
+    <nav class="md-nav" aria-label="I livelli del modello ISO/OSI">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#livello-1-livello-fisico" class="md-nav__link">
+    Livello 1: Livello fisico
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-2-livello-data-link" class="md-nav__link">
+    Livello 2: Livello data link
+  </a>
+  
+    <nav class="md-nav" aria-label="Livello 2: Livello data link">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#il-progetto-ieee-802" class="md-nav__link">
+    Il progetto IEEE 802
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-3-livello-di-rete" class="md-nav__link">
+    Livello 3: livello di rete
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-4-livello-di-trasporto" class="md-nav__link">
+    Livello 4: livello di trasporto
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-5-livello-di-sessione" class="md-nav__link">
+    Livello 5: livello di sessione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-6-livello-di-presentazione" class="md-nav__link">
+    Livello 6: livello di presentazione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-7-livello-applicativo" class="md-nav__link">
+    Livello 7: Livello applicativo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lo-standard-del-mondo-reale-lo-stack-tcpip" class="md-nav__link">
+    Lo standard del mondo reale: lo stack TCP/IP
+  </a>
+  
+    <nav class="md-nav" aria-label="Lo standard del mondo reale: lo stack TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#i-livelli-dello-stack-tcpip" class="md-nav__link">
+    I livelli dello stack TCP/IP
+  </a>
+  
+    <nav class="md-nav" aria-label="I livelli dello stack TCP/IP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#livello-1-livello-link" class="md-nav__link">
+    Livello 1: Livello link
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-2-livello-internet" class="md-nav__link">
+    Livello 2: Livello internet
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-3-livello-di-trasporto" class="md-nav__link">
+    Livello 3: Livello di trasporto
+  </a>
+  
+    <nav class="md-nav" aria-label="Livello 3: Livello di trasporto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#trasmission-control-protocol" class="md-nav__link">
+    Trasmission Control Protocol
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user-datagram-protocol" class="md-nav__link">
+    User Datagram Protocol
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#livello-4-livello-applicativo" class="md-nav__link">
+    Livello 4: Livello applicativo
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>02 reti</h1>
+                
+                <h2 id="reti-di-telecomunicazione-cosa-sono-ed-a-che-servono">Reti di telecomunicazione: cosa sono ed a che servono?<a class="headerlink" href="#reti-di-telecomunicazione-cosa-sono-ed-a-che-servono" title="Permanent link">&para;</a></h2>
+<p>Nell'ultima lezione, abbiamo introdotto le principali caratteristiche dell'architettura interna di un calcolatore. Il naturale step successivo è quindi chiedersi <em>come possano comunicare tra loro due (o più) calcolatori</em>.</p>
+<p>Ed è a questo scopo che sono state introdotte le <em>reti di telecomunicazione</em>.</p>
+<h3 id="alcune-definizioni">Alcune definizioni<a class="headerlink" href="#alcune-definizioni" title="Permanent link">&para;</a></h3>
+<h4 id="commutazione-di-circuito-vs-commutazione-di-pacchetto">Commutazione di circuito vs. commutazione di pacchetto<a class="headerlink" href="#commutazione-di-circuito-vs-commutazione-di-pacchetto" title="Permanent link">&para;</a></h4>
+<p>Le reti a <em>commutazione di circuito</em> stabiliscono una connessione fisica tra il mittente ed il destinatario. Un esempio di rete a commutazione di circuito sono le vecchie reti telefoniche, nelle quali veniva creato appunto un circuito fisico tra i due capi della comunicazione.</p>
+<p>Le reti a <em>commutazione di pacchetto</em> invece non stabiliscono una connessione fisica tra il mittente ed il destinatario, ma fanno sì che siano i dispositivi di rete ad instradare i dati, opportunamente suddivisi in <em>pacchetti</em>, tra il mittente ed il destinatario.</p>
+<h4 id="topologia-di-rete">Topologia di rete<a class="headerlink" href="#topologia-di-rete" title="Permanent link">&para;</a></h4>
+<h3 id="standardizzazione">Standardizzazione<a class="headerlink" href="#standardizzazione" title="Permanent link">&para;</a></h3>
+<p>Affinché due calcolatori scambino dati (il che, nel gergo comune, significa "<em>affinchè due computer parlino tra loro</em>") è necessario che entrambi si adeguino ad uno standard di comunicazione.</p>
+<p>Pensiamoci un attimo: saremmo forse in grado di capire ciò che dice il nostro docente di Informatica se non avessimo un protocollo di comunicazione comune?</p>
+<div class="admonition nota">
+<p class="admonition-title">Nota</p>
+<p>Se alla domanda precedente avete risposto di <em>no</em>, la colpa è sicuramente vostra e non del docente di Informatica, che risulta essere chiaro, comprensibile, affabile e disponibile.</p>
+</div>
+<p>Lo scambio di dati tra due computer è inoltre molto più complesso rispetto alla comunicazione verbale: infatti, prevede che ciascuno dei due computer sia in grado di:</p>
+<ul>
+<li><em>presentare</em> i dati scambiati all'utente finale;</li>
+<li><em>identificare</em> sia il mittente sia il destinatario dei dati stessi;</li>
+<li><em>codificare</em> i dati sotto forma di segnale fisico da inviare su degli opportuni canali di comunicazione fisici.</li>
+</ul>
+<p>E' inoltre necessario che la comunicazione sia indipendente dal tipo di dispositivo utilizzato: se ci pensate, alcuni di voi seguono le lezioni da un iPad, altri dal proprio smartphone, altri ancora dal proprio laptop o PC desktop.</p>
+<p>Abbiamo quindi una serie di vincoli da rispettare affinché due o più dispositivi comunichino. Ed è stato proprio questo il punto di partenza dal quale è stato definito un modello concettuale volto a <em>caratterizzare</em> e <em>standardizzare</em> la comunicazione tra dispositivi, indipendentemente dalle tecnologie adottate, ovvero il modello <em>ISO/OSI</em>.</p>
+<h2 id="il-modello-isoosi">Il modello ISO/OSI<a class="headerlink" href="#il-modello-isoosi" title="Permanent link">&para;</a></h2>
+<p><em>OSI</em> è un acronimo che sta per <em>Open Systems Interconnection</em>, ed indica un modello sviluppato tenendo come obiettivo finale l'interoperabilità di diversi sistemi di comunicazione grazie a protocolli di comunicazione <em>standardizzati</em>. La storia del modello OSI nasce negli anni '70, in cui venne sviluppato per supportare la standardizzazione dei diversi tipi di rete di calcolatori emergenti. Negli anni '80, il modello venne adottato dall'<em>International Organization for Standardization</em> (<em>ISO</em>), ed assunse il nome di <em>modello ISO/OSI</em>.</p>
+<p>Il modello ISO/OSI suddivide il flusso dei dati in un sistema di comunicazione in sette diversi livelli ad astrazione crescente, partendo dall'implementazione fisica della trasmissione dei bit sul canale comunicativo, per arrivare alla rappresentazione dei dati ad alto livello (ovvero quello che viene "presentato" all'utente).</p>
+<p>E' importante sottolineare alcune caratteristiche del modello ISO/OSI. In primis, per quello che riguarda una singola macchina, ogni layer comunica esclusivamente con:</p>
+<ul>
+<li>il livello sottostante, di cui sfrutta le funzionalità;</li>
+<li>il livello sovrastante, cui fornisce una serie di funzionalità;</li>
+</ul>
+<p>Nella comunicazione tra due macchine, invece, ogni layer comunica con il suo <em>pari</em> (<em>peer</em>): ad esempio, il layer fisico della macchina A parlerà soltanto con il layer fisico della macchina B; il layer di rete della macchina A solo con quello di rete della macchina B, e via dicendo.</p>
+<h3 id="i-livelli-del-modello-isoosi">I livelli del modello ISO/OSI<a class="headerlink" href="#i-livelli-del-modello-isoosi" title="Permanent link">&para;</a></h3>
+<p>Diamo ora una panoramica dei diversi livelli descritti dal modello.</p>
+<h4 id="livello-1-livello-fisico">Livello 1: Livello fisico<a class="headerlink" href="#livello-1-livello-fisico" title="Permanent link">&para;</a></h4>
+<p>Il <em>layer fisico</em> è responsabile per la trasmissione e ricezione di dati grezzi (<em>raw</em>) tra due dispositivi. Per farlo, sfrutta un mezzo di trasmissione fisico (come ad esempio una guida d'onda o delle onde radio).</p>
+<p>La sua funzione principale è quella di convertire i bit digitali in segnali di tipo elettrico, radio od ottico. Le specifiche del layer includono caratteristiche come livelli di tensione da utilizzare, bit rate, distanza massima di trasmissione, schema di modulazione dei dati e via dicendo.</p>
+<p>Permette inoltre di definire tre modalità di trasmissione su un canale:</p>
+<ul>
+<li><em>simplex</em>: in questo caso, la trasmissione è monodirezionale, senza che il ricevitore si alterni con il trasmettitore (e viceversa);</li>
+<li><em>half-duplex</em>: in questo caso, la modalità di trasmissione è bidirezionale, ma il ricevitore si alterna con il trasmettitore (ovvero, la comunicazione non può avvenire contemporaneamente in entrambe le direzioni);</li>
+<li><em>full-duplex</em>: in questo caso, la modalità di trasmissione è bidirezionale, e la comunicazione può avvenire contemporaneamente in entrambe le direzioni.</li>
+</ul>
+<p>Questi includono dei pin, tensioni, impedenze di linea, specifiche dei cavi, timing del segmale e frequenza per i dispositivi wireless. Il controllo del bit rate è fatto a livello fisico e può definire delle modalità di trasmissione come <em>simplex</em>,  half-duplex o full duplex.</p>
+<h4 id="livello-2-livello-data-link">Livello 2: Livello data link<a class="headerlink" href="#livello-2-livello-data-link" title="Permanent link">&para;</a></h4>
+<p>Il livello <em>data link</em> è quello che si occupa di stabilire un "collegamento" tra due diversi nodi. In particolare:</p>
+<ul>
+<li>individua e corregge gli errori che avvengono a livello fisico;</li>
+<li>definisce come vengono instaurate e terminate le connessioni;</li>
+<li>controlla il flusso dati.</li>
+</ul>
+<h5 id="il-progetto-ieee-802">Il progetto IEEE 802<a class="headerlink" href="#il-progetto-ieee-802" title="Permanent link">&para;</a></h5>
+<p>Il progetto IEEE 802 definisce, relativamente soprattutto al livello data link, un insieme di standard per le reti locali, in inglese <em>Local Area Networks</em> (<em>LAN</em>).</p>
+<p>In tal senso, la definizione data dal progetto IEEE 802 di rete locale è la seguente:</p>
+<div class="admonition quote lan">
+<p class="admonition-title">Quote</p>
+<p><em>Una LAN è un sistema di comunicazione che permette ad apparecchiature indipendenti di comunicare fra loro entro un'area delimitata usando un canale fisico a velocità elevata e con basso tasso di errore.</em></p>
+</div>
+<p>Notiamo che la LAN non è quindi limitata nell'ambito (domestico, commerciale, industriale) né nelle tecnologie utilizzate: gli unici limiti sono l'area di interesse (giocoforza limitata), velocità ed affidabilità della comunicazione.</p>
+<p>Il progetto IEEE 802 ha quindi suddiviso il livello data link in due diversi sottolivelli:</p>
+<ul>
+<li>il livello <em>Medium Access Control</em> (<em>MAC</em>) verifica come i dispositivi di rete accedono al mezzo fisico;</li>
+<li>il livello <em>Logical Link  Control</em> (<em>LLC</em>) controlla gli errori e sincronizza i frame.</li>
+</ul>
+<p>Concretamente, esistono diversi protocolli definiti nell'ambito del progetto IEEE 802, che sono usati nelle comunicazioni di tutti i giorni. Un esempio sono le reti Ethernet, che aderiscono allo standard 802.3, e le reti WiFi, che aderiscono a diverse versioni dello standard 802.11 (arrivato di recente alla revisione <em>p</em>).</p>
+<h4 id="livello-3-livello-di-rete">Livello 3: livello di rete<a class="headerlink" href="#livello-3-livello-di-rete" title="Permanent link">&para;</a></h4>
+<p>Il livello di <em>rete</em> definisce come trasferire sequenze di lunghezza arbitraria (<em>pacchetti</em>) tra due nodi connessi in reti differenti, laddove per <em>rete</em> si potrebbe intendere sia una singola LAN, sia l'interconnessione di diverse LAN.</p>
+<p>E' sul concetto di <em>rete</em> che è necessario focalizzarsi. Infatti, ogni dispositivo in rete è comunemente detto <em>nodo</em>, e può trasferire messaggi agli altri nodi semplicemente specificando l'indirizzo degli stessi (oltre che ovviamente il messaggio); saranno i dispositivi di rete a trovar eil modo di consegnare il messaggio al destiantario, magari instradandolo attraverso i nodi intermedi.</p>
+<p>Notiamo anche che la consegna dei messaggi a livello di rete non è strettamente <em>affidabile</em>; questo comporta quindi che i messaggi potrebbero essere persi, ed è quindi necessario prevedere altri meccanismi per garantire l'affidabilità della comunicazione.</p>
+<h4 id="livello-4-livello-di-trasporto">Livello 4: livello di trasporto<a class="headerlink" href="#livello-4-livello-di-trasporto" title="Permanent link">&para;</a></h4>
+<p>Il livello di <em>trasporto</em> è quello delegato a garantire questa affidabilità mediante opportuni meccanismi di controllo di flusso e di errore.</p>
+<p>Il modello ISO/OSI definisce cinque classi di protocolli a livello di trasporto, in base ai tipi di meccanismi di controllo dell'affidabilità. Si va dalla classe <em>TP0</em>, progettata per essere implementata su connessioni supposte <em>error-free</em>, ed i cui protocolli non forniscono alcun meccanismo per la gestione degli errori, fino alla classe <em>TP4</em>, che è quella che ricorda più da vicino i protocolli maggiormente usati a livello di trasporto in Internet.</p>
+<h4 id="livello-5-livello-di-sessione">Livello 5: livello di sessione<a class="headerlink" href="#livello-5-livello-di-sessione" title="Permanent link">&para;</a></h4>
+<p>Il livello di sessione si occupa di controllare il "dialogo", ovvero le <em>connessioni</em>, tra i diversi computer, gestendone, tra le altre cose, l'inizializzazione e la chiusura.</p>
+<h4 id="livello-6-livello-di-presentazione">Livello 6: livello di presentazione<a class="headerlink" href="#livello-6-livello-di-presentazione" title="Permanent link">&para;</a></h4>
+<p>Nel modello ISO/OSI, il livello di presentazione si occupa di stabilire un <em>contesto</em> tra due diverse entità, all'interno del quale le due possono comunicare <em>pur usando semantica e sentassi differenti</em>.</p>
+<p>Il livello di presentazione funziona quindi un po' come un <em>traduttore</em>: fa in modo che due applicazioni, anche differenti, siano in grado di comunicare tra loro, fornendo una sorta di "dizionario" (o, più correttamente, <em>mappatura</em>) tra i linguaggi da loro compresi. E' anche per questo motivo che alle volte il livello di presentazione è anche chiamato <em>syntax layer</em>.</p>
+<p>Oltre alla funzione di mapping, il livello di presentazione ne offre anche di altre, tra cui quella più importante è quella delegata alla compressione dei dati.</p>
+<h4 id="livello-7-livello-applicativo">Livello 7: Livello applicativo<a class="headerlink" href="#livello-7-livello-applicativo" title="Permanent link">&para;</a></h4>
+<p>Il livello applicativo è quello più vicino all'utente, ed interagisce direttamente con gli applicativi software da questo utilizzati. E' importante sottolineare che la specifica di questi programmi <em>ricade al di fuori dell'ambito del modello ISO/OSI</em>; di conseguenza, le specifiche (ad esempio) del browser o di un'app per smartphone non saranno mai dettate dallo standard. </p>
+<p>Quest'ultima considerazione ci permette di distinguere tra <em>applicazione</em> ed <em>entità</em> legata all'applicazione: ad esempio, in un sito di prenotazione degli alberghi ci possono essere due entità, una che usa un protocollo a livello applicativo per comunicare con gli utenti, ed un'altra che usa un protocollo a livello applicativo per salvare i dati su un database remoto. Nessuna di queste due entità ha però a che fare con l'applicazione stessa, che è definita dalla <em>logica di business</em> (in questo caso, la prenotazione degli alberghi).</p>
+<h2 id="lo-standard-del-mondo-reale-lo-stack-tcpip">Lo standard del mondo reale: lo stack TCP/IP<a class="headerlink" href="#lo-standard-del-mondo-reale-lo-stack-tcpip" title="Permanent link">&para;</a></h2>
+<p>Il modello ISO/OSI non trova riscontro diretto nelle applicazioni reali: piuttosto, è l'<em>Internet Protocol Suite</em>, o <em>stack TCP/IP</em>, lo stack protocollare usato ed implementato su Internet. Come vedremo, la denominazione <em>stack TCP/IP</em> deriva direttamente dal nome dei due principali protocolli su cui è basato lo stack, ovvero il <em>Transmission Control Protocol</em> (<em>TCP</em>) e l'<em>Internet Protocol</em> (<em>IP</em>).</p>
+<h3 id="i-livelli-dello-stack-tcpip">I livelli dello stack TCP/IP<a class="headerlink" href="#i-livelli-dello-stack-tcpip" title="Permanent link">&para;</a></h3>
+<p>A differenza del modello ISO/OSI, lo stack TCP/IP è organizzato in quattro diversi livelli, più o meno riconducibili a quelli dell'ISO/OSI. Questi sono, dal più basso al più alto, il <em>livello link</em>, il <em>livello internet</em>, il <em>livello trasporto</em> ed il <em>livello applicativo</em>. Vediamoli di seguito.</p>
+<h4 id="livello-1-livello-link">Livello 1: Livello link<a class="headerlink" href="#livello-1-livello-link" title="Permanent link">&para;</a></h4>
+<p>Il <em>livello link</em> si occupa di gestire la connessione limitatamente all'ambito della rete locale cui un host è collegato. Il <em>link</em>, o <em>collegamento</em>, include quindi tutti gli host che è possibile raggiungere senza dover coinvolgere un <em>router</em> (che è il dispositivo che permette la connessione tra diverse reti locali). Va da sé che la dimensione del link è determinata dal progetto della rete stessa.</p>
+<p>Nel confronto con il modello ISO/OSI, il livello link racchiude le funzionalità corrispondenti a quelle del secondo layer (ovvero il <em>data link</em>). E' importante sottolieare come l'effettiva implementazione del progetto IEEE 802 sia avvenuta proprio a questo livello.</p>
+<h4 id="livello-2-livello-internet">Livello 2: Livello internet<a class="headerlink" href="#livello-2-livello-internet" title="Permanent link">&para;</a></h4>
+<p>La comunicazione tra diverse reti richiede che i dati siano correttamente instradati dalla rete iniziale a quella di destinazione, secondo un processo chiamato <em>routing</em> e supportato dall'identificazione degli indirizzi degli host coinvolti mediante il sistema degli <em>indirizzi IP</em>.</p>
+<p>Il livello internet fornisce una comunicazione <em>non</em> affidabile su reti differenti, garantendo l'inoltro dei pacchetti mediante dei dispositivi chiamati router. Il livello permette quindi l'interoperabilità di reti eterogenee, e definisce Internet nel modo in cui la conosciamo oggi.</p>
+<p>Il protocollo principale usato a questo livello è l'<em>Internet Protocol</em>, che definisce due diversi sistemi di indirizzamento per l'identificazione degli host sulla rete. Il sistema originario di indirizzamento è chiamato <em>Internet Protocol version 4</em> (<em>IPv4</em>), ed usa un indirizzo a 32 bit per identificare un numero massimo di <span class="arithmatex">\(2^32\)</span> host.</p>
+<p>Ovviamente, con il progressivo diffondersi delle reti di telecomunicazione, questo valore ha rappresentato un limite, che è stato dapprima arginato inserendo diverse classi di indirizzi riservati alle macchine interne ad ogni LAN, per poi essere superato nel 1998 mediante la standardizzazione dell'Internet Protocol version 6 (IPv6), che usa indirizzi a 128 bit.</p>
+<p>Tuttavia, nonostante le schede di rete in grado di supportare IPv6 esistano dal 2006 circa, l'IPv4 è ancora il protocollo di comunicazione maggiormente utilizzato.</p>
+<h4 id="livello-3-livello-di-trasporto">Livello 3: Livello di trasporto<a class="headerlink" href="#livello-3-livello-di-trasporto" title="Permanent link">&para;</a></h4>
+<p>Il livello di <em>trasporto</em> permette di creare dei "canali dati", che le applicazioni usano per lo scambio di messaggi specifici per determinati task.</p>
+<p>La connettività può essere implementata sia come <em>connection-oriented</em>, mediante il protocollo TCP, o <em>connectionless</em>, mediante il protocollo UDP.</p>
+<p>E' possibile fornire canali di trasmissione specifici per diversi processi mediante il concetto di <em>porta di rete</em>, ovvero la creazione di un costrutto logico numerico allocato specificamente per ognuno dei canali di comunicazione necessari. E' importante notare come, per molti servizi, questi numeri di porta siano stati standardizzati, in modo che i computer client possano indirizzare servizi specifici senza necessitare di tecniche di <em>service discovery</em>. Ad esempio, l'utilizzo standard del protocollo HTTP prevede il coinvolgimento della porta 80, mentre il protocollo SSH la porta 22.</p>
+<p>Il layer di trasporto dello stack TCP/IP corrisponde approssimativamente al quarto livello del modello OSI, chiamato transport layer.</p>
+<h5 id="trasmission-control-protocol">Trasmission Control Protocol<a class="headerlink" href="#trasmission-control-protocol" title="Permanent link">&para;</a></h5>
+<p>Il protocollo TCP è un protocollo <em>connection-oriented</em> che risolve i problemi di affidabilità che possono riscontrarsi nella fornitura di un flusso di byte affidabile. In particolare, il TCP garantisce che:</p>
+<ul>
+<li>i dati arrivino in ordine;</li>
+<li>i dati siano correttamente ricevuti;</li>
+<li>i dati duplicati siano scartati;</li>
+<li>i pacchetti persi o scartati siano nuovamente inviati;</li>
+<li>la congestione del traffico sia adeguatamente controllata.</li>
+</ul>
+<h5 id="user-datagram-protocol">User Datagram Protocol<a class="headerlink" href="#user-datagram-protocol" title="Permanent link">&para;</a></h5>
+<p>Il protocollo <em>UDP</em> (<em>User Datagram Protocol</em>) è, a differenza del TCP, un protocollo <em>connectionless</em>, e si occupa di fornire una trasmissione dati non affidabile ma, non includendo il controllo degli errori tipico di TCP, più veloce. L'UDP è tipicamente usato per applicazioni legate allo streaming (audio, video e VoIP), dove l'arrivo in tempo dei dati è più importante dell'effettiva consegna degli stessi. Altri tipi di applicazioni sono quelle che prevedono esclusivamente semplici cicli di richiesta/risposta.</p>
+<h4 id="livello-4-livello-applicativo">Livello 4: Livello applicativo<a class="headerlink" href="#livello-4-livello-applicativo" title="Permanent link">&para;</a></h4>
+<p>Il livello <em>applicativo</em> include i protocolli usati dalla maggior part edelle applicazioni per fornire servizi all'utente. Questi possono includere servizi di supporto di rete, come protocolli per il routing e la configurazione di rete. Un esempio di protocollo a livello applicativo sono l*Hypertext Transfer Protocol* (<em>HTTP</em>). I dati codificati secondo i protocolli a livello applicativo vengono quindi incapsulati in unità a livello di trasporto (ad esempio, in formato TCP o UDP), per poi venire ulteriormente incapsulati man mano che si scende verso il layer fisico.</p>
+<p>E' interessante notare come lo stack TCP/IP non specifichi la formattazione e la presentazione dei dati, e non definisca dei layer aggiuntivi tra quello applicativo e di trasporto.</p>
+<p>Per quello che riguarda la comunicazione con il livello di trasporto (e quelli sottostanti), il livello applicativo tratta quest'ultimo come una <em>black box</em>: non si occupa quindi dei dettagli implementativi dello stesso, anche se è a conoscenza di alcune informazioni fondamentali come indirizzo IP e numero di porta utilizzati.</p>
+<p>Dal punto di vista del confronto con il modello ISO/OSI, possiamo dire che il layer applicativo del modello TCP/IP è spesso comparato ad una combinazione dei livelli di sessione, presentazione ed applicazione del primo.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
+        
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      
+        <script src="../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Corso di Informatica - Angelo Cardellicchio</title>
+        <title>01 binary search - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,7 +36,7 @@
     
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     
       
@@ -66,12 +66,17 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#introduzione-al-problema" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -82,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+    <a href="../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              01 binary search
             
           </span>
         </div>
@@ -169,7 +174,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+    <a href="../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -188,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home del corso
       </a>
     </li>
@@ -203,7 +208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bacheca/" class="md-nav__link">
+      <a href="../../../bacheca/" class="md-nav__link">
         Bacheca avvisi
       </a>
     </li>
@@ -244,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ricevimento/" class="md-nav__link">
+      <a href="../../../ricevimento/" class="md-nav__link">
         Ricevimento
       </a>
     </li>
@@ -284,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/comunicazioni/standard/" class="md-nav__link">
+      <a href="../../../comunicazioni/standard/" class="md-nav__link">
         Varie
       </a>
     </li>
@@ -298,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/comunicazioni/temi/" class="md-nav__link">
+      <a href="../../../comunicazioni/temi/" class="md-nav__link">
         Sui temi d'anno
       </a>
     </li>
@@ -371,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/standard/intro/" class="md-nav__link">
+      <a href="../../../01_esami/standard/intro/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -418,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/intro/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/intro/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -432,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/valutazione/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/valutazione/" class="md-nav__link">
         Valutazione
       </a>
     </li>
@@ -446,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/faq/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -486,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/2020-2021/date/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/2020-2021/date/" class="md-nav__link">
         Date rilevanti
       </a>
     </li>
@@ -500,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/2020-2021/documenti/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/2020-2021/documenti/" class="md-nav__link">
         Documenti
       </a>
     </li>
@@ -514,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/2020-2021/chiarimenti/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/2020-2021/chiarimenti/" class="md-nav__link">
         Chiarimenti
       </a>
     </li>
@@ -561,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/traccia/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/traccia/" class="md-nav__link">
         Traccia
       </a>
     </li>
@@ -575,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_prima/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_prima/" class="md-nav__link">
         Parte Prima
       </a>
     </li>
@@ -589,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
         Parte Seconda
       </a>
     </li>
@@ -603,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_terza/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_terza/" class="md-nav__link">
         Parte Terza
       </a>
     </li>
@@ -617,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_quarta/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_quarta/" class="md-nav__link">
         Parte Quarta
       </a>
     </li>
@@ -686,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/00_materiale/programma/" class="md-nav__link">
+      <a href="../../../00_materiale/programma/" class="md-nav__link">
         Slides proiettate a lezione
       </a>
     </li>
@@ -752,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/01_introduttivi/01_intro/" class="md-nav__link">
+      <a href="../../01_introduttivi/01_intro/" class="md-nav__link">
         01 - Introduzione all'Informatica
       </a>
     </li>
@@ -766,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/01_introduttivi/02_algoritmi/" class="md-nav__link">
+      <a href="../../01_introduttivi/02_algoritmi/" class="md-nav__link">
         02 - Gli Algoritmi
       </a>
     </li>
@@ -780,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/01_introduttivi/04_rappresentazione/" class="md-nav__link">
+      <a href="../../01_introduttivi/04_rappresentazione/" class="md-nav__link">
         04 - Rappresentazione dei dati
       </a>
     </li>
@@ -827,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/03_variabili/" class="md-nav__link">
+      <a href="../../04_programmazione/03_variabili/" class="md-nav__link">
         11 - Variabili
       </a>
     </li>
@@ -841,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/04_funzioni/" class="md-nav__link">
+      <a href="../../04_programmazione/04_funzioni/" class="md-nav__link">
         12 - Funzioni
       </a>
     </li>
@@ -855,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/05_complessita/" class="md-nav__link">
+      <a href="../../04_programmazione/05_complessita/" class="md-nav__link">
         13 - Complessità computazionale
       </a>
     </li>
@@ -869,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/06_strutture_dati/" class="md-nav__link">
+      <a href="../../04_programmazione/06_strutture_dati/" class="md-nav__link">
         14 - Strutture dati
       </a>
     </li>
@@ -916,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/05_algoritmi/04_merge_sort/" class="md-nav__link">
+      <a href="../04_merge_sort/" class="md-nav__link">
         17 - Merge sort
       </a>
     </li>
@@ -930,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/05_algoritmi/05_quick_sort/" class="md-nav__link">
+      <a href="../05_quick_sort/" class="md-nav__link">
         18 - Quick sort
       </a>
     </li>
@@ -977,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/06_modelli/01_turing/" class="md-nav__link">
+      <a href="../../06_modelli/01_turing/" class="md-nav__link">
         20 - Macchina di Turing
       </a>
     </li>
@@ -1057,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/01_linguaggio_c/01_introduzione/" class="md-nav__link">
+      <a href="../../programmazione/01_linguaggio_c/01_introduzione/" class="md-nav__link">
         01 - Introduzione al C
       </a>
     </li>
@@ -1104,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/01_c_vs_cpp/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/01_c_vs_cpp/" class="md-nav__link">
         01 - C vs. C++
       </a>
     </li>
@@ -1118,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/02_definizioni/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/02_definizioni/" class="md-nav__link">
         02 - Alcune definizioni (in C++!)
       </a>
     </li>
@@ -1132,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/03_classi/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/03_classi/" class="md-nav__link">
         03 - Le classi (parte uno)
       </a>
     </li>
@@ -1146,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/04_definizioni_adv/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/04_definizioni_adv/" class="md-nav__link">
         04 - Alcune definizioni (più avanzate)
       </a>
     </li>
@@ -1160,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/05_classi_adv/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/05_classi_adv/" class="md-nav__link">
         05 - Le classi (parte due)
       </a>
     </li>
@@ -1174,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/06_metodi/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/06_metodi/" class="md-nav__link">
         06 - Dettagli sui metodi
       </a>
     </li>
@@ -1188,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/07_ereditarieta/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/07_ereditarieta/" class="md-nav__link">
         07 - Ereditarietà
       </a>
     </li>
@@ -1202,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/08_polimorfismo/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/08_polimorfismo/" class="md-nav__link">
         08 - Polimorfismo
       </a>
     </li>
@@ -1216,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/09_container/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/09_container/" class="md-nav__link">
         09 - Container ed iteratori
       </a>
     </li>
@@ -1230,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/10_file/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/10_file/" class="md-nav__link">
         10 - File in C++
       </a>
     </li>
@@ -1277,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/01_intro/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/01_intro/" class="md-nav__link">
         01 - Introduzione al Python
       </a>
     </li>
@@ -1291,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/02_programmare/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/02_programmare/" class="md-nav__link">
         02 - Programmare in Python
       </a>
     </li>
@@ -1305,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/03_strutture/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/03_strutture/" class="md-nav__link">
         03 - Strutture Dati
       </a>
     </li>
@@ -1319,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/04_moduli/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/04_moduli/" class="md-nav__link">
         04 - Moduli
       </a>
     </li>
@@ -1333,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/05_classi/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/05_classi/" class="md-nav__link">
         05 - Classi e concetti avanzati
       </a>
     </li>
@@ -1347,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/06_file/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/06_file/" class="md-nav__link">
         06 - I/O in Python
       </a>
     </li>
@@ -1361,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/07_test/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/07_test/" class="md-nav__link">
         07 - Cenni ai test
       </a>
     </li>
@@ -1375,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/08_numpy/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/08_numpy/" class="md-nav__link">
         08 - Cenni a NumPy
       </a>
     </li>
@@ -1437,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/standard/esercizi/programmazione/" class="md-nav__link">
+      <a href="../../../01_esami/standard/esercizi/programmazione/" class="md-nav__link">
         Esercizi di programmazione
       </a>
     </li>
@@ -1451,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/standard/esercizi/scritto/" class="md-nav__link">
+      <a href="../../../01_esami/standard/esercizi/scritto/" class="md-nav__link">
         Esercizi per l'esame
       </a>
     </li>
@@ -1525,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/03_appendici/configurazioni/a_vs_code_guide/" class="md-nav__link">
+      <a href="../../../03_appendici/configurazioni/a_vs_code_guide/" class="md-nav__link">
         Visual Studio Code
       </a>
     </li>
@@ -1539,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/03_appendici/configurazioni/b_vs_community_guide/" class="md-nav__link">
+      <a href="../../../03_appendici/configurazioni/b_vs_community_guide/" class="md-nav__link">
         Visual Studio Community
       </a>
     </li>
@@ -1567,11 +1572,142 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione-al-problema" class="md-nav__link">
+    Introduzione al problema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    Descrizione dell'algoritmo
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-di-progettazione" class="md-nav__link">
+    Fase di progettazione.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-flow-chart" class="md-nav__link">
+    TODO: flow chart
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complessita-computazionale" class="md-nav__link">
+    Complessità computazionale
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                  <h1>01 binary search</h1>
+                
+                <h2 id="introduzione-al-problema">Introduzione al problema<a class="headerlink" href="#introduzione-al-problema" title="Permanent link">&para;</a></h2>
+<p>Supponiamo di voler trovare il nostro gruppo tra quello dei partecipanti al tema d'anno. Ovviamente, l'idea sarebbe quella di scrivere un programma che faccia la ricerca del nostro gruppo in maniera automatica.</p>
+<p>Una prima idea potrebbe essere quindi quella di esaminare ogni gruppo, partendo dal primo, mediante un approccio chiamato <em>ricerca lineare</em> (<em>linear search</em>). Ciò significa che il nostro programma dovrebbe esaminare una quarantina di gruppi per trovare quello di cui ha bisogno; non molti, giusto?</p>
+<p>Beh, immaginiamo adesso di voler trovare Betelgeuse nel catalogo stellare <a href="https://www.cosmos.esa.int/web/hipparcos/tycho-2"><em>Tycho-2</em></a>, che contiene non quaranta studenti, ma più di due milioni e mezzo di stelle. L'impresa non sembra più tanto semplice.</p>
+<p>Non disperiamo, però. Esiste un approccio che ci permette di ridurre in maniera drastica il numero di operazioni da eseguire, ovvero la <em>ricerca dicotomica</em> o, più comunemente, la <em>binary search</em>. </p>
+<div class="admonition note">
+<p class="admonition-title">Definizione del problema</p>
+<p>Abbiamo dimenticato una parte fondamentale nella descrizione dell'algoritmo, ovvero definire più o meno formalmente quale problema risolve. In breve, la <em>ricerca dicotomica serve a trovare un oggetto in una lista ordinata</em>.</p>
+</div>
+<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
+<p>L'idea alla base della binary search è <em>tenere traccia di un intervallo di ipotesi ragionevoli</em>. Facciamo un rapido esempio per capire al meglio di cosa si tratta.</p>
+<p>Immaginiamo che noi, Alice, chiediamo al nostro collega, Bob, di pensare ad un numero compreso tra <em>uno</em> e <em>cento</em>. Il nostro obiettivo è quello di indovinare il numero in meno di otto mosse: facendolo, costringeremo Bob a pagare il caffè (anche al Docente). Le regole dicono che, ad ogni mossa, diremo a Bob un numero, e lui ci dirà soltanto se quello che ha pensato è <em>inferiore</em> o <em>superiore</em>.</p>
+<p>Bob già gongola, pensando al caffè che gusterà a nostre spese: in realtà, però, non sa che noi abbiamo seguito l'insegnamento del Docente, e quindi siamo pronti a fargli sparire il sorriso dalle labbra.</p>
+<p>La nostra strategia è semplice: scartare, ad ogni mossa, il maggior numero possibile di <em>ipotesi false</em>, ovvero di numeri che <em>non</em> coincidono con quello pensato da Bob. Per farlo, partiamo con una mossa standard: diciamo a Bob che, a nostro avviso, il numero cui ha pensato è 50. Bob, ovviamente, sogghigna: non è quello, e si limita a dirci che è <em>superiore</em>. Quello che lui non afferra al volo è che ha appena ridotto di metà il nostro spazio delle ipotesi, che da cento possibilità è passato a cinquanta.</p>
+<p>La seconda mossa è altrettanto semplice: infatti, gli proponiamo la metà del nuovo intervallo, ovvero 75. Bob continua a godersela, dicendoci che è <em>inferiore</em>. Ma noi abbiamo ulteriormente delimitato il nostro range di possibilità.</p>
+<p>Il gioco prosegue come segue.</p>
+<div class="highlight"><pre><span></span><code>ROUND 3
+--------------------------------
+ALICE -&gt; 62 --- BOB -&gt; INFERIORE
+--------------------------------
+ROUND 4
+--------------------------------
+ALICE -&gt; 56 --- BOB -&gt; SUPERIORE
+--------------------------------
+ROUND 5
+--------------------------------
+ALICE -&gt; 59 --- BOB -&gt; SUPERIORE
+--------------------------------
+ROUND 6 (BOB IMPALLIDISCE)
+--------------------------------
+ALICE -&gt; 61 --- BOB -&gt; INFERIORE
+--------------------------------
+ROUND 7 (BOB TREMANTE...)
+--------------------------------
+ALICE -&gt; 60 --- BOB -&gt; PAGARE
+</code></pre></div>
+<p>In sole sette mosse, abbiamo trovato il valore immaginato da Bob e, mentre sorseggiamo il meritato caffè, ringraziamo il Docente di Informatica per averci illuminato.</p>
+<h2 id="fase-di-progettazione">Fase di progettazione.<a class="headerlink" href="#fase-di-progettazione" title="Permanent link">&para;</a></h2>
+<p>Potremmo voler implementare questo algoritmo in un linguaggio di programmazione, di modo da serializzare la vittoria di caffè con gli altri nostri amici Charlie, Dave, etc.</p>
+<p>Per farlo, è necessario per prima cosa scrivere l'algoritmo in <em>pseudocodice</em>, e poi definirne il flow chart.</p>
+<p>TODO: da qui</p>
+<p>Per questo gioco, posso usare poche variabili. Possiamo usare la variabile <em>min</em> per indicare l'ipotesi minima più ragionevole, e la variabile <em>max</em> per l'ipotesi massima ragionevole.</p>
+<p>Ecco un'implementazione step-by-step:</p>
+<ol>
+<li>sia min = 1 e max = n</li>
+<li>troviamo il valore medio tra min e max, arrotondato ad un intero</li>
+<li>se abbiamo trovato il numero, fermiamoci. altrimenti</li>
+<li>se l'ipotesi era troppo bassa, impostiamo min a n/2 + 1</li>
+<li>se l'ipotesi era troppo altra, impostiamo max a n/2 - 1</li>
+<li>torniamo al passo 2</li>
+</ol>
+<h2 id="todo-flow-chart">TODO: flow chart<a class="headerlink" href="#todo-flow-chart" title="Permanent link">&para;</a></h2>
+<h2 id="complessita-computazionale">Complessità computazionale<a class="headerlink" href="#complessita-computazionale" title="Permanent link">&para;</a></h2>
+<p>Sappiamo che la ricerca lineare di un array di <span class="arithmatex">\(n\)</span> elementi potrebbe dover consultare fino ad <span class="arithmatex">\(n\)</span> ipotesi.</p>
+<p>Vediamo come capire qual è il numero massimo di ipotesi che invece porta avanti la ricerca dicotomica.</p>
+<p>L'idea chiave è che quando la ricerca dicotomica fa un'ipotesi incorretta, la porzione dell'array che contiene le ipotesi ragionevoli è ridotta di metà. Se la porzione ragiovenole ha 32 elemnti, un'ipotesi non corretta la riduce di 16. Quindi, la ricerca dicotomica dimezza la diemnsione della porzioe ragionevole ad ogni ipotesi non corretta.</p>
+<p>Quindi, se iniziamo con un array lungo 8, la prima ipotesi non corretta riduce la dimensione delk problema a 4, quindi a 2, e quindi a 1. Una volta che la poszione ragionevole contiene solo unn elemento, non c'è bvisogno di ulteriori ipotesi; infatti, in questo caso, l'ipotesi può essere corretta o incorretta, e comunque abbiamo finito. POer cui con un array di otto elmenti sono necessari al più quattro valutazioni.</p>
+<p>Cosa accade con 16? Beh, è semplice verificare che serve un passaggio in più, e quindi sono necessarie cinque valutazioni.</p>
+<p>Questo ci porta ad un pattern. Ogni volta che raddoppiamo la dimensione dell'array, abbiamo bisogno di soltanto una nuova ipotesi. Supponendo di avere <span class="arithmatex">\(m\)</span> ipotesi per un array di lunghezza <span class="arithmatex">\(n\)</span>. Quindi, se la lunghezza dell'array raddoppia a $2 * n", il numero di ipotesi diventa <span class="arithmatex">\(m + 1\)</span>.</p>
+<p>Possiamo quinid esprimere il numero di ipotesi, nel caso peggiore, come "il numero di volte che dobbiamo ripetutatmente dimezzare, aprtendo da <span class="arithmatex">\(n\)</span>, fino ad arrivare ad 1, più 1". Questo significa che dobbiamo usare un log_2 (n). Questo significa che, se n come nel nostro caso è circa 64, avremo che il numero di ricerche è pari a 6. Per i 2.600.000 stelle, il numero di ipotesi è pari a 22.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>I numeri che abbiamo indicato non sono potenze di 2. in questo caso, valuteremo la potenza di deu immediatamente inferiroe, e vi aggiungeremo 1. Ecco perché per gli studenti abbiamo 7, mentre per le stelle abbiamo 22.</p>
+</div>
+<p>Il vantaggio di una complessità logaritmica è che cresce molto lentamente, essendo l'inverso della funzione esponenziale, che invece cresce molto rapidamente.</p>
+                
+              
+              
+                
+
 
               
             </article>
@@ -1608,12 +1744,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
       
-        <script src="/js/config.js"></script>
+        <script src="../../../js/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       

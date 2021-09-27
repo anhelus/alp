@@ -9,19 +9,19 @@
       
       
       
-      <link rel="icon" href="/assets/images/favicon.png">
+      <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.0">
     
     
       
-        <title>Corso di Informatica - Angelo Cardellicchio</title>
+        <title>02 selection sort - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
-      <link rel="stylesheet" href="/assets/stylesheets/main.8b42a75e.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8b42a75e.min.css">
       
         
-        <link rel="stylesheet" href="/assets/stylesheets/palette.3f5d1f46.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
         
       
     
@@ -36,7 +36,7 @@
     
     
     
-      <link rel="stylesheet" href="/stylesheets/extra.css">
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
     
     
       
@@ -66,12 +66,17 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
   
     
-    <script>function __prefix(e){return new URL("/",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
+      
+        
+        <a href="#introduzione-al-problema" class="md-skip">
+          Skip to content
+        </a>
       
     </div>
     <div data-md-component="announce">
@@ -82,7 +87,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="/." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+    <a href="../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -101,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              
+              02 selection sort
             
           </span>
         </div>
@@ -169,7 +174,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="/." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+    <a href="../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -188,7 +193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         Home del corso
       </a>
     </li>
@@ -203,7 +208,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/bacheca/" class="md-nav__link">
+      <a href="../../../bacheca/" class="md-nav__link">
         Bacheca avvisi
       </a>
     </li>
@@ -244,7 +249,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/ricevimento/" class="md-nav__link">
+      <a href="../../../ricevimento/" class="md-nav__link">
         Ricevimento
       </a>
     </li>
@@ -284,7 +289,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/comunicazioni/standard/" class="md-nav__link">
+      <a href="../../../comunicazioni/standard/" class="md-nav__link">
         Varie
       </a>
     </li>
@@ -298,7 +303,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/comunicazioni/temi/" class="md-nav__link">
+      <a href="../../../comunicazioni/temi/" class="md-nav__link">
         Sui temi d'anno
       </a>
     </li>
@@ -371,7 +376,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/standard/intro/" class="md-nav__link">
+      <a href="../../../01_esami/standard/intro/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -418,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/intro/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/intro/" class="md-nav__link">
         Introduzione
       </a>
     </li>
@@ -432,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/valutazione/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/valutazione/" class="md-nav__link">
         Valutazione
       </a>
     </li>
@@ -446,7 +451,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/faq/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/faq/" class="md-nav__link">
         FAQ
       </a>
     </li>
@@ -486,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/2020-2021/date/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/2020-2021/date/" class="md-nav__link">
         Date rilevanti
       </a>
     </li>
@@ -500,7 +505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/2020-2021/documenti/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/2020-2021/documenti/" class="md-nav__link">
         Documenti
       </a>
     </li>
@@ -514,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/2020-2021/chiarimenti/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/2020-2021/chiarimenti/" class="md-nav__link">
         Chiarimenti
       </a>
     </li>
@@ -561,7 +566,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/traccia/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/traccia/" class="md-nav__link">
         Traccia
       </a>
     </li>
@@ -575,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_prima/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_prima/" class="md-nav__link">
         Parte Prima
       </a>
     </li>
@@ -589,7 +594,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_seconda/" class="md-nav__link">
         Parte Seconda
       </a>
     </li>
@@ -603,7 +608,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_terza/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_terza/" class="md-nav__link">
         Parte Terza
       </a>
     </li>
@@ -617,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/tema_anno/esempio/parte_quarta/" class="md-nav__link">
+      <a href="../../../01_esami/tema_anno/esempio/parte_quarta/" class="md-nav__link">
         Parte Quarta
       </a>
     </li>
@@ -686,7 +691,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/00_materiale/programma/" class="md-nav__link">
+      <a href="../../../00_materiale/programma/" class="md-nav__link">
         Slides proiettate a lezione
       </a>
     </li>
@@ -752,7 +757,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/01_introduttivi/01_intro/" class="md-nav__link">
+      <a href="../../01_introduttivi/01_intro/" class="md-nav__link">
         01 - Introduzione all'Informatica
       </a>
     </li>
@@ -766,7 +771,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/01_introduttivi/02_algoritmi/" class="md-nav__link">
+      <a href="../../01_introduttivi/02_algoritmi/" class="md-nav__link">
         02 - Gli Algoritmi
       </a>
     </li>
@@ -780,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/01_introduttivi/04_rappresentazione/" class="md-nav__link">
+      <a href="../../01_introduttivi/04_rappresentazione/" class="md-nav__link">
         04 - Rappresentazione dei dati
       </a>
     </li>
@@ -827,7 +832,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/03_variabili/" class="md-nav__link">
+      <a href="../../04_programmazione/03_variabili/" class="md-nav__link">
         11 - Variabili
       </a>
     </li>
@@ -841,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/04_funzioni/" class="md-nav__link">
+      <a href="../../04_programmazione/04_funzioni/" class="md-nav__link">
         12 - Funzioni
       </a>
     </li>
@@ -855,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/05_complessita/" class="md-nav__link">
+      <a href="../../04_programmazione/05_complessita/" class="md-nav__link">
         13 - Complessità computazionale
       </a>
     </li>
@@ -869,7 +874,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/04_programmazione/06_strutture_dati/" class="md-nav__link">
+      <a href="../../04_programmazione/06_strutture_dati/" class="md-nav__link">
         14 - Strutture dati
       </a>
     </li>
@@ -916,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/05_algoritmi/04_merge_sort/" class="md-nav__link">
+      <a href="../04_merge_sort/" class="md-nav__link">
         17 - Merge sort
       </a>
     </li>
@@ -930,7 +935,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/05_algoritmi/05_quick_sort/" class="md-nav__link">
+      <a href="../05_quick_sort/" class="md-nav__link">
         18 - Quick sort
       </a>
     </li>
@@ -977,7 +982,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/06_modelli/01_turing/" class="md-nav__link">
+      <a href="../../06_modelli/01_turing/" class="md-nav__link">
         20 - Macchina di Turing
       </a>
     </li>
@@ -1057,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/01_linguaggio_c/01_introduzione/" class="md-nav__link">
+      <a href="../../programmazione/01_linguaggio_c/01_introduzione/" class="md-nav__link">
         01 - Introduzione al C
       </a>
     </li>
@@ -1104,7 +1109,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/01_c_vs_cpp/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/01_c_vs_cpp/" class="md-nav__link">
         01 - C vs. C++
       </a>
     </li>
@@ -1118,7 +1123,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/02_definizioni/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/02_definizioni/" class="md-nav__link">
         02 - Alcune definizioni (in C++!)
       </a>
     </li>
@@ -1132,7 +1137,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/03_classi/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/03_classi/" class="md-nav__link">
         03 - Le classi (parte uno)
       </a>
     </li>
@@ -1146,7 +1151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/04_definizioni_adv/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/04_definizioni_adv/" class="md-nav__link">
         04 - Alcune definizioni (più avanzate)
       </a>
     </li>
@@ -1160,7 +1165,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/05_classi_adv/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/05_classi_adv/" class="md-nav__link">
         05 - Le classi (parte due)
       </a>
     </li>
@@ -1174,7 +1179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/06_metodi/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/06_metodi/" class="md-nav__link">
         06 - Dettagli sui metodi
       </a>
     </li>
@@ -1188,7 +1193,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/07_ereditarieta/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/07_ereditarieta/" class="md-nav__link">
         07 - Ereditarietà
       </a>
     </li>
@@ -1202,7 +1207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/08_polimorfismo/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/08_polimorfismo/" class="md-nav__link">
         08 - Polimorfismo
       </a>
     </li>
@@ -1216,7 +1221,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/09_container/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/09_container/" class="md-nav__link">
         09 - Container ed iteratori
       </a>
     </li>
@@ -1230,7 +1235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/02_linguaggio_cpp/10_file/" class="md-nav__link">
+      <a href="../../programmazione/02_linguaggio_cpp/10_file/" class="md-nav__link">
         10 - File in C++
       </a>
     </li>
@@ -1277,7 +1282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/01_intro/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/01_intro/" class="md-nav__link">
         01 - Introduzione al Python
       </a>
     </li>
@@ -1291,7 +1296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/02_programmare/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/02_programmare/" class="md-nav__link">
         02 - Programmare in Python
       </a>
     </li>
@@ -1305,7 +1310,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/03_strutture/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/03_strutture/" class="md-nav__link">
         03 - Strutture Dati
       </a>
     </li>
@@ -1319,7 +1324,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/04_moduli/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/04_moduli/" class="md-nav__link">
         04 - Moduli
       </a>
     </li>
@@ -1333,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/05_classi/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/05_classi/" class="md-nav__link">
         05 - Classi e concetti avanzati
       </a>
     </li>
@@ -1347,7 +1352,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/06_file/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/06_file/" class="md-nav__link">
         06 - I/O in Python
       </a>
     </li>
@@ -1361,7 +1366,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/07_test/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/07_test/" class="md-nav__link">
         07 - Cenni ai test
       </a>
     </li>
@@ -1375,7 +1380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/02_dispense/programmazione/03_linguaggio_python/08_numpy/" class="md-nav__link">
+      <a href="../../programmazione/03_linguaggio_python/08_numpy/" class="md-nav__link">
         08 - Cenni a NumPy
       </a>
     </li>
@@ -1437,7 +1442,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/standard/esercizi/programmazione/" class="md-nav__link">
+      <a href="../../../01_esami/standard/esercizi/programmazione/" class="md-nav__link">
         Esercizi di programmazione
       </a>
     </li>
@@ -1451,7 +1456,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/01_esami/standard/esercizi/scritto/" class="md-nav__link">
+      <a href="../../../01_esami/standard/esercizi/scritto/" class="md-nav__link">
         Esercizi per l'esame
       </a>
     </li>
@@ -1525,7 +1530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/03_appendici/configurazioni/a_vs_code_guide/" class="md-nav__link">
+      <a href="../../../03_appendici/configurazioni/a_vs_code_guide/" class="md-nav__link">
         Visual Studio Code
       </a>
     </li>
@@ -1539,7 +1544,7 @@
   
   
     <li class="md-nav__item">
-      <a href="/03_appendici/configurazioni/b_vs_community_guide/" class="md-nav__link">
+      <a href="../../../03_appendici/configurazioni/b_vs_community_guide/" class="md-nav__link">
         Visual Studio Community
       </a>
     </li>
@@ -1567,11 +1572,108 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione-al-problema" class="md-nav__link">
+    Introduzione al problema
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    Descrizione dell'algoritmo
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
               
-  <h1>404 - Not found</h1>
+                
+                
+                  <h1>02 selection sort</h1>
+                
+                <h2 id="introduzione-al-problema">Introduzione al problema<a class="headerlink" href="#introduzione-al-problema" title="Permanent link">&para;</a></h2>
+<p>Ordinare una lista di elementi (ovviamente dello stesso tipo) può aiutare ad individuare rapidamente un certo elemento della stessa. In tal senso, esistono diversi algoritmi, chiamati <em>algoritmi di ordinamento</em> (o, in inglese, <em>sorting algorithms</em>).</p>
+<p>Il primo, e più semplice, algoritmo di ordinamento è chiamato <em>selection sort</em>. Per comprenderne il funzionamento, ricorriamo (al solito) ai nostri cari Alice e Bob.</p>
+<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
+<p>Il selection sort è un algoritmo <em>iterativo</em>: ad ogni iterazione, viene analizzato un elemento della lista</p>
+<p>L'idea alla base del selection sort è quella di *scambia</p>
+<p>Invece di sviluppare il tema d’anno di Informatica, Alice e Bob decidono di prendersi il pomeriggio libero, e si imbattono nel vecchio mazzo di carte del cugino di Bob.</p>
+<p>“Alice, ricordi il caffè che ho perso l’altra volta? Beh, ho in mente un modo per riaverlo indietro.”<br />
+“Dimmi pure. Cosa hai in mente?”<br />
+“Scommetto che non riesci a trovare una maniera algoritmica per ordinare questo vecchio mazzo.”<br />
+“Scommessa accettata.”</p>
+<p>Alice, che ricordiamo essere una assidua frequentatrice del corso di Informatica, inizia facendo queste mosse.</p>
+<p>Per prima cosa, dispone tutte le carte presenti nel mazzo lungo un’unica fila. A quel punto, inizia a cercare la carta più piccola, e la posiziona al primo posto.<br />
+Successivamente, suddivide la fila in due: a sinistra mette le carte già ordinate (ovvero, la prima carta), ed a destra quelle ancora da ordinare.<br />
+A quel punto, prende dalla fila di destra la carta più piccola, e la posiziona immediatamente a destra dell’ultimo elemento della fila di sinistra. Fatto questo, reitera questa procedura fino a che la fila di destra non è completamente vuota, mentre quella di sinistra ha al suo interno tutte le carte ordinate.</p>
+<p>“Ok, Alice, hai ordinato le carte, ma non vedo alcun algoritmo.”<br />
+“E’ qui che ti sbagli, mio caro.”</p>
+<p>Ed Alice, pregustando la vittoria, elenca a Bob le istruzioni che ha eseguito, dimostrando che la procedura che ha eseguito è modellabile secondo l’algoritmo di selection sort.</p>
+<p>Sia x un array di n elementi interi.<br />
+Associare ad i il primo indice dell’array (0), ed a j l’ultimo (n-1).<br />
+Associare ad una variabile il valore di x(0), e supporre che sia il valore minore.<br />
+Confrontare tutti gli elementi di x(k), con k che va da 1 ad n - 1, con x(0). Aggiornare il valore di x(0) nel caso x(k) minore di x (0).<br />
+Incrementare di 1 il valore di i.<br />
+Ritornare all’istruzione 4 fino a che i == j.</p>
+<p>Un esempio pratico<br />
+Immaginiamo di avere un array con valori [12, 4, 8, 7, 2]. Per prima cosa, vediamo che il valore di i sarà pari a 0, mentre j sarà pari a 4.</p>
+<p>A questo punto, poniamo min = x(0) = 12. Vediamo che x(1) = 4 è minore di 12, per cui il valore min viene aggiornato, e risulta essere pari a 4. Andiamo avanti, e compiamo soltanto un altro aggiornamento, ovvero quando vediamo che x(4) minore di min. A questo punto, inseriamo x(0) all’estrema sinistra (posizione i).</p>
+<p>Aggiorniamo il valore di i ad 1, e reiteriamo la procedura, fino ad ottenere l’array finale:</p>
+<p>[12, 4, 8, 7, 2]<br />
+i = 0; j = 4;<br />
+min = x(0) = 12;<br />
+min = x(4) = 2;<br />
+new = [2, 12, 4, 8, 7]<br />
+i = 1;<br />
+min = x(1) = 12;<br />
+min = x(2) = 4;<br />
+new = [2, 4, 12, 8, 7]<br />
+i = 2;<br />
+min = x(2) = 12;<br />
+min = x(4) = 7;<br />
+new = [2, 4, 7, 12, 8]<br />
+i = 3;<br />
+min = x(3) = 12;<br />
+min = x(4) = 8;<br />
+new = [2, 4, 7, 8, 12]<br />
+return</p>
+<p>TODO FLOW CHART</p>
+<p>Analisi dell’algoritmo<br />
+Il selection sort itera su tutti gli indici di un array. Supponiamo di avere un array di n elementi; avremo (ovviamente) n indici.</p>
+<p>Per capire quante operazioni sono necessarie per completare l’operazione di ordinamento, dobbiamo contare il numero di confronti necessari ad individuare l’elemento minore attualmente presente nell’array. In particolare, alla prima iterazione, quando i = 0, avremo la necessità di effettuare n operazioni, una per ogni elemento dell’array. Alla seconda iterazione, quando i = 1, dovremo fare n - 1 confronti; alla terza, basteranno n - 2 confronti, e così via. Ciò significa che avremo bisogno di n + (n-1) + … + 2 + 1 confronti; ciò equivale ad una serie aritmetica pari a (n^2/2) + n/2. La complessità di caso peggiore tiene però conto di un limite asintoticamente superiore di questa serie, che è pari ad n^2; ciò significa che saremo in una situazione per cui la complessità computazionale è pari ad O(n^2).</p>
+<p>Nota <br />
+Una complessità di questo tipo ci permette di notare che il tempo richiesto all’esecuzione dell’algoritmo cresce molto velocemente al crescere del numero di elementi dell’array. Con n = 10, infatti, avremo bisogno di 100 unità di tempo. Supponendo che un’unità di tempo sia pari ad un microsecondo, avremo bisogno di 0.1 secondi. Se n = 100, allora avremo bisogno di 10 secondi. Se n = 1.000, invece, avremo bisogno di 1.000 secondi (ovvero quasi 17 minuti!).</p>
+                
+              
+              
+                
+
 
               
             </article>
@@ -1608,12 +1710,12 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "/", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "/assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.f8263e09.min.js", "version": null}</script>
     
     
-      <script src="/assets/javascripts/bundle.4fc53ad4.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.4fc53ad4.min.js"></script>
       
-        <script src="/js/config.js"></script>
+        <script src="../../../js/config.js"></script>
       
         <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
       
