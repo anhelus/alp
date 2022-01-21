@@ -11,3 +11,5 @@
 # VS
 .vs/*
 Debug/*
+
+.vscode/
