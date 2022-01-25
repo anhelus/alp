@@ -1,62 +1,42 @@
-## Una definizione di Informatica
+# Introduzione: cosa è l'Informatica?
 
-Di solito, trovare una definizione per un argomento può aiutare a comprenderne al meglio la natura.
+Come per molti degli argomenti cui ci si approccia nel corso della vita, trovare una definizione per il concetto di _informatica_ può aiutare a comprenderne al meglio la natura.
 
-Possiamo quindi partire da una breve analisi dell'etimologia del termine *informatica*. Questo è infatti il corrispettivo italiano del francese *informatique*, derivante dalla contrazione delle parole *informa(tion)* ed *(automa)tique*. Da questo, quindi, possiamo dedurre in maniera abbastanza intuitiva una prima, informale definizione.
+Partiamo quindi da una (breve) analisi etimologica del termine _informatica_. Questo, infatti, è la traduzione italiana del francese _informatique_, crasi delle parole _informa(tion)_ ed _(automa)tique_. Intuitivamente, possiamo dedurre che la disciplina tratti quindi di "informazioni automatiche" o, per meglio dire, _automatizzazione delle informazioni_.
 
-!!!quote "Definizione (prima versione)"
-	*L'informatica è quella disciplina che si occupa di tutto ciò che concerne l'elaborazione automatica dell'informazioni.*
+E, se ci pensiamo, è proprio di quello che si occupa l'informatica, ovvero di gestire in maniera automatica una serie più o meno rilevante di informazioni, correlate ad un qualsiasi aspetto della nostra vita, siano esse le nostre foto su Facebook, il nostro libretto universitario oppure i dati dei nostri conti corrente bancari: tutte queste informazioni vengono elaborate in maniera (più o meno) automatica.
 
-Appare chiaro come questa definizione sia un po' generica: proviamo quindi a rifinirla ulteriormente.
+Proviamo ad arricchire questa prima, un po' generica, definizione. Per farlo, sfruttiamo un'altra denominazione straniera, ovvero quella inglese, lingua nella quale l'informatica è chiamata _computer science_. Quello che notiamo di questa definizione è il termine _science_, che ci suggerisce come l'informatica, in realtà, sia basata su solide fondamenta scientifiche: per capirci, infatti, i "padri fondatori" della materia erano prevalentemente dei matematici, uno fra tutti il celebre Alan Turing.
 
-Ci viene in aiuto in tal senso il termine inglese associato all'informatica, ovvero *computer science*, che ne "nobilita", in un certo senso, la natura. L'informatica è infatti una vera e proria *disciplina scientifica*, basata su solide fondamenta matematiche, gettate in buona parte dai padri della materia, uno fra tutti il celebre matematico inglese Alan Turing.
+L'ultimo fattore da tenere in conto è che l'informatica rappresenta uno vero e proprio _pilastro_ della società moderna. Tutto ciò che utilizziamo al giorno d'oggi, dallo smartphone che stiamo usando per leggere questo documento, al computer mediante il quale è stato scritto, fino ad arrivare alle nostre auto, o anche ai termostati nelle nostre caldaie, sono basati su tutte le evoluzioni informatiche (ed elettroniche) succedutesi a partire dal Secondo Dopoguerra.
 
-Arricchiamo quindi la nostra definizione come segue:
+Ecco, quindi, che possiamo dare una definizione "finale" di informatica, presa direttamente dall'Oxford Languages:
 
-!!!quote "Definizione (seconda versione)"
-	*L'informatica è la disciplina scientifica che si occupa di tutto ciò che concerne l'elaborazione automatica delle informazioni.*
+!!!quote "L'informatica"
+L'informatica è la scienza che si occupa dell'_ordinamento_, del _trattamento_ e della _trasmissione_ delle _informazioni_ per mezzo dell'_elaborazione elettronica_, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.
 
-Va già meglio, vero? Potrebbe essere però sensato includere il ruolo dell'informatica all'interno della società moderna, di cui rappresenta un vero e proprio *pilastro*. Tutto ciò che rappresenta le basi del nostro stile di vita odierno, dai social network al machine learning in ambito biomedicale, passando per la gestione automatica della supply chain e, ultimamente, dai mezzi digitali per lo smart working, non sarebbe stato possibile senza le enormi evoluzioni ed applicazioni, sia informatiche sia *elettroniche*, avute a partire dagli anni '50 del secolo scorso.
+Ora, non è tanto importante memorizzare questa definizione, quanto piuttosto comprenderne la portata: l'informatica è ovunque, e conoscerla ci dà l'accesso alle porte di quello che è il mondo odierno.
 
-Ecco quindi che la definizione finale che daremo di informatica, derivante dall'*Oxford Languages* (e facilmente reperibile mediante Google), è la seguente:
+## Approfondiamo un po'
 
-!!!quote "Definizione (versione finale)"
-	L'informatica è la scienza che si occupa dell'ordinamento, del trattamento e della trasmissione delle informazioni per mezzo dell'elaborazione elettronica, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.
+Nel precedente paragrafo, abbiamo introdotto alcuni elementi legati alla disciplina dell'informatica. Approfondiamoli brevemente.
 
-## Il concetto di Informazione
+### L'informazione
 
-L'Informazione è, in generale, associata ai concetti di *conoscenza* ed *esperienza* e, secondo il matematico Claude Shannon, è alla base del *processo comunicativo*. Esempi di informazione sono i seguenti:
+Più volte in precedenza abbiamo parlato di "informazione". Intuitivamente, ognuno di noi sa cosa questo termine intenda, anche se può essere un po' difficile spiegarlo. L'informazione è comunemente associata ai concetti di _conoscenza_ ed _esperienza_: la conoscenza di un teorema matematico rappresenta un'informazione su come la teoria analitica dimostri delle ipotesi a partire da delle tesi e dei processi logici; allo stesso modo, l'esperienza che accumuliamo provando a cucinare dei manicaretti rappresenta un'informazione su come mescolare al punto giusto dei cibi per ottenere un risultato.
 
-* il contenuto di questo Corso, in cui è racchiusa la *conoscenza* relativa ai concetti informatici di base;
-* il contributo apportato da un progettista al design di un'auto da corsa;
-* lo storico del nostro account Amazon, che sembra offrirci prodotti sempre allettanti con i quali sperperare i nostri guadagni;
-* i racconti di infanzia dei nostri genitori.
-
-Da questi pochi esempi, appare evidente come la mole e l'eterogeneità delle informazioni che ci circondano siano tali da risultare difficilmente trattabili da un essere umano, per quanto capace ed istruito; nonostante talune audaci dichiarazioni susseguitesi soprattutto nel corso degli ultimi anni sui social network, infatti, è *estremamente improbabile* che tra noi ci sia un nuovo Leonardo Da Vinci, o che emerga nel prossimo futuro. E' quindi evidente la necessità di automatizzare, per quanto possibile, la gestione ed il flusso delle informazioni stesse.
+Seppur agli antipodi, i due precedenti esempi mostrano come vi sia una base comune alle diverse informazioni: infatti, queste possono essere _comunicate_, o _trasmesse_, ed il concetto formale di informazione, definito dall'omonima teoria elaborata da Claude Shannon, è quello alla base del _processo comunicativo_.
 
 !!!note "Teoria dell'Informazione"
-	Abbiamo fatto brevemente cenno a Claude Shannon, noto anche come il padre della cosiddetta *Teoria dell'Informazione*. Questa disciplina è una "cugina" dell'Informatica, ed il suo sviluppo ha avuto profonde implicazioni sullo sviluppo delle reti di telecomunicazioni che collegano i singoli apparati informatici. In particolare, la Teoria dell'Informazione prova a caratterizzare in modo formale i fenomeni legati alla trasmissione delle informazioni su un canale di comunicazione, andando a ridefinire concetti "classici" come quello di *entropia*, intesa non come "grado di disordine" di un sistema fisico, ma come numero di bit necessari a trasmettere un'informazione in maniera chiara ed univoca.
+La teoria dell'informazione, cui abbiamo brevemente accennato in precedenza, non deve essere confusa con l'informatica, di cui è soltanto una "cugina". Brevemente, infatti, la teoria dell'informazione prova a caratterizzare in modo formale i fenomeni legati alla trasmissione dell'informazione su un canale di comunicazione, andando a ridefinire concetti "classici" come quello di _entropia_, intesa non come "grado di disordine" di un sistema fisico, ma come numero di bit necessari a trasmettere un'informazione in maniera chiara ed univoca.
 
-## I sistemi Informatici
+### I sistemi Informatici
 
-Nell'immaginario comune, il concetto di *sistema informatico* è normalmente associato al *personal computer*, delegato all'elaborazione e gestione delle nostre informazioni personali.
+Nell'immaginario comune, il concetto di _sistema informatico_ è normalmente associato al _personal computer_, delegato all'elaborazione e gestione delle nostre informazioni personali.
 
-Pensandoci bene, però, i sistemi informatici pervadono ormai la nostra esistenza. Lo smartphone mediante cui pubblichiamo il nostro ultimo video è un sistema informatico; il nostro smartwatch è un sistema informatico; la nostra Smart TV è un sistema informatico; la nostra auto è un sistema informatico. In generale, e soprattutto con il diffondersi dell'*Internet of Things*, i sistemi informatici hanno conosciuto una diffusione talmente capillare da divenire ormai parte indispensabile ed integrante della nostra quotidianità.
+Pensandoci bene, però, i sistemi informatici pervadono ormai la nostra esistenza. Lo smartphone mediante cui pubblichiamo il nostro ultimo video è un sistema informatico; il nostro smartwatch è un sistema informatico; la nostra Smart TV è un sistema informatico; la nostra auto è un sistema informatico. In generale, e soprattutto con il diffondersi dell'_Internet of Things_, i sistemi informatici hanno conosciuto una diffusione talmente capillare da divenire ormai parte indispensabile ed integrante della nostra quotidianità.
 
-Ognuno di questi oggetti è composto da due componenti principali: da un lato, abbiamo l'*hardware*, che rappresenta le componenti elettroniche digitali che permettono all'informazione di fluire sotto forma di flusso di elettroni; dall'altro lato, abbiamo il *software*, il cui ruolo principale è offrire un'interfaccia comprensibile all'utente umano che gli permetta di gestire il flusso di informazioni che scorrono nell'hardware.
+Ognuno di questi oggetti è composto da due componenti principali: da un lato, abbiamo l'_hardware_, che rappresenta le componenti elettroniche digitali che permettono all'informazione di fluire sotto forma di flusso di elettroni; dall'altro lato, abbiamo il _software_, il cui ruolo principale è offrire un'interfaccia comprensibile all'utente umano che gli permetta di gestire il flusso di informazioni che scorrono nell'hardware.
 
 !!!tip "Adagio comune"
-	Un adagio comune nel mondo dell'informatica dice che l'*hardware è la parte che è possibile prendere a calci*, mentre il *software è quella contro cui si può solo imprecare*. Molto spesso, ovviamente, le nostre tribolazioni derivano dall'opera congiunta di entrambe le entità.
-
-## Il ruolo dell'Informatico
-
-Come abbiamo già accennato in precedenza, i primi "informatici" erano in realtà prevalentemente matematici e fisici: basti pensare che, oltre ad Alan Turing e Claude Shannon, anche l'ideatore dell'architettura dei calcolatori, John von Neumann, era un matematico.
-
-Nel tempo, la figura dell'informatico vero e proprio si è andata definendo come a sé stante: ciò è avvenuto tra gli anni '60 e '70, dove i primi *hacker* approfondivano lo studio dei primordiali, e mastodontici, computer, esplorando nuove frontiere della conoscenza. Tuttavia, nonostante la presenza di informatici veri e propri, come ad esempio Steve Russell, Andrew Tanenbaum o Richard Stallman, la differenza tra "informatico", "matematico" e "fisico" è stata sfumata fino agli anni '90: basti pensare infatti che il creatore del World Wide Web e del protocollo HTTP (ovvero di Internet come lo intendiamo oggi) è un fisico che operava al CERN di Ginevra, ovvero Tim Barners Lee.
-
-L'Informatico moderno, visto come figura romanzata che, immerso in un ambiente praticamente buio, illuminato solo dalla fredda luce dei monitor, duella agilmente con le agenzie di controspionaggio, digitando a velocità inumana codici incomprensibili ed apparentemente casuali sulla sua tastiera, al solito, non esiste. L'evoluzione dell'Informatica è avvenuta in così tanti rami e sotto un numero di aspetti così numeroso che, al giorno d'oggi, per creare sistemi anche banali sono necessarie diverse figure, tra cui sistemisti, esperti di cybersecurity, system architects, data scientists, UI/UX designers, ed ovviamente coloro che incarnano il male più assoluto: i *programmatori*.
-
-L'insieme di questi ruoli, in team di opportune dimensioni, ci permette di compiere tutte le azioni "quotidiane" dal nostro smartphone o computer.
-
-!!!note "Una nota"
-	Potrebbe sembrare che il ruolo "classico" dell'Informatico, quello prettamente teorico per intenderci, sia in qualche modo scomparso nella sua accezione originaria. Ciò non è completamente vero: anche questo ruolo si è evoluto, e possiamo trovarne dei lasciti in figure come i moderni data scientists o i teorici dell'ingegneria del software.
+Un adagio comune nel mondo dell'informatica dice che l'_hardware è la parte che è possibile prendere a calci_, mentre il _software è quella contro cui si può solo imprecare_. Molto spesso, ovviamente, le nostre tribolazioni derivano dall'opera congiunta di entrambe le entità.
