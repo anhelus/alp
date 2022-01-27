@@ -1,9 +1,32 @@
-## Rappresentare il mondo in forma binaria
+# 2. Il mondo in forma binaria
 
-Le informazioni contenute all'interno di un calcolatore, siano esse dati o istruzioni, sono rappresentate in forma _binaria_ come sequenze finite di simboli `0` ed `1`. Questa notazione permette di definire una delle nozioni fondamentali su cui è basata l'informatica, ovvero quella di _bit_, contrazione di _binary digit_ (cifra binaria):
+## 2.1 Le informazioni nel mondo reale
+
+Nel mondo reale, le informazioni fluiscono dalla sorgente al destinatario sotto forma di onde _analogiche_. Per capirci, pensiamo ad una conversazione tra due persone: entrambe produrranno, mediante il loro apparato fonatorio, delle onde sonore, _continue_ sia nel tempo che nelle ampiezze, che arriveranno all'orecchio dell'altro interlocutore, il quale le passerà al cervello che, a sua volta, le interpreterà.
+
+Di particolare importanza è il concetto di _continuità_ della forma d'onda utilizzata. Partiamo dall'analisi matematica: sappiamo che le funzioni continue sono definite nel dominio $\mathbb{R}$ dei numeri reali, per cui assumono, a meno dei punti di discontinuità, un numero _infinito_ di valori. Questo vale anche per le forme d'onda analogiche, che abbiamo detto essere continue: ogni onda sonora emessa nella conversazione di cui sopra potrà assumere un numero "infinito" di valori all'interno degli intervalli temporali e di ampiezza nei quali è emessa.
+
+!!!note "Nota"
+Ovviamente, non teniamo conto di effetti quantistici: stiamo parlando di fenomeni _macroscopici_.
+
+## 2.2 La gestione dell'informazione
+
+Chiarito il concetto di grandezza "analogica", pensiamo adesso a come uno strumento potrebbe in qualche modo caratterizzarla. In particolare, ragioniamo in termini di _capacità_ dello strumento, ovvero:
+
+> \*Quanti stati deve essere in grado di rappresentare contemporaneamente un sistema per caratterizzare completamente una forma d'onda analogica?"
+
+Beh, la risposta a questa domanda è semplice: _infiniti_. Ovviamente, una realizzazione pratica di questa macchina non esiste, né può essere realizzata con le tecnologie attuali.
+
+Occorre quindi ridurre il numero di stati che devono essere rappresentati contemporaneamente. Per farlo, dobbiamo passare dal dominio analogico a quello _digitale_.
+
+## 2.3 La rappresentazione digitale dell'informazione
+
+Il dominio digitale è semplice da caratterizzare: infatti, l'informazione può assumere soltanto due possibili valori, ovvero $0$ ed $1$ (chiamati alle volte anche _basso_ ed _alto_, o anche _spento_ ed _acceso_).
+
+Appare chiaro come una rappresentazione digitale, o anche _binaria_, sia molto più facile da gestire per un calcolatore rispetto ad una rappresentazione analogica. Ed è per questo che è importante definire la nozione fondamentale su cui è basata l'intera informatica, ovvero _bit_, crasi di _binary digit_ (traducibile dall'inglese come _cifra binaria_):
 
 !!! quote "Bit"
-	_Il bit è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori `0` (falso) o `1` (vero)._
+_Il bit è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori `0` (falso) o `1` (vero)._
 
 ![byte](../../assets/images/04_rappresentazione/byte.png){: align=center }
 
