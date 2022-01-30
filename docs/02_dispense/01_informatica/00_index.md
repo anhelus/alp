@@ -1,6 +1,7 @@
-# Parte 1: introduzione all'informatica
+# Parte 1: concetti introduttivi
 
-| Topic                                                           | Descrizione                                                                                     | Status dispense | Status slides |
-| --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | --------------- | ------------- |
-| [Introduzione all'informatica](./01_introduzione.md)            | Una breve descrizione di cosa è l'informatica, e di quale è il suo ruolo nella società moderna. | :check:         | :x:           |
-| [Rappresentazione binaria e decimale](./02_decimale_binario.md) | Qual è la differenza tra la rappresentazione decimale e quella binaria?                         | :x:             | :x:           |
+| Topic                                                           | Status dispense | Status slides |
+| --------------------------------------------------------------- | --------------- | ------------- |
+| [01 - Introduzione all'informatica](./01_introduzione.md)       | :check:         | :x:           |
+| [02 - Introduzione agli algoritmi](./02_algoritmi)              | :check:         | :x:           |
+| [03 - Rappresentazione binaria e decimale](./03_decimale_binario.md) | :x:        | :x:           |

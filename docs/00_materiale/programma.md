@@ -4,62 +4,13 @@
 | -------------------------- | --------------------------------- |
 | 00 - Introduzione al corso | [:link:](slides/00_programma.pdf) |
 
-## Parte 1: Teoria
+## Parte 1: Concetti Introduttivi
 
-| Argomento                           | Slides                                          |
-| ----------------------------------- | ----------------------------------------------- |
-| 01 - Introduzione all'informatica   | [:link:](slides/teoria/01_intro.pdf)            |
-| 02 - Introduzione agli algoritmi    | [:link:](slides/teoria/02_algoritmi.pdf)        |
-| 03 - Architettura dei calcolatori   | [:link:](slides/teoria/03_architettura.pdf)     |
-| 04 - Reti di calcolatori            | [:link:](slides/teoria/04_reti.pdf)             |
-| 05 - Rappresentazione dei dati      | [:link:](slides/teoria/05_rappresentazione.pdf) |
-| 06 - Linguaggi di programmazione    | [:link:](slides/teoria/06_linguaggi.pdf)        |
-| 07 - Traduttori                     | [:link:](slides/teoria/07_traduttori.pdf)       |
-| 08 - Variabili                      | [:link:](slides/teoria/08_variabili.pdf)        |
-| 09 - Programmazione strutturata     | [:link:](slides/teoria/09_diagrammi.pdf)        |
-| 10 - Ricorsione                     | [:link:](slides/teoria/10_strutturata.pdf)      |
-| 11 - Diagrammi di flusso            | [:link:](slides/teoria/11_ricorsione.pdf)       |
-| 12 - Funzioni                       | [:link:](slides/teoria/12_funzioni.pdf)         |
-| 13 - Strutture dati                 | [:link:](slides/teoria/13_strutture.pdf)        |
-| 14 - Complessità computazionale     | [:link:](slides/teoria/14_complessita.pdf)      |
-| 15 - Algoritmi 1 - Ricerca su array | [:link:](slides/teoria/15_algo_search.pdf)      |
-| 16 - Algoritmi 2 - Ordinamento      | [:link:](slides/teoria/16_algo_sort.pdf)        |
-| 17 - Algoritmi 3 - Ricerca su grafi | [:link:](slides/teoria/17_algo_bfs.pdf)         |
-| 18 - Macchina di Turing             | [:link:](slides/teoria/18_turing.pdf)           |
-
-## Parte 2: Cenni al linguaggio C
-
-| Argomento                        | Slides                                                           |
-| -------------------------------- | ---------------------------------------------------------------- |
-| 19 - Hello, C!                   | [:link:](slides/programmazione/linguaggio_c/19_hello.pdf)        |
-| 20 - Alcune definizioni          | [:link:](slides/programmazione/linguaggio_c/20_definizioni.pdf)  |
-| 21 - Visibilità di una variabile | [:link:](slides/programmazione/linguaggio_c/21_visibilita.pdf)   |
-| 22 - Operatori                   | [:link:](slides/programmazione/linguaggio_c/22_operatori.pdf)    |
-| 23 - Array                       | [:link:](slides/programmazione/linguaggio_c/23_array.pdf)        |
-| 24 - Puntatori                   | [:link:](slides/programmazione/linguaggio_c/24_puntatori.pdf)    |
-| 25 - I/O e file                  | [:link:](slides/programmazione/linguaggio_c/25_file.pdf)         |
-| 26 - Typedef, Struct ed Union    | [:link:](slides/programmazione/linguaggio_c/26_struct_union.pdf) |
-
-## Parte 3: Cenni al linguaggio C++
-
-| Argomento                           | Slides                                                                |
-| ----------------------------------- | --------------------------------------------------------------------- |
-| 27 - Dal C al C++                   | [:link:](slides/programmazione/linguaggio_cpp/27_c_vs_cpp.pdf)        |
-| 28 - Alcune definizioni (in C++!)   | [:link:](slides/programmazione/linguaggio_cpp/28_def_cpp.pdf)         |
-| 29 - Le classi (parte 1)            | [:link:](slides/programmazione/linguaggio_cpp/29_classi.pdf)          |
-| 30 - Alcune definizioni (avanzate!) | [:link:](slides/programmazione/linguaggio_cpp/30_definizioni_adv.pdf) |
-| 31 - Le classi (parte 2)            | [:link:](slides/programmazione/linguaggio_cpp/31_classi_adv.pdf)      |
-| 32 - I metodi (alcuni cenni)        | [:link:](slides/programmazione/linguaggio_cpp/32_metodi.pdf)          |
-| 33 - Ereditarietà                   | [:link:](slides/programmazione/linguaggio_cpp/33_ereditarieta.pdf)    |
-| 34 - Container                      | [:link:](slides/programmazione/linguaggio_cpp/34_container.pdf)       |
-| 35 - La gestione dei file in C++    | [:link:](slides/programmazione/linguaggio_cpp/35_file_cpp.pdf)        |
-
-## Parte 4: Cenni al linguaggio Python
-
-| Argomento                   | Slides                                                                      |
-| --------------------------- | --------------------------------------------------------------------------- |
-| 36 - Introduzione al Python | [:link:](slides/programmazione/linguaggio_python/36_intro_python.pdf)       |
-| 37 - Programmare in Python  | [:link:](slides/programmazione/linguaggio_python/37_programmare_python.pdf) |
+| Topic                                                           | Status dispense | Status slides |
+| --------------------------------------------------------------- | --------------- | ------------- |
+| 01 - Introduzione all'informatica       | [:check:](#)         | [:x:](#)           |
+| 02 - Introduzione agli algoritmi              | [:check:](#)         | [:x:](#)           |
+| 03 - Rappresentazione binaria e decimale | [:x:](#)        | [:x:](#)           |
 
 ## Riferimenti esterni
 
