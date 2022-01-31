@@ -112,15 +112,7 @@ int main ()
 }
 ```
 
-## Esercizio 4 (dal *Quesito n.ro 2 dell'appello del 25/01/2021*)
-
-Si scriva (inoltre) un esempio di funzione per ciascuna delle due tipologie di istruzione.
-
-### Risoluzione
-
-Si può consultare una possibile risoluzione a [questo link](https://github.com/anhelus/informatica-dm-uniba-ex/blob/master/Esercizi%20Esame%20Scritto/Appello%2025-01-2021/esercizio_2.c).
-
-## Esercizio 5 (dal *Quesito n.ro 2 dell'appello del 09/02/2021*)
+## Esercizio 4
 
 Si utilizzi lo strumento descrittivo dei diagrammi di flusso per rappresentare la selezione di tutte le parole che iniziano con la lettera A dalle seguenti: *Abaco*, *Geometria*, *Matematica*, *Aritmetica*, *Trigonometria*.
 

@@ -1,4 +1,6 @@
-## Formulare un problema
+# 2 - Introduzione agli algoritmi
+
+## 2.1 - Formulare un problema
 
 Per comprendere gli algoritmi, partiamo definendo il concetto di _problema_.
 
@@ -9,7 +11,7 @@ In tal senso, il dizionario De Mauro - Paravia ci viene in aiuto definendolo com
 
 Questa definizione ci dà gli elementi necessari alla formulazione compiuta di un problema. Analizziamoli più nel dettaglio.
 
-### Il problema come _compito_
+### 2.1.1 - Il problema come _compito_
 
 Un problema è dunque in primis un _quesito_ (o, analogamente, un _compito_) che necessita di una _risoluzione_ (o _svolgimento_). Esempi concreti di problema sono:
 
@@ -19,13 +21,13 @@ Un problema è dunque in primis un _quesito_ (o, analogamente, un _compito_) che
 
 Possiamo vedere che i problemi possono essere di ogni tipo e difficoltà; sono tutti accomunati però dal fatto che, _qualora siano risolvibili_, per farlo è necessario adoperare un _algoritmo_.
 
-### L'_ente risolutore_
+### 2.1.2 - L'_ente risolutore_
 
 La risoluzione del problema è delegata ad un o più _enti_, propriamente intesi come _esecutori_ di una serie di step necessari a risolvere il problema.
 
 Rimanendo agli esempi precedenti, il risolutore del primo problema è il montatore del mobile; quello per il secondo è lo studente che calcola l'area del triangolo mediante il teorema di Pitagora; nel terzo caso invece abbiamo il matematico teorico, che dimostra (o confuta) l'ipotesi di Riemann.
 
-### Gli _elementi noti_ e le _condizioni fissate_
+### 2.1.3 - Gli _elementi noti_ e le _condizioni fissate_
 
 La risoluzione del problema non può prescindere dalla conoscenza degli _elementi noti_ e delle _condizioni fissate_ per lo stesso. Intuitivamente, questo significa _conoscere lo stato del mondo_ a partire dal quale dovremo risolvere il problema.
 
@@ -44,11 +46,11 @@ Analogamente, per calcolare l'area di un triangolo rettangolo, dovremo conoscern
 !!!note "Nota"
 	La determinazione degli elementi noti e delle condizioni fissate per la dimostrazione dell'ipotesi di Riemann è lasciata come banale esercizio al lettore.
 
-## Risolvere un problema
+## 2.2 - Risolvere un problema
 
 La formulazione di un problema implica quindi la determinazione del _cosa_ (il quesito da risolvere), del _chi_ (l'esecutore materiale della risoluzione) e del _da dove_ (lo stato di partenza e le condizioni fissate). In particolare, diamo a questi ultimi il nome di _dati_: i dati caratterizzano, anche parzialmente, lo stato iniziale del mondo, e possono essere forniti in un linguaggio naturale che permetta di descrivere delle _situazioni_, o _stati_, e le differenze tra di essi.
 
-### Problemi e soluzioni
+### 2.2.1 Problemi e soluzioni
 
 Il lettore più attento noterà che manca ancora un elemento fondamentale, ovvero il _come_. Questo è definito individuando un apposito _metodo di risoluzione_ o, più semplicemente, una _soluzione_ al problema.
 
@@ -58,14 +60,14 @@ Dal punto di vista formale, l'individuazione del metodo di risoluzione può esse
 
 Informalmente, possiamo dire che _per ogni problema_ (se risolvibile) _esiste almeno una soluzione_.
 
-### Costruire la soluzione
+### 2.2.2 - Costruire la soluzione
 
 Il compito del risolutore è quindi quello di "costruire", o "individuare", la soluzione. La possibilità di farlo è legata ad alcune condizioni fondamentali, ovvero:
 
 - le operazioni _atomiche_ disponibili;
 - il modo in cui le operazioni di cui sopra possono essere combinate per realizzare operazioni più complesse.
 
-#### Operazioni atomiche
+#### 2.2.2.1 Operazioni atomiche
 
 Per operazione "atomica" intendiamo un'operazione che non è possibile _semplificare_ (ovvero suddividere) in alcun modo. Esempi di operazione atomica possono essere:
 
@@ -85,7 +87,7 @@ Esempi di operazioni _non_ atomiche sono invece:
 !!!note "Nota sul conto corrente bancario"
 	La singola transazione sul proprio corrente bancario è in realtà scomponibile, dal punto di vista informatico, in un gran numero di operazioni atomiche: il correntista, infatti, effettua l'autenticazione, completa un form, finalizza la transazione e la esegue. Dato che tutte queste operazioni devono però essere necessariamente _completate_ in un ordine ben definito, i sistemi bancari le vedono come un'unica operazione, che è possibile annullare qualora sopravvenga un problema qualsiasi (problemi di autenticazione, rete non disponibile, mancanza di energia elettrica su uno dei sistemi, etc.).
 
-#### Combinare operazioni atomiche
+#### 2.2.2.2 Combinare operazioni atomiche
 
 Le operazioni atomiche possono essere combinate in due modi:
 
@@ -101,36 +103,36 @@ Il primo problema è di importanza cruciale. Immaginate di voler montare assieme
 
 Il secondo è meno evidente, ma altrettanto degno di attenzione. Infatti, voi e vostro cugino dovrete necessariamente coordinarvi per non urtarvi, usare gli stessi attrezzi, e via dicendo. L'alternativa sarebbe fare a meno del cugino, e simulare il parallelismo montando i due mobili da voi contemporaneamente; in questo caso, però, il tempo che impieghereste è sicuramente maggiore, ed avreste la necessità di ottimizzare le operazioni da fare cercando di minimizzare lo sforzo necessario a terminare i lavori.
 
-#### Determinare l'insieme di operatori
+#### 2.2.2.3 Determinare l'insieme di operatori
 
 Individuare le operazioni atomiche e trovare dei modi per combinarle permette quindi di definire un _insieme di operatori_ che possono essere applicati ad un problema per modificarne lo stato (idealmente, da "aperto" a "risolto", considerando eventualmente gli step intermedi). Per essere comprensibili dal risolutore, questi operatori dovranno essere espressi in un _linguaggio_ che faccia riferimento _esplicito_ al contesto del problema.
 
-#### Da _soluzione_ ad _algoritmo_
+#### 2.2.2.4 Da _soluzione_ ad _algoritmo_
 
 La soluzione sarà quindi definita come un operatore composto nel linguaggio di processo, il cui compito è trasformare lo stato iniziale del mondo (ovvero problema aperto) in quello che definisce la situazione desiderata (ovvero problema risolto).
 
 L'algoritmo è la serie di istruzioni che specifica l'insieme delel azioni che è necessario compiere per risolvere il problema.
 
-## Un esempio
+## 2.3 - Un esempio
 
-Facciamo un esempio. Proviamo a formulare e risolvere un semplice problema matematico, ovvero il calcolo dell'ipotenusa di un triangolo rettangolo.
+Proviamo a formulare e risolvere un semplice problema matematico, ovvero il calcolo dell'ipotenusa di un triangolo rettangolo.
 
-### Formulazione del problema
+### 2.3.1 - Formulazione del problema
 
 _Dati due numeri interi $c_1$ e $c_2$, rappresentanti le lunghezze dei due cateti di un triangolo rettangolo $T$, calcolarne l'ipotenusa $i$._
 
-### Dati
+### 2.3.2 - Dati
 
 Sia $c_1$ la lunghezza del primo cateto, e $c_2$ quella del secondo.
 
-### Algoritmo risolutivo (in operazioni atomiche, o quasi)
+### 2.3.3 - Algoritmo risolutivo (in operazioni atomiche, o quasi)
 
 1. Calcolare il quadrato di $c_1$.
 2. Calcolare il quadrato di $c_2$.
 3. Sommare i quadrati calcolati ai punti **1** e **2**.
 4. Calcolare la radice quadrata della somma ottenuta al punto **3**.
 
-### Esempio numerico
+### 2.3.4 Svolgimento numerico
 
 #### Dati
 
@@ -154,9 +156,7 @@ $$
 
 Il risultato è $v_4 = 5$.
 
-## Caratteristiche degli algoritmi risolutivi
-
-### Le cinque caratteristiche principali
+## 2.4 - Caratteristiche degli algoritmi risolutivi
 
 Un algoritmo è contraddistinto da cinque caratteristiche principali.
 
@@ -173,15 +173,13 @@ Tornando al nostro esempio, il metodo di individuazione dell'ipotenusa rispetta 
 3. le istruzioni sono chiare e non equivocabili;
 4. le istruzioni possono essere eseguite da chiunque sia in grado di calcolare un quadrato ed una radice quadrata.
 
-In merito alla 4, è interessante notare come, probabilmente, nessun manuale IKEA (o affini) sia algoritmico.
-
-### Determinismo
+### 2.4.1 Determinismo
 
 Un algoritmo si dice _deterministico_ quando al momento dell'esecuzione di ogni istruzione è nota l'istruzione successiva. Ciò comporta che eseguire due volte un algoritmo deterministico sugli stessi dati produce gli stessi effetti. L'algoritmo di esempio è a tutti gli effetti un algoritmo deterministico.
 
 Gli algoritmi non deterministici sono invece affetti da fenomeni di tipo casuale, o stocastico; sono in genere algoritmi avanzati, usati perlopiù in applicazioni di statistica e machine learning, che non tratteremo durante questo corso.
 
-### Input, Output e Variabili
+### 2.4.2 Input, Output e Variabili
 
 Generalmente, i dati in ingresso ad un algoritmo sono anche chiamati _input_ dell'algoritmo, mentre la "risposta" che restituisce l'algoritmo stesso è chiamata _output_.
 
