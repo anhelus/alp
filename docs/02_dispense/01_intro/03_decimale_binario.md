@@ -13,7 +13,7 @@ Ovviamente, non teniamo conto di effetti quantistici: stiamo parlando di fenomen
 
 Chiarito il concetto di grandezza "analogica", pensiamo adesso a come uno strumento potrebbe in qualche modo caratterizzarla. In particolare, ragioniamo in termini di _capacità_ dello strumento, ovvero:
 
-> \*Quanti stati deve essere in grado di rappresentare contemporaneamente un sistema per caratterizzare completamente una forma d'onda analogica?*
+> _Quanti stati deve essere in grado di rappresentare contemporaneamente un sistema per caratterizzare completamente una forma d'onda analogica?_
 
 Beh, la risposta a questa domanda è semplice: _infiniti_. Ovviamente, una realizzazione pratica di questa macchina non esiste, né può essere realizzata con le tecnologie attuali.
 
@@ -46,55 +46,60 @@ E' semplice quindi constatare che una sequenza di $n$ bit assume al più $2^n$ v
 
 Definiamo infine una _parola_, o _word_, una sequenza di $N$ byte, con $N$ dipendente dal contesto specifico (ad esempio, il tipo di processore in uso). Ad esempio, la maggior parte dei processori consumer odierni utilizza parole da otto byte, ovvero 64 bit, capaci quindi di rappresentare fino a $2^64$ valori.
 
+## 3.4 - Da decimale a binario
 
-
-
-#### Da decimale a binario
-
-Siamo abituati a pensare (ed usare) i numeri interi usando una notazione di tipo _decimale_ e _posizionale_. Ciò significa che:
+Nel mondo reale, siamo abituati ad utilizzare i numeri seguendo una notazione di tipo _decimale_ e _posizionale_. Detto in altri termini:
 
 - utilizziamo i simboli compresi tra $0$ e $9$ per rappresentare ogni numero intero;
 - sfruttiamo la posizione in cui compare ciascun simbolo per interpretare il valore finale del numero.
 
 Per fare un esempio, i numeri $12$ e $21$ sono rappresentati usando gli stessi simboli decimali, ovvero $1$ e $2$; tuttavia, la loro disposizione è differente, per cui non hanno lo stesso significato.
 
-##### Un esempio
+### 3.4.1 - Espressione formale di un numero in base decimale
 
-In generale, sia $N$ un generico numero intero composto da $n$ simboli. Usando la notazione decimale e posizionale è possibile esprimerlo come segue:
-
-$$
-N = a_n a_{n-1} a_{n-2} ... a_2 a_1 a_0
-$$
-
-Esprimendo $N$ in base $b$:
+Formalmente, se $N \in \mathbb{i}$ è un numero intero composto da $k$ simboli, è possibile esprimerlo come:
 
 $$
-N_b = a_n *b^n + a_{n-1}* b^{n-1} + ... + a_1 * b + a_0
+N = a_k a_{k-1} a_{k-2} \ldots a_2 a_1 a_0
+$$
+
+dove $a_i$ è l'$i$-mo simbolo, con $i \in [1, \ldots, k]$.
+
+Possiamo esprimere $N$ anche in base $10$:
+
+$$
+N = a_k * 10^k + a_{k-1} * 10^{k-1} + \ldots + a_1 * 10^1 + a_0 * 10^0
 $$
 
 Per fare un semplice esempio:
 
 $$
-N = 485_{10} = (4 * 10^2 + 8 * 10 + 5)_{10}
+N = 485 = 4 * 10^2 + 8 * 10 + 5
 $$
 
-###### Conversione
+### 3.4.2 - Da base decimale a base binaria
 
-Supponiamo di voler rappresentare $N = 485$ in forma binaria (ovvero in base $2$). Dovremo procedere dividendo $N$ per la nostra base $b = 2$, valutare il resto $r$, che sarà di volta in volta il valore meno significativo del nostro numero in forma binaria, e reiterare l'operazione usando il quoziente $q$.
+Ovviamente, l'espressione formale di un numero in base decimale è facilmente adattabile ad altre basi, per cui, in generale, vale che un numero $B$ a $l$ simboli è esprimibile in base $b$ mediante un'espressione del tipo:
 
-Otteniamo quindi:
+$$
+B_{b} = a_l * b^l + a_{l-1} * b^{l-1} + \ldots + a_1 * b^1 + a_0 * b^0
+$$
+
+Supponiamo adesso di voler convertire un numero $N$ dalla forma decimale a quella binaria. Per farlo, dovremo procedere dividendo $N$ per la base $2$, valutando il resto $r$, e reiterare l'operazione usando il quoziente $q$.
+
+Facciamo un esempio usando $N = 485$.
 
 $$
 \begin{eqnarray}
-485/2 &\Rightarrow q = 242 & r = 1 & \Rightarrow LSB\\
-242/2 &\Rightarrow q = 121 & r = 0 \\
-121/2 &\Rightarrow q = 60 & r = 1 \\
-60/2 &\Rightarrow q = 30 & r = 0 \\
-30/2 &\Rightarrow q = 15 & r = 0 \\
-15/2 &\Rightarrow q = 7 & r = 1 \\
-7/2 &\Rightarrow q = 3 & r = 1 \\
-3/2 &\Rightarrow q = 1 & r = 1 \\
-1/2 &\Rightarrow q = 0 & r = 1 & \Rightarrow MSB
+\frac{485}/{2} &\Rightarrow q = 242 & r = 1 & \Rightarrow LSB\\
+\frac{242}/{2} &\Rightarrow q = 121 & r = 0 \\
+\frac{121}/{2} &\Rightarrow q = 60 & r = 1 \\
+\frac{60}/{2} &\Rightarrow q = 30 & r = 0 \\
+\frac{30}/{2} &\Rightarrow q = 15 & r = 0 \\
+\frac{15}/{2} &\Rightarrow q = 7 & r = 1 \\
+\frac{7}/{2} &\Rightarrow q = 3 & r = 1 \\
+\frac{3}/{2} &\Rightarrow q = 1 & r = 1 \\
+\frac{1}/{2} &\Rightarrow q = 0 & r = 1 & \Rightarrow MSB
 \end{eqnarray}
 $$
 

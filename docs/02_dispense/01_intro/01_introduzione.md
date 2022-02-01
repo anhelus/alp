@@ -1,4 +1,4 @@
-# Introduzione: cosa è l'Informatica?
+# 1 - Introduzione: cosa è l'Informatica?
 
 Come per molti degli argomenti cui ci si approccia nel corso della vita, trovare una definizione per il concetto di _informatica_ può aiutare a comprenderne al meglio la natura.
 
@@ -13,24 +13,24 @@ L'ultimo fattore da tenere in conto è che l'informatica rappresenta uno vero e 
 Ecco, quindi, che possiamo dare una definizione "finale" di informatica, presa direttamente dall'Oxford Languages:
 
 !!!quote "L'informatica"
-L'informatica è la scienza che si occupa dell'_ordinamento_, del _trattamento_ e della _trasmissione_ delle _informazioni_ per mezzo dell'_elaborazione elettronica_, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.
+    L'informatica è la scienza che si occupa dell'_ordinamento_, del _trattamento_ e della _trasmissione_ delle _informazioni_ per mezzo dell'_elaborazione elettronica_, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.
 
 Ora, non è tanto importante memorizzare questa definizione, quanto piuttosto comprenderne la portata: l'informatica è ovunque, e conoscerla ci dà l'accesso alle porte di quello che è il mondo odierno.
 
-## Approfondiamo un po'
+## 1.1 - Approfondiamo un po'
 
 Nel precedente paragrafo, abbiamo introdotto alcuni elementi legati alla disciplina dell'informatica. Approfondiamoli brevemente.
 
-### L'informazione
+### 1.1.1 - L'informazione
 
 Più volte in precedenza abbiamo parlato di "informazione". Intuitivamente, ognuno di noi sa cosa questo termine intenda, anche se può essere un po' difficile spiegarlo. L'informazione è comunemente associata ai concetti di _conoscenza_ ed _esperienza_: la conoscenza di un teorema matematico rappresenta un'informazione su come la teoria analitica dimostri delle ipotesi a partire da delle tesi e dei processi logici; allo stesso modo, l'esperienza che accumuliamo provando a cucinare dei manicaretti rappresenta un'informazione su come mescolare al punto giusto dei cibi per ottenere un risultato.
 
 Seppur agli antipodi, i due precedenti esempi mostrano come vi sia una base comune alle diverse informazioni: infatti, queste possono essere _comunicate_, o _trasmesse_, ed il concetto formale di informazione, definito dall'omonima teoria elaborata da Claude Shannon, è quello alla base del _processo comunicativo_.
 
 !!!note "Teoria dell'Informazione"
-La teoria dell'informazione, cui abbiamo brevemente accennato in precedenza, non deve essere confusa con l'informatica, di cui è soltanto una "cugina". Brevemente, infatti, la teoria dell'informazione prova a caratterizzare in modo formale i fenomeni legati alla trasmissione dell'informazione su un canale di comunicazione, andando a ridefinire concetti "classici" come quello di _entropia_, intesa non come "grado di disordine" di un sistema fisico, ma come numero di bit necessari a trasmettere un'informazione in maniera chiara ed univoca.
+    La teoria dell'informazione, cui abbiamo brevemente accennato in precedenza, non deve essere confusa con l'informatica, di cui è soltanto una "cugina". Brevemente, infatti, la teoria dell'informazione prova a caratterizzare in modo formale i fenomeni legati alla trasmissione dell'informazione su un canale di comunicazione, andando a ridefinire concetti "classici" come quello di _entropia_, intesa non come "grado di disordine" di un sistema fisico, ma come numero di bit necessari a trasmettere un'informazione in maniera chiara ed univoca.
 
-### I sistemi Informatici
+### 1.1.2 - I sistemi Informatici
 
 Nell'immaginario comune, il concetto di _sistema informatico_ è normalmente associato al _personal computer_, delegato all'elaborazione e gestione delle nostre informazioni personali.
 
