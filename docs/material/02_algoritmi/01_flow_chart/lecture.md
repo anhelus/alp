@@ -26,4 +26,12 @@ In particolare:
 * un *rombo* indica una ramificazione nel percorso dell'algoritmo, legata prevalentemente alla verifica di una condizione;
 * infine, le frecce sono usate per collegare tra loro diverse parti dello stesso algoritmo.
 
+### 5.3 - Un esempio
 
+Nella seguente figura mostriamo un esempio di diagramma di flusso.
+
+![es_flow_chart](./images//es_flow_chart.png)
+
+Vediamo come il diagramma inizi con un'ellisse, che sarà contrassegnata dalla scritta START (inserita arbitrariamente). Immediatamente dopo, vi sarà la lettura di due variabili, ovvero $c_1$ e $c_2$; a quel punto, vi sarà l'assegnazione di altre tre variabili, con infine la variabile $v_3$ scritta su un dispositivo di output, seguita dal simbolo di fine algoritmo.
+
+E' estremamente importante notare come l'assegnazione e la lettura siano, in realtà, quasi "ambigue" dal punto di vista della notazione: occorre quindi in tal senso fare attenzione al fatto che si stia usando un parallelogramma o un rettangolo, seguendo le regole descritte nel paragrafo 5.2.
