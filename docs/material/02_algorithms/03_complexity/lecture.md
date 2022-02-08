@@ -1,4 +1,4 @@
-## Analisi degli algoritmi
+# 7 - La complessità computazionale degli algoritmi
 
 L'analisi delle performance di un algoritmo può essere effettuata in due diverse fasi, ovvero *prima* (*analisi a priori*) e *dopo* (*analisi a posteriori*) l'implementazione.
 
