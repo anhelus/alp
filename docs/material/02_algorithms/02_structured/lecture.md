@@ -52,7 +52,7 @@ In particolare, la selezione è rappresentata mediante il costrutto *IF - THEN -
 
 Per comprendere meglio il funzionamento della selezione, immaginiamo di voler comparare due numeri $a$ e $b$. Di nuovo, esprimiamo la selezione in pseudo-codice:
 
-```
+``` linenums="1"
 a = 1;
 b = 2;
 if (a > b):
@@ -69,7 +69,7 @@ I due rami del programma sono quindi rappresentati dal THEN e dall'ELSE, mentre 
 
 Il costrutto IF - THEN - ELSE limita i rami in cui un programma può derivare a due. Tuttavia, nella realtà, potrebbe essere necessario avere più rami; in questi casi, ci viene in aiuto il costrutto ELSE IF, che permette di specificare ulteriori divergenze del programma. Ad esempio:
 
-```
+``` linenums="1"
 a = 1;
 b = 2;
 if (a > b):
@@ -88,7 +88,7 @@ Il costrutto SWITCH è usato per verificare che una certa variabile assuma un da
 
 Lo SWITCH ha inoltre un case di default, indicato con la parola chiave omonima, che sarà eseguito qualora la variabile da verificare non rispetti alcuno dei case precedenti. Ad esempio:
 
-```
+``` linenums="1"
 a = 1;
 switch (a)
 	case 1:
@@ -110,7 +110,7 @@ L'ultimo tipo di struttura di controllo è l'*iterazione*, chiamata anche *ciclo
 
 Per comprendere il funzionamento dell'iterazione, proviamo ad utilizzarla, sempre in pseudocodice, per scrivere i numeri che vanno da uno a dieci:
 
-```
+``` linenums="1"
 i = 1;
 for (i che va da 1 a 10):
 	scrivi 'i';
@@ -133,7 +133,7 @@ Tradizionalmente, sono usati due costrutti per implementare una struttura iterat
 
 La differenza principale tra i due costrutti sta nel fatto che il FOR viene normalmente usato quando il numero di iterazioni è conosciuto a priori, mentre il WHILE-DO quando non si conosce il numero di iterazioni, e si vuole semplicemente verificare una condizione. Ad esempio:
 
-```
+``` linenums="1"
 condizione = vero;
 while (condizione diverso da falso):
 	do [...] // istruzioni
