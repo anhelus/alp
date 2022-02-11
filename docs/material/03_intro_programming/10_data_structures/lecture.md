@@ -1,18 +1,23 @@
-I linguaggi di programmazione sfruttano il cocnetto **struttura dati** per _organizzare_, _gestire_ e _memorizzare_ una serie di valori nella maniera più _efficiente_ psosibile.
+# 10 - Strutture dati
 
-Le strutture dati non sono quindi altro che degli _insiemi_, o _collezioni_, di valori, che caratterizzano anche le relazioni intercorrenti tra essi, oltre che le operazioni che vi possono essere applicate.
+Nella [lezione precedente](../09_functions/lecture.md) abbiamo ad un certo punto parlato di "insieme" dei voti relativi ai nostri esami, senza però ben specificare come rappresentarlo con i concetti a nostra disposizione. Se ci pensiamo, infatti, non abbiamo (apparentemente) strumenti per rappresentare degli insiemi: non possiamo certamente utilizzare un singolo dato numerico, così come neanche un dato booleano o un carattere.
 
-Esistono diverse tipologie di strutture dati, ognuna delle quali particolarmente adatta a determinati scopi. Vediamone alcune di seguito.
+Per risolvere questo problema (e, in realtà, mille altri) dobbiamo utilizzare una serie di concetti che vanno sotto il nome collettivo di *strutture dati*, ovvero dei costrutti progettati per organizzare e gestire un insieme di valori nella maniera più efficiente possibile.
 
-## Array
+Esistono diversi tipi di struttura dati, ognuno dei quali adatto ad un determinato scopo. Vediamo quelli più diffusi.
 
-Un **array** è concettualmente riconducibile ad un vettore, inteso nel senso più "algebrico" del termine.
+## 10.1 - Array
 
-Un array contiene quindi un vettore (o, per estensione, una matrice) di elementi, tipicamente (ma, a seconda del linguaggio, _non necessariamente_) dello stesso tipo, i quali sono organizzati seguendo un ordine specifico, esplorabile mediante il concetto di **indice**.
+La maniera più rapida di rappresentare i nostri voti è quella di immaginarli come una *lista*, ovvero una sequenza ben determinata di numeri interi. Per far questo esiste una struttura dati apposita, chiamata *array*, e traducibile (approssimativamente) in italiano come "vettore".
 
-Questo definisce la modalità di accesso ai dati di un array, che è chiamata **accesso diretto** o **casuale**: in pratica, l'elemento viene estratto in maniera diretta, utilizzando l'indice, e di conseguenza l'operazione è immediata (in termini di complessità computazionale, abbiamo un $O(1)$, ovvero un'unica operazione necessaria).
+Un array contiene quindi una sequenza di elementi, tipicamente dello stesso tipo (anche se, come vedremo, ciò dipende dal linguaggio di programmazione), ed organizzati seguendo un ordine specifico, "esplorabile" mediante il concetto di *indice*.
 
-Questo vantaggio ha però come contraltare la necessità di implementare una serie laboriosa di operazioni di accesso alla memoria nel caso si voglia inserire o rimuovere un elemento nell'array.
+La presenza dell'indice permette di definire la modalità di accesso ai dati dell'array, indicata come *accesso diretto*. Nella pratica, possiamo estrarre qualsiasi elemento nell'array mediante l'indice stesso, in maniera diretta, senza dover "scorrere" l'intero vettore; questo fa sì che l'accesso abbia sempre una complessità $O(1)$, dato che è richiesta un'unica operazione.
+
+!!!note "Nota"
+	A far da contraltare all'efficienza in termini di accesso vi è una certa laboriosità legata all'inserimento o rimozione di un elemento dall'array.
+
+TODO: da qui
 
 Una tipica rappresentazione di un array è la seguente:
 

@@ -166,3 +166,19 @@ endfor
 ```
 
 Per ogni iterazione del ciclo esterno (quello che usa come contatore la variabile `i`) avremo *n* iterazioni del ciclo interno (quello che usa come contatore la variabile `j`). La complessità temporale di caso peggiore sarà quindi $O(n^2)$; per quello che riguarda invece la complessità spaziale, invece, assumendo un meccanismo analogo al precedente, avremo sempre $O(1)$.V
+
+## 7.5 - Esercizi
+
+1. Calcolare la complessità di caso peggiore (spaziale e temporale) di una sequenza di $m$ istruzioni; si tenga a mente che se la complessità è costante, allora si ha un $O{1}$.
+2. Calcolare la complessità di caso peggiore (spaziale e temporale) di un ciclo while.
+3. Calcolare la complessità di caso peggiore (spaziale e temporale) del seguente algoritmo:
+
+```linenums="1"
+for i che va da 1 a 10:
+	if i * 2 è pari:
+		for j che va da 1 a 10:
+			calcola i + j;
+		endfor
+	endif
+endfor
+```
