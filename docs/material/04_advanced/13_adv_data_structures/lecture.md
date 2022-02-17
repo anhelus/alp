@@ -1,159 +1,106 @@
-# 10 - Strutture dati
+# 13 - Ancora sulle strutture dati
 
-Nella [lezione precedente](../09_functions/lecture.md) abbiamo ad un certo punto parlato di "insieme" dei voti relativi ai nostri esami, senza però ben specificare come rappresentarlo con i concetti a nostra disposizione. Se ci pensiamo, infatti, non abbiamo (apparentemente) strumenti per rappresentare degli insiemi: non possiamo certamente utilizzare un singolo dato numerico, così come neanche un dato booleano o un carattere.
+## 13.1 - Pila come array
 
-Per risolvere questo problema (e, in realtà, mille altri) dobbiamo utilizzare una serie di concetti che vanno sotto il nome collettivo di *strutture dati*, ovvero dei costrutti progettati per organizzare e gestire un insieme di valori nella maniera più efficiente possibile.
+### 13.1.1 - Variabili da utilizzare
 
-Esistono diversi tipi di struttura dati, ognuno dei quali adatto ad un determinato scopo. Vediamo quelli più diffusi.
+Proviamo adesso ad implementare una pila utilizzando un array. Per farlo, avremo bisogno di tre elementi:
 
-## 10.1 - Array
+1. un array, che chiameremo `stack`;
+2. una variabile che indica l'elemento in cima allo `stack`, che chiameremo `top`;
+3. una variabile che indica la lunghezza dello `stack`, che chiameremo `capacity`.
 
-La maniera più rapida di rappresentare i nostri voti è quella di immaginarli come un vettore di numeri interi; per far questo esiste una struttura dati apposita chiamata *array*.
+Da qui consegue che:
 
-Un array contiene quindi una sequenza di elementi, tipicamente dello stesso tipo (anche se, come vedremo, ciò dipende dal linguaggio di programmazione), ed organizzati seguendo un ordine specifico, "esplorabile" mediante il concetto di *indice*.
+* lo `stack` è pieno quando `top` è pari a `capacity`;
+* lo `stack` è vuoto quando `top` è pari a `0`.
 
-La presenza dell'indice permette di definire la modalità di accesso ai dati dell'array, indicata come *accesso diretto*. Nella pratica, possiamo estrarre qualsiasi elemento nell'array mediante l'indice stesso, in maniera diretta, senza dover "scorrere" l'intero vettore; questo fa sì che l'accesso abbia sempre una complessità $O(1)$, dato che è richiesta un'unica operazione.
+Questi principi sono riassunti nella figura successiva:
 
-!!!note "Nota"
-	A far da contraltare all'efficienza in termini di accesso vi è una certa laboriosità legata all'inserimento o rimozione di un elemento dall'array.
+TODO: figura da dispense
 
-Tipicamente, un array viene rappresentato come una serie di singole variabili racchiuse tra due parentesi quadre. Ad esempio:
+### 13.1.2 - Operazioni di `push` e `pop`
 
-```py
-array = [8, 5, 12, 7, 4]
-```
+Ricordiamo che lo stack segue una strategia LIFO, per cui una `push` prevede che sia inserito un nuovo elemento nella parte superiore dell'array (ovvero, all'indice `top`). Quindi:
 
-In particolare, il precedente array è composto da elementi di tipo intero, ed ha una lunghezza pari a cinque elementi. Da notare che nella maggior parte dei linguaggi di programmazione l'indice del primo elemento *non* è pari ad uno, ma a zero. La figura successiva esplicita adeguatamente questo concetto.
+```linenums="1"
+push(stack, top, capacity, element):
 
-TODO: inserire figura array
-
-## 10.2 - Liste
-
-Una *lista*, conosciuta anche con il nome di *linked list*, è una struttura dati simile all'array, ma che consta di una differenza fondamentale. Nella lista, infatti, ogni elemento contiene un riferimento esplicito a quello successivo. Questo concetto è esplicitato nella seguente figura:
-
-TODO: inserire figura lista
-
-In particolare, osserviamo che:
-
-- il primo elemento nella lista, il cui valore è `5`, ha un riferimento all'elemento successivo `R2`;
-- il secondo elemento nella lista ha valore `3`, e conserva un riferimento all'elemento successivo `R2`;
-- ciò prosegue sino all'elemento `7`, che conserva un riferimento all'ultimo elemento TODO: `R`.
-
-Il fatto che ogni elemento della lista contenga un riferimento al successivo ha due conseguenze:
-
-1. la prima consiste nel fatto che la lista è una struttura dati ad *accesso sequenziale*, il che significa che occorrerà "scorrere" tutti gli elementi della stessa fino ad arrivare a quello desiderato;
-2. la seconda sta nel fatto che risulta essere molto più semplice aggiungere o rimuovere un elemento da una lista che da un array: infatti, basterà semplicemente modificare i riferimenti dagli elementi contigui a quello che si sta aggiungendo o rimuovendo.
-
-## 10.3 - Struct
-
-Una *struct* contiene un insieme di valori tipicamente chiamati *membri* o *campi*, il cui numero, sequenza e tipo sono tipicamente prefissati. Le struct trovano ampia applicazione in linguaggi come il C, ed hanno una sintassi di questo tipo:
-
-```c
-struct nome_struct {
-	tipo_campo_uno id_campo_uno;
-	tipo_campo_due id_campo_due;
-};
-```
-
-Questa sintassi ci permette di definire quindi un tipo di struct chiamato `nome_struct` ed avente, in questo caso, due campi, ovvero un primo campo di tipo `tipo_campo_uno` ed identificatore `id_campo_uno`, ed un secondo campo di tipo `tipo_campo_due` ed identificatore `id_campo_due`.
-
-## 10.4 - Union
-
-Una *union* è un tipo di struttura dati che permette di specificare il tipo del valore che può essere memorizzato al suo interno tra un certo numero di tipi primitivi. Nonostante sia sintatticamente affine alla struct, ne differisce quindi dal punto di vista funzionale: non è una "struttura", ma piuttosto un "ventaglio di possibili tipi" da cui selezionare. La sintassi di una union è simile alla seguente:
-
-```c
-union nome_union {
-	tipo_union_uno id_union_tipo_uno;
-	tipo_union_due id_union_tipo_due;
-};
-```
-
-In questo caso, la union di nome `nome_union` potrà assumere uno tra due possibili valori, ovvero `id_union_tipo_uno` di tipo `tipo_union_uno` o `id_union_tipo_due` di tipo `id_union_tipo_due`.
-
-!!!note "Nota"
-	Per adesso, non facciamo un esempio "concreto" di union; lo vedremo più avanti, quando ritorneremo su queste due strutture dati in C.
-
-## 10.5 - Pile e code
-
-Abbiamo visto in precedenza due tipi di accesso ai dati, ovvero quello *casuale*, proprio degli array, e quello *sequenziale*, proprio dell eliste. Esiste un altro tipo di accesso ai dati, chiamato *accesso limitato*, usato da specifiche strutture dati come *pile* e *code*. Vediamo brevemente entrambi questi tipi di struttura dati.
-
-### 10.5.1 - Pile
-
-Una *pila* (in inglese, *stack*) è una struttura dati che contiene al suo interno variabili inserite e/o rimosse seguendo il principio *Last-In, First-Out* (*LIFO*). In altre parole, ciò significa che l'ultimo elemento che accede ad una pila è anche il primo ad uscirne.
-
-Una pila ha a disposizione quindi due diverse operazioni, ovvero quella di `push`, mediante la quale un oggetto viene inserito in cima allo stack, e quella di `pop`, che permette di estrarre l'oggetto dalla cima dello stesso.
-
-Il funzionamento della pila è schematizzato all'interno della seguente figura.
-
-TODO: figura funzionamento pila
-
-!!!note "Nota"
-	Il motivo alla base dell'aggettivo "limitato" è da ricercarsi proprio nel fatto che sia il push sia il pop possono essere effettuati soltanto sugli elementi in cima alla pila.
-
-### 10.5.2 - Code
-
-Una *coda* (in inglese, *queue*) è una struttura dati concettualmente simile alla pila, ma che segue il principio (*First-In, First-Out*) (*FIFO*); in questo caso, il primo ad uscire dalla coda sarà il primo ad esservi entrato.
-
-Le operazioni definite sulla coda sono concettualmente simili a quelle definite sulla pila, e vengono chiamate `enqueue` (per mettere in coda un nuovo elemento) e `dequeue` (per togliere dalla coda l'elemento presente da più tempo).
-
-Il funzionamento della coda è schematizzato all'interno della seguente figura.
-
-TODO: figura funzionamento coda
-
-#### TODO: questo va in avanzato Pila come array
-
-Per implementare una pila sotto forma di array, abbiamo bisogno dei seguenti elementi:
-
-1. un array di lunghezza superiore ad uno (`stack`);
-2. una variabile che caratterizza l'elemento in cima all'array (`top`);
-3. una variabile che si riferisce alla lunghezza dell'array (`capacity`).
-
-Lo `stack` è pieno quando `top` è pari a `capacity - 1`; invece, è vuoto quando `top` è pari a `-1`. Questi principi sono riassunti nella figura successiva:
-
-E' importante notare che possiamo avere due tipi di implementazione: una in cui la dimensione dell'array è fissa, ed una in cui la dimensione dell'array varia in maniera dinamica. Nella prima, ovviamente, quando il `top` è pari a `capacity` si genera un errore; ciò non avviene nel secondo caso.
-
-L'operazione di `push` prevede quindi che sia inserito un nuovo elemento all'indice `top` dell'array; di converso, l'operazione di `pop` prevede che tale elemento sia rimosso. In etrambi i casi, è importante aggiornare il valore di `top`.
-
-```
-push(array, top, capacity, element)
 STEP 1 -> top = top + 1;
 STEP 2 -> if (top >= capacity)
 		      return ERROR;
-STEP 3 -> array[top] = element;
+STEP 3 -> stack[top] = element;
 ```
 
+Ciò implica che:
+
+* allo `STEP 1` viene aumentato il valore attuale di `top`;
+* allo `STEP 2` viene verificato che `top` non sia superiore a `capacity`, e che quindi la pila non sia già piena;
+* allo `STEP 3` l'elemento `element` viene inserito al posto `top` dello `stack`.
+
+L'operazione di `pop` invece prevede che l'elemento al vertice dello stack sia rimosso:
+
+```linenums="1"
+pop(stack, top)
+
+STEP 1 -> if (top <= 0):
+			  return ERROR;
+STEP 2 -> element = stack[top];
+STEP 3 -> top = top - 1;
+STEP 4 -> return element;
 ```
-pop(array, top)
-STEP 1 -> element = array[top];
-STEP 2 -> top = top - 1;
-STEP 3 -> return element;
-```
 
+Ciò implica che:
 
+* allo `STEP 1` si verifica che lo `stack` non sia vuoto;
+* allo `STEP 2` viene assegnato ad `element` il valore presente al `top` dello `stack`;
+* allo `STEP 3` il valore di `top` viene ridotto di uno;
+* allo `STEP 4` viene restituito il valore estratto dallo `stack`.
 
-#### TODO: questo va in avanzatoEsempio di implementazione come array
+## 13.2 - Coda come array
 
-Nel caso volessimo implementare una coda come array, dovremmo definire almeno i metodi `enqueue` e `dequeue`.
+### 13.2.1 - Variabili da utilizzare
 
-In particolare, la procedura di `enqueue` prevede che sia posto come primo membro dell'array proprio l'elemento che si vuole aggiungere. Per farlo, potremmo ad esempio salvare l'array in una variabile temporanea, e concatenarlo all'elemento che entra in coda.
+Anche in questo caso dovremo usare tre diversi elementi:
+
+1. un array, che chiameremo `queue`;
+2. una variabile che indica l'elemento da più tempo in coda, chiamata `first`;
+3. una variabile che indica la lunghezza della `queue`, che chiameremo `capacity`.
+
+### 13.2.2 - Operazioni di enqueue e dequeue
+
+Ricordiamo che la strategia seguita da una coda è di tipo FIFO, per cui dovremo definire i metodi `enqueue` e `dequeue`.
+
+In particolare, il metodo `enqueue` prevede che al primo posto nell'array sia inserito l'elemento che si vuole aggiungere.
 
 ```
 enqueue(array, element)
-STEP 1 -> temp_array = array;
-STEP 2 -> new_array = concatenate(element, temp_array);
-STEP 3 -> return new_array;
+
+STEP 1 -> if (index[first] equals capacity):
+			  return ERROR;
+STEP 2 -> for current_element in queue:
+			  queue[current_element + 1] = queue[current_element];
+			  reset queue[0]
+STEP 3 -> queue[0] = element;
 ```
 
-La procedura di `dequeue` di converso comporta la semplice rimozione dell'ultimo elemento nell'array.
+In pratica:
+
+* allo `STEP 1`, controlliamo che la `queue` non sia già satura. Per far ciò, verifichiamo che l'indice di `first` non sia uguale a `capacity`;
+* allo `STEP 2`, muoviamo tutti gli elementi presenti nella coda, incrementando l'indice di ciascuno, e "liberando" l'ultimo elemento della coda;
+* allo `STEP 3`, aggiungiamo `element` alla coda in posizione `last`.
+
+La procedura di `dequeue`, di converso, comporta la semplice rimozione dell'ultimo elemento nell'array.
 
 ```
 dequeue(array)
-STEP 1 -> element = array[length(array) - 1]
-STEP 2 -> new_array = remove_last(array)
-STEP 3 -> return new_array, element
+
+STEP 1 -> element = queue[first]
+STEP 2 -> remove queue[first]
+STEP 3 -> queue[first] = queue[first - 1]
 ```
 
-## Grafi
+## 13.3 - Grafi
 
 Ecco un modo per rappresentare una rete sociale:
 

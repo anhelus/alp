@@ -141,7 +141,7 @@ Supponiamo di dover calcolare la complessità di questo semplice ciclo `for`:
 
 ``` linenums="1"
 n = 10;
-for i da 1 a 10:
+for i da 1 a n:
 	scrivi i;
 	incrementa i;
 endfor
@@ -155,10 +155,10 @@ Per quello che riguarda quella nello spazio, supponendo che ad ogni iterazione l
 
 Vediamo cosa accade nel caso si considerino due cicli `for` l'uno annidato all'interno dell'altro.
 
-```c
-int n = 10;
-for i da 1 a 10:
-	for j da 1 a 10:
+```linenums="1"
+n = 10;
+for i da 1 a n:
+	for j da 1 a n:
 		scrivi i;
 		scrivi j;
 	endfor
