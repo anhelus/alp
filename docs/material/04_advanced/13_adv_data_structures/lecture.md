@@ -15,10 +15,6 @@ Da qui consegue che:
 * lo `stack` è pieno quando `top` è pari a `capacity`;
 * lo `stack` è vuoto quando `top` è pari a `0`.
 
-Questi principi sono riassunti nella figura successiva:
-
-TODO: figura da dispense
-
 ### 13.1.2 - Operazioni di `push` e `pop`
 
 Ricordiamo che lo stack segue una strategia LIFO, per cui una `push` prevede che sia inserito un nuovo elemento nella parte superiore dell'array (ovvero, all'indice `top`). Quindi:
@@ -73,32 +69,39 @@ Ricordiamo che la strategia seguita da una coda è di tipo FIFO, per cui dovremo
 
 In particolare, il metodo `enqueue` prevede che al primo posto nell'array sia inserito l'elemento che si vuole aggiungere.
 
-```
+```linenums="1"
 enqueue(array, element)
 
-STEP 1 -> if (index[first] equals capacity):
+STEP 1 -> if (first.index equals capacity):
 			  return ERROR;
 STEP 2 -> for current_element in queue:
-			  queue[current_element + 1] = queue[current_element];
-			  reset queue[0]
-STEP 3 -> queue[0] = element;
+			  (current_element + 1) = current_element;
+STEP 3 -> last = element;
 ```
 
 In pratica:
 
 * allo `STEP 1`, controlliamo che la `queue` non sia già satura. Per far ciò, verifichiamo che l'indice di `first` non sia uguale a `capacity`;
 * allo `STEP 2`, muoviamo tutti gli elementi presenti nella coda, incrementando l'indice di ciascuno, e "liberando" l'ultimo elemento della coda;
-* allo `STEP 3`, aggiungiamo `element` alla coda in posizione `last`.
+* allo `STEP 3`, inseriamo `element` alla coda in posizione `last`.
 
 La procedura di `dequeue`, di converso, comporta la semplice rimozione dell'ultimo elemento nell'array.
 
-```
+```linenums="1"
 dequeue(array)
 
-STEP 1 -> element = queue[first]
-STEP 2 -> remove queue[first]
-STEP 3 -> queue[first] = queue[first - 1]
+STEP 1 -> element = first;
+STEP 2 -> remove first from queue;
+STEP 3 -> first = (first - 1);
+STEP 4 -> return element;
 ```
+
+In altre parole:
+
+* allo `STEP 1` viene assegnato alla variabile temporanea `element` il valore di `first`;
+* allo `STEP 2` viene rimosso il valore di `first` dalla coda;
+* allo `STEP 3` viene aggiornato il valore di `first`;
+* allo `STEP 4` viene restituito il valore di `element`.
 
 ## 13.3 - Grafi
 

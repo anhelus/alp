@@ -1,4 +1,4 @@
-# Corso di Informatica
+# Corso di Algoritmi e Linguaggi di programmazione Python/C
 
 Benvenuti! In questa pagina sono disponibili alcune informazioni di carattere generale sul corso.
 
