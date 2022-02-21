@@ -1,5 +1,7 @@
 # 13 - Ancora sulle strutture dati
 
+In questa lezione, vedremo prima come progettare una pila ed una coda come degli array, per poi passare a presentare un altro tipo di strutture dati estremamente utilizzate, ovvero *grafi* ed *alberi*.
+
 ## 13.1 - Pila come array
 
 ### 13.1.1 - Variabili da utilizzare
@@ -25,14 +27,14 @@ push(stack, top, capacity, element):
 STEP 1 -> top = top + 1;
 STEP 2 -> if (top >= capacity)
 		      return ERROR;
-STEP 3 -> stack[top] = element;
+STEP 3 -> top = element;
 ```
 
 Ciò implica che:
 
 * allo `STEP 1` viene aumentato il valore attuale di `top`;
 * allo `STEP 2` viene verificato che `top` non sia superiore a `capacity`, e che quindi la pila non sia già piena;
-* allo `STEP 3` l'elemento `element` viene inserito al posto `top` dello `stack`.
+* allo `STEP 3` l'elemento `element` viene inserito al posto `top` dello della pila.
 
 L'operazione di `pop` invece prevede che l'elemento al vertice dello stack sia rimosso:
 
@@ -41,7 +43,7 @@ pop(stack, top)
 
 STEP 1 -> if (top <= 0):
 			  return ERROR;
-STEP 2 -> element = stack[top];
+STEP 2 -> element = top;
 STEP 3 -> top = top - 1;
 STEP 4 -> return element;
 ```
@@ -63,6 +65,8 @@ Anche in questo caso dovremo usare tre diversi elementi:
 2. una variabile che indica l'elemento da più tempo in coda, chiamata `first`;
 3. una variabile che indica la lunghezza della `queue`, che chiameremo `capacity`.
 
+Ovviamente, come nel caso precedente, se `first` è uguale a `capacity` allora la coda è piena.
+
 ### 13.2.2 - Operazioni di enqueue e dequeue
 
 Ricordiamo che la strategia seguita da una coda è di tipo FIFO, per cui dovremo definire i metodi `enqueue` e `dequeue`.
@@ -72,38 +76,38 @@ In particolare, il metodo `enqueue` prevede che al primo posto nell'array sia in
 ```linenums="1"
 enqueue(array, element)
 
-STEP 1 -> if (first.index equals capacity):
+STEP 1 -> if (first >= capacity):
 			  return ERROR;
-STEP 2 -> for current_element in queue:
-			  (current_element + 1) = current_element;
-STEP 3 -> last = element;
+STEP 2 -> for element in queue:
+			  element = prev_element;
+STEP 3 -> last = new_element;
 ```
 
 In pratica:
 
-* allo `STEP 1`, controlliamo che la `queue` non sia già satura. Per far ciò, verifichiamo che l'indice di `first` non sia uguale a `capacity`;
-* allo `STEP 2`, muoviamo tutti gli elementi presenti nella coda, incrementando l'indice di ciascuno, e "liberando" l'ultimo elemento della coda;
-* allo `STEP 3`, inseriamo `element` alla coda in posizione `last`.
+* allo `STEP 1`, controlliamo che la coda non sia già satura;
+* allo `STEP 2`, spostiamo ogni elemento della coda in avanti (in pratica, assegnamo a ciascun elemento il valore dell'elemento precedente nella coda);
+* allo `STEP 3`, aggiungiamo il nuovo elemento in ultima posizione.
 
 La procedura di `dequeue`, di converso, comporta la semplice rimozione dell'ultimo elemento nell'array.
 
 ```linenums="1"
 dequeue(array)
 
-STEP 1 -> element = first;
-STEP 2 -> remove first from queue;
-STEP 3 -> first = (first - 1);
-STEP 4 -> return element;
+STEP 1 -> remove first from queue;
+STEP 2 -> first = prev_element;
 ```
 
 In altre parole:
 
-* allo `STEP 1` viene assegnato alla variabile temporanea `element` il valore di `first`;
-* allo `STEP 2` viene rimosso il valore di `first` dalla coda;
-* allo `STEP 3` viene aggiornato il valore di `first`;
-* allo `STEP 4` viene restituito il valore di `element`.
+* allo `STEP 1` viene rimosso il primo elemento dalla coda;
+* allo `STEP 2` il valore di first viene aggiornato, assegnandovi quello associato all'elemento immediatamente precedente.
 
 ## 13.3 - Grafi
+
+TODO: da qui
+
+Per comprendere in maniera intuitiva il concetto di grafo, possiamo immaginare i nostri contatti su Facebook. 
 
 Ecco un modo per rappresentare una rete sociale:
 
