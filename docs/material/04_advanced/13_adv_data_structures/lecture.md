@@ -105,75 +105,87 @@ In altre parole:
 
 ## 13.3 - Grafi
 
-TODO: da qui
+Il concetto di grafo può essere compreso in maniera intuitiva partendo da quelli che sono i nostri contatti sulle reti sociali (possiamo tranquillamente pensare a Facebook).
 
-Per comprendere in maniera intuitiva il concetto di grafo, possiamo immaginare i nostri contatti su Facebook. 
+Chiunque abbia un account su Facebook, infatti, ha una serie più o meno estesa di "collegamenti", i quali a loro volta possono essere collegati tra loro, andando a creare una sorta di "intreccio" di relazioni. Rappresentando ciascun account con un punto, e tutti i collegamenti mediante delle linee, avremmo una situazione più o meno simile a quella che vediamo nella figura seguente.
 
-Ecco un modo per rappresentare una rete sociale:
+TODO: figura social network
 
-![social_network](../../assets/images/04_programmazione/06_strutture_dati/social_network.png)
+Notiamo anche che, nella maggior parte dei casi, la conoscenza tra due persone è *bidirezionale*: ovvero, dato che noi conosciamo una certa persona, questa persona ci conoscerà a sua volta.
 
-Le linee presenti tra i nomi di due persone indicano che queste si conoscono tra loro. Ovviamente, la conoscenza è _bidirezionale_: dato che Alice conosce Bob, anche Bob conosce Alice.
+Questo modo di schematizzare una rete sociale avviene mediante una struttura nota come *grafo*.
 
-Questo modo di schematizzare una rete sociale è conosciuto come _grafo_.
+Formalmente, un grafo è definito come una coppia $G=(V, E)$, dove $V$ è l'insieme dei *vertici*, o *nodi* (quelli che abbiamo prima chiamato "punti"), mentre $E$ è l'insieme degli *archi*, o *lati* che connette detti vertici (le "linee"). Interessante notare come un arco possa essere rappresentato mediante i nodi che connette: infatti, si può dire che l'arco che connette i vertici $u$ e $v$ è descrivibile mediante la coppia $(u, v)$.
 
-### Vertici ed archi
+### 13.3.1 - Grafi diretti e non diretti
 
-Ciascun nodo è noto come _vertice_, mentre ogni linea è un _arco_ che connette due vertici.
+Nell'esempio precedente, abbiamo visto come le relazioni all'interno di un social network siano perlopiù bidirezionali. Non è quindi possibile individuare una direzione "specifica" nell'arco che collega due nodi: l'arco che collega i nodi $u$ e $v$ può essere inteso sia come un collegamento che da $u$ va verso $v$, sia, al contrario, come un collegamento che va da $v$ verso $u$. Una situazione di questo tipo implica la presenza di un grafo *non diretto*. In un grafo non diretto l'arco $(u, v)$ coincide quindi con l'arco $(v, u)$.
 
-L'insieme dei vertici è dato da $V$, mentre quello degli archi è dato da $E$. Il grafo è quindi rappresentabile come una coppia $G=(V,E)$.
+Per un grafo non diretto possiamo definire la condizione di *adiacenza* per due vertici $u$ e $v$:
 
-Anche i nodi possono essere rappresentati a coppie: in particolare, due nodi $u$ e $v$ connessi da un arco sono una coppia $(u, v)$.
+!!!info "Vertici adiacenti"
+	Due vertici $u$ e $v$ sono definiti *adiacenti* o *vicini* quando vi è un arco che li connette.
 
-### Grafo non diretto
+Contestualmente, possiamo definire il concetto di *grado* di un vertice:
 
-Abbiamo detto che le relazioni rappresentate nella nostra rete sociale sono bidirezionali: ciò significa che non è possibile individuare una "direzione" specifica nella relazione. Siamo quindi in presenza di un _grafo non diretto_.
+!!!info "Grado di un vertice"
+	Si definisce *grado* di un vertice $u$ il numero di archi che vi incidono.
 
-In un grafo non diretto, un arco $(u, v)$ equivale all'arco $(v, u)$. Ciascun arco incide su entrambi i vertici, ed i vertici connessi da un arco sono _adiacenti_ o _vicini_. Definiamo inoltre il numero di archi che incide su un vertice come _grado_ dello stesso.
+Ad esempio, se abbiamo cento contatti su Facebook, il nostro "grado" all'interno del social network sarà proprio pari a 100.
 
-### Cammini e cicli
+Viceversa, se ad ogni arco è associata una direzione, otterremo un grafo *diretto*, nel quale non sarà sempre possibile andare indifferentemnete da $u$ a $v$, e viceversa. Per fare un esempio di grafo indiretto, immaginiamo che i nodi del nostro grafo siano gli incroci di una città, mentre i lati le vie che li connettono; in tal senso, ogni via a senso unico sarà un esempio di arco diretto, e percorrobile (*teoricamente*) in un'unica direzione.
 
-Immaginiamo che Bob voglia conoscere Eric. non vi è un arco che li collega; però, Bob potrebbe chiedere ad Alice di presentargli David, che a sua volta potrebbe presentargli Eric. Esiste quindi un **percorso**, o **cammino**, composto da tre archi tra Bob ed Eric, e rappresenta il modo più diretto per i due per incontrarsi. Chiamiamo un percorso del genere (ovvero il percorso con un numero minimo di archi) **cammino minimo**, o **shortest path**.
+Per un grafo diretto dovremo ridefinire il concetto di *grado*, separandolo in due concetti distinti.
 
-Un cammino che ha come punto di partenza e di arrivo lo stesso vertice è chiamato **ciclo**. Ad esempio, quello che va da Alice, passa per David, Eric e Charlie, e torna ad Alice, è appunto un ciclo.
+!!!info "Grado esterno"
+	Si definisce *grado esterno*, o *out-degree*, di un vertice $u$ il numero di archi in uscita da $u$.
 
-### Grafo pesato
+!!!info "Grado interno"
+	Si definisce *grado interno*, o *in-degree*, di un vertice $u$ il numero di archi in ingresso su $u$.
 
-Alle volte, gli archi sono **pesati**, ovvero correlati da valori numerici. Ad esempio, potremmo rappresentare la distanza tra diverse città come segue:
+### 13.3.2 - Cammini e cicli
 
-![cities](../../assets/images/04_programmazione/06_strutture_dati/cities_map.png)
+Prendendo una licenza ed usando un "gioco di parole", immaginiamo di voler contattare il contatto di un nostro contatto. Per farlo, potremmo semplicemente chiedere al nostro amico di presentarci il suo amico il quale, ovviamente, non ha un collegamento diretto con noi, ma che risulta essere in qualche modo "raggiungibile": esiste, quindi, un *percorso* o, più propriamente, un *cammino*, che mette in relazione noi con la nostra conoscenza futura.
 
-Il termine generale per ognuno dei numeri che mettiamo su un lato è **peso**, ed un grafo i cui archi hanno dei pesi è un **grafo pesato**. In questo caso, volendo trovare il percorso minimo tra due posizioni, dovremo tenere contro del valore dei pesi. Ad esempio, per Andare da Bari a Napoli, occorrerà, nel nostro caso, passare da Roma e Milano (piuttosto che da Torino).
+Ovviamente, il numero di cammini esistenti tra due nodi $u$ e $v$ è potenzialmente molto elevato, se non addirittura infinito: ad esempio, nel caso precedente, potremmo sicuramente costruire una rete di contatti indiretti con la quale arrivare al nostro obiettivo in maniera più "larga". Tuttavia, è opportuno sempre cercare il *cammino minimo* (*shortest path*), che rappresenta il modo più diretto per arrivare al nostro obiettivo.
 
-!!! note "Nota"
-Il Docente si scusa per questa interpretazione poco realistica. Non seguite questa mappa, e risparmierete molte ore.
+Definiamo inoltre altre due condizioni.
 
-### Grafo diretto
+!!!info "Cicli"
+	Un cammino che ha come punto di partenza e di arrivo lo stesso vertice è chiamato *ciclo*.
 
-Cosa accade se inseriamo informazioni inerenti i sensi di marcia all'interno del grafo precedente? Otteniamo un **grafo diretto**.
+!!!info "Connessione del grafo"
+	Un grafo si dice connesso quando esiste almeno un percorso che colleghi due nodi $(u, v)$, $\forall (u, v) \in V$.
 
-![cities_directed](../../assets/images/04_programmazione/06_strutture_dati/cities_map_directed.png)
+#### 13.3.2.1 - Un esempio
 
-Le direzioni degli archi mostrano quali percorsi possono essere affrontati, e quali no. In questo caso, ad esempio, non potremo uscire da Bari, in quanto non ci saranno archi uscenti. Roma invece perde il suo status, in quanto si dimostra che _non tutte le strade portano a Roma_.
+Facciamo un esempio pratico. Immaginiamo che Bob voglia conoscere Eric; come è possibile notare, non esiste alcun grafo che li collega. Tuttavia, Bob ha due strade: la prima è quella di chiedere ad Alice di presentargli Charlie, che potrebbe a sua volta introdurgli Eric. La seconda, invece, prevede che Bob si metta in contatto con David, che potrà direttamente introdurgli Eric.
 
-Possiamo fare altre due osservazioni su questo grafo:
+TODO: figura
 
-- il grafo non ha alcun ciclo, per cui siamo in presenza di un **grafo aciclico diretto**;
-- il grafo conserva i pesi, per cui siamo comunque in presenza di un grafo pesato.
+Abbiamo quindi individuato due cammini tra Bob ed Eric, di cui uno (quello che passa per David) è da considerarsi minimo, in quanto tiene conto del numero minimo di vertici e lati intercorrenti tra il nodo di partenza e quello di arrivo.
 
-Per quello che riguarda infine il grado di ogni arco, abbiamo due termini da tenere in considerazione:
+Per quello che riguarda i cicli, quello che va da Alice verso Bob verso David e torna poi ad Alice è da considerarsi appunto come tale.
 
-- il **grado esterno**, o **out-degree**, è il numero di archi in uscita da un vertice;
-- il **grado interno**, o **in-degree**, è il numero di archi in ingresso in un vertice.
+### 13.3.3 - Grafo pesato
 
-## Alberi
+E' possibile che a tutti gli archi di un grafo sia associato un *peso*, ovvero un valore numerico. In uno degli esempi precedenti, ovvero quello delle vie e degli incroci, potremmo associare ad ogni strada un numero indicativo della sua lunghezza in metri:
 
-Un **albero** è una struttura dati, particolarmente usata in ambito informatico, che simula una struttura gerarchica, con un valore radice ed una serie di figli, rappresentata sotto forma di grafo **non orientato**, **connesso** ed **aciclico**.
+TODO: figura città pesata
 
-In particolare, il fatto che l'albero sia connesso indica che esiste _almeno un cammino che connette tutti gli archi_.
+Un grafo i cui archi hanno dei pesi è chiamato *grafo pesato*. Ovviamente, per trovare il cammino minimo in un grafo di questo tipo, dovremo tenere conto del valore dei pesi: nella figura precedente, infatti, TODO: esempio
 
-![tree](../../assets/images/04_programmazione/06_strutture_dati/tree.png)
+## 13.4 - Alberi
 
-Un particolare tipo di albero è poi l'**albero binario**, nel quale ciascun nodo ha (al più) due figli.
+Un concetto *cugino* di quello di grafo è quello di *albero*, struttura dati particolarmente usata soprattutto in ambito informatico, che permette di modellare una struttura gerarchica fatta di un nodo radice e di una serie di nodi figli, fino ai nodi *foglia*, ovvero quelli che non hanno ulteriori successori.
 
-Un nodo terminale (ovvero uno in basso nella gerarchia) è chiamato **foglia**.
+Per comprendere al meglio la struttura di un albero, vediamo quella che è la "geneaologia" della razza umana (in versione *volutamente* semplificata):
+
+TODO: esempio
+
+In particolare, notiamo come a partire da un "antenato comune" (il famoso "anello mancante") si siano evoluti diversi *rami* dell'albero, ognuno afferente ad un diverso genere, di cui gli ultimi esemplari rappresentano i nodi foglia; nel nostro caso, l'Homo sapiens è la foglia del ramo rappresentativo del genere Homo.
+
+!!!note "Nota"
+	L'albero *è* un grafo, con delle particolari caratteristiche: infatti, è non diretto, connesso ed aciclico (ovvero, non presenta alcun ciclo al suo interno).
+
+Concludiamo questo excursus citando infine gli alberi *binari*, caratterizzati dal fatto che ciascun nodo ha (al più) due figli.
