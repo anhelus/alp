@@ -1,8 +1,12 @@
 # 15 - Algoritmi di ricerca
 
+Vediamo in ultimo gli algoritmi di ricerca.
+
 ## 15.1 - Ricerca binaria
 
 ## Introduzione al problema
+
+Supponiamo di voler trovare un determinato elemento all'interno di una lista di valori, come ad esempio il numero di un nostro contatto all'interno della nostra rubrica (ovviamente, supponiamo di *non* voler utilizzare la funzionalità di ricerca integrata nella rubrica stessa).
 
 Supponiamo di voler trovare il nostro gruppo tra quello dei partecipanti al tema d'anno. Ovviamente, l'idea sarebbe quella di scrivere un programma che faccia la ricerca del nostro gruppo in maniera automatica.
 

@@ -1,90 +1,82 @@
 # 14 - Algoritmi di ordinamento
 
-Ordinare una lista di elementi (ovviamente dello stesso tipo) può aiutare ad individuare rapidamente un certo elemento della stessa. In tal senso, esistono diversi algoritmi, chiamati *algoritmi di ordinamento* (o, in inglese, *sorting algorithms*).
+Uno dei problemi più "classici" nello studio degli algoritmi è quello di ordinare una lista di elementi affini (ovvero dello stesso tipo). Questo problema, soltanto apparentemnete banale, ha in realtà numerosi riscontri pratici, in quanto capita molto spesso di dover ordinare una lista secondo un certo criterio (ad esempio, un elenco di nomi in ordine alfabetico, oppure i prezzi di diversi beni in ordine ascendente). Per far questo, nel tempo sono stati definiti diversi algoritmi detti di *ordinamento* o, in inglese, *sorting algorithms*. Vediamone alcuni tra i più conosciuti.
 
 ## 14.1 - Selection sort
 
-## Introduzione al problema
+Il primo algoritmo che vedremo è chiamato *selection sort*. Questo è un algoritmo di tipo *iterativo*, che analizza quindi un elemento della lista alla volta alla ricerca dell'elemento minore; per comprendere appieno il funzionamento dell'algoritmo, è opportuno utilizzare un esempio concreto.
 
-Ordinare una lista di elementi (ovviamente dello stesso tipo) può aiutare ad individuare rapidamente un certo elemento della stessa. In tal senso, esistono diversi algoritmi, chiamati *algoritmi di ordinamento* (o, in inglese, *sorting algorithms*).
+### 14.1.1 - Esempio e formalizzazione
 
-Il primo, e più semplice, algoritmo di ordinamento è chiamato *selection sort*. Per comprenderne il funzionamento, ricorriamo (al solito) ai nostri cari Alice e Bob.
+Immaginiamo quindi di voler ordinare un mazzo di dieci carte dalla più piccola alla più grande. Per farlo, seguiamo questi passi:
 
-## Descrizione dell'algoritmo
+1. disponiamo tutte le carte presenti nel mazzo in un'unica fila;
+2. cerchiamo la carta più piccola, e posizioniamola all'estrema sinistra del mazzo;
+3. dividiamo la fila in due parti: nella parte più a sinistra inseriamo le carte già ordinate, mentre in quella destra quelle da ordinare;
+4. prendiamo dalla fila di destra la carta più piccola, posizionandola a destra dell'ultimo elemento della fila di sinistra;
+5. reiteriamo il passo 4 fino a che non vi sono più carte nella fila di destra.
 
-Il selection sort è un algoritmo *iterativo*: ad ogni iterazione, viene analizzato un elemento della lista
+Volendo, è possibile formalizzare i passi precedenti come segue. Dato un vettore $x$ fatto da $n$ numeri interi:
 
-L'idea alla base del selection sort è quella di *scambia
+1. Associare ad $i$ il primo indice dell'array, ovvero $i = 0$, ed a $j$ l'ultimo, ovvero $j = n-1$.
+2. Associare alla variabile $m$ il valore di $x(0)$, supponendo che $m$ sia il valore più piccolo attualmente presente all'interno dell'array.
+3. Confrontare $m$ con tutti gli elementi $x(k), k \in (0, n-1]$. Se $x(k) < m$ per qualche $k$, allora $m = x(k)$.
+4. Aumentare il valore di $i$ di un'unità.
+5. Reiterare le istruzioni 3-4 fino a che $i = x(n-1)$.
 
-Invece di sviluppare il tema d’anno di Informatica, Alice e Bob decidono di prendersi il pomeriggio libero, e si imbattono nel vecchio mazzo di carte del cugino di Bob.
+### 14.1.2 - Esempio pratico
 
-“Alice, ricordi il caffè che ho perso l’altra volta? Beh, ho in mente un modo per riaverlo indietro.”
-“Dimmi pure. Cosa hai in mente?”
-“Scommetto che non riesci a trovare una maniera algoritmica per ordinare questo vecchio mazzo.”
-“Scommessa accettata.”
+Immaginiamo di avere un array di numeri interi, i cui elementi assumono valore `[12, 4, 8, 7, 2]`. Seguiamo i passi evidenziati in precedenza per l'algoritmo.
 
-Alice, che ricordiamo essere una assidua frequentatrice del corso di Informatica, inizia facendo queste mosse.
+* *Step 1*: imponiamo $i = 0, j = 4$.
+* *Step 2*: imponiamo $m = x(0) = 12$.
+* *Step 3*: dal confronto, emerge che $x(1) = 4 < m \Rightarrow m = x(1)$. Continuando però ad incrementare $i$, notiamo che $x(4) = 2 < m \Rightarrow m = x(4)$.
+* *Step 4*: poniamo $i = i + 1 = 2$.
+* *Step 5*: reiteriamo le istruzioni 3-4 fino a che $i = 4$, ottenendo l'array finale.
 
-Per prima cosa, dispone tutte le carte presenti nel mazzo lungo un’unica fila. A quel punto, inizia a cercare la carta più piccola, e la posiziona al primo posto.
-Successivamente, suddivide la fila in due: a sinistra mette le carte già ordinate (ovvero, la prima carta), ed a destra quelle ancora da ordinare.
-A quel punto, prende dalla fila di destra la carta più piccola, e la posiziona immediatamente a destra dell’ultimo elemento della fila di sinistra. Fatto questo, reitera questa procedura fino a che la fila di destra non è completamente vuota, mentre quella di sinistra ha al suo interno tutte le carte ordinate.
+In altre parole:
 
-“Ok, Alice, hai ordinato le carte, ma non vedo alcun algoritmo.”
-“E’ qui che ti sbagli, mio caro.”
+```linenums="1"
+START
 
-Ed Alice, pregustando la vittoria, elenca a Bob le istruzioni che ha eseguito, dimostrando che la procedura che ha eseguito è modellabile secondo l’algoritmo di selection sort.
+CICLO 0
+x = [12, 4, 8, 7, 2];
+i = 0; j = 4; min = x(0) = 12;
 
-Sia x un array di n elementi interi.
-Associare ad i il primo indice dell’array (0), ed a j l’ultimo (n-1).
-Associare ad una variabile il valore di x(0), e supporre che sia il valore minore.
-Confrontare tutti gli elementi di x(k), con k che va da 1 ad n - 1, con x(0). Aggiornare il valore di x(0) nel caso x(k) minore di x (0).
-Incrementare di 1 il valore di i.
-Ritornare all’istruzione 4 fino a che i == j.
+CICLO 1
+x = [2, 12, 4, 8, 7];
+i = 1; j = 4; min = x(1) = 12;
 
-Un esempio pratico
-Immaginiamo di avere un array con valori [12, 4, 8, 7, 2]. Per prima cosa, vediamo che il valore di i sarà pari a 0, mentre j sarà pari a 4.
+CICLO 2
+x = [2, 4, 12, 8, 7];
+i = 2; j = 4; min = x(2) = 12;
 
-A questo punto, poniamo min = x(0) = 12. Vediamo che x(1) = 4 è minore di 12, per cui il valore min viene aggiornato, e risulta essere pari a 4. Andiamo avanti, e compiamo soltanto un altro aggiornamento, ovvero quando vediamo che x(4) minore di min. A questo punto, inseriamo x(0) all’estrema sinistra (posizione i).
+CICLO 3
+x = [2, 4, 7, 12, 8];
+i = 3; j = 4; min = x(3) = 12;
 
-Aggiorniamo il valore di i ad 1, e reiteriamo la procedura, fino ad ottenere l’array finale:
+CICLO 4
+x = [2, 4, 7, 8, 12];
+i = 4; j = 4; min = x(4) = 12;
 
-[12, 4, 8, 7, 2]
-i = 0; j = 4;
-min = x(0) = 12;
-min = x(4) = 2;
-new = [2, 12, 4, 8, 7]
-i = 1;
-min = x(1) = 12;
-min = x(2) = 4;
-new = [2, 4, 12, 8, 7]
-i = 2;
-min = x(2) = 12;
-min = x(4) = 7;
-new = [2, 4, 7, 12, 8]
-i = 3;
-min = x(3) = 12;
-min = x(4) = 8;
-new = [2, 4, 7, 8, 12]
-return
+STOP
+```
 
-TODO FLOW CHART
+### 14.1.3 - Analisi della complessità computazionale dell'algoritmo
 
-Analisi dell’algoritmo
-Il selection sort itera su tutti gli indici di un array. Supponiamo di avere un array di n elementi; avremo (ovviamente) n indici.
+L'algoritmo di selection sort cicla su tutti gli $n$ indici di un array. Per comprendere quante operazioni sono necessarie a completare l'ordinamento, dovremo contare il numero di comparazioni necessarie ad individuare l'elemento "minore" attualmente presente all'interno dell'array.
 
-Per capire quante operazioni sono necessarie per completare l’operazione di ordinamento, dobbiamo contare il numero di confronti necessari ad individuare l’elemento minore attualmente presente nell’array. In particolare, alla prima iterazione, quando i = 0, avremo la necessità di effettuare n operazioni, una per ogni elemento dell’array. Alla seconda iterazione, quando i = 1, dovremo fare n - 1 confronti; alla terza, basteranno n - 2 confronti, e così via. Ciò significa che avremo bisogno di n + (n-1) + … + 2 + 1 confronti; ciò equivale ad una serie aritmetica pari a (n^2/2) + n/2. La complessità di caso peggiore tiene però conto di un limite asintoticamente superiore di questa serie, che è pari ad n^2; ciò significa che saremo in una situazione per cui la complessità computazionale è pari ad O(n^2).
+In particolare, alla prima iterazione (con $i = 0$), avremo la necessità di effettuare $n$ operazioni di comparazione, una per ogni elemento dell'array; alla seconda, con $i = 1$, dovremo fare $n - 1$ confronti, alla terza $n - 2$, e così via. Ciò implica che avremo bisogno di un numero di operazioni pari a:
 
-Nota 
-Una complessità di questo tipo ci permette di notare che il tempo richiesto all’esecuzione dell’algoritmo cresce molto velocemente al crescere del numero di elementi dell’array. Con n = 10, infatti, avremo bisogno di 100 unità di tempo. Supponendo che un’unità di tempo sia pari ad un microsecondo, avremo bisogno di 0.1 secondi. Se n = 100, allora avremo bisogno di 10 secondi. Se n = 1.000, invece, avremo bisogno di 1.000 secondi (ovvero quasi 17 minuti!).
+$$
+C_T = n + (n - 1) + \ldots + 2 + 1 = \frac{n^2}{2} + \frac{n}{2}
+$$
+
+La complessità di caso peggiore tiene conto del limite asintotico del valore precedente, ed è chiaramente pari ad un $O(n^2)$.
 
 ## 14.2 - Insertion sort
 
-## Introduzione al problema
-
-Abbiamo visto 
-
-INSERTION SORT
-Ci sono molti modi diversi di effettuare il sort. 
+Il secondo algoritmo che vedremo è l'*insertion sort*. Per introdurlo, partiamo dal
 
 un altro modo è l’insertion sort. Immaginiamo che stimao giocando un gioco di carte. Stiamo tenendo delle carte in mano, e tutte queste carte sono ordinate. Il dealer ci dà esattamente una nuova carta. Si deve metterla nel posto corretto in modo che la carta cheabbiamo in mano siano ancora ordinate. Nel selection sort, ogni elemento che aggiungiamo all’array ordinato non può essere più piccolo degli elementi già presenti nell’arry ordinato. Ma nel nostro esempio, la nuova carta può essere più piccola delle carte che abbiamo già in mano, per cui dobbiamo andare giù nella linea, comparando le nuove card con ognuna delle carte in mano, fino a che non troviamo un posto epr inserirla. Inseriamo la nuova carta nel punto giusto, e nuovamente la nostra mano ha delle card completamente ordinate. Quindi il dealer ci da un’altra carta, e si ripete la stesa procedura. Quindi un’altra carta, e via dicendo, fino a che il dealer non ci dà più alcuna carta.
 
