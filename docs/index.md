@@ -1,5 +1,7 @@
 # Corso di Algoritmi e Linguaggi di programmazione Python/C
 
+TODO:
+
 Benvenuti! In questa pagina sono disponibili alcune informazioni di carattere generale sul corso.
 
 ## Informazioni utili
