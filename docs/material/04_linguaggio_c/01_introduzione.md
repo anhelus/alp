@@ -1,51 +1,46 @@
-## Cosa è C?
+# 16 - Introduzione al linguaggio C
 
-Il linguaggio C è un linguaggio ad alto livello inizialmente sviluppato da Dennis M. Ritchie nell'ambito dello sviluppo del sistema operativo UNIX ai Bell Labs. La sua prima implementazione risale al 1972 su un computer DEC PDP-11. Il primo draft disponibile venne reso disponibile al grande pubblico nel 1978, in quello che è conosciuto al giorno d'oggi come *K&R standard*; venne poi formalizzato dall'*American National Standard Institute* (*ANSI*) nel 1988.
+Il linguaggio C è un linguaggio a livello medio-alto inizialmente sviluppato da Dennis M. Ritchie ai Bell Labs. La primissima implementazione del C risale al 1972, ma fu soltanto nel 1978 che venne reso disponibile al grande pubblico il primo draft del linguaggio, in quello che oggi è conosciuto come *K&R standard*. La formalizzazione vera e propria del linguaggio avvenne poi da parte dell'ANSI (*American National Standard Institute*) nel 1988.
 
-Al giorno d'oggi, C è uno dei linguaggi di programmazioni maggiormente utilizzati. Le sue applicazioni sono estese, e vanno dai sistemi operativi, ai compilatori, ai text editor, passando per database e programmi ottimizzati per smartphone.
+Al giorno d'oggi, il C è ancora uno tra i linguaggi di programmazione più utilizzati, ed ha applicazioni praticamente ovunque, dai sistemi operativi ai compilatori, passando per database, programmi per smartphone ed editor di testo.
 
-Vediamo insieme la struttura di un primo programma in C.
+## 16.1 - Il programma *Hello, world!*
 
-## Hello, C!
+Dopo questa breve (ma dovuta) introduzione "storica", partiamo con quella che è da sempre la maniera "classica" di apprendere un linguaggio di programmazione, ovvero scrivendo il nostro primo programma, chiamato per convenzione *Hello, world!* (*Ciao, mondo!*).
 
-La *Via dell'Informatico* ci impone di partire in maniera abbastanza classica, andando a definire un primo, rudimentale, ma famigerato programma: l'*Hello, World*.
+Apriamo Visual Studio (o un editor equivalente) e scriviamo:
 
-```c
+```c linenums="1"
 #include <stdio.h>
 
 int main() {
-	// Ora sono un programmatore!
+	// Questo è un commento!
 	printf("Hello, World! \n");
 
 	return 0;
 }
 ```
 
-Ecco fatto, semplice, vero?
+Proviamo ad eseguire il programma usando il tasto *Run* o premendo F5, e sulla console dovrebbe apparire la scritta `Hello, World!`.
 
-Beh, certo, però, nonostante la loro semplicità, in queste poche righe di codice sono racchiusi tutti i concetti fondamentali a scrivere programmi ben più complessi.
+## 16.2 - Descrizione del codice
 
-Vediamole una ad una.
+Nonostante la loro semplicità, in queste poche righe di codice sono riacchiusi i principali concetti sintattici che saranno usati per scrivere programmi ben più complessi. Vediamoli uno per uno.
 
-### `#include`
+### 16.2.1 - La direttiva `#include`
 
-La prima istruzione è una *direttiva*. Se ricordate, è proprio una di quelle parti di codice che vengono *pre-elaborate* dal compilatore.
+L'istruzione alla riga 1 è chiamata *direttiva*, ed è una parte di codice che viene elaborata in automatico dal programma delegato alla "comprensione" del linguaggio C (ovvero, al compilatore). In altre parole, ogni volta che si specifica una direttiva, viene effettuata una determinata azione: in questo caso, viene incluso tutto il codice contenuto all'interno del file `stdio.h`, che altro non è che una delle librerie *standard* del C, delegata alle operazioni di input ed output da e verso diverse fonti (come schermo, tastiera, stampante, file, etc.).
 
-In particolare, questa è una direttiva `include`, che prevede un parametro che può essere incluso tra i simboli `<` e `>`, oppure tra doppi apici, e rappresenta il nome di un file. Quando il compilatore incontra una `include`, cerca il file specificato (in questo caso, `stdio.h`, che fa parte dello "standard" dettato dal C), e ne copia integralmente il contenuto nel file che andrà poi al front end del compilatore.
+!!!note "Nota"
+	Spesso, la direttiva `#include` prevede l'utilizzo o dei simboli di maggiore e minore (come in questo caso), oppure di due doppi apici. Nel primo caso, la ricerca del file specificato avviene all'interno dei file "standard" del C, mentre nel secondo all'interno della directory attuale.
 
-L'uso dei simboli `<` e `>` non è intercambiabile con quello dei doppi apici: infatti, nel primo caso, la ricerca avviene all'interno della directory in cui si trovano i file di intestazione della libreria standard di C (torneremo in avanti sul concetto di libreria), mentre nel secondo la ricerca avviene all'interno della directory corrente.
+### 16.2.2 - Il `metodo main`
 
-### `int main()`
+Alla riga 3 vediamo quello che è l'unico metodo presente in tutti i programmi scritti in C, ovvero il `main`. Nonostante questo sia in tutto e per tutto una funzione, con parametri accettati in ingresso ed un valore di ritorno, il `main` rappresenta il punto di accesso del programma, ovvero la parte di codice che verrà effettivamente eseguita a runtime, richiamando e "componendo", alla bisogna, le altre istruzioni e funzioni invocate dal programma.
 
-Questa istruzione è la firma di una particolare funzione, ovvero il `main()`.
+### 16.2.3 - Commenti
 
-La funzione `main` sarebbe una normalissima funzione, se non fosse per un piccolo dettaglio: rappresenta infatti il *punto di accesso* di un programma, ovvero la parte di codice che verrà effettivamente eseguita a runtime, richiamando e componendo alla bisogna le altre istruzioni e funzioni invocate dal programma.
-
-### `// Questo è un commento`
-
-Le istruzioni che hanno preposti due caratteri di slash (`//`) sono chiamate *commenti*. Queste righe permettono al programmatore di inserire dei "suggerimenti" per spiegare meglio il codice ad altri sviluppatori (o per ricordare in futuro cosa si era fatto).
-
-Questo tipo di commento è a singola linea; esistono anche i commenti multilinea:
+Alla riga 4 vi è una stringa che ha preposti due caratteri di slash (ovvero `//`); una stringa di questo tipo è chiamata *commento*, e permette di inserire dei "suggerimenti" per facilitare la comprensione del codice. Il commento alla riga 4 è un commento a singola linea; ne esistono anche di *multilinea*, che iniziano con la sequenza `/*` e terminano con la sequenza `*/`:
 
 ```c
 /*
@@ -55,12 +50,13 @@ Questo tipo di commento è a singola linea; esistono anche i commenti multilinea
 // E questo è un commento a linea singola!
 ```
 
-### `printf("Hello, World! \n")`
+### 16.2.4 - L'istruzione `printf`
 
-Questa istruzione richiama una funzione integrata nel file `stdio.h` che abbiamo invocato in precedenza nella direttiva `include`, ovvero la funzione `printf`. Questa accetta in ingresso una stringa (logicamente equivalente ad un array di char), ovvero `"Hello, World! \n"`, e la stampa a schermo (spesso in una shell).
+L'istruzione alla riga 5 richiama una funzione definita all'interno del file `stdio.h` che abbiamo invocato in precedenza nella direttiva `include`, ovvero la funzione `printf`. Questa accetta in ingresso una *stringa* (in questo caso `"Hello, World! \n"`) e la stampa sul terminale dello schermo.
 
-Interessante notare la presenza di un *escape character*, ovvero `\n`, che indica al compilatore di andare a capo dopo il termine della stringa.
+### 16.2.5 - L'istruzione di ritorno `return`
 
-### `return 0`
+Nella testa della funzione `main` vediamo come viene indicato un valore di ritorno di tipo intero. Di conseguenza, l'istruzione `return 0` indica il valore che sarà restituito al termine della funzione `main`.
 
-La funzione `main()` prevede in uscita un valore intero; di conseguenza, il `return 0` indica il termine del `main()` stesso. Per convenzione, il `return 0` indica il successo del programma, mentre altri valori di ritorno possono indicare degli errori intercorsi durante l'esecuzione.
+!!!note "Nota"
+	Per convenzione, restituire il valore `0` indica che il programma è uscito con successo, mentre altri valori di ritorno, come `-1`, indicano l'insorgenza di errori durante l'esecuzione del programma.
