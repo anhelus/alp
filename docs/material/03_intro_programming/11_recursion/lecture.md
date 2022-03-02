@@ -81,6 +81,6 @@ int factorial(int n):
 
 Analizziamo il comportamento della funzione. Se `n` è maggiore di zero, la funzione restituirà il prodotto tra `n` ed il risultato della funzione `factorial` applicata ad `n - 1`. La funzione quindi "chiama sè stessa", usando parametri differenti, fino a che non ci si ritrova nel caso base, e viene restituito `1`.
 
-Ci si potrebbe chiedere come faccia la funzione ricorsiva a restituire il valore complessivo di $n!$. La risposta è da ricercarsi nel modo in cui sono memorizzati i dati durante la ricorsione: infatti, questi vengono organizzati secondo un *call stack* (traducibile in "stack di chiamate"), che conserva al suo interno i risultati derivanti dalle precedenti chiamate a funzione. Questo concetto è riassunto nella seguente figura, che mostra il call stack per il calcolo ricorsivo del fattoriale di 5.
+Ci si potrebbe chiedere come faccia la funzione ricorsiva a restituire il valore complessivo di $n!$. La risposta è da ricercarsi nel modo in cui sono memorizzati i dati durante la ricorsione: infatti, questi vengono organizzati secondo un *call stack* (traducibile in "stack di chiamate"), che conserva al suo interno i risultati derivanti dalle precedenti chiamate a funzione. Questo concetto è riassunto nella seguente figura, che mostra il call stack per il calcolo ricorsivo del fattoriale di 4.
 
-TODO: figura call stack
+![recursion](./images/call_stack.png)
