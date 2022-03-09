@@ -1,4 +1,4 @@
-## Installazione e configurazione di C/C++
+# Installazione e configurazione di C/C++
 
 Una volta installato il software Visual Studio Community (VS), reperibile al seguente [link](https://visualstudio.microsoft.com/it/downloads/), dovremo configurarlo per poter lanciare il compilatore nei diversi linguaggi che utilizzeremo durante le esercitazioni.
 
