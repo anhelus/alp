@@ -5,9 +5,6 @@ nav:
     - Teoria:
       - Parte 1 - Concetti introduttivi:
         - 01 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
-        - 02 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-        - 03 - Rappresentazione decimale e binaria: material/01_intro/03_dec_bin/lecture.md
-        - 04 - Tipi di dato: material/01_intro/04_data_type/lecture.md
 
 theme:
   name: material
