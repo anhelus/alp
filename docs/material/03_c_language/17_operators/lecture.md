@@ -1,166 +1,198 @@
 # 17 - Operatori in C
 
-Un operatore agisce su coppia di dati (binario) o su un dato singolo (unario)
-Un’espressione è una sequenza di operatori regolata dai principi di precedenza ed associatività
-La precedenza vale solo in caso di più operatori, e va da sinistra verso destra
-È comunque assicurata nel caso si usino delle parentesi tonde
+In matematica, un operatore è comunemente inteso come una _azione_ su uno o più dati, o _operandi_. Un semplice esempio è dato dai comuni operatori di tipo aritmetico, come quello di somma, che permette (appunto) di sommare le quantità a destra e sinistra dell'operatore `+`.
 
-a op_1 b op_2 c
-a op_1 (b op_2 c)
+In questa lezione approfondiremo il concetto di operatore, e ne vedremo alcuni tra i più utilizzati nel linguaggio C.
 
-L’associatività indica l’ordine in cui sono valutati gli operandi (i dati)
-Si va quasi sempre da sinistra (l-value) verso destra (r-value)
+## 17.1 - Operatori ed espressioni
 
-# operatore di assegnazione
+Generalmente, nei linguaggi di programmazione esistono due tipi di operatori:
 
-L’operatore di assegnazione ci permette di assegnare un valore ad una variabile
-Viene usato in fase di inizializzazione
-a = 10;
-c = ‘A’;
-Non serve per valutare il valore di una variabile, ma solo per assegnarne uno nuovo!
-Ergo, un’espressione del tipo if (a = 10) non funzionerà!
+- gli operatori _binari_, che agiscono su di una coppia di dati (normalmente a sinistra ed a destra dell'operatore);
+- gli operatori _unari_, che agiscono su un singolo dato.
 
-# Operatori matematici
+In particolare, il dato a sinistra dell'operatore è chiamato _l-value_, mentre quello a destra dell'operatore è detto _r-value_.
 
-Sono gli operatori fondamentali coinvolti nelle operazioni di tipo aritmetico
-Esercizio 1: scriviamo un programma che calcoli il quadrato di un numero
-Esercizio 2: scriviamo un programma che determini se un numero è pari
-Suggerimento: usare == per valutare il valore di una variabile
-Suggerimento: usare l’header stdbool.h per i valori booleani
+Gli operatori possono essere concatenati all'interno di un'_espressione_, intesa quindi come sequenza di operatori regolata da due principi:
 
-Esercizio 1: scriviamo un programma che calcoli il quadrato di un numero
+- il principio di _precedenza_, valente soltanto in caso di più operatori, che prevede che le operazioni ad essere eseguite per prime siano quelle tra parentesi tonde, e che successivamente si segua un ordine da sinistra verso destra;
+- il principio di _associatività_ indica l'ordine con cui sono valutati gli operatori, anche in questo caso prevalentemente da sinistra verso destra.
 
-// quadrato
-#include <stdio.h>
+## 17.2 - L'operatore di assegnazione
 
-int quadrato(int n) {
-    return n * n;
-}
+L'operatore di assegnazione, contraddistinto dal simbolo uguale `=`, permette di assegnare un dato valore ad una variabile. Abbiamo già usato questo operatore più volte in fase di inizializzazione:
 
-int main() {
-    int a = 3;
-    printf("Il quadrato di %d è %d\n", a, quadrato(a));
-}
+```c
+int a = 10;
+char c = 'b';
+```
 
-// pari
-#include <stdbool.h>
-#include <stdio.h>
+Importantissimo sottolineare come l'operatore di assegnazione _non valuti il valore di una variabile_, ma si limiti ad assegnarne uno nuovo.
 
-bool numero_pari(int n) {
-    if (n % 2 == 0) {
-        return true;
-    }
-    return false;
-}
+## 17.3 - Gli operatori matematici
 
-int main() {
-    int pari = 4;
-    int dispari = 5;
-    printf("Il valore di %d è pari? %d\n", pari,        numero_pari(pari));
-    printf("Il valore di %d è pari? %d\n", dispari,        numero_pari(dispari));
-}
+Gli operatori matematici sono quelli coinvolti in tutte le operazioni di tipo aritmetico che è possibile effettuare in C, e sono riassunti nella seguente tabella.
 
-## Cenni di logica booleana
+| Operatore | Spiegazione                              |
+| --------- | ---------------------------------------- |
+| `+`       | Somma l-value ed r-value.                |
+| `-`       | Sottrae r-value ad l-value.              |
+| `/`       | Divide l-value per r-value.              |
+| `*`       | Moltiplica l-value per r-value.          |
+| `%`       | Calcola il modulo in r-value di l-value. |
+| `^`       | Eleva l-value ad r-value.                |
 
-Governa le interazioni tra i valori booleani (true e false)
-Ricordare che true == 1, e false == 0
-Sono operatori binari
-Alcune regole:
-L’AND restituisce true se i due operandi sono true
-L’OR restituisce true se almeno un operando è true
-Lo XOR (exclusive OR) restituisce true se solo un operando è true
+Particolarmente interessante è l'operatore di modulo `%`: questo, infatti, restituisce il resto della divisione tra l-value ed r-value. Ad esempio:
 
-TODO: TABELLA LOGICA BOOLEANA
+```c
+int a = 5 % 2; // risultato: 1
+int b = 12 % 4; // risultato: 0
+int c = 17 % 13; // risultato: 4
+```
 
-# operatori binari
+Di estrema importanza sono anche gli operatori di confronto, riassunti nella seguente tabella.
 
-Operano a livello di bit
-Possono:
-Effettuare uno shift (scorrimento) verso sinistra o destra
-Effettuare operazioni binarie bit a bit
-Supponiamo di avere una variabile di tipo byte
-𝐚=4=2^2=(00000010)_2
-Applicando gli operatori di scorrimento:
-a>>1⇒a=(00000001)_2=2^1=a/2^1 
-a<<1⇒a=(00000100)_2=2^3=a⋅2^1
+| Operatore | Spiegazione                                            |
+| --------- | ------------------------------------------------------ |
+| `==`      | Verifica che l-value sia uguale ad r-value.            |
+| `>`       | Verifica che l-value sia maggiore di r-value.          |
+| `<`       | Verifica che l-value sia minore di r-value.            |
+| `>=`      | Verifica che l-value sia maggiore o uguale ad r-value. |
+| `<=`      | Verifica che l-value sia minore o uguale ad r-value.   |
 
+Interessante notare come questi operatori restituiscano un _valore di verità_, ovvero un _vero_ o un _falso_ a seconda del fatto che la condizione sia rispettata o meno.
 
-Supponiamo ora di avere due char
-Vediamo cosa succede applicando gli operatori binari logici
+## 17.3 - Operatori booleani
 
+Gli operatori booleani regolano le interazioni relative all'algebra di Boole, ovvero quella che gestisce variabili che possono assumere soltanto due valori: _vero_, convenzionalmente associato al valore 1, e _falso_, convenzionalmente associato al valore 0.
 
-TODO: tabella operatori binari
+Vediamo insieme quali operazioni fondamentali sono definite dalla logica booleana.
 
-| Operatore | Descrizione |
-| --------- | ----------- |
-| >>        | Right shift |
-| <<        | Left shift  |
-| &         | AND bit a bit |
-| `|` | OR bit a bit |
-| ^ | XOR bit a bit |
+### 17.3.1 - Cenni di logica booleana
 
-Ad esempio:
+#### 17.3.1.1 - Operatori binari
 
-| Operatore | a | b | risultato |
-| & | 10001011 | 01011010 | 00001010 |
-| `|` | 10001011 | 01011010 | 11011011 |
-| ^ | 10001011 | 01011010 | 11010001 |
+##### 17.3.1.1 - Operazione di `AND` logico
 
-# operatori relazionali
+L'operazione di `AND` logico prevede che il risultato sia vero se e solo se sia l-value che r-value sono veri. Di conseguenza, vale la seguente tabella:
 
-Confrontano due operandi di tipo primitivo
-Restituiscono un valore booleano (true o false)
-Esercizio 3: scriviamo un programma che confronta due intervalli di valori del tipo [𝑎,𝑏] e [𝑐,𝑑], con 𝑎,𝑏,𝑐 e 𝑑 numeri interi. Il programma deve stampare a schermo il maggiore tra gli estremi inferiori 𝑎 e 𝑐, il minore tra gli estremi superiori 𝑏 e 𝑑 e stabilire se il numero di elementi nei due intervalli è lo stesso.
+| l-value | r-value | Risultato |
+| ------- | ------- | --------- |
+| 0       | 0       | 0         |
+| 0       | 1       | 0         |
+| 1       | 0       | 0         |
+| 1       | 1       | 1         |
 
-TODO: tabella operatori relazionali
+##### 17.3.1.1.2 - Operazione di `OR` logico
 
-Esercizio 3: scriviamo un programma che confronta due intervalli di valori del tipo [𝑎,𝑏] e [𝑐,𝑑], con 𝑎,𝑏,𝑐 e 𝑑 numeri interi. Il programma deve stampare a schermo il maggiore tra gli estremi inferiori 𝑎 e 𝑐, il minore tra gli estremi superiori 𝑏 e 𝑑 e stabilire se il numero di elementi nei due intervalli è lo stesso.
+L'operazione di `OR` logico prevede che il risultato sia vero se e solo se almeno uno tra l-value ed r-value è vero. Di conseguenza, vale la seguente tabella:
 
-void compara_intervalli(int a, int b, int c, int d) {
-    int max_estremo_inferiore = a;
-    int min_estremo_superiore = b;
-    if (c > a) {
-        max_estremo_inferiore = c;
-    }
-    if (d < b) {
-        min_estremo_superiore = d;
-    }
-    printf("Il maggiore tra gli elementi e' %d\n",        max_estremo_inferiore);
-    printf("Il minore tra gli elementi e' %d\n",        min_estremo_superiore);
-    if ((b - a) != (d - c)) {
-        printf("Gli intervalli non hanno lo stesso numero
-            di elementi\n");
-    } else {
-        printf("Gli intervalli hanno lo stesso numero di
-            elementi\n");
-    }
-}
+| l-value | r-value | Risultato |
+| ------- | ------- | --------- |
+| 0       | 0       | 0         |
+| 0       | 1       | 1         |
+| 1       | 0       | 1         |
+| 1       | 1       | 1         |
 
+##### 17.3.1.1.3 - Operazione di `XOR` logico
 
-# operatori logici
+L'operazione di `XOR` (_eXclusive OR_) logico prevede che il risultato sia vero se e solo se _esattamente_ uno tra l-value ed r-value è vero. Di conseguenza, vale la seguente tabella:
 
-Agiscono su operandi booleani e restituiscono un valore logico
-L’AND e l’OR sono operatori binari, il NOT è unario
-Da non confondere con gli operatori binari
-Esercizio 4: dati gli intervalli visti nell’esercizio 3, scrivere un programma che indichi se i due intervalli hanno lo stesso numero di elementi e gli estremi degli stessi coincidono, oppure se solo una di queste condizioni è verificata. Usare solo operatori logici.
+| l-value | r-value | Risultato |
+| ------- | ------- | --------- |
+| 0       | 0       | 0         |
+| 0       | 1       | 1         |
+| 1       | 0       | 1         |
+| 1       | 1       | 0         |
 
-TODO: tabella operatori logici
+#### 17.3.1.2 - Operatori logici unari
 
-# conversione di tipo
+##### 17.3.1.2.1 - Operazione di `NOT` logico
 
-La conversione di tipo può essere implicita ed esplicita
-La conversione implicita avviene:
-con gli operatori matematici, semplificando i tipi più complessi (ad esempio, un float viene convertito in int, un int in char, e così via);
-con gli operatori di assegnazione, nei quali l’operando di sinistra assume il tipo dell’operando di destra;
-eventuali errori di saturazione (overflow) non vengono segnalati!
-La conversione esplicita avviene mediante l’operatore di casting
-Questo indica il nuovo tipo tra parentesi, davanti al nome della variabile da trasformare
+L'unico operatore logico unario è l'operatore di `NOT` logico, che prevede che venga "negato" il valore in ingresso all'operatore. Di conseguenza, vale la seguente tabella:
 
-Alcuni esempi di conversione implicita:
-	int a = 3.2 + 4.2; 		// il risultato sarà convertito da float ad int	int b = "c" 		// il risultato sarà convertito da char ad int	short c = 9999999 		// il valore di c sarà comunque 32767!
-Alcuni esempi di conversione esplicita:
-	int a = 3;	int b = 4;	float c;	c = (float) b/a;
-In generale, evitare le conversioni di tipo implicite…
-…e ricorrere a quelle esplicite solo quando necessario!
+| value | Risultato |
+| ----- | --------- |
+| 0     | 1         |
+| 1     | 0         |
 
+### 17.3.2 - Operatori logici nel linguaggio C
 
+Il linguaggio C mette a disposizione un operatore per la maggior parte delle operazioni logiche. Detti operatori sono riassunti nella seguente tabella.
+
+| Operazione | Operatore |
+| ---------- | --------- |
+| AND        | `&&`      |
+| OR         | `||`      |
+| NOT        | `!`       |
+
+Per quello che riguarda lo XOR, questo non è messo direttamente a disposizione come operatore logico dal linguaggio C. Tuttavia, è possibile ricavarlo come combinazione degli altri operatori fondamentali: farlo è lasciato al lettore.
+
+!!!tip "Suggerimento"
+    Provate a fare un AND dei risultati delle operazioni di AND ed OR.
+
+## 17.4 - Operatori logici binari
+
+Un altro tipo di operatore logico presente nel C è quello _binario_, che opera non più a livello dell'intero dato, ma a livello di rappresentazione in termini di bit. Nella tabella successiva sono mostrati i principali operatori di questo tipo:
+
+| Operatore | Descrizione   |
+| --------- | ------------- |
+| `>>`      | Right shift   |
+| `<<`      | Left shift    |
+| `&`       | AND bit a bit |
+| `|`       | OR bit a bit  |
+| `^`       | XOR bit a bit |
+
+Soffermiamoci per un attimo sugli operatori di scorrimento. Questi, in buona sostanza, equivalgono a dividere (_right shift_) o moltiplicare (_left shift_) il nostro numero in rappresentazione binaria per 2 elevato all'r-value specificato sull'operatore. Se, ad esempio, abbiamo una variabile di tipo `byte` pari a 4, e quindi rappresentata in binario ad otto bit come:
+
+```c
+int 4 = 00000010;
+```
+
+applicando gli operatori di left shift e right shift otterremo, rispettivamente:
+
+```c
+a >> 1; // 00000010 / 2 = 00000001
+a << 1; // 00000010 * 2 = 00000100
+```
+
+Per quello che riguarda invece gli operatori binari, questi funzionano esattamente come gli operatori logici classici, ma operano bit a bit. Ad esempio:
+
+| Operatore | `a`      | `b`      | `risultato` |
+| --------- | -------- | -------- | ----------- |
+| `&`       | 10001011 | 01011010 | 00001010    |
+| `|`       | 10001011 | 01011010 | 11011011    |
+| `^`       | 10001011 | 01011010 | 11010001    |
+
+## 17.5 - Conversione di tipo
+
+Chiudiamo il discorso sugli operatori parlando dell'operazione di _conversione di tipo_, conosciuta anche come _casting_.
+
+Come suggerisce il nome stesso, questa operazione permette di convertire un dato da un tipo (ad esempio, intero) ad un altro (ad esempio, float). Ovviamente, questa operazione deve tenere conto non solo delle differenze di formato, ma anche in termini di memoria occupata.
+
+La conversione può essere di due tipi:
+
+- nella conversione _implicita_, gli operatori matematici trattati in precedenza effettuano una conversione "automatica", semplificando di solito i tipi più complessi;
+- nella conversione _esplicita_, è il programmatore che effettua la conversione mediante l'operazione di casting.
+
+Vediamo alcuni esempi applicativi, partendo dalla conversione implicita. Provando a sommare due `float` ed associare al risultato una variabile di tipo `int`, avviene una conversione implicita.
+
+```c
+int a = 3.2 + 4.2; // il risultato sarà "troncato" a 7
+```
+
+Un'altra situazione nella quale avviene una conversione implicita è quella in cui si prova ad assegnare ad uno `short`, il cui valore massimo gestibile è 65535, un valore superiore; in questo caso, il valore verrà automaticamente troncato al limite massimo.
+
+```c
+ushort s = 9999999; // sarà troncato a 65.535
+```
+
+Per ciò che riguarda la conversione esplicita, invece, dobbiamo usare l'operatore di casting, che consiste nella specifica del tipo destinazione tra parentesi tonde. Ad esempio, per convertire un `int` in `float`:
+
+```c
+int a = 3;
+float b = (float) a;
+```
+
+!!!warning "Nota sulle conversioni di tipo"
+    In generale, è consigliabile _evitare_, per quanto possibile, di effettuare delle conversioni di tipo esplicite. Ovviamente, anche l'uso di conversioni di tipo in forma implicita è sconsigliato, perché conduce spesso ad errori di troncamento che, nel migliore dei casi, possono portare a risultati non attesi (e, nel peggiore, compromettere il funzionamento del software).

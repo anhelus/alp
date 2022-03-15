@@ -6,28 +6,15 @@ Per comprendere il concetto, facciamo un esempio.
 
 ## 16.1 - Un esempio
 
-Supponiamo di 
-
-Supponiamo di scrivere un programma C che definisce due funzioni (oltre ovviamente al `main`). Entrambe le funzioni accetteranno come parametro in ingresso un intero che rappresenta il lato di un quadrato.
-
-
-
-
-
-Supponiamo di avere un programma C che definisca due funzioni (oltre al main).
-Entrambe le funzioni accettano come parametro in ingresso un intero che rappresenta il lato di un quadrato.
-Chiamiamo la prima funzione calcola_area_quadrato, ed implementiamola.
-Chiamiamo la seconda funzione calcola_perimetro_quadrato, ed implementiamola.
-All’interno della funzione calcola_area_quadrato, proviamo a stampare a schermo il valore dell’area e del perimetro del quadrato.
-Proviamo ad eseguire il programma.
+Supponiamo di scrivere un programma C che definisca due funzioni in aggiunta al `main`, le quali accettano come parametro in ingresso un numero intero rappresentativo del lato di un quadrato. Le due funzioni dovranno, rispettivamente, calcolare l'area ed il perimetro del quadrato; provvediamo quindi all'implementazione delle stesse. In particolare, facciamo in modo che all'interno della funzione `calcola_area_quadrato` vengano mostrati a schermo i valori dell'area e del perimetro del quadrato.
 
 ```c linenums="1"
 #include <stdio.h>
 
 int calcola_area_quadrato(int lato) {
     int area = lato * lato;
-    printf("Il valore dell'area è: %d", area);
-    printf("Il valore del perimetro è: %d", perimetro);
+    printf("Valore area: %d", area);
+    printf("Valore perimetro: %d", perimetro);
     return area;
 }
 
@@ -35,7 +22,11 @@ int calcola_perimetro_quadrato(int lato) {
     int perimetro = lato * 4;
     return perimetro;
 }
+```
 
+Proviamo adesso a richiamare entrambe le funzioni dal `main`.
+
+```c linenums="1"
 int main() {
     int lato = 5;
     int area = calcola_area_quadrato(lato);
@@ -44,48 +35,64 @@ int main() {
 }
 ```
 
-La variabile perimetro non è visibile alla funzione calcola_area_quadrato.
+Provando ad eseguire questo programma con Visual Studio Community, otterremo in uscita due errori del tipo:
 
-Proviamo invece a stampare a schermo questi valori dal main.
+```sh
+E0020: identificatore "perimetro" non definito
+C2065: 'perimetro': identificatore non dichiarato
+```
+
+I due errori precedenti ci suggeriscono che la variabile `perimetro` non sia "visibile", e di conseguenza *accessibile*, dall'interno dell'ambito definito dalla funzione `calcola_area_quadrato`. Per risolvere questo errore, possiamo provare a stampare i valori a schermo direttamente dal `main`.
+
+Modifichiamo la funzione `calcola_area_quadrato` come segue:
 
 ```c linenums="1"
-#include <stdio.h>
-
 int calcola_area_quadrato(int lato) {
     int area = lato * lato;
     return area;
 }
+```
 
-int calcola_perimetro_quadrato(int lato) {
-    int perimetro = lato * 4;
-    return perimetro;
-}
+Modifichiamo adesso il `main`:
 
+```c linenums="1"
 int main() {
     int lato = 5;
     int area = calcola_area_quadrato(lato);
     int perimetro = calcola_perimetro_quadrato(lato);
-    printf("Il valore dell'area è: %d", area);
-    printf("Il valore del perimetro è: %d", perimetro);
+    printf("Valore area: %d\n", area);
+    printf("Valore perimetro: %d\n", perimetro);
     return 0;
 }
 ```
 
-TODO: migliorare la descrizione
+Questa volta, vedremo che l'output a schermo è correttamente dato da:
 
-Una variabile ha ambito locale quando è accessibile soltanto all’interno di una particolare porzione di codice.
-Una variabile ha ambito globale quando è accessibile da tutto il programma.
-In caso di concorrenza, viene data precedenza alla variabile locale: questo è spesso fonte di errori!
+```sh
+Valore area: 25
+Valore perimetro: 20
+```
 
+Abbiamo quindi visto come il concetto di ambito di una variabile possa essere foriero di errori se non compreso alla perfezione. Inoltre, è preferibile prestare particolare attenzione ai *nomi* assegnati alle variabili, che idealmente non dovrebbero "sovrapporsi" onde evitare confusione (torneremo su quest'ultimo aspetto in seguito quando parleremo di passaggio *per valore* e *per reference*). Inoltre, è opportuno tenere sempre a mente che, in caso di ambiguità, verrà *sempre* data precedenza alla variabile locale.
 
-## 16.2 - Visibilità di una variabile
+!!!tip "Ambito delle variabili nel `main`"
+    Contrariamente a quanto si potrebbe pensare, il `main` *non definisce un ambito globale per le variabili*. Per verificarlo, proviamo a modificare la funzione calcola_area_quadrato come segue:
+    > ```c
+      int calcola_area_quadrato(int l) {
+          printf("Lato: %d\n", lato);
+          int area = l * l;
+          return area;
+      }
+      ```
+    Noteremo anche in questo caso la coppia di errori `E0020` e `C2065`, che ci indicheranno la mancanza di visibilità dell'identificativo `lato`.
 
-Supponiamo di avere un programma C che definisca una funzione incrementa.
-La funzione incrementa ha al suo interno una variabile locale di tipo intero chiamata contatore che viene incrementata di uno ogni volta che la funzione viene chiamata.
-Proviamo ad implementare la funzione, ed a chiamarla due volte nel main, stampando a schermo il risultato.
+## 16.2 - Un altro esempio
 
+Approfondiamo ulteriormente il concetto di visibilità con un altro esempio.
 
+Supponiamo, in questo caso, di definire all'interno di un programma C una funzione `incrementa`. Questa funzione, come suggerisce il nome stesso, ha al suo interno una variabile (locale) di tipo intero chiamata `contatore`, la quale aumenta di uno ogni volta che `incrementa` viene chiamata.
 
+```c linenums="1"
 #include<stdio.h> 
 
 int incrementa() {
@@ -93,15 +100,41 @@ int incrementa() {
     contatore++;
     return contatore;
 }
+```
 
+Proviamo a chiamare due volte questa funzione dal `main`. Cosa ci aspettiamo?
+
+```c linenums="1"
 int main() {
-    printf("Il valore del contatore è %d \n",  incrementa());
-    printf("Il valore del contatore è %d \n", incrementa());
+    printf("Valore contatore: %d \n",  incrementa());
+    printf("Valore contatore: %d \n", incrementa());
     return 0;
 }
+```
 
+Ovviamente, vedremo a schermo due volte il valore `1`: ciò è legato al fatto che la variabile `contatore` ha visibilità *limitata* all'ambito della funzione `incrementa`, e quindi viene "eliminata" (o, per meglio dire, *distrutta*) una volta usciti dall'ambito della funzione stessa.
 
-A schermo verrà stampato due volte il valore 1.
-Questo è legato al fatto che la variabile locale contatore è dinamica.
-Una variabile è dinamica quando cessa di esistere una volta usciti dall’ambito in cui è dichiarata.
-Ciò non vale per le variabili statiche, contraddistinte dalla parola chiave static.
+In tal senso, possiamo definire una variabile a visibilità più "ampia", andando a modificare il codice come segue:
+
+```c linenums="1"
+#include <stdio.h>
+
+int contatore = 0;
+
+void incrementa() {
+	contatore++;
+}
+
+int main() {
+    incrementa();
+    printf("Valore contatore: %d \n", contatore);
+    incrementa();
+    printf("Valore contatore: %d \n", contatore);
+    return 0;
+}
+```
+
+In questo caso, abbiamo definito una variabile *globale* chiamata `contatore`, di valore iniziale pari a `0`, che viene incrementata ad ogni chiamata della funzione `incrementa()`. Ovviamente, l'output sarà quello atteso, e vedremo che al termine dell'esecuzione del programma il valore di `contatore` sarà pari a `2`.
+
+!!!note "Il valore di ritorno `void`"
+    Notiamo che la funzione `incrementa` non restituisce alcun valore, in quanto opera su una variabile di tipo globale. In questo caso, indichiamo come tipo di ritorno `void` (letteralmente *vuoto* in inglese).
