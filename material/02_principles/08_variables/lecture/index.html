@@ -1,0 +1,470 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>8 - Le variabili - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#8-le-variabili" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              8 - Le variabili
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Materiale didattico
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Materiale didattico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Materiale didattico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Parte 1 - Concetti introduttivi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 1 - Concetti introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 1 - Concetti introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_introduction/lecture/" class="md-nav__link">
+        01 - Introduzione all'informatica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#81-dichiarare-ed-inizializzare-una-variabile" class="md-nav__link">
+    8.1 - Dichiarare ed inizializzare una variabile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#82-identificatore-della-variabile" class="md-nav__link">
+    8.2 - Identificatore della variabile
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#83-tipo-della-variabile" class="md-nav__link">
+    8.3 - Tipo della variabile
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="8-le-variabili">8 - Le variabili<a class="headerlink" href="#8-le-variabili" title="Permanent link">&para;</a></h1>
+<p>Comprendere il concetto di <em>variabile</em> è fondamentale (o, per meglio dire, <em>propedeutico</em>) all'acquisizione dei fondamentali della programmazione.</p>
+<p>Per capire di cosa si tratta, possiamo analizzare il significato della parola nella lingua italiana: intuitivamente, una variabile rappresenta una <em>quantità</em> (o, in maniera molto più "lasca", un dato) a cui è "concesso" di variare durante l'esecuzione del programma. Risulta importantissimo sottolineare come una variabile non sia quindi necessariamente un dato di ingresso o un risultato atteso: si tratta piuttosto di una rappresentazione (parziale) dello stato interno del programma ad un dato istante.</p>
+<p>Una variabile può essere quindi qualsiasi dato contenuto nel nostro programma: ci sono variabili che contano il numero di operazioni eseguite, ad esempio, oppure ancora variabili di supporto, che ci permettono di memorizzare stati intermedi durante l'esecuzione di iterazioni complesse.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Non tutti i dati contenuti in un programma sono delle variabili: esistono anche delle <em>costanti</em>, che si differenziano dalle variabili per la caratteristica di <em>non</em> poter variare durante l'esecuzione del programma. Di solito, le costanti vengono utilizzate per modellare valori ben definiti, come ad esempio il <span class="arithmatex">\(\pi\)</span>.</p>
+</div>
+<h2 id="81-dichiarare-ed-inizializzare-una-variabile">8.1 - Dichiarare ed inizializzare una variabile<a class="headerlink" href="#81-dichiarare-ed-inizializzare-una-variabile" title="Permanent link">&para;</a></h2>
+<p>Per poter utilizzare una variabile all'interno del nostro programma dovremo seguire due step fondamentali, <em>indipendentemente dal linguaggio di programmazione scelto</em>. In particolare:</p>
+<ul>
+<li>nel primo step, chiamato <em>dichiarazione</em> della variabile, dovremo "informare" il programma dell'esistenza della stessa, associandovi un <em>identificatore</em> (ovvero, un nome) ed il <em>tipo</em> di dato rappresentato dalla stessa;</li>
+<li>nel secondo step, chiamato <em>inizializzazione</em>, dovremo assegnare un valore iniziale alla nostra variabile, in accordo ovviamente al tipo di dato utilizzato.</li>
+</ul>
+<p>Ad esempio, per dichiarare una variabile di tipo <code>type</code> chiamata <code>identifier</code>, dovremo usare una sintassi di questo tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">type</span><span class="w"> </span><span class="n">identifier</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Successivamente, potremo inizializzare la variabile <code>identifier</code> con il valore <code>value</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Le due operazioni non sono necessariamente separate, e possono essere combinate in un'unica istruzione.</p>
+<div class="highlight"><pre><span></span><code><span class="n">type</span><span class="w"> </span><span class="n">identifier</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">value</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Vedremo un gran numero di esempi pratici di dichiarazione ed inizializzazione.</p>
+</div>
+<h2 id="82-identificatore-della-variabile">8.2 - Identificatore della variabile<a class="headerlink" href="#82-identificatore-della-variabile" title="Permanent link">&para;</a></h2>
+<p>In genere, la scelta dell'identificatore da associare ad una variabile lascia vasta libertà di scelta al programmatore. Tuttavia, occorre tenere a mente che, indipendentemente dal linguaggio, non sarà possibile usare come identificatore una keyword (ad esempio, non è possibile chiamare una variabile <code>if</code> o <code>long</code>); inoltre, è fortemente consigliato attenersi allo <em>styling code</em> del linguaggio.</p>
+<p>Facciamo un paio di esempi. Il linguaggio Java, che non tratteremo, adotta per convenzione uno styling code chiamato <em>camel case</em>, che prevede che parole consecutive siano unite tra di loro, con l'iniziale di ogni parola successiva alla prima in maiuscolo. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span> <span class="n">integerVariable</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+</code></pre></div>
+<p>Python, invece, utilizza per convenzione lo stile <em>snake case</em>, che prevede che parole consecutive siano "unite" mediante un simbolo di underscore, lasciando tutte le lettere minuscole:</p>
+<div class="highlight"><pre><span></span><code><span class="n">integer_variable</span> <span class="o">=</span> <span class="mi">1</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Sulla scelta del nome</p>
+<p>La scelta del nome da assegnare ad una variabile <em>non</em> è casuale. Il suggerimento è quello di assegnare nomi <em>esplicativi</em>, oltre che <em>univoci</em>: ad esempio, un contatore chiamato <code>cnt</code> sarà sicuramente più riconoscibile di un contatore chiamato <code>pippo_joy</code>.</p>
+</div>
+<h2 id="83-tipo-della-variabile">8.3 - Tipo della variabile<a class="headerlink" href="#83-tipo-della-variabile" title="Permanent link">&para;</a></h2>
+<p>Il tipo della variabile definisce il tipo di dato associato alla stessa; come abbiamo visto nella <a href="../../../01_intro/04_data_type/lecture/">lezione 4</a>, quindi, ciò influenzerà il range di valori che questa può rappresentare. Ponderare adeguatamente il tipo di dato da usare per una variabile è quindi <em>estremamente importante</em>, principalmente per due ragioni:</p>
+<ol>
+<li><em>flusso logico</em>;</li>
+<li><em>complessità computazionale spaziale</em>.</li>
+</ol>
+<p>Partiamo dal flusso logico. Immaginiamo di dover sommare tra loro due numeri reali<code>x</code> ed <code>y</code>, e di voler associare il valore risultante da questa operazione alla variabile <code>z</code>. Al momento della scrittura del codice, decidiamo di assegnare (correttamente) il tipo <code>float</code> ad <code>x</code> ed <code>y</code> ma, per una disattenzione, assegnamo il tipo <code>int</code> alla variabile <code>z</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.1</span><span class="p">;</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.2</span><span class="p">;</span><span class="w"> </span>
+<span class="kt">int</span><span class="w"> </span><span class="n">z</span><span class="p">;</span><span class="w"></span>
+<span class="n">z</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">y</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>Cosa accadrà? Consideriamo che il valore che ci attendiamo che <code>z</code> assuma è pari <code>2.3</code>: tuttavia, avremo come output <code>2</code>, principalmente a causa del tipo di <code>z</code>. Ciò comporterà quindi un <em>errore di troncamento</em> pari a <code>0.3</code>.</p>
+<p>Per quello che riguarda invece la complessità computazionale spaziale, ricordiamo, sempre dalla lezione 4, che ogni tipo di dato richiede una quantità di memoria differente, ma al tempo stesso permette di memorizzare un range di valori più o meno ampio.</p>
+<p>Questa caratteristica può e deve essere usata a nostro vantaggio: infatti, qualora fossimo sicuri che le nostre variabili intere assumono <em>sempre</em> valori compresi tra 0 e 100, potremmo utilizzare dati di tipo <code>byte</code>. Tuttavia, se per qualche motivo una variabile si trovasse ad assumere un valore <em>superiore</em> a 256, avremmo un <em>errore di buffer overflow</em>, che porterebbe la variabile a "ritornare" a zero, con conseguenze facilmente intuibili.</p>
+<div class="admonition note">
+<p class="admonition-title">Curiosità</p>
+<p>Errori di questo tipo possono portare ad esiti catastrofici. Ad esempio, nel 1995, il razzo spaziale <a href="https://www.laserfiche.com/ecmblog/whats-worst-software-bug-history/">Ariane 5 esplose 39 secondi dopo il lancio</a> perché nel software di controllo dell'altitudine era stato usato un intero a 16 bit piuttosto che a 64 bit.</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,495 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>11 - Ricorsione - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#11-ricorsione" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              11 - Ricorsione
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Materiale didattico
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Materiale didattico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Materiale didattico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Parte 1 - Concetti introduttivi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 1 - Concetti introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 1 - Concetti introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_introduction/lecture/" class="md-nav__link">
+        01 - Introduzione all'informatica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#111-calcolo-del-fattoriale" class="md-nav__link">
+    11.1 - Calcolo del fattoriale
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1 - Calcolo del fattoriale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1111-calcolo-iterativo-del-fattoriale" class="md-nav__link">
+    11.1.1 - Calcolo iterativo del fattoriale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1112-calcolo-ricorsivo-del-fattoriale" class="md-nav__link">
+    11.1.2 - Calcolo ricorsivo del fattoriale
+  </a>
+  
+    <nav class="md-nav" aria-label="11.1.2 - Calcolo ricorsivo del fattoriale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11121-caso-base-e-ricorsione" class="md-nav__link">
+    11.1.2.1 - Caso base e ricorsione
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#11122-implementazione-della-ricorsione" class="md-nav__link">
+    11.1.2.2 - Implementazione della ricorsione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="11-ricorsione">11 - Ricorsione<a class="headerlink" href="#11-ricorsione" title="Permanent link">&para;</a></h1>
+<p>Quella della <em>ricorsione</em> è una tecnica di programmazione che permette di "spezzare" un problema in diverse piccole parti, da trattare una alla volta fino alla risoluzione completa dello stesso. E' quindi in qualche modo assimilabile al paradigma "divide-et-impera", tanto caro agli strateghi dell'antica Roma.</p>
+<p>Nella pratica, si tratta di riapplicare una serie di istruzioni (e, quindi, una funzione) ad istanze sempre più piccole del problema originario, fino a che non è possibile giungere ad una risoluzione diretta; tuttavia, per comprenderne appieno il funzionamento, è opportuno procedere con un esempio pratico.</p>
+<h2 id="111-calcolo-del-fattoriale">11.1 - Calcolo del fattoriale<a class="headerlink" href="#111-calcolo-del-fattoriale" title="Permanent link">&para;</a></h2>
+<p>Il <em>fattoriale</em> di un numero <span class="arithmatex">\(n\)</span> è indicato con <span class="arithmatex">\(n!\)</span> ed è dato dal prodotto di tutti i numeri che vanno da <span class="arithmatex">\(1\)</span> ad <span class="arithmatex">\(n\)</span>. Formalmente:</p>
+<div class="arithmatex">\[
+n! = 1 \cdot 2 \cdot \ldots \cdot (n-1) \cdot (n)
+\]</div>
+<p>Ad esempio, <span class="arithmatex">\(3! = 6\)</span>, mentre <span class="arithmatex">\(4! = 24\)</span>, <span class="arithmatex">\(5! = 120\)</span>, e via dicendo. Il fattoriale è definito per ogni numero intero strettamente positivo, oltre che per lo <span class="arithmatex">\(0\)</span>, per il quale vale <span class="arithmatex">\(0!=1\)</span>.</p>
+<p>Proviamo per prima cosa a calcolare il fattorale usando un ciclo.</p>
+<h3 id="1111-calcolo-iterativo-del-fattoriale">11.1.1 - Calcolo iterativo del fattoriale<a class="headerlink" href="#1111-calcolo-iterativo-del-fattoriale" title="Permanent link">&para;</a></h3>
+<p>Calcolare il fattoriale mediante un ciclo è molto semplice. Infatti, basta usare la formulazione stessa di fattoriale:</p>
+<div class="highlight"><pre><span></span><code>fatt = 1;
+for i che varia da 1 ad n:
+    fatt = fatt * i;
+endfor
+return fatt;
+</code></pre></div>
+<h3 id="1112-calcolo-ricorsivo-del-fattoriale">11.1.2 - Calcolo ricorsivo del fattoriale<a class="headerlink" href="#1112-calcolo-ricorsivo-del-fattoriale" title="Permanent link">&para;</a></h3>
+<p>"Complichiamoci" la vita, e vediamo come è possibile calcolare il fattoriale in maniera ricorsiva. Riprendiamo la definizione di fattoriale, applicando la proprietà commutativa:</p>
+<div class="arithmatex">\[
+n! = n \cdot(n-1) \ldots 2 \cdot 1
+\]</div>
+<p>Notiamo che <span class="arithmatex">\((n - 1)! = (n - 1) \cdot \ldots \cdot 2 \cdot 1\)</span>, per cui possiamo scrivere che:</p>
+<div class="arithmatex">\[
+n! = n \cdot (n - 1)!
+\]</div>
+<p>Abbiamo quindi scomposto il problema del calcolo del fattoriale di <span class="arithmatex">\(n\)</span> nel problema della moltiplicazione di <span class="arithmatex">\(n\)</span> per il fattoriale di <span class="arithmatex">\((n-1)\)</span>; di conseguenza, <span class="arithmatex">\((n-1)!\)</span> è un <em>sottoproblema</em> di <span class="arithmatex">\(n!\)</span>. Se provassimo ad estendere il concetto, avremmo che:</p>
+<div class="arithmatex">\[
+n! = n \cdot (n-1)! = n \cdot (n-1) \cdot (n-2)! = \ldots = n \cdot (n-1) \cdot \ldots \cdot 1 \cdot 0!
+\]</div>
+<p>da cui deriva che:</p>
+<div class="arithmatex">\[
+0! * 1 = 1 = 1! \Rightarrow \\
+\Rightarrow 1! * 2 = 2 = 2! \Rightarrow \\
+\Rightarrow \ldots \Rightarrow \\
+\Rightarrow (n-1)! * n = n! \Rightarrow \\
+\]</div>
+<h4 id="11121-caso-base-e-ricorsione">11.1.2.1 - Caso base e ricorsione<a class="headerlink" href="#11121-caso-base-e-ricorsione" title="Permanent link">&para;</a></h4>
+<p>Risulta quindi che:</p>
+<ul>
+<li>nel caso <span class="arithmatex">\(n=0\)</span>, allora <span class="arithmatex">\(n! = 1\)</span>;</li>
+<li>nel caso <span class="arithmatex">\(n &gt; 0\)</span>, allora dobbiamo moltiplicare <span class="arithmatex">\(n\)</span> per il valore restituito dalla funzione <span class="arithmatex">\((n-1)!\)</span>.</li>
+</ul>
+<p>Il caso <span class="arithmatex">\(n =0\)</span> assume il nome di <em>caso base</em>, ed è la situazione che cerchiamo per "terminare" la ricorsione; alternativamente, dovremo procedere a richiamare ricorsivamente la funzione desiderata.</p>
+<h4 id="11122-implementazione-della-ricorsione">11.1.2.2 - Implementazione della ricorsione<a class="headerlink" href="#11122-implementazione-della-ricorsione" title="Permanent link">&para;</a></h4>
+<p>Proviamo ad implementare la funzione ricorsiva in pseudocodice. Scriviamo:</p>
+<div class="highlight"><pre><span></span><code>int factorial(int n):
+    if n = 0:
+        return 1;
+    else:
+        return n * factorial(n - 1);
+    endif
+</code></pre></div>
+<p>Analizziamo il comportamento della funzione. Se <code>n</code> è maggiore di zero, la funzione restituirà il prodotto tra <code>n</code> ed il risultato della funzione <code>factorial</code> applicata ad <code>n - 1</code>. La funzione quindi "chiama sè stessa", usando parametri differenti, fino a che non ci si ritrova nel caso base, e viene restituito <code>1</code>.</p>
+<p>Ci si potrebbe chiedere come faccia la funzione ricorsiva a restituire il valore complessivo di <span class="arithmatex">\(n!\)</span>. La risposta è da ricercarsi nel modo in cui sono memorizzati i dati durante la ricorsione: infatti, questi vengono organizzati secondo un <em>call stack</em> (traducibile in "stack di chiamate"), che conserva al suo interno i risultati derivanti dalle precedenti chiamate a funzione. Questo concetto è riassunto nella seguente figura, che mostra il call stack per il calcolo ricorsivo del fattoriale di 4.</p>
+<p><img alt="recursion" src="../images/call_stack.png" /></p>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

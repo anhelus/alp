@@ -1,0 +1,536 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>18 - Array in C - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#18-array-in-c" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              18 - Array in C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Materiale didattico
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Materiale didattico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Materiale didattico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Parte 1 - Concetti introduttivi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 1 - Concetti introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 1 - Concetti introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_introduction/lecture/" class="md-nav__link">
+        01 - Introduzione all'informatica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#181-concetti-fondamentali-sugli-array-in-c" class="md-nav__link">
+    18.1 - Concetti fondamentali sugli array in C
+  </a>
+  
+    <nav class="md-nav" aria-label="18.1 - Concetti fondamentali sugli array in C">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#182-operatori-notevoli-sugli-array" class="md-nav__link">
+    18.2 - Operatori notevoli sugli array
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1821-loperatore" class="md-nav__link">
+    18.2.1 - L'operatore []
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1822-loperatore-sizeof" class="md-nav__link">
+    18.2.2 - L'operatore sizeof
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#183-array-multidimensionali" class="md-nav__link">
+    18.3 - Array multidimensionali
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#184-array-e-stringhe" class="md-nav__link">
+    18.4 - Array e stringhe
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#185-esercizi" class="md-nav__link">
+    18.5 - Esercizi
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="18-array-in-c">18 - Array in C<a class="headerlink" href="#18-array-in-c" title="Permanent link">&para;</a></h1>
+<p>Nella <a href="../../../02_principles/10_data_structures/lecture/">lezione 10</a> abbiamo introdotto il concetto di array in questo modo:</p>
+<div class="admonition quote">
+<p class="admonition-title">Definizione di array</p>
+<p>Un array contiene una sequenza di elementi, tipicamente dello stesso tipo, ed organizzati seguendo un ordine specifico, "esplorabile" mediante il concetto di <em>indice</em>.</p>
+</div>
+<p>La maggior parte dei linguaggi di programmazione offre un'implementazione nativa di questa struttura dati; ovviamente, il C non fa eccezione.</p>
+<h2 id="181-concetti-fondamentali-sugli-array-in-c">18.1 - Concetti fondamentali sugli array in C<a class="headerlink" href="#181-concetti-fondamentali-sugli-array-in-c" title="Permanent link">&para;</a></h2>
+<p>Un array ad <span class="arithmatex">\(n\)</span> elementi è caratterizzato in C da degli indici che vanno da <span class="arithmatex">\(0\)</span> ad <span class="arithmatex">\(n-1\)</span>. In altre parole, per accedere al primo elemento dell'array dovremo richiamare l'indice <span class="arithmatex">\(0\)</span>, per accedere al secondo dovremo richiamare l'indice <span class="arithmatex">\(1\)</span>, e così via fino all'indice <span class="arithmatex">\(n-1\)</span>, da usare per accedere all'<span class="arithmatex">\(n\)</span>-mo elemento. Importante sottolineare anche che il valore di <span class="arithmatex">\(n\)</span>, ovvero la <em>dimensione</em> dell'array, è predefinito ed invariabile: provare a modificare il numero di elementi di un array, infatti, equivale a crearne uno nuovo.</p>
+<p>Vediamo però adesso come sia possibile creare un nuovo array, o anche accedere ai singoli elementi dello stesso.</p>
+<h3 id="182-operatori-notevoli-sugli-array">18.2 - Operatori notevoli sugli array<a class="headerlink" href="#182-operatori-notevoli-sugli-array" title="Permanent link">&para;</a></h3>
+<h3 id="1821-loperatore">18.2.1 - L'operatore <code>[]</code><a class="headerlink" href="#1821-loperatore" title="Permanent link">&para;</a></h3>
+<p>L'operatore <code>[]</code> (ovvero, la coppia di parentesi quadre) viene usato per la definizione ed inizializzazione di un nuovo array. Supponiamo, ad esempio, di voler dichiarare un nuovo array contenente 5 numeri interi; per farlo, potremo usare questa notazione:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">mio_array</span><span class="p">[</span><span class="mi">5</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<p>In sostanza, la dichiarazione assume quindi una forma del tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">array_type</span><span class="w"> </span><span class="n">array_id</span><span class="p">[</span><span class="n">size</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<p>con <code>array_type</code> tipo degli elementi dell'array, <code>array_id</code> identificatore dell'array, e <code>size</code> numero di elementi dello stesso.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>In buona sostanza, la dichiarazione di un array è praticamente analoga a quella di una variabile.</p>
+</div>
+<p>Analogamente, anche l'inizializzazione di un array può avvenire contestualmente alla dichiarazione:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">mio_array</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>Notiamo anche come i valori associati ai membri dell'array siano indicati tra parentesi graffe. In questo caso, possiamo anche omettere la dimensione dell'array, che sarà automaticamente inferita dall'r-value:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">mio_array</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Un array <em>non</em> è un l-value, quindi un'espressione del tipo <code>mio_array = {1, 2, 3, 4, 5};</code> non è da ritenersi valida.</p>
+</div>
+<p>L'operatore <code>[]</code> è usato anche per scrivere o leggere i singoli elementi dell'array. Infatti, l'istruzione:</p>
+<div class="highlight"><pre><span></span><code><span class="n">mio_array</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>ci permette di sovrascrivere l'elemento in posizione <code>4</code> dell'array, che adesso sarà pari a <code>[1, 2, 3, 10, 5]</code>. Utilizzando invece la notazione:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mio_array</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<p>assegneremo alla variabile di tipo intero <code>a</code> il valore <code>3</code>.</p>
+<h2 id="1822-loperatore-sizeof">18.2.2 - L'operatore <code>sizeof</code><a class="headerlink" href="#1822-loperatore-sizeof" title="Permanent link">&para;</a></h2>
+<p>Il linguaggio C mette a disposizione l'operatore <code>sizeof</code> per conoscere il numero complessivo di byte occupato in memoria dall'array.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Importantissimo sottolineare come l'operatore <code>sizeof</code> restituisca le dimensioni in memoria e non il numero di elementi dell'array!</p>
+</div>
+<h2 id="183-array-multidimensionali">18.3 - Array multidimensionali<a class="headerlink" href="#183-array-multidimensionali" title="Permanent link">&para;</a></h2>
+<p>Il linguaggio C permette di creare degli array di dimensionalità arbitraria.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Ad esempio, una matrice è un array di dimensionalità pari a due.</p>
+</div>
+<p>Per far questo, possiamo utilizzare una notazione del tipo:</p>
+<div class="highlight"><pre><span></span><code><span class="n">array_type</span><span class="w"> </span><span class="n">array_id</span><span class="p">[</span><span class="n">size_1</span><span class="p">][</span><span class="n">size_2</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<p>A parte l'uso ripetuto dell'operatore <code>[]</code>, valgono esattamente le stesse regole usate per gli array monodimensionali. Di conseguenza, per definire una matrice <span class="arithmatex">\(3 \times 3\)</span> a valori in <span class="arithmatex">\(\mathbb{R}\)</span>, potremo scrivere:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<p>mentre per inizializzarla:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">float</span><span class="w"> </span><span class="n">matrix</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">][</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="p">{</span><span class="mf">2.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">2.0</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mf">4.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">,</span><span class="w"> </span><span class="mf">3.0</span><span class="p">}</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>ed infine per accedere all'elemento in posizione <span class="arithmatex">\((1, 2)\)</span>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">el</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">matrix</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+</code></pre></div>
+<h2 id="184-array-e-stringhe">18.4 - Array e stringhe<a class="headerlink" href="#184-array-e-stringhe" title="Permanent link">&para;</a></h2>
+<p>Una <em>stringa</em> altro non è se non una <em>sequenza</em> di caratteri.</p>
+<p>Interessante notare come le stringhe <em>non</em> siano dati di tipo primitivo; tuttavia, sono estremamente utilizzate, per cui il loro supporto è presente in praticamente ogni linguaggio di programmazione. Per capirci, una delle funzioni "fondamentali" del C, come la <code>printf</code>, accetta una stringa.</p>
+<p>Data la loro natura, le stringhe sono rappresentate come degli array di char <em>null terminated</em>. Questo concetto è estremamente peculiare: infatti, affinché un array sia riconosciuto come stringa, deve essere composto soltanto da char e, inoltre, <em>il suo ultimo elemento deve essere un null value</em>. </p>
+<p>Facciamo un esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">valid_string</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">null</span><span class="p">};</span><span class="w"></span>
+<span class="kt">char</span><span class="w"> </span><span class="n">non_valid_string</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="sc">&#39;a&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;b&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;c&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;d&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;e&#39;</span><span class="p">,</span><span class="w"> </span><span class="sc">&#39;f&#39;</span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<p>In questo esempio, l'array <code>valid_string</code> sarà considerato dal compilatore come una stringa, mentre l'arryay <code>non_valid_string</code> sarà un array di tipo char a sei elementi.</p>
+<p>Ovviamente, usare una notazione come la precedente per scrivere un array risulta oltremodo scomodo, per cui si preferisce utilizzare i doppi apici:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">string_with_quotes</span><span class="p">[</span><span class="mi">10</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;abcdef&quot;</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>In questo caso, ovviamente, il terminatore <code>null</code> sarà aggiunto automaticamente.</p>
+<div class="admonition tip">
+<p class="admonition-title">Conversione da stringa a tipo numerico</p>
+<p>Non è possibile effettuare <em>nativamente</em> la conversione da stringa a numero intero o float. In tal senso, si utilizzano due funzioni, definite nell'header <code>stdlib.h</code>, ovvero <code>atoi</code> ed <code>atof</code>, che convertono una stringa rispettivamente in intero e float.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Conversione da tipo numerico a stringa</p>
+<p>Per convertire da tipo numerico a stringa, invece, possiamo usare la funzione <code>sprintf</code>, definita in <code>stdio.h</code>. Questa funzione, che restituisce una stringa in uscita, può accettare degli interi o dei float da inserire all'interno dell'output mediante delle apposite <em>format string</em>. Ad esempio, per convertire il numero 10, potremmo usare l'istruzione <code>sprintf(out_string, "%d", 10);</code>.</p>
+</div>
+<h2 id="185-esercizi">18.5 - Esercizi<a class="headerlink" href="#185-esercizi" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Esercizio 1: un tensore è un array ad 𝑛 dimensioni contenente valori arbitrari. Creare due tensori di dimensioni 3×3×3, uno contenente valori interi, e l’altro contenente valori in formato double. Usare l’operatore sizeof per confrontarne lo spazio occupato in memoria, e visualizzare a schermo tutti i valori dell’array più ‘pesante’.</li>
+<li>Esercizio 2: scriviamo un programma che, data in ingresso una stringa rappresentativa di un numero 𝑥, con 𝑥 numero reale o naturale, chiami l’adeguata funzione per convertirlo in una variabile di tipo numerico. Utilizziamo poi il risultato restituito dalla funzione sprintf per visualizzare a schermo il valore della stringa associata ad 𝑥.</li>
+</ol>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,592 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+    
+    
+      
+        <title>15 - Nozioni fondamentali su C - Corso di Informatica - Angelo Cardellicchio</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
+        
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#15-nozioni-fondamentali-su-c" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-header__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica - Angelo Cardellicchio
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              15 - Nozioni fondamentali su C
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Corso di Informatica - Angelo Cardellicchio" class="md-nav__button md-logo" aria-label="Corso di Informatica - Angelo Cardellicchio" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Corso di Informatica - Angelo Cardellicchio
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Materiale didattico
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Materiale didattico" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Materiale didattico
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1">
+          Teoria
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Teoria" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_1">
+          <span class="md-nav__icon md-icon"></span>
+          Teoria
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_1" type="checkbox" id="__nav_2_1_1" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_1">
+          Parte 1 - Concetti introduttivi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 1 - Concetti introduttivi" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 1 - Concetti introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_introduction/lecture/" class="md-nav__link">
+        01 - Introduzione all'informatica
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#151-nozioni-generali-sulla-struttura-del-programma" class="md-nav__link">
+    15.1 - Nozioni generali sulla struttura del programma
+  </a>
+  
+    <nav class="md-nav" aria-label="15.1 - Nozioni generali sulla struttura del programma">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1511-modularita" class="md-nav__link">
+    15.1.1 - Modularità
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1512-file-header-e-file-sorgente" class="md-nav__link">
+    15.1.2 - File header e file sorgente
+  </a>
+  
+    <nav class="md-nav" aria-label="15.1.2 - File header e file sorgente">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#15121-un-esempio" class="md-nav__link">
+    15.1.2.1 - Un esempio
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1513-direttive" class="md-nav__link">
+    15.1.3 - Direttive
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#152-nozioni-generali-sulla-sintassi" class="md-nav__link">
+    15.2 - Nozioni generali sulla sintassi
+  </a>
+  
+    <nav class="md-nav" aria-label="15.2 - Nozioni generali sulla sintassi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1521-parole-riservate" class="md-nav__link">
+    15.2.1 - Parole riservate
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1522-ambito-e-parentesi" class="md-nav__link">
+    15.2.2 - Ambito e parentesi
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+
+<h1 id="15-nozioni-fondamentali-su-c">15 - Nozioni fondamentali su C<a class="headerlink" href="#15-nozioni-fondamentali-su-c" title="Permanent link">&para;</a></h1>
+<p>In questo breve capitolo illustriamo alcuni concetti fondamentali da tenere a mente quando scriviamo un programma in C.</p>
+<h2 id="151-nozioni-generali-sulla-struttura-del-programma">15.1 - Nozioni generali sulla struttura del programma<a class="headerlink" href="#151-nozioni-generali-sulla-struttura-del-programma" title="Permanent link">&para;</a></h2>
+<p>La struttura di un programma C si basa su una serie di concetti ben definiti. Vediamoli rapidamente.</p>
+<h3 id="1511-modularita">15.1.1 - Modularità<a class="headerlink" href="#1511-modularita" title="Permanent link">&para;</a></h3>
+<p>I programmi scritti in C devono essere pensati come <em>modulari</em>, ovvero suddivisi in opportune sezioni (chiamate appunto <em>moduli</em>) ognuna delle quali contiene informazioni ed istruzioni necessarie ad espletare una certa funzione.</p>
+<p>Ad esempio, se scrivessimo un ipotetico programma <em>Calcolatrice</em>, potremmo decidere di tenere separati i moduli <em>Algebra</em>, che si occuperà delle operazioni algebriche, e <em>Trigonometria</em>, delegato alla gestione delle operazioni di natura trigonometrica.</p>
+<div class="admonition note">
+<p class="admonition-title">Modularità e funzionalità</p>
+<p>Idealmente, ciascun modulo deve espletare un'unica funzione ben definita, e non essere in alcun modo interdipendente dagli altri moduli. Tuttavia, molto spesso è impossibile evitare completamente dette interdipendenze, per cui ci si assicura prevalentemente che il loro impatto sia minimo.</p>
+</div>
+<h3 id="1512-file-header-e-file-sorgente">15.1.2 - File header e file sorgente<a class="headerlink" href="#1512-file-header-e-file-sorgente" title="Permanent link">&para;</a></h3>
+<p>Quando abbiamo introdotto l'<a href="../16_intro/lecture.md">Hello, World</a> abbiamo visto che nella prima riga di codice era importato il file <code>stdio.h</code>, che abbiamo contestualmente detto essere rappresentativo di una libreria delegata alla gestione delle operazioni di input ed output da e verso diversi tipi di sorgente.</p>
+<p>Un file di questo tipo (ovvero un file con estensione <code>.h</code>) è chiamato file <em>header</em>, e contiene al suo interno una serie di <em>prototipi</em>, ovvero le definizioni di un insieme di funzioni. Ad ogni file header corrisponde un file <em>sorgente</em>, la cui estensione è <code>.c</code>, nella quale le funzioni sono effettivamente implementate.</p>
+<p>Semplificando: in un file header, vi sono soltanto le "firme" delle funzioni, mentre nel file sorgente dette funzioni vengono effettivamente implementate.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Il motivo alla base della separazione tra file header e sorgenti è da ricercarsi nel concetto di modularità: infatti, in questo modo è possibile separare l'effettiva implementazione di una serie di funzioni dal codice che le userà, interfacciandovisi esclusivamente mediante l'header.</p>
+</div>
+<h4 id="15121-un-esempio">15.1.2.1 - Un esempio<a class="headerlink" href="#15121-un-esempio" title="Permanent link">&para;</a></h4>
+<p>Facciamo un breve esempio. Immaginiamo di voler scrivere il nostro programma <em>calcola</em> che implementa al suo interno due funzioni: <code>aggiungi</code>, che somma due numeri, e <code>moltiplica</code>, che moltiplica detti numeri tra loro. Per implementarlo, avremo bisogno di tre file:</p>
+<ul>
+<li>un file <code>calcolatrice.c</code>, nel quale sono contenuti i corpi delle funzioni <code>aggiungi</code> e <code>moltiplica</code>;</li>
+<li>un file <code>calcolatrice.h</code>, ovvero l'header relativo al sorgente <code>calcolatrice.c</code>;</li>
+<li>un file <code>calcola.c</code>, che rappresenta la parte di codice al cui interno è contenuto il <code>main</code>.</li>
+</ul>
+<p>Quindi, il file <code>calcolatrice.h</code> conterrà due definizioni:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">aggiungi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">moltiplica</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>Il file <code>calcolatrice.c</code> conterrà invece il corpo delle due funzioni definite nell'header:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;calcola.h&quot;</span><span class="cp"></span>
+
+<span class="n">aggiungi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="n">moltiplica</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Il file <code>calcola.c</code> conterrà invece il metodo <code>main</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;calcola.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">somma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aggiungi</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">prodotto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moltiplica</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;La somma di 2 e 3 e&#39;: %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">somma</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Il prodotto di 2 per 3 e&#39;: %d </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">prodotto</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Alcune note:</p>
+<ul>
+<li>nel file header inseriamo <em>esclusivamente</em> i <em>prototipi</em> delle funzioni, senza alcuna implementazione;</li>
+<li>nel file sorgente includiamo l'header ed implementiamo le funzioni, omettendo il tipo di ritorno (<code>int</code> in entrambi i casi);</li>
+<li>nel file principale includiamo l'header da noi definito <em>specificando i doppi apici</em>; in questo modo, possiamo richiamare le funzioni definite in <code>calcola.h</code>.</li>
+</ul>
+<h3 id="1513-direttive">15.1.3 - Direttive<a class="headerlink" href="#1513-direttive" title="Permanent link">&para;</a></h3>
+<p>Abbiamo visto in precedenza come l'uso della direttiva <code>#include</code> permetta di "incorporare" all'interno del nostro programma funzioni definite ed implementate esternamente. Tuttavia, la direttiva <code>#include</code> non è l'unica esistente: ne esistono infatti di diverse, alcune delle quali più utilizzate di altre, ma tutte molto importanti.</p>
+<p>Ad esempio, gli header includono normalmente un riferimento ad almeno altre tre direttive, definite <em>header guards</em>, ovvero:</p>
+<ul>
+<li><code>#define</code>: questa direttiva permette di definire un valore di sistema valido all'interno del programma;</li>
+<li><code>#ifndef</code>: questa direttiva controlla se il valore immediatamente alla sua destra non è già stato definito mediante la direttiva <code>#define</code>, ed è data dalla crasi della direttiva <code>#if</code> (equivalente appunto ad una verifica condizionale) e della direttiva <code>#define</code> "negata". Infatti, se analizziamo attentamente il nome della direttiva, possiamo vedere un'assonanza con i termini <em>if not defined</em>;</li>
+<li><code>#endif</code>: questa direttiva indica il termine della condizione di controllo.</li>
+</ul>
+<p>In base a queste nozioni, normalmente si modifica un header come segue:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#ifndef HEADER.H</span>
+<span class="cp">#define HEADER.H</span>
+
+<span class="c1">// Prototipi delle funzioni...</span>
+
+<span class="cp">#endif</span>
+</code></pre></div>
+<p>Possiamo trasformare quindi il nostro <code>calcolatrice.h</code> come segue:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// calcola.h</span>
+<span class="cp">#ifndef CALCOLA_H</span>
+<span class="cp">#define CALCOLA_H</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">aggiungi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">moltiplica</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+
+<span class="cp">#endif</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Perché si usano le header guards?</p>
+<p>Il motivo alla base dell'uso delle header guards riguarda la necessità di evitare l'inclusione ripetuta dello stesso codice. Infatti, potrebbe capitare che l'header <code>calcolatrice.h</code> venga incluso in diverse parti del nostro codice, come ad esempio altri header; per evitare che in fase di compilazione del codice il codice incluso nel file sorgente <code>calcolatrice.c</code> venga "copiato" più volte, si preferisce usare una header guard che fa sì che la direttiva <code>#define</code> non venga chiamata più volte con lo stesso argomento.</p>
+</div>
+<p>Per una lista completa di direttive C, potete consultare <a href="https://en.wikibooks.org/wiki/C_Programming/Preprocessor_directives_and_macros">questo indirizzo</a>.</p>
+<h2 id="152-nozioni-generali-sulla-sintassi">15.2 - Nozioni generali sulla sintassi<a class="headerlink" href="#152-nozioni-generali-sulla-sintassi" title="Permanent link">&para;</a></h2>
+<p>Vediamo adesso alcune nozioni generali da osservare sulla sintassi dei programmi in C.</p>
+<h3 id="1521-parole-riservate">15.2.1 - Parole riservate<a class="headerlink" href="#1521-parole-riservate" title="Permanent link">&para;</a></h3>
+<p>In C, come in ogni altro linguaggio di programmazione, esiste una serie di <strong>parole riservate</strong>, o <strong>keyword</strong> che, indicando delle specifiche funzionalità del linguaggio di programmazione, non possono <em>in alcun modo</em> essere utilizzate dall'utente. Normalmente, queste parole chiave si riferiscono ai tipi di una variabile, o indicano l'inizio di una struttura condizionale o di un ciclo, oppure ancora sono utilizzate per particolari funzionalità (come ad esempio le direttive viste in precedenza).</p>
+<p>Ad esempio, se provassimo a creare una variabile chiamandola <code>int</code>, avremmo un errore:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>error C2632: <span class="s1">&#39;int&#39;</span> non può essere seguito da <span class="s1">&#39;int&#39;</span>
+error C2513: <span class="s1">&#39;int&#39;</span>: nessuna variabile dichiarata prima di <span class="s1">&#39;=&#39;</span>
+</code></pre></div>
+<p>Un elenco di keyword per il linguaggio C è disponibile a <a href="https://www.ibm.com/docs/en/developer-for-zos/14.2.0?topic=programs-c-reserved-keywords">questo indirizzo</a>.</p>
+<h3 id="1522-ambito-e-parentesi">15.2.2 - Ambito e parentesi<a class="headerlink" href="#1522-ambito-e-parentesi" title="Permanent link">&para;</a></h3>
+<p>In C, come in molti altri linguaggi, l'uso delle parentesi <em>non</em> è arbitrario, e segue una specifica convenzione. In particolare:</p>
+<ul>
+<li>le parentesi tonde devono essere utilizzate per delimitare i parametri di ingresso di una funzione, o anche una particolare espressione logica od aritmetica;</li>
+<li>le parentesi quadre definiscono un ambito locale.</li>
+</ul>
+<p>In altre parole, possiamo usare le parentesi tonde quando definiamo i parametri all'interno del prototipo di una funzione:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">nome_funzione</span><span class="p">(</span><span class="n">tipo_1</span><span class="w"> </span><span class="n">nome_par_1</span><span class="p">,</span><span class="w"> </span><span class="n">tipo_2</span><span class="w"> </span><span class="n">nome_par_2</span><span class="p">);</span><span class="w"></span>
+</code></pre></div>
+<p>oppure ancora quando valutiamo una condizione o creiamo un ciclo:</p>
+<div class="highlight"><pre><span></span><code><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">variabile_a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">variabile_b</span><span class="p">)</span><span class="w"> </span><span class="c1">// ... </span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="c1">// ...</span>
+</code></pre></div>
+<p>Le parentesi graffe indicano invece l'ambito di una funzione o di una struttura condizionale od iterativa. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="n">aggiungi</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// qui inizia l&#39;ambito della funzione aggiungi...</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// e qui termina!</span>
+
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">//qui inizia l&#39;ambito della struttura condizionale...</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="c1">// e qui termina!</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">E le parentesi quadre?</p>
+<p>Le parentesi quadre hanno un utilizzo specifico per la definizione e l'accesso agli elementi di un array; ne parleremo più avanti.</p>
+</div>
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
