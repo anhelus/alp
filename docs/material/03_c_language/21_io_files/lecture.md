@@ -73,19 +73,15 @@ if (fp=fopen("prova.txt", "w+t") == NULL) {
 
 #### 20.2.1.3 - Chiusura di un file con `fclose`
 
-TODO: da qui
-
-La funzione fclose serve a chiudere un file dopo averlo utilizzato, di modo da rendere lo stream disponibile per altri utilizzo.
-
-La sintassi è la seguente:
+Una volta terminato l'utilizzo del file, è necessario chiamare la funzione `fclose` che, come dice il nome stesso, permette di chiudere lo stream relativo al file stesso. In tal senso, la sintassi che si utilizza è la seguente:
 
 ```c
-int fclose(FILE *fp)
+int fclose(FILE *fp);
 ```
 
-La funzione restituisce un valore intero. se tutto è andato a buon fine, viene restituito 0; in alternativa, viene restituito EOF, che è un valore costante.
+La funzione `fclose` restituisce un valore intero pari a `0` se il tutto è andato a buon fine.
 
-Volendo estendere il programma precedente:
+Proviamo ad estendere il programma precedente integrando la `fclose` al termine del file.
 
 ```c
 FILE *fp;
@@ -94,30 +90,28 @@ if (fp=fopen("prova.txt", "w+t") == NULL) {
 	printf("Errore nell'apertura del file desiderato.");
 }
 
-// uso
+// Uso del file...
 
 fclose(fp);
 ```
 
-!!! note "Nota"
-Tutti i file vengono chiusi in maniera automatica se il programma termina regolarmente; in questi casi, non è necessaria la funzione fclose.
+### 20.2.2 - Scrittura su file
 
-### fprintf
-
-La funzione fprintf permette di scrivere sul file in modo formattato dopo l'apertura dello stesso con fopen. Questa funzione è molto simile quindi alla printf, ed opera sullo stream del file aperto con la funzione fopen.
-
-La sintassi della funzione è la seguente:
+La funzione `fprintf` permette di scrivere su di un file a seguito dell'apertura dello stesso. Come appare evidente anche dall'assonanza, questa funzione è simile alla classica `prinft`, ed adotta una sintassi del tipo:
 
 ```c
 int fprintf(FILE *fp, char *format, [args])
 ```
 
-In pratica, è analoga alla printf, se non per due differenze:
+Le differenze principali rispetto alla `printf` sono quindi due:
 
-- la prima è che accetta come primo argomento un puntatore a file;
-- la seconda è che restituisce un valore di ritorno, ovvero un intero.
+* il primo sta nel fatto che la funzione accetta come primo argomento un puntatore a file;
+* il secondo invece sta nel fatto che la funzione restituisce un intero come valore di ritorno, rappresentativo del numero di caratteri scritto nello stream.
 
-Il valore di ritorno della fprintf è il numero di caratteri scritti nello stream in caso di successo o un EOF in caso di errore.
+!!!note "Nota"
+	Qualora la `fprintf` restituisca un valore pari alla costante `EOF`, vorrà dire che vi è stato un errore nella scrittura dei dati.
+
+Facciamo un esempio:
 
 ```c
 #include <stdio.h>
@@ -136,61 +130,61 @@ int main() {
 }
 ```
 
-### scanf
+### 20.2.3 - Lettura di un input
 
-La funzione scanf ci permette di acquisire una sequenza di caratteri (lettere o cifre) dalla tastiera e memorizzarla in una variabile opportuna.
+#### 20.2.3.1 - Lettura di uno stream da tastiera: la funzione `scanf`
 
-E' la funzione duale della printf.
+La funzione `scanf` ci permette di acquisire una sequenza di caratteri (lettere o cifre) dalla tastiera, memorizzandola in un'opportuna variabile; per i più attenti, apparirà chiaro come questa sia una sorta di funzione "duale" alla `printf`.
 
-La sua sintassi è la seguente:
-
-```c
-scanf(char * format, [args])
-```
-
-dove:
-
-- format rappresenta uno o più specificatori di formato
-- args rappresenta uno o più riferimenti alle variabili da popolare.
-
-Ad esempio:
+La sintassi della `scanf` è quella riportata di seguito:
 
 ```c
-scanf("%d%, &x)
+scanf(char* format, [args]);
 ```
 
-farà sì che il valore passato da tastiera sia salvato nella variabile di tipo intero x, mentre:
+Notiamo innazitutto che *non* vi è un valore di ritorno atteso. Infatti, le variabili da "popolare" saranno specificate mediante un puntatore tra gli `args` passati dopo la serie di specificatori di formato associati all'argomento `format`.
+
+Ad esempio, usando l'istruzione:
 
 ```c
-scanf("%d %f", &x, &y)
+int x;
+scanf("%d%, &x);
 ```
 
-leggerà un intero ed un decimale andandoli a mettere nelle variabili x ed y rispettivamente.
+faremo in modo che il valore numerico digitato da tastiera venga salvato nella variabile `x`. In alternativa, se volessimo salvare un intero ed un decimale, e salvarli nelle variabili `x` ed `y`, dovremmo scrivere:
+
+```c
+int x;
+int y;
+scanf("%d %f", &x, &y);
+```
 
 !!!note "Nota"
-	In realtà, l'uso di `scanf` è sconsigliato. Per maggiori informazioni, [leggete qui](https://stackoverflow.com/questions/3744776/simple-c-scanf-does-not-work).
+	Nel tempo, l'uso di `scanf` è diventato "sconsigliato". Per approfondire, [leggete qui](https://stackoverflow.com/questions/3744776/simple-c-scanf-does-not-work).
 
-### fscanf
+#### 20.2.3.2 - Lettura di un file: la funzione `fscanf`
 
-La funzione fscanf serve a leggere un file in modo formattato, chiaramente dopo l'apertura con fopen. E', come la fprintf, l'equivalente sugli stream della scanf. La differenza in questo caso è anche qui valutabile andando ad esaminare il prootipo della funzione:
+In maniera alquanto "prevedibile", la funzione `fscanf` permette di leggere il contenuto di un file; rappresenta quindi la funzione duale alla `fprintf`, o equivalente alla `scanf` per file. 
 
-```c
-int fscanf(FILE *fp, char *format, [args])
-```
-
-Notiamo infatti che viene restituito un intero, che rappresenta il numero di caratteri letti, e che come primo argomento viene passato il puntatore al file di riferimento.
-
-### feof
-
-La funzione feof infine serve a sapere se ci troviamo alla fine di un file. Questa è definita come segue:
+Vediamo quindi qual è il prototipo della funzione:
 
 ```c
-int feof(FILE *fp)
+int fscanf(FILE *fp, char *format, [args]);
 ```
 
-e restituisce 0 se non è stata raggiunta laf ine del file, o true altrimenti. Possiamo farlo per leggere nel file fino a che non abbiamo raggiunto la fine dello stesso.
+In questo caso, viene restituito un valore intero, che rappresenta il numero di caratteri letti dalla funzione. Inoltre, come primo argomento, avremo sempre il puntatore al file da leggere.
 
-Un esempio è il seguente:
+### 20.2.4 - Fine di un file: la funzione `feof`
+
+Chiudiamo questa carrellata con la funzione `feof`, che ci permette di capire se ci troviamo o meno alla fine del file. Il corpo di questa funzione è definito come:
+
+```c
+int feof(FILE *fp);
+```
+
+In particolare, la funzione restituirà 0 se non è ancora stata raggiunta la fine del file, o 1 altrimenti. 
+
+L'uso della `feof` può essere utile nel momento in cui, ad esempio, si legge un file carattere per carattere all'interno di un ciclo, e si vuole uscire dallo stesso quando il file termina. Ad esempio:
 
 ```c
 #include <stdio.h>
