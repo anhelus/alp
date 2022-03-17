@@ -1,26 +1,28 @@
-# Il concetto di stream
+# 20 - Tecniche di I/O in C
 
-Il linguaggio C (e, come vedremo, anche il C++) adotta il concetto di _stream_ come base per favorire i meccanismi di input ed output rispettivamente da e verso l'utente.
+## 20.1 - Il concetto di *stream*
 
-## Cosa è un file?
+Il linguaggio C adotta estensivamente il concetto di *stream* (traducibile in italiano con *flusso*) per gestire i meccanismi di interazione di un programma con le sorgenti di input (*ingresso*) o le destinazioni in output (*uscita*). Abbiamo già usato uno stream, ad esempio, con la funzione `printf`: in questo caso, infatti, abbiamo creato un flusso dati verso l'utente, mostrando a schermo un certo output definito all'interno del nostro programma.
 
-Possiamo definire un file come un insieme di dati, i quali vengono organizzati e memorizzati sulla maniera ordinata.
+Concettualmente, uno stream è assimilabile ad una sorta di "intermediario", che permette al nostro programma di gestire indirettamente la sorgente (o destinazione) dei dati. In altre parole, il programma *non* interagisce direttamente con i dispositivi di input ed output, ma bensì esclusivamente con lo stream. Ciò permette quindi di "astrarsi" dall'effettivo dispositivo di interazione, consentendo di utilizzare oggetti e metodi affini in casi eterogenei, come uso di tastiera, stampanti, o anche (e soprattutto) *file*.
 
-Il C riconosce due categorie di file: i file _di testo_ ed i file _binari_.
+## 20.2 - I file in C
 
-I file di testo sono formati da una sequenza di caratteri organizzati in _linee_, ciascuna delle quali termina con il carattere `\n`; i file binari, invece, sono costituiti da una sequenza di byte.
+Intuitivamente, sappiamo che i file altro non sono se non degli *insiemi di dati*, organizati e memorizzati in memoria in maniera ordinata. In particolare, il C riconosce due tipi di file: 
 
-### Accedere ad un file C
+* i primi sono i file di *testo*, normalmente intelliggibili dall'essere umano, e formati da sequenze di caratteri organizzate in linee, ognuna delle quali termina con l'escape character `\n`;
+* i second sono i file *binari*, costituiti da sequenze di bit di lunghezza arbitraria, e contenenti dati relativi a programmi, librerie, o altro ancora.
 
-Per accedere ad un file in C, possiamo usare due diverse modalità. La prima è l'accesso _sequenziale_: in questo modo, possiamo accedere ad un elemento _scorrendo_ tutti quelli precedenti. La seconda è invece l'accesso _casuale_, o _diretto_, che permette di raggiungere un elemento direttamente.
+Ad ogni modo, i contenuti di un file sono accessibili in C secondo due diverse modalità:
 
-Il linguaggio C crea un livello intermedio tra il programma e il file che prende il nome di **stream**, nel quale si memorizzano le informazioni da gestire. Dunque, il nostro programma non gestisce direttamente il file, quanto piuttosto lo _stream_, che ha il compito di filtrare le istruzioni.
+* accedendo ad un file in maniera *sequenziale*, possiamo accedere a ciascun elemento "scorrendo" i precedenti;
+* accedendo ad un file in maniera *casuale*, o *diretta*, siamo in grado di accedere direttamente all'elemento che ci interessa.
 
-### puntatore a FILE
+### 20.2.1 - Accesso al file
 
-per accedere ad un file occorre usare un puntatore a FILE, ovvero un indirizzo di memoria o locazione iniziale del file cui si vuole accedere. FILE è un tipo definito nell'header stdio.h.
+#### 20.2.1.1 - Puntatore a `FILE`
 
-La sintassi è:
+Per accedere ad un file, C ci mette a disposizione un apposito puntatore al tipo `FILE`, definito nell'header `stdio.h`, che restituisce la locazione iniziale del file a cui si vuole accedere. Questa sintassi va quindi *sempre* utilizzata qualora si voglia interagire con un file:
 
 ```c
 #include <stdio.h>
@@ -30,26 +32,33 @@ La sintassi è:
 FILE *fp;
 ```
 
-### fopen in C
+#### 20.2.1.2 - Apertura del file con `fopen`
 
-la funzione **fopen** in C serve ad aprire un file in diverse modalità. La sintassi è la seguente:
+Per aprire il file, è necessario utilizzare la funzione `fopen`, contenuta in `stdio.h` che permette di operare in diverse modalità usando una sintassi del tipo:
 
-FILE _fopen(char_ nomefile, char \*modo)
+```c
+FILE fopen(file_name, mode);
+```
 
-I modi sono diversi, ed in particolare:
+In particolare:
 
-| Modo | Funzione | Creazione file |
-| -- | -- | |-- |
-| r | Apre un file in lettura | No (file deve esistere) |
-| r+ | Apre un file esistente in lettura/scrittura | No (file deve esistere) |
-| w | Crea un nuovo file in scrittura; se il file esiste, viene cancellato il contenuto | Sì. Se il file esiste, viene cancellato il contenuto. |
-| w+ | Crea un nuovo file in lettura/scrittura; se il file esiste, wiene cancellato il contentuo | Sì, se il file esiste viene cancellato il contenuto |
-| a | Aggiunge alla fine del file. Se non esiste, crealo. | Sì |
-| a+ | Aggiunge e legge a partire dalla fine del file. | Sì (se non esiste viene creato) |
+* `file_name` è un array di `char` che indica il nome del file da aprire;
+* `mode` è un array di `char` che indica la modalità con cui il file sarà aperto.
 
-E' inoltre possibile specificare il tipo di file usando, rispettivament,e le lettere b o t (binario o di testo). Di default, si usa il valore t.
+Per quello che riguarda la modalità di apertura del file, si può scegliere una tra le seguenti:
 
-Un esempio di uso è il seguente:
+| Modo | Descrizione | File già esistente? |
+| ---- | ----------- | ------------------ |
+| `r` | Apertura di un file in sola lettura. | Sì, necessario. |
+| `r+` | Apertura di un file esistente in lettura/scrittura. | Sì, necessario. |
+| `w` | Creazione di un nuovo file in scrittura. Se il file esiste, ne viene cancellato il contenuto. | Non necessario. |
+| `w+` | Creazione di un nuovo file in lettura/scrittura. Se il file esiste, ne viene cancellato il contenuto. | Non necessario. |
+| `a` | Aggiunta di nuovi contenuti a partire dalla fine del file. Se il file non esiste, viene creato. | Non necessario. |
+| `a+` | Aggiunta e lettura di nuovi contenuti a partire dalla fine del file. Se il file non esiste, viene creato. | Non necessario. |
+
+In aggiunta al mode, è possibile specificare il tipo di file da aprire, specificando la lettera `b` (binario) o `t` (testo). Se quest'ultimo valore non viene specificato, viene supposto il valore `t`.
+
+Ad esempio, per aprire il file di testo `prova.txt` in modalità di lettura/scrittura, si usano le seguenti istruzioni:
 
 ```c
 FILE *fp;
@@ -59,9 +68,12 @@ if (fp=fopen("prova.txt", "w+t") == NULL) {
 }
 ```
 
-Notiamo come controlliamo che il file esiste. Una possibile causa di fallimento potrebbe essere usare la modalità r su un file che non esiste.
+!!!note "Nota"
+	Nelle istruzioni precedenti, è bene notare come venga controllata l'esistenza del file. Con la modalità `w` un controllo di questo tipo è ridondante, ma nel caso si utilizzi la modalità `r` tale controllo può rivelarsi critico.
 
-### fclose
+#### 20.2.1.3 - Chiusura di un file con `fclose`
+
+TODO: da qui
 
 La funzione fclose serve a chiudere un file dopo averlo utilizzato, di modo da rendere lo stream disponibile per altri utilizzo.
 

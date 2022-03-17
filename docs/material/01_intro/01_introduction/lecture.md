@@ -39,4 +39,4 @@ Pensandoci bene, però, i sistemi informatici pervadono ormai la nostra esistenz
 Ognuno di questi oggetti è composto da due componenti principali: da un lato, abbiamo l'_hardware_, che rappresenta le componenti elettroniche digitali che permettono all'informazione di fluire sotto forma di flusso di elettroni; dall'altro lato, abbiamo il _software_, il cui ruolo principale è offrire un'interfaccia comprensibile all'utente umano che gli permetta di gestire il flusso di informazioni che scorrono nell'hardware.
 
 !!!tip "Adagio comune"
-Un adagio comune nel mondo dell'informatica dice che l'_hardware è la parte che è possibile prendere a calci_, mentre il _software è quella contro cui si può solo imprecare_. Molto spesso, ovviamente, le nostre tribolazioni derivano dall'opera congiunta di entrambe le entità.
+    Un adagio comune nel mondo dell'informatica dice che l'_hardware è la parte che è possibile prendere a calci_, mentre il _software è quella contro cui si può solo imprecare_. Molto spesso, ovviamente, le nostre tribolazioni derivano dall'opera congiunta di entrambe le entità.
