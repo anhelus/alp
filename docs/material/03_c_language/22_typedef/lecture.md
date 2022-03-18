@@ -1,4 +1,14 @@
-Nel linguaggio C, le struct sono usate per raggrupapre diversi tipi di varaibili sotto lo stesso nome. Ad esempio, potremmo creare una struttura "persona", fatta da due stringhe ed un intero.
+# 21 - `Struct`, `typedef` ed `union`
+
+Abbiamo visto come il linguaggio C consenta l'utilizzo di una serie di tipi di dati primitivi. Tuttavia, consentirci soltanto questo sarebbe in un certo senso "limitante": ad esempio, potremmo voler creare una singola variabile che rappresenti una persona, senza dover necessariamente "far proliferare" tutta una serie di sottovariabili contenenti, ad esempio, nome, cognome ed età.
+
+Per ovviare a questa limitazione, quindi, il C ci mette a disposizione un particolare costrutto rappresentativo di una struttura dati definita dall'utente; come prevedibile, tale costrutto va sotto il nome di `struct`.
+
+## 21.1 - Le `struct`
+
+I più attenti ricorderanno come abbiamo già visto il concetto di *struct* durante il nostro excursus sulle [strutture dati](../../02_principles/10_data_structures/lecture.md); ovviamente, le `struct` C rappresentano un'implementazione di questa classe di strutture dati, e permettono quindi di "raggruppare" diverse variabili tra loro.
+
+Ad esempio, potremmo creare una `struct` che serva a caratterizzare una persona:
 
 ```c
 struct persona
@@ -9,7 +19,21 @@ struct persona
 };
 ```
 
-Con la dichiarazione della struttura abbiamno creato un nuovo tipo chiamato persona. Prima di poter usare il tipo telefono, occorre creare una variabile del tipo telefono. Ad esempio:
+In generale, quindi, una `struct` è definita nel modo che segue:
+
+```c
+struct NOME_STRUCT
+{
+	tipo_variabile_1 id_variabile_1;
+	tipo_variabile_2 id_variabile_2;
+	// ...
+	tipo_variabile_n id_variabile_n;
+}
+```
+
+Nel nostro esempio, una variabile associata alla struct `persona` avrà quindi un array di `char` relativo al nome, un array di `char` relativo al cognome, ed un `int` relativo all'età.
+
+Proviamo adesso ad utilizzare questa `struct`:
 
 ```c
 #include <stdio.h>
@@ -23,13 +47,12 @@ struct persona
 
 int main()
 {
-	struct persona pippo;
-
+	struct persona studente;
 	return 0;
 }
 ```
 
-Per accedere ai membri della struttura persona, dobbiamo inserire un punto tra il nome della struttura e quello della variabile.
+Abbiamo creato una variabile di "tipo" persona. Potremo accedere a ciascuna delle "sottovariabili", o membri, della `struct` utilizzando l'operatore *dot* (punto):
 
 ```c
 #include <stdio.h>
@@ -45,8 +68,8 @@ int main()
 {
 	struct persona studente;
 
-	studente.nome = "Piero";
-	studente.cognome = "Scamarcio";
+	studente.nome = "John";
+	studente.cognome = "Doe";
 	studente.eta = 19;
 
 	printf("Lo studente %s %s ha %d anni\n", studente.name, studente.cognome, studente.eta);
@@ -55,48 +78,11 @@ int main()
 }
 ```
 
-## typedef
+Abbiamo quindi visto come l'accesso mediante l'operatore punto valga sia in lettura, sia in scrittura.
 
-Le definizioni di tipo rendono anche possibile creare i nostri tipi di variabile. Ad esempio, possiamo creare un tipo che rappresenta un puntatore a double.
+### 22.1.1 - Puntatori a `struct`
 
-```c
-#include <stdio.h>
-
-typedef double* double_pointer;
-
-int main() {
-	double val = 0.0;
-	double_pointer pointer = &val;
-	printf("Il valore del puntatore e': %p", pointer);
-	return 0;
-}
-```
-
-Questa tecnica può anche essere estesa alle struct. Ciò significa che:
-
-```c
-#include <stdio.h>
-
-typedef struct persona
-{
-	char *nome;
-	char *cognome;
-	int eta;
-}PERSONA;
-
-int main()
-{
-	PERSONA pippo;
-
-	return 0;
-}
-```
-
-otiamo che il nome del tipo associaot alla sturttura è quello indicato in maiuscolo immediatamente dopo alla stessa.
-
-### Puntatori a strutture
-
-Possiamo usare anche dei puntatori a strutture. In questo caso, per accedere alla singola proprietà della struct, dovremo usare l'operatore _infix_ (->)
+Possiamo anche definire dei puntatori ad una struttura. In questo caso, però, per accedre alla singola proprietà della `struct`, dovremo utilizzare _infix_ (->)
 
 ```c
 #include <stdio.h>
@@ -110,13 +96,11 @@ typedef struct persona
 
 int main()
 {
-	PERSONA studente;
 	PERSONA* puntatore_studente;
 
-	studente->nome = "Piero";
-	// Prima era studente.nome!
-	studente->cognome = "Scamarcio";
-	studente->eta = 19;
+	puntatore_studente->nome = "John";
+	puntatore_studente->cognome = "Doe";
+	puntatore_studente->eta = 19;
 
 	printf("Lo studente %s %s ha %d anni\n", studente->name, studente->cognome, studente->eta);
 
@@ -124,9 +108,61 @@ int main()
 }
 ```
 
-### Union
+## 22.2 - Definizione di tipo con `typedef`
 
-Le union sono analoghe alle struct dal punto di vista della sintassi, semplicemente però implementano delle strutture dati differenti. Un esempio è il seguente.
+Abbiamo visto come le `struct` ci permettano di "associare" diverse variabili tra loro, definendo dei veri e propri "tipi" composti da diverse variabili appartenenti a tipi primitivi. Il passo successivo, quindi, è quello di "formalizzare" queste strutture; per farlo, il linguaggio C ci mette a disposizione la parola chiave `typedef` che, come suggerisce il nome stesso, consente di creare un tipo definito dall'utente.
+
+Ad esempio, potremmo creare un tipo da associare alla `struct` persona:
+
+```c
+typedef struct persona
+{
+	char *nome;
+	char *cognome;
+	int eta;
+} TIPO_PERSONA;
+```
+
+In questo caso, l'identificativo associato alla `struct` rimane `persona` (in minuscolo), mentre il tipo definito a partire dalla `struct persona` sarà `TIPO_PERSONA`.
+
+Potremo quindi creare una variabile di tipo `TIPO_PERSONA` proprio come se fosse una variabile di tipo primitivo:
+
+```c
+#include <stdio.h>
+
+typedef struct persona
+{
+	char *nome;
+	char *cognome;
+	int eta;
+}PERSONA;
+
+int main()
+{
+	PERSONA studente;
+	// altre istruzioni
+	return 0;
+}
+```
+
+Sottolineamo come la definizione di un tipo non sia vincolata ad una struct. Ad esempio, potremmo definire un tipo che rappresenta un puntatore ad intero.
+
+```c
+#include <stdio.h>
+
+typedef int* int_pointer;
+
+int main() {
+	int val = 0.0;
+	int_pointer pointer = &val;
+	printf("Il valore del puntatore e': %p", pointer);
+	return 0;
+}
+```
+
+## 22.3 - Le `union`
+
+Quando abbiamo parlato di strutture dati abbiamo visto, oltre alle *struct*, le *union*. Prevedibilmente, il C ci mette a disposizione oggetti di questo tipo, che risultano essere sintatticamente analoghi alle `struct`, ma che tuttavia implementano una struttura dati di tipo differente. Vediamo un rapido esempio.
 
 ```c
 #include<stdio.h>
@@ -134,7 +170,7 @@ Le union sono analoghe alle struct dal punto di vista della sintassi, sempliceme
 typedef union lettura_sensore {
 	double d;
 	int i;
-}LETTURA_SENSORE;
+} LETTURA_SENSORE;
 
 int main()
 {
@@ -143,3 +179,5 @@ int main()
 	lettura.i = 5;
 }
 ```
+
+TODO: puntatore, printf
