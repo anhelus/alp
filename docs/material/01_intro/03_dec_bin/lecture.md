@@ -32,8 +32,6 @@ Appare chiaro come una rappresentazione digitale, detta anche _binaria_, sia mol
 !!! quote "Bit"
     _Il bit è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori `0` (falso) o `1` (vero)._
 
-![byte](../../assets/images/04_rappresentazione/byte.png){: align=center }
-
 ### 3.3.2 - Il byte
 
 Dalla definizione di bit segue quella, altrettanto importante, di _byte_, associata ad una sequenza arbitraria di otto bit.
@@ -93,15 +91,15 @@ Facciamo un esempio usando $N = 485$.
 
 $$
 \begin{eqnarray}
-\frac{485}/{2} &\Rightarrow q = 242 & r = 1 & \Rightarrow LSB\\
-\frac{242}/{2} &\Rightarrow q = 121 & r = 0 \\
-\frac{121}/{2} &\Rightarrow q = 60 & r = 1 \\
-\frac{60}/{2} &\Rightarrow q = 30 & r = 0 \\
-\frac{30}/{2} &\Rightarrow q = 15 & r = 0 \\
-\frac{15}/{2} &\Rightarrow q = 7 & r = 1 \\
-\frac{7}/{2} &\Rightarrow q = 3 & r = 1 \\
-\frac{3}/{2} &\Rightarrow q = 1 & r = 1 \\
-\frac{1}/{2} &\Rightarrow q = 0 & r = 1 & \Rightarrow MSB
+\frac{485}{2} &\Rightarrow q = 242 & r = 1 & \Rightarrow LSB\\
+\frac{242}{2} &\Rightarrow q = 121 & r = 0 \\
+\frac{121}{2} &\Rightarrow q = 60 & r = 1 \\
+\frac{60}{2} &\Rightarrow q = 30 & r = 0 \\
+\frac{30}{2} &\Rightarrow q = 15 & r = 0 \\
+\frac{15}{2} &\Rightarrow q = 7 & r = 1 \\
+\frac{7}{2} &\Rightarrow q = 3 & r = 1 \\
+\frac{3}{2} &\Rightarrow q = 1 & r = 1 \\
+\frac{1}{2} &\Rightarrow q = 0 & r = 1 & \Rightarrow MSB
 \end{eqnarray}
 $$
 
