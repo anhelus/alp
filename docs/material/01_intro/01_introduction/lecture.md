@@ -1,5 +1,7 @@
 # 1 - Introduzione: cosa è l'Informatica?
 
+> *Le slides di questa lezione sono disponibili [qui](./slides/01%20-%20Introduzione%20all'Informatica.pdf)*.
+
 Come per molti degli argomenti cui ci si approccia nel corso della vita, trovare una definizione per il concetto di _informatica_ può aiutare a comprenderne al meglio la natura.
 
 Partiamo quindi da una (breve) analisi etimologica del termine _informatica_. Questo, infatti, è la traduzione italiana del francese _informatique_, crasi delle parole _informa(tion)_ ed _(automa)tique_. Intuitivamente, possiamo dedurre che la disciplina tratti quindi di "informazioni automatiche" o, per meglio dire, _automatizzazione delle informazioni_.
@@ -39,4 +41,4 @@ Pensandoci bene, però, i sistemi informatici pervadono ormai la nostra esistenz
 Ognuno di questi oggetti è composto da due componenti principali: da un lato, abbiamo l'_hardware_, che rappresenta le componenti elettroniche digitali che permettono all'informazione di fluire sotto forma di flusso di elettroni; dall'altro lato, abbiamo il _software_, il cui ruolo principale è offrire un'interfaccia comprensibile all'utente umano che gli permetta di gestire il flusso di informazioni che scorrono nell'hardware.
 
 !!!tip "Adagio comune"
-Un adagio comune nel mondo dell'informatica dice che l'_hardware è la parte che è possibile prendere a calci_, mentre il _software è quella contro cui si può solo imprecare_. Molto spesso, ovviamente, le nostre tribolazioni derivano dall'opera congiunta di entrambe le entità.
+    Un adagio comune nel mondo dell'informatica dice che l'_hardware è la parte che è possibile prendere a calci_, mentre il _software è quella contro cui si può solo imprecare_. Molto spesso, ovviamente, le nostre tribolazioni derivano dall'opera congiunta di entrambe le entità.

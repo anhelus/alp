@@ -1,5 +1,7 @@
 # 3 - Il mondo in forma binaria
 
+> *Le slides di questa lezione sono disponibili [qui](./slides/03%20-%20Rappresentazione%20binaria%20e%20decimale.pdf)*.
+
 ## 3.1 - Le informazioni nel mondo reale
 
 Nel mondo reale, le informazioni fluiscono dalla sorgente al destinatario sotto forma di onde _analogiche_. Per capirci, pensiamo ad una conversazione tra due persone: entrambe produrranno, mediante il loro apparato fonatorio, delle onde sonore, _continue_ sia nel tempo che nelle ampiezze, che arriveranno all'orecchio dell'altro interlocutore, il quale le passerà al cervello che, a sua volta, le interpreterà.
