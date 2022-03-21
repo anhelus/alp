@@ -56,9 +56,7 @@ La formulazione di un problema implica quindi la determinazione del _cosa_ (il q
 
 Il lettore più attento noterà che manca ancora un elemento fondamentale, ovvero il _come_. Questo è definito individuando un apposito _metodo di risoluzione_ o, più semplicemente, una _soluzione_ al problema.
 
-Dal punto di vista formale, l'individuazione del metodo di risoluzione può essere espressa come una _relazione univoca_ che associa ad ogni elemento dello spazio dei problemi (o meglio, delle _classi di problemi_, come sarà più chiaro in seguito) $\mathbb{P}$ uno o più elementi dello spazio delle soluzioni $\mathbb{S}$. Questo è rappresentato dal seguente diagramma di Eulero-Venn:
-
-![diag_rel_prob_sol](../../assets/images/rel_prob_sol.jpg)
+Dal punto di vista formale, l'individuazione del metodo di risoluzione può essere espressa come una _relazione univoca_ che associa ad ogni elemento dello spazio dei problemi (o meglio, delle _classi di problemi_, come sarà più chiaro in seguito) $\mathbb{P}$ uno o più elementi dello spazio delle soluzioni $\mathbb{S}$.
 
 Informalmente, possiamo dire che _per ogni problema_ (se risolvibile) _esiste almeno una soluzione_.
 
