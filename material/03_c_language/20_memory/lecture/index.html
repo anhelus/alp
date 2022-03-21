@@ -13,7 +13,7 @@
     
     
       
-        <title>14 - Introduzione al linguaggio C - Corso di Informatica - Angelo Cardellicchio</title>
+        <title>20 - Allocazione statica e dinamica della memoria - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#14-introduzione-al-linguaggio-c" class="md-skip">
+        <a href="#20-allocazione-statica-e-dinamica-della-memoria" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              14 - Introduzione al linguaggio C
+              20 - Allocazione statica e dinamica della memoria
             
           </span>
         </div>
@@ -356,57 +356,16 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#141-il-programma-hello-world" class="md-nav__link">
-    14.1 - Il programma Hello, world!
+  <a href="#201-allocazione-statica-della-memoria" class="md-nav__link">
+    20.1 - Allocazione statica della memoria
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#142-descrizione-del-codice" class="md-nav__link">
-    14.2 - Descrizione del codice
+  <a href="#202-allocazione-dinamica-della-memoria" class="md-nav__link">
+    20.2 - Allocazione dinamica della memoria
   </a>
-  
-    <nav class="md-nav" aria-label="14.2 - Descrizione del codice">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#1421-la-direttiva-include" class="md-nav__link">
-    14.2.1 - La direttiva #include
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1422-il-metodo-main" class="md-nav__link">
-    14.2.2 - Il metodo main
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1423-commenti" class="md-nav__link">
-    14.2.3 - Commenti
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1424-listruzione-printf" class="md-nav__link">
-    14.2.4 - L'istruzione printf
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#1425-listruzione-di-ritorno-return" class="md-nav__link">
-    14.2.5 - L'istruzione di ritorno return
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -424,48 +383,100 @@
                 
 
 
-<h1 id="14-introduzione-al-linguaggio-c">14 - Introduzione al linguaggio C<a class="headerlink" href="#14-introduzione-al-linguaggio-c" title="Permanent link">&para;</a></h1>
-<p>Il linguaggio C è un linguaggio a livello medio-alto inizialmente sviluppato da Dennis M. Ritchie ai Bell Labs. La primissima implementazione del C risale al 1972, ma fu soltanto nel 1978 che venne reso disponibile al grande pubblico il primo draft del linguaggio, in quello che oggi è conosciuto come <em>K&amp;R standard</em>. La formalizzazione vera e propria del linguaggio avvenne poi da parte dell'ANSI (<em>American National Standard Institute</em>) nel 1988.</p>
-<p>Al giorno d'oggi, il C è ancora uno tra i linguaggi di programmazione più utilizzati, ed ha applicazioni praticamente ovunque, dai sistemi operativi ai compilatori, passando per database, programmi per smartphone ed editor di testo.</p>
-<h2 id="141-il-programma-hello-world">14.1 - Il programma <em>Hello, world!</em><a class="headerlink" href="#141-il-programma-hello-world" title="Permanent link">&para;</a></h2>
-<p>Dopo questa breve (ma dovuta) introduzione "storica", partiamo con quella che è da sempre la maniera "classica" di apprendere un linguaggio di programmazione, ovvero scrivendo il nostro primo programma, chiamato per convenzione <em>Hello, world!</em> (<em>Ciao, mondo!</em>).</p>
-<p>Apriamo Visual Studio (o un editor equivalente) e scriviamo:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Questo è un commento!</span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World! </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<h1 id="20-allocazione-statica-e-dinamica-della-memoria">20 - Allocazione statica e dinamica della memoria<a class="headerlink" href="#20-allocazione-statica-e-dinamica-della-memoria" title="Permanent link">&para;</a></h1>
+<p>Abbiamo detto che la memoria di un calcolatore è divisa in piccole unità chiamate byte.</p>
+<p>La memoria è divisa in tre sezioni.</p>
+<p>Nella <em>heap</em>, vi è una parte non organizzata, e trattata come risorsa da richiedre all'occorrenza. Non è possibile richiedrela con un puntatore.</p>
+<p>nello stack, viene memorizzata le variabili temporanee create da una funzione. Nello stack, le variabili sono dichiarate, memorizzate ed inizializzate a runtime. Lo stack si chiama in questo modo perché segue, appunto, la pila (LIFO).</p>
+<p>nella code section, quando il programma è eseguito, sarà portato nella memoria principale. Questo programma sarà quindi memorizzato nella sezione <em>code</em>.A seconda del programma, vedremo se utilizzare lo stack o l'heap.</p>
+<p>Possiamo quindi allocare la memoria in due modi, statico e dinamico.</p>
+<h2 id="201-allocazione-statica-della-memoria">20.1 - Allocazione statica della memoria<a class="headerlink" href="#201-allocazione-statica-della-memoria" title="Permanent link">&para;</a></h2>
+<p>Nell'allocazione statica della memoria, quando il programma viene eseguito, la dimensione del programma viene fissata, e non può essere ulteriormente cambiato. di conseguenza, i rquisiti esatti devono essere conosciuti a priori. L'allocazione e la deallicazione della memoria saranno effettuate automaticamentedal compilatore. Quando tutto viene fatto a compile time, o prima del run time, viene chiamata <em>allocazione statica della memoria</em>.</p>
+<p>Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w"> </span><span class="c1">// prealloco 2 byte</span>
+<span class="w">    </span><span class="kt">long</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"> </span><span class="c1">// prealloco 4 byte</span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>Proviamo ad eseguire il programma usando il tasto <em>Run</em> o premendo F5, e sulla console dovrebbe apparire la scritta <code>Hello, World!</code>.</p>
-<h2 id="142-descrizione-del-codice">14.2 - Descrizione del codice<a class="headerlink" href="#142-descrizione-del-codice" title="Permanent link">&para;</a></h2>
-<p>Nonostante la loro semplicità, in queste poche righe di codice sono riacchiusi i principali concetti sintattici che saranno usati per scrivere programmi ben più complessi. Vediamoli uno per uno.</p>
-<h3 id="1421-la-direttiva-include">14.2.1 - La direttiva <code>#include</code><a class="headerlink" href="#1421-la-direttiva-include" title="Permanent link">&para;</a></h3>
-<p>L'istruzione alla riga 1 è chiamata <em>direttiva</em>, ed è una parte di codice che viene elaborata in automatico dal programma delegato alla "comprensione" del linguaggio C (ovvero, al compilatore). In altre parole, ogni volta che si specifica una direttiva, viene effettuata una determinata azione: in questo caso, viene incluso tutto il codice contenuto all'interno del file <code>stdio.h</code>, che altro non è che una delle librerie <em>standard</em> del C, delegata alle operazioni di input ed output da e verso diverse fonti (come schermo, tastiera, stampante, file, etc.).</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Spesso, la direttiva <code>#include</code> prevede l'utilizzo o dei simboli di maggiore e minore (come in questo caso), oppure di due doppi apici. Nel primo caso, la ricerca del file specificato avviene all'interno dei file "standard" del C, mentre nel secondo all'interno della directory attuale.</p>
-</div>
-<h3 id="1422-il-metodo-main">14.2.2 - Il <code>metodo main</code><a class="headerlink" href="#1422-il-metodo-main" title="Permanent link">&para;</a></h3>
-<p>Alla riga 3 vediamo quello che è l'unico metodo presente in tutti i programmi scritti in C, ovvero il <code>main</code>. Nonostante questo sia in tutto e per tutto una funzione, con parametri accettati in ingresso ed un valore di ritorno, il <code>main</code> rappresenta il punto di accesso del programma, ovvero la parte di codice che verrà effettivamente eseguita a runtime, richiamando e "componendo", alla bisogna, le altre istruzioni e funzioni invocate dal programma.</p>
-<h3 id="1423-commenti">14.2.3 - Commenti<a class="headerlink" href="#1423-commenti" title="Permanent link">&para;</a></h3>
-<p>Alla riga 4 vi è una stringa che ha preposti due caratteri di slash (ovvero <code>//</code>); una stringa di questo tipo è chiamata <em>commento</em>, e permette di inserire dei "suggerimenti" per facilitare la comprensione del codice. Il commento alla riga 4 è un commento a singola linea; ne esistono anche di <em>multilinea</em>, che iniziano con la sequenza <code>/*</code> e terminano con la sequenza <code>*/</code>:</p>
-<div class="highlight"><pre><span></span><code><span class="cm">/*</span>
-<span class="cm"> * Questo è un commento multilinea!</span>
-<span class="cm"> */</span><span class="w"></span>
-
-<span class="c1">// E questo è un commento a linea singola!</span>
+<p>Spiegazione:</p>
+<ul>
+<li>questo codice dichiara due variabili. Qyi l'assunto è che int prende due byte (16 bit) mentre long prende 4 byte di memoria. Questi valori dipendono dal compilatore.</li>
+</ul>
+<p>TODO: questi valori sono doppi!</p>
+<ul>
+<li>queste variabili saranno memorizzate nella sezione relativa allo stack. Per ogni funzione nel programma, prenderà alcune parti dello stack (chiamate stack frame) e saranno cancellate dal compilatore quando non in uso.</li>
+</ul>
+<p>svantaggi:</p>
+<ul>
+<li>semplice da usare</li>
+<li>allocazione e deallocazione fatte dal compilatore</li>
+<li>tempo di esecuzione efficiente</li>
+<li>usa lo stack</li>
+</ul>
+<p>svantaggi:</p>
+<ul>
+<li>spreco di memoria</li>
+<li>bisogna sapere i requisiti esatti in termini di memoria</li>
+<li>la memoria non può essere rinominata dopo l'inizializzazione</li>
+</ul>
+<h2 id="202-allocazione-dinamica-della-memoria">20.2 - Allocazione dinamica della memoria<a class="headerlink" href="#202-allocazione-dinamica-della-memoria" title="Permanent link">&para;</a></h2>
+<p>Nell'allocazione dinamica della memoria, l'allocazione ed iniziallizazione delle dimensioni sono fatte dal programmatore. La memoria è gestita, e viene fornita di puntatori che putano ad uno spazio di memoria appena allocata chiamato heap. La heap non è organizzata, ed è trattata come una risorsa richiesta "on-demand".</p>
+<p>feature chiave:</p>
+<ul>
+<li>memoria allocata dinamicamente a runtime</li>
+<li>si rialloca la dimensione della memoria se necessario</li>
+<li>nessuno spreco di memoria</li>
+</ul>
+<p>Esistono apposite funzioni disponibili nella libreria stdlib.h che ci aiutano ad allocare dinamicamente la memoria.</p>
+<ul>
+<li>malloc(): la funzione più semplice che alloca memoria a runtime è chiamata malloc(). Vi è la necessità di specificare il numero di byte di memora che sono richiesti per l'allocazione come argomento, e la funzione restituisce l'indirizzo del primo byte di memoria restituito sotto forma di puntatore.</li>
+</ul>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="n">num_values</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">            </span><span class="c1">// diciamo che ci sono dieci valori da allocare</span>
+<span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">malloc</span><span class="p">(</span><span class="n">num_values</span><span class="p">);</span><span class="w">  </span><span class="c1">// allochiamo dieci valori</span>
 </code></pre></div>
-<h3 id="1424-listruzione-printf">14.2.4 - L'istruzione <code>printf</code><a class="headerlink" href="#1424-listruzione-printf" title="Permanent link">&para;</a></h3>
-<p>L'istruzione alla riga 5 richiama una funzione definita all'interno del file <code>stdio.h</code> che abbiamo invocato in precedenza nella direttiva <code>include</code>, ovvero la funzione <code>printf</code>. Questa accetta in ingresso una <em>stringa</em> (in questo caso <code>"Hello, World! \n"</code>) e la stampa sul terminale dello schermo.</p>
-<h3 id="1425-listruzione-di-ritorno-return">14.2.5 - L'istruzione di ritorno <code>return</code><a class="headerlink" href="#1425-listruzione-di-ritorno-return" title="Permanent link">&para;</a></h3>
-<p>Nella testa della funzione <code>main</code> vediamo come viene indicato un valore di ritorno di tipo intero. Di conseguenza, l'istruzione <code>return 0</code> indica il valore che sarà restituito al termine della funzione <code>main</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-<p>Per convenzione, restituire il valore <code>0</code> indica che il programma è uscito con successo, mentre altri valori di ritorno, come <code>-1</code>, indicano l'insorgenza di errori durante l'esecuzione del programma.</p>
-</div>
+<p>Notiamo poi il casto (int*), che converte l'indirizzo restituito dalla funzione a puntatore ad inero.</p>
+<p>La calloc() offre alcuni vantaggi rispetto alla malloc(). Alloca la memoria come un numero di elementi di una data dimensione. nizializza la memoria che è allocata in modo che tutti i byte siano a zero. La funzione accetta due argomenti:</p>
+<ul>
+<li>il numero di oggetti per i quali è richiesto lo spazio</li>
+<li>la dimensione di ogni oggetto</li>
+</ul>
+<p>La sintassi è:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">calloc</span><span class="p">(</span><span class="n">n_items</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">))</span><span class="w"></span>
+</code></pre></div>
+<p>la funzione realloc() ci permette di riutilizzare o estendere la memoria che abbiamo allocato in precedenza usando malloc() o calloc(). In tal senso, la funzione accetta due argomenti, ovvero il tipo del puntatore precedentemente allocato, ed il numero di nuovi elementi per la loro dimensione.</p>
+<p>Notiamo che quando la memoria è allocata dinamicamente, dovrebbe essere sempre rilasciata quando non è più richiesta. La memoria allocata sull'heap sarà automaticamente liberata quando il programma termina, ma è sempre meglio rilasciare in modo esplicito la memoria una volta terminato, anche se è poco prima della fine del programma. </p>
+<p>Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// C program to illustrate the concept</span>
+<span class="c1">// of memory allocation</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
+<span class="n">using</span><span class="w"> </span><span class="n">namespace</span><span class="w"> </span><span class="n">std</span><span class="p">;</span><span class="w"></span>
+
+<span class="c1">// Driver Code</span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">p</span><span class="p">;</span><span class="w"> </span><span class="c1">// 2 bytes</span>
+<span class="w">    </span><span class="n">P</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="o">*</span><span class="p">)</span><span class="n">malloc</span><span class="p">(</span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="kt">int</span><span class="p">));</span><span class="w"></span>
+<span class="w">    </span><span class="n">free</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Nel caso precedente:</p>
+<ul>
+<li>viene dichiarato un puntatore p. Assumiamo che il puntatore p prende due byte di memoria e di nuovo dipende dal compilatore.</li>
+<li>questo puntatore è memorizzato nello stack, e punta all'indizzo del primo indice allocato nell'heap. La memoria heap non può essere usata direttamente ma con l'aiuto del putatore può essere acceduta.</li>
+<li>quando il programma non viene usato, la memoria deve essere deallocata, o causerà un memory leak.</li>
+</ul>
+<p>vantaggi:</p>
+<ul>
+<li>l'allocazione dinamica è fatta a runtime</li>
+<li>possiamo allocare (creare) ulteriore spazio quando ne abbiamo bisogno</li>
+<li>la memoria può essere delalocata e riallocata quando necessario</li>
+</ul>
+<p>svantaggi:</p>
+<ul>
+<li>dato che la memoria è allocata a runtime, è richiesto più tempo per farlo</li>
+<li>la memoria deve essere liberata dopo che l'utente ha fnito, per evitare bug.</li>
+</ul>
 
               
             </article>

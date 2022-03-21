@@ -13,7 +13,7 @@
     
     
       
-        <title>Lecture - Corso di Informatica - Angelo Cardellicchio</title>
+        <title>21 - `Struct`, `typedef` ed `union` - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#typedef" class="md-skip">
+        <a href="#21-struct-typedef-ed-union" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lecture
+              21 - `Struct`, `typedef` ed `union`
             
           </span>
         </div>
@@ -281,6 +281,34 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/02_algorithms/lecture/" class="md-nav__link">
+        02 - Introduzione agli algoritmi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/03_dec_bin/lecture/" class="md-nav__link">
+        03 - Rappresentazione binaria e decimale
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -318,6 +346,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -326,29 +356,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#typedef" class="md-nav__link">
-    typedef
+  <a href="#211-le-struct" class="md-nav__link">
+    21.1 - Le struct
   </a>
   
-    <nav class="md-nav" aria-label="typedef">
+    <nav class="md-nav" aria-label="21.1 - Le struct">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#puntatori-a-strutture" class="md-nav__link">
-    Puntatori a strutture
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#union" class="md-nav__link">
-    Union
+  <a href="#2211-puntatori-a-struct" class="md-nav__link">
+    22.1.1 - Puntatori a struct
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#222-definizione-di-tipo-con-typedef" class="md-nav__link">
+    22.2 - Definizione di tipo con typedef
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#223-le-union" class="md-nav__link">
+    22.3 - Le union
+  </a>
   
 </li>
       
@@ -366,9 +403,12 @@
                 
 
 
-  <h1>Lecture</h1>
-
-<p>Nel linguaggio C, le struct sono usate per raggrupapre diversi tipi di varaibili sotto lo stesso nome. Ad esempio, potremmo creare una struttura "persona", fatta da due stringhe ed un intero.</p>
+<h1 id="21-struct-typedef-ed-union">21 - <code>Struct</code>, <code>typedef</code> ed <code>union</code><a class="headerlink" href="#21-struct-typedef-ed-union" title="Permanent link">&para;</a></h1>
+<p>Abbiamo visto come il linguaggio C consenta l'utilizzo di una serie di tipi di dati primitivi. Tuttavia, consentirci soltanto questo sarebbe in un certo senso "limitante": ad esempio, potremmo voler creare una singola variabile che rappresenti una persona, senza dover necessariamente "far proliferare" tutta una serie di sottovariabili contenenti, ad esempio, nome, cognome ed età.</p>
+<p>Per ovviare a questa limitazione, quindi, il C ci mette a disposizione un particolare costrutto rappresentativo di una struttura dati definita dall'utente; come prevedibile, tale costrutto va sotto il nome di <code>struct</code>.</p>
+<h2 id="211-le-struct">21.1 - Le <code>struct</code><a class="headerlink" href="#211-le-struct" title="Permanent link">&para;</a></h2>
+<p>I più attenti ricorderanno come abbiamo già visto il concetto di <em>struct</em> durante il nostro excursus sulle <a href="../../../02_principles/10_data_structures/lecture/">strutture dati</a>; ovviamente, le <code>struct</code> C rappresentano un'implementazione di questa classe di strutture dati, e permettono quindi di "raggruppare" diverse variabili tra loro.</p>
+<p>Ad esempio, potremmo creare una <code>struct</code> che serva a caratterizzare una persona:</p>
 <div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">nome</span><span class="p">;</span><span class="w"></span>
@@ -376,7 +416,17 @@
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eta</span><span class="p">;</span><span class="w"></span>
 <span class="p">};</span><span class="w"></span>
 </code></pre></div>
-<p>Con la dichiarazione della struttura abbiamno creato un nuovo tipo chiamato persona. Prima di poter usare il tipo telefono, occorre creare una variabile del tipo telefono. Ad esempio:</p>
+<p>In generale, quindi, una <code>struct</code> è definita nel modo che segue:</p>
+<div class="highlight"><pre><span></span><code><span class="k">struct</span><span class="w"> </span><span class="nc">NOME_STRUCT</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">tipo_variabile_1</span><span class="w"> </span><span class="n">id_variabile_1</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">tipo_variabile_2</span><span class="w"> </span><span class="n">id_variabile_2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// ...</span>
+<span class="w">    </span><span class="n">tipo_variabile_n</span><span class="w"> </span><span class="n">id_variabile_n</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Nel nostro esempio, una variabile associata alla struct <code>persona</code> avrà quindi un array di <code>char</code> relativo al nome, un array di <code>char</code> relativo al cognome, ed un <code>int</code> relativo all'età.</p>
+<p>Proviamo adesso ad utilizzare questa <code>struct</code>:</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
@@ -388,12 +438,11 @@
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"> </span><span class="n">pippo</span><span class="p">;</span><span class="w"></span>
-
+<span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"> </span><span class="n">studente</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<p>Per accedere ai membri della struttura persona, dobbiamo inserire un punto tra il nome della struttura e quello della variabile.</p>
+<p>Abbiamo creato una variabile di "tipo" persona. Potremo accedere a ciascuna delle "sottovariabili", o membri, della <code>struct</code> utilizzando l'operatore <em>dot</em> (punto):</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
@@ -407,8 +456,8 @@
 <span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"> </span><span class="n">studente</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">studente</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Piero&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">studente</span><span class="p">.</span><span class="n">cognome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Scamarcio&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">studente</span><span class="p">.</span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">studente</span><span class="p">.</span><span class="n">cognome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">studente</span><span class="p">.</span><span class="n">eta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Lo studente %s %s ha %d anni</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">studente</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">studente</span><span class="p">.</span><span class="n">cognome</span><span class="p">,</span><span class="w"> </span><span class="n">studente</span><span class="p">.</span><span class="n">eta</span><span class="p">);</span><span class="w"></span>
@@ -416,39 +465,9 @@
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h2 id="typedef">typedef<a class="headerlink" href="#typedef" title="Permanent link">&para;</a></h2>
-<p>Le definizioni di tipo rendono anche possibile creare i nostri tipi di variabile. Ad esempio, possiamo creare un tipo che rappresenta un puntatore a double.</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="k">typedef</span><span class="w"> </span><span class="kt">double</span><span class="o">*</span><span class="w"> </span><span class="n">double_pointer</span><span class="p">;</span><span class="w"></span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">double_pointer</span><span class="w"> </span><span class="n">pointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Il valore del puntatore e&#39;: %p&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pointer</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>Questa tecnica può anche essere estesa alle struct. Ciò significa che:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">nome</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cognome</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eta</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="n">PERSONA</span><span class="p">;</span><span class="w"></span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">PERSONA</span><span class="w"> </span><span class="n">pippo</span><span class="p">;</span><span class="w"></span>
-
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>otiamo che il nome del tipo associaot alla sturttura è quello indicato in maiuscolo immediatamente dopo alla stessa.</p>
-<h3 id="puntatori-a-strutture">Puntatori a strutture<a class="headerlink" href="#puntatori-a-strutture" title="Permanent link">&para;</a></h3>
-<p>Possiamo usare anche dei puntatori a strutture. In questo caso, per accedere alla singola proprietà della struct, dovremo usare l'operatore <em>infix</em> (-&gt;)</p>
+<p>Abbiamo quindi visto come l'accesso mediante l'operatore punto valga sia in lettura, sia in scrittura.</p>
+<h3 id="2211-puntatori-a-struct">22.1.1 - Puntatori a <code>struct</code><a class="headerlink" href="#2211-puntatori-a-struct" title="Permanent link">&para;</a></h3>
+<p>Possiamo anche definire dei puntatori ad una struttura. In questo caso, però, per accedre alla singola proprietà della <code>struct</code>, dovremo utilizzare <em>infix</em> (-&gt;)</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
@@ -460,27 +479,65 @@
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">PERSONA</span><span class="w"> </span><span class="n">studente</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="n">PERSONA</span><span class="o">*</span><span class="w"> </span><span class="n">puntatore_studente</span><span class="p">;</span><span class="w"></span>
 
-<span class="w">    </span><span class="n">studente</span><span class="o">-&gt;</span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Piero&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="c1">// Prima era studente.nome!</span>
-<span class="w">    </span><span class="n">studente</span><span class="o">-&gt;</span><span class="n">cognome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Scamarcio&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">studente</span><span class="o">-&gt;</span><span class="n">eta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">puntatore_studente</span><span class="o">-&gt;</span><span class="n">nome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;John&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">puntatore_studente</span><span class="o">-&gt;</span><span class="n">cognome</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Doe&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">puntatore_studente</span><span class="o">-&gt;</span><span class="n">eta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">19</span><span class="p">;</span><span class="w"></span>
 
 <span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Lo studente %s %s ha %d anni</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">studente</span><span class="o">-&gt;</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">studente</span><span class="o">-&gt;</span><span class="n">cognome</span><span class="p">,</span><span class="w"> </span><span class="n">studente</span><span class="o">-&gt;</span><span class="n">eta</span><span class="p">);</span><span class="w"></span>
 
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
-<h3 id="union">Union<a class="headerlink" href="#union" title="Permanent link">&para;</a></h3>
-<p>Le union sono analoghe alle struct dal punto di vista della sintassi, semplicemente però implementano delle strutture dati differenti. Un esempio è il seguente.</p>
+<h2 id="222-definizione-di-tipo-con-typedef">22.2 - Definizione di tipo con <code>typedef</code><a class="headerlink" href="#222-definizione-di-tipo-con-typedef" title="Permanent link">&para;</a></h2>
+<p>Abbiamo visto come le <code>struct</code> ci permettano di "associare" diverse variabili tra loro, definendo dei veri e propri "tipi" composti da diverse variabili appartenenti a tipi primitivi. Il passo successivo, quindi, è quello di "formalizzare" queste strutture; per farlo, il linguaggio C ci mette a disposizione la parola chiave <code>typedef</code> che, come suggerisce il nome stesso, consente di creare un tipo definito dall'utente.</p>
+<p>Ad esempio, potremmo creare un tipo da associare alla <code>struct</code> persona:</p>
+<div class="highlight"><pre><span></span><code><span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">nome</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cognome</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eta</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">TIPO_PERSONA</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>In questo caso, l'identificativo associato alla <code>struct</code> rimane <code>persona</code> (in minuscolo), mentre il tipo definito a partire dalla <code>struct persona</code> sarà <code>TIPO_PERSONA</code>.</p>
+<p>Potremo quindi creare una variabile di tipo <code>TIPO_PERSONA</code> proprio come se fosse una variabile di tipo primitivo:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">persona</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">nome</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">cognome</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">eta</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="n">PERSONA</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="n">PERSONA</span><span class="w"> </span><span class="n">studente</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="c1">// altre istruzioni</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Sottolineamo come la definizione di un tipo non sia vincolata ad una struct. Ad esempio, potremmo definire un tipo che rappresenta un puntatore ad intero.</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="k">typedef</span><span class="w"> </span><span class="kt">int</span><span class="o">*</span><span class="w"> </span><span class="n">int_pointer</span><span class="p">;</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">val</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">int_pointer</span><span class="w"> </span><span class="n">pointer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">val</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Il valore del puntatore e&#39;: %p&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">pointer</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="223-le-union">22.3 - Le <code>union</code><a class="headerlink" href="#223-le-union" title="Permanent link">&para;</a></h2>
+<p>Quando abbiamo parlato di strutture dati abbiamo visto, oltre alle <em>struct</em>, le <em>union</em>. Prevedibilmente, il C ci mette a disposizione oggetti di questo tipo, che risultano essere sintatticamente analoghi alle <code>struct</code>, ma che tuttavia implementano una struttura dati di tipo differente. Vediamo un rapido esempio.</p>
 <div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
 <span class="k">typedef</span><span class="w"> </span><span class="k">union</span><span class="w"> </span><span class="nc">lettura_sensore</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="n">LETTURA_SENSORE</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"> </span><span class="n">LETTURA_SENSORE</span><span class="p">;</span><span class="w"></span>
 
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
@@ -489,6 +546,7 @@
 <span class="w">    </span><span class="n">lettura</span><span class="p">.</span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </code></pre></div>
+<p>TODO: puntatore, printf</p>
 
               
             </article>
