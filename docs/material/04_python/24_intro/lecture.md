@@ -1,6 +1,18 @@
 # 23 - Introduzione a Python
 
-## 23.1 - Premessa: Python e tipizzazione
+Prima di iniziare a parlare del linguaggio Python, è opportuno verificare che l'interprete sia installato nel nostro sistema. Per farlo, apriamo un terminale (Shell o Command Prompt, a seconda del nostro sistema), e scriviamo:
+
+```sh
+$ python
+```
+
+Se apparirà una schermata simile a quella mostrata in figura, Python sarà già correttamente presente nel nostro sistema.
+
+![python_interpreter](./images/python_interpreter.png)
+
+In alternativa, dovremo provvedere ad installarlo seguendo la procedura indicata sul [sito ufficiale](https://www.python.org/), ed aggiungerlo al path di sistema.
+
+## 23.1 - Python e tipizzazione
 
 ### 23.1.1 - Tipizzazione dinamica
 
@@ -30,7 +42,7 @@ fVar + 1.1;
 In Python questo non sarà necessario, e potremo effettuare direttamente le operazioni desiderate:
 
 ```py
-var + 1.1
+var + 1.1			# Il risultato sarà 2.1
 ```
 
 Questo può apparentemente semplificare di molto la vita, in quanto non è più necessario preoccuparsi del tipo della variabile. Non è però tutto oro ciò che luccica: per comprenderlo, infatti, è il momento di parlare del (pilatesco) principio del *duck typing*.
