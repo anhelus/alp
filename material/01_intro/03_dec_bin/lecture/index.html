@@ -9,7 +9,7 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.5">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
     
     
       
@@ -17,7 +17,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.2d9f7617.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.9d5733d3.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -424,6 +424,81 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../04_data_type/lecture/" class="md-nav__link">
+        04 - Tipi di dato
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_1_2">
+          Parte 2 - Principi di programmazione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 2 - Principi di programmazione" data-md-level="3">
+        <label class="md-nav__title" for="__nav_2_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 2 - Principi di programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_principles/05_flow_chart/lecture/" class="md-nav__link">
+        05 - Diagrammi di flusso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_principles/06_structured/lecture/" class="md-nav__link">
+        06 - Programmazione strutturata
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -568,8 +643,8 @@
 <p>Di particolare importanza è il concetto di <em>continuità</em> della forma d'onda utilizzata. Partiamo dall'analisi matematica: sappiamo che le funzioni continue sono definite nel dominio <span class="arithmatex">\(\mathbb{R}\)</span> dei numeri reali, per cui assumono, a meno dei punti di discontinuità, un numero <em>infinito</em> di valori. Questo vale anche per le forme d'onda analogiche, che abbiamo detto essere continue: ogni onda sonora emessa nella conversazione di cui sopra potrà assumere un numero "infinito" di valori all'interno degli intervalli temporali e di ampiezza nei quali è emessa.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota</p>
-</div>
 <p>Ovviamente, non teniamo conto di effetti quantistici: stiamo parlando di fenomeni <em>macroscopici</em>.</p>
+</div>
 <h2 id="32-la-gestione-dellinformazione">3.2 - La gestione dell'informazione<a class="headerlink" href="#32-la-gestione-dellinformazione" title="Permanent link">&para;</a></h2>
 <p>Chiarito il concetto di grandezza "analogica", pensiamo adesso a come uno strumento potrebbe in qualche modo caratterizzarla. In particolare, ragioniamo in termini di <em>capacità</em> dello strumento, ovvero:</p>
 <blockquote>
@@ -591,7 +666,7 @@
 <p>Per rispondere a questa domanda, ricordiamoci che ogni bit può assumere soltanto due valori; di conseguenza, due bit potranno assumere al massimo <span class="arithmatex">\(2 \times 2\)</span> valori, ovvero quattro, tre bit <span class="arithmatex">\(2 \times 2 \times 2\)</span> valori, ovvero otto, e così via.</p>
 <p>E' semplice quindi constatare che una sequenza di <span class="arithmatex">\(n\)</span> bit assume al più <span class="arithmatex">\(2^n\)</span> valori, per cui otto bit potranno assumere al massimo <span class="arithmatex">\(2^8\)</span> valori. Ne consegue che, riportando il tutto in decimale, un byte potrà assumere al massimo 256 valori.</p>
 <h3 id="333-la-parola">3.3.3 - La parola<a class="headerlink" href="#333-la-parola" title="Permanent link">&para;</a></h3>
-<p>Definiamo infine una <em>parola</em>, o <em>word</em>, una sequenza di <span class="arithmatex">\(N\)</span> byte, con <span class="arithmatex">\(N\)</span> dipendente dal contesto specifico (ad esempio, il tipo di processore in uso). Ad esempio, la maggior parte dei processori consumer odierni utilizza parole da otto byte, ovvero 64 bit, capaci quindi di rappresentare fino a <span class="arithmatex">\(2^64\)</span> valori.</p>
+<p>Definiamo infine una <em>parola</em>, o <em>word</em>, una sequenza di <span class="arithmatex">\(N\)</span> byte, con <span class="arithmatex">\(N\)</span> dipendente dal contesto specifico (ad esempio, il tipo di processore in uso). Ad esempio, la maggior parte dei processori consumer odierni utilizza parole da otto byte, ovvero 64 bit, capaci quindi di rappresentare fino a <span class="arithmatex">\(2^{64}\)</span> valori.</p>
 <h2 id="34-da-decimale-a-binario">3.4 - Da decimale a binario<a class="headerlink" href="#34-da-decimale-a-binario" title="Permanent link">&para;</a></h2>
 <p>Nel mondo reale, siamo abituati ad utilizzare i numeri seguendo una notazione di tipo <em>decimale</em> e <em>posizionale</em>. Detto in altri termini:</p>
 <ul>
@@ -666,6 +741,21 @@ N_{2} = (111100101)_2
         </a>
       
       
+        
+        <a href="../../04_data_type/lecture/" class="md-footer__link md-footer__link--next" aria-label="Next: 04 - Tipi di dato" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              04 - Tipi di dato
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
     </nav>
   
   <div class="md-footer-meta md-typeset">
@@ -692,10 +782,10 @@ N_{2} = (111100101)_2
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.bd0b6b67.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.467223ff.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.e87a5f81.min.js"></script>
       
         <script src="../../../../js/config.js"></script>
       
