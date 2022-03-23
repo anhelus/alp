@@ -1,118 +1,95 @@
 # 20 - Allocazione statica e dinamica della memoria
 
-Abbiamo detto che la memoria di un calcolatore è divisa in piccole unità chiamate byte.
+La memoria di un calcolatore è tipicamente divisa in tre sezioni:
 
-La memoria è divisa in tre sezioni.
+* la *heap*, ovvero una parte di memoria richiamabile all'occorrenza dal programmatore;
+* lo *stack*, nel quale le variabili vengono dichiarate, inizializzate a runtime, e che agisce secondo una logica LIFO;
+* la *code section*, dove viene memorizzato il programma a runtime.
 
-Nella *heap*, vi è una parte non organizzata, e trattata come risorsa da richiedre all'occorrenza. Non è possibile richiedrela con un puntatore.
-
-nello stack, viene memorizzata le variabili temporanee create da una funzione. Nello stack, le variabili sono dichiarate, memorizzate ed inizializzate a runtime. Lo stack si chiama in questo modo perché segue, appunto, la pila (LIFO).
-
-nella code section, quando il programma è eseguito, sarà portato nella memoria principale. Questo programma sarà quindi memorizzato nella sezione *code*.A seconda del programma, vedremo se utilizzare lo stack o l'heap.
-
-Possiamo quindi allocare la memoria in due modi, statico e dinamico.
+Questa disposizione della memoria ci permette quindi di allocarla (ovvero *assegnarla*) secondo due modalità, ovvero *statica* e *dinamica*.
 
 ## 20.1 - Allocazione statica della memoria
 
-Nell'allocazione statica della memoria, quando il programma viene eseguito, la dimensione del programma viene fissata, e non può essere ulteriormente cambiato. di conseguenza, i rquisiti esatti devono essere conosciuti a priori. L'allocazione e la deallicazione della memoria saranno effettuate automaticamentedal compilatore. Quando tutto viene fatto a compile time, o prima del run time, viene chiamata *allocazione statica della memoria*.
+L'allocazione statica della memoria prevede che il programma in esecuzione abbia una dimesione prefissata a compile time, la quale non può essere in alcun modo modificata a runtime. Ovviamente, ciò implica che il programmatore sia in grado di definire esattamente a priori i requisiti del suo programma in termini di memoria. 
 
-Ad esempio:
+Un esempio di allocazione statica della memoria è il seguente:
 
 ```c
 int main()
 {
-    int a; // prealloco 2 byte
-    long b; // prealloco 4 byte
+    int a;      // prealloco 4 byte
+    long b;     // prealloco 8 byte
 }
 ```
 
-Spiegazione:
+Nel codice precedente dichiariamo due variabili, per le quali saranno allocate, rispettivamente, 32 e 64 bit all'interno dello stack. A runtime, a meno che non siano specificate delle apposite operazioni di cast, la quantità di memoria allocata *non* verrà modificata, e sarà liberata in automatico soltanto al termine dell'esecuzione dello stesso.
 
-* questo codice dichiara due variabili. Qyi l'assunto è che int prende due byte (16 bit) mentre long prende 4 byte di memoria. Questi valori dipendono dal compilatore.
+Riassumiamo quindi i vantaggi e gli svantaggi dell'allocazione statica.
 
-TODO: questi valori sono doppi!
-
-* queste variabili saranno memorizzate nella sezione relativa allo stack. Per ogni funzione nel programma, prenderà alcune parti dello stack (chiamate stack frame) e saranno cancellate dal compilatore quando non in uso.
-
-svantaggi:
-
-* semplice da usare
-* allocazione e deallocazione fatte dal compilatore
-* tempo di esecuzione efficiente
-* usa lo stack
-
-svantaggi:
-
-* spreco di memoria
-* bisogna sapere i requisiti esatti in termini di memoria
-* la memoria non può essere rinominata dopo l'inizializzazione
+| Vantaggi | Svantaggi |
+| -------- | --------- |
+| Semplicità di utilizzo.</br>Delega al compilatore dell'allocazione della memoria.</br>Efficiente a runtime. | Memoria non necessariamente utilizzata al meglio (specie con array).</br>Necessità di conoscere a priori i requisiti in termini di memoria.</br>Impossibilità di riallocare la memoria a runtime. |
 
 ## 20.2 - Allocazione dinamica della memoria
 
-Nell'allocazione dinamica della memoria, l'allocazione ed iniziallizazione delle dimensioni sono fatte dal programmatore. La memoria è gestita, e viene fornita di puntatori che putano ad uno spazio di memoria appena allocata chiamato heap. La heap non è organizzata, ed è trattata come una risorsa richiesta "on-demand".
+A differenza dell'allocazione statica, nell'allocazione dinamica è il programmatore a controllare quanta memoria viene allocata. Inoltre, in questo caso, viene utilizzata la memoria heap, e non lo stack. L'allocazione dinamica prevede quindi che la memoria non sia allocata a priori, ovvero a compile time, ma piuttosto a runtime; di conseguenza, può essere sia assegnata, sia liberata, e farlo in maniera corretta comporta un utilizzo più efficiente della memoria stessa.
 
-feature chiave:
+Dal punto di vista pratico, la libreria `stdlib.h` offre una serie di funzioni che permettono l'allocazione dinamica della memoria, che vediamo di seguito.
 
-* memoria allocata dinamicamente a runtime
-* si rialloca la dimensione della memoria se necessario
-* nessuno spreco di memoria
+### 20.2.1 - La funzione `malloc`
 
-Esistono apposite funzioni disponibili nella libreria stdlib.h che ci aiutano ad allocare dinamicamente la memoria.
-
-* malloc(): la funzione più semplice che alloca memoria a runtime è chiamata malloc(). Vi è la necessità di specificare il numero di byte di memora che sono richiesti per l'allocazione come argomento, e la funzione restituisce l'indirizzo del primo byte di memoria restituito sotto forma di puntatore.
+La funzione `malloc` permette di allocare un certo quantitativo di memoria a runtime, specificando come parametro passato alla funzione il numero di byte da allocare. Quindi, ad esempio:
 
 ```c
-int num_values = 10;            // diciamo che ci sono dieci valori da allocare
-int *p = (int*) malloc(num_values);  // allochiamo dieci valori
+int num_values = 10;
+int *p = (int*) malloc(num_values);
 ```
 
-Notiamo poi il casto (int*), che converte l'indirizzo restituito dalla funzione a puntatore ad inero.
+Grazie all'istruzione precedente, avremo allocato spazio sufficiente a contenere dieci numeri interi a quattro byte, ovvero quaranta byte.
 
-La calloc() offre alcuni vantaggi rispetto alla malloc(). Alloca la memoria come un numero di elementi di una data dimensione. nizializza la memoria che è allocata in modo che tutti i byte siano a zero. La funzione accetta due argomenti:
+Inoltre, è opportuno notare come la `malloc` restituisca in uscita un indirizzo di memoria; in questo caso, quindi, è necessario effettuare un casting a puntatore ad intero.
 
-* il numero di oggetti per i quali è richiesto lo spazio
-* la dimensione di ogni oggetto
+### 20.2.2 - La funzione `calloc`
 
-La sintassi è:
+La funzione `calloc` offre un vantaggio rispetto alla `malloc`, inizializzando gli elementi allocati in modo che questi assumano un valore pari a zero. La sintassi è la seguente:
 
 ```c
-int *p = (int*)calloc(n_items, sizeof(int))
+int num_values = 10;
+int *p = (int*) calloc(num_values, sizeof(int))
 ```
 
-la funzione realloc() ci permette di riutilizzare o estendere la memoria che abbiamo allocato in precedenza usando malloc() o calloc(). In tal senso, la funzione accetta due argomenti, ovvero il tipo del puntatore precedentemente allocato, ed il numero di nuovi elementi per la loro dimensione.
+Notiamo subito come vi sia una prima differenza rispetto alla `malloc` legata al fatto che la funzione accetta due parametri, ovvero il numero di oggetti per i quali è richiesta l'allocazione, e la dimensione di ciascun oggetto. Anche in questo caso, la funzione restituisce un indirizzo di memoria.
 
-Notiamo che quando la memoria è allocata dinamicamente, dovrebbe essere sempre rilasciata quando non è più richiesta. La memoria allocata sull'heap sarà automaticamente liberata quando il programma termina, ma è sempre meglio rilasciare in modo esplicito la memoria una volta terminato, anche se è poco prima della fine del programma. 
+### 20.2.3 - La funzione `realloc`
 
-Ad esempio:
+La funzione `realloc` ci permette di riutilizzare o estendere la memoria che abbiamo allocato in precedenza mediante la `malloc` o la `calloc`. In tal senso, la funzione accetta due argomenti, ovvero il tipo del puntatore precedentemente allocato, ed il numero di nuovi elementi da allocare.
 
-```c
-// C program to illustrate the concept
-// of memory allocation
-#include <iostream>
-using namespace std;
+### 20.2.4 - La funzione `free`
+
+Una delle cose più importanti da tenere a mente quando abbiamo a che fare con l'allocazione dinamica è che la memoria deve essere sempre rilasciata qualora non sia più richiesta. Ciò avviene di solito in maniera automatica al termine dell'esecuzione del programma; tuttavia, è consigliato effettuare tale rilascio *sempre* in maniera esplicita. Per farlo, dobbiamo utilizzare la funzione `free`, passando come argomento il puntatore all'indirizzo di memoria che desideriamo liberare.
+
+Facciamo adesso un esempio completo:
+
+```c linenums="1"
+#include <stdlib.h>
   
-// Driver Code
-void main()
+int main()
 {
-    int* p; // 2 bytes
-    P = (int*)malloc(5 * sizeof(int));
+    int *p;
+    int *p = (int*) malloc(5 * sizeof(int));
     free(p);
+    return 0;
 }
 ```
 
-Nel caso precedente:
+Nel codice precedente:
 
-* viene dichiarato un puntatore p. Assumiamo che il puntatore p prende due byte di memoria e di nuovo dipende dal compilatore.
-* questo puntatore è memorizzato nello stack, e punta all'indizzo del primo indice allocato nell'heap. La memoria heap non può essere usata direttamente ma con l'aiuto del putatore può essere acceduta.
-* quando il programma non viene usato, la memoria deve essere deallocata, o causerà un memory leak.
+* alla riga 5, dichiariamo un puntatore ad intero `p`;
+* il puntatore viene memorizzato nello stack, e punta all'indirizzo del primo valore di memoria disponibile nell'heap grazie alla `malloc` (riga 6);
+* una volta terminata la serie di istruzioni da eseguire, la memoria puntata da `p` viene rilasciata mediante la `free`.
 
-vantaggi:
+Anche per l'allocazione dinamica possiamo riassumere vantaggi e svantaggi.
 
-* l'allocazione dinamica è fatta a runtime
-* possiamo allocare (creare) ulteriore spazio quando ne abbiamo bisogno
-* la memoria può essere delalocata e riallocata quando necessario
-
-svantaggi:
-
-* dato che la memoria è allocata a runtime, è richiesto più tempo per farlo
-* la memoria deve essere liberata dopo che l'utente ha fnito, per evitare bug.
+| Vantaggi | Svantaggi |
+| -------- | --------- |
+| Allocazione della memoria fatta a runtime.</br>Possibilità di allocare, deallocare e riallocare ulteriore memoria alla bisogna.</br> | Maggior tempo di esecuzione richiesto per l'allocazione dinamica.</br>Necessità di gestire la deallocazione della memoria in forma esplicita. |
