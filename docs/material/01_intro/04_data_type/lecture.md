@@ -11,18 +11,18 @@ Il primo tipo di dati che vediamo è quello *numerico*, che comprende, in linea 
 
 ### 4.1.1 - Numeri interi
 
-Il limite imposto alla lunghezza della parola comporta che il valore numerico massimo trattabile da un calcolatore sia finito: ad esempio, nel caso di un'architettura con parola a 64 bit (come la maggior parte dei processori odierni), sarà possibile rappresentare "soltanto" $2^64$ possibili valori.
+Il limite imposto alla lunghezza della parola comporta che il valore numerico massimo trattabile da un calcolatore sia finito: ad esempio, nel caso di un'architettura con parola a 64 bit (come la maggior parte dei processori odierni), sarà possibile rappresentare "soltanto" $2^{64}$ possibili valori.
 
 !!!note "Nota"
-    Ricordiamo che $2^64 = 18.446.744.073.709.551.616$. Il limite appare quindi abbastanza permissivo.
+    Ricordiamo che $2^{64} = 18.446.744.073.709.551.616$. Il limite appare quindi abbastanza permissivo.
 
-Cosa accade, quindi, se dovessimo raggiungere $2^64$? Molto semplice: il conteggio ricomincia da zero (o il programma va in errore).
+Cosa accade, quindi, se dovessimo raggiungere $2^{64}$? Molto semplice: il conteggio ricomincia da zero (o il programma va in errore).
 
-Altrettanto importante è il notare come i numeri possano essere dotati di segno. Questo, ovviamente, va ad influenzare gli *estremi* dell'intervallo dei valori rappresentabili, ma non la *cardinalità* dello stesso. Infatti, se si considera il segno anteposto al numero, potremo trattare valori che vanno nell'intervallo da $-2^(63)$ a $2^(63)$.
+Altrettanto importante è il notare come i numeri possano essere dotati di segno. Questo, ovviamente, va ad influenzare gli *estremi* dell'intervallo dei valori rappresentabili, ma non la *cardinalità* dello stesso. Infatti, se si considera il segno anteposto al numero, potremo trattare valori che vanno nell'intervallo da $-2^{63}$ a $2^{63}$.
 
 Facciamo un breve esempio pratico, con una lunghezza della parola di otto bit. In questo caso:
 
-- considerando solo lo zero ed i valori strettamente positivi, sarà possibile rappresentare tutti i numeri interi compresi tra $0$ e $255 = 2^8-1$;
+- considerando solo lo zero ed i valori strettamente positivi, sarà possibile rappresentare tutti i numeri interi compresi tra $0$ e $255 = 2^{8-1}$;
 - considerando anche i valori negativi, sarà possibile rappresentare tutti i numeri interi compresi tra $-128 = -2^{8-1}$ e $127 = -2^{8-1}-1$.
 
 Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più comune, differenziati a seconda della loro lunghezza.
@@ -32,12 +32,12 @@ Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più c
 | `bit`        | 1 bit     | 0                        | 1                         |
 | `ubyte`      | 8 bit     | 0                        | 255                       |
 | `byte`       | 8 bit     | -128                     | 127                       |
-| `ushort`     | 16 bit    | 0                        | $2^16 - 1$ = 65535        |
+| `ushort`     | 16 bit    | 0                        | $2^{16} - 1$ = 65535      |
 | `short`      | 16 bit    | -32768                   | 32767                     |
-| `uint`       | 32 bit    | 0                        | $2^32 - 1$ = 4294967295   |
-| `int`        | 32 bit    | $-2^31$ = 2147483648     | $2^31 - 1$ = 2147483647   |
-| `ulong`      | 64 bit    | 0                        | $2^64 - 1$                |
-| `long`       | 64 bit    | $-2^63$                  | $2^63 - 1$                |
+| `uint`       | 32 bit    | 0                        | $2^{32} - 1$ = 4294967295   |
+| `int`        | 32 bit    | $-2^{31}$ = 2147483648     | $2^{31} - 1$ = 2147483647   |
+| `ulong`      | 64 bit    | 0                        | $2^{64} - 1$                |
+| `long`       | 64 bit    | $-2^{63}$                  | $2^{63} - 1$                |
 
 !!!note "Il `bit`"
     Il bit è il tipo di dato numerico più "limitato" rappresentabile, e viene spesso utilizzato come valore booleano.
