@@ -9,7 +9,7 @@ Nel mondo reale, le informazioni fluiscono dalla sorgente al destinatario sotto 
 Di particolare importanza è il concetto di _continuità_ della forma d'onda utilizzata. Partiamo dall'analisi matematica: sappiamo che le funzioni continue sono definite nel dominio $\mathbb{R}$ dei numeri reali, per cui assumono, a meno dei punti di discontinuità, un numero _infinito_ di valori. Questo vale anche per le forme d'onda analogiche, che abbiamo detto essere continue: ogni onda sonora emessa nella conversazione di cui sopra potrà assumere un numero "infinito" di valori all'interno degli intervalli temporali e di ampiezza nei quali è emessa.
 
 !!!note "Nota"
-Ovviamente, non teniamo conto di effetti quantistici: stiamo parlando di fenomeni _macroscopici_.
+    Ovviamente, non teniamo conto di effetti quantistici: stiamo parlando di fenomeni _macroscopici_.
 
 ## 3.2 - La gestione dell'informazione
 
@@ -44,7 +44,7 @@ E' semplice quindi constatare che una sequenza di $n$ bit assume al più $2^n$ v
 
 ### 3.3.3 - La parola
 
-Definiamo infine una _parola_, o _word_, una sequenza di $N$ byte, con $N$ dipendente dal contesto specifico (ad esempio, il tipo di processore in uso). Ad esempio, la maggior parte dei processori consumer odierni utilizza parole da otto byte, ovvero 64 bit, capaci quindi di rappresentare fino a $2^64$ valori.
+Definiamo infine una _parola_, o _word_, una sequenza di $N$ byte, con $N$ dipendente dal contesto specifico (ad esempio, il tipo di processore in uso). Ad esempio, la maggior parte dei processori consumer odierni utilizza parole da otto byte, ovvero 64 bit, capaci quindi di rappresentare fino a $2^{64}$ valori.
 
 ## 3.4 - Da decimale a binario
 
