@@ -64,6 +64,11 @@ Notiamo subito come vi sia una prima differenza rispetto alla `malloc` legata al
 
 La funzione `realloc` ci permette di riutilizzare o estendere la memoria che abbiamo allocato in precedenza mediante la `malloc` o la `calloc`. In tal senso, la funzione accetta due argomenti, ovvero il tipo del puntatore precedentemente allocato, ed il numero di nuovi elementi da allocare.
 
+```c
+int new_size = 20;
+p = (int*) realloc(p, new_size)
+```
+
 ### 20.2.4 - La funzione `free`
 
 Una delle cose più importanti da tenere a mente quando abbiamo a che fare con l'allocazione dinamica è che la memoria deve essere sempre rilasciata qualora non sia più richiesta. Ciò avviene di solito in maniera automatica al termine dell'esecuzione del programma; tuttavia, è consigliato effettuare tale rilascio *sempre* in maniera esplicita. Per farlo, dobbiamo utilizzare la funzione `free`, passando come argomento il puntatore all'indirizzo di memoria che desideriamo liberare.
@@ -76,7 +81,7 @@ Facciamo adesso un esempio completo:
 int main()
 {
     int *p;
-    int *p = (int*) malloc(5 * sizeof(int));
+    p = (int*) malloc(5 * sizeof(int));
     free(p);
     return 0;
 }
