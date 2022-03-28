@@ -64,22 +64,13 @@ L'utilità del duck typing è evidente: permette allo sviluppatore di "risparmia
 
 ## 23.2 - L'interprete Python
 
-Python offre un interprete accessibile al programmatore direttamente dalla riga di comando.
-
-Dopo averlo installato (è possibile farlo seguendo le istruzioni presenti sul [sito ufficiale](https://www.python.org/)) ed essersi assicurati che il launcher sia stato aggiunto al path di sistema, possiamo lanciarlo tramite riga di comando. Per prima cosa, comunque, assicuriamoci che sia tutto a posto controllando la versione installata di Python:
-
-```sh
-$ python --version
-python3.9.1
-```
-
-A questo punto, lanciamo l'interprete:
+Nella sezione introduttiva abbiamo visto come installare l'interprete Python, in modo da avere un ambiente di lavoro accessibile direttamente mediante riga di comando. Lanciamolo di nuovo usando il seguente comando da una shell:
 
 ```sh
 python
 ```
 
-Possiamo quindi iniziare ad usare Python.
+Potremo quindi finalmente iniziare ad utilizzare Python.
 
 ## 23.3 - Calcoli e numeri
 
@@ -467,7 +458,3 @@ Proviamo ad estendere ulteriormente la lista cambiando il primo elemento con una
 >>> lista
 ['Python', 2, 3, 4, [1, 2, 3]]
 ```
-
-## Conclusioni
-
-Abbiamo dato una rapida introduzione al linguaggio Python, soffermandoci su alcune dei tipi di dati più usati, come numeri, stringhe e liste. Nelle prossime sezioni, torneremo sulle liste, ed approfondiremo altri tipi di iterabili, come tuple e dizionari.
