@@ -9,15 +9,15 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
       
-        <title>Lecture - Corso di Informatica - Angelo Cardellicchio</title>
+        <title>19 - I puntatori - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.9d5733d3.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.644de097.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -60,6 +60,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#19-i-puntatori" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -89,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Lecture
+              19 - I puntatori
             
           </span>
         </div>
@@ -379,6 +384,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_principles/07_complexity/lecture/" class="md-nav__link">
+        07 - Complessità computazionale
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -406,6 +425,87 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#191-loperatore" class="md-nav__link">
+    19.1 - L'operatore &amp;
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#192-loperatore-di-dereferenziazione" class="md-nav__link">
+    19.2 - L'operatore di dereferenziazione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#193-passaggio-per-valore-e-passaggio-per-reference" class="md-nav__link">
+    19.3 - Passaggio per valore e passaggio per reference
+  </a>
+  
+    <nav class="md-nav" aria-label="19.3 - Passaggio per valore e passaggio per reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1931-passaggio-di-un-puntatore-come-argomento-di-una-funzione" class="md-nav__link">
+    19.3.1 - Passaggio di un puntatore come argomento di una funzione
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#194-puntatore-a-void" class="md-nav__link">
+    19.4 - Puntatore a void
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#196-puntatori-e-funzioni" class="md-nav__link">
+    19.6 - Puntatori e funzioni
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#197-esercizi" class="md-nav__link">
+    19.7 - Esercizi
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content" data-md-component="content">
             <article class="md-content__inner md-typeset">
@@ -413,9 +513,88 @@
                 
 
 
-  <h1>Lecture</h1>
+<h1 id="19-i-puntatori">19 - I puntatori<a class="headerlink" href="#19-i-puntatori" title="Permanent link">&para;</a></h1>
+<p>Quello di <em>puntatore</em> è un concetto estremamente importante per la comprensione del linguaggio C, nonostante possa a volte rivelarsi ostico.</p>
+<p>In particolare, un puntatore è, nei fatti, una variabile che contiene l'indirizzo di memoria dove risiede un'altra variabile. Per meglio comprendere questo concetto, osserviamo la seguente figura.</p>
+<p><img alt="pointers" src="../images/pointers.png" /></p>
+<p>Analizziamo brevemente la figura precedente. Ad esempio, la variabile di nome <code>ch</code>, il cui valore è pari ad <code>l</code>, risiede nell'indirizzo di memoria <code>0x100000</code>; la variabile <code>bs</code>, intero di valore <code>2</code>, risiede nell'indirizzo di memoria immediatamente adiacente, ovvero <code>0x100001</code>, e via discorrendo; un puntatore ci permette quindi di tenere traccia di questi valori.</p>
+<div class="admonition note">
+<p class="admonition-title">Gli indirizzi di memoria</p>
+<p>Gli indirizzi di memoria, nei fatti, sono rappresentabili mediante variabili di tipo intero. Tuttavia, molto spesso si preferisce utilizzare la notazione esadecimale.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Operazioni aritmetiche</p>
+<p>Dato che gli indirizzi di memoria sono variabili di tipo intero, è possibile effettuare su di essi delle operazioni di natura aritmetica. Tuttavia, è sconsigliato farlo se non in casi eccezionali.</p>
+</div>
+<h2 id="191-loperatore">19.1 - L'operatore <code>&amp;</code><a class="headerlink" href="#191-loperatore" title="Permanent link">&para;</a></h2>
+<p>Se invocato su di una variabile, l'operatore <code>&amp;</code> permette di restituirne l'indirizzo, ottenendo quindi il valore associabile ad un puntatore. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%x&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ch</span><span class="p">);</span><span class="w">      </span><span class="c1">// questa istruzione restituirà 0x100000</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Format specifier per il puntatore</p>
+<p>Notiamo che il format specifier usato per il puntatore non è quello usato per i numeri interi.</p>
+</div>
+<p>Di conseguenza, possiamo definire la modalità con cui è possibile dichiarare ed inizializzare una variabile da associare ad un puntatore come:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="w"> </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;l&#39;</span><span class="p">;</span><span class="w"></span>
+<span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">puntatore_char</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ch</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>La notazione <code>type*</code> indica quindi che stiamo definendo un puntatore ad un tipo specifico; ad esempio, <code>char*</code> è un puntatore a <code>char</code>, mentre <code>int*</code> è un puntatore ad <code>int</code>, e via dicendo.</p>
+<h2 id="192-loperatore-di-dereferenziazione">19.2 - L'operatore di dereferenziazione<a class="headerlink" href="#192-loperatore-di-dereferenziazione" title="Permanent link">&para;</a></h2>
+<p>Nel contesto dei puntatori, l'operatore <code>*</code> ci permette anche di effettuare la cosiddetta operazione di <em>dereferenziazione</em>, che ci permette di recuperare il valore associato all'indirizzo di memoria cui si riferisce il puntatore. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="n">print</span><span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">pointer</span><span class="p">);</span><span class="w">      </span><span class="c1">// questa istruzione restituirà l</span>
+</code></pre></div>
+<h2 id="193-passaggio-per-valore-e-passaggio-per-reference">19.3 - Passaggio per valore e passaggio per reference<a class="headerlink" href="#193-passaggio-per-valore-e-passaggio-per-reference" title="Permanent link">&para;</a></h2>
+<p>Il passaggio di una variabile come argomento di una funzione avviene secondo due diverse modalità.</p>
+<p>Nella prima modalità, il passaggio avviene per <em>valore</em>: questo significa che viene creata una copia della variabile, la quale sarà mandata in ingresso alla funzione. Ovviamente, ciò implica che la variabile originaria <em>non</em> sarà modificata.</p>
+<p>Il secondo modo è, invece, per <em>reference</em>: in questo caso, viene passato il riferimento all'indirizzo di memoria associato alla variabile in ingresso alla funzione, e la variabile originaria sarà quindi modificata.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>I "fanatici" del C affermano che il linguaggio preveda esclusivamente il passaggio per valore. Tuttavia, il passaggio per reference può essere tranquillamente emulato utilizzando un puntatore come argomento della funzione, come vedremo a breve.</p>
+</div>
+<h3 id="1931-passaggio-di-un-puntatore-come-argomento-di-una-funzione">19.3.1 - Passaggio di un puntatore come argomento di una funzione<a class="headerlink" href="#1931-passaggio-di-un-puntatore-come-argomento-di-una-funzione" title="Permanent link">&para;</a></h3>
+<p>Come abbiamo detto in precedenza, per "emulare" un passaggio per reference potremo passare un puntatore come argomento di una funzione. Questo implica, ovviamente, che il passaggio avverrà sì per valore, ma sarà relativo ad un indirizzo di memoria!</p>
+<p>Di conseguenza, ogni operazione effettuata sul puntatore avrà esclusiva validità all'interno della funzione, ma la variabile puntata sarà, nei fatti, passata per reference, e potrà essere modificata. In questi casi, si parla (in maniera in qualche modo forzata) di <em>passaggio per indirizzo</em>. Ad esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 
+<span class="kt">void</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">j</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="p">(</span><span class="o">*</span><span class="n">j</span><span class="p">)</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
 
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">i</span><span class="p">;</span><span class="w"></span>
+<span class="w">  </span><span class="n">f</span><span class="p">(</span><span class="n">p</span><span class="p">);</span><span class="w"></span>
+<span class="w">  </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;i = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span><span class="w">        </span><span class="c1">// i sarà pari a 21!</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<h2 id="194-puntatore-a-void">19.4 - Puntatore a void<a class="headerlink" href="#194-puntatore-a-void" title="Permanent link">&para;</a></h2>
+<p>A volte potrebbe essere necessario creare un puntatore prima che il programma "conosca" il tipo della variabile puntata. In questo caso, si utilizza un puntatore a <code>void</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">void</span><span class="o">*</span><span class="w"> </span><span class="n">puntatore_generico</span><span class="p">;</span><span class="w"></span>
+</code></pre></div>
+<p>In pratica, un puntatore di questo tipo può essere utilizzato come generico placeholder, e non può essere in alcun modo dereferenziato. Nel momento in cui lo si vorrà utilizzare, inoltre, sarà necessario effettuare un cast al tipo cui si riferisce:</p>
+<div class="highlight"><pre><span></span><code><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">puntatore_char</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="p">)</span><span class="w"> </span><span class="n">puntatore_generico</span><span class="p">;</span><span class="w"></span>
+
+<span class="cp">## 19.5 - Puntatori ed array</span>
+
+<span class="n">Esiste</span><span class="w"> </span><span class="n">una</span><span class="w"> </span><span class="n">corrispondenza</span><span class="w"> </span><span class="n">pratica</span><span class="w"> </span><span class="n">tra</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">puntatori</span><span class="p">;</span><span class="w"> </span><span class="n">infatti</span><span class="p">,</span><span class="w"> </span><span class="n">dal</span><span class="w"> </span><span class="n">punto</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">vista</span><span class="w"> </span><span class="n">semantico</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">gli</span><span class="w"> </span><span class="n">array</span><span class="w"> </span><span class="n">sono</span><span class="w"> </span><span class="n">dei</span><span class="w"> </span><span class="n">particolari</span><span class="w"> </span><span class="n">tipi</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">puntatori</span><span class="o">*</span><span class="p">.</span><span class="w"> </span><span class="n">Infatti</span><span class="p">,</span><span class="w"> </span><span class="n">nel</span><span class="w"> </span><span class="n">momento</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">cui</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">dichiara</span><span class="w"> </span><span class="n">un</span><span class="w"> </span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">si</span><span class="w"> </span><span class="n">alloca</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">memoria</span><span class="w"> </span><span class="n">necessaria</span><span class="w"> </span><span class="n">sia</span><span class="w"> </span><span class="n">alla</span><span class="w"> </span><span class="n">struttura</span><span class="w"> </span><span class="n">dati</span><span class="w"> </span><span class="n">stessa</span><span class="p">,</span><span class="w"> </span><span class="n">sia</span><span class="w"> </span><span class="n">all</span><span class="err">&#39;</span><span class="n">area</span><span class="w"> </span><span class="n">puntata</span><span class="p">;</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">questo</span><span class="p">,</span><span class="w"> </span><span class="n">quindi</span><span class="p">,</span><span class="w"> </span><span class="n">che</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">necessario</span><span class="w"> </span><span class="n">definire</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">priori</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">lunghezza</span><span class="w"> </span><span class="n">dell</span><span class="err">&#39;</span><span class="n">array</span><span class="p">,</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="n">procedere</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="n">un</span><span class="err">&#39;</span><span class="n">allocazione</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">statico</span><span class="p">.</span><span class="w"></span>
+
+<span class="n">Interessante</span><span class="w"> </span><span class="n">anche</span><span class="w"> </span><span class="n">notare</span><span class="w"> </span><span class="n">come</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">puntatore</span><span class="w"> </span><span class="n">associato</span><span class="w"> </span><span class="n">all</span><span class="err">&#39;</span><span class="n">array</span><span class="w"> </span><span class="n">sia</span><span class="w"> </span><span class="n">dichiarato</span><span class="w"> </span><span class="n">costante</span><span class="w"> </span><span class="n">mediante</span><span class="w"> </span><span class="n">la</span><span class="w"> </span><span class="n">keyword</span><span class="w"> </span><span class="err">`</span><span class="k">const</span><span class="err">`</span><span class="p">.</span><span class="w"> </span><span class="n">La</span><span class="w"> </span><span class="n">conseguenza</span><span class="w"> </span><span class="n">diretta</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">questo</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">che</span><span class="w"> </span><span class="o">*</span><span class="n">l</span><span class="err">&#39;</span><span class="n">indirizzo</span><span class="w"> </span><span class="n">dell</span><span class="err">&#39;</span><span class="n">array</span><span class="w"> </span><span class="n">non</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">modificabile</span><span class="o">*</span><span class="p">;</span><span class="w"> </span><span class="n">una</span><span class="w"> </span><span class="n">conseguenza</span><span class="w"> </span><span class="n">indiretta</span><span class="p">,</span><span class="w"> </span><span class="n">ma</span><span class="w"> </span><span class="n">altrettanto</span><span class="w"> </span><span class="n">importante</span><span class="p">,</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">che</span><span class="w"> </span><span class="n">l</span><span class="err">&#39;</span><span class="n">array</span><span class="w"> </span><span class="n">non</span><span class="w"> </span><span class="n">può</span><span class="w"> </span><span class="n">essere</span><span class="w"> </span><span class="n">usato</span><span class="w"> </span><span class="n">come</span><span class="w"> </span><span class="n">l</span><span class="o">-</span><span class="n">value</span><span class="p">.</span><span class="w"> </span><span class="n">E</span><span class="p">,</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">definitiva</span><span class="p">,</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">questo</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">motivo</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">il</span><span class="w"> </span><span class="n">quale</span><span class="w"> </span><span class="n">una</span><span class="w"> </span><span class="n">serie</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">istruzioni</span><span class="w"> </span><span class="n">di</span><span class="w"> </span><span class="n">questo</span><span class="w"> </span><span class="n">tipo</span><span class="w"> </span><span class="n">non</span><span class="w"> </span><span class="n">è</span><span class="w"> </span><span class="n">valida</span><span class="o">:</span><span class="w"></span>
+
+<span class="err">```</span><span class="n">c</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">lista</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"></span>
+<span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+</code></pre></div>
+<h2 id="196-puntatori-e-funzioni">19.6 - Puntatori e funzioni<a class="headerlink" href="#196-puntatori-e-funzioni" title="Permanent link">&para;</a></h2>
+<p>Per una funzione è possibile avere un puntatore come valore di ritorno.</p>
+<p>Ricordiamo che il valore di ritorno è, come sempre, passato per valore: ciò garantisce quindi che il puntatore usato nell'ambito della funzione sia restituito correttamente. Ciò, tuttavia, non è garantito per la variabile puntata, che deve appartenere ad un ambito adeguato (e, quindi, non locale alla funzione), oppure essere dichiarata <code>static</code>.</p>
+<h2 id="197-esercizi">19.7 - Esercizi<a class="headerlink" href="#197-esercizi" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Scriviamo le funzioni, <code>mostra_puntatore_intero</code> e <code>mostra_puntatore_decimale</code>, che accettano, rispettivamente, un valore intero ed un valore reale. Le due funzioni non restituiscono alcun valore, e stampano a schermo l'indirizzo di memoria associato alla variabile passata come parametro.</li>
+<li>Scriviamo le funzioni <code>deferenzia_compara_intero</code> e <code>deferenzia_compara_decimale</code>, che accettano due argomenti in ingresso, ovvero una variabile ed un puntatore alla stessa. Come suggerisce il nome delle funzioni, la prima tratta valori interi, la seconda decimali. Le funzioni devono verificare la correttezza dell'operazione di dereferenziazione, ed in caso affermativo restituire il vlaore della variabile dereferenziata, mentre in caso negativo restituire il valore -1.</li>
+<li>Scriviamo la <code>restituisci_puntatore</code> che accetta come parametro un intero e restituisce il puntatore allo stesso. Verificare se l’indirizzo associato al puntatore restituito è lo stesso ottenuto utilizzando l’operatore <code>&amp;</code> all’interno della funzione chiamante.</li>
+<li>Scriviamo la funzione <code>puntatore_a_void</code> per creare un puntatore a void da associare poi ad una variabile di tipo <code>char</code> passata in ingresso.</li>
+</ol>
 
               
             </article>
@@ -450,10 +629,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c44cc438.min.js"></script>
       
         <script src="../../../../js/config.js"></script>
       

@@ -9,15 +9,15 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-8.2.6">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.8">
     
     
       
-        <title>7 - La complessità computazionale degli algoritmi - Corso di Informatica - Angelo Cardellicchio</title>
+        <title>07 - Complessità computazionale - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.9d5733d3.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.644de097.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.e6a45f82.min.css">
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              7 - La complessità computazionale degli algoritmi
+              07 - Complessità computazionale
             
           </span>
         </div>
@@ -193,12 +193,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       
       
@@ -219,12 +221,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       
       
@@ -334,12 +338,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1_2" type="checkbox" id="__nav_2_1_2" checked>
       
       
       
@@ -379,6 +385,188 @@
       <a href="../../06_structured/lecture/" class="md-nav__link">
         06 - Programmazione strutturata
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          07 - Complessità computazionale
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        07 - Complessità computazionale
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#71-un-primo-rapido-esempio" class="md-nav__link">
+    7.1 - Un primo, rapido, esempio
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#72-tipi-di-analisi-computazionale" class="md-nav__link">
+    7.2 - Tipi di analisi computazionale
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2 - Tipi di analisi computazionale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-analisi-a-priori" class="md-nav__link">
+    7.2.1 - Analisi a priori
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-analisi-a-posteriori" class="md-nav__link">
+    7.2.2 - Analisi a posteriori
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#73-complessita-spaziale-e-temporale" class="md-nav__link">
+    7.3 - Complessità spaziale e temporale
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3 - Complessità spaziale e temporale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#731-complessita-spaziale" class="md-nav__link">
+    7.3.1 - Complessità spaziale
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3.1 - Complessità spaziale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7311-un-esempio-piu-strutturato-parte-1" class="md-nav__link">
+    7.3.1.1 - Un esempio più strutturato - Parte 1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#732-complessita-temporale" class="md-nav__link">
+    7.3.2 - Complessità temporale
+  </a>
+  
+    <nav class="md-nav" aria-label="7.3.2 - Complessità temporale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7312-un-esempio-piu-strutturato-parte-2" class="md-nav__link">
+    7.3.1.2 Un esempio più strutturato - Parte 2
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#74-complessita-di-caso-peggiore" class="md-nav__link">
+    7.4 - Complessità di caso peggiore
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4 - Complessità di caso peggiore">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#741-alcuni-esempi" class="md-nav__link">
+    7.4.1 Alcuni esempi
+  </a>
+  
+    <nav class="md-nav" aria-label="7.4.1 Alcuni esempi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#7411-ciclo-for-semplice" class="md-nav__link">
+    7.4.1.1 Ciclo for (semplice)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7412-cicli-for-annidati" class="md-nav__link">
+    7.4.1.2 Cicli for annidati
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#75-esercizi" class="md-nav__link">
+    7.5 - Esercizi
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -715,6 +903,26 @@ endfor
       
         <footer class="md-footer">
   
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../06_structured/lecture/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 06 - Programmazione strutturata" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              06 - Programmazione strutturata
+            </div>
+          </div>
+        </a>
+      
+      
+    </nav>
+  
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
@@ -739,10 +947,10 @@ endfor
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.5e67fbfe.min.js"}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.5e67fbfe.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.e87a5f81.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c44cc438.min.js"></script>
       
         <script src="../../../../js/config.js"></script>
       
