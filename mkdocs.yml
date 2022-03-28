@@ -11,6 +11,7 @@ nav:
       - Parte 2 - Principi di programmazione:
         - 05 - Diagrammi di flusso: material/02_principles/05_flow_chart/lecture.md
         - 06 - Programmazione strutturata: material/02_principles/06_structured/lecture.md
+        - 07 - Complessità computazionale: material/02_principles/07_complexity/lecture.md
 
 
 theme:

@@ -1,6 +1,18 @@
 # 23 - Introduzione a Python
 
-## 23.1 - Premessa: Python e tipizzazione
+Prima di iniziare a parlare del linguaggio Python, è opportuno verificare che l'interprete sia installato nel nostro sistema. Per farlo, apriamo un terminale (Shell o Command Prompt, a seconda del nostro sistema), e scriviamo:
+
+```sh
+$ python
+```
+
+Se apparirà una schermata simile a quella mostrata in figura, Python sarà già correttamente presente nel nostro sistema.
+
+![python_interpreter](./images/python_interpreter.png)
+
+In alternativa, dovremo provvedere ad installarlo seguendo la procedura indicata sul [sito ufficiale](https://www.python.org/), ed aggiungerlo al path di sistema.
+
+## 23.1 - Python e tipizzazione
 
 ### 23.1.1 - Tipizzazione dinamica
 
@@ -30,7 +42,7 @@ fVar + 1.1;
 In Python questo non sarà necessario, e potremo effettuare direttamente le operazioni desiderate:
 
 ```py
-var + 1.1
+var + 1.1			# Il risultato sarà 2.1
 ```
 
 Questo può apparentemente semplificare di molto la vita, in quanto non è più necessario preoccuparsi del tipo della variabile. Non è però tutto oro ciò che luccica: per comprenderlo, infatti, è il momento di parlare del (pilatesco) principio del *duck typing*.
@@ -52,22 +64,13 @@ L'utilità del duck typing è evidente: permette allo sviluppatore di "risparmia
 
 ## 23.2 - L'interprete Python
 
-Python offre un interprete accessibile al programmatore direttamente dalla riga di comando.
-
-Dopo averlo installato (è possibile farlo seguendo le istruzioni presenti sul [sito ufficiale](https://www.python.org/)) ed essersi assicurati che il launcher sia stato aggiunto al path di sistema, possiamo lanciarlo tramite riga di comando. Per prima cosa, comunque, assicuriamoci che sia tutto a posto controllando la versione installata di Python:
-
-```sh
-$ python --version
-python3.9.1
-```
-
-A questo punto, lanciamo l'interprete:
+Nella sezione introduttiva abbiamo visto come installare l'interprete Python, in modo da avere un ambiente di lavoro accessibile direttamente mediante riga di comando. Lanciamolo di nuovo usando il seguente comando da una shell:
 
 ```sh
 python
 ```
 
-Possiamo quindi iniziare ad usare Python.
+Potremo quindi finalmente iniziare ad utilizzare Python.
 
 ## 23.3 - Calcoli e numeri
 
@@ -455,7 +458,3 @@ Proviamo ad estendere ulteriormente la lista cambiando il primo elemento con una
 >>> lista
 ['Python', 2, 3, 4, [1, 2, 3]]
 ```
-
-## Conclusioni
-
-Abbiamo dato una rapida introduzione al linguaggio Python, soffermandoci su alcune dei tipi di dati più usati, come numeri, stringhe e liste. Nelle prossime sezioni, torneremo sulle liste, ed approfondiremo altri tipi di iterabili, come tuple e dizionari.
