@@ -1,7 +1,5 @@
 # 1 - Introduzione: cosa è l'Informatica?
 
-> *Le slides di questa lezione sono disponibili [qui](./slides/01%20-%20Introduzione%20all'Informatica.pdf)*.
-
 Come per molti degli argomenti cui ci si approccia nel corso della vita, trovare una definizione per il concetto di _informatica_ può aiutare a comprenderne al meglio la natura.
 
 Partiamo quindi da una (breve) analisi etimologica del termine _informatica_. Questo, infatti, è la traduzione italiana del francese _informatique_, crasi delle parole _informa(tion)_ ed _(automa)tique_. Intuitivamente, possiamo dedurre che la disciplina tratti quindi di "informazioni automatiche" o, per meglio dire, _automatizzazione delle informazioni_.
