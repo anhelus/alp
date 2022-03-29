@@ -1,7 +1,5 @@
 # 2 - Introduzione agli algoritmi
 
-> *Le slides di questa lezione sono disponibili [qui](./slides/02%20-%20Introduzione%20agli%20algoritmi.pdf)*.
-
 ## 2.1 - Formulare un problema
 
 Per comprendere gli algoritmi, partiamo definendo il concetto di _problema_.
