@@ -166,27 +166,3 @@ endfor
 ```
 
 Per ogni iterazione del ciclo esterno (quello che usa come contatore la variabile `i`) avremo *n* iterazioni del ciclo interno (quello che usa come contatore la variabile `j`). La complessità temporale di caso peggiore sarà quindi $O(n^2)$; per quello che riguarda invece la complessità spaziale, invece, assumendo un meccanismo analogo al precedente, avremo sempre $O(1)$.V
-
-## 7.5 - Esercizi
-
-1. Calcolare la complessità di caso peggiore (spaziale e temporale) di una sequenza di $m$ istruzioni; si tenga a mente che se la complessità è costante, allora si ha un $O{1}$.
-2. Calcolare la complessità di caso peggiore (spaziale e temporale) di un ciclo while.
-3. Calcolare la complessità di caso peggiore (spaziale e temporale) del seguente algoritmo:
-
-	```linenums="1"
-	for i che va da 1 a 10:
-		if i * 2 è pari:
-			for j che va da 1 a 10:
-				calcola i + j;
-			endfor
-		endif
-	endfor
-	```
-
-4. Supponiamo di ricevere due prestiti. Il primo prestito, dell'importo totale di 1000 €, ci viene garantito dalla Banca di Paperopoli il 01/04/2022. Il secondo prestito, dell'importo di 100 €, ci viene garantito dalla Banca di Topolinia lo stesso giorno. Successivamente, apriamo un filone di credito presso la banca di Topolinia, e per i 99 giorni successivi al 01/04 riceviamo 100 € al giorno. Calcolare:
-
-	* il valore totale dei due prestiti al primo giorno e dopo 100 giorni;
-	* quanto incide (in percentuale) ciascun prestito sul totale al primo giorno;
-	* quanto incide (in percentuale) ciascun prestito sul totale al centesimo giorno.
-
-Spiegare questi concetti riconducendoli alle nozioni di complessità computazionale.
