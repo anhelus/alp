@@ -17,6 +17,8 @@ nav:
         - 10 - Strutture dati: material/02_principles/10_data_structures/lecture.md
     - Esercizi svolti:
       - E07 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
+    - Appendici:
+      - Installazione di Visual Studio Community: magerial/appendix/01_vs_comm/guide.md
 
 theme:
   name: material
