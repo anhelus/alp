@@ -13,7 +13,7 @@
     
     
       
-        <title>Installazione e configurazione di C/C++ - Corso di Informatica - Angelo Cardellicchio</title>
+        <title>Appendice A - Installazione di Visual Studio Community - Corso di Informatica - Angelo Cardellicchio</title>
       
     
     
@@ -61,7 +61,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#installazione-e-configurazione-di-cc" class="md-skip">
+        <a href="#appendice-a-installazione-di-visual-studio-community" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Installazione e configurazione di C/C++
+              Appendice A - Installazione di Visual Studio Community
             
           </span>
         </div>
@@ -501,6 +501,53 @@
 
             
           
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_3" type="checkbox" id="__nav_2_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2_3">
+          Appendici
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendici" data-md-level="2">
+        <label class="md-nav__title" for="__nav_2_3">
+          <span class="md-nav__icon md-icon"></span>
+          Appendici
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../magerial/appendix/01_vs_comm/guide.md" class="md-nav__link">
+        Installazione di Visual Studio Community
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -527,28 +574,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#installazione-del-supporto" class="md-nav__link">
-    Installazione del supporto
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creazione-di-un-progetto" class="md-nav__link">
-    Creazione di un progetto
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -561,38 +586,18 @@
                 
 
 
-<h1 id="installazione-e-configurazione-di-cc">Installazione e configurazione di C/C++<a class="headerlink" href="#installazione-e-configurazione-di-cc" title="Permanent link">&para;</a></h1>
-<p>Una volta installato il software Visual Studio Community (VS), reperibile al seguente <a href="https://visualstudio.microsoft.com/it/downloads/">link</a>, dovremo configurarlo per poter lanciare il compilatore nei diversi linguaggi che utilizzeremo durante le esercitazioni.</p>
-<h3 id="installazione-del-supporto">Installazione del supporto<a class="headerlink" href="#installazione-del-supporto" title="Permanent link">&para;</a></h3>
-<p>Per prima cosa, installiamo gli strumenti per lo sviluppo di applicazioni in C e C++. Eseguiamo il programma <strong>Visual Studio Installer</strong> dal menu Start. Si aprirà una schermata come la seguente:</p>
-<p><img alt="vs_workloads" src="../../assets/images/appendici/vs_workloads.png" /></p>
-<p>Dal menu che si apre, selezioniamo l'opzione <strong>Sviluppo di applicazioni desktop con C++</strong> mediante il segno di spunta.</p>
-<div class="admonition note">
-<p class="admonition-title">Nota</p>
-</div>
-<p>Qualora non dovesse aprirsi la schermata precedente, ma una schermata in cui sono mostrate tutte le possibili installazioni di Visual Studio, selezioniamo l'opzione <strong>Modifica</strong>.</p>
-<h3 id="creazione-di-un-progetto">Creazione di un progetto<a class="headerlink" href="#creazione-di-un-progetto" title="Permanent link">&para;</a></h3>
-<p>Una volta installati i tool per lo sviluppo, eseguiamo il programma <strong>Visual Studio 2019</strong> dal menu Start. Si aprirà la seguente schermata:</p>
-<p><img alt="vs_comm_create_proj" src="../../assets/images/appendici/vs_community/create_proj.png" /></p>
-<p>Selezioniamo l'opzione <strong>Crea un nuovo progetto</strong>. Apparirà la seguente schermata:</p>
-<p><img alt="vs_comm_select_proj" src="../../assets/images/appendici/vs_community/select_proj.png" /></p>
-<p>Selezioniamo prima <strong>App console C++</strong> a sinistra, e poi <strong>Progetto vuoto</strong> o <strong>App Console</strong> a destra. Scegliamo quindi l'opzione <strong>Avanti</strong>.</p>
-<p>Diamo un nome al progetto (ad esempio, <strong>Primo progetto</strong>) ed alla soluzione (ad esempio, <strong>Prima soluzione</strong>), scegliamo la cartella in cui salvare il tutto, e scegliamo l'opzione <strong>Crea</strong>.</p>
-<p>Se abbiamo scelto <strong>App Console</strong>, apparirà già un progetto di esempio. Qualora scegliessimo <strong>Progetto vuoto</strong>, apparirà la seguente schermata.</p>
-<p><img alt="vs_comm_empty_proj" src="../../assets/images/appendici/vs_community/empty_proj.png" /></p>
-<p>In quest'ultimo caso, selezioniamo clicchiamo con il destro sulla cartella (mostrata nel menu a destra) chiamata <strong>File di origine</strong> e selezioniamo dal menu che appare <strong>Aggiungi &gt; Nuovo Elemento</strong>. Da qui possiamo creare direttamente un file C++, oppure un file C modificandone manualmente l'estensione. Creiamo un file chiamato <code>HelloWorld.c</code> ed aggiungiamolo al nostro progetto.</p>
-<p><img alt="vs_comm_create_source" src="../../assets/images/appendici/vs_community/create_source.png" /></p>
-<p>Aggiungiamo il seguente codice:</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello, World! </span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
-<p>Eseguiamo il nostro programma premendo Ctrl + F5, oppure scegliendo l'opzione <strong>Avvia senza eseguire Debug</strong> dal menu <strong>Debug</strong>. Se tutto è andato a buon fine, apparirà la seguente finestra:</p>
-<p><img alt="vs_comm_hello_world" src="../../assets/images/appendici/vs_community/hello_world.png" /></p>
+<h1 id="appendice-a-installazione-di-visual-studio-community">Appendice A - Installazione di Visual Studio Community<a class="headerlink" href="#appendice-a-installazione-di-visual-studio-community" title="Permanent link">&para;</a></h1>
+<ol>
+<li>Andare al seguente <a href="https://visualstudio.microsoft.com/it/vs/community/">indirizzo</a>, e selezionare l'opzione <strong>Scarica Visual Studio</strong>.</li>
+<li>Si aprirà un'altra pagina, e verrà scaricato un file chiamato <code>VisualStudioSetup.exe</code> (o similari nel caso di installazione via MacOS). Lanciarlo per avviare il programma di installazione.</li>
+<li>Confermare la procedura di installazione di <strong>Visual Studio Installer</strong>.</li>
+<li>Una volta terminato il download dei file necessari, apparirà la schermata di <strong>Visual Studio Installer</strong>. Selezionare la versione Community, ed attendere il termine della procedura di installazione.</li>
+<li>Selezionare <strong>Modifica</strong>. Si aprirà l'interfaccia mostrata in figura.</li>
+</ol>
+<p><img alt="conf" src="../images/conf.png" /></p>
+<ol start="6">
+<li>Selezioniamo la casella di spunta a destra di <strong>Sviluppo di applicazioni desktop con C++</strong>, premiamo il pulsante <strong>Modifica</strong> in basso a destra, ed attendiamo il termine dell'installazione.</li>
+</ol>
 
               
             </article>
