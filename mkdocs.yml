@@ -15,6 +15,8 @@ nav:
         - 08 - Variabili: material/02_principles/08_variables/lecture.md
         - 09 - Funzioni: material/02_principles/09_functions/lecture.md
         - 10 - Strutture dati: material/02_principles/10_data_structures/lecture.md
+      - Parte 3 - Linguaggio C:
+        - 14 - Introduzione al C: material/03_c_language/14_intro/lecture.md
     - Esercizi svolti:
       - E07 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
     - Appendici:
