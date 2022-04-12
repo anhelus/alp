@@ -87,6 +87,7 @@ In pratica, un puntatore di questo tipo può essere utilizzato come generico pla
 
 ```c
 char* puntatore_char = (char*) puntatore_generico;
+```
 
 ## 19.5 - Puntatori ed array
 
