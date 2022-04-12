@@ -1,28 +1,35 @@
-site_name: Corso di Informatica - Angelo Cardellicchio
+site_name: Algoritmi e Linguaggi di Programmazione Python/C
 nav:
   - Home del corso: index.md
-  - Materiale didattico:
-    - Teoria:
-      - Parte 1 - Concetti introduttivi:
-        - 01 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
-        - 02 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-        - 03 - Rappresentazione binaria e decimale: material/01_intro/03_dec_bin/lecture.md
-        - 04 - Tipi di dato: material/01_intro/04_data_type/lecture.md
-      - Parte 2 - Principi di programmazione:
-        - 05 - Diagrammi di flusso: material/02_principles/05_flow_chart/lecture.md
-        - 06 - Programmazione strutturata: material/02_principles/06_structured/lecture.md
-        - 07 - Complessità computazionale: material/02_principles/07_complexity/lecture.md
-        - 08 - Variabili: material/02_principles/08_variables/lecture.md
-        - 09 - Funzioni: material/02_principles/09_functions/lecture.md
-        - 10 - Strutture dati: material/02_principles/10_data_structures/lecture.md
-      - Parte 3 - Linguaggio C:
-        - 14 - Introduzione al C: material/03_c_language/14_intro/lecture.md
-        - 15 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/lecture.md
-        - 17 - Operatori in C: material/03_c_language/17_operators/lecture.md
-    - Esercizi svolti:
-      - E07 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
-    - Appendici:
-      - Installazione di Visual Studio Community: material/appendix/01_vs_comm/guide.md
+  - Parte 1 - Concetti introduttivi:
+    - 01 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
+    - 02 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
+    - 03 - Rappresentazione binaria e decimale: material/01_intro/03_dec_bin/lecture.md
+    - 04 - Tipi di dato: material/01_intro/04_data_type/lecture.md
+  - Parte 2 - Principi di programmazione:
+    - 05 - Diagrammi di flusso: material/02_principles/05_flow_chart/lecture.md
+    - 06 - Programmazione strutturata: material/02_principles/06_structured/lecture.md
+    - 07 - Complessità computazionale: material/02_principles/07_complexity/lecture.md
+    - 08 - Variabili: material/02_principles/08_variables/lecture.md
+    - 09 - Funzioni: material/02_principles/09_functions/lecture.md
+    - 10 - Strutture dati: material/02_principles/10_data_structures/lecture.md
+    - 11 - Ricorsione: material/02_principles/11_recursion/lecture.md
+    - 12 - Paradigmi di programmazione: material/02_principles/12_paradigms/lecture.md
+    - 13 - Strutture dati avanzate: material/02_principles/13_adv_data_structures/lecture.md
+  - Parte 3 - Linguaggio C:
+    - 14 - Introduzione al C: material/03_c_language/14_intro/lecture.md
+    - 15 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/lecture.md
+    - 16 - Ambito di una variabile: material/03_c_language/16_scope/lecture.md
+    - 17 - Operatori in C: material/03_c_language/17_operators/lecture.md
+    - 18 - Array in C: material/03_c_language/18_arrays/lecture.md
+    - 19 - Puntatori: material/03_c_language/19_pointers/lecture.md
+    - 20 - Gestione della memoria: material/03_c_language/20_memory/lecture.md
+    - 21 - I/O e file: material/03_c_language/21_io_files/lecture.md
+    - 22 - Typedef, struct ed union: material/03_c_language/22_typedef/lecture.md
+  - Esercizi svolti:
+    - E07 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
+  - Appendici:
+    - Installazione di Visual Studio Community: material/appendix/01_vs_comm/guide.md
 
 theme:
   name: material
@@ -70,7 +77,7 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
 
-copyright: Copyright &copy; 2021 Angelo Cardellicchio - Rilasciato con licenza MIT
+copyright: Copyright &copy; Angelo Cardellicchio - Rilasciato con licenza MIT
 
 google_analytics:
   - G-J2XESD8WDV

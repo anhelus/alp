@@ -6,7 +6,7 @@ La memoria di un calcolatore è tipicamente divisa in tre sezioni:
 * lo *stack*, nel quale le variabili vengono dichiarate, inizializzate a runtime, e che agisce secondo una logica LIFO;
 * la *code section*, dove viene memorizzato il programma a runtime.
 
-Questa disposizione della memoria ci permette quindi di allocarla (ovvero *assegnarla*) secondo due modalità, ovvero *statica* e *dinamica*.
+Questa disposizione della memoria ci permette quindi di allocarla (ovvero *assegnarla*) secondo due modalità, *statica* e *dinamica*.
 
 ## 20.1 - Allocazione statica della memoria
 
