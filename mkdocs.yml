@@ -33,6 +33,7 @@ nav:
     - E07 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
   - Appendici:
     - Installazione di Visual Studio Community: material/appendix/01_vs_comm/guide.md
+    - Installazione di Python e Visual Studio Code: material/appendix/02_python_vs_code/guide.md
 
 theme:
   name: material
