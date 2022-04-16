@@ -4,7 +4,7 @@ Quello di *puntatore* è un concetto estremamente importante per la comprensione
 
 In particolare, un puntatore è, nei fatti, una variabile che contiene l'indirizzo di memoria dove risiede un'altra variabile. Per meglio comprendere questo concetto, osserviamo la seguente figura.
 
-![pointers](./images/pointers.png)
+![pointers](./images/pointers.png){: .center}
 
 Analizziamo brevemente la figura precedente. Ad esempio, la variabile di nome `ch`, il cui valore è pari ad `l`, risiede nell'indirizzo di memoria `0x100000`; la variabile `bs`, intero di valore `2`, risiede nell'indirizzo di memoria immediatamente adiacente, ovvero `0x100001`, e via discorrendo; un puntatore ci permette quindi di tenere traccia di questi valori.
 

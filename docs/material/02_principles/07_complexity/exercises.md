@@ -44,7 +44,7 @@ Cosa accadrebbe se la Banca di Paperopoli ci facesse 100 bonifici al giorno per 
 
 Una sequenza di $m$ istruzioni è data da un diagramma di flusso simile a questo.
 
-![ex_1](./images/ex_1.png)
+![ex_1](./images/ex_1.png){: .center}
 
 Di conseguenza, dato che la complessità legata a ciascuna istruzione è unitaria, la complessità di caso peggiore sarà approssimabile ad un $O(1)$.
 
@@ -52,7 +52,7 @@ Di conseguenza, dato che la complessità legata a ciascuna istruzione è unitari
 
 Definiamo un ciclo `while` mediante un diagramma di flusso simile a questo, direttamente dall'esercizio 3 sulle strutture dati.
 
-![ex_2](./images/ex_2.png)
+![ex_2](./images/ex_2.png){: .center}
 
 In questo caso, il numero di operazioni non è deterministico, ma dipende dalla funzione `genera_magia`, che abbiamo definito essere randomica.
 
@@ -62,7 +62,7 @@ Supponendo che la funzione generi un numero superiore a 10 con probabilità pari
 
 Partiamo dalla costruzione del diagramma di flusso dell'algoritmo, che è quello riportato nella seguente figura.
 
-![ex_3](./images/ex_3.png)
+![ex_3](./images/ex_3.png){: .center}
 
 Notiamo subito la presenza di due cicli `for` annidati l'uno dentro l'altro. Entrambi i cicli prevedono dieci iterazioni ciascuno; tuttavia, il ciclo interno sarà eseguito dieci volte per ciascuna iterazione del ciclo esterno. Di conseguenza, il numero totale di iterazioni sarà dato dalla moltiplicazione delle iterazioni previste per il ciclo interno (ovvero dieci) per quelle previste per il ciclo esterno (sempre dieci), ovvero 100.
 

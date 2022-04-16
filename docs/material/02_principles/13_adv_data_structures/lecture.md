@@ -109,7 +109,7 @@ Il concetto di grafo può essere compreso in maniera intuitiva partendo da quell
 
 Chiunque abbia un account su Facebook, infatti, ha una serie più o meno estesa di "collegamenti", i quali a loro volta possono essere collegati tra loro, andando a creare una sorta di "intreccio" di relazioni. Rappresentando ciascun account con un punto, e tutti i collegamenti mediante delle linee, avremmo una situazione più o meno simile a quella che vediamo nella figura seguente.
 
-![social_network](./images/social_network.png)
+![social_network](./images/social_network.png){: .center}
 
 Notiamo anche che, nella maggior parte dei casi, la conoscenza tra due persone è *bidirezionale*: ovvero, dato che noi conosciamo una certa persona, questa persona ci conoscerà a sua volta.
 
@@ -161,7 +161,7 @@ Definiamo inoltre altre due condizioni.
 
 Facciamo un esempio pratico. Immaginiamo che Bob voglia conoscere Eric; come è possibile notare, non esiste alcun grafo che li collega. Tuttavia, Bob ha due strade: la prima è quella di chiedere ad Alice di presentargli Charlie, che potrebbe a sua volta introdurgli Eric. La seconda, invece, prevede che Bob si metta in contatto con David, che potrà direttamente introdurgli Eric.
 
-![path](./images/path.png)
+![path](./images/path.png){: .center}
 
 Abbiamo quindi individuato due cammini tra Bob ed Eric, di cui uno (quello che passa per David) è da considerarsi minimo, in quanto tiene conto del numero minimo di vertici e lati intercorrenti tra il nodo di partenza e quello di arrivo.
 
@@ -171,7 +171,7 @@ Per quello che riguarda i cicli, quello che va da Alice verso Bob verso David e 
 
 E' possibile che a tutti gli archi di un grafo sia associato un *peso*, ovvero un valore numerico. In uno degli esempi precedenti, ovvero quello delle vie e degli incroci, potremmo associare ad ogni strada un numero indicativo della sua lunghezza in metri:
 
-![weighted_graph](./images/weighted_graph.png)
+![weighted_graph](./images/weighted_graph.png){: .center}
 
 Un grafo i cui archi hanno dei pesi è chiamato *grafo pesato*. Ovviamente, per trovare il cammino minimo in un grafo di questo tipo, dovremo tenere conto del valore dei pesi: nella figura precedente, infatti, TODO: esempio
 
@@ -181,7 +181,7 @@ Un concetto *cugino* di quello di grafo è quello di *albero*, struttura dati pa
 
 Per comprendere al meglio la struttura di un albero, vediamo quella che è la "geneaologia" della razza umana (in versione *volutamente* semplificata):
 
-![tree](./images/tree.png)
+![tree](./images/tree.png){: .center}
 
 In particolare, notiamo come a partire da un "antenato comune" (il famoso "anello mancante") si siano evoluti diversi *rami* dell'albero, ognuno afferente ad un diverso genere, di cui gli ultimi esemplari rappresentano i nodi foglia; nel nostro caso, l'Homo sapiens è la foglia del ramo rappresentativo del genere Homo.
 
