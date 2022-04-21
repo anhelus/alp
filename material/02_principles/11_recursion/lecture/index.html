@@ -697,14 +697,14 @@
       
       
         <label class="md-nav__link" for="__nav_5">
-          Esercizi svolti
+          Parte 4 - Linguaggio Python
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Esercizi svolti" data-md-level="1">
+      <nav class="md-nav" aria-label="Parte 4 - Linguaggio Python" data-md-level="1">
         <label class="md-nav__title" for="__nav_5">
           <span class="md-nav__icon md-icon"></span>
-          Esercizi svolti
+          Parte 4 - Linguaggio Python
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -714,8 +714,64 @@
   
   
     <li class="md-nav__item">
-      <a href="../../07_complexity/exercises/" class="md-nav__link">
-        E07 - Complessità computazionale
+      <a href="../../../04_python/23_intro/lecture/" class="md-nav__link">
+        23 - Introduzione al Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/24_syntax/lecture/" class="md-nav__link">
+        24 - Concetti sintattici fondamentali di Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/25_data_structures/lecture/" class="md-nav__link">
+        25 - Strutture dati in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/26_classes/lecture/" class="md-nav__link">
+        26 - OOP in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/27_modules/lecture/" class="md-nav__link">
+        27 - Moduli e script in Python
       </a>
     </li>
   
@@ -745,12 +801,116 @@
       
       
         <label class="md-nav__link" for="__nav_6">
+          Esercizi svolti
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Esercizi svolti" data-md-level="1">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Esercizi svolti
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../07_complexity/exercises/" class="md-nav__link">
+        E7 - Complessità computazionale
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/23_intro/exercises/" class="md-nav__link">
+        E23 - Introduzione al Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/24_syntax/exercises/" class="md-nav__link">
+        E24 - Concetti sintattici fondamentali di Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/25_data_structures/exercises/" class="md-nav__link">
+        E25 - Strutture dati in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../04_python/26_classes/exercises/" class="md-nav__link">
+        E26 - OOP in Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_7">
           Appendici
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" aria-label="Appendici" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+        <label class="md-nav__title" for="__nav_7">
           <span class="md-nav__icon md-icon"></span>
           Appendici
         </label>
@@ -764,6 +924,20 @@
     <li class="md-nav__item">
       <a href="../../../appendix/01_vs_comm/guide/" class="md-nav__link">
         Installazione di Visual Studio Community
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../appendix/02_python_vs_code/guide/" class="md-nav__link">
+        Installazione di Python e Visual Studio Code
       </a>
     </li>
   
@@ -919,7 +1093,7 @@ n! = n \cdot (n-1)! = n \cdot (n-1) \cdot (n-2)! = \ldots = n \cdot (n-1) \cdot 
 </code></pre></div>
 <p>Analizziamo il comportamento della funzione. Se <code>n</code> è maggiore di zero, la funzione restituirà il prodotto tra <code>n</code> ed il risultato della funzione <code>factorial</code> applicata ad <code>n - 1</code>. La funzione quindi "chiama sè stessa", usando parametri differenti, fino a che non ci si ritrova nel caso base, e viene restituito <code>1</code>.</p>
 <p>Ci si potrebbe chiedere come faccia la funzione ricorsiva a restituire il valore complessivo di <span class="arithmatex">\(n!\)</span>. La risposta è da ricercarsi nel modo in cui sono memorizzati i dati durante la ricorsione: infatti, questi vengono organizzati secondo un <em>call stack</em> (traducibile in "stack di chiamate"), che conserva al suo interno i risultati derivanti dalle precedenti chiamate a funzione. Questo concetto è riassunto nella seguente figura, che mostra il call stack per il calcolo ricorsivo del fattoriale di 4.</p>
-<p><img alt="recursion" src="../images/call_stack.png" /></p>
+<p><img alt="recursion" class="center" src="../images/call_stack.png" /></p>
 
               
             </article>
