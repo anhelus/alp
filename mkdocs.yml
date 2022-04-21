@@ -34,6 +34,7 @@ nav:
     - 27 - Moduli e script in Python: material/04_python/27_modules/lecture.md
   - Esercizi svolti:
     - E7 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
+    - E16 - Ambito di una variabile: material/03_c_language/16_scope/exercises.md
     - E23 - Introduzione al Python: material/04_python/23_intro/exercises.md
     - E24 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/exercises.md
     - E25 - Strutture dati in Python: material/04_python/25_data_structures/exercises.md
