@@ -16,7 +16,7 @@ Un flow chart è uno strumento prettamente *visivo*, atto a schematizzare il flu
 
 Un diagramma di flusso può avere al suo interno diverse componenti, le più importanti delle quali sono visualizzate nella tabella successiva.
 
-![tabella_flow_chart](./images/tabella_flow_chart.png)
+![tabella_flow_chart](./images/tabella_flow_chart.png){: .center}
 
 In particolare:
 
@@ -30,7 +30,7 @@ In particolare:
 
 Nella seguente figura mostriamo un esempio di diagramma di flusso.
 
-![es_flow_chart](./images//es_flow_chart.png)
+![es_flow_chart](./images//es_flow_chart.png){: .center}
 
 Vediamo come il diagramma inizi con un'ellisse, che sarà contrassegnata dalla scritta START (inserita arbitrariamente). Immediatamente dopo, vi sarà la lettura di due variabili, ovvero $c_1$ e $c_2$; a quel punto, vi sarà l'assegnazione di altre tre variabili, con infine la variabile $v_3$ scritta su un dispositivo di output, seguita dal simbolo di fine algoritmo.
 

@@ -26,10 +26,21 @@ nav:
     - 20 - Gestione della memoria: material/03_c_language/20_memory/lecture.md
     - 21 - I/O e file: material/03_c_language/21_io_files/lecture.md
     - 22 - Typedef, struct ed union: material/03_c_language/22_typedef/lecture.md
+  - Parte 4 - Linguaggio Python:
+    - 23 - Introduzione al Python: material/04_python/23_intro/lecture.md
+    - 24 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/lecture.md
+    - 25 - Strutture dati in Python: material/04_python/25_data_structures/lecture.md
+    - 26 - OOP in Python: material/04_python/26_classes/lecture.md
+    - 27 - Moduli e script in Python: material/04_python/27_modules/lecture.md
   - Esercizi svolti:
-    - E07 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
+    - E7 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
+    - E23 - Introduzione al Python: material/04_python/23_intro/exercises.md
+    - E24 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/exercises.md
+    - E25 - Strutture dati in Python: material/04_python/25_data_structures/exercises.md
+    - E26 - OOP in Python: material/04_python/26_classes/exercises.md
   - Appendici:
     - Installazione di Visual Studio Community: material/appendix/01_vs_comm/guide.md
+    - Installazione di Python e Visual Studio Code: material/appendix/02_python_vs_code/guide.md
 
 theme:
   name: material

@@ -6,6 +6,6 @@
 4. Una volta terminato il download dei file necessari, apparirà la schermata di **Visual Studio Installer**. Selezionare la versione Community, ed attendere il termine della procedura di installazione.
 5. Selezionare **Modifica**. Si aprirà l'interfaccia mostrata in figura.
 
-![conf](./images/conf.png)
+![conf](./images/conf.png){: .center}
 
 6. Selezioniamo la casella di spunta a destra di **Sviluppo di applicazioni desktop con C++**, premiamo il pulsante **Modifica** in basso a destra, ed attendiamo il termine dell'installazione.

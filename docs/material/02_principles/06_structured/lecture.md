@@ -37,7 +37,7 @@ distanza = (distanza_x + distanza_y)^(1/2);
 
 La sequenza di operazioni sarà quella mostrata nella seguente figura:
 
-![sequence](./images/sequence.png)
+![sequence](./images/sequence.png){: .center}
 
 Come si può notare, il flusso delle istruzioni è *unico*, e queste sono eseguite l'una di seguito all'altra, ovverosia in maniera sequenziale.
 
@@ -63,7 +63,7 @@ else:
 
 I due rami del programma sono quindi rappresentati dal THEN e dall'ELSE, mentre la condizione dall'IF. Graficamente:
 
-![selection](./images/selection.png)
+![selection](./images/selection.png){: .center}
 
 #### 6.3.2.1 - I costrutti ELSE IF e SWITCH
 
@@ -82,7 +82,7 @@ else:
 
 Vediamo subito come il costrutto ci permetta di ovviare ad una "mancanza" del programma precedente, gestendo anche il caso in cui $a$ sia uguale a $b$. Dal punto di vista del diagramma di flusso, l'ELSE IF è rappresentabile mediante una "cascata" di selezioni:
 
-![if_then_else](./images/if_then_else.png)
+![if_then_else](./images/if_then_else.png){: .center}
 
 Il costrutto SWITCH è usato per verificare che una certa variabile assuma un dato valore, chiamato `case` (da cui il nome SWITCH-CASE con cui il costrutto è anche conosciuto), normalmente non relativo ad un intervallo, quanto piuttosto ben specifico. Qualora la variabile di controllo rispetti il valore definito da un case, le istruzioni ivi contenute saranno eseguite fino all'uscita dal costrutto.
 
@@ -120,7 +120,7 @@ scrivi 'fine';
 
 Schematizziamo il funzionamento dell'iterazione nella figura successiva:
 
-![iteration](./images/iteration.png)
+![iteration](./images/iteration.png){: .center}
 
 Risulta particolarmente interessante notare come l'iterazione (espressa in questo caso da un'istruzione FOR) non faccia altro che verificare una condizione su una variabile contatore (ovvero che i sia minore od uguale a 10), modificando la stessa ad ogni iterazione. Una volta che la condizione sul contatore non sarà più verificata, il programma continuerà la sua esecuzione.
 

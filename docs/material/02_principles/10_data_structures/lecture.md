@@ -25,13 +25,13 @@ array = [8, 5, 12, 7, 4]
 
 In particolare, il precedente array è composto da elementi di tipo intero, ed ha una lunghezza pari a cinque elementi. Da notare che nella maggior parte dei linguaggi di programmazione l'indice del primo elemento *non* è pari ad uno, ma a zero. La figura successiva esplicita adeguatamente questo concetto.
 
-![array](./images/array.png)
+![array](./images/array.png){: .center}
 
 ## 10.2 - Liste
 
 Una *lista*, conosciuta anche con il nome di *linked list*, è una struttura dati simile all'array, ma che consta di una differenza fondamentale. Nella lista, infatti, ogni elemento contiene un riferimento esplicito a quello successivo. Questo concetto è esplicitato nella seguente figura:
 
-![list](./images/list.png)
+![list](./images/list.png){: .center}
 
 In particolare, osserviamo che:
 
@@ -85,7 +85,7 @@ Una pila ha a disposizione quindi due diverse operazioni, ovvero quella di `push
 
 Il funzionamento della pila è schematizzato all'interno della seguente figura.
 
-![stack](./images/stack.png)
+![stack](./images/stack.png){: .center}
 
 !!!note "Nota"
 	Il motivo alla base dell'aggettivo "limitato" è da ricercarsi proprio nel fatto che sia il push sia il pop possono essere effettuati soltanto sugli elementi in cima alla pila.
@@ -98,4 +98,4 @@ Le operazioni definite sulla coda sono concettualmente simili a quelle definite 
 
 Il funzionamento della coda è schematizzato all'interno della seguente figura.
 
-![queue](./images/queue.png)
+![queue](./images/queue.png){: .center}
