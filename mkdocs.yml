@@ -1,6 +1,7 @@
 site_name: Algoritmi e Linguaggi di Programmazione Python/C
 nav:
   - Home del corso: index.md
+  - Slides proiettate a lezione: material/slides_index.md
   - Parte 1 - Concetti introduttivi:
     - 01 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
     - 02 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
