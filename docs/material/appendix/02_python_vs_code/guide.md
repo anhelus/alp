@@ -1,4 +1,4 @@
-# Appendice A - Configurazione dell'ambiente di sviluppo Python
+# Appendice B - Configurazione dell'ambiente di sviluppo Python
 
 ## Installazione di Python
 

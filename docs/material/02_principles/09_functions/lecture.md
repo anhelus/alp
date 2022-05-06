@@ -141,8 +141,3 @@ Da ciò seguono alcune considerazioni:
 3. occorre fare estrema attenzione alla modifica delle variabili globali in ambito locale, ovvero all'interno delle singole funzioni.
 
 Imparare ad utilizzare l'ambito delle variabili è propedeutico al corretto utilizzo delle tecniche di programmazione, e tenere a mente queste tre semplici regole ci aiuterà enormemente nella scrittura dle nsotro codice.
-
-## 9.4 - Esercizi
-
-1. Definire una funzione che calcoli l'ipotenusa di un triangolo rettangolo a partire dai suoi cateti.
-2. Definire una funzione che calcoli l'area di un cerchio a partire dal suo raggio.
