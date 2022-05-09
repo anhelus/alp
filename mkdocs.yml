@@ -49,6 +49,8 @@ nav:
     - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
     - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md
     - C - Programmazione orientata agli oggetti: material/appendix/03_oop/lecture.md
+    - D - Il modulo argparse: material/appendix/04_argparse/lecture.md
+    - E - Tema d'esempio: material/appendix/05_sample_project/lecture.md
 
 theme:
   name: material
