@@ -9,15 +9,15 @@
       
       
       <link rel="icon" href="../../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.13">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-8.2.14">
     
     
       
-        <title>Exercises - Algoritmi e Linguaggi di Programmazione Python/C</title>
+        <title>E15 - Nozioni fondamentali sul C - Algoritmi e Linguaggi di Programmazione Python/C</title>
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.e411adfe.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.3de6f41f.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cc9b2e1e.min.css">
@@ -70,6 +70,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#e15-nozioni-fondamentali-su-c" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -99,7 +104,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Exercises
+              E15 - Nozioni fondamentali sul C
             
           </span>
         </div>
@@ -727,12 +732,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" checked>
       
       
       
@@ -767,10 +774,134 @@
               
   
   
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          E15 - Nozioni fondamentali sul C
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        E15 - Nozioni fondamentali sul C
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esercizio-e151" class="md-nav__link">
+    Esercizio E15.1
+  </a>
+  
+    <nav class="md-nav" aria-label="Esercizio E15.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soluzione-s151" class="md-nav__link">
+    Soluzione S15.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
       <a href="../../16_scope/exercises/" class="md-nav__link">
         E16 - Ambito di una variabile
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../17_operators/exercises/" class="md-nav__link">
+        E17 - Operatori in C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../18_arrays/exercises/" class="md-nav__link">
+        E18 - Array in C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../19_pointers/exercises/" class="md-nav__link">
+        E19 - Puntatori
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../22_typedef/exercises/" class="md-nav__link">
+        E22 - Typedef, struct ed union
       </a>
     </li>
   
@@ -932,6 +1063,36 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#esercizio-e151" class="md-nav__link">
+    Esercizio E15.1
+  </a>
+  
+    <nav class="md-nav" aria-label="Esercizio E15.1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soluzione-s151" class="md-nav__link">
+    Soluzione S15.1
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -945,9 +1106,86 @@
                 
 
 
-  <h1>Exercises</h1>
+<h1 id="e15-nozioni-fondamentali-su-c">E15 - Nozioni fondamentali su C<a class="headerlink" href="#e15-nozioni-fondamentali-su-c" title="Permanent link">&para;</a></h1>
+<h2 id="esercizio-e151">Esercizio E15.1<a class="headerlink" href="#esercizio-e151" title="Permanent link">&para;</a></h2>
+<p>Definire il programma <em>Matematicamente</em> in modo che sia composto da:</p>
+<ul>
+<li>una libreria <em>trigonometria</em>, al cui interno ci siano le funzioni <code>coseno</code> e <code>seno</code> per il calcolo, rispettivamente, del <em>coseno a partire dal seno</em> e del <em>seno a partire dal coseno</em>;</li>
+<li>una libreria <em>aritmetica</em>, composta dalle funzioni <code>aggiungi</code> e <code>moltiplica</code>;</li>
+<li>un file <code>main.c</code> all'interno del quale si richiamano le funzioni presenti nelle precedenti librerie.</li>
+</ul>
+<h3 id="soluzione-s151">Soluzione S15.1<a class="headerlink" href="#soluzione-s151" title="Permanent link">&para;</a></h3>
+<p>Ecco una possibile soluzione.</p>
+<p>Per la libreria <em>trigonometria</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// trigonometria.h</span>
+<span class="cp">#ifndef TRIGONOMETRIA_H</span>
+<span class="cp">#define TRIGONOMETRIA_H</span>
 
+<span class="kt">float</span><span class="w"> </span><span class="nf">coseno</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">seno</span><span class="p">);</span><span class="w"></span>
+<span class="kt">float</span><span class="w"> </span><span class="nf">seno</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">coseno</span><span class="p">);</span><span class="w"></span>
 
+<span class="cp">#endif </span><span class="c1">// !TRIGONOMETRIA_H</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// trigonometria.c</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;trigonometria.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;math.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+
+<span class="kt">float</span><span class="w"> </span><span class="nf">seno</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">coseno</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">sin_quad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">coseno</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">coseno</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sin_quad</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sqrtf</span><span class="p">(</span><span class="n">sin_quad</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">float</span><span class="w"> </span><span class="nf">coseno</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">seno</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">cos_quad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="p">(</span><span class="n">seno</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">seno</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sqrtf</span><span class="p">(</span><span class="n">cos_quad</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Per la libreria <em>aritmetica</em>:</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// aritmetica.h</span>
+<span class="cp">#ifndef ARITMETICA_H</span>
+<span class="cp">#define ARITMETICA_H</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">aggiungi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">moltiplica</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">);</span><span class="w"></span>
+
+<span class="cp">#endif </span><span class="c1">// !ARITMETICA_H</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1">// aritmetica.c</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;aritmetica.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">aggiungi</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">moltiplica</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Ecco un esempio di file <code>main.c</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;aritmetica.h&quot;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;trigonometria.h&quot;</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">somma</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">prodotto</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">somma</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aggiungi</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">prodotto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">moltiplica</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;La somma e&#39; %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">somma</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Il prodotto e&#39; %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">prodotto</span><span class="p">);</span><span class="w"></span>
+
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">cos</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">cos</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">coseno</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Il coseno e&#39; %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">cos</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">sin</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">sin</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">seno</span><span class="p">(</span><span class="mf">0.5</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Il seno e&#39; %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">sin</span><span class="p">);</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</code></pre></div>
 
               
             </article>
@@ -957,6 +1195,41 @@
       </main>
       
         <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../02_principles/07_complexity/exercises/" class="md-footer__link md-footer__link--prev" aria-label="Previous: E7 - Complessità computazionale" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              E7 - Complessità computazionale
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../../16_scope/exercises/" class="md-footer__link md-footer__link--next" aria-label="Next: E16 - Ambito di una variabile" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              E16 - Ambito di una variabile
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1004,7 +1277,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.2a1c317c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.ed9748b7.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.c2e1ee47.min.js"></script>
       
         <script src="../../../../js/config.js"></script>
       
