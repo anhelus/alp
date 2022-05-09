@@ -1,10 +1,10 @@
 # E25 - Esercizi sulle strutture dati
 
-## E25.1
+## Esercizio E25.1
 
 Proviamo a valutare il tempo necessario alle operazioni di `insert` e `pop` su una coda in Python usando la libreria `time`. Confrontiamo il risultato ottenuto con quello ottenibile implementando una coda come una struttura di tipo `deque` e usando gli opportuni metodi `appendleft` e `popleft`.
 
-### S25.1 - Soluzione
+### Soluzione S25.1
 
 ```py
 from time import time
@@ -42,7 +42,7 @@ Tempo necessario con lista: 0.08756685256958008
 Tempo necessario con deque: 0.0
 ```
 
-## E25.2
+## Esercizio E25.2
 
 Selezioniamo tutti i nomi che iniziano con la lettera B dalla seguente lista:
 
@@ -58,7 +58,7 @@ lista_nomi = [
 
 Facciamolo usando un ciclo ed una list comprehension.
 
-### S25.2 - Soluzione
+### Soluzione S25.2
 
 Usando un ciclo:
 
@@ -75,11 +75,11 @@ Usando una list comprehension:
 output = [nome for nome in lista_nomi if nome[0] == "B"]
 ```
 
-## E25.3
+## Esercizio E25.3
 
 Ottenere una lista che abbia al suo interno tutti i quadrati dei numeri che vanno da 1 a 10
 
-### S25.3 - Soluzione
+### Soluzione S25.3
 
 Usando un ciclo:
 
@@ -98,11 +98,11 @@ Usando una list comprehension:
 output = [quadrato(i) for i in range(1, 11)]
 ```
 
-## E25.4
+## Esercizio E25.4
 
 Ottenere una lista che abbia la stringa `pari` in corrispondenza dei numeri pari, mentre quella `dispari` in corrispondenza dei numeri dispari, per tutti i numeri che vanno da 1 a 10.
 
-### S25.4 - Soluzione
+### Soluzione S25.4
 
 Usando un ciclo:
 
@@ -131,7 +131,7 @@ output = ["pari" if i % 2 == 0 else "dispari" for i in range(1, 10)]
               return 'dispari'
       ```
 
-## E25.5
+## Esercizio E25.5
 
 Scrivere una dict comprehension che permetta di ottenere il dizionario `vecchio_o_giovane` dato il seguente dizionario:
 
@@ -147,7 +147,7 @@ dizionario = {
 
 In particolare, il dizionario `vecchio_o_giovane` avrà le stesse chiavi del dizionario di partenza, a cui sarà associato il valore `giovane` soltanto se il valore della chiave del dizionario di partenza è inferiore a 65.
 
-### S25.5 - Soluzione
+### Soluzione S25.5
 
 ```py
 vecchio_o_giovane = { k: 'vecchio' if v > 65 else 'giovane' for (k, v) in dizionario.items() }

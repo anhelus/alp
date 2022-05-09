@@ -1,10 +1,10 @@
 # E24 - Programmare in Python
 
-## E24.1
+## Esercizio E24.1
 
 Scriviamo una funzione che iteri fino a che il valore associato ad un contatore intero è minore di 10. Usiamo un ciclo `while`.
 
-### S24.1 - Soluzione
+### Soluzione S24.1
 
 ```py
 def itera_while():
@@ -30,11 +30,11 @@ Il risultato ottenuto sarà:
 10-ma iterazione
 ```
 
-## E24.2
+## Esercizio E24.2
 
 Scriviamo una funzione che iteri fino a che una condizione booleana non è `False`. Usiamo un ciclo `for`, ponendo come numero massimo di iterazioni 100 e se necessario, usando il metodo [`random.randint(a, b)`](https://docs.python.org/3/library/random.html#random.randint).
 
-### S24.2 - Soluzione
+### Soluzione S24.2
 
 ```py
 def itera_for():
@@ -66,11 +66,11 @@ Esco
 False
 ```
 
-## E24.3
+## Esercizio E24.3
 
 Estraiamo tutti gli indici pari di una lista arbitraria di dieci elementi in ordine inverso. Per farlo, usiamo sia la funzione `range` sia lo slicing.
 
-### S24.3 - Soluzione
+### Soluzione S24.3
 
 ```py
 def estrai_con_slice(lista):
@@ -101,11 +101,11 @@ Il risultato ottenuto sarà:
 [10, 8, 6, 4, 2]
 ```
 
-## E24.4
+## Esercizio E24.4
 
 Utilizzare il pattern matching per stampare a schermo la parola "Vero" se il valore di una variabile è `True`, e "Falso" altrimenti.
 
-### S24.4 - Soluzione
+### Soluzione S24.4
 
 ```py
 def match_case(true_or_false):
@@ -127,11 +127,11 @@ Il risultato ottenuto sarà:
 'Falso'
 ```
 
-## E24.5
+## Esercizio E24.5
 
 Creare un metodo che raddoppi una lista passata come argomento in ingresso. Provare ad utilizzare un ciclo `for` e ricordare la differenza tra shallow e deep copy.
 
-### S24.5 - Soluzione
+### Soluzione S24.5
 
 Potremmo essere tentati di scrivere una funzione come la seguente:
 
