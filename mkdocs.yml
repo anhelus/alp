@@ -35,7 +35,12 @@ nav:
     - 27 - Moduli e script in Python: material/04_python/27_modules/lecture.md
   - Esercizi svolti:
     - E7 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
+    - E15 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/exercises.md
     - E16 - Ambito di una variabile: material/03_c_language/16_scope/exercises.md
+    - E17 - Operatori in C: material/03_c_language/17_operators/exercises.md
+    - E18 - Array in C: material/03_c_language/18_arrays/exercises.md
+    - E19 - Puntatori: material/03_c_language/19_pointers/exercises.md
+    - E22 - Typedef, struct ed union: material/03_c_language/22_typedef/exercises.md
     - E23 - Introduzione al Python: material/04_python/23_intro/exercises.md
     - E24 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/exercises.md
     - E25 - Strutture dati in Python: material/04_python/25_data_structures/exercises.md
