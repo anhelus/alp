@@ -1,30 +1,30 @@
 # E23 - Introduzione a Python
 
-## E23.1
+## Esercizio E23.1
 
 Creiamo una stringa che assuma valore *IUL*.
 
-### S23.1 - Soluzione
+### Soluzione S23.1
 
 ```py
 >>> s = 'IUL'
 ```
 
-## E23.2
+## Esercizio E23.2
 
 Valutiamo la lunghezza della stringa creata al punto 23.
 
-### S23.2 - Soluzione
+### Soluzione S23.2
 
 ```py
 >>> len(s)
 ```
 
-## E23.3
+## Esercizio E23.3
 
 Proviamo a creare una lista a partire dalla stringa creata al punto 23.
 
-### S23.3 - Soluzione
+### Soluzione S23.3
 
 ```py
 >>> l = ['IUL']

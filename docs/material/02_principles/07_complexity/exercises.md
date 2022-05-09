@@ -1,16 +1,32 @@
 # E7 - Esercizi sulla complessità computazionale
 
-## Tracce
+## Esercizio E7.1
 
-### Esercizio 1
+Calcolare la complessità di caso peggiore di una sequenza di $m$ istruzioni; si tenga a mente che se la complessità è costante, allora si ha un $O(1)$.
 
-Calcolare la complessità di caso peggiore di una sequenza di $m$ istruzioni; si tenga a mente che se la complessità è costante, allora si ha un $O{1}$.
+### Soluzione S7.1
 
-### Esercizio 2
+Una sequenza di $m$ istruzioni è data da un diagramma di flusso simile a questo.
+
+![ex_1](./images/ex_1.png){: .center}
+
+Di conseguenza, dato che la complessità legata a ciascuna istruzione è unitaria, la complessità di caso peggiore sarà approssimabile ad un $O(1)$.
+
+## Esercizio E7.2
 
 Calcolare la complessità di caso peggiore di un ciclo `while`.
 
-### Esercizio 3
+### Soluzione S7.2
+
+Definiamo un ciclo `while` mediante un diagramma di flusso simile a questo, direttamente dall'esercizio 3 sulle strutture dati.
+
+![ex_2](./images/ex_2.png){: .center}
+
+In questo caso, il numero di operazioni non è deterministico, ma dipende dalla funzione `genera_magia`, che abbiamo definito essere randomica.
+
+Supponendo che la funzione generi un numero superiore a 10 con probabilità pari a $\frac{1}{n}$ (ovvero, che la funzione generi un numero superiore a 10 una volta su n), allora avremo che la complessità di caso peggiore sarà pari a $O(n)$: in altre parole, *nel caso peggiore*, ci attendiamo che ci servano $n$ iterazioni per uscire dal ciclo.
+
+## Esercizio E7.3
 
 Calcolare la complessità di caso peggiore del seguente algoritmo:
 
@@ -22,43 +38,7 @@ for i che va da 1 a 10:
 endfor
 ```
 
-### Esercizio 4
-
-#### Parte 1
-
-Supponiamo di ricevere due prestiti. Il primo prestito, dell'importo totale di 1000 €, ci viene garantito dalla Banca di Paperopoli il 01/04/2022. Il secondo prestito, dell'importo di 100 €, ci viene garantito dalla Banca di Topolinia lo stesso giorno. Successivamente, apriamo un filone di credito presso la banca di Topolinia, e per i 99 giorni successivi al 01/04 riceviamo 100 € al giorno. Calcolare:
-
-* il valore totale dei due prestiti al primo giorno e dopo 100 giorni;
-* quanto incide (in percentuale) ciascun prestito sul totale al primo giorno;
-* quanto incide (in percentuale) ciascun prestito sul totale al centesimo giorno.
-
-Spiegare questi concetti riconducendoli alle nozioni di complessità computazionale.
-
-#### Parte 2
-
-Cosa accadrebbe se la Banca di Paperopoli ci facesse 100 bonifici al giorno per 100 giorni a partire dal primo aprile?
-
-## Soluzioni
-
-### Esercizio 1
-
-Una sequenza di $m$ istruzioni è data da un diagramma di flusso simile a questo.
-
-![ex_1](./images/ex_1.png){: .center}
-
-Di conseguenza, dato che la complessità legata a ciascuna istruzione è unitaria, la complessità di caso peggiore sarà approssimabile ad un $O(1)$.
-
-### Esercizio 2
-
-Definiamo un ciclo `while` mediante un diagramma di flusso simile a questo, direttamente dall'esercizio 3 sulle strutture dati.
-
-![ex_2](./images/ex_2.png){: .center}
-
-In questo caso, il numero di operazioni non è deterministico, ma dipende dalla funzione `genera_magia`, che abbiamo definito essere randomica.
-
-Supponendo che la funzione generi un numero superiore a 10 con probabilità pari a $\frac{1}{n}$ (ovvero, che la funzione generi un numero superiore a 10 una volta su n), allora avremo che la complessità di caso peggiore sarà pari a $O(n)$: in altre parole, *nel caso peggiore*, ci attendiamo che ci servano $n$ iterazioni per uscire dal ciclo.
-
-### Esercizio 3
+### Soluzione S7.3
 
 Partiamo dalla costruzione del diagramma di flusso dell'algoritmo, che è quello riportato nella seguente figura.
 
@@ -74,7 +54,23 @@ Aumentando il numero $n$ di iterazioni, vedremo come il numero totale di operazi
 
 e così via. Di conseguenza, la complessità computazionale dipende dal quadrato di $n$, per cui quella di caso peggiore è un $O(n^2)$.
 
-### Esercizio 4
+## Esercizio E7.4
+
+### Parte 1
+
+Supponiamo di ricevere due prestiti. Il primo prestito, dell'importo totale di 1000 €, ci viene garantito dalla Banca di Paperopoli il 01/04/2022. Il secondo prestito, dell'importo di 100 €, ci viene garantito dalla Banca di Topolinia lo stesso giorno. Successivamente, apriamo un filone di credito presso la banca di Topolinia, e per i 99 giorni successivi al 01/04 riceviamo 100 € al giorno. Calcolare:
+
+* il valore totale dei due prestiti al primo giorno e dopo 100 giorni;
+* quanto incide (in percentuale) ciascun prestito sul totale al primo giorno;
+* quanto incide (in percentuale) ciascun prestito sul totale al centesimo giorno.
+
+Spiegare questi concetti riconducendoli alle nozioni di complessità computazionale.
+
+### Parte 2
+
+Cosa accadrebbe se la Banca di Paperopoli ci facesse 100 bonifici al giorno per 100 giorni a partire dal primo aprile?
+
+### Soluzione S7.4
 
 #### Parte 1
 
