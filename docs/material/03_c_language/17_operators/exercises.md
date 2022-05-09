@@ -1,10 +1,10 @@
 # E17 - Operatori nel linguaggio C
 
-## E17.1
+## Esercizio E17.1
 
 Scriviamo un programma che calcoli il quadrato di un numero.
 
-### S17.1 - Soluzione
+### Soluzione S17.1
 
 ```c
 #include <stdio.h>
@@ -21,11 +21,11 @@ int main() {
 }
 ```
 
-## E17.2
+## Esercizio E17.2
 
 Scriviamo un programma che determini se un numero è pari. In tal senso, utilizzare l'operatore di confronto `==` per confrontare due variabili.
 
-### S17.2 - Soluzione
+### Soluzione S17.2
 
 Ecco una possibile soluzione:
 
@@ -65,11 +65,11 @@ Alcune note:
 * nella funzione `numero_pari` valutiamo un numero come pari se e solo se il resto della divisione dello stesso per due è pari a 0;
 * nella funzione `scrivi_pari_o_dispari` prendiamo il valore in uscita dalla funzione `numero_pari` e lo usiamo per scrivere a schermo se siamo la condizione di parità è rispettata.
 
-## E17.3
+## Esercizio E17.3
 
 Scriviamo un programma che confronti due intervalli di valori $[a, b]$ e $[c, d]$, con $a$, $b$, $c$ e $d$ numeri interi. Il programma deve stampare a schermo il maggiore tra gli estremi inferiori $a$ e $c$, il minore tra gli estremi superiori $b$ e $d$, e stabilire se il numero di elementi presenti nei due intervalli è lo stesso.
 
-### S17.3 - Soluzione
+### Soluzione S17.3
 
 Ecco una possibile soluzione:
 
@@ -121,11 +121,11 @@ int main() {
 }
 ```
 
-## E17.4
+## Esercizio E17.4
 
 Dati gli intervalli visti nell’esercizio 17.3, scrivere un programma che indichi se questi hanno lo stesso numero di elementi e gli estremi coincidono, oppure se solo una di queste condizioni è verificata. Usare solo operatori logici.
 
-### S17.4 - Soluzione
+### Soluzione S17.4
 
 Possiamo integrare le seguenti istruzioni nella funzione `compara_intervalli`.
 

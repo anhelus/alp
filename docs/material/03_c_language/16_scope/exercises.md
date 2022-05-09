@@ -1,6 +1,6 @@
 # E16 - Ambito di una variabile
 
-## E15.1
+## Esercizio E16.1
 
 Scrivere in linguaggio C un programma che definisca due funzioni.
 
@@ -11,7 +11,7 @@ Entrambe le funzioni accettano come argomento il parametro `lato` di tipo intero
 
 Utilizzare, ove possibile, un approccio modulare, suddividendo il codice in header e sorgenti.
 
-### S15.1 - Soluzione
+### Soluzione S16.1
 
 Possiamo organizzare il codice rispettando la struttura suggerita da Visual Studio Community o, in alternativa, creando all'interno della stessa cartella tre file, un `main.c`, che sarà il file sorgente principale, un `funzioni.c`, che sarà il sorgente per le funzioni che scriveremo nel codice, ed un `funzioni.h`, che sarà l'header relativo alle stesse funzioni.
 
