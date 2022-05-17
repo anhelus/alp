@@ -1,11 +1,13 @@
 import argparse
-import os
+from src.algs.sorting import MergeSort
 from src.algs.sorting import SelectionSort
 
 
 def run(args):
     sr = SelectionSort(args.lista)
     sr.sort()
+    mr = MergeSort(args.lista)
+    mr.sort()
     print('Array ordinato: {}'.format(sr.ar))
 
 

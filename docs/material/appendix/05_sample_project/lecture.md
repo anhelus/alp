@@ -12,3 +12,23 @@ In particolare, l'argomento trattato da questo esempio è:
 2. **Eventuali algoritmi utilizzati**. In questo caso, vanno elencati e spiegati brevemente gli eventuali algoritmi utilizzati. Ad esempio: *il programma implementa l'algoritmo di ordinamento su vettori chiamato selection sort, il quale ordina in maniera iterativa un vettore suddividendolo in due sottoinsiemi, che saranno comparati ad ogni iterazione ed eventualmente modificati scambiando l'ultimo valore dell'array a sinistra con il primo dell'array a destra fino al termine dell'algoritmo*.
 
 Il codice va inoltre *commentato*, spiegando nel dettaglio il funzionamento di ciascun metodo o classe.
+
+## Codice
+
+Il codice è organizzato secondo questa struttura:
+
+```
+|src                    # Package principale
+|---__init__.py
+    |algs               # Package dedicato agli algoritmi
+    |---__init__.py
+        sorting.py      # Modulo per le classi per l'ordinamento
+|run.py                 # Script principale
+```
+
+Di seguito il link ai due file di rilievo (gli `__init__.py` sono file vuoti):
+
+| File | Link |
+| ---- | ---- |
+| Script principale (run.py) | [:link:](./project/run.py) |
+| Modulo per le classi per l'ordinamento (sorting.py) | [:link:](./project/src/algs/sorting.py) |
