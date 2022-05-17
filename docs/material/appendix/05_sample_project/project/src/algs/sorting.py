@@ -87,3 +87,8 @@ class SelectionSort(BaseSort):
             return l_ar
         self.ar = l_ar
         return
+
+class MergeSort(BaseSort):
+
+    def sort(self, inplace=True):
+        return 1

@@ -28,3 +28,4 @@
 | 25 - Strutture dati in Python | [:link:](./25_data_structures.pdf) |
 | 26 - OOP in Python | [:link:](./26_classes.pdf) |
 | Appendice C - Principi di OOP | [:link:](./c_oop.pdf) |
+| Appendice E - Esempio di tema d'anno | [:link:](./e_sample.pdf) |

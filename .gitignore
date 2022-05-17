@@ -13,3 +13,5 @@
 Debug/*
 
 .vscode/
+
+__pycache__/
