@@ -1,20 +1,20 @@
-# 4 - I tipi di dato
+# 3 - I tipi di dato
 
 Nel capitolo precedente abbiamo accennato al fatto che i calcolatori hanno a disposizione una determinata *parola*, la cui dimensione dipende dall'architettura, che determina il numero massimo di bit che possono essere rappresentati nei dati gestiti in fase di elaborazione. Questo, ovviamente, comporta un limite: vediamone in breve le implicazioni, approfittando per introdurre i diversi *tipi* di dato.
 
-## 4.1 - Dati numerici
+## 3.1 - Dati numerici
 
 Il primo tipo di dati che vediamo è quello *numerico*, che comprende, in linea generale, i numeri interi e reali.
 
 !!!note "I numeri complessi"
     I più attenti potrebbero chiedersi perché i numeri complessi non sono stati menzionati in precedenza. Infatti, i numeri complessi non sono contemplati come dati *primitivi* in numerosi linguaggi di programmazione, anche se, come vedremo, Python prevede un'apposita struttura dedicata allo scopo.
 
-### 4.1.1 - Numeri interi
+### 3.1.1 - Numeri interi
 
 Il limite imposto alla lunghezza della parola comporta che il valore numerico massimo trattabile da un calcolatore sia finito: ad esempio, nel caso di un'architettura con parola a 64 bit (come la maggior parte dei processori odierni), sarà possibile rappresentare "soltanto" $2^{64}$ possibili valori.
 
 !!!note "Nota"
-    Ricordiamo che $2^{64} = 18.446.744.073.709.551.616$. Il limite appare quindi abbastanza permissivo.
+    Ricordiamo che $2^{64} = 18.446.743.073.709.551.616$. Il limite appare quindi abbastanza permissivo.
 
 Cosa accade, quindi, se dovessimo raggiungere $2^{64}$? Molto semplice: il conteggio ricomincia da zero (o il programma va in errore).
 
@@ -48,7 +48,7 @@ Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più c
 !!!note "Tipi e lunghezza"
     I tipi riportati nella tabella precedente, assieme alla loro lunghezza, sono quelli "standard", cui aderiscono la maggior parte dei linguaggi di programmazione (ma *non tutti*).
 
-### 4.1.2 Rappresentazione di numeri reali
+### 3.1.2 Rappresentazione di numeri reali
 
 Così come per l'insieme dei numeri naturali, anche quello dei numeri reali $\mathbb{R}$ deve essere rappresentato mediante un'approssimazione finita. Ricordiamo che ogni numero reale è composto da una parte intera ed una *razionale*; di conseguenza, considerato che il numero di bit per la rappresentazione è sempre lo stesso, occorre trovare un modo per conciliare la presenza di queste due parti.
 
@@ -102,7 +102,7 @@ $$
 
 e, dovendo memorizzare esclusivamente la mantissa (che richiede tre simboli) e l'esponente (che ne richiede uno), riusciremmo nel nostro intento.
 
-## 4.2 - Caratteri
+## 3.2 - Caratteri
 
 Anche i caratteri che troviamo normalmente sulle nostre tastiere devono essere rappresentati in binario. In generale, il concetto di *carattere* deve essere assimilato a quello di *simbolo*, in quanto i calcolatori devono poter rappresentare simboli "speciali" (ad esempio, la chiocciola @ o l'underscore _), così come caratteri in altri tipi di alfabeti (ad esempio, il cirillico o il mandarino).
 

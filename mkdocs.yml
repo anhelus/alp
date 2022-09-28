@@ -5,46 +5,19 @@ nav:
   - Parte 1 - Concetti introduttivi:
     - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
     - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-    - 3 - Rappresentazione binaria e decimale: material/01_intro/03_dec_bin/lecture.md
-    - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
-  - Parte 2 - Principi di programmazione:
-    - 5 - Diagrammi di flusso: material/02_principles/05_flow_chart/lecture.md
-    - 6 - Programmazione strutturata: material/02_principles/06_structured/lecture.md
-    - 7 - Complessità computazionale: material/02_principles/07_complexity/lecture.md
-    - 8 - Variabili: material/02_principles/08_variables/lecture.md
-    - 9 - Funzioni: material/02_principles/09_functions/lecture.md
-    - 10 - Strutture dati: material/02_principles/10_data_structures/lecture.md
-    - 11 - Ricorsione: material/02_principles/11_recursion/lecture.md
-    - 12 - Paradigmi di programmazione: material/02_principles/12_paradigms/lecture.md
-    - 13 - Strutture dati avanzate: material/02_principles/13_adv_data_structures/lecture.md
-  - Parte 3 - Linguaggio C:
-    - 14 - Introduzione al C: material/03_c_language/14_intro/lecture.md
-    - 15 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/lecture.md
-    - 16 - Ambito di una variabile: material/03_c_language/16_scope/lecture.md
-    - 17 - Operatori in C: material/03_c_language/17_operators/lecture.md
-    - 18 - Array in C: material/03_c_language/18_arrays/lecture.md
-    - 19 - Puntatori: material/03_c_language/19_pointers/lecture.md
-    - 20 - Gestione della memoria: material/03_c_language/20_memory/lecture.md
-    - 21 - I/O e file: material/03_c_language/21_io_files/lecture.md
-    - 22 - Typedef, struct ed union: material/03_c_language/22_typedef/lecture.md
-  - Parte 4 - Linguaggio Python:
-    - 23 - Introduzione al Python: material/04_python/23_intro/lecture.md
-    - 24 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/lecture.md
-    - 25 - Strutture dati in Python: material/04_python/25_data_structures/lecture.md
-    - 26 - OOP in Python: material/04_python/26_classes/lecture.md
-    - 27 - Moduli e script in Python: material/04_python/27_modules/lecture.md
-  - Esercizi svolti:
-    - E7 - Complessità computazionale: material/02_principles/07_complexity/exercises.md
-    - E15 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/exercises.md
-    - E16 - Ambito di una variabile: material/03_c_language/16_scope/exercises.md
-    - E17 - Operatori in C: material/03_c_language/17_operators/exercises.md
-    - E18 - Array in C: material/03_c_language/18_arrays/exercises.md
-    - E19 - Puntatori: material/03_c_language/19_pointers/exercises.md
-    - E22 - Typedef, struct ed union: material/03_c_language/22_typedef/exercises.md
-    - E23 - Introduzione al Python: material/04_python/23_intro/exercises.md
-    - E24 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/exercises.md
-    - E25 - Strutture dati in Python: material/04_python/25_data_structures/exercises.md
-    - E26 - OOP in Python: material/04_python/26_classes/exercises.md
+    - 3 - Tipi di dato: material/01_intro/04_data_type/lecture.md
+    - 4 - Diagrammi di flusso: material/02_principles/05_flow_chart/lecture.md
+    - 5 - Programmazione strutturata: material/02_principles/06_structured/lecture.md
+    - 6 - Variabili: material/02_principles/08_variables/lecture.md
+    - 7 - Funzioni: material/02_principles/09_functions/lecture.md
+  - Parte 2 - Linguaggi di programmazione:
+    - 8 - Introduzione al C: material/03_c_language/14_intro/lecture.md
+    - 9 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/lecture.md
+    - 10 - Introduzione al Python: material/04_python/23_intro/lecture.md
+    - 11 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/lecture.md
+    - 12 - Strutture dati in Python: material/04_python/25_data_structures/lecture.md
+    - 13 - OOP in Python: material/04_python/26_classes/lecture.md
+    - 14 - Moduli e script in Python: material/04_python/27_modules/lecture.md
   - Appendici:
     - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
     - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md

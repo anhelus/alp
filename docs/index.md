@@ -1,31 +1,27 @@
 # Corso di Algoritmi e Linguaggi di programmazione Python/C
 
-Benvenuti nel corso di Algoritmi e Linguaggi di Programmazione Python/C.
-
-Per selezionare l'argomento di interesse, usare i menu laterali.
-
-!!!warning "Attenzione"
-    **Le dispense sono attualmente in fase di aggiornamento.**
+Questa è la bacheca per il corso di Algoritmi e Linguaggi di Programmazione Python/C tenuto presso l'Università degli Studi di Foggia.
 
 ## Modalità di esame
 
-Le modalità di esame previste sono due:
+Le modalità di esame previste sono tre:
 
-* un esame **orale**, costituito da un colloquio nel quale saranno poste al candidato tre domande, due di natura teorica, ed una di natura pratica, strettamente inerenti i contenuti del corso;
-* un **tema d'anno**, costituito da un progetto a scelta degli studenti, organizzati in gruppi da **massimo quattro (4) componenti**. Il tema d'anno dovrà essere prettamente pratico, e corredato da una breve presentazione (**massimo dodici (12) slides**) ed una relazione sul lavoro svolto (**massimo quattro (4) pagine**).
+* un valutazione *per task*, perseguibile completando i diversi task che saranno proposti durante il corso (due questionari, tre compiti relativi alla parte teorica, e due relativi alle lezioni);
+* un *tema d'anno*, costituito da un progetto a scelta degli studenti, organizzati in gruppi da massimo quattro (4) componenti. Il tema d'anno dovrà avere un tagli prettamente pratico, e dovrà essere corredato da una breve presentazione (**al massimo di dodici (12) slides**) ed una relazione sul lavoro svolto (**massimo quattro (4) pagine**);
+* una valutazione *orale*, consistente di due domande di tipo pratico ed una di tipo teorico. Ciascuna delle domande contribuisce equamente alla valutazione finale, e riguarda **tutti** gli argomenti trattati durante il corso. **Non è inoltre possibile richiedere ulteriori domande ad integrazione del voto ricevuto**.
 
-A queste modalità si integrano una serie di task assegnati durante il corso, ognuno dei quali può assegnare al massimo **due (2)** ulteriori punti.
+Nel caso lo studente scelga la prima modalità di valutazione (*per task*), sarà possibile effettuare, a discrezione dello studente, un'integrazione orale, nella quale il voto potrà variare al massimo **di più o meno 3 punti**.
+
+!!!tip "Esempi di esiti"
+    1. Alice decide di effettuare la valutazione per task, ottenendo un punteggio finale di 18 su 30. Alice decide quindi di effettuare l'orale. Purtroppo, ottiene una valutazione negativa, con un risultato finale di 16 su 30. **Alice non supera l'esame, e dovrà sostenere l'appello successivo scegliendo una delle altre due modalità, in quanto il voto dei task è da considerarsi perduto.**.
+    2. Bob decide di effettuare la valutazione per task, ottenendo un punteggio finale di 27 su 30. Bob decide quindi di effettuare l'orale. Bob ottiene una valutazione positiva, con un risultato finale di 29 su 30.
+    3. Charlie e Dave decidono di effettuare la valutazione mediante tema d'anno, ottenendo un punteggio finale di 30 su 30 a valle della loro esposizione.
+    4. Emily decide di effettuare la valutazione orale. A valle dell'interrogazione, ottiene un punteggio di 19 su 30. **Emily può decidere esclusivamente se accettare o meno il voto**.
+    5. Frank decide di effettuare la valutazione per task, ottenendo un punteggio finale di 17 su 30. **Frank non supera l'esame, e dovrà sostenere l'appello successivo scegliendo una delle altre due modalità, in quanto il voto dei task è da considerarsi perduto.**.
 
 ## Date di appello
 
-Le date di appello indicative sono le seguenti:
-
-| Numero appello | Data indicativa      |
-| -------------- | -------------------- |
-| Primo          | 27/05/2022 ore 12:00 |
-| Secondo        | 17/06/2022 ore 08:30 |
-| Terzo          | 01/07/2022 ore 08:30 |
-| Quarto         | 15/07/2022 ore 08:30 |
+Le informazioni sulle date di appello saranno rese pubbliche *il prima possibile* sulla bacheca del corso (advices.md).
 
 ## Ricevimento
 

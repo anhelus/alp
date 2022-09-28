@@ -2,7 +2,8 @@
 
 | Argomento | Link |
 | --------- | ---- |
-| 1 - Introduzione all'informatica | [:link:](./01_introduction.pdf) |
+| 00 - Introduzione al corso | [:x:] |
+<!-- | 1 - Introduzione all'informatica | [:link:](./01_introduction.pdf) |
 | 2 - Introduzione agli algoritmi | [:link:](./02_algorithms.pdf) |
 | 3 - Rappresentazione binaria e decimale | [:link:](./03_dec_bin.pdf) |
 | 4 - Tipi di dato | [:link:](./04_data_type.pdf) |
@@ -28,4 +29,4 @@
 | 25 - Strutture dati in Python | [:link:](./25_data_structures.pdf) |
 | 26 - OOP in Python | [:link:](./26_classes.pdf) |
 | Appendice C - Principi di OOP | [:link:](./c_oop.pdf) |
-| Appendice E - Esempio di tema d'anno | [:link:](./e_sample.pdf) |
+| Appendice E - Esempio di tema d'anno | [:link:](./e_sample.pdf) | -->
