@@ -1,0 +1,855 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.0, mkdocs-material-8.5.6">
+    
+    
+      
+        <title>3 - Il mondo in forma binaria - Algoritmi e Linguaggi di Programmazione Python/C</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.20d9efc8.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.cbb835fc.min.css">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-J2XESD8WDV",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-il-mondo-in-forma-binaria" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Algoritmi e Linguaggi di Programmazione Python/C" class="md-header__button md-logo" aria-label="Algoritmi e Linguaggi di Programmazione Python/C" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Algoritmi e Linguaggi di Programmazione Python/C
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              3 - Il mondo in forma binaria
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Algoritmi e Linguaggi di Programmazione Python/C" class="md-nav__button md-logo" aria-label="Algoritmi e Linguaggi di Programmazione Python/C" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Algoritmi e Linguaggi di Programmazione Python/C
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Home del corso
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../slides/" class="md-nav__link">
+        Slides proiettate a lezione
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Parte 1 - Concetti introduttivi
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 1 - Concetti introduttivi" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 1 - Concetti introduttivi
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_introduction/lecture/" class="md-nav__link">
+        1 - Introduzione all'informatica
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/02_algorithms/lecture/" class="md-nav__link">
+        2 - Introduzione agli algoritmi
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/03_data_type/lecture/" class="md-nav__link">
+        3 - Tipi di dato
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/04_flow_chart/lecture/" class="md-nav__link">
+        4 - Diagrammi di flusso
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/05_structured/lecture/" class="md-nav__link">
+        5 - Programmazione strutturata
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/06_variables/lecture/" class="md-nav__link">
+        6 - Variabili
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_functions/lecture/" class="md-nav__link">
+        7 - Funzioni
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          Parte 2 - Linguaggi di programmazione
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Parte 2 - Linguaggi di programmazione" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Parte 2 - Linguaggi di programmazione
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/08_intro_c/lecture/" class="md-nav__link">
+        8 - Introduzione al C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/09_c_fundamentals/lecture/" class="md-nav__link">
+        9 - Nozioni fondamentali sul C
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/10_intro/lecture/" class="md-nav__link">
+        10 - Introduzione al Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/11_syntax/lecture/" class="md-nav__link">
+        11 - Concetti sintattici fondamentali di Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/12_data_structures/lecture/" class="md-nav__link">
+        12 - Strutture dati in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/13_classes/lecture/" class="md-nav__link">
+        13 - OOP in Python
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/14_modules/lecture/" class="md-nav__link">
+        14 - Moduli e script in Python
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Appendici
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Appendici" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Appendici
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../appendix/01_vs_comm/guide/" class="md-nav__link">
+        A - Installazione di VS Community
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../appendix/02_python_vs_code/guide/" class="md-nav__link">
+        B - Installazione di Python e VS Code
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../appendix/03_oop/lecture/" class="md-nav__link">
+        C - Programmazione orientata agli oggetti
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../appendix/04_argparse/lecture/" class="md-nav__link">
+        D - Il modulo argparse
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../appendix/05_sample_project/lecture/" class="md-nav__link">
+        E - Temi di esempio
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#31-le-informazioni-nel-mondo-reale" class="md-nav__link">
+    3.1 - Le informazioni nel mondo reale
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#32-la-gestione-dellinformazione" class="md-nav__link">
+    3.2 - La gestione dell'informazione
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#33-la-rappresentazione-digitale-dellinformazione" class="md-nav__link">
+    3.3 - La rappresentazione digitale dell'informazione
+  </a>
+  
+    <nav class="md-nav" aria-label="3.3 - La rappresentazione digitale dell'informazione">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#331-il-bit" class="md-nav__link">
+    3.3.1 - Il bit
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#332-il-byte" class="md-nav__link">
+    3.3.2 - Il byte
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#333-la-parola" class="md-nav__link">
+    3.3.3 - La parola
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34-da-decimale-a-binario" class="md-nav__link">
+    3.4 - Da decimale a binario
+  </a>
+  
+    <nav class="md-nav" aria-label="3.4 - Da decimale a binario">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#341-espressione-formale-di-un-numero-in-base-decimale" class="md-nav__link">
+    3.4.1 - Espressione formale di un numero in base decimale
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#342-da-base-decimale-a-base-binaria" class="md-nav__link">
+    3.4.2 - Da base decimale a base binaria
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="3-il-mondo-in-forma-binaria">3 - Il mondo in forma binaria<a class="headerlink" href="#3-il-mondo-in-forma-binaria" title="Permanent link">&para;</a></h1>
+<h2 id="31-le-informazioni-nel-mondo-reale">3.1 - Le informazioni nel mondo reale<a class="headerlink" href="#31-le-informazioni-nel-mondo-reale" title="Permanent link">&para;</a></h2>
+<p>Nel mondo reale, le informazioni fluiscono dalla sorgente al destinatario sotto forma di onde <em>analogiche</em>. Per capirci, pensiamo ad una conversazione tra due persone: entrambe produrranno, mediante il loro apparato fonatorio, delle onde sonore, <em>continue</em> sia nel tempo che nelle ampiezze, che arriveranno all'orecchio dell'altro interlocutore, il quale le passerà al cervello che, a sua volta, le interpreterà.</p>
+<p>Di particolare importanza è il concetto di <em>continuità</em> della forma d'onda utilizzata. Partiamo dall'analisi matematica: sappiamo che le funzioni continue sono definite nel dominio <span class="arithmatex">\(\mathbb{R}\)</span> dei numeri reali, per cui assumono, a meno dei punti di discontinuità, un numero <em>infinito</em> di valori. Questo vale anche per le forme d'onda analogiche, che abbiamo detto essere continue: ogni onda sonora emessa nella conversazione di cui sopra potrà assumere un numero "infinito" di valori all'interno degli intervalli temporali e di ampiezza nei quali è emessa.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Ovviamente, non teniamo conto di effetti quantistici: stiamo parlando di fenomeni <em>macroscopici</em>.</p>
+</div>
+<h2 id="32-la-gestione-dellinformazione">3.2 - La gestione dell'informazione<a class="headerlink" href="#32-la-gestione-dellinformazione" title="Permanent link">&para;</a></h2>
+<p>Chiarito il concetto di grandezza "analogica", pensiamo adesso a come uno strumento potrebbe in qualche modo caratterizzarla. In particolare, ragioniamo in termini di <em>capacità</em> dello strumento, ovvero:</p>
+<blockquote>
+<p><em>Quanti stati deve essere in grado di rappresentare contemporaneamente un sistema per caratterizzare completamente una forma d'onda analogica?</em></p>
+</blockquote>
+<p>Beh, la risposta a questa domanda è semplice: <em>infiniti</em>. Ovviamente, una realizzazione pratica di questa macchina non esiste, né può essere realizzata con le tecnologie attuali.</p>
+<p>Occorre quindi ridurre il numero di stati che devono essere rappresentati contemporaneamente. Per farlo, dobbiamo passare dal dominio analogico a quello <em>digitale</em>.</p>
+<h2 id="33-la-rappresentazione-digitale-dellinformazione">3.3 - La rappresentazione digitale dell'informazione<a class="headerlink" href="#33-la-rappresentazione-digitale-dellinformazione" title="Permanent link">&para;</a></h2>
+<p>Il dominio digitale è semplice da caratterizzare: infatti, l'informazione può assumere soltanto due possibili valori, ovvero <span class="arithmatex">\(0\)</span> ed <span class="arithmatex">\(1\)</span> (chiamati alle volte anche <em>basso</em> ed <em>alto</em>, o anche <em>spento</em> ed <em>acceso</em>).</p>
+<h3 id="331-il-bit">3.3.1 - Il bit<a class="headerlink" href="#331-il-bit" title="Permanent link">&para;</a></h3>
+<p>Appare chiaro come una rappresentazione digitale, detta anche <em>binaria</em>, sia molto più facile da gestire per un calcolatore rispetto ad una rappresentazione analogica. Ed è per questo che è importante definire la nozione fondamentale su cui è basata l'intera informatica, ovvero <em>bit</em>, crasi di <em>binary digit</em> (traducibile dall'inglese come <em>cifra binaria</em>):</p>
+<div class="admonition quote">
+<p class="admonition-title">Bit</p>
+<p><em>Il bit è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori <code>0</code> (falso) o <code>1</code> (vero).</em></p>
+</div>
+<h3 id="332-il-byte">3.3.2 - Il byte<a class="headerlink" href="#332-il-byte" title="Permanent link">&para;</a></h3>
+<p>Dalla definizione di bit segue quella, altrettanto importante, di <em>byte</em>, associata ad una sequenza arbitraria di otto bit.</p>
+<p>Quanti sono i possibili valori di un byte?</p>
+<p>Per rispondere a questa domanda, ricordiamoci che ogni bit può assumere soltanto due valori; di conseguenza, due bit potranno assumere al massimo <span class="arithmatex">\(2 \times 2\)</span> valori, ovvero quattro, tre bit <span class="arithmatex">\(2 \times 2 \times 2\)</span> valori, ovvero otto, e così via.</p>
+<p>E' semplice quindi constatare che una sequenza di <span class="arithmatex">\(n\)</span> bit assume al più <span class="arithmatex">\(2^n\)</span> valori, per cui otto bit potranno assumere al massimo <span class="arithmatex">\(2^8\)</span> valori. Ne consegue che, riportando il tutto in decimale, un byte potrà assumere al massimo 256 valori.</p>
+<h3 id="333-la-parola">3.3.3 - La parola<a class="headerlink" href="#333-la-parola" title="Permanent link">&para;</a></h3>
+<p>Definiamo infine una <em>parola</em>, o <em>word</em>, una sequenza di <span class="arithmatex">\(N\)</span> byte, con <span class="arithmatex">\(N\)</span> dipendente dal contesto specifico (ad esempio, il tipo di processore in uso). Ad esempio, la maggior parte dei processori consumer odierni utilizza parole da otto byte, ovvero 64 bit, capaci quindi di rappresentare fino a <span class="arithmatex">\(2^{64}\)</span> valori.</p>
+<h2 id="34-da-decimale-a-binario">3.4 - Da decimale a binario<a class="headerlink" href="#34-da-decimale-a-binario" title="Permanent link">&para;</a></h2>
+<p>Nel mondo reale, siamo abituati ad utilizzare i numeri seguendo una notazione di tipo <em>decimale</em> e <em>posizionale</em>. Detto in altri termini:</p>
+<ul>
+<li>utilizziamo i simboli compresi tra <span class="arithmatex">\(0\)</span> e <span class="arithmatex">\(9\)</span> per rappresentare ogni numero intero;</li>
+<li>sfruttiamo la posizione in cui compare ciascun simbolo per interpretare il valore finale del numero.</li>
+</ul>
+<p>Per fare un esempio, i numeri <span class="arithmatex">\(12\)</span> e <span class="arithmatex">\(21\)</span> sono rappresentati usando gli stessi simboli decimali, ovvero <span class="arithmatex">\(1\)</span> e <span class="arithmatex">\(2\)</span>; tuttavia, la loro disposizione è differente, per cui non hanno lo stesso significato.</p>
+<h3 id="341-espressione-formale-di-un-numero-in-base-decimale">3.4.1 - Espressione formale di un numero in base decimale<a class="headerlink" href="#341-espressione-formale-di-un-numero-in-base-decimale" title="Permanent link">&para;</a></h3>
+<p>Formalmente, se <span class="arithmatex">\(N \in \mathbb{i}\)</span> è un numero intero composto da <span class="arithmatex">\(k\)</span> simboli, è possibile esprimerlo come:</p>
+<div class="arithmatex">\[
+N = a_k a_{k-1} a_{k-2} \ldots a_2 a_1 a_0
+\]</div>
+<p>dove <span class="arithmatex">\(a_i\)</span> è l'<span class="arithmatex">\(i\)</span>-mo simbolo, con <span class="arithmatex">\(i \in [1, \ldots, k]\)</span>.</p>
+<p>Possiamo esprimere <span class="arithmatex">\(N\)</span> anche in base <span class="arithmatex">\(10\)</span>:</p>
+<div class="arithmatex">\[
+N = a_k * 10^k + a_{k-1} * 10^{k-1} + \ldots + a_1 * 10^1 + a_0 * 10^0
+\]</div>
+<p>Per fare un semplice esempio:</p>
+<div class="arithmatex">\[
+N = 485 = 4 * 10^2 + 8 * 10 + 5
+\]</div>
+<h3 id="342-da-base-decimale-a-base-binaria">3.4.2 - Da base decimale a base binaria<a class="headerlink" href="#342-da-base-decimale-a-base-binaria" title="Permanent link">&para;</a></h3>
+<p>Ovviamente, l'espressione formale di un numero in base decimale è facilmente adattabile ad altre basi, per cui, in generale, vale che un numero <span class="arithmatex">\(B\)</span> a <span class="arithmatex">\(l\)</span> simboli è esprimibile in base <span class="arithmatex">\(b\)</span> mediante un'espressione del tipo:</p>
+<div class="arithmatex">\[
+B_{b} = a_l * b^l + a_{l-1} * b^{l-1} + \ldots + a_1 * b^1 + a_0 * b^0
+\]</div>
+<p>Supponiamo adesso di voler convertire un numero <span class="arithmatex">\(N\)</span> dalla forma decimale a quella binaria. Per farlo, dovremo procedere dividendo <span class="arithmatex">\(N\)</span> per la base <span class="arithmatex">\(2\)</span>, valutando il resto <span class="arithmatex">\(r\)</span>, e reiterare l'operazione usando il quoziente <span class="arithmatex">\(q\)</span>.</p>
+<p>Facciamo un esempio usando <span class="arithmatex">\(N = 485\)</span>.</p>
+<div class="arithmatex">\[
+\begin{eqnarray}
+\frac{485}{2} &amp;\Rightarrow q = 242 &amp; r = 1 &amp; \Rightarrow LSB\\
+\frac{242}{2} &amp;\Rightarrow q = 121 &amp; r = 0 \\
+\frac{121}{2} &amp;\Rightarrow q = 60 &amp; r = 1 \\
+\frac{60}{2} &amp;\Rightarrow q = 30 &amp; r = 0 \\
+\frac{30}{2} &amp;\Rightarrow q = 15 &amp; r = 0 \\
+\frac{15}{2} &amp;\Rightarrow q = 7 &amp; r = 1 \\
+\frac{7}{2} &amp;\Rightarrow q = 3 &amp; r = 1 \\
+\frac{3}{2} &amp;\Rightarrow q = 1 &amp; r = 1 \\
+\frac{1}{2} &amp;\Rightarrow q = 0 &amp; r = 1 &amp; \Rightarrow MSB
+\end{eqnarray}
+\]</div>
+<p>Il valore di <span class="arithmatex">\(N\)</span> in forma binaria è quindi dato da:</p>
+<div class="arithmatex">\[
+N_{2} = (111100101)_2
+\]</div>
+<p>Notiamo che la prima cifra che otteniamo è indicata con il termine <em>LSB</em>, acronimo che sta per <em>Least Significant Bit</em>; questo è il bit meno significativo, ovvero quello "meno rilevante" rispetto al valore finale, ed è posizionato più a destra nella rappresentazione. Di converso, il primo valore è chiamato <em>MSB</em>, acronimo che sta per <em>Most Significant Bit</em> (e che è ovviamente il bit più significativo).</p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Angelo Cardellicchio - MIT License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/anhelus" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    <a href="mailto:angelo.cardellicchio@stiima.cnr.it" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6l-126.3-52.5-40.1 74.5c-5.2 9.7-16.3 14.6-27 11.9S192 499 192 488v-96c0-5.3 1.8-10.5 5.1-14.7l165.3-212.6c2.5-7.1-6.5-14.3-13-8.4l-179 161.9-32 28.9c-9.2 8.3-22.3 10.6-33.8 5.8l-85-35.4C8.4 312.8.8 302.2.1 290s5.5-23.7 16.1-29.8l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.5bf1dace.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.078830c0.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
