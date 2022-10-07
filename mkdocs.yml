@@ -5,25 +5,25 @@ nav:
   - Parte 1 - Concetti introduttivi:
     - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
     - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-    - 3 - Tipi di dato: material/01_intro/04_data_type/lecture.md
-    - 4 - Diagrammi di flusso: material/02_principles/05_flow_chart/lecture.md
-    - 5 - Programmazione strutturata: material/02_principles/06_structured/lecture.md
-    - 6 - Variabili: material/02_principles/08_variables/lecture.md
-    - 7 - Funzioni: material/02_principles/09_functions/lecture.md
+    - 3 - Tipi di dato: material/01_intro/03_data_type/lecture.md
+    - 4 - Diagrammi di flusso: material/01_intro/04_flow_chart/lecture.md
+    - 5 - Programmazione strutturata: material/01_intro/05_structured/lecture.md
+    - 6 - Variabili: material/01_intro/06_variables/lecture.md
+    - 7 - Funzioni: material/01_intro/07_functions/lecture.md
   - Parte 2 - Linguaggi di programmazione:
-    - 8 - Introduzione al C: material/03_c_language/14_intro/lecture.md
-    - 9 - Nozioni fondamentali sul C: material/03_c_language/15_fundamentals/lecture.md
-    - 10 - Introduzione al Python: material/04_python/23_intro/lecture.md
-    - 11 - Concetti sintattici fondamentali di Python: material/04_python/24_syntax/lecture.md
-    - 12 - Strutture dati in Python: material/04_python/25_data_structures/lecture.md
-    - 13 - OOP in Python: material/04_python/26_classes/lecture.md
-    - 14 - Moduli e script in Python: material/04_python/27_modules/lecture.md
+    - 8 - Introduzione al C: material/02_programming/08_intro_c/lecture.md
+    - 9 - Nozioni fondamentali sul C: material/02_programming/09_c_fundamentals/lecture.md
+    - 10 - Introduzione al Python: material/02_programming/10_intro/lecture.md
+    - 11 - Concetti sintattici fondamentali di Python: material/02_programming/11_syntax/lecture.md
+    - 12 - Strutture dati in Python: material/02_programming/12_data_structures/lecture.md
+    - 13 - OOP in Python: material/02_programming/13_classes/lecture.md
+    - 14 - Moduli e script in Python: material/02_programming/14_modules/lecture.md
   - Appendici:
     - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
     - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md
     - C - Programmazione orientata agli oggetti: material/appendix/03_oop/lecture.md
     - D - Il modulo argparse: material/appendix/04_argparse/lecture.md
-    - E - Tema d'esempio: material/appendix/05_sample_project/lecture.md
+    - E - Temi di esempio: material/appendix/05_sample_project/lecture.md
 
 theme:
   name: material

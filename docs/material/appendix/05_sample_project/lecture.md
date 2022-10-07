@@ -1,5 +1,8 @@
 # Appendice E - Tema d'esempio
 
+!!!note "Addendum A.A. 2022/2023"
+    A [questo indirizzo](project_deleo.zip) potete trovare un esempio di tema d'anno effettivamente mostrato dallo studente Antonio De Leo durante l'esame per l'A.A. 2021/2022.
+
 In questa appendice descriviamo un esempio di tema d'anno.
 
 In particolare, l'argomento trattato da questo esempio è:
@@ -32,3 +35,5 @@ Di seguito il link ai due file di rilievo (gli `__init__.py` sono file vuoti):
 | ---- | ---- |
 | Script principale (run.py) | [:link:](./project/run.py) |
 | Modulo per le classi per l'ordinamento (sorting.py) | [:link:](./project/src/algs/sorting.py) |
+
+
