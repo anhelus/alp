@@ -129,7 +129,7 @@ def run(args):
 
 Aggiungiamo poi un altro argomento al `parser`:
 
-```py hl_lines "16 17 18 19 20"
+```py hl_lines="16 17 18 19 20"
 if __name__ == '__main__':
     # Step 1: creiamo un oggetto di classe `ArgumentParser`
     parser = ArgumentParser()
@@ -167,7 +167,7 @@ Vedremo che viene lanciato un errore, in quanto gli argomenti passati mediante a
 
 Per risolvere questo problema dovremo specificare il parametro `type`, ponendolo ad `int`:
 
-```py hl_lines "5"
+```py hl_lines="5"
 parser.add_argument(
     '-e',
     '--eta',
