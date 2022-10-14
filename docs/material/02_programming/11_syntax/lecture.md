@@ -1,5 +1,11 @@
 # 11 - Programmare in Python
 
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/04_python_fundamentals.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
 ## 11.1 - Alcuni concetti sintattici fondamentali
 
 Oltre al duck typing, esistono altri concetti che caratterizzano la sintassi di Python. Vediamoli brevemente.

@@ -1,5 +1,11 @@
 # 10 - Introduzione a Python
 
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/03_intro_python.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
 Prima di iniziare a parlare del linguaggio Python, è opportuno verificare che l'interprete sia installato nel nostro sistema. Per farlo, apriamo un terminale (Shell o Command Prompt, a seconda del nostro sistema), e scriviamo:
 
 ```sh

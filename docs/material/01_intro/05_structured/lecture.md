@@ -1,5 +1,11 @@
 # 5 - La Programmazione Strutturata
 
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/01_intro_inf.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
 Ai più "esperti" tra i lettori sarà capitato di leggere del codice prodotto negli anni '70 ed '80, in linguaggi come il BASIC, simile a qualcosa di questo tipo:
 
 ```basic

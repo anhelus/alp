@@ -1,6 +1,12 @@
 # 4 - I tipi di dato
 
-Nel capitolo precedente abbiamo accennato al fatto che i calcolatori hanno a disposizione una determinata *parola*, la cui dimensione dipende dall'architettura, che determina il numero massimo di bit che possono essere rappresentati nei dati gestiti in fase di elaborazione. Questo, ovviamente, comporta un limite: vediamone in breve le implicazioni, approfittando per introdurre i diversi *tipi* di dato.
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/01_intro_inf.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
+Nel [capitolo precedente](../02_algorithms/lecture.md) abbiamo accennato al fatto che i calcolatori hanno a disposizione una determinata *parola*, la cui dimensione dipende dall'architettura, che determina il numero massimo di bit che possono essere rappresentati nei dati gestiti in fase di elaborazione. Questo, ovviamente, comporta un limite: vediamone in breve le implicazioni, approfittando per introdurre i diversi *tipi* di dato.
 
 ## 4.1 - Dati numerici
 
