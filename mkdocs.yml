@@ -57,6 +57,7 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tabbed # auto tabs
   - pymdownx.tilde # strike through cross out text
+  - tables
 
 plugin:
   - search

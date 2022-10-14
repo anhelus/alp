@@ -1,5 +1,11 @@
 # 8 - Introduzione al linguaggio C
 
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/02_intro_c.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
 Il linguaggio C è un linguaggio a livello medio-alto inizialmente sviluppato da Dennis M. Ritchie ai Bell Labs. La primissima implementazione del C risale al 1972, ma fu soltanto nel 1978 che venne reso disponibile al grande pubblico il primo draft del linguaggio, in quello che oggi è conosciuto come *K&R standard*. La formalizzazione vera e propria del linguaggio avvenne poi da parte dell'ANSI (*American National Standard Institute*) nel 1988.
 
 Al giorno d'oggi, il C è ancora uno tra i linguaggi di programmazione più utilizzati, ed ha applicazioni praticamente ovunque, dai sistemi operativi ai compilatori, passando per database, programmi per smartphone ed editor di testo.

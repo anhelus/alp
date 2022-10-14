@@ -21,7 +21,7 @@ Nel caso lo studente scelga la prima modalit√† di valutazione (*per task*), sar√
 
 ## Date di appello
 
-Le informazioni sulle date di appello saranno rese pubbliche *il prima possibile* sulla bacheca del corso (advices.md).
+Le informazioni sulle date di appello saranno rese pubbliche *il prima possibile* sulla [bacheca del corso](advices.md).
 
 ## Ricevimento
 

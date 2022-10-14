@@ -1,5 +1,11 @@
 # 15 - Nozioni fondamentali su C
 
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :x: | Link non disponibile |
+    | Video esplicativo | :x: | Link non disponibile |
+
 In questo breve capitolo illustriamo alcuni concetti fondamentali da tenere a mente quando scriviamo un programma in C.
 
 ## 9.1 - Nozioni generali sulla struttura del programma
