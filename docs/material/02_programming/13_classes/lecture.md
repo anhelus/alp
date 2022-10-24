@@ -1,5 +1,11 @@
 # 13 - Programmazione orientata agli oggetti in Python
 
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/06_python_oop.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
 Python offre un esteso supporto alla programmazione orientata agli oggetti. Prima di proseguire, però, è opportuno introdurre brevemente questo concetto.
 
 ## 13.1 - La programmazione orientata agli oggetti
