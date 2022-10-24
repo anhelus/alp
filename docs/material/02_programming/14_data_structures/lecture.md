@@ -1,12 +1,18 @@
-# 12 - Strutture dati in Python
+# 14 - Strutture dati in Python
 
-## 12.1 - Liste, pile e code
+!!!tip "Materiale e link utili"
+    | Materiale | Disponibilità | Link |
+    | --------- | :-------------: | ---- |
+    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/07_python_ds.pdf) |
+    | Video esplicativo | :x: | Link non disponibile |
+
+## 14.1 - Liste, pile e code
 
 Python ci offre una grande varietà di metodi per gestire le liste; troviamo un elenco esaustivo a [questo indirizzo](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists).
 
 Grazie a questi metodi, è possibile costruire una pila o una coda in modo molto più semplice rispetto ad altri linguaggi.
 
-### 12.1.1 - Pila
+### 14.1.1 - Pila
 
 Una *pila* (in inglese *stack*) adotta una strategia di accesso ai dati di tipo *Last-In, First-Out* (*LIFO*). Questo significa che il primo elemento ad uscire (ovvero ad essere analizzato) è quello in cima alla pila, ovvero l'ultimo ad esservi entrato.
 
@@ -26,7 +32,7 @@ s.append(4) 		# s sarà pari a [1, 2, 3, 4]
 e = s.pop()			# e sarà pari a 4, mentre s sarà pari a [1, 2, 3]
 ```
 
-### 12.1.2 - Coda
+### 14.1.2 - Coda
 
 Una *coda* (in inglese *queue*) adotta una strategia di accesso ai dati di tipo *First-In, First-Out* (*FIFO*). In questo caso, il primo elemento ad uscire è presente da più tempo in coda.
 
@@ -55,7 +61,7 @@ e = q.popleft()		# e sarà pari a 4, q sarà pari a [1, 2, 3]
 !!!note "Nota"
 	Sottolineamo che `q` non è più una lista, ma una `deque`.
 
-## 12.2 - List comprehension
+## 14.2 - List comprehension
 
 Una delle tecniche più usate per effettuare delle operazioni sugli elementi di una lista è usare la tecnica della *list comprehension*, che permette di sostituire *quasi* completamente i classici cicli.
 
@@ -70,7 +76,7 @@ In altre parole, otterremo in output una lista (`lista_output`) applicando ad og
 !!!note "Nota"
 	Per essere precisi, più che di lista, sarebbe opportuno parlare di iterabile di input.
 
-### 12.2.1 - Forma estesa con if-else
+### 14.2.1 - Forma estesa con if-else
 
 La list comprehension può anche includere delle istruzioni condizionali. Un primo esempio è la seguente forma:
 
@@ -89,7 +95,7 @@ la funzione `f()` sarebbe invocata su tutti gli elementi che soddisfano la `cond
 !!!tip "Perché usare le list comprehension?"
 	Le list comprehension sono utili e versatili, e permettono, in molti casi, di sostituire i classici cicli con una sintassi più snella. Tuttavia, bisogna fare attenzione a non abusare di questo strumento: infatti, facendolo si rischia di complicare inutilmente il nostro programma, rendendolo poco leggibile e manutenibile. Come regola generale, quindi, ricordiamo il principio del rasoio di Occam: anche se è facile innamorarsi delle list comprehension, è bene ricordarsi che anche i cicli sono *leciti e funzionali*, per cui non è sempre necessario trovare a tutti i costi una soluzione usando una list comprehension.
 
-## 12.3 - Le assignment expressions
+## 14.3 - Le assignment expressions
 
 Come apparso dalla trattazione, le list comprehension sono state pensate per approcci puramente iterativi. Di conseguenza, risulta complesso implementare forme di ricorsione. Per ovviare a questo inconveniente, Python ha introdotto le *assignment expression*.
 
@@ -130,7 +136,7 @@ Proviamo a combinare i due passaggi precedenti, ed usare una list comprehension 
 [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
 ```
 
-## 12.4 - Tuple
+## 14.4 - Tuple
 
 Le *tuple* permettono di rappresentano un insieme di valori eterogenei separadoli da una virgola. Ad esempio:
 
@@ -175,7 +181,7 @@ L'operazione è evidentemente ammissibile, ed il risultato è stato proprio quel
 !!!tip "Tuple e liste"
 	Ad un attento osservatore non sfuggirà come tuple e liste siano simili dal punto di vista sintattico, e differiscano in buona sostanza per la mutabilità. Da qui discende che le tuple sono estremamente efficaci nel caso si debba esclusivamente accedere agli elementi contenuti, mentre le liste devono essere usate quando è anche necessario modificare all'occorrenza detti elementi.
 
-## 12.5 - Set
+## 14.5 - Set
 
 Anche i *set* sono molto simili alle liste dal punto di vista sintattico, ma offrono una significativa differenza: infatti, in un set *non possono esserci elementi ripetuti*.
 
@@ -199,7 +205,7 @@ Un'altra considerazione da fare è che il set *non è ordinato*: ciò rende impo
   	  s = set(l)			# Il set sarà [1, 2, 3]
 	  ```
 
-## 12.6 - Dizionari
+## 14.6 - Dizionari
 
 Il quarto ed ultimo tipo di contenitore per sequenze di dati è il *dizionario*, presente anche in altri linguaggi di programmazione con il nome di *array associativo* o *hash map*.
 
