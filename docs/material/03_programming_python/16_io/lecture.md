@@ -1,38 +1,14 @@
 # 16 - Lettura e scrittura di file in Python
 
-Python ha diversi modelli e funzioni integrati per la gesitone dei file. Queste funzioni sono divise in diversi moduli, come os, os.-path, shutil e pathlib., tra gli altri. In questa lezione, vedremo molte delle funzioni pèrincipali di cui abbiamo bisogno per effettuare le operazioni più comuni sui file di Python.
+Python offre numerose funzioni (già integrate nel *core* del linguaggio) per la gestione dei file. Queste sono a loro volta divise in vari moduli, quali (ad esempio) [`os`](https://docs.python.org/3/library/os.html), [`shutil`](https://docs.python.org/3/library/shutil.html) e [`pathlib`](https://docs.python.org/3/library/pathlib.html).
 
-## 16.1 - Il pattern "with open (...) as (...)"
+In questa lezione, vedremo alcune tra le principali funzioni usate per effettuare le più comuni operazioni sui file Python.
 
-Leggere e scrivere i dati sui file usando Python è semplice. Per farlo, dobbiamo epr prima cosa aprire i file in modalità appropriata. Ecco un esempio di come usare il pattern `with open (...) as ...` per aprire un file di testo e leggere i suoi contenuti:
+## 16.1 File di testo vs. file binari
 
-```py
-with open('data.txt', 'r') as f:
-    data = f.read()
-```
+Prima di passare a vedere le principali funzioni usate da Python per la gestione dei file, dobbiamo parlare dei due diversi *tipi* di file esistenti, ovvero file *binari* e file di *testo*.
 
-`open()` prende il nome di un file ed una modalità di apertura dello stesso come primo e secondo parametro, rispettivmaente. In particolare, `r` apre i file in modalità di sola lettura. Per scrivere i dati su file, dobbiamo passare come argomento un `w`:
-
-```py
-with open('data.txt', 'w') as f:
-    f.write('dati da scrivere nel file')
-```
-
-Nell'esempio precedente, `open()` apre i file in lettura o scrittura e restituisce un *handle*, ovvero un riferimento, al file, che fornisce dei metodi  che psosono essere usati per scrivere o leggere i dati su file.
-
-## 16.2 FIle di testo vs. file binari
-
-Ci sono due tipi differenti di file che Python può gestire: i file *binari* ed i file di *testo*. Conoscere la differenza tra i due è importante per come sono gestiti.
-
-La maggior parte dei file che possiamo usare durante l'uso normale del computer sono dei file binari, non testo. Anche il file di Microsoftw Word è in realtà un file binario, anche se ha soltanto del testo al suo interno. Altri esempi di file binari includono:
-
-* immagini;
-* database;
-* fogli Excel;
-
-e via dicendo.
-
-Questo è legato al fatto che questi file hanno dei requisiti speciali di gestione, e richiedono uno specifico software per essere aperti. Ad esempio, abbiamo bisogno di Excel per aprire un foiglio Excel, o di Word per aprire un documento Word.
+La maggior parte dei file che usiamo durante il normale utilizzo del computer sono, infatti, file di tipo *binario*. Nonostante quello che si possa pensare, infatti, anche un documento di Word (o di un programma equivalente) è, in realtà, un file binario, pur avendo soltanto del testo al suo interno. Altri esempi di file binario sono dati dalle immagini, dai database, o anche dai fogli Excel. Ciò è principalmente legato al fatto che file di questo tipo sono, in realtà, codificati in un formato che rende necessario un software specifico per la loro apertura.
 
 Un *file di testo*, invece, non ha una codifica specifica, e può essere aperto da un editor di testo standard senza alcuna gestione specifica. Tuttavia, ogni file di testo deve aderire ad alcune regole specificeh:
 
@@ -196,67 +172,89 @@ This d
 
 Come possiamo vedere, l'operazione di lettura legge solo i dati nel file fino alla posizione 6, che è quello che abbiamo passato alla chiamata `read()` precedente. In questo modo possiamo limitare quanti dati sono letti da un file in un unico punto.
 
+Se leggiamo dallo stesso oggetto file nuovamente, continuerà a leggere i dati da dove ci siamo interrotti. In questo modo possiamo elaborare un grosso file in diversi "chunk" più piccoli.
 
+## Leggere i file di testo riga per riga con readline()
 
-DA QUI
+Possiamo fare anche il parsing dei dati in un file leggendolo riga dopo riga. Qesto ci può pemrettere di scansionare un intero file riga per riga, avanzando solo quando vogliamo, o vedere una linea specifica.
 
+Il metodo `oggetto_file.readline(size)` di defeault restituisce la prima riga del file. Ma cambiando il parametro `size`, possiamo ottenere una qualsiasi riga che vogliamo nel nostro file.
 
-If you read from the same file object again, it will continue reading data where you left off. That way you can process a large file in several smaller “chunks.”
+Ad esempio:
 
-Reading Text Files Line-by-Line With readline()
-You can also parse data in a file by reading it line by line. This can let you scan an entire file line by line, advancing only when you want to, or let you see a specific line.
-
-The fileobject.readline(size) method defaults to returning the first line of the file. But by changing the integer size parameter, you can get any line in your file you need.
-
-For example:
-
+```py
 with open("workData.txt", "r+") as work_data:
      print("This is the file name: ", work_data.name)
      line_data = work_data.readline()
      print(line_data)
-This would return the output of:
+```
 
+Questo restituirà l'uscita come:
+
+```sh
 This is the file name:  workData.txt
 This data is on line 1
-You can call readline() repeatedly to read additional lines of text from the file.
+```
 
-A similar method is the fileobject.readlines() call (notice the plural), which returns a list of all lines in the file. If you did a call of:
+Possiamo chiamare `readline()` ripetutamente per leggere ulteriori righe di test dal file.
 
+Un metodo simile è `fileobject.readlines()` (al plurale), che restiusce una lista di tutte le righe nel file. Se facciamo una chiamata a questo:
+
+```py
 print(work_data.readlines())
-You would get the following output:
+```
 
+Avremo il seguente output:
+
+```py
 ['This data is on line 1', 'This data is on line 2', 'This data is on line 3']
-As you can see, this reads the whole file into memory and splits it up into several lines. This only works with text files however. A binary file is just a blob of data—it doesn’t really have a concept of what a single line is.
+```
 
-Processing an Entire Text File Line-By-Line
-The easiest way to process an entire text file line-by-line in Python is by using a simple loop:
+Come possiamo vedere, questo legge l'intero file in memoria e lo suddivide in diverse righe. Questo funziona soltanto con i file di testo. Un file binario è soltanto un insieme di dati - non ha associato quindi il concetto di quello che rappresenta la singola riga.
 
+## Elaborare un intero file di testo riga per riga
+
+Il modo più semplice per elaborare un intero file di testo riga per riga in Python è usare un semplice ciclo:
+
+```py
 with open("workData.txt", "r+") as work_data:
     for line in work_data:
         print(line)
-This has the following output:
+```
 
+Queste istruzioni hanno il seguente output:
+
+```sh
 This data is on line 1
 This data is on line 2
 This data is on line 3
-This approach is very memory-efficient, because we’ll be reading and processing each line individually. This means our program never needs to read the whole file into memory at once. Thus, using readline() is a comfortable and efficient way to process a big text file in smaller chunks.
+```
 
-Writing to a File With Python Using write()
-Files wouldn’t be any good if you couldn’t write data to them. So let’s discuss that.
+Questo approccio è in realtà più efficiente del precedente, perché leggeremo ed elaboreremo ogni riga individualmente. In questo modo, il programma non deve leggere l'intero file in memoria insieme. QUindi, usare `readline()` è un modo semplice ed efficiente per elaborare un grosso file di testo in parti più piccole.
 
-Remember that when you create a new file object, Python will create the file if one doesn’t already exist. When creating a file for the first time, you should either use the a+ or w+ modes.
+## Scrivere su file con Python mediante write()
 
-Often it’s preferable to use the a+ mode because the data will default to be added to the end of the file. Using w+ will clear out any existing data in the file and give you a “blank slate” to start from.
+I file non servirebbero a molto se non possiamo scriverci dei dati. Vediamo quindi questo aspetto.
 
-The default method of writing to a file in Python is using fileobject.write(data). For example, you could add a new line to our “workData.txt” file by using the following code:
+Ricordiamo che quando creiamo un nuovo oggetto di tipo file, Python crea il file se non ne esiste già uno. QUando si crea un file per la prima volta, dobbiamo usare i modi `a+` o `w+`.
 
+Spesso è preferibile usare il modo `a+` perché i dati saranno di default aggiunti alla fine del file. USare `w+` cancellerà i dati esistenti nel file.
+
+Il meotod di default per scrivere nuovi dati in un file Python è mediante `oggetto_file.write(data)`. Per esempio, possiamo aggiungere una nuova riga al file `dati.txt` usando il seguente codice:
+
+```py
 work_data.write("This data is on line 4\n")
-The \n acts as the new line indicator, moving subsequent writes to the next line.
+```
 
-If you want to write something that isn’t a string to a text file, such as a series of numbers, you have to convert or “cast” them to strings, using conversion code.
+La sequenza `\n` indica una nuova riga, il che fa in modo che le scritture successive avvengano sulla riga successiva.
 
-For example, if you wanted to add the integers 1234, 5678, 9012 to the work_data file, you’d do the following. First, you cast your non-strings as a string, then you write that string to your file object:
+Se vogliamos scrivere qualcosa che non sia una stringa su un file di testo, come una serie di numeri, dovremo convertirli (ovvero, effettuarne il *cast*) in stringhe, usando l'opportuno codice di conversione.
 
+Per esempio, se vogliamo aggiungere gli interi `1234`, `5678`, `9012` al file `dati`, faremo il seguente.
+
+Per prima cosa, faremo il cast delle non-strighe a stringhe, quindi scriveremo quella stringa all'oggetto file:
+
+```py
 values = [1234, 5678, 9012]
 
 with open("workData.txt", "a+") as work_data:
@@ -264,38 +262,50 @@ with open("workData.txt", "a+") as work_data:
         str_value = str(value)
         work_data.write(str_value)
         work_data.write("\n")
-File Seeks: Moving the Read/Write Pointer
-Remember that when you write using the a+ mode, your file pointer is always going to be at the end of the file. So taking the above code where we’ve written the two numbers, if you use the fileobject.write() method, you’re not going to get anything in return. That’s because that method is looking after the pointer to find additional text.
+```
 
-What you need to do then, is move the pointer back to the beginning of the file. The easiest way to do this is to use the fileobject.seek(offset, from_what) method. In this method, you put the pointer at a specific spot.
+## Ricerca nei file: spostare il puntatore read/write
 
-The offset is the number of characters from the from_what parameter. The from_what parameter has three possible values:
+Ricordiamo che quando scriviamo usando la modalità `a+`, il puntatore al file va sempre alla fine del file stesso. Di conseguenza, prende il codice che abbiamo scritto prima, se usiamo il metodo `fileobject.write()`, non avremo niente in uscita. Questo è legato al fatto che il metodo sta guardando al puntatore per trovare del testo aggiuntivo.
 
-0 – indicates the beginning of the file
-1 – indicates the current pointer position
-2 – indicates the end of the file
-When you’re working with text files (those that have been opened without a b in the mode), you can only use the default 0, or a seek(0, 2), which will take you to the end of the file.
+Quello che dobbiamo fare allora è muovere il puntatore all'inizio del file. Il modo più semplice di farlo è usare il metodo `seek(offset, from_what)`. In questo meotod, inseriamo il puntatore in un punto specifico.
 
-So by using work_data.seek(3, 0) on our “workData.txt” file, you will place the pointer at the 4th character (remember that Python starts counts at 0). If you use the line print loop, you would then get an output of:
+L'offset è il numero di caratteri dal parametro `from_what`. Il parametro `from_what` ha tre possibili valori:
 
+* 0: indica l'inizio del file
+* 1: indica il puntaore alla posizioen attuale
+* 2: indica la fine del file
+
+Quando stiamo lavorando con file di testo (quelli che sono stati aperti senza una `b` indicata nel modo), possiamo usare soltanto il valore `0`, o un `2`, che ci porta alla fine del file.
+
+Quindi, usare `data.seek(3, 0)` sul nostro file `data.txt` ci farà piazzare il puntatore al quarto carattere (ricordiamo che il conteggio in Python parte da 0). Se usiamo il ciclo per il print, allora avremo un output come:
+
+```sh
 s data is on line 1
 This data is on line 2
 This data is on line 3
-If you want to check the current position of the pointer, you can use the fileobject.tell() method, which returns a decimal value for where the pointer is at in the current file. If we want to find how long our current work_data file is, we can use the following code:
+```
 
+Se vogliamo controllare la poszione attuale del puntatore, possiamo usare il metodo `tell()`, che restituisce un valore decimale per dove il puntatore è nel file attuale. Se vogliamo capire quanto è lungo il file `data` attuale, possiamo usare il seguente codice:
+
+```py
 with open("workData.txt", "a+") as work_data:
     print(work_data.tell())
-This will give a return value of 69, which is the size of the file.
+```
 
-Editing an Existing Text File with Python
-There will come a time when you need to edit an existing file rather than just append data to it. You can’t just use w+ mode to do it. Remember that mode w will completely overwrite the file, so even with using fileobject.seek(), you won’t be able to do it. And a+ will always insert any data at the end of the file.
+Questo ci darà un valore di ritorno di 69, che rappresenta la dimensione del file.
 
-The easiest way to do it involves pulling the entire file out and creating a list or array data type with it. Once the list is created, you can use the list.insert(i, x) method to insert your new data. Once the new list is created, you can then join it back together and write it back to your file.
+## Editare un file di testo esistente con Python
 
-Remember that for list.insert(i, x), i is an integer that indicates the cell number. The data of x then is placed before the cell in the list indicated by i.
+Ci saranno delle situazioni dove dobbiamo modifiacre un file esistente piuttosto che semplicemente aggiungervi dei dati. Per farlo, non possiamo semplicemente usare la modalità `w+`. Ricordiamo che la modalità `w` effettuerà una completa soprascrittura del file, per cui anche quando si usa `seek()` non saremo in grado di farlo. E `a+` inserirà sempre i dati alla fine del file.
 
-For example, using our “workData.txt” file, let’s say we needed to insert the text line, “This goes between line 1 and 2” in between the first and second lines. The code to do it is:
+Il modo più semplice per farlo prevede l'estrazione dell'intero file e la creazione di una lista o di un array con questo. Una volta creata la lista, possiamo usare il metodo `insert(i, x)` per inserire i nuovi dati. Una volta modificata la lista, possiamo effettuarne il join e scriveral sul nostro file.
 
+Ricordiamo che `insert(i, x)` prevede che `i` sia un intero che indica il numero della cella. I dati di `x` sono quindi piazzati prima della cella nella lista idnicata da `i`.
+
+Ad esempio, usando il file `data.txt`, diciamo che dobbiamo inserire la riga successiva, ovvero `Questo va tra la riga 1 e la riga 2`, tra la prima e la seconda riga. Il codice per farlo è:
+
+```py
 # Open the file as read-only
 with open("workData.txt", "r") as work_data:
     work_data_contents = work_data.readlines()
@@ -306,15 +316,23 @@ work_data_contents.insert(1, "This goes between line 1 and 2\n")
 with open("workData.txt", "w") as work_data:
     work_dataContents = "".join(work_data_contents)
     work_data.write(work_data_contents)
-Once this code runs, if you do the following:
+```
 
+Una volta che eseguiamo questo codice, se scriviamo le seguenti istruzioni:
+
+```py
 with open("workData.txt", "r") as work_data:
     for line in work_data:
         print(line)
-You’ll get an output of:
+```
 
+Avremo un output di:
+
+```sh
 This data is on line 1
 This goes between line 1 and 2
 This data is on line 2
 This data is on line 3
-This demonstrated how to edit an existing text file in Python, inserting a new line of text at exactly the place you wanted.
+```
+
+Abbiamo quindi visto un metodo per modificare un file esistente in Python, inserendo una nuova riga di testo esattamente nel posto che volevamo.

@@ -1,5 +1,13 @@
 # 12 - I paradigmi di programmazione
 
+https://www.freecodecamp.org/news/an-introduction-to-programming-paradigms/#:~:text=What%20is%20a%20Programming%20Paradigm%3F,programming%20problems%20should%20be%20tackled.
+
+# Cosa è un paradigma di programmazione?
+
+I paradigmi di programmazione sono diversi modi os tili nei quali un dato programma o linguaggio di programmazione può essere organizzato. Ogni paradigma consiste di certe strutture, feature ed opinioni su 
+
+
+
 Nel [capitolo 6](../../02_algorithms/06_structured/lecture.md) abbiamo parlato del paradigma della programmazione strutturata riferendoci a tutte quelle tecniche volte ad imprimere una certa struttura nel nostro codice. Abbiamo però anche sottolineato come quello della programmazione strutturata *non* sia l'unico paradigma di programmazione presente al giorno d'oggi; esistono infatti diversi altri approcci, tutti però riconducibili a due macro-aree, ovvero quelle della *programmazione imperativa* da un lato, e della *programmazione dichiarativa* dall'altro.
 
 ## 12.1 - La programmazione imperativa
