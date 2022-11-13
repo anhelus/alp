@@ -10,124 +10,121 @@ Prima di passare a vedere le principali funzioni usate da Python per la gestione
 
 La maggior parte dei file che usiamo durante il normale utilizzo del computer sono, infatti, file di tipo *binario*. Nonostante quello che si possa pensare, infatti, anche un documento di Word (o di un programma equivalente) è, in realtà, un file binario, pur avendo soltanto del testo al suo interno. Altri esempi di file binario sono dati dalle immagini, dai database, o anche dai fogli Excel. Ciò è principalmente legato al fatto che file di questo tipo sono, in realtà, codificati in un formato che rende necessario un software specifico per la loro apertura.
 
-Un *file di testo*, invece, non ha una codifica specifica, e può essere aperto da un editor di testo standard senza alcuna gestione specifica. Tuttavia, ogni file di testo deve aderire ad alcune regole specificeh:
+Un *file di testo*, invece, non ha una codifica specifica, e può essere aperto da un normale editor di testo (per intenderci, anche Blocco Note). Tuttavia, occorre notare che:
 
-* i file di testo devono essere leggibili "as is". Spesso contengono delle codifiche speciali, specialmente in HTML, ma saremo comuqnue in grado di leggere quello che dicono.
-* I dati in un file di testo sono organizzati in righe. Nella maggior parte dei casi, ogni riga è un elemento distinto, sia che sia una riga di istruzione o un comando.
+* i file di testo devono essere *leggibili* da un essere umano;
+* i dati contenuti in un file di testo devono essere organizzati in righe distinte.
 
-Inoltre, i file di testo hanno dei caratteri non visti al termine di orgni riga che permettono all'editor di testo di sapere dove c'è una nuova riga. Quando siinteragisce con questi file mediante la programmazione, possiamo sfruttare questi caratteri. In Python ed in molti altri linguaggi, è definto mediante la sequenza di escape "\n".
+In tal senso, al termine di ogni riga dei file di testo vi è un carattere di terminazione che, in Python, è la sequenza di escape `\n` (mentre in altri linguaggi, come ad esempio il C, è data dal punto e virgola).
 
-## Dove trovare i tool per l'I/O in Python
+## 16.2 - Python e gli strumenti per l'input/output (I/O)
 
-Quando si lavora in Python, non dobbiamo preoccuparci di importare una libreria esterna per lavorare con i file, in qunato sono integrati nella parte fondamentale del linguaggio. In altri linguaggi come il C++, per lavorare con i file dobbiamo abilitare i tool di I/O includendo l'header corretto, per esempio #include <fstream>, o in Java dobbiamo importare l'iustruzioen import java.io.*.
+Innazitutto è necessario premettere che Python integra di default gli strumenti per leggere (*input*) e scrivere (*output*) su file (o su altri supporti). Ciò differisce da altri linguaggi, come ad esempio il C++, nel quale è necessario includere una libreria facente parte del core del linguaggio (`#include <fstream>`).
 
-Invece, Python ha un insieme integrato di funzioni che gestiscono tuttoi quello di cui abbiamo bisogno per leggere e scrivere sui file. Vediamole di seguito.
+Vediamo adesso come aprire un file in Python.
 
-## Apertura di un file in Python
+### 16.2.1 - Apertura di un file in Python
 
-La prima funzione che dobbiamo conoscere è `open()`. Presente sia in Python 2 sia in Python 3, questo comando restituisce un opggetto di tipo file come specificato dai parmaetri passati. L'utilizzo base di open() è il seguente: 
-
-file = open(nome_file, modo)
-
-In questo caso, `nome_file` è ovviamente il nome del file con il quale vogliamo interagire, con l'estensione inclusa. Questo significa che se abbiamo un file di testo chiamato `dati.txt`, il nome del file da inserire sarà proprio `dati.txt`, e non solo `dati`.
-
-Possiamo anche specificare il percorso esatto del file, come C:\Lavoro\dati.txt (se, ad esempio, stiamo usando Windows).
-
-E' opportuno ricordare che una singola backslash è una stringa che indica a Python l'inizio di un literal. Quindi, qui abbiamo un problema, perché questi due significati avranno un conflitto.
-
-Per fortuna, abbiamo diversi modi di risolvere questo problema. Il primo è quello di usare due backslash, in questo modo:
+Per aprire un file in Python occorre usare la funzione `open()`, il cui utilizzo base è il seguente:
 
 ```py
-'C:\\Lavoro\\dati.txt'
+riferimento_file = open(nome_file, modalità)
 ```
 
-L'altro è usare gli slash normali:
+La funzione `open()` restituisce un *riferimento*, o *puntatore*, al file a partire da due parametri:
 
-```py
-'C:/Lavoro/dati.txt'
-```
+* `nome_file`, ovvero il nome del file con il quale vogliamo interagire, *comprensivo dell'estensione*;
+* `modalità`, che indica il modo in cui interagiremo con il file.
 
-Per quello che riguarda il modo, questo dice a Python cosa vogliamo fare con il nostro file. Ci sono diversi modi che possiamo specificare quando ci occupiamo di file di testo.
+In particolare, se il file con cui vogliamo interagire è nella stessa cartella del nostro script Python, potremo limitarci ad utilizzarne il nome completo di estensione (ad esempio, `dati.txt`). In caso contrario, invece, dovremo specificarne il percorso relativo al nostro script, o il percorso assoluto (ad esempio, `C:/documenti/dati.txt`).
 
-| Modo | Descrizione |
-| ---- | ----------- |
-| 'w' | Write: questo modo è usato qunaodo il file deve essere modificato, e diverse informazioni cambiate o aggiutne. Teniamo a mente che questo cancella il file esistente per crearne uno nuov. Il puntatore al file è piazzato all'inizio del file. |
-| 'r' | Read: questo modo va usato quanod le infomraizoni nel file devono soltanto essere lette, e non modificate in alcun modo. Il puntatore al file è piazzato all'inizio del file. |
-| 'a' | Append: questo modo aggiunge delle ulteriori informazioni al terminee del file in maniera automatica. Il putnatore al file è piazzato al termine del file. |
-| 'r+' | Read/Write: questa modalità viene usata quando faremo dei cambi al file, e leggeremo le informazioni dallo stesso. Il puntatore al file è piazzato all'inizio del file |
-| 'a+' | Append/Read: un ifle è aperto per permettere l'aggiunta di dati alla fine del file e permetterne anche la lettura. Il putnatore al file è piazzato alla fine del file. |
-| x | Exclusive Creation: questo modo è usato esclusivamente per creare un file. Se un file con lo stesso nome esiste, la chiamata a funzione fallirà.
+!!!tip "Slash e backslash"
+    Quando si utilizzano i percorsi assoluti, è importante fare attenzione al corretto uso di slash e backslash. Il consiglio è quello di utilizzare le slash o, in alternativa, il doppio backslash. Tuttavia, potrebbe essere saggio utilizzare strumenti più *pythonic*, come le librerie os e pathlib, che approfondiremo altrove.
 
-Quando stiamo usando file bianri, useremo gli stessi specificatori, ma aggiungeremo una 'b' al termine del file. Quindi:
+La modalità indica invece quello che vogliamo fare con il nostro file; le diverse opzioni sono riassunte nella tabella successiva.
+
+| Modalità | Abbreviazione | Descrizione | Piazzamento del puntatore al file |
+| -------- | ------------- | ----------- | --------------------------------- |
+| *Write* | `w` | Questa modalità è usata quando dobbiamo modificare il file da zero. Risulta importante sottolineare come, in questa modalità, un eventuale file già esistente viene cancellato | Il puntatore al file è piazzato all'inizio del file. |
+| *Read* | `r` | Questa modalità è usata quando il file va esclusivamente letto e non modificato in alcun modo. | Il puntatore al file è piazzato all'inizio del file. |
+| *Append* | `a` | Questa modalità è usata quando occorre aggiungere ulteriori informazioni al termine del file. | Il puntatore al file è piazzato al termine del file. |
+| *Read/Write* | `r+` | Questa modalità è usata quando occorre sia modificare completamente sia leggere il file. | Il puntatore al file è piazzato all'inizio del file. |
+| *Append/Read* | `a+` | Questa modalità è usata quando occorre sia aggiungere ulteriori informazioni al termine del file sia permetterne la lettura. | Il puntatore al file è piazzato alla fine del file. |
+| *Exclusive Creation* | `x` | Questa modalità è usata esclusivamente per creare un *nuovo* file; ciò significa che, se esiste già un file con lo stesso nome, la funzione lancerà un'eccezione. | N.D. |
+
+Le modalità precedentemente elencate funzionano con i file di testo; per usarle sui file binari, basterà aggiungere una `b` al modificatore, ovvero:
 
 | Modalità | Shortcut (testo) | Shortcut (binario) |
 | -------- | ---------------- | ------------------ |
-| Write | 'w' | 'wb' |
-| Read | 'r' | 'rb' |
-| Append | 'a' | 'ab' |
-| Read/Write | r+ | rb+ |
-| Append/Read | a+ | ab+ |
-| Exclusive Creation | x | xb |
+| *Write* | `w` | `wb` |
+| *Read* | `r` | `rb` |
+| *Append* | `a` | `ab` |
+| *Read/Write* | `r+` | `rb+` |
+| *Append/Read* | `a+` | `ab+` |
+| *Exclusive Creation* | `x` | `xb` |
 
-Veidmao un esempio di compe aprire un file ed impostare la modalità di accesso 
+#### 16.2.1.1 - Un esempio
 
-Quando si usa la funzikone open(), tipicamente si assegna il suo risultato ad una varibile. Dato un nome chiamato dati.txt, il codice per aprire il file in modalità di lettura e scrittura è il seguente:
-
-data_file = open('dati.txt', 'r+')
-
-Questo crea un oggetto chiamato file_dati che possiamo manipolare mediante opportunio metodi. Abbiamo usato la modalità di accesso r+ in questo esempio che dice a Python che vogliamo aprire il file per la lettura e la scrittura. Questo ci dà molta flesisbilità, ma spesso potremmo voler restirngere il nostro programma alla semplice lettura o scritutra, e questo è quando le altre modalità vengono in aiuto.
-
-## Chiusura di un file in Python
-
-Sapere come chiudere un file è importante quando siamo il lettura e scrittura.
-
-In questo modo, liberiamo le risorse di sistema che il nostro programma sta usando a scopo di I/O. Qunado scriviamo un programma che ha vincoli di spazio o memoria, questo ci permette di gestire le nostre risorse in maniera efficace.
-
-Inoltre, chiudere un file ci assicura che ogni dato "pendente" viene scritto nel sistema di memoria sottostante, ad esempio, il disco locale. Chiudendo esplicitamente il file ci assicuriamo che ogni dato bufferizzato in memorria venga rimosso e scritto sul file.
-
-La funzione per chiudere un file in Pyuthon è semplicemente oggetto_file.close(). Usando l'oggetto data_file che abbiamo creato nell'esempio precedente, il comando per chiuderlo sarebbe:
+Vediamo un esempio di come è possibile aprire un file in modalità *write*. Supponiamo di avere un file chiamato `dati.txt`, e che questo sia nella stessa cartella del nostro script:
 
 ```py
-data_file.close()
+file_dati = open('dati.txt', 'w')
 ```
 
-Dopo che chiudiamo il file, non possiamo più accedervi a meno che non lo riapriamo successivamente. Provare a leggere o scrivere un file chiuso lancerà un'eccezione ValueError:
+Avremo quindi creato un oggetto chiamato `file_dati` che potremo conseguentemente utilizzare per manipolare, in modalità di scrittura, il nostro file `dati.txt`.
+
+!!!note "Modalità utilizzate"
+    Le modalità di cui ci serviremo nei casi pratici saranno spesso quelle di lettura e scrittura.
+
+### 16.3 - Chiusura di un file
+
+Quando si utilizza un file in lettura o scrittura si crea un *flusso* (in inglese *stream*) che va da o verso il nostro file. In altre parole, lo script crea un "canale di comunicazione" che tiene aperto il file, non rendendolo disponibile ad altre applicazioni fino a che questo non viene liberato.
+
+Va da sé che chiudere questo stream sia estremamente importante per due motivi, ovvero liberare risorse ed assicurarsi che eventuali modifiche provvisorie siano finalizzate. Per farlo, Python ci mette a disposizione la funzione `close()` da chiamare sul riferimento al file. Ad esempio:
 
 ```py
->>> f = open("/tmp/myfile.txt", "w")
->>> f.close()
->>> f.read()
+file_dati.close()
+```
+
+Dopo aver chiuso il file, non potremo più accedervi (a meno che, ovviamente, non lo riapriamo successivamente). Per verificarlo, proviamo ad eseguire le seguenti istruzioni da un terminale Python:
+
+```py
+>>> file_dati = open("dati.txt", "w")
+>>> file_dati.close()
+>>> file_dati.read()
+
 Traceback (most recent call last):
   File "<input>", line 1, in <module>
-    f.read()
+    file_dati.read()
 ValueError: I/O operation on closed file.
 ```
 
-In Python, la best practice per aprire e chiudere i file usa la parola chiave `with`. Questa parola chiave chiude il file automaticamente dopo che si completa il blocco di codice annidato:
+### 16.4 - La parola chiave with
+
+Python offre una sintassi *consigliata* per l'interazione con i file mediante l'uso della parola chiave `with`. Grazie a questa sintassi, il file verrà automaticamente chiuso dopo che l'esecuzioni delle istruzioni presenti nel blocco di codice annidato all'interno del `with`. Ad esempio, l'istruzione precedente si trasforma nel seguente modo:
 
 ```py
-with open("workData.txt", "r+") as workData:
-    # File object is now open.
-    # Do stuff with the file:
-    workData.read()
+with open("dati.txt", "w") as file_dati:
+    # Abbiamo un puntatore chiamato file_dati.
+    # Eseguiamo alcune operazioni sul file:
+    file_dati.read()
 
-# File object is now closed.
-# Do other things...
+# Siamo usciti dall'ambito del with.
+# Il file è adesso chiuso.
 ```
 
-Se non usiamo la parola chiave `with` o usiamo la funzione `fileobject.close()` allora Python chiuderà in automatico e distruggerà l'oggetto file attraverso il suo garbage collector integrato. Tuttavia, a seconda del nostro codice, la garbage collection può avvenire in ogni istante. 
+!!!note "Nota"
+    Nel prosieguo, utilizzeremo esclusivamente la sintassi che usa la parola chiave `with`.
 
-Per cui è raccomandabile usare la parola chiave `with` per controllare quando il file sarà chiuso - in pratica dopo che il blocco di codice interno finisce la sua esecuzione.
+### 16.5 - Interagire con il file
 
-## Lavorare ocn gli oggetti di tipo file
+Una volta aperto un file, potremo usare i metodi integrati in Python per interagire con il file. Vediamone brevemente come fare.
 
-Una volta che abbiamo aperto con successo un file, possiamo usare i metodi built-in per occuparci il nuovo oggetto file. Possiamo leggere i dati da questo, o scrivervi nuovi dati. Ci sono anche altre operazioni come muovere il "puntatore read/write", che determinaon dove vengono letti i dati dal file e dove sono scritti. Vedremo questo più avanti nella lezione.
+#### 16.5.1 - Lettura dei dati
 
-Adesso vedremo come leggere i dati da un file che abbiamo aperto.
+Per leggere i contenuti di un file, dobbiamo usare il metodo `read(dimensione)`. Se non specifichiamo il parametro `dimensione`, il metodo leggerà l'intero contenuto del file, stampandolo a schermo sotto forma di stringa (se è un file di testo) o come byte (se è un file binario).
 
-## Lettura dei dati da un file in Python
-
-Leggere i contenuti di un file avviene emdiante il metodo `oggetto_file.read(dimensione)`. Di defautl, questo metodo leggerà l'intero file e lo stamperà su console come una stringa (in modalità testo) o come un oggetto byte (in modalità binaria).
+TODO: DA QUI
 
 Dobbiamo stare attenti quando usiamo la dimensione di default. Se il file che stiamo leggendo è più grande della memorai disponibile, non saremo in grado di accedere all'intero file in una sola volta. In un caso come questo, dobbiamo suare il parametro `size` per spezzarlo in parti gestibili dalla memoria.
 
