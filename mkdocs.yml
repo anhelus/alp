@@ -1,0 +1,125 @@
+site_name: Algoritmi e Linguaggi di Programmazione Python/C
+nav:
+  - Home del corso: index.md
+  - Slides proiettate a lezione: material/slides/index.md
+  - Bacheca:
+    - Avvisi: advices.md
+    - Progetti: projects.md
+  - Parte 1 - Concetti introduttivi:
+    - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
+    - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
+    - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
+    - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
+    - 5 - Diagrammi di flusso: material/01_intro/05_flow_chart/lecture.md
+    - 6 - Programmazione strutturata: material/01_intro/06_structured/lecture.md
+    - 7 - Variabili: material/01_intro/07_variables/lecture.md
+    - 8 - Funzioni: material/01_intro/08_functions/lecture.md
+    - 9 - Complessità computazionale:
+      - Dispense: material/01_intro/09_complexity/lecture.md
+      - Esercizi: material/01_intro/09_complexity/exercises.md
+    - 10 - Strutture dati: material/01_intro/10_data_structures/lecture.md
+    - 11 - Ricorsione: material/01_intro/11_recursion/lecture.md
+    - 12 - Paradigmi di programmazione: material/01_intro/12_paradigms/lecture.md
+    - 13 - Strutture dati avanzate: material/01_intro/13_adv_data_structures/lecture.md
+  - Parte 2 - Linguaggio di programmazione C:
+    - 14 - Introduzione al linguaggio: material/02_programming_c/14_intro/lecture.md
+    - 15 - Nozioni fondamentali sul C:
+      - Dispense: material/02_programming_c/15_fundamentals/lecture.md
+      - Esercizi: material/02_programming_c/15_fundamentals/exercises.md
+    - 16 - Ambito di una variabile:
+      - Dispense: material/02_programming_c/16_scope/lecture.md
+      - Esercizi: material/02_programming_c/16_scope/exercises.md
+    - 17 - Operatori:
+      - Dispense: material/02_programming_c/17_operators/lecture.md
+      - Esercizi: material/02_programming_c/17_operators/exercises.md
+    - 18 - Array:
+      - Dispense: material/02_programming_c/18_arrays/lecture.md
+      - Esercizi: material/02_programming_c/18_arrays/exercises.md
+    - 19 - Puntatori:
+      - Dispense: material/02_programming_c/19_pointers/lecture.md
+      - Esercizi: material/02_programming_c/19_pointers/exercises.md
+    - 20 - Gestione della memoria: material/02_programming_c/20_memory/lecture.md
+      - Esercizi: material/02_programming_c/19_pointers/exercises.md
+    - 21 - I/O su file: material/02_programming_c/21_io_files/lecture.md
+    - 22 - Typedef, struct ed union:
+      - Dispense: material/02_programming_c/22_typedef/lecture.md
+      - Esercizi: material/02_programming_c/22_typedef/exercises.md
+    
+  - Parte 3 - Linguaggio di programmazione Python:
+    - 10 - Introduzione al Python:
+      - Dispense: material/02_programming/10_intro/lecture.md
+      - Esercizi: material/02_programming/10_intro/exercises.md
+    - 11 - Concetti sintattici fondamentali di Python:
+      - Dispense: material/02_programming/11_syntax/lecture.md
+      - Esercizi: material/02_programming/11_syntax/exercises.md
+    - 12 - Programmazione orientata agli oggetti: material/02_programming/12_oop/lecture.md
+    - 13 - OOP in Python:
+      - Dispense: material/02_programming/13_classes/lecture.md
+      - Esercizi: material/02_programming/13_classes/exercises.md
+    - 14 - Strutture dati in Python:
+      - Dispense: material/02_programming/14_data_structures/lecture.md
+      - Esercizi: material/02_programming/14_data_structures/exercises.md
+    - 15 - Moduli e script in Python: material/02_programming/15_modules/lecture.md
+  - Appendici:
+    - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
+    - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md
+    - C - Il modulo argparse: material/appendix/04_argparse/lecture.md
+    - D - Temi di esempio: material/appendix/05_sample_project/lecture.md
+
+theme:
+  name: material
+
+markdown_extensions:
+  - admonition # notes make pretty
+  - attr_list
+  - footnotes
+  - meta # page-specific context
+  - toc:
+      permalink: true # inserts an anchor
+  - sane_lists # better ul and ol
+  - nl2br # newline hard break
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem: # better italic and bold
+      smart_enable: asterisk
+  - pymdownx.caret # insert text and superscript
+  - pymdownx.details # details and summary; work with admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight: # better code, instead of CodeHilite           <--------
+      linenums: false
+  - pymdownx.inlinehilite # like codehilite but inline
+  - pymdownx.magiclink # auto links
+  - pymdownx.mark # highlight text
+  - pymdownx.smartsymbols # special symbols
+  - pymdownx.superfences: # nest code blocks under other blocks   <-------
+  - pymdownx.tasklist: # better tasks lists
+      custom_checkbox: true
+  - pymdownx.tabbed # auto tabs
+  - pymdownx.tilde # strike through cross out text
+  - tables
+
+plugin:
+  - search
+  - encryptcontent: {}
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/anhelus
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:angelo.cardellicchio@stiima.cnr.it
+  analytics:
+    provider: google
+    property: G-J2XESD8WDV
+
+extra_javascript:
+  - js/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; Angelo Cardellicchio - MIT License
