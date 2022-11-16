@@ -1,4 +1,4 @@
-# 12 - Principi di OOP
+# 25 - Principi di OOP
 
 !!!tip "Materiale e link utili"
     | Materiale | Disponibilità | Link |
@@ -10,7 +10,7 @@ La programmazione orientata agli oggetti (in inglese *object-oriented programmin
 
 Ciò si estende ovviamente anche ai tipi definiti dall'utente, che assumono il nome di *classi*. Facciamo un esempio.
 
-## 12.1 - La classe `Persona`
+## 25.1 - La classe `Persona`
 
 Immaginiamo di voler definire una struttura dati che contenga al suo interno le informazioni necessarie a definire una persona, come nome, cognome, genere ed età. Per farlo, ovviamente, dovremo "unire" tra di loro diversi dati primitivi: potremo usare una stringa per il nome, una per il cognome, una per il genere e, infine, un intero per l'età.
 
@@ -27,7 +27,7 @@ Ovviamente, potremo in qualche modo agire con degli opportuni *metodi* su questi
 
 Oltre al concetto di classe, tuttavia, la OOP definisce altri tre concetti base. Vediamoli di seguito.
 
-## 12.2 - Concetto 1: Ereditarietà
+## 25.2 - Concetto 1: Ereditarietà
 
 Per *ereditarietà* si intende la capacità di una classe di "discendere" da un'altra. Non dobbiamo, però, pensare al nostro albero genealogico: infatti, noi abbiamo *parte* delle caratteristiche di ciascuno dei nostri genitori, mentre una classe figlia eredita *in toto* le caratteristiche di una classe madre.
 
@@ -51,7 +51,7 @@ In ultimo, notiamo come ogni istanza di `Studente` è un'istanza di `Persona`, *
 !!!tip "Ereditarietà multipla e multilivello"
     Alcuni linguaggi, compreso Python, offrono la possibilità di ereditare da più classi; tale concetto è chiamato *ereditarietà multipla*. Se invece stabiliamo una vera e propria gerarchia di classi, con una classe "nonna", una "madre" ed una "figlia", avremo una struttura *multilivello*.
 
-## 12.3 - Concetto 2: Incapsulamento
+## 25.3 - Concetto 2: Incapsulamento
 
 Il concetto di *incapsulamento* prevede che sia possibile accedere ad un metodo (o anche ad un attributo) di una classe *esclusivamente mediante la sua interfaccia verso il mondo esterno*. Vediamo cosa significa.
 
@@ -61,7 +61,7 @@ In questo modo, la classe mantiene un'interfaccia *stabile* ed *essenziale* vers
 
 ![encapsulation](./images/encapsulation.png){: .center}
 
-## 12.4 - Concetto 3: Polimorfismo
+## 25.4 - Concetto 3: Polimorfismo
 
 Il concetto di *polimorfismo* prevede che sia possibile modificare il comportamento associato ad un metodo a seconda della classe che lo utilizza.
 

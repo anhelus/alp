@@ -1,4 +1,4 @@
-# 7 - Le funzioni
+# 8 - Le funzioni
 
 !!!tip "Materiale e link utili"
     | Materiale | Disponibilità | Link |
@@ -43,7 +43,7 @@ In nostro aiuto, quindi, giungono le *funzioni*, ovvero dei costrutti che ci per
 
 Vediamo quindi come sono strutturate.
 
-## 7.1 - Struttura di una funzione
+## 8.1 - Struttura di una funzione
 
 Una funzione consta di due parti: una *firma* ed un *corpo*.
 
@@ -95,7 +95,7 @@ Come si può notare, il numero di righe di codice scritte diminuisce in maniera 
 !!!note "Nota sulle parentesi quadre"
 	Abbiamo usato in precedenza le parentesi quadre (`[]`) per indicare un "insieme" di valori. In realtà, questa notazione indica spesso un *array*, o una *lista*, a seconda del linguaggio; ne parleremo più diffusamente nel seguito.
 
-## 7.2 - Il concetto di modularità
+## 8.2 - Il concetto di modularità
 
 Abbiamo visto come una funzione serva ad evitare di dover ripetere numerose volte lo stesso insieme di istruzioni. Tuttavia, abbiamo accennato in precedenza anche al fatto che ogni funzione è un contenitore logico di una sequena di istruzioni da utilizzare per risolvere un problema: ciò ci conduce direttamente al concetto di *modularità*, per il quale una funzione deve contenere *esclusivamente* le istruzioni necessarie ad eseguire lo scopo per cui è stata concepita.
 
@@ -114,7 +114,7 @@ int calcolo_voto_finale_laurea(float voto_accesso, int voto_esame, float soglia_
 
 Da notare la presenza di due `return`: questo è corretto perché, essendo specificati nei due rami di un'istruzione condizionale, saranno mutualmente esclusivi, e quindi la funzione potrà "arrivare" soltanto ad uno di essi.
 
-## 7.3 - Funzioni, variabili ed ambito
+## 8.3 - Funzioni, variabili ed ambito
 
 Introduciamo brevemente il concetto di *ambito* di una variabile. All'interno del nostro programma, infatti, ogni variabile ha una sorta di "ciclo di vita", nel quale viene creata, utilizzata, ed infine distrutta.
 

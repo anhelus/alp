@@ -1,6 +1,6 @@
-# E9 - Nozioni fondamentali su C
+# E14 - Nozioni fondamentali su C
 
-## Esercizio E9.1
+## Esercizio E14.1
 
 Definire il programma *Matematicamente* in modo che sia composto da:
 

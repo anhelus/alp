@@ -1,6 +1,6 @@
 # 18 - Array in C
 
-Nella [lezione 10](../../02_principles/10_data_structures/lecture.md) abbiamo introdotto il concetto di array in questo modo:
+Nella [lezione 10](../../01_intro/10_data_structures/lecture.md) abbiamo introdotto il concetto di array in questo modo:
 
 !!!quote "Definizione di array"
     Un array contiene una sequenza di elementi, tipicamente dello stesso tipo, ed organizzati seguendo un ordine specifico, "esplorabile" mediante il concetto di *indice*.

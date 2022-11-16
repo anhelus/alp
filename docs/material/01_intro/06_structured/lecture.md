@@ -1,4 +1,4 @@
-# 5 - La Programmazione Strutturata
+# 6 - La Programmazione Strutturata
 
 !!!tip "Materiale e link utili"
     | Materiale | Disponibilità | Link |
@@ -25,13 +25,13 @@ Il codice appare quindi simile ad un "piatto di spaghetti", i quali si intreccia
 
 Lo spaghetti coding rende il nostro programma difficile da interpretare, non solo da parte di altri, ma anche da noi stessi quando lo andiamo a riaprire dopo un po' di tempo. Per questo motivo, nel tempo, sono andati sempre più diffondendosi nuovi e più efficaci paradigmi di programmazione, come quella imperativa, orientata agli oggetti e, più recentemente, funzionale. Tutti, però, partivano da un presupposto: dare una *struttura* al codice. E, in tal senso, l'assunto da cui si parte è sempre e solo uno, ovvero il *teorema di Bohm e Jacopini*.
 
-## 5.2 - Il teorema di Bohm-Jacopini
+## 6.2 - Il teorema di Bohm-Jacopini
 
 Il teorema di Bohm - Jacopini venne enunciato nel 1966, ed afferma che qualsiasi algoritmo può essere implementato (sia sotto forma di codice, sia sotto forma di flow chart) utilizzando esclusivamente le cosiddette tre *strutture di controllo*, ovvero *sequenza*, *selezione* e *ciclo*. Le implicazioni sono ovviamente importantissime, e ci permettono di semplificare enormemente il nostro lavoro.
 
 In tal senso, però, è necessario conoscere in maniera appropriata le diverse strutture di controllo, che saranno quindi illustrate di seguito.
 
-### 5.3.1 - Sequenza
+### 6.3.1 - Sequenza
 
 La *sequenza* prevede che una serie di istruzioni siano realizzate sequenzialmente, ovvero l'una in cascata all'altra. Immaginiamo ad esempio di dover calcolare la distanza euclidea tra due punti, ovvero `a` e `b`, di cui conosciamo le coordinate $(x_a, y_a)$ ed $(x_b, y_b)$. In *pseudo-codice* (ovvero, in un linguaggio simbolico usato per esprimere l'algoritmo senza per questo richiamare necessariamente un linguaggio di programmazione esistente) potremmo esprimere la sequenza come:
 
@@ -47,7 +47,7 @@ La sequenza di operazioni sarà quella mostrata nella seguente figura:
 
 Come si può notare, il flusso delle istruzioni è *unico*, e queste sono eseguite l'una di seguito all'altra, ovverosia in maniera sequenziale.
 
-### 5.3.2 - Selezione
+### 6.3.2 - Selezione
 
 La *selezione* prevede invece che il flusso delle istruzioni possa diramarsi tra due diversi rami, mutualmente esclusivi, al verificarsi o meno di una condizione.
 
@@ -71,7 +71,7 @@ I due rami del programma sono quindi rappresentati dal THEN e dall'ELSE, mentre 
 
 ![selection](./images/selection.png){: .center}
 
-#### 5.3.2.1 - I costrutti ELSE IF e SWITCH
+#### 6.3.2.1 - I costrutti ELSE IF e SWITCH
 
 Il costrutto IF - THEN - ELSE limita i rami in cui un programma può derivare a due. Tuttavia, nella realtà, potrebbe essere necessario avere più rami; in questi casi, ci viene in aiuto il costrutto ELSE IF, che permette di specificare ulteriori divergenze del programma. Ad esempio:
 
@@ -107,7 +107,7 @@ switch (a)
 		scrivi "Non saprei!";
 ```
 
-### 5.3.3 - Iterazione
+### 6.3.3 - Iterazione
 
 L'ultimo tipo di struttura di controllo è l'*iterazione*, chiamata anche *ciclo*; in questo caso, un'istruzione verrà reiterata fino a che una certa condizione è verificata.
 
@@ -133,7 +133,7 @@ Risulta particolarmente interessante notare come l'iterazione (espressa in quest
 !!!note "Nota"
 	Modificare la variabile contatore ad ogni iterazione è *estremamente importante*. Se il contatore non fosse mai modificato, infatti, il programma non potrebbe mai uscire dal ciclo.
 
-#### 5.3.3.1 Costrutti FOR e WHILE-DO
+#### 6.3.3.1 Costrutti FOR e WHILE-DO
 
 Tradizionalmente, sono usati due costrutti per implementare una struttura iterativa, ovvero il costrutto FOR (che abbiamo visto in precedenza) ed il costrutto WHILE-DO.
 
@@ -155,7 +155,7 @@ In pratica, il costrutto WHILE-DO verifica ad ogni iterazione che la condizione 
 !!!note "Il costrutto DO-WHILE"
 	Esiste una variante del costrutto WHILE-DO chiamata DO-WHILE, nella quale le istruzioni specificate nel DO vengono effettuate prima della verifica della condizione. Non tutti i linguaggi di programmazione supportano tale costrutto; inoltre, con pochi accorgimenti, è possibile usare indifferentemente il WHILE-DO ed il DO-WHILE. Tuttavia, occorre tener presente che il DO-WHILE sarà eseguito *almeno* una volta, dato che la condizione è verificata dopo l'esecuzione delle istruzioni, mentre il WHILE-DO potrebbe non essere mai eseguito, dato che la condizione è verificata prima dell'esecuzione delle istruzioni.
 
-## 5.4 - Esercizi
+## 6.4 - Esercizi
 
 1. Schematizzare, sotto forma di diagramma di flusso, un programma che utilizzi il costrutto WHILE-DO.
 2. Schematizzare, sotto forma di diagramma di flusso, un programma che utilizzi il costrutto SWITCH.

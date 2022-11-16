@@ -8,11 +8,11 @@
 
 In questo breve capitolo illustriamo alcuni concetti fondamentali da tenere a mente quando scriviamo un programma in C.
 
-## 9.1 - Nozioni generali sulla struttura del programma
+## 15.1 - Nozioni generali sulla struttura del programma
 
 La struttura di un programma C si basa su una serie di concetti ben definiti. Vediamoli rapidamente.
 
-### 9.1.1 - Modularità
+### 15.1.1 - Modularità
 
 I programmi scritti in C devono essere pensati come *modulari*, ovvero suddivisi in opportune sezioni (chiamate appunto *moduli*) ognuna delle quali contiene informazioni ed istruzioni necessarie ad espletare una certa funzione.
 
@@ -21,9 +21,9 @@ Ad esempio, se scrivessimo un ipotetico programma *Calcolatrice*, potremmo decid
 !!!note "Modularità e funzionalità"
     Idealmente, ciascun modulo deve espletare un'unica funzione ben definita, e non essere in alcun modo interdipendente dagli altri moduli. Tuttavia, molto spesso è impossibile evitare completamente dette interdipendenze, per cui ci si assicura prevalentemente che il loro impatto sia minimo.
 
-### 9.1.2 - File header e file sorgente
+### 15.1.2 - File header e file sorgente
 
-Quando abbiamo introdotto l'[Hello, World](../16_intro/lecture.md) abbiamo visto che nella prima riga di codice era importato il file `stdio.h`, che abbiamo contestualmente detto essere rappresentativo di una libreria delegata alla gestione delle operazioni di input ed output da e verso diversi tipi di sorgente.
+Quando abbiamo introdotto l'[Hello, World](../14_intro/lecture.md) abbiamo visto che nella prima riga di codice era importato il file `stdio.h`, che abbiamo contestualmente detto essere rappresentativo di una libreria delegata alla gestione delle operazioni di input ed output da e verso diversi tipi di sorgente.
 
 Un file di questo tipo (ovvero un file con estensione `.h`) è chiamato file *header*, e contiene al suo interno una serie di *prototipi*, ovvero le definizioni di un insieme di funzioni. Ad ogni file header corrisponde un file *sorgente*, la cui estensione è `.c`, nella quale le funzioni sono effettivamente implementate.
 
@@ -32,7 +32,7 @@ Semplificando: in un file header, vi sono soltanto le "firme" delle funzioni, me
 !!!tip "Suggerimento"
     Il motivo alla base della separazione tra file header e sorgenti è da ricercarsi nel concetto di modularità: infatti, in questo modo è possibile separare l'effettiva implementazione di una serie di funzioni dal codice che le userà, interfacciandovisi esclusivamente mediante l'header.
 
-#### 9.1.2.1 - Un esempio
+#### 15.1.2.1 - Un esempio
 
 Facciamo un breve esempio. Immaginiamo di voler scrivere il nostro programma *calcola* che implementa al suo interno due funzioni: `aggiungi`, che somma due numeri, e `moltiplica`, che moltiplica detti numeri tra loro. Per implementarlo, avremo bisogno di tre file:
 
@@ -81,7 +81,7 @@ Alcune note:
 * nel file sorgente includiamo l'header ed implementiamo le funzioni, omettendo il tipo di ritorno (`int` in entrambi i casi);
 * nel file principale includiamo l'header da noi definito *specificando i doppi apici*; in questo modo, possiamo richiamare le funzioni definite in `calcola.h`.
 
-### 9.1.3 - Direttive
+### 15.1.3 - Direttive
 
 Abbiamo visto in precedenza come l'uso della direttiva `#include` permetta di "incorporare" all'interno del nostro programma funzioni definite ed implementate esternamente. Tuttavia, la direttiva `#include` non è l'unica esistente: ne esistono infatti di diverse, alcune delle quali più utilizzate di altre, ma tutte molto importanti.
 
@@ -120,11 +120,11 @@ int moltiplica(int a, int b);
 
 Per una lista completa di direttive C, potete consultare [questo indirizzo](https://en.wikibooks.org/wiki/C_Programming/Preprocessor_directives_and_macros).
 
-## 9.2 - Nozioni generali sulla sintassi
+## 15.2 - Nozioni generali sulla sintassi
 
 Vediamo adesso alcune nozioni generali da osservare sulla sintassi dei programmi in C.
 
-### 9.2.1 - Parole riservate
+### 15.2.1 - Parole riservate
 
 In C, come in ogni altro linguaggio di programmazione, esiste una serie di **parole riservate**, o **keyword** che, indicando delle specifiche funzionalità del linguaggio di programmazione, non possono *in alcun modo* essere utilizzate dall'utente. Normalmente, queste parole chiave si riferiscono ai tipi di una variabile, o indicano l'inizio di una struttura condizionale o di un ciclo, oppure ancora sono utilizzate per particolari funzionalità (come ad esempio le direttive viste in precedenza).
 
@@ -141,7 +141,7 @@ error C2513: 'int': nessuna variabile dichiarata prima di '='
 
 Un elenco di keyword per il linguaggio C è disponibile a [questo indirizzo](https://www.ibm.com/docs/en/developer-for-zos/14.2.0?topic=programs-c-reserved-keywords).
 
-### 9.2.2 - Ambito e parentesi
+### 15.2.2 - Ambito e parentesi
 
 In C, come in molti altri linguaggi, l'uso delle parentesi *non* è arbitrario, e segue una specifica convenzione. In particolare:
 

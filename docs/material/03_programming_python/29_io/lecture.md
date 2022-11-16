@@ -1,10 +1,10 @@
-# 16 - Lettura e scrittura di file in Python
+# 29 - Lettura e scrittura di file in Python
 
 Python offre numerose funzioni (già integrate nel *core* del linguaggio) per la gestione dei file. Queste sono a loro volta divise in vari moduli, quali (ad esempio) [`os`](https://docs.python.org/3/library/os.html), [`shutil`](https://docs.python.org/3/library/shutil.html) e [`pathlib`](https://docs.python.org/3/library/pathlib.html).
 
 In questa lezione, vedremo alcune tra le principali funzioni usate per effettuare le più comuni operazioni sui file Python.
 
-## 16.1 File di testo vs. file binari
+## 29.1 File di testo vs. file binari
 
 Prima di passare a vedere le principali funzioni usate da Python per la gestione dei file, dobbiamo parlare dei due diversi *tipi* di file esistenti, ovvero file *binari* e file di *testo*.
 
@@ -17,13 +17,13 @@ Un *file di testo*, invece, non ha una codifica specifica, e può essere aperto 
 
 In tal senso, al termine di ogni riga dei file di testo vi è un carattere di terminazione che, in Python, è la sequenza di escape `\n` (mentre in altri linguaggi, come ad esempio il C, è data dal punto e virgola).
 
-## 16.2 - Python e gli strumenti per l'input/output (I/O)
+## 29.2 - Python e gli strumenti per l'input/output (I/O)
 
 Innazitutto è necessario premettere che Python integra di default gli strumenti per leggere (*input*) e scrivere (*output*) su file (o su altri supporti). Ciò differisce da altri linguaggi, come ad esempio il C++, nel quale è necessario includere una libreria facente parte del core del linguaggio (`#include <fstream>`).
 
 Vediamo adesso come aprire un file in Python.
 
-### 16.2.1 - Apertura di un file in Python
+### 29.2.1 - Apertura di un file in Python
 
 Per aprire un file in Python occorre usare la funzione `open()`, il cui utilizzo base è il seguente:
 
@@ -63,7 +63,7 @@ Le modalità precedentemente elencate funzionano con i file di testo; per usarle
 | *Append/Read* | `a+` | `ab+` |
 | *Exclusive Creation* | `x` | `xb` |
 
-#### 16.2.1.1 - Un esempio
+#### 29.2.1.1 - Un esempio
 
 Vediamo un esempio di come è possibile aprire un file in modalità *write*. Supponiamo di avere un file chiamato `dati.txt`, e che questo sia nella stessa cartella del nostro script:
 
@@ -76,7 +76,7 @@ Avremo quindi creato un oggetto chiamato `file_dati` che potremo conseguentement
 !!!note "Modalità utilizzate"
     Le modalità di cui ci serviremo nei casi pratici saranno spesso quelle di lettura e scrittura.
 
-## 16.3 - Chiusura di un file
+## 29.3 - Chiusura di un file
 
 Quando si utilizza un file in lettura o scrittura si crea un *flusso* (in inglese *stream*) che va da o verso il nostro file. In altre parole, lo script crea un "canale di comunicazione" che tiene aperto il file, non rendendolo disponibile ad altre applicazioni fino a che questo non viene liberato.
 
@@ -99,7 +99,7 @@ Traceback (most recent call last):
 ValueError: I/O operation on closed file.
 ```
 
-## 16.4 - La parola chiave with
+## 29.4 - La parola chiave with
 
 Python offre una sintassi *consigliata* per l'interazione con i file mediante l'uso della parola chiave `with`. Grazie a questa sintassi, il file verrà automaticamente chiuso dopo che l'esecuzioni delle istruzioni presenti nel blocco di codice annidato all'interno del `with`. Ad esempio, l'istruzione precedente si trasforma nel seguente modo:
 
@@ -116,11 +116,11 @@ with open("dati.txt", "w") as file_dati:
 !!!note "Nota"
     Nel prosieguo, utilizzeremo esclusivamente la sintassi che usa la parola chiave `with`.
 
-## 16.5 - Interagire con un file
+## 29.5 - Interagire con un file
 
 Una volta aperto un file, potremo usare i metodi integrati in Python per interagire con il file. Vediamone brevemente come fare.
 
-### 16.5.1 - Lettura dei dati
+### 29.5.1 - Lettura dei dati
 
 Per leggere i contenuti di un file, dobbiamo usare il metodo `read(size)`. Se non specifichiamo il parametro `size` (in italiano *dimensione*), il metodo leggerà l'intero contenuto del file, stampandolo a schermo sotto forma di stringa (se è un file di testo) o come byte (se è un file binario).
 
@@ -171,7 +171,7 @@ Appare evidente come l'operazione di lettura legga i dati nel file soltanto fino
 !!!note "Nota"
     Nel caso provassimo ad effettuare nuovamente l'operazione di lettura sullo stesso file, continueremo a leggere i dati da dove ci eravamo precedentemente interrotti; in tal modo, possiamo elaborare un file dalle grandi dimensioni in pezzi dalle dimensioni ridotte.
 
-### 16.5.2 Leggere i file di testo riga per riga
+### 29.5.2 Leggere i file di testo riga per riga
 
 Abbiamo visto come l'istruzione `read()` ci permette di leggere un file nella sua interezza. Tuttavia, possiamo decidere di leggere un file riga per riga mediante l'istruzione `readline(size)`.
 
@@ -230,7 +230,7 @@ Dati sulla riga 3
 !!!tip "Efficienza nella lettura"
     L'approccio che prevede la lettura riga dopo riga del file mediante `readline()` è, in realtà, più efficiente di quello che si limita a leggere il file nella sua interezza mediante `read()`. Infatti, non dovremo leggere l'intero file e tenerlo in memoria, ma potremo leggere ed elaborare ogni riga in maniera individuale, il che è ovviamente vantaggioso in termini di memoria, specie nel caso di file di grandi dimensioni.
 
-### 16.5.3 - Scrivere su file
+### 29.5.3 - Scrivere su file
 
 Appare chiaro come i file non servano a molto se non è possibile scrivervi dei dati. Per farlo, dovremo aprire il file in scrittura, mediante (ad esempio) la modalità `w`.
 
@@ -257,7 +257,7 @@ with open("dati.txt", "a+") as dati:
         dati.write(f'{str_value}\n')
 ```
 
-### 16.5.4 Ricerca nei file
+### 29.5.4 Ricerca nei file
 
 In precedenza abbiamo visto come quando scriviamo in modalità *read* il riferimento al file punta all'inizio dello stesso. Se volessimo leggere una sezione intermedia del file, dovremmo "scorrerlo" fino ad individuare la parte di interesse.
 
@@ -287,7 +287,7 @@ with open("dati.txt", "a") as dati:
 
 Il valore restituito dovrebbe essere 55, il che rappresenta la dimensione del file.
 
-## 16.6 Inserire nuovi elementi in file esistenti
+## 29.6 Inserire nuovi elementi in file esistenti
 
 Ci potrebbero essere delle occasioni dove è necessario *modificare internamente* un file esistente, senza necessariamente aggiungervi dei dati. Per farlo, non possiamo usare semplicemente le modalità *append* o *write*: infatti, la prima inserirà nuovi dati al termine del file, mentre la seconda *sovrascriverà l'intero file*.
 
@@ -320,6 +320,6 @@ Dati sulla riga 2
 Dati sulla riga 3
 ```
 
-## 16.7 - Conclusioni
+## 29.7 - Conclusioni
 
 In questa lezione, abbiamo visto una serie di tecniche e modi per leggere, creare e modificare file esistenti in Python. Per approfondire la conoscenza di metodi e concetti, il consiglio è, al solito, quello di rivolgersi alla [documentazione ufficiale](https://docs.python.org/3/library/io.html).

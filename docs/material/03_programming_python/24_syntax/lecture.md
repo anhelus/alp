@@ -1,4 +1,4 @@
-# 11 - Programmare in Python
+# 24 - Programmare in Python
 
 !!!tip "Materiale e link utili"
     | Materiale | Disponibilità | Link |
@@ -6,11 +6,11 @@
     | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/04_python_fundamentals.pdf) |
     | Video esplicativo | :x: | Link non disponibile |
 
-## 11.1 - Alcuni concetti sintattici fondamentali
+## 24.1 - Alcuni concetti sintattici fondamentali
 
 Oltre al duck typing, esistono altri concetti che caratterizzano la sintassi di Python. Vediamoli brevemente.
 
-### 11.1.1 - Uso delle parentesi
+### 24.1.1 - Uso delle parentesi
 
 1. Le **parentesi tonde** sono usate soltanto nel caso di chiamata a funzione, oltre che per esprimere la precedenza nelle operazioni. In tutti gli altri casi, sono opzionali e possono essere omesse. Ad esempio:
 
@@ -39,7 +39,7 @@ Oltre al duck typing, esistono altri concetti che caratterizzano la sintassi di 
 	dizionario[a]		# Il valore acceduto è 1, ovvero quello relativo alla chiave 'a'
 	```
 
-### 11.1.2 - Ambito e termine di un'istruzione
+### 24.1.2 - Ambito e termine di un'istruzione
 
 A differenza del C, che prevede che ogni istruzione sia terminata da un punto e virgola, Python prevede che un'istruzione termini quando si va a capo. Quindi:
 
@@ -70,11 +70,11 @@ def funzione():	# Inizio ambito
 !!!tip "Le indentazioni"
 	Per ottenere l'indentazione, occorre usare il tasto *tab* sulla tastiera, oppure quattro spazi. E' comunque *estremamente importante* non mescolare le due tecniche.
 
-## 11.2 - Programmazione strutturata
+## 24.2 - Programmazione strutturata
 
 Il linguaggio Python utilizza una sintassi per le strutture di controllo differente da quella usata nei tipici linguaggi C-like.
 
-### 11.2.1 - Istruzioni condizionali (`if`)
+### 24.2.1 - Istruzioni condizionali (`if`)
 
 Partiamo dall'istruzione condizionale `if`. Questa, in Python, ha una sintassi di questo tipo.
 
@@ -105,7 +105,7 @@ L'output di questo controllo sarà:
 a è uguale a 5
 ```
 
-### 11.2.2 - Pattern matching
+### 24.2.2 - Pattern matching
 
 Fino alla versione 3.10, Python non offriva il costrutto `switch/case`. A partire da quest'ultima, però, il *pattern matching* è stato implementato usando questa sintassi:
 
@@ -117,9 +117,9 @@ match command:
 		print("Comando sconosciuto")
 ```
 
-### 11.2.3 - Cicli
+### 24.2.3 - Cicli
 
-#### 11.2.3.1 - Ciclo `for`
+#### 24.2.3.1 - Ciclo `for`
 
 Il ciclo `for` itera su una *sequenza*, come una lista o una stringa, ed ha una sintassi del tipo:
 
@@ -169,7 +169,7 @@ A schermo vedremo in entrambi i casi il seguente risultato:
 !!!warning "No free lunches!"
 	Come ci ricorda il *no free lunches theorem*, **non esistono pasti gratuiti**! Infatti, la maggiore semplicità sintattica offerta da Python non è indolore, ma ha un costo. Uno script Python, infatti, per quanto ottimizzato, non potrà quasi mai offrire performance paragonabili ad un codice ottimizzato in C o C++, a meno di non usare particolari (ed avanzati) accorgimenti.
 
-#### 11.2.3.2 - Ciclo `while`
+#### 24.2.3.2 - Ciclo `while`
 
 A differenza del ciclo `for`, il funzionamento del `while` è analogo a quello delle controparti negli altri linguaggi di programmazione. La sintassi generica è:
 
@@ -203,7 +203,7 @@ Esco!
 !!!note "I valori booleani in Python"
 	I più attenti avranno notato come i valori booleani in Python siano stati scritti come `True` e `False`. Questo non è un refuso: la prima lettera è proprio una maiuscola.
 
-## 11.4 - La funzione `range()`
+## 24.4 - La funzione `range()`
 
 Riprendiamo adesso il ciclo `for` visto in precedenza.
 
@@ -257,7 +257,7 @@ Paperino
 
 In pratica, dato che la funzione `len(l)` ci restituisce il numero di elementi nella lista, ovvero $4$, stiamo andando a definire un range che va da 0 a 3. A questo punto, ci basterà *elemento per elemento* ai valori contenuti all'interno della lista, ed avremo ottenuto il risultato sperato.
 
-## 11.5 - Istruzioni `break` e `continue`
+## 24.5 - Istruzioni `break` e `continue`
 
 Le istruzioni `break` e `continue` permettono rispettivamente di *uscire dal ciclo* o di *saltare all'iterazione successiva*. Ad esempio:
 
@@ -274,7 +274,7 @@ print("Sono uscito!")
 
 Le istruzioni precedenti *usciranno* dal ciclo quando viene generato casualmente un numero negativo, mentre continueranno ad iterare quando viene generato casualmente un numero positivo.
 
-## 11.6 - Definire una funzione
+## 24.6 - Definire una funzione
 
 In Python è possibile definire una funzione in questo modo:
 
@@ -320,7 +320,7 @@ genera_lista_casuale(10)	# Possibile risultato: [7, 9, 1, 10, 2, 4, 9, 1, 4, 8]
 !!!warning "Tipo dei parametri di ingresso"
 	Il duck typing fa sì che non venga effettuato alcun controllo sui parametri in ingresso. Ciò però non significa che non si possa provare a chiamare (ad esempio) la funzione `genera_lista_casuale()` passando come parametro una stringa; ciò tuttavia causerà un (prevedibile) errore.
 
-### 11.6.1 - Passaggio di parametri a funzione
+### 24.6.1 - Passaggio di parametri a funzione
 
 Python prevede che i parametri siano passati ad una funzione secondo una modalità ibrida chiamata *call-by-assignment*. In pratica, il passaggio avviene *esclusivamente per valore*, ma con effetti differenti su tipi mutabili ed immutabili.
 
@@ -365,7 +365,7 @@ In questo caso, essendo la lista mutabile, il passaggio viene effettuato nei fat
 !!!note "Shallow e deep copy"
 	Di default, Python copia le variabili per mezzo di una *shallow copy*: ciò significa che un'operazione di assignment del tipo `a = b` fa in modo che `a` punti allo stesso indirizzo di memoria di `b` e, di conseguenza, ogni modifica a `b` si rifletta su `a`. Per evitare un fenomeno di questo tipo occorre usare una *deep copy* grazie alla funzione `deepcopy` della libreria `copy`.
 
-### 11.6.2 - L'istruzione `pass`
+### 24.6.2 - L'istruzione `pass`
 
 Chiudiamo accennando all'istruzione `pass`. Questa non fa assolutamente nulla; è utile, ad esempio, quando vogliamo inserire una funzione (o una classe) vuota, che definiremo per qualche motivo in seguito:
 

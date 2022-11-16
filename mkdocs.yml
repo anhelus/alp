@@ -38,33 +38,35 @@ nav:
     - 19 - Puntatori:
       - Dispense: material/02_programming_c/19_pointers/lecture.md
       - Esercizi: material/02_programming_c/19_pointers/exercises.md
-    - 20 - Gestione della memoria: material/02_programming_c/20_memory/lecture.md
+    - 20 - Gestione della memoria:
+      - Dispense: material/02_programming_c/20_memory/lecture.md
       - Esercizi: material/02_programming_c/19_pointers/exercises.md
     - 21 - I/O su file: material/02_programming_c/21_io_files/lecture.md
     - 22 - Typedef, struct ed union:
       - Dispense: material/02_programming_c/22_typedef/lecture.md
       - Esercizi: material/02_programming_c/22_typedef/exercises.md
-    
   - Parte 3 - Linguaggio di programmazione Python:
-    - 10 - Introduzione al Python:
-      - Dispense: material/02_programming/10_intro/lecture.md
-      - Esercizi: material/02_programming/10_intro/exercises.md
-    - 11 - Concetti sintattici fondamentali di Python:
-      - Dispense: material/02_programming/11_syntax/lecture.md
-      - Esercizi: material/02_programming/11_syntax/exercises.md
-    - 12 - Programmazione orientata agli oggetti: material/02_programming/12_oop/lecture.md
-    - 13 - OOP in Python:
-      - Dispense: material/02_programming/13_classes/lecture.md
-      - Esercizi: material/02_programming/13_classes/exercises.md
-    - 14 - Strutture dati in Python:
-      - Dispense: material/02_programming/14_data_structures/lecture.md
-      - Esercizi: material/02_programming/14_data_structures/exercises.md
-    - 15 - Moduli e script in Python: material/02_programming/15_modules/lecture.md
+    - 23 - Introduzione al Python:
+      - Dispense: material/03_programming_python/23_intro/lecture.md
+      - Esercizi: material/03_programming_python/23_intro/exercises.md
+    - 24 - Concetti sintattici fondamentali di Python:
+      - Dispense: material/03_programming_python/24_syntax/lecture.md
+      - Esercizi: material/03_programming_python/24_syntax/exercises.md
+    - 25 - Programmazione orientata agli oggetti: material/03_programming_python/25_oop/lecture.md
+    - 26 - OOP in Python:
+      - Dispense: material/03_programming_python/26_classes/lecture.md
+      - Esercizi: material/03_programming_python/26_classes/exercises.md
+    - 27 - Strutture dati in Python:
+      - Dispense: material/03_programming_python/27_data_structures/lecture.md
+      - Esercizi: material/03_programming_python/27_data_structures/exercises.md
+    - 28 - Moduli e script in Python: material/03_programming_python/28_modules/lecture.md
+    - 29 - I/O in Python: material/03_programming_python/29_io/lecture.md
+    - 30 - Il modulo argparse: material/03_programming_python/30_argparse/lecture.md
   - Appendici:
     - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
     - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md
-    - C - Il modulo argparse: material/appendix/04_argparse/lecture.md
-    - D - Temi di esempio: material/appendix/05_sample_project/lecture.md
+    - C - Tema d'anno di esempio: material/appendix/03_sample_project/lecture.md
+    - D - Esempi di risoluzione dei compiti a casa: material/appendix/04_homeworks/lecture.md
 
 theme:
   name: material

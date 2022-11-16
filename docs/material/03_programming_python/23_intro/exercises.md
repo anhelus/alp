@@ -1,6 +1,6 @@
-# E10 - Introduzione a Python
+# E23 - Introduzione a Python
 
-## Esercizio E10.1
+## Esercizio E23.1
 
 Creiamo una stringa che assuma valore *IUL*.
 
@@ -10,7 +10,7 @@ Creiamo una stringa che assuma valore *IUL*.
 >>> s = 'IUL'
 ```
 
-## Esercizio E10.2
+## Esercizio E23.2
 
 Valutiamo la lunghezza della stringa creata nell'esercizio precedente.
 
@@ -20,7 +20,7 @@ Valutiamo la lunghezza della stringa creata nell'esercizio precedente.
 >>> len(s)
 ```
 
-## Esercizio E10.3
+## Esercizio E23.3
 
 Proviamo a creare una lista a partire dalla stringa creata nell'esercizio precedente.
 

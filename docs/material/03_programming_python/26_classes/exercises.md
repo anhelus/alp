@@ -1,6 +1,6 @@
-# E13 - Programmazione orientata agli oggetti in Python
+# E26 - Programmazione orientata agli oggetti in Python
 
-## Esercizio E13.1
+## Esercizio E26.1
 
 Scrivere una classe `Persona` applicando i concetti visti durante la lezione.
 
@@ -70,7 +70,7 @@ ValueError: La lunghezza del nome non può essere inferiore a due caratteri.
 
 Notiamo che, dal punto di vista dello script che richiama la classe, non ci sono differenze di sorta; tuttavia, la logica di validazione ci permette di evitare errori e situazioni incoerenti, ed è inoltre possibile sfruttare le proprietà per accedere agli attributi privati della classe.
 
-## Esercizio E13.2
+## Esercizio E26.2
 
 Creiamo due classi: la prima è la classe `Quadrato`, che modella tutti i quadrati; la seconda è la classe `Cerchio`, che modella tutti i cerchi. Entrambe devono discendere da una classe base chiamata `Figura`.
 

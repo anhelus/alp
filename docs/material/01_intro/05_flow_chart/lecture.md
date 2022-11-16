@@ -1,4 +1,4 @@
-# 4 - I diagrammi di flusso
+# 5 - I diagrammi di flusso
 
 !!!tip "Materiale e link utili"
     | Materiale | Disponibilità | Link |
@@ -12,13 +12,13 @@ Detta sequenza, ovviamente, deve essere in qualche modo "fissata", di modo da in
 
 Un'altra soluzione potrebbe essere quella di scrivere le istruzioni su un qualche tipo di supporto o documento; tuttavia, la soluzione migliore è quella di affidarsi a degli strumenti appositamente predisposti in tal senso, ovvero i *diagrammi di flusso*.
 
-## 4.1 - Cosa sono i diagrammi di flusso?
+## 5.1 - Cosa sono i diagrammi di flusso?
 
 I *diagrammi di flusso* (in inglese *flow charts*) sono uno strumento utile a gestire il flusso delle istruzioni.
 
 Un flow chart è uno strumento prettamente *visivo*, atto a schematizzare il flusso delle singole istruzioni di un algoritmo. In tal modo, diventa estremamente più semplice scrivere l'algoritmo, e valutare come i dati cambiano all'interno dello stesso.
 
-## 4.2 - Quali sono le componenti fondamentali?
+## 5.2 - Quali sono le componenti fondamentali?
 
 Un diagramma di flusso può avere al suo interno diverse componenti, le più importanti delle quali sono visualizzate nella tabella successiva.
 
@@ -32,7 +32,7 @@ In particolare:
 * un *rombo* indica una ramificazione nel percorso dell'algoritmo, legata prevalentemente alla verifica di una condizione;
 * infine, le frecce sono usate per collegare tra loro diverse parti dello stesso algoritmo.
 
-### 4.3 - Un esempio
+### 5.3 - Un esempio
 
 Nella seguente figura mostriamo un esempio di diagramma di flusso.
 
@@ -40,4 +40,4 @@ Nella seguente figura mostriamo un esempio di diagramma di flusso.
 
 Vediamo come il diagramma inizi con un'ellisse, che sarà contrassegnata dalla scritta START (inserita arbitrariamente). Immediatamente dopo, vi sarà la lettura di due variabili, ovvero $c_1$ e $c_2$; a quel punto, vi sarà l'assegnazione di altre tre variabili, con infine la variabile $v_3$ scritta su un dispositivo di output, seguita dal simbolo di fine algoritmo.
 
-E' estremamente importante notare come l'assegnazione e la lettura siano, in realtà, quasi "ambigue" dal punto di vista della notazione: occorre quindi in tal senso fare attenzione al fatto che si stia usando un parallelogramma o un rettangolo, seguendo le regole descritte nel paragrafo 4.2.
+E' estremamente importante notare come l'assegnazione e la lettura siano, in realtà, quasi "ambigue" dal punto di vista della notazione: occorre quindi in tal senso fare attenzione al fatto che si stia usando un parallelogramma o un rettangolo, seguendo le regole descritte nel paragrafo 5.2.

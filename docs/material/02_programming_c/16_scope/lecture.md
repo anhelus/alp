@@ -1,6 +1,6 @@
 # 16 - Visibilità di una variabile
 
-Nella [lezione 9](../../02_principles/09_functions/lecture.md) abbiamo trattato dell'ambito di una variabile. Estendiamo il discorso, e parliamo del concetto di *visibilità* di una variabile nel linguaggio C.
+Nella [lezione 9](../../01_intro/08_functions/lecture.md) abbiamo trattato dell'ambito di una variabile. Estendiamo il discorso, e parliamo del concetto di *visibilità* di una variabile nel linguaggio C.
 
 Per comprendere il concetto, facciamo un esempio.
 

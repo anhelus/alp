@@ -6,7 +6,7 @@ Per ovviare a questa limitazione, quindi, il C ci mette a disposizione un partic
 
 ## 21.1 - Le `struct`
 
-I più attenti ricorderanno come abbiamo già visto il concetto di *struct* durante il nostro excursus sulle [strutture dati](../../02_principles/10_data_structures/lecture.md); ovviamente, le `struct` C rappresentano un'implementazione di questa classe di strutture dati, e permettono quindi di "raggruppare" diverse variabili tra loro.
+I più attenti ricorderanno come abbiamo già visto il concetto di *struct* durante il nostro excursus sulle [strutture dati](../../01_intro/10_data_structures/lecture.md); ovviamente, le `struct` C rappresentano un'implementazione di questa classe di strutture dati, e permettono quindi di "raggruppare" diverse variabili tra loro.
 
 Ad esempio, potremmo creare una `struct` che serva a caratterizzare una persona:
 
