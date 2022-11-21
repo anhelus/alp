@@ -70,6 +70,7 @@ nav:
 
 theme:
   name: material
+  language: it
 
 markdown_extensions:
   - admonition # notes make pretty
@@ -111,7 +112,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/anhelus
     - icon: fontawesome/solid/paper-plane
-      link: mailto:angelo.cardellicchio@stiima.cnr.it
+      link: mailto:angelo.cardellicchio@unifg.it
   analytics:
     provider: google
     property: G-J2XESD8WDV
