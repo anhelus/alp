@@ -1,72 +1,73 @@
-site_name: Algoritmi e Linguaggi di Programmazione Python/C
+site_name: Informatica per l'Ingegneria (classe N)
+
 nav:
   - Home del corso: index.md
-  - Slides proiettate a lezione: material/slides/index.md
-  - Bacheca:
-    - Avvisi: advices.md
-    - Progetti: projects.md
-  - Parte 1 - Concetti introduttivi:
-    - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
-    - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-    - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
-    - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
-    - 5 - Diagrammi di flusso: material/01_intro/05_flow_chart/lecture.md
-    - 6 - Programmazione strutturata: material/01_intro/06_structured/lecture.md
-    - 7 - Variabili: material/01_intro/07_variables/lecture.md
-    - 8 - Funzioni: material/01_intro/08_functions/lecture.md
-    - 9 - Complessità computazionale:
-      - Dispense: material/01_intro/09_complexity/lecture.md
-      - Esercizi: material/01_intro/09_complexity/exercises.md
-    - 10 - Strutture dati: material/01_intro/10_data_structures/lecture.md
-    - 11 - Ricorsione: material/01_intro/11_recursion/lecture.md
-    - 12 - Paradigmi di programmazione: material/01_intro/12_paradigms/lecture.md
-    - 13 - Strutture dati avanzate: material/01_intro/13_adv_data_structures/lecture.md
-  - Parte 2 - Linguaggio di programmazione C:
-    - 14 - Introduzione al linguaggio: material/02_programming_c/14_intro/lecture.md
-    - 15 - Nozioni fondamentali sul C:
-      - Dispense: material/02_programming_c/15_fundamentals/lecture.md
-      - Esercizi: material/02_programming_c/15_fundamentals/exercises.md
-    - 16 - Ambito di una variabile:
-      - Dispense: material/02_programming_c/16_scope/lecture.md
-      - Esercizi: material/02_programming_c/16_scope/exercises.md
-    - 17 - Operatori:
-      - Dispense: material/02_programming_c/17_operators/lecture.md
-      - Esercizi: material/02_programming_c/17_operators/exercises.md
-    - 18 - Array:
-      - Dispense: material/02_programming_c/18_arrays/lecture.md
-      - Esercizi: material/02_programming_c/18_arrays/exercises.md
-    - 19 - Puntatori:
-      - Dispense: material/02_programming_c/19_pointers/lecture.md
-      - Esercizi: material/02_programming_c/19_pointers/exercises.md
-    - 20 - Gestione della memoria:
-      - Dispense: material/02_programming_c/20_memory/lecture.md
-      - Esercizi: material/02_programming_c/19_pointers/exercises.md
-    - 21 - I/O su file: material/02_programming_c/21_io_files/lecture.md
-    - 22 - Typedef, struct ed union:
-      - Dispense: material/02_programming_c/22_typedef/lecture.md
-      - Esercizi: material/02_programming_c/22_typedef/exercises.md
-  - Parte 3 - Linguaggio di programmazione Python:
-    - 23 - Introduzione al Python:
-      - Dispense: material/03_programming_python/23_intro/lecture.md
-      - Esercizi: material/03_programming_python/23_intro/exercises.md
-    - 24 - Concetti sintattici fondamentali di Python:
-      - Dispense: material/03_programming_python/24_syntax/lecture.md
-      - Esercizi: material/03_programming_python/24_syntax/exercises.md
-    - 25 - Programmazione orientata agli oggetti: material/03_programming_python/25_oop/lecture.md
-    - 26 - OOP in Python:
-      - Dispense: material/03_programming_python/26_classes/lecture.md
-      - Esercizi: material/03_programming_python/26_classes/exercises.md
-    - 27 - Strutture dati in Python:
-      - Dispense: material/03_programming_python/27_data_structures/lecture.md
-      - Esercizi: material/03_programming_python/27_data_structures/exercises.md
-    - 28 - Moduli e script in Python: material/03_programming_python/28_modules/lecture.md
-    - 29 - I/O in Python: material/03_programming_python/29_io/lecture.md
-    - 30 - Il modulo argparse: material/03_programming_python/30_argparse/lecture.md
-  - Appendici:
-    - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
-    - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md
-    - C - Tema d'anno di esempio: material/appendix/03_sample_project/lecture.md
-    - D - Esempi di risoluzione dei compiti a casa: material/appendix/04_homeworks/lecture.md
+  # - Slides proiettate a lezione: material/slides/index.md
+  # - Bacheca:
+  #   - Avvisi: advices.md
+  #   - Progetti: projects.md
+  # - Parte 1 - Concetti introduttivi:
+  #   - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
+  #   - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
+  #   - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
+  #   - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
+  #   - 5 - Diagrammi di flusso: material/01_intro/05_flow_chart/lecture.md
+  #   - 6 - Programmazione strutturata: material/01_intro/06_structured/lecture.md
+  #   - 7 - Variabili: material/01_intro/07_variables/lecture.md
+  #   - 8 - Funzioni: material/01_intro/08_functions/lecture.md
+  #   - 9 - Complessità computazionale:
+  #     - Dispense: material/01_intro/09_complexity/lecture.md
+  #     - Esercizi: material/01_intro/09_complexity/exercises.md
+  #   - 10 - Strutture dati: material/01_intro/10_data_structures/lecture.md
+  #   - 11 - Ricorsione: material/01_intro/11_recursion/lecture.md
+  #   - 12 - Paradigmi di programmazione: material/01_intro/12_paradigms/lecture.md
+  #   - 13 - Strutture dati avanzate: material/01_intro/13_adv_data_structures/lecture.md
+  # - Parte 2 - Linguaggio di programmazione C:
+  #   - 14 - Introduzione al linguaggio: material/02_programming_c/14_intro/lecture.md
+  #   - 15 - Nozioni fondamentali sul C:
+  #     - Dispense: material/02_programming_c/15_fundamentals/lecture.md
+  #     - Esercizi: material/02_programming_c/15_fundamentals/exercises.md
+  #   - 16 - Ambito di una variabile:
+  #     - Dispense: material/02_programming_c/16_scope/lecture.md
+  #     - Esercizi: material/02_programming_c/16_scope/exercises.md
+  #   - 17 - Operatori:
+  #     - Dispense: material/02_programming_c/17_operators/lecture.md
+  #     - Esercizi: material/02_programming_c/17_operators/exercises.md
+  #   - 18 - Array:
+  #     - Dispense: material/02_programming_c/18_arrays/lecture.md
+  #     - Esercizi: material/02_programming_c/18_arrays/exercises.md
+  #   - 19 - Puntatori:
+  #     - Dispense: material/02_programming_c/19_pointers/lecture.md
+  #     - Esercizi: material/02_programming_c/19_pointers/exercises.md
+  #   - 20 - Gestione della memoria:
+  #     - Dispense: material/02_programming_c/20_memory/lecture.md
+  #     - Esercizi: material/02_programming_c/19_pointers/exercises.md
+  #   - 21 - I/O su file: material/02_programming_c/21_io_files/lecture.md
+  #   - 22 - Typedef, struct ed union:
+  #     - Dispense: material/02_programming_c/22_typedef/lecture.md
+  #     - Esercizi: material/02_programming_c/22_typedef/exercises.md
+  # - Parte 3 - Linguaggio di programmazione Python:
+  #   - 23 - Introduzione al Python:
+  #     - Dispense: material/03_programming_python/23_intro/lecture.md
+  #     - Esercizi: material/03_programming_python/23_intro/exercises.md
+  #   - 24 - Concetti sintattici fondamentali di Python:
+  #     - Dispense: material/03_programming_python/24_syntax/lecture.md
+  #     - Esercizi: material/03_programming_python/24_syntax/exercises.md
+  #   - 25 - Programmazione orientata agli oggetti: material/03_programming_python/25_oop/lecture.md
+  #   - 26 - OOP in Python:
+  #     - Dispense: material/03_programming_python/26_classes/lecture.md
+  #     - Esercizi: material/03_programming_python/26_classes/exercises.md
+  #   - 27 - Strutture dati in Python:
+  #     - Dispense: material/03_programming_python/27_data_structures/lecture.md
+  #     - Esercizi: material/03_programming_python/27_data_structures/exercises.md
+  #   - 28 - Moduli e script in Python: material/03_programming_python/28_modules/lecture.md
+  #   - 29 - I/O in Python: material/03_programming_python/29_io/lecture.md
+  #   - 30 - Il modulo argparse: material/03_programming_python/30_argparse/lecture.md
+  # - Appendici:
+  #   - A - Installazione di VS Community: material/appendix/01_vs_comm/guide.md
+  #   - B - Installazione di Python e VS Code: material/appendix/02_python_vs_code/guide.md
+  #   - C - Tema d'anno di esempio: material/appendix/03_sample_project/lecture.md
+  #   - D - Esempi di risoluzione dei compiti a casa: material/appendix/04_homeworks/lecture.md
 
 theme:
   name: material
@@ -112,7 +113,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/anhelus
     - icon: fontawesome/solid/paper-plane
-      link: mailto:angelo.cardellicchio@unifg.it
+      link: mailto:angelo.cardellicchio@poliba.it
   analytics:
     provider: google
     property: G-J2XESD8WDV
