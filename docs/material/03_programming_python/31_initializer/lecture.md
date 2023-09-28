@@ -376,14 +376,10 @@ TypeError: object.__new__() takes exactly one argument (the type to instantiate)
 
 In questo esempio, abbiamo mandato *args e **kwargs come argomenti aggiuntivi nella chiamata a super().__new__(). Il sottostante metodo object.__new__() accetta soltanto la classe come argomento, per cui abbiamo un TypeError quando istanziamo la classe.
 
+Ad ogni modo, __new__() accetta e passa argomenti extra ad __init__() se la nostra classe non sovrasrive __new__(), come nella seguente variazione di SomeClass:
 
 
-
-TODO DA QUI
-
-
-However, object.__new__() still accepts and passes over extra arguments to .__init__() if your class doesn’t override .__new__(), as in the following variation of SomeClass:
-
+```py
 >>> class SomeClass:
 ...     def __init__(self, value):
 ...         self.value = value
@@ -394,17 +390,19 @@ However, object.__new__() still accepts and passes over extra arguments to .__in
 <__main__.SomeClass object at 0x7f67db8d0ac0>
 >>> some_obj.value
 42
-In this implementation of SomeClass, you don’t override .__new__(). The object creation is then delegated to object.__new__(), which now accepts value and passes it over to SomeClass.__init__() to finalize the instantiation. Now you can create new and fully initialized instances of SomeClass, just like some_obj in the example.
+```
 
-Cool! Now that you know the basics of writing your own implementations of .__new__(), you’re ready to dive into a few practical examples that feature some of the most common use cases of this method in Python programming.
+In questa implementazione di SomeClass, non sovrascriviamo __new__(). La creazione dell'oggetto è quindi delegata ad object.__new__(), che adessoa ccetta dei valori e li pasa a SomeClass.__init__() per finalizzare l'istanziamento. Adesso creiamo delle nuove, e completamente inizializzate, istanze di SomeClass, proprio come some_obj nell'esempio.
 
+Adesso che sappiamo come scrivere la nostra implementazione di __new__(), siamo in grado di valutare alcuni esempi pratici che mostrano alcuni dei casi d'uso più comuni di questo metodo nella programmazione Python.
 
-Remove ads
-Subclassing Immutable Built-in Types
-To kick things off, you’ll start with a use case of .__new__() that consists of subclassing an immutable built-in type. As an example, say you need to write a Distance class as a subclass of Python’s float type. Your class will have an additional attribute to store the unit that’s used to measure the distance.
+### SUbclassing dei tipi built-in immutabili
 
-Here’s a first approach to this problem, using the .__init__() method:
+Per iniziare, vedriamo un caso d'uso di __new__() che consiste nel creare una sottoclasse di un tipo immutabile built-in. Ad esempio, diciamo di dover scrivere una classe Distanza come sottoclasse del tipo float di Python. La nostra classe avrà un ulteriore attributo per memorizzare l'unità usata per misurare la distanza.
 
+Ecco un primo approccio a questo problema usando il metodo __init__():
+
+```py
 >>> class Distance(float):
 ...     def __init__(self, value, unit):
 ...         super().__init__(value)
@@ -415,10 +413,13 @@ Here’s a first approach to this problem, using the .__init__() method:
 Traceback (most recent call last):
     ...
 TypeError: float expected at most 1 argument, got 2
-When you subclass an immutable built-in data type, you get an error. Part of the problem is that the value is set during creation, and it’s too late to change it during initialization. Additionally, float.__new__() is called under the hood, and it doesn’t deal with extra arguments in the same way as object.__new__(). This is what raises the error in your example.
+```
 
-To work around this issue, you can initialize the object at creation time with .__new__() instead of overriding .__init__(). Here’s how you can do this in practice:
+Quando si fa una sottoclasse di un tipo immutabile built-in, abbiamo un errore. Parte del problema è che il valore è impostato durante la creazione, ed è troppo tardi per cambiarlo durante l'inizializzazione. Inoltre, float.__new__() viene chiamato "sotto al cofano", e non si occupa di argomenti extra allo stesso modo di object.__new__(). Questo è ciò che lancia l'errore nel nostro esempio precedente.
 
+Per evitare questo problema, possiamo inizializzare l'oggetto al momento della creazione con __new__() invece di sovrascrivere __init__(). Ecco come possiamo farlo in pratica:
+
+```py
 >>> class Distance(float):
 ...     def __new__(cls, value, unit):
 ...         instance = super().__new__(cls, value)
@@ -436,17 +437,22 @@ To work around this issue, you can initialize the object at creation time with .
 
 >>> dir(in_miles)
 ['__abs__', '__add__', ..., 'real', 'unit']
-In this example, .__new__() runs the three steps that you learned in the previous section. First, the method creates a new instance of the current class, cls, by calling super().__new__(). This time, the call rolls back to float.__new__(), which creates a new instance and initializes it using value as an argument. Then the method customizes the new instance by adding a .unit attribute to it. Finally, the new instance gets returned.
+```
 
-Note: The Distance class in the example above doesn’t provide a proper unit conversion mechanism. This means that something like Distance(10, "km") + Distance(20, "miles") won’t attempt at converting units before adding the values. If you’re interested in converting units, then check out the Pint project on PyPI.
+In questo esempio, __new__() esegue i tre step che abbiamo visto nella sezione precedente. Per priam cosa, il metodo crea una nuova istanza della classe attuale, cls, chiamando super().__new__(). Questa volta, la chiamata va indietro a float.__new__(), che cera una nuova istanza inizializzando il suo valore come argomento. QUindi, il metodo customizza la nuova istanza aggiungendovi un attributo .unit. Infine, la nuova istanza viene restituita.
 
-That’s it! Now your Distance class works as expected, allowing you to use an instance attribute for storing the unit in which you’re measuring the distance. Unlike the floating-point value stored in a given instance of Distance, the .unit attribute is mutable, so you can change its value any time you like. Finally, note how a call to the dir() function reveals that your class inherits features and methods from float.
+!!!note "Nota"
+    La classe `Distance` nell'esempio precedente non fornisce un meccanismo di conversione di unità appropriato. Questo significa che qualcosa come `Distance(10, "km") + Distance(20, "miles")` non proverà a convertire le unità prima di aggiungere i valori.
 
-Returning Instances of a Different Class
-Returning an object of a different class is a requirement that can raise the need for a custom implementation of .__new__(). However, you should be careful because in this case, Python skips the initialization step entirely. So, you’ll have the responsibility of taking the newly created object into a valid state before using it in your code.
+Ecco fatto! Ora la classe Distance funziona come atteso, permettendoci di usare un attributo dell'istanza per memorizzare l'unità nella quale stiamo misurando la distanza. A differenza dei valori a virgola mobile memorizzati in una data istanza di `Distance`, l'attributo `.unit` è mutabile, per cui possiamo cambiare il suo valore qunado vogliamo. Infine, notiamo come una chiamata alla funzione `dir()` riveli che la nostra classe eredita feature e metodi da `float`.
 
-Check out the following example, in which the Pet class uses .__new__() to return instances of randomly selected classes:
+## Restituire istanze di una classe differente
 
+Restituire un oggetto di una classe differente è un requisito che può richiedere un'implementazione custom di __new__(). Tuttavia, dovremmo porre attenzione perché in questo caso Python salta interamente lo step di inizializzazione. Avremo quindi la responsabilità di prendere l'oggetto appena creto in uno stato valido prima di usarlo nel nostro codice.
+
+Vediamo il seguente esempio, nel quale la classe Pet usa __new__() per restituire istanze di classe scelte casualmente.
+
+```py
 # pets.py
 
 from random import choice
@@ -472,10 +478,13 @@ class Cat:
 class Python:
     def communicate(self):
         print("hiss! hiss!")
-In this example, Pet provides a .__new__() method that creates a new instance by randomly selecting a class from a list of existing classes.
+```
 
-Here’s how you can use this Pet class as a factory of pet objects:
+In questo esempio, `Pet` fornisce un metodo `__new__()` che crea una nuova istanza selezionando casualmente una classe da una lista di classi esistenti.
 
+Ecco come possiamo usare questa clase Pet come una factory di oggetti pet:
+
+```py
 >>> from pets import Pet
 
 >>> pet = Pet()
@@ -491,19 +500,22 @@ True
 I'm a Python!
 >>> another_pet.communicate()
 hiss! hiss!
-Every time you instantiate Pet, you get a random object from a different class. This result is possible because there’s no restriction on the object that .__new__() can return. Using .__new__() in such a way transforms a class into a flexible and powerful factory of objects, not limited to instances of itself.
+```
 
-Finally, note how the .__init__() method of Pet never runs. That’s because Pet.__new__() always returns objects of a different class rather than of Pet itself.
+Ogni volta che istanziamo Pet, otteniamo u oggetto casuale da una diversa classe. Questo risultato è possibile perché non vi sono restrizioni sull'oggetto che `__new__()` può restituire. Usare `__new__()` in questo modo trasforma una classe in una factory flessibile e potente di oggetti, non limitate alle istanze di sé stessa.
 
-Allowing Only a Single Instance in Your Classes
-Sometimes you need to implement a class that allows the creation of a single instance only. This type of class is commonly known as a singleton class. In this situation, the .__new__() method comes in handy because it can help you restrict the number of instances that a given class can have.
+Infine, notiamo come il metodo `__init__()` di Pet non viene mai eseguito. Questo è legato al fatto che `Pet.__new__()` restituisce sempre oggetti di una classe diversa da Pet stesso.
 
-Note: Most experienced Python developers would argue that you don’t need to implement the singleton design pattern in Python unless you already have a working class and need to add the pattern’s functionality on top of it.
+## PErmettere solo una singola istanza nelle nostre classi
 
-The rest of the time, you can use a module-level constant to get the same singleton functionality without having to write a relatively complex class.
+Alle volte dobbiamo implementare una classe che ci permette la creazione di una singola istanza. QUesto tipo di classe è comunemente conosciuto come *singleton*. In questa situazione, il metodo `__new__()` ci viene in aiuto perché ci aiuta a restringere il numero di istanze che una data classe può avere.
 
-Here’s an example of coding a Singleton class with a .__new__() method that allows the creation of only one instance at a time. To do this, .__new__() checks the existence of previous instances cached on a class attribute:
+!!!note "Nota"
+    La maggior parte degli sviluppatori Python noterà che non dobbiamo implementare il design pattern singleton in Python a meno che non abbiamo già una classe funzionante a cui dobbiamo aggiungere le funzionalità del pattern. Il resto delle volte, possiamo usare una costante a livello di modulo per ottenre le stesse funzionalità singleton senza dover scrivere una classe relativamente complessa.
 
+Ecco un esempio di come codificare una classe Singleton con un metodo __new__() che pemrmette la creazione di un'unica istanza alla volta. Per farlo, `__new__()` controlla l'esistenza di un'istanza precedentemente messa in cache di un attributo di classe:
+
+```py
 >>> class Singleton(object):
 ...     _instance = None
 ...     def __new__(cls, *args, **kwargs):
@@ -516,21 +528,24 @@ Here’s an example of coding a Singleton class with a .__new__() method that al
 >>> second = Singleton()
 >>> first is second
 True
-The Singleton class in this example has a class attribute called ._instance that defaults to None and works as a cache. The .__new__() method checks if no previous instance exists by testing the condition cls._instance is None.
+```
 
-Note: In the example above, Singleton doesn’t provide an implementation of .__init__(). If you ever need a class like this with a .__init__() method, then keep in mind that this method will run every time you call the Singleton() constructor. This behavior can cause weird initialization effects and bugs.
+La classe Singleton in questo esempio ha un attributo di classe chiamato `_instance` di valore di default None che funziona come cache. Il metodo `__new__()` controlla che non esistano istanze precedenti testando il fatto che `cls._instance` sia None.
 
-If this condition is true, then the if code block creates a new instance of Singleton and stores it to cls._instance. Finally, the method returns the new or the existing instance to the caller.
+!!!note "Nota"
+    Nell'esempio precedente, la classe `Singleton` non fornisce un'implementazione di `__init__()`. Se dovessimo aver bisogno di una classe con un metodo `__init__()`, teniamo a mente che questo metodo sarà eseguito ogni volta che chiamiamo il costruttore `Singleton()`. Questo comportamento può causare degli strani effetti di inizializzazione e bug.
 
-Then you instantiate Singleton twice to try to construct two different objects, first and second. If you compare the identity of these objects with the is operator, then you’ll note that both objects are the same object. The names first and second just hold references to the same Singleton object.
+Se questa condizione è vera, allora il blocco di codice if crea una nuova istanza di Singleton e la memorizza in `cls._instance`. Infine, il metodo restituisce la nuova o esistente istanza al chiamante.
 
+Quindi istanziamo Singleton due volte per provare a copstruire due diversi gogetti, `first` e `second`. Se compariamo l'identità di questi oggetti con l'operatore `is`, allora noteremo che entrambi gli oggetti sono in realtà lo stesso. I nomi `first` e `second` sono solo due reference allo stesso oggetto `Singleton`.
 
-Remove ads
-Partially Emulating collections.namedtuple
-As a final example of how to take advantage of .__new__() in your code, you can push your Python skills and write a factory function that partially emulates collections.namedtuple(). The namedtuple() function allows you to create subclasses of tuple with the additional feature of having named fields for accessing the items in the tuple.
+## Emulazione parziale di collections.namedtuple
 
-The code below implements a named_tuple_factory() function that partially emulates this functionality by overriding the .__new__() method of a nested class called NamedTuple:
+Come esempio finale di come sfruttare `__new__()` nel nostro codice, possiamo spingere le nostre abilità Python e scrivere una funzione factory che emula parzialmente `collections.namedtuple()`. La funzione `namedtuple()` ci permette di creare delle sottoclassi di tuple con la feature aggiuntiva di avere campi nominali per accedere agli oggetti nella tupla.
 
+Il codice sottostante implementa una funzione `named_tuple_factory()` che emula parzialmente questa funzionalità sovrascrivendo il metodo `__new__()` di una classe annidata chiamata `NamedTuple`:
+
+```py
 # named_tuple.py
 
 from operator import itemgetter
@@ -556,34 +571,26 @@ def named_tuple_factory(type_name, *fields):
             return f"""{type_name}({", ".join(repr(arg) for arg in self)})"""
 
     return NamedTuple
-Here’s how this factory function works line by line:
+```
 
-Line 3 imports itemgetter() from the operators module. This function allows you to retrieve items using their index in the containing sequence.
+Ecco come funziona questa factory riga per riga:
 
-Line 5 defines named_tuple_factory(). This function takes a first argument called type_name, which will hold the name of the tuple subclass that you want to create. The *fields argument allows you to pass an undefined number of field names as strings.
+* alla riga 3 importiamo `itemgetter()` dal modulo `operator`. Questa funzione ci permette di restituire gli ingressi usando il loro indice nella sequenza che li contiene.
+* alla riga 5 definiamo `named_tuple_factory()`. Questa funzione prende un primo argomento chiamato `type_name`, che conterrà il nome della sottoclasse delle tuplce che vogliamo creare. L'argomento *fileds ci permette di parssare un numero indefinito di nomi di campi come stringhe.
+* la riga 6 definisce una variabile locale per contenere il numero di named fields forniti dall'utente.
+* la riga 8 definisce una classe annidata chiamata `NamedTuple`, che discende dalla classe integrata `tuple`.
+* la riga 9 fornisce un attributo di classe `__slots__`. Questo attributo definisce una tupla per contenere gli attributi dell'istanza. Questa tupla risparmia memoria agendo come una sostituta per il dizionario dell'istanza, `__dict__`, che altrimenti giocherebbe un ruolo simile.
+* la riga 11 implementa `__new__()` con `cls` come primo argomento. Questa implementazione prende anche l'argomento `*args` per accettare un numero indefinito di valori per il campo.
+* le righe dalla 12 alla 16 definiscono un'istruzione condizionale che controlla se il numero di oggetti da memorizzare nella tupla finale differisce dal numero di campi con un nome. Se questo è il caso, allora la condizione lancia un `TypeError` con un messaggio di errore.
+* la riga 17 imposta l'attributo `__name__` della classe attuale al valore fornito da `type_name`.
+* le righe 18 e 19 definsicon un ciclo for che cambia tutti i campi con un nome in una property che usa itemgetter() per restituire l'oggetto al dato indice. Il ciclo usa la funzione itnegrata `setattr()` per effettuare questa azione. Notiamo che la funzione integrata `enumerate()` fornisce il valore appropriato dell'indice.
+* la riga 20 restituisce una nuova istanza della classe attuale chiamando `super().__new__()`.
+* le righe 22 e 23 definiscono un metodo `__repr__()` per la nostra classe.
+* la riga 25 restituisce la nuova classe `NamedTuple`.
 
-Line 6 defines a local variable to hold the number of named fields provided by the user.
+Per provare la classe `named_tuple_factory()`, lanciamo una sessione interattiva nella cartella conenente il file named_tuple.py ed eseguiamo il seguente codice:
 
-Line 8 defines a nested class called NamedTuple, which inherits from the built-in tuple class.
-
-Line 9 provides a .__slots__ class attribute. This attribute defines a tuple for holding instance attributes. This tuple saves memory by acting as a substitute for the instance’s dictionary, .__dict__, which would otherwise play a similar role.
-
-Line 11 implements .__new__() with cls as its first argument. This implementation also takes the *args argument to accept an undefined number of field values.
-
-Lines 12 to 16 define a conditional statement that checks if the number of items to store in the final tuple differs from the number of named fields. If that’s the case, then the conditional raises a TypeError with an error message.
-
-Line 17 sets the .__name__ attribute of the current class to the value provided by type_name.
-
-Lines 18 and 19 define a for loop that turns every named field into a property that uses itemgetter() to return the item at the target index. The loop uses the built-in setattr() function to perform this action. Note that the built-in enumerate() function provides the appropriate index value.
-
-Line 20 returns a new instance of the current class by calling super().__new__() as usual.
-
-Lines 22 and 23 define a .__repr__() method for your tuple subclass.
-
-Line 25 returns the newly created NamedTuple class.
-
-To try your named_tuple_factory() out, fire up an interactive session in the directory containing the named_tuple.py file and run the following code:
-
+```sh
 >>> from named_tuple import named_tuple_factory
 
 >>> Point = named_tuple_factory("Point", "x", "y")
@@ -607,22 +614,16 @@ AttributeError: can't set attribute
 
 >>> dir(point)
 ['__add__', '__class__', ..., 'count', 'index', 'x', 'y']
-In this code snippet, you create a new Point class by calling named_tuple_factory(). The first argument in this call represents the name that the resulting class object will use. The second and third arguments are the named fields available in the resulting class.
+```
 
-Then you create a Point object by calling the class constructor with appropriate values for the .x and .y fields. To access the value of each named field, you can use the dot notation. You can also use indices to retrieve the values because your class is a tuple subclass.
+In questo snippet, abbiamo creato una nuova classe Point chiamando named_tuple_factory(). Il primo argomento in questa chiamata rappresenta il nome che l'oggetto della classe risultatne userà. Il secondo e terzo argomento sono i campi cn nome disponibili nella classe risultante.
 
-Because tuples are immutable data types in Python, you can’t assign new values to the point’s coordinates in place. If you try to do that, then you get an AttributeError.
+Quindi creiamo un oggetto Point chiamando il costruttore di classe con valori appropriati epr i campi x ed y. Per accedere ai valori di ongi campo con nome, usiamo la dot notation. Possiamo anche usare gli indici per recuperare i valori dato che la nostra classe è una sottoclasse di tuple.
 
-Finally, calling dir() with your point instance as an argument reveals that your object inherits all the attributes and methods that regular tuples have in Python.
+Dato che le tuple sono dei tipi di dati immutaibili, non possiamo assegnare nuovi valori alle coordinate del punto: se proviamo a farlo, avremo un AttributeError.
 
-Conclusion
-Now you know how Python class constructors allow you to instantiate classes, so you can create concrete and ready-to-use objects in your code. In Python, class constructors internally trigger the instantiation or construction process, which goes through instance creation and instance initialization. These steps are driven by the .__new__() and .__init__() special methods.
+Infine, la chiamata a dir() con l'istanza del nostro punto come argomento rivela che l'oggetto eredtia tutti gli attributi e metodi che le tuple normali hanno in Python.
 
-By learning about Python’s class constructors, the instantiation process, and the .__new__() and .__init__() methods, you can now manage how your custom classes construct new instances.
+## conclusioni
 
-In this tutorial, you learned:
-
-How Python’s instantiation process works internally
-How your own .__init__() methods help you customize object initialization
-How overriding the .__new__() method allows for custom object creation
-Now you’re ready to take advantage of this knowledge to fine-tune your class constructors and take full control over instance creation and initialization in your object-oriented programming adventure with Python.
+Ora sappiamo come i costruttori di classe Python ci permettono di istanziare delle classi, per cui possiamo creare degli oggetti concreti e riutilizzabili nel nostro codice. In Python, i costruttori di classe lanciano internamente i processi di costruione, che prevedono la creazione ed inizializzazione dell'istanza. Questi passi sono condotti dai metodi __new__() ed __init__().
