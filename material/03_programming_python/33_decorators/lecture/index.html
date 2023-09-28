@@ -1,0 +1,1397 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.2">
+    
+    
+      
+        <title>Lecture - Informatica per l'Ingegneria (classe N)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.d451bc0e.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-J2XESD8WDV",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#un-semplice-decorator" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../../.." title="Informatica per l&#39;Ingegneria (classe N)" class="md-header__button md-logo" aria-label="Informatica per l'Ingegneria (classe N)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Informatica per l'Ingegneria (classe N)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Informatica per l&#39;Ingegneria (classe N)" class="md-nav__button md-logo" aria-label="Informatica per l'Ingegneria (classe N)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Informatica per l'Ingegneria (classe N)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home del corso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#riutilizzare-i-decorator" class="md-nav__link">
+    Riutilizzare i decorator
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decorare-le-funzioni-con-degli-argomenti" class="md-nav__link">
+    Decorare le funzioni con degli argomenti
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<p>In questo tutorail sui decorator, vediamo cosa sono e come crearli ed usarli. I ecorator forniscono una semplice sintassi per chiamare le cosiddette <a href="https://it.wikipedia.org/wiki/Funzione_di_ordine_superiore">funzioni di ordine superiore</a>.</p>
+<p>Per definizione, un decorator è una funzione che prende un'altra funzione e ne estende il comportamento senza modificarla esplcitgiamente.</p>
+<p>Questo può sembrare confusionario, ma non lo è, specialmente dopo che abbiamo visto alcuni esempi di come funzionano i decoratro.</p>
+<h1 id="un-semplice-decorator">Un semplice decorator<a class="headerlink" href="#un-semplice-decorator" title="Permanent link">&para;</a></h1>
+<p>Abbiamo vistro come le funzioni sono proprio come ogni altro oggetto in Python. Siamo quindi pronti a vedere la "bestia mitologica" rappresentata dai decorator Python. Iniziamo con un esempio:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">my_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something is happening before the function is called.&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something is happening after the function is called.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Whee!&quot;</span><span class="p">)</span>
+
+<span class="n">say_whee</span> <span class="o">=</span> <span class="n">my_decorator</span><span class="p">(</span><span class="n">say_whee</span><span class="p">)</span>
+</code></pre></div>
+<p>Cosa accade quando chiamiamo <code>say_whee()</code>?</p>
+<div class="highlight"><pre><span></span><code><span class="o">&gt;&gt;&gt;</span> <span class="n">say_whee</span><span class="p">()</span>
+<span class="n">Something</span> <span class="ow">is</span> <span class="n">happening</span> <span class="n">before</span> <span class="n">the</span> <span class="n">function</span> <span class="ow">is</span> <span class="n">called</span><span class="o">.</span>
+<span class="n">Whee</span><span class="err">!</span>
+<span class="n">Something</span> <span class="ow">is</span> <span class="n">happening</span> <span class="n">after</span> <span class="n">the</span> <span class="n">function</span> <span class="ow">is</span> <span class="n">called</span><span class="o">.</span>
+</code></pre></div>
+<p>Per comprender quello che sta succedendo,. vediamo l'esempio precedfente. </p>
+<p>L'operazione di <em>decorazione</em> avviene alla seguente riga:</p>
+<div class="highlight"><pre><span></span><code><span class="n">say_whee</span> <span class="o">=</span> <span class="n">my_decorator</span><span class="p">(</span><span class="n">say_whee</span><span class="p">)</span>
+</code></pre></div>
+<p>Nei fatti, il nome <code>say_whee</code> ora punta alla inner function <code>wrapper()</code>. Ricordiamo che restrituiamo <code>wrapper</code> come una funzione quando chiamiamo <code>my_decorator(say_whee)</code>:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>say_whee
+&lt;<span class="k">function</span><span class="w"> </span>my_decorator.&lt;locals&gt;.wrapper<span class="w"> </span>at<span class="w"> </span>0x7f3c5dfd42f0&gt;
+</code></pre></div>
+<p>Tuttavia, <code>wrapper()</code> ha un riferimento alla funzione originaria <code>say_whee()</code>, e la chiama tra le due chiamate a <code>print()</code>. Messa in modo semplice, i <em>decorator avvolgono una funzione, modificandone il comportamento</em>.</p>
+<p>Prima di andare avnati, vediamo un secondo esempio. Dato che <code>wrapper()</code> è una normale funzione Python, il modo in cui un decorator modifica una funzione può cambiare in maneira dinamica. Di conseguenza, per non disturbare i nsotri vicini, il seguente esempio eseguiràò soltanto il codice decorato durante il giorno:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
+
+<span class="k">def</span> <span class="nf">not_during_the_night</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="k">if</span> <span class="mi">7</span> <span class="o">&lt;=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">hour</span> <span class="o">&lt;</span> <span class="mi">22</span><span class="p">:</span>
+            <span class="n">func</span><span class="p">()</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">pass</span>  <span class="c1"># Hush, the neighbors are asleep</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Whee!&quot;</span><span class="p">)</span>
+
+<span class="n">say_whee</span> <span class="o">=</span> <span class="n">not_during_the_night</span><span class="p">(</span><span class="n">say_whee</span><span class="p">)</span>
+</code></pre></div>
+<p>Se proviamo a chiamare <code>say_whee()</code> dopo le 22, non accadrà nulla:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>say_whee<span class="o">()</span>
+&gt;&gt;&gt;
+Syntactic<span class="w"> </span>Sugar!
+</code></pre></div>
+<p>Il modo in cui abbiamo decorato <code>say_whee()</code> è un pò CLUNKY. Prima di tutto, finiamo per scrivere il nome <code>say_whee</code> tre volte. Inoltre, l'operazione di decorazione è un po' nascosata sotto la definizione della funzione.</p>
+<p>Invece, Python ci permette di usare i decorator in maniera più semplice con il simbolo <code>@</code>, alle volte chiamata <em>pie syntax</em>. Il seguente esempio fa la stessa identica cosa del primo esempio di decorator:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">my_decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper</span><span class="p">():</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something is happening before the function is called.&quot;</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Something is happening after the function is called.&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper</span>
+
+<span class="nd">@my_decorator</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Whee!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Quindi, <code>@my_decorator</code> è semplicemente un modo piùs emplcie di dire <code>say_whee = my_decorator(say_whee)</code>. Dipende da come si vuole applicare un decorator ad una funzione.</p>
+<h2 id="riutilizzare-i-decorator">Riutilizzare i decorator<a class="headerlink" href="#riutilizzare-i-decorator" title="Permanent link">&para;</a></h2>
+<p>Ricordiamo che un decorator è semplicemente una funzione Python. Tutti gli strumenti usuali che vengono usati per la riusabilità sono quindi disponibili. Spostiamo il decorator nel suo modulo in modo che possa essere usato come le altre funzioni.</p>
+<p>Creiamo un file chiamato <code>decorators.py</code> con i seguenti contenuti:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">():</span>
+        <span class="n">func</span><span class="p">()</span>
+        <span class="n">func</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">wrapper_do_twice</span>
+</code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>Possiamo chiamare la nostra inner functionc ome vogliamo, ed un nome generico come <code>wrapper()</code> va normalmente bene. Vedremo molti decorator nel seguito. Per tenerli differenziati, chiameremo la inner function con lo stesso noem del decorator ma con un prefisso wrapper_.</p>
+</div>
+<p>Possiamo ora usare questo nuovo decorator in altri file mediante un semplice import:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">decorators</span> <span class="kn">import</span> <span class="n">do_twice</span>
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">say_whee</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Whee!&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Quando eseguiamo questo esempio, dovremmo vedere che l'orginale <code>say_whee()</code> viene eseguito due votle:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>say_whee<span class="o">()</span>
+Whee!
+Whee!
+</code></pre></div>
+<h2 id="decorare-le-funzioni-con-degli-argomenti">Decorare le funzioni con degli argomenti<a class="headerlink" href="#decorare-le-funzioni-con-degli-argomenti" title="Permanent link">&para;</a></h2>
+<p>Diciamo che abbiamo una funzione che accetta degli argomenti. Possiamo sempre decorarla? Proviamo:</p>
+<div class="highlight"><pre><span></span><code><span class="kn">from</span> <span class="nn">decorators</span> <span class="kn">import</span> <span class="n">do_twice</span>
+
+<span class="nd">@do_twice</span>
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Hello </span><span class="si">{</span><span class="n">name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p>Sfortunatamente, eseguire questo codice lancia un errroe:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>greet<span class="o">(</span><span class="s2">&quot;World&quot;</span><span class="o">)</span>
+Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
+<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;&lt;stdin&gt;&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+TypeError:<span class="w"> </span>wrapper_do_twice<span class="o">()</span><span class="w"> </span>takes<span class="w"> </span><span class="m">0</span><span class="w"> </span>positional<span class="w"> </span>arguments<span class="w"> </span>but<span class="w"> </span><span class="m">1</span><span class="w"> </span>was<span class="w"> </span>given
+</code></pre></div>
+<p>Il problema sta nel fatto che la inner function <code>wrapper_do_twice()</code> non prende alcun argomento, ma <code>name="World"</code> è stato passato alla stessa. Possiamo risolvere questo problema facendo in modo che <code>wrapper_do_twice()</code> accetti un argomento, ma quindi non funzionerebbe per la funzione <code>say_whee()</code> creata in precedenza.</p>
+<p>La soluzione è quella di usare <code>*args</code> e <code>**kwargs</code> nella funzione wrapper interna. Quindi questa accetterà un numero arbitrario di argomenti posizionali e keyword:</p>
+<div class="highlight"><pre><span></span><code><span class="k">def</span> <span class="nf">do_twice</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">wrapper_do_twice</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">func</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">wrapper_do_twice</span>
+</code></pre></div>
+<p>La inner function <code>wrapper_do_twice()</code> adesso accetta un numero qualsiasi di argometni e li passa alla funzione decorata. Adesso sia say_whee() che greet() funzionano:</p>
+<div class="highlight"><pre><span></span><code>&gt;&gt;&gt;<span class="w"> </span>say_whee<span class="o">()</span>
+Whee!
+Whee!
+
+&gt;&gt;&gt;<span class="w"> </span>greet<span class="o">(</span><span class="s2">&quot;World&quot;</span><span class="o">)</span>
+Hello<span class="w"> </span>World
+Hello<span class="w"> </span>World
+</code></pre></div>
+<p>TODO: DA QUI</p>
+<p>Returning Values From Decorated Functions<br />
+What happens to the return value of decorated functions? Well, that’s up to the decorator to decide. Let’s say you decorate a simple function as follows:</p>
+<p>from decorators import do_twice</p>
+<p>@do<em>twice<br />
+def return</em>greeting(name):<br />
+    print("Creating greeting")<br />
+    return f"Hi {name}"<br />
+Try to use it:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>hi<em>adam = return</em>greeting("Adam")<br />
+Creating greeting<br />
+Creating greeting<br />
+print(hi_adam)<br />
+None<br />
+Oops, your decorator ate the return value from the function.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Because the do<em>twice</em>wrapper() doesn’t explicitly return a value, the call return_greeting("Adam") ended up returning None.</p>
+<p>To fix this, you need to make sure the wrapper function returns the return value of the decorated function. Change your decorators.py file:</p>
+<p>def do<em>twice(func):<br />
+    def wrapper</em>do<em>twice(*args, **kwargs):<br />
+        func(*args, **kwargs)<br />
+        return func(*args, **kwargs)<br />
+    return wrapper</em>do_twice<br />
+The return value from the last execution of the function is returned:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>return_greeting("Adam")<br />
+Creating greeting<br />
+Creating greeting<br />
+'Hi Adam'<br />
+Who Are You, Really?<br />
+A great convenience when working with Python, especially in the interactive shell, is its powerful introspection ability. Introspection is the ability of an object to know about its own attributes at runtime. For instance, a function knows its own name and documentation:</p>
+<p>print<br />
+<built-in function print></p>
+<p>print.<strong>name</strong><br />
+'print'</p>
+<p>help(print)<br />
+Help on built-in function print in module builtins:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>print(...)<br />
+    <full help message><br />
+The introspection works for functions you define yourself as well:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>say_whee<br />
+<function do_twice.\<locals>.wrapper_do_twice at 0x7f43700e52f0></p>
+<p>say<em>whee.<strong>name</strong><br />
+'wrapper</em>do_twice'</p>
+<p>help(say<em>whee)<br />
+Help on function wrapper</em>do_twice in module decorators:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>wrapper<em>do</em>twice()<br />
+However, after being decorated, say<em>whee() has gotten very confused about its identity. It now reports being the wrapper</em>do<em>twice() inner function inside the do</em>twice() decorator. Although technically true, this is not very useful information.</p>
+<p>To fix this, decorators should use the @functools.wraps decorator, which will preserve information about the original function. Update decorators.py again:</p>
+<p>import functools</p>
+<p>def do<em>twice(func):<br />
+    @functools.wraps(func)<br />
+    def wrapper</em>do<em>twice(*args, **kwargs):<br />
+        func(*args, **kwargs)<br />
+        return func(*args, **kwargs)<br />
+    return wrapper</em>do<em>twice<br />
+You do not need to change anything about the decorated say</em>whee() function:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>say_whee<br />
+<function say_whee at 0x7ff79a60f2f0></p>
+<p>say<em>whee.<strong>name</strong><br />
+'say</em>whee'</p>
+<p>help(say<em>whee)<br />
+Help on function say</em>whee in module whee:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>say<em>whee()<br />
+Much better! Now say</em>whee() is still itself after decoration.</p>
+<p>Technical Detail: The @functools.wraps decorator uses the function functools.update<em>wrapper() to update special attributes like _</em>name__ and <strong>doc</strong> that are used in the introspection.</p>
+<p>Remove ads<br />
+A Few Real World Examples<br />
+Let’s look at a few more useful examples of decorators. You’ll notice that they’ll mainly follow the same pattern that you’ve learned so far:</p>
+<p>import functools</p>
+<p>def decorator(func):<br />
+    @functools.wraps(func)<br />
+    def wrapper<em>decorator(*args, **kwargs):<br />
+        # Do something before<br />
+        value = func(*args, **kwargs)<br />
+        # Do something after<br />
+        return value<br />
+    return wrapper</em>decorator<br />
+This formula is a good boilerplate template for building more complex decorators.</p>
+<p>Note: In later examples, we will assume that these decorators are saved in your decorators.py file as well. Recall that you can download all the examples in this tutorial.</p>
+<p>Timing Functions<br />
+Let’s start by creating a @timer decorator. It will measure the time a function takes to execute and print the duration to the console. Here’s the code:</p>
+<p>import functools<br />
+import time</p>
+<p>def timer(func):<br />
+    """Print the runtime of the decorated function"""<br />
+    @functools.wraps(func)<br />
+    def wrapper<em>timer(*args, **kwargs):<br />
+        start</em>time = time.perf<em>counter()    # 1<br />
+        value = func(*args, **kwargs)<br />
+        end</em>time = time.perf<em>counter()      # 2<br />
+        run</em>time = end<em>time - start</em>time    # 3<br />
+        print(f"Finished {func.<strong>name</strong>!r} in {run<em>time:.4f} secs")<br />
+        return value<br />
+    return wrapper</em>timer</p>
+<p>@timer<br />
+def waste<em>some</em>time(num<em>times):<br />
+    for _ in range(num</em>times):<br />
+        sum([i**2 for i in range(10000)])<br />
+This decorator works by storing the time just before the function starts running (at the line marked # 1) and just after the function finishes (at # 2). The time the function takes is then the difference between the two (at # 3). We use the time.perf_counter() function, which does a good job of measuring time intervals. Here are some examples of timings:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>waste<em>some</em>time(1)<br />
+Finished 'waste<em>some</em>time' in 0.0010 secs</p>
+<p>waste<em>some</em>time(999)<br />
+Finished 'waste<em>some</em>time' in 0.3260 secs<br />
+Run it yourself. Work through the code line by line. Make sure you understand how it works. Don’t worry if you don’t get it, though. Decorators are advanced beings. Try to sleep on it or make a drawing of the program flow.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Note: The @timer decorator is great if you just want to get an idea about the runtime of your functions. If you want to do more precise measurements of code, you should instead consider the timeit module in the standard library. It temporarily disables garbage collection and runs multiple trials to strip out noise from quick function calls.</p>
+<p>Debugging Code<br />
+The following @debug decorator will print the arguments a function is called with as well as its return value every time the function is called:</p>
+<p>import functools</p>
+<p>def debug(func):<br />
+    """Print the function signature and return value"""<br />
+    @functools.wraps(func)<br />
+    def wrapper<em>debug(*args, **kwargs):<br />
+        args</em>repr = [repr(a) for a in args]                      # 1<br />
+        kwargs<em>repr = [f"{k}={v!r}" for k, v in kwargs.items()]  # 2<br />
+        signature = ", ".join(args</em>repr + kwargs<em>repr)           # 3<br />
+        print(f"Calling {func.<strong>name</strong>}({signature})")<br />
+        value = func(*args, **kwargs)<br />
+        print(f"{func.<strong>name</strong>!r} returned {value!r}")           # 4<br />
+        return value<br />
+    return wrapper</em>debug<br />
+The signature is created by joining the string representations of all the arguments. The numbers in the following list correspond to the numbered comments in the code:</p>
+<p>Create a list of the positional arguments. Use repr() to get a nice string representing each argument.<br />
+Create a list of the keyword arguments. The f-string formats each argument as key=value where the !r specifier means that repr() is used to represent the value.<br />
+The lists of positional and keyword arguments is joined together to one signature string with each argument separated by a comma.<br />
+The return value is printed after the function is executed.<br />
+Let’s see how the decorator works in practice by applying it to a simple function with one position and one keyword argument:</p>
+<p>@debug<br />
+def make<em>greeting(name, age=None):<br />
+    if age is None:<br />
+        return f"Howdy {name}!"<br />
+    else:<br />
+        return f"Whoa {name}! {age} already, you are growing up!"<br />
+Note how the @debug decorator prints the signature and return value of the make</em>greeting() function:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>make<em>greeting("Benjamin")<br />
+Calling make</em>greeting('Benjamin')<br />
+'make_greeting' returned 'Howdy Benjamin!'<br />
+'Howdy Benjamin!'</p>
+<p>make<em>greeting("Richard", age=112)<br />
+Calling make</em>greeting('Richard', age=112)<br />
+'make_greeting' returned 'Whoa Richard! 112 already, you are growing up!'<br />
+'Whoa Richard! 112 already, you are growing up!'</p>
+<p>make<em>greeting(name="Dorrisile", age=116)<br />
+Calling make</em>greeting(name='Dorrisile', age=116)<br />
+'make_greeting' returned 'Whoa Dorrisile! 116 already, you are growing up!'<br />
+'Whoa Dorrisile! 116 already, you are growing up!'<br />
+This example might not seem immediately useful since the @debug decorator just repeats what you just wrote. It’s more powerful when applied to small convenience functions that you don’t call directly yourself.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>The following example calculates an approximation to the mathematical constant e:</p>
+<p>import math<br />
+from decorators import debug</p>
+<h1 id="apply-a-decorator-to-a-standard-library-function">Apply a decorator to a standard library function<a class="headerlink" href="#apply-a-decorator-to-a-standard-library-function" title="Permanent link">&para;</a></h1>
+<p>math.factorial = debug(math.factorial)</p>
+<p>def approximate_e(terms=18):<br />
+    return sum(1 / math.factorial(n) for n in range(terms))<br />
+This example also shows how you can apply a decorator to a function that has already been defined. The approximation of e is based on the following series expansion:</p>
+<p>Series for calculating mathematical constant e<br />
+When calling the approximate_e() function, you can see the @debug decorator at work:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>approximate_e(5)<br />
+Calling factorial(0)<br />
+'factorial' returned 1<br />
+Calling factorial(1)<br />
+'factorial' returned 1<br />
+Calling factorial(2)<br />
+'factorial' returned 2<br />
+Calling factorial(3)<br />
+'factorial' returned 6<br />
+Calling factorial(4)<br />
+'factorial' returned 24<br />
+2.708333333333333<br />
+In this example, you get a decent approximation to the true value e = 2.718281828, adding only 5 terms.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Remove ads<br />
+Slowing Down Code<br />
+This next example might not seem very useful. Why would you want to slow down your Python code? Probably the most common use case is that you want to rate-limit a function that continuously checks whether a resource—like a web page—has changed. The @slow_down decorator will sleep one second before it calls the decorated function:</p>
+<p>import functools<br />
+import time</p>
+<p>def slow<em>down(func):<br />
+    """Sleep 1 second before calling the function"""<br />
+    @functools.wraps(func)<br />
+    def wrapper</em>slow<em>down(*args, **kwargs):<br />
+        time.sleep(1)<br />
+        return func(*args, **kwargs)<br />
+    return wrapper</em>slow_down</p>
+<p>@slow<em>down<br />
+def countdown(from</em>number):<br />
+    if from<em>number &lt; 1:<br />
+        print("Liftoff!")<br />
+    else:<br />
+        print(from</em>number)<br />
+        countdown(from<em>number - 1)<br />
+To see the effect of the @slow</em>down decorator, you really need to run the example yourself:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>countdown(3)<br />
+3<br />
+2<br />
+1<br />
+Liftoff!<br />
+Note: The countdown() function is a recursive function. In other words, it’s a function calling itself. To learn more about recursive functions in Python, see our guide on Thinking Recursively in Python.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>The @slow_down decorator always sleeps for one second. Later, you’ll see how to control the rate by passing an argument to the decorator.</p>
+<p>Registering Plugins<br />
+Decorators don’t have to wrap the function they’re decorating. They can also simply register that a function exists and return it unwrapped. This can be used, for instance, to create a light-weight plug-in architecture:</p>
+<p>import random<br />
+PLUGINS = dict()</p>
+<p>def register(func):<br />
+    """Register a function as a plug-in"""<br />
+    PLUGINS[func.<strong>name</strong>] = func<br />
+    return func</p>
+<p>@register<br />
+def say_hello(name):<br />
+    return f"Hello {name}"</p>
+<p>@register<br />
+def be_awesome(name):<br />
+    return f"Yo {name}, together we are the awesomest!"</p>
+<p>def randomly<em>greet(name):<br />
+    greeter, greeter</em>func = random.choice(list(PLUGINS.items()))<br />
+    print(f"Using {greeter!r}")<br />
+    return greeter_func(name)<br />
+The @register decorator simply stores a reference to the decorated function in the global PLUGINS dict. Note that you do not have to write an inner function or use @functools.wraps in this example because you are returning the original function unmodified.</p>
+<p>The randomly_greet() function randomly chooses one of the registered functions to use. Note that the PLUGINS dictionary already contains references to each function object that is registered as a plugin:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>PLUGINS<br />
+{'say<em>hello': <function say_hello at 0x7f768eae6730>,<br />
+ 'be</em>awesome': <function be_awesome at 0x7f768eae67b8>}</p>
+<p>randomly<em>greet("Alice")<br />
+Using 'say</em>hello'<br />
+'Hello Alice'<br />
+The main benefit of this simple plugin architecture is that you do not need to maintain a list of which plugins exist. That list is created when the plugins register themselves. This makes it trivial to add a new plugin: just define the function and decorate it with @register.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>If you are familiar with globals() in Python, you might see some similarities to how the plugin architecture works. globals() gives access to all global variables in the current scope, including your plugins:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>globals()<br />
+{..., # Lots of variables not shown here.<br />
+ 'say<em>hello': <function say_hello at 0x7f768eae6730>,<br />
+ 'be</em>awesome': <function be_awesome at 0x7f768eae67b8>,<br />
+ 'randomly_greet': <function randomly_greet at 0x7f768eae6840>}<br />
+Using the @register decorator, you can create your own curated list of interesting variables, effectively hand-picking some functions from globals().</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Is the User Logged In?<br />
+The final example before moving on to some fancier decorators is commonly used when working with a web framework. In this example, we are using Flask to set up a /secret web page that should only be visible to users that are logged in or otherwise authenticated:</p>
+<p>from flask import Flask, g, request, redirect, url<em>for<br />
+import functools<br />
+app = Flask(</em><em>name</em>_)</p>
+<p>def login<em>required(func):<br />
+    """Make sure user is logged in before proceeding"""<br />
+    @functools.wraps(func)<br />
+    def wrapper</em>login<em>required(*args, **kwargs):<br />
+        if g.user is None:<br />
+            return redirect(url</em>for("login", next=request.url))<br />
+        return func(*args, **kwargs)<br />
+    return wrapper<em>login</em>required</p>
+<p>@app.route("/secret")<br />
+@login_required<br />
+def secret():<br />
+    ...<br />
+While this gives an idea about how to add authentication to your web framework, you should usually not write these types of decorators yourself. For Flask, you can use the Flask-Login extension instead, which adds more security and functionality.</p>
+<p>Remove ads<br />
+Fancy Decorators<br />
+So far, you’ve seen how to create simple decorators. You already have a pretty good understanding of what decorators are and how they work. Feel free to take a break from this article to practice everything you’ve learned.</p>
+<p>In the second part of this tutorial, we’ll explore more advanced features, including how to use the following:</p>
+<p>Decorators on classes<br />
+Several decorators on one function<br />
+Decorators with arguments<br />
+Decorators that can optionally take arguments<br />
+Stateful decorators<br />
+Classes as decorators<br />
+Decorating Classes<br />
+There are two different ways you can use decorators on classes. The first one is very close to what you have already done with functions: you can decorate the methods of a class. This was one of the motivations for introducing decorators back in the day.</p>
+<p>Some commonly used decorators that are even built-ins in Python are @classmethod, @staticmethod, and @property. The @classmethod and @staticmethod decorators are used to define methods inside a class namespace that are not connected to a particular instance of that class. The @property decorator is used to customize getters and setters for class attributes. Expand the box below for an example using these decorators.</p>
+<p>Let’s define a class where we decorate some of its methods using the @debug and @timer decorators from earlier:</p>
+<p>from decorators import debug, timer</p>
+<p>class TimeWaster:<br />
+    @debug<br />
+    def <strong>init</strong>(self, max<em>num):<br />
+        self.max</em>num = max_num</p>
+<div class="highlight"><pre><span></span><code>@timer
+def waste_time(self, num_times):
+    for _ in range(num_times):
+        sum([i**2 for i in range(self.max_num)])
+</code></pre></div>
+<p>Using this class, you can see the effect of the decorators:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>tw = TimeWaster(1000)<br />
+Calling <strong>init</strong>(<time_waster.TimeWaster object at 0x7efccce03908>, 1000)<br />
+'<strong>init</strong>' returned None</p>
+<p>tw.waste<em>time(999)<br />
+Finished 'waste</em>time' in 0.3376 secs<br />
+The other way to use decorators on classes is to decorate the whole class. This is, for example, done in the new dataclasses module in Python 3.7:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>from dataclasses import dataclass</p>
+<p>@dataclass<br />
+class PlayingCard:<br />
+    rank: str<br />
+    suit: str<br />
+The meaning of the syntax is similar to the function decorators. In the example above, you could have done the decoration by writing PlayingCard = dataclass(PlayingCard).</p>
+<p>A common use of class decorators is to be a simpler alternative to some use-cases of metaclasses. In both cases, you are changing the definition of a class dynamically.</p>
+<p>Writing a class decorator is very similar to writing a function decorator. The only difference is that the decorator will receive a class and not a function as an argument. In fact, all the decorators you saw above will work as class decorators. When you are using them on a class instead of a function, their effect might not be what you want. In the following example, the @timer decorator is applied to a class:</p>
+<p>from decorators import timer</p>
+<p>@timer<br />
+class TimeWaster:<br />
+    def <strong>init</strong>(self, max<em>num):<br />
+        self.max</em>num = max_num</p>
+<div class="highlight"><pre><span></span><code>def waste_time(self, num_times):
+    for _ in range(num_times):
+        sum([i**2 for i in range(self.max_num)])
+</code></pre></div>
+<p>Decorating a class does not decorate its methods. Recall that @timer is just shorthand for TimeWaster = timer(TimeWaster).</p>
+<p>Here, @timer only measures the time it takes to instantiate the class:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>tw = TimeWaster(1000)<br />
+Finished 'TimeWaster' in 0.0000 secs</p>
+<p>tw.waste_time(999)</p>
+<p>Later, you will see an example defining a proper class decorator, namely @singleton, which ensures that there is only one instance of a class.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Remove ads<br />
+Nesting Decorators<br />
+You can apply several decorators to a function by stacking them on top of each other:</p>
+<p>from decorators import debug, do_twice</p>
+<p>@debug<br />
+@do<em>twice<br />
+def greet(name):<br />
+    print(f"Hello {name}")<br />
+Think about this as the decorators being executed in the order they are listed. In other words, @debug calls @do</em>twice, which calls greet(), or debug(do_twice(greet())):</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>greet("Eva")<br />
+Calling greet('Eva')<br />
+Hello Eva<br />
+Hello Eva<br />
+'greet' returned None<br />
+Observe the difference if we change the order of @debug and @do_twice:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>from decorators import debug, do_twice</p>
+<p>@do<em>twice<br />
+@debug<br />
+def greet(name):<br />
+    print(f"Hello {name}")<br />
+In this case, @do</em>twice will be applied to @debug as well:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>greet("Eva")<br />
+Calling greet('Eva')<br />
+Hello Eva<br />
+'greet' returned None<br />
+Calling greet('Eva')<br />
+Hello Eva<br />
+'greet' returned None<br />
+Decorators With Arguments<br />
+Sometimes, it’s useful to pass arguments to your decorators. For instance, @do<em>twice could be extended to a @repeat(num</em>times) decorator. The number of times to execute the decorated function could then be given as an argument.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>This would allow you to do something like this:</p>
+<p>@repeat(num_times=4)<br />
+def greet(name):<br />
+    print(f"Hello {name}")</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>greet("World")<br />
+Hello World<br />
+Hello World<br />
+Hello World<br />
+Hello World<br />
+Think about how you could achieve this.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>So far, the name written after the @ has referred to a function object that can be called with another function. To be consistent, you then need repeat(num_times=4) to return a function object that can act as a decorator. Luckily, you already know how to return functions! In general, you want something like the following:</p>
+<p>def repeat(num<em>times):<br />
+    def decorator</em>repeat(func):<br />
+        ...  # Create and return a wrapper function<br />
+    return decorator_repeat<br />
+Typically, the decorator creates and returns an inner wrapper function, so writing the example out in full will give you an inner function within an inner function. While this might sound like the programming equivalent of the Inception movie, we’ll untangle it all in a moment:</p>
+<p>def repeat(num<em>times):<br />
+    def decorator</em>repeat(func):<br />
+        @functools.wraps(func)<br />
+        def wrapper<em>repeat(*args, **kwargs):<br />
+            for _ in range(num</em>times):<br />
+                value = func(*args, **kwargs)<br />
+            return value<br />
+        return wrapper<em>repeat<br />
+    return decorator</em>repeat<br />
+It looks a little messy, but we have only put the same decorator pattern you have seen many times by now inside one additional def that handles the arguments to the decorator. Let’s start with the innermost function:</p>
+<p>def wrapper<em>repeat(*args, **kwargs):<br />
+    for _ in range(num</em>times):<br />
+        value = func(*args, **kwargs)<br />
+    return value<br />
+This wrapper<em>repeat() function takes arbitrary arguments and returns the value of the decorated function, func(). This wrapper function also contains the loop that calls the decorated function num</em>times times. This is no different from the earlier wrapper functions you have seen, except that it is using the num_times parameter that must be supplied from the outside.</p>
+<p>One step out, you’ll find the decorator function:</p>
+<p>def decorator<em>repeat(func):<br />
+    @functools.wraps(func)<br />
+    def wrapper</em>repeat(*args, **kwargs):<br />
+        ...<br />
+    return wrapper<em>repeat<br />
+Again, decorator</em>repeat() looks exactly like the decorator functions you have written earlier, except that it’s named differently. That’s because we reserve the base name—repeat()—for the outermost function, which is the one the user will call.</p>
+<p>As you have already seen, the outermost function returns a reference to the decorator function:</p>
+<p>def repeat(num<em>times):<br />
+    def decorator</em>repeat(func):<br />
+        ...<br />
+    return decorator_repeat<br />
+There are a few subtle things happening in the repeat() function:</p>
+<p>Defining decorator<em>repeat() as an inner function means that repeat() will refer to a function object—decorator</em>repeat. Earlier, we used repeat without parentheses to refer to the function object. The added parentheses are necessary when defining decorators that take arguments.<br />
+The num<em>times argument is seemingly not used in repeat() itself. But by passing num</em>times a closure is created where the value of num<em>times is stored until it will be used later by wrapper</em>repeat().<br />
+With everything set up, let’s see if the results are as expected:</p>
+<p>@repeat(num_times=4)<br />
+def greet(name):<br />
+    print(f"Hello {name}")</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>greet("World")<br />
+Hello World<br />
+Hello World<br />
+Hello World<br />
+Hello World<br />
+Just the result we were aiming for.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Remove ads<br />
+Both Please, But Never Mind the Bread<br />
+With a little bit of care, you can also define decorators that can be used both with and without arguments. Most likely, you don’t need this, but it is nice to have the flexibility.</p>
+<p>As you saw in the previous section, when a decorator uses arguments, you need to add an extra outer function. The challenge is for your code to figure out if the decorator has been called with or without arguments.</p>
+<p>Since the function to decorate is only passed in directly if the decorator is called without arguments, the function must be an optional argument. This means that the decorator arguments must all be specified by keyword. You can enforce this with the special * syntax, which means that all following parameters are keyword-only:</p>
+<p>def name(<em>func=None, *, kw1=val1, kw2=val2, ...):  # 1<br />
+    def decorator</em>name(func):<br />
+        ...  # Create and return a wrapper function.</p>
+<div class="highlight"><pre><span></span><code>if _func is None:
+    return decorator_name                      # 2
+else:
+    return decorator_name(_func)               # 3
+</code></pre></div>
+<p>Here, the _func argument acts as a marker, noting whether the decorator has been called with arguments or not:</p>
+<p>If name has been called without arguments, the decorated function will be passed in as _func. If it has been called with arguments, then _func will be None, and some of the keyword arguments may have been changed from their default values. The * in the argument list means that the remaining arguments can’t be called as positional arguments.<br />
+In this case, the decorator was called with arguments. Return a decorator function that can read and return a function.<br />
+In this case, the decorator was called without arguments. Apply the decorator to the function immediately.<br />
+Using this boilerplate on the @repeat decorator in the previous section, you can write the following:</p>
+<p>def repeat(<em>func=None, *, num</em>times=2):<br />
+    def decorator<em>repeat(func):<br />
+        @functools.wraps(func)<br />
+        def wrapper</em>repeat(*args, **kwargs):<br />
+            for _ in range(num<em>times):<br />
+                value = func(*args, **kwargs)<br />
+            return value<br />
+        return wrapper</em>repeat</p>
+<div class="highlight"><pre><span></span><code>if _func is None:
+    return decorator_repeat
+else:
+    return decorator_repeat(_func)
+</code></pre></div>
+<p>Compare this with the original @repeat. The only changes are the added _func parameter and the if-else at the end.</p>
+<p>Recipe 9.6 of the excellent Python Cookbook shows an alternative solution using functools.partial().</p>
+<p>These examples show that @repeat can now be used with or without arguments:</p>
+<p>@repeat<br />
+def say_whee():<br />
+    print("Whee!")</p>
+<p>@repeat(num<em>times=3)<br />
+def greet(name):<br />
+    print(f"Hello {name}")<br />
+Recall that the default value of num</em>times is 2:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>say_whee()<br />
+Whee!<br />
+Whee!</p>
+<p>greet("Penny")<br />
+Hello Penny<br />
+Hello Penny<br />
+Hello Penny<br />
+Stateful Decorators<br />
+Sometimes, it’s useful to have a decorator that can keep track of state. As a simple example, we will create a decorator that counts the number of times a function is called.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Note: In the beginning of this guide, we talked about pure functions returning a value based on given arguments. Stateful decorators are quite the opposite, where the return value will depend on the current state, as well as the given arguments.</p>
+<p>In the next section, you will see how to use classes to keep state. But in simple cases, you can also get away with using function attributes:</p>
+<p>import functools</p>
+<p>def count<em>calls(func):<br />
+    @functools.wraps(func)<br />
+    def wrapper</em>count<em>calls(*args, **kwargs):<br />
+        wrapper</em>count<em>calls.num</em>calls += 1<br />
+        print(f"Call {wrapper<em>count</em>calls.num<em>calls} of {func.<strong>name</strong>!r}")<br />
+        return func(*args, **kwargs)<br />
+    wrapper</em>count<em>calls.num</em>calls = 0<br />
+    return wrapper<em>count</em>calls</p>
+<p>@count<em>calls<br />
+def say</em>whee():<br />
+    print("Whee!")<br />
+The state—the number of calls to the function—is stored in the function attribute .num_calls on the wrapper function. Here is the effect of using it:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>say<em>whee()<br />
+Call 1 of 'say</em>whee'<br />
+Whee!</p>
+<p>say<em>whee()<br />
+Call 2 of 'say</em>whee'<br />
+Whee!</p>
+<p>say<em>whee.num</em>calls<br />
+2</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Remove ads<br />
+Classes as Decorators<br />
+The typical way to maintain state is by using classes. In this section, you’ll see how to rewrite the @count_calls example from the previous section using a class as a decorator.</p>
+<p>Recall that the decorator syntax @my<em>decorator is just an easier way of saying func = my</em>decorator(func). Therefore, if my<em>decorator is a class, it needs to take func as an argument in its .</em><em>init</em>_() method. Furthermore, the class instance needs to be callable so that it can stand in for the decorated function.</p>
+<p>For a class instance to be callable, you implement the special .<strong>call</strong>() method:</p>
+<p>class Counter:<br />
+    def <strong>init</strong>(self, start=0):<br />
+        self.count = start</p>
+<div class="highlight"><pre><span></span><code>def __call__(self):
+    self.count += 1
+    print(f&quot;Current count is {self.count}&quot;)
+</code></pre></div>
+<p>The .<strong>call</strong>() method is executed each time you try to call an instance of the class:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>counter = Counter()<br />
+counter()<br />
+Current count is 1</p>
+<p>counter()<br />
+Current count is 2</p>
+<p>counter.count<br />
+2<br />
+Therefore, a typical implementation of a decorator class needs to implement .<strong>init</strong>() and .<strong>call</strong>():</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>import functools</p>
+<p>class CountCalls:<br />
+    def <strong>init</strong>(self, func):<br />
+        functools.update<em>wrapper(self, func)<br />
+        self.func = func<br />
+        self.num</em>calls = 0</p>
+<div class="highlight"><pre><span></span><code>def __call__(self, *args, **kwargs):
+    self.num_calls += 1
+    print(f&quot;Call {self.num_calls} of {self.func.__name__!r}&quot;)
+    return self.func(*args, **kwargs)
+</code></pre></div>
+<p>@CountCalls<br />
+def say<em>whee():<br />
+    print("Whee!")<br />
+The .<strong>init</strong>() method must store a reference to the function and can do any other necessary initialization. The .<strong>call</strong>() method will be called instead of the decorated function. It does essentially the same thing as the wrapper() function in our earlier examples. Note that you need to use the functools.update</em>wrapper() function instead of @functools.wraps.</p>
+<p>This @CountCalls decorator works the same as the one in the previous section:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>say<em>whee()<br />
+Call 1 of 'say</em>whee'<br />
+Whee!</p>
+<p>say<em>whee()<br />
+Call 2 of 'say</em>whee'<br />
+Whee!</p>
+<p>say<em>whee.num</em>calls<br />
+2<br />
+More Real World Examples<br />
+We’ve come a far way now, having figured out how to create all kinds of decorators. Let’s wrap it up, putting our newfound knowledge into creating a few more examples that might actually be useful in the real world.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Slowing Down Code, Revisited<br />
+As noted earlier, our previous implementation of @slow<em>down always sleeps for one second. Now you know how to add parameters to decorators, so let’s rewrite @slow</em>down using an optional rate argument that controls how long it sleeps:</p>
+<p>import functools<br />
+import time</p>
+<p>def slow<em>down(</em>func=None, *, rate=1):<br />
+    """Sleep given amount of seconds before calling the function"""<br />
+    def decorator<em>slow</em>down(func):<br />
+        @functools.wraps(func)<br />
+        def wrapper<em>slow</em>down(*args, **kwargs):<br />
+            time.sleep(rate)<br />
+            return func(*args, **kwargs)<br />
+        return wrapper<em>slow</em>down</p>
+<div class="highlight"><pre><span></span><code>if _func is None:
+    return decorator_slow_down
+else:
+    return decorator_slow_down(_func)
+</code></pre></div>
+<p>We’re using the boilerplate introduced in the Both Please, But Never Mind the Bread section to make @slow_down callable both with and without arguments. The same recursive countdown() function as earlier now sleeps two seconds between each count:</p>
+<p>@slow<em>down(rate=2)<br />
+def countdown(from</em>number):<br />
+    if from<em>number &lt; 1:<br />
+        print("Liftoff!")<br />
+    else:<br />
+        print(from</em>number)<br />
+        countdown(from_number - 1)<br />
+As before, you must run the example yourself to see the effect of the decorator:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>countdown(3)<br />
+3<br />
+2<br />
+1<br />
+Liftoff!<br />
+Creating Singletons<br />
+A singleton is a class with only one instance. There are several singletons in Python that you use frequently, including None, True, and False. It is the fact that None is a singleton that allows you to compare for None using the is keyword, like you saw in the Both Please section:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>if <em>func is None:<br />
+    return decorator</em>name<br />
+else:<br />
+    return decorator<em>name(</em>func)<br />
+Using is returns True only for objects that are the exact same instance. The following @singleton decorator turns a class into a singleton by storing the first instance of the class as an attribute. Later attempts at creating an instance simply return the stored instance:</p>
+<p>import functools</p>
+<p>def singleton(cls):<br />
+    """Make a class a Singleton class (only one instance)"""<br />
+    @functools.wraps(cls)<br />
+    def wrapper<em>singleton(*args, **kwargs):<br />
+        if not wrapper</em>singleton.instance:<br />
+            wrapper<em>singleton.instance = cls(*args, **kwargs)<br />
+        return wrapper</em>singleton.instance<br />
+    wrapper<em>singleton.instance = None<br />
+    return wrapper</em>singleton</p>
+<p>@singleton<br />
+class TheOne:<br />
+    pass<br />
+As you see, this class decorator follows the same template as our function decorators. The only difference is that we are using cls instead of func as the parameter name to indicate that it is meant to be a class decorator.</p>
+<p>Let’s see if it works:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>first<em>one = TheOne()<br />
+another</em>one = TheOne()</p>
+<p>id(first_one)<br />
+140094218762280</p>
+<p>id(another_one)<br />
+140094218762280</p>
+<p>first<em>one is another</em>one<br />
+True<br />
+It seems clear that first<em>one is indeed the exact same instance as another</em>one.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>Note: Singleton classes are not really used as often in Python as in other languages. The effect of a singleton is usually better implemented as a global variable in a module.</p>
+<p>Caching Return Values<br />
+Decorators can provide a nice mechanism for caching and memoization. As an example, let’s look at a recursive definition of the Fibonacci sequence:</p>
+<p>from decorators import count_calls</p>
+<p>@count_calls<br />
+def fibonacci(num):<br />
+    if num &lt; 2:<br />
+        return num<br />
+    return fibonacci(num - 1) + fibonacci(num - 2)<br />
+While the implementation is simple, its runtime performance is terrible:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fibonacci(10)<br />
+<Lots of output from count_calls><br />
+55</p>
+<p>fibonacci.num_calls<br />
+177<br />
+To calculate the tenth Fibonacci number, you should really only need to calculate the preceding Fibonacci numbers, but this implementation somehow needs a whopping 177 calculations. It gets worse quickly: 21891 calculations are needed for fibonacci(20) and almost 2.7 million calculations for the 30<sup>th</sup> number. This is because the code keeps recalculating Fibonacci numbers that are already known.</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>The usual solution is to implement Fibonacci numbers using a for loop and a lookup table. However, simple caching of the calculations will also do the trick:</p>
+<p>import functools<br />
+from decorators import count_calls</p>
+<p>def cache(func):<br />
+    """Keep a cache of previous function calls"""<br />
+    @functools.wraps(func)<br />
+    def wrapper<em>cache(*args, **kwargs):<br />
+        cache</em>key = args + tuple(kwargs.items())<br />
+        if cache<em>key not in wrapper</em>cache.cache:<br />
+            wrapper<em>cache.cache[cache</em>key] = func(*args, **kwargs)<br />
+        return wrapper<em>cache.cache[cache</em>key]<br />
+    wrapper<em>cache.cache = dict()<br />
+    return wrapper</em>cache</p>
+<p>@cache<br />
+@count_calls<br />
+def fibonacci(num):<br />
+    if num &lt; 2:<br />
+        return num<br />
+    return fibonacci(num - 1) + fibonacci(num - 2)<br />
+The cache works as a lookup table, so now fibonacci() only does the necessary calculations once:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fibonacci(10)<br />
+Call 1 of 'fibonacci'<br />
+...<br />
+Call 11 of 'fibonacci'<br />
+55</p>
+<p>fibonacci(8)<br />
+21<br />
+Note that in the final call to fibonacci(8), no new calculations were needed, since the eighth Fibonacci number had already been calculated for fibonacci(10).</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>In the standard library, a Least Recently Used (LRU) cache is available as @functools.lru_cache.</p>
+<p>This decorator has more features than the one you saw above. You should use @functools.lru_cache instead of writing your own cache decorator:</p>
+<p>import functools</p>
+<p>@functools.lru_cache(maxsize=4)<br />
+def fibonacci(num):<br />
+    print(f"Calculating fibonacci({num})")<br />
+    if num &lt; 2:<br />
+        return num<br />
+    return fibonacci(num - 1) + fibonacci(num - 2)<br />
+The maxsize parameter specifies how many recent calls are cached. The default value is 128, but you can specify maxsize=None to cache all function calls. However, be aware that this can cause memory problems if you are caching many large objects.</p>
+<p>You can use the .cache_info() method to see how the cache performs, and you can tune it if needed. In our example, we used an artificially small maxsize to see the effect of elements being removed from the cache:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>fibonacci(10)<br />
+Calculating fibonacci(10)<br />
+Calculating fibonacci(9)<br />
+Calculating fibonacci(8)<br />
+Calculating fibonacci(7)<br />
+Calculating fibonacci(6)<br />
+Calculating fibonacci(5)<br />
+Calculating fibonacci(4)<br />
+Calculating fibonacci(3)<br />
+Calculating fibonacci(2)<br />
+Calculating fibonacci(1)<br />
+Calculating fibonacci(0)<br />
+55</p>
+<p>fibonacci(8)<br />
+21</p>
+<p>fibonacci(5)<br />
+Calculating fibonacci(5)<br />
+Calculating fibonacci(4)<br />
+Calculating fibonacci(3)<br />
+Calculating fibonacci(2)<br />
+Calculating fibonacci(1)<br />
+Calculating fibonacci(0)<br />
+5</p>
+<p>fibonacci(8)<br />
+Calculating fibonacci(8)<br />
+Calculating fibonacci(7)<br />
+Calculating fibonacci(6)<br />
+21</p>
+<p>fibonacci(5)<br />
+5</p>
+<p>fibonacci.cache_info()<br />
+CacheInfo(hits=17, misses=20, maxsize=4, currsize=4)<br />
+Adding Information About Units<br />
+The following example is somewhat similar to the Registering Plugins example from earlier, in that it does not really change the behavior of the decorated function. Instead, it simply adds unit as a function attribute:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>def set<em>unit(unit):<br />
+    """Register a unit on a function"""<br />
+    def decorator</em>set<em>unit(func):<br />
+        func.unit = unit<br />
+        return func<br />
+    return decorator</em>set_unit<br />
+The following example calculates the volume of a cylinder based on its radius and height in centimeters:</p>
+<p>import math</p>
+<p>@set_unit("cm^3")<br />
+def volume(radius, height):<br />
+    return math.pi * radius**2 * height<br />
+This .unit function attribute can later be accessed when needed:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>volume(3, 5)<br />
+141.3716694115407</p>
+<p>volume.unit<br />
+'cm^3'<br />
+Note that you could have achieved something similar using function annotations:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>import math</p>
+<p>def volume(radius, height) -&gt; "cm^3":<br />
+    return math.pi * radius**2 * height<br />
+However, since annotations are used for type hints, it would be hard to combine such units as annotations with static type checking.</p>
+<p>Units become even more powerful and fun when connected with a library that can convert between units. One such library is pint. With pint installed (pip install Pint), you can for instance convert the volume to cubic inches or gallons:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>import pint<br />
+ureg = pint.UnitRegistry()<br />
+vol = volume(3, 5) * ureg(volume.unit)</p>
+<p>vol<br />
+<Quantity(141.3716694115407, 'centimeter ** 3')></p>
+<p>vol.to("cubic inches")<br />
+<Quantity(8.627028576414954, 'inch ** 3')></p>
+<p>vol.to("gallons").m  # Magnitude<br />
+0.0373464440537444<br />
+You could also modify the decorator to return a pint Quantity directly. Such a Quantity is made by multiplying a value with the unit. In pint, units must be looked up in a UnitRegistry. The registry is stored as a function attribute to avoid cluttering the namespace:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>def use<em>unit(unit):<br />
+    """Have a function return a Quantity with given unit"""<br />
+    use</em>unit.ureg = pint.UnitRegistry()<br />
+    def decorator<em>use</em>unit(func):<br />
+        @functools.wraps(func)<br />
+        def wrapper<em>use</em>unit(*args, **kwargs):<br />
+            value = func(*args, **kwargs)<br />
+            return value * use<em>unit.ureg(unit)<br />
+        return wrapper</em>use<em>unit<br />
+    return decorator</em>use_unit</p>
+<p>@use<em>unit("meters per second")<br />
+def average</em>speed(distance, duration):<br />
+    return distance / duration<br />
+With the @use_unit decorator, converting units is practically effortless:</p>
+<blockquote>
+<blockquote>
+<blockquote>
+<p>bolt = average_speed(100, 9.58)<br />
+bolt<br />
+<Quantity(10.438413361169102, 'meter / second')></p>
+<p>bolt.to("km per hour")<br />
+<Quantity(37.578288100208766, 'kilometer / hour')></p>
+<p>bolt.to("mph").m  # Magnitude<br />
+23.350065679064745<br />
+Validating JSON<br />
+Let’s look at one last use case. Take a quick look at the following Flask route handler:</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<p>@app.route("/grade", methods=["POST"])<br />
+def update<em>grade():<br />
+    json</em>data = request.get<em>json()<br />
+    if "student</em>id" not in json<em>data:<br />
+        abort(400)<br />
+    # Update database<br />
+    return "success!"<br />
+Here we ensure that the key student</em>id is part of the request. Although this validation works, it really does not belong in the function itself. Plus, perhaps there are other routes that use the exact same validation. So, let’s keep it DRY and abstract out any unnecessary logic with a decorator. The following @validate_json decorator will do the job:</p>
+<p>from flask import Flask, request, abort<br />
+import functools<br />
+app = Flask(<strong>name</strong>)</p>
+<p>def validate<em>json(*expected</em>args):                  # 1<br />
+    def decorator<em>validate</em>json(func):<br />
+        @functools.wraps(func)<br />
+        def wrapper<em>validate</em>json(*args, **kwargs):<br />
+            json<em>object = request.get</em>json()<br />
+            for expected<em>arg in expected</em>args:      # 2<br />
+                if expected<em>arg not in json</em>object:<br />
+                    abort(400)<br />
+            return func(*args, **kwargs)<br />
+        return wrapper<em>validate</em>json<br />
+    return decorator<em>validate</em>json<br />
+In the above code, the decorator takes a variable length list as an argument so that we can pass in as many string arguments as necessary, each representing a key used to validate the JSON data:</p>
+<p>The list of keys that must be present in the JSON is given as arguments to the decorator.<br />
+The wrapper function validates that each expected key is present in the JSON data.<br />
+The route handler can then focus on its real job—updating grades—as it can safely assume that JSON data are valid:</p>
+<p>@app.route("/grade", methods=["POST"])<br />
+@validate<em>json("student</em>id")<br />
+def update<em>grade():<br />
+    json</em>data = request.get_json()<br />
+    # Update database.<br />
+    return "success!"<br />
+Conclusion<br />
+This has been quite a journey! You started this tutorial by looking a little closer at functions, particularly how they can be defined inside other functions and passed around just like any other Python object. Then you learned about decorators and how to write them such that:</p>
+<p>They can be reused.<br />
+They can decorate functions with arguments and return values.<br />
+They can use @functools.wraps to look more like the decorated function.<br />
+In the second part of the tutorial, you saw more advanced decorators and learned how to:</p>
+<p>Decorate classes<br />
+Nest decorators<br />
+Add arguments to decorators<br />
+Keep state within decorators<br />
+Use classes as decorators<br />
+You saw that, to define a decorator, you typically define a function returning a wrapper function. The wrapper function uses *args and **kwargs to pass on arguments to the decorated function. If you want your decorator to also take arguments, you need to nest the wrapper function inside another function. In this case, you usually end up with three return statements.</p>
+<p>You can find the code from this tutorial online.</p>
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Angelo Cardellicchio - MIT License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/anhelus" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:angelo.cardellicchio@poliba.it" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.a264c092.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.726fbb30.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
