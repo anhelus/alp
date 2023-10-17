@@ -16,7 +16,11 @@ E' possibile concordare un ricevimento inviando una e-mail all'indirizzo [angelo
 
 ## Materiale didattico
 
-Il materiale didattico sarà pubblicato su Microsoft Teams e su questo sito web.
+Il materiale didattico è disponibile a questi indirizzi:
+
+* [slides per l'A.A. 2023/2024](./material/slides/index.md);
+* [diagrammi AlgoBuild](./material/algobuild/index.md);
+* [codice sorgente MATLAB](./material/matlab/index.md).
 
 ## Iscrizione al Team del corso
 
