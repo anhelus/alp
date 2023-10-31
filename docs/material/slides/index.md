@@ -12,3 +12,8 @@
 | 07 - Istruzioni, proposizioni e predicati | [:link:](07_istruzioni.pdf) |
 | 08 - Vettori e matrici | [:link:](08_vettori.pdf) |
 | 09 - Programmazione strutturata | [:link:](09_strutturata.pdf) |
+| 10 - Algoritmi iterativi e ricorsivi | [:link:](10_iterazione_ricorsione.pdf) |
+| 11 - Pseudocodifica | [:link:](11_pseudocodifica.pdf) |
+| 12 - Linguaggi di programmazione | [:link:](12_linguaggi.pdf) |
+| 13 - Introduzione a MATLAB | [:link:](13_intro_matlab.pdf) |
+| 14 - Switch case in MATLAB | [:link:](14_selezione_multipla.pdf) |

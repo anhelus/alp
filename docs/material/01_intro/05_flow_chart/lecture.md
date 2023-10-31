@@ -1,11 +1,5 @@
 # 5 - I diagrammi di flusso
 
-!!!tip "Materiale e link utili"
-    | Materiale | Disponibilità | Link |
-    | --------- | :-------------: | ---- |
-    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/01_intro_inf.pdf) |
-    | Video esplicativo | :x: | Link non disponibile |
-
 In una delle [lezioni precedenti](../02_algorithms/lecture.md), abbiamo visto come un algoritmo può essere espresso come una sequenza arbitrariamente complessa di operazioni atomiche.
 
 Detta sequenza, ovviamente, deve essere in qualche modo "fissata", di modo da indirizzare il funzionamento dell'algoritmo secondo le modalità desiderate. In tal senso, la tentazione potrebbe essere quella di limitarsi a tenere a mente i passi della sequenza di istruzioni, ed implementarle *di getto*. Tuttavia, questo non è il modo migliore per farlo, in quanto risulta essere abbastanza complesso gestire tali informazioni all'aumentare della complessità dell'algoritmo.

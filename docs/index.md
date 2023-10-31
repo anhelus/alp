@@ -22,6 +22,9 @@ Il materiale didattico è disponibile a questi indirizzi:
 * [diagrammi AlgoBuild](./material/algobuild/index.md);
 * [codice sorgente MATLAB](./material/matlab/index.md).
 
+!!!warning "Nota"
+    In questo sito è presente del materiale didattico supplementare, sotto forma di dispense scritte, **in fase di aggiornamento**. Pertanto è **fortemente sconsigliato** utilizzare tale materiale per la preparazione dell'esame.
+
 ## Iscrizione al Team del corso
 
 E' possibile iscriversi al team del corso:
