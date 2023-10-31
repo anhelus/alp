@@ -1,11 +1,5 @@
 # 2 - Introduzione agli algoritmi
 
-!!!tip "Materiale e link utili"
-    | Materiale | Disponibilità | Link |
-    | --------- | :-------------: | ---- |
-    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/01_intro_inf.pdf) |
-    | Video esplicativo | :x: | Link non disponibile |
-
 ## 2.1 - Formulare un problema
 
 Per comprendere gli algoritmi, partiamo definendo il concetto di _problema_.

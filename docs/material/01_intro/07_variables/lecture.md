@@ -1,11 +1,5 @@
 # 7 - Le variabili
 
-!!!tip "Materiale e link utili"
-    | Materiale | Disponibilità | Link |
-    | --------- | :-------------: | ---- |
-    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/01_intro_inf.pdf) |
-    | Video esplicativo | :x: | Link non disponibile |
-
 Comprendere il concetto di *variabile* è fondamentale (o, per meglio dire, *propedeutico*) all'acquisizione dei fondamentali della programmazione.
 
 Per capire di cosa si tratta, possiamo analizzare il significato della parola nella lingua italiana: intuitivamente, una variabile rappresenta una *quantità* (o, in maniera molto più "lasca", un dato) a cui è "concesso" di variare durante l'esecuzione del programma. Risulta importantissimo sottolineare come una variabile non sia quindi necessariamente un dato di ingresso o un risultato atteso: si tratta piuttosto di una rappresentazione (parziale) dello stato interno del programma ad un dato istante.

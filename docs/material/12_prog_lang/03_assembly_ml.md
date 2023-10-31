@@ -22,25 +22,40 @@ Fu con l'arrivo di linguaggi ad alto livello come il COBOL, il BASIC ed il FORTR
 
 Il linguaggio macchina, come abbiamo già detto, permette di controllare direttamente la CPU. Ogni istruzione fa in modo che la CPU esegua un task specifico, come memorizzare o caricare un valore, o eseguire un'operazione aritmetico/logica, modificando di conseguenza una o più unità di dati all'interno della memoria o dei registri del processore. Normalmente, il codice macchina è considerato come l'interfaccia maggiormente "a basso livello" verso la CPU, tuttavia, esistono alcuni processori che includono un'interfaccia ancora più a basso livello chiamata *microcode*.
 
-It is possible to write programs directly in machine language. However, this can be challenging and error-prone, as programmers must manually manage individual bits and calculate numerical constants and addresses.
-Therefore, very few modern-day programs are written directly in machine language. This limits its applications to low-level debugging, program patching (especially in cases where the assembler source is unavailable), and cases requiring the disassembly of assembly language.
+In teoria, quindi, è possibile scrivere programmi direttamente in linguaggio macchina. Tuttavia, farlo è estremamente complesso e dispendioso, in quanto il programmatore dovrebbe gestire manualmente i singoli bit del processore. Ciò limita l'applicazione pratica di questo paradigma nei moderni processori a situazioni limite, nelle quali l'interazione a bassissimo livello è inaggirabile; di conseguenza, i linguaggi moderni vengono *tradotti* in codice macchina mediante appositi programmi chiamati *assembler*, *linker* e *compilatori*.
 
-Apart from the cases mentioned above, most modern programs are written in higher-level languages or, less often, using assembly language. Utilities like assemblers, linkers, and compilers are then used to translate the source code to executable machine code. However, interpreted programs are an important exception here as they are not translated into machine language.
+!!!tip "Interpreti e linguaggio macchina"
+    Un'eccezione notevole al paradigma precedente è data dagli interpreti, che *non* traducono il codice sorgente in linguaggio macchina. Ciò è legato al fatto che questi traduttori sono delle vere e proprie "macchine virtuali" che eseguono le istruzioni indicate nel cordice sorgente.
+
+## Il linguaggio assembly
+
+Abbiamo visto come il linguaggio macchina sia estremamente ostico da utilizzare ma, al contempo, offra possibilità semplicemente inarrivabili dai linguaggi di programmazione ad alto livello. Per rendere in qualche modo disponibili dette potenzialità ai programmatori ne è stata quindi creata una versione *human-readable* che si occupa di "mappare" il codice macchina in stringhe ed istruzioni che, per quanto complesse, risultino essere leggibili da parte di un essere umano; questo linguaggio è chiamato *assembly*.
+
+##### Un po' di storia
+
+Il linguaggio assembly non esisteva quando i comptuer
 
 
-Machine language is directly mapped into a version readable by humans using assembly language, which translates machine language’s numerical opcodes and operands into readable strings.
+
+
+Assembly languages did not exist when stored-program computers were first introduced. The credit for inventing assembly language goes to Kathleen Booth, who began theoretical work on the concept in 1947.
+It was late 1948 when the Electronic Delay Storage Automatic Calculator (EDSAC) had an assembler integrated into its bootstrap program. It leveraged one-letter mnemonics developed by David Wheeler, credited as the creator of the first “assembler.”
+
+A few years later, in 1955, an assembly language known as the Symbolic Optimal Assembly Program (SOAP) was written by Stan Poley for the IBM 650 computer.
+
+Assembly languages went one step ahead of machine language. They eliminated much of the tedious, time-consuming, and error-prone operations seen in the first-generation programming of the earliest computers. They freed programmers from tasks such as calculating addresses and remembering numeric codes, thereby becoming the standard for many types of programming.
+
+Several programs were written using only assembly language. It was only in 1961 that the Burroughs MCP was introduced — this was the first computer whose operating system was not developed using only assembly language. Instead, its OS was written in Executive Systems Problem Oriented Language (ESPOL).
+
+Assembly language had (and, to a certain extent, still has) commercial applications. For instance, a considerable portion of the IBM mainframe software by corporations was written using assembly language.
+
+In commercial applications, the biggest advantages of assembly language included minimal bloat and overhead, as well as greater reliability and speed.
+
+However, assembly language was not only used commercially. As computers became more commonplace, assembly language also entered people’s homes.
 
 
 
-### Cosa è il linguaggio macchina?
 
-Conosciuto anche come codice oggetto o codice macchina, il linguaggio machcina è un insiseme di bit messi insieme in modo che un computer possa leggerli ed interpretarli.
-
-Molti linguaggi di programmazione di uso comune sono tralstati in linguaggio macchina comprensibile dai comptuer. Ad esempio, Java, C++ o Python sono usati per scrivere programmi. Tuttavia, i computer non possono direttamente decifrare questi linguaggi, per cui vengono tradotti. UNa volta che viene tradotto, questo codice macchina può essere compreso dal computer perché è stato tradotto in linguaggio macchina.
-
-Il linguaggio macchina specifico per un computer dipende dal sistema operativo e dal procesosre utilizzato. Di conseguenza, il codice scritto per una macchina MacOS con processore M2 non sarà leggibile da un PC Windows con processore x64.
-
-### Cosa è l’assembly?
 
 Il linguaggio assembly dà all’utente la capacità di influenzare il funzionamento dell’hardware e del software dlela macchina. Possiamo vederlo come un mezzo per collegare l’hardware del computer al sistema operativo, e fare in modo che questi lavorino insieme. Il linguaggio fornisce inoltre un ponte per fare in modo che il sistema operativo comunichi con i programmi applicativi (e viceversa).
 
@@ -154,7 +169,7 @@ Finally, fundamental topics like binary arithmetic, stack processing, memory all
 PROGRAMMAZIONE
 
 
-Interpreters can be considered executors or processors carrying out the instructions of the source code. They generally consist of directly applicable machine code generated from higher-level language source code.
+
 
 Assembly language is the preferred language for programming on systems with older processors featuring limited high-level language options, such as the Commodore 64 and Atari 2600.
 

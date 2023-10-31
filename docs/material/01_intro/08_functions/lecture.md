@@ -1,11 +1,5 @@
 # 8 - Le funzioni
 
-!!!tip "Materiale e link utili"
-    | Materiale | Disponibilità | Link |
-    | --------- | :-------------: | ---- |
-    | Slides mostrate a lezione | :white_check_mark:{ .heart } | [Download](../../slides/01_intro_inf.pdf) |
-    | Video esplicativo | :x: | Link non disponibile |
-
 Immaginiamo di dover calcolare il nostro voto di accesso all'esame laurea. Supponendo che nel nostro corso di studi ci siano esattamente venti esami, le istruzioni necessarie a calcolarlo sono molto semplici:
 
 ```linenums="1"
