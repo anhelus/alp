@@ -2,22 +2,24 @@ site_name: Informatica per l'Ingegneria (classe N)
 
 nav:
   - Home del corso: index.md
-  - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
-  - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-  - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
-  - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
-  - 5 - Diagrammi di flusso: material/01_intro/05_flow_chart/lecture.md
-  - 6 - Programmazione strutturata: material/01_intro/06_structured/lecture.md
-  - 7 - Variabili: material/01_intro/07_variables/lecture.md
-  - 8 - Funzioni: material/01_intro/08_functions/lecture.md
-  - 9 - Complessità computazionale:
-    - Dispense: material/01_intro/09_complexity/lecture.md
-    - Esercizi: material/01_intro/09_complexity/exercises.md
-  - 10 - Strutture dati: material/01_intro/10_data_structures/lecture.md
-  - 11 - Ricorsione: material/01_intro/11_recursion/lecture.md
-  - 12 - Paradigmi di programmazione: material/01_intro/12_paradigms/lecture.md
-  - 13 - Strutture dati avanzate: material/01_intro/13_adv_data_structures/lecture.md
-  - 14 - Selection sort: material/02_algorithms/14_sorting/selection_sort.md
+  - Tracce di esame svolte:
+    - Traccia del 17 gennaio 2024: material/exams/17_01_2024.md
+  # - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
+  # - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
+  # - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
+  # - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
+  # - 5 - Diagrammi di flusso: material/01_intro/05_flow_chart/lecture.md
+  # - 6 - Programmazione strutturata: material/01_intro/06_structured/lecture.md
+  # - 7 - Variabili: material/01_intro/07_variables/lecture.md
+  # - 8 - Funzioni: material/01_intro/08_functions/lecture.md
+  # - 9 - Complessità computazionale:
+  #   - Dispense: material/01_intro/09_complexity/lecture.md
+  #   - Esercizi: material/01_intro/09_complexity/exercises.md
+  # - 10 - Strutture dati: material/01_intro/10_data_structures/lecture.md
+  # - 11 - Ricorsione: material/01_intro/11_recursion/lecture.md
+  # - 12 - Paradigmi di programmazione: material/01_intro/12_paradigms/lecture.md
+  # - 13 - Strutture dati avanzate: material/01_intro/13_adv_data_structures/lecture.md
+  # - 14 - Selection sort: material/02_algorithms/14_sorting/selection_sort.md
 
 theme:
   name: material
@@ -42,17 +44,23 @@ markdown_extensions:
       emoji_index: !!python/name:pymdownx.emoji.twemoji
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.highlight: # better code, instead of CodeHilite           <--------
-      linenums: false
+      anchor_linenums: false
   - pymdownx.inlinehilite # like codehilite but inline
   - pymdownx.magiclink # auto links
   - pymdownx.mark # highlight text
   - pymdownx.smartsymbols # special symbols
   - pymdownx.superfences: # nest code blocks under other blocks   <-------
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tasklist: # better tasks lists
       custom_checkbox: true
-  - pymdownx.tabbed # auto tabs
+  - pymdownx.tabbed: # auto tabs
+      alternate_style: true # auto tabs
   - pymdownx.tilde # strike through cross out text
   - tables
+  - md_in_html
 
 plugin:
   - search

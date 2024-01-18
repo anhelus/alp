@@ -91,20 +91,24 @@ Il vantaggio di un sistema di questo tipo appare evidente: infatti, la presenza 
 
 La quantità di informazione viene misurata in *bit*, crasi che proviene dall'inglese *binary digit*, ovvero cifra binaria. In altri termini, il bit rappresenta la *quantità minima di informazione* che è possibile trasmettere.
 
-Ogni messaggio, di conseguenza, porta al suo interno un certo numero di bit, dato per convenzione dal logaritmo in base 2 della cardinalità della classe dei messaggi disponibili.
+In linea generale, utilizzando $n$ bit, ed escludendo il segno, il valore massimo rappresentabile $M$ è $2^{n}-1$, mentre il più piccolo è $2^{n-1}$. Di conseguenza, l'informazione espressa in bit è pari a:
+
+\begin{align}
+2^{n-1} \leq X \leq 2^{n}-1 \Rightarrow \\
+\Rightarrow 2^{n-1} \leq X + 1 \leq 2^{n} \Rightarrow \\
+\Rightarrow \log_{2} 2^{n-1} \leq \log_{2}(X + 1) \leq \log_{2}(2^{n}) \Rightarrow \\
+\Rightarrow n-1 \leq \log_{2}(X + 1) \leq n \Rightarrow \\
+\Rightarrow n = log_{2}(X + 1)
+\end{align}
 
 In altre parole, una sequenza ordinata di $n$ numeri binari può rappresentare uno fra $2^n$ cifre diverse; ciò è dato dal fatto che i possibili simboli sono $2$, mentre la lunghezza della sequenza è $n$. Di conseguenza, l'informazione associata a questa sequenza sarà pari proprio ad $n$ bit.
 
-### Esempi
-
-Consideriamo in primis un messaggio del tipo $XXYY$, dove $XX$ è un simbolo dell'alfabeto anglosassone, mentre $Y$ è una cifra in base $10$. Allora, il computo totale dell'informazione $I$ sarà dato da:
-
-$$
-I = (26)^2 \cdot (10)^2 = 676 \cdot 100
-$$
-
-Per ottenere il valore corrispondente dell'informazione misurato in bit, dovremo calcolarne il logaritmo in base $2$.
-
-$$
-I_{bit} = \log_{2}(67600)
-$$
+!!!note Esempio
+    Consideriamo in primis un messaggio del tipo $XXYY$, dove $XX$ è un simbolo dell'alfabeto anglosassone, mentre $Y$ è una cifra in base $10$. Allora, il computo totale dell'informazione $I$ sarà dato da:
+    $$
+    I = (26)^2 \cdot (10)^2 = 676 \cdot 100
+    $$
+    Per ottenere il valore corrispondente dell'informazione misurato in bit, dovremo calcolarne il logaritmo in base $2$.
+    $$
+    I_{bit} = \log_{2}(67600)
+    $$

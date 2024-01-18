@@ -1,4 +1,6 @@
-# Algebra Booleana
+# 4 - Algebra booleana
+
+## 4.1 - I circuiti elettronici digitali.
 
 I circuiti elettronici digitali sono costruiti con elementi caratterizzati soltanto da due possibili stati di funzionamento, ovvero *alto* e *basso*.
 
@@ -8,6 +10,8 @@ I dispositivi elettronici a due stati di funzionamento sono giustificati da due 
 * dall'altro, qualsiasi informazione può essere rappresentata mediante una successione di valori alti e bassi o, equivalentemente, 1 e 0
 
 I segnali binari, corrispondenti ai due livelli di funzionaemnto degli elementi costitutivi del calcolatori, vengono trattati mediante l'algebra di Boole, introdotta da George Boole.
+
+## 4.2 - L'algebra di Boole
 
 L'algebra di Boole venne introdotta nel XIX secolo da Boole per analizzare algebricamente problemi di calcolo proposizionale, al fine di studiare le leggi del pensiero.
 
@@ -29,22 +33,43 @@ Gli operatori dell'algebra booleana possono essere rappresentati in vari modi.
 
 Spesso sono descritti semplicemente come AND, OR e NOT. Nella descrizione dei circuiti appaiono sotto forma di porte logiche. In matematica si usa + per OR e x per AND, mentre si rappresenta il NOT con una barra posta sopra l'espressione che viene negata.
 
-TODO: RAPPRESENTAZIONE, SIMBOLO ALGEBRICO E TABELLA DELLA VERITA
+### 4.2.1 - L'operazione di AND
 
-## L'operazione di AND
+L'operazione di $AND$ è definita anche come *prodotto logico*. In particolare, il valore del prodotto logico è pari al simbolo $1$ se e solo se il valore di entrambi gli operandi coinvolti è pari ad $1$.
 
-Si definisc el'operazione di prodotto logico (AND) il valore del prodotto logico è il simbolo 1 se il valore di tutti gli operandi è dato dal simbolo 1.
+| A | B | $\times$ |
+| - | - | -------- |
+| $0$ | $0$ | $0$ |
+| $0$ | $1$ | $0$ |
+| $1$ | $0$ | $0$ |
+| $1$ | $1$ | $1$ |
 
-Operazione di somma logica (OR) se il valore della somma logica è il simbolo 1 se il valore di almeno uno degli altri operandi è il simbolo 1.
+![and_port](./images/and_port.png)
 
-Si definisce l'operazione di negazione (NOT) come l'operatore che inverte il valroe della costante su cui opera.
+### 4.2.2 - L'operazione di OR
 
-VARIABILI BINARIE
+L'operazione $OR$ è anche definita come *somma logica*.
 
-Una variabile binaria indipendente può assumere uno tra due valori 0 ed 1.
+In particolare, il valore della somma logica è il simbolo $1$ se e solo se almeno uno dei due operandi ha valore $1$.
 
-Date n variabili binarie indipendenti, la loro somma logica è 1 se almeno una vale 1, 0 altrimenti.
+| A | B | $+$ |
+| - | - | -------- |
+| $0$ | $0$ | $0$ |
+| $0$ | $1$ | $1$ |
+| $1$ | $0$ | $1$ |
+| $1$ | $1$ | $1$ |
 
-DA SLLIDE 12
+![or_port](./images/or_port.png)
 
-Il valore della 
+### 4.2.3 - L'operazione NOT
+
+L'operazione $NOT$ è definita come *negazione logica*.
+
+In particolare, l'operatore inverte il valore della costante su cui opera.
+
+| A | $\hat{A}$ |
+| - | - |
+| $0$ | $0$ |
+| $0$ | $1$ |
+| $1$ | $0$ |
+| $1$ | $1$ |
