@@ -12,9 +12,11 @@
         <link rel="prev" href="../../..">
       
       
+        <link rel="next" href="../../xx_sorting/01_selection_sort/">
+      
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.4">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
     
     
       
@@ -459,6 +461,71 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algoritmi di ordinamento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algoritmi di ordinamento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../xx_sorting/01_selection_sort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Selection sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -702,9 +769,14 @@ V_n \\
 <span class="nb">clc</span>
 </code></pre></div>
 <p>Fatto questo, possiamo richiedere all'utente il valore di <span class="arithmatex">\(N\)</span>, ovvero la lunghezza da assegnare al nostro vettore.</p>
-<div class="highlight"><pre><span></span><code><span class="n">N</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Inserire la lunghezza richiesta:\n&quot;</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><span class="n">N</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+<span class="k">while</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span>
+<span class="w">    </span><span class="n">N</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="nb">input</span><span class="p">(</span><span class="s">&quot;Inserire la lunghezza richiesta:\n&quot;</span><span class="p">);</span>
+<span class="k">end</span>
 </code></pre></div>
-<p>Ricordiamo, come sempre, che è necessario inserire l'escape character <code>\n</code> per fare in modo che, durante la visualizzazione, la stringa vada a capo.</p>
+<p>Ricordiamo che:<br />
+1. è necessario inserire l'escape character <code>\n</code> per fare in modo che, durante la visualizzazione, la stringa vada a capo;<br />
+2. dobbiamo verificare che il valore inserito sia strettamente positivo.</p>
 <h3 id="parte-1-caricavettore_1">Parte 1: <code>caricaVettore()</code><a class="headerlink" href="#parte-1-caricavettore_1" title="Permanent link">&para;</a></h3>
 <p>Possiamo adesso creare la funzione <code>caricaVettore()</code>, delegata al caricamento dello stesso. Creiamo una nuova funzione, ed inseriamo il seguente codice:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
@@ -843,6 +915,10 @@ V_n \\
 <p>La funzione <code>ordinaVettore(V)</code> accetta quindi il vettore <code>V</code> in ingresso, e restituisce lo stesso vettore ordinato. Per farlo, utilizzeremo un ciclo esterno (con indice <code>i</code>) ed un ciclo interno (con indice <code>j</code>).</p>
 <p>Ad ogni iterazione del ciclo esterno, andremo ad utilizzare una variabile di appoggio <code>k</code>, che inizialmente sarà pari ad <code>i</code>. Fatto questo, useremo un ciclo interno, che partirà dall'elemento immediatamente successivo a <code>j</code>. </p>
 <p>Verifichiamo, ad ogni iterazione del ciclo interno, se l'elemento in posizione <code>k</code> sia maggiore di quello in posizione <code>j</code>; se ciò è vero, provvediamo allo scambio, altrimenti questo non avviene. In altre parole, stiamo cercando il valore <em>minimo</em> della restante parte del vettore e, al termine del ciclo interno, lo andremo a sostituire al valore analizzato dal ciclo esterno sfruttando la variabile temporanea <code>tmp</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Lunghezza del vettore</p>
+<p>Potremmo pensare di inserire come parametri formali in ingresso alla funzione <code>ordinaVettore()</code> non solo <code>V</code>, ma anche <code>N</code>. Tuttavia, questo parametro è superfluo, visto e considerato che MATLAB ci offre la funzione <code>length(V)</code> che restituisce la lunghezza del vettore passato come parametro. In alternativa, potremmo decidere di usare la funzione <code>size(V, 1)</code>, che ci restituisce il numero di righe del vettore (che, nel caso di un vettore colonna, coincide anche con la lunghezza dello stesso). </p>
+</div>
 <h3 id="parte-3-calcolastatistiche_1">Parte 3: <code>calcolaStatistiche()</code><a class="headerlink" href="#parte-3-calcolastatistiche_1" title="Permanent link">&para;</a></h3>
 <p>Nella terza parte provvederemo a calcolare le tre statistiche richieste, ovvero <em>minimo</em>, <em>massimo</em> e <em>media</em>. Da notare che effettueremo questa operazione <em>sul vettore ordinato</em>, per cui potremo sfruttare questa caratteristica per giungere rapidamente all'individuazione dei primi due valori. Infatti, potremo scrivere la funzione come segue:</p>
 <div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">calcolaStatistiche</span><span class="p">(</span>V<span class="p">)</span>
@@ -863,26 +939,44 @@ V_n \\
 <p>Vediamo come il <code>minimo</code> sia dato dal primo valore del vettore ordinato, mentre il massimo sia quello in posizione <code>length(V)</code> che, grazie all'indicizzazione offerta dal MATLAB, è proprio quello in ultima posizione. Per ciò che riguarda invece la media, procediamo al calcolo della stessa usando un semplice ciclo for.</p>
 <div class="admonition note">
 <p class="admonition-title">Nota per il calcolo delle statistiche</p>
-<p>Ovviamente, questo modo di procedere vale soltanto nel caso il vettore sia ordinato. In caso di vettore non ordinato, il massimo ed il minimo dovranno essere calcolati mediante due semplici cicli enumerativi.</p>
+<p>Ovviamente, questo modo di procedere vale soltanto nel caso il vettore sia ordinato. In caso di vettore non ordinato, il massimo ed il minimo dovranno essere calcolati mediante due semplici cicli enumerativi. Tuttavia, nel contesto della traccia, possiamo tranquillamente procedere come indicato nella funzione <code>calcolaStatistiche()</code>.</p>
 </div>
 <h3 id="parte-4-stampa_1">Parte 4: <code>stampa()</code><a class="headerlink" href="#parte-4-stampa_1" title="Permanent link">&para;</a></h3>
-<p>L'ultima parte prevede la stampa a schermo del vettore. Per farlo, potremo scegliere di usare la funzione <code>fprintf</code> all'interno di un ciclo, oppure costruire una stringa e visualizzarla al termine. Scegliamo la seconda modalità:</p>
-<div class="highlight"><pre><span></span><code>function stampa(V)
+<p>L'ultima parte prevede la stampa a schermo del vettore. Per farlo, potremo scegliere diverse opzioni, tra cui:</p>
+<ul>
+<li>costruire una stringa e visualizzarla al termine del ciclo;</li>
+<li>usare la funzione <code>fprintf</code> all'interno di un ciclo;</li>
+<li>utilizzare la funzione <code>disp</code>.</li>
+</ul>
+<p>Vediamo brevemente tutte le possibili modalità:</p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">stampa</span><span class="p">(</span>V<span class="p">)</span>
 
-str = &quot;Il vettore ordinato è:\n&quot;;
-for i = 1:length(V)
-    str = str + num2str(V(i)) + &quot;\n&quot;;
-end
+<span class="n">str</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Il vettore ordinato è:\n&quot;</span><span class="p">;</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+<span class="w">    </span><span class="n">str</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">num2str</span><span class="p">(</span><span class="n">V</span><span class="p">(</span><span class="nb">i</span><span class="p">))</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;\n&quot;</span><span class="p">;</span>
+<span class="k">end</span>
 
-fprintf(str);
+<span class="nb">fprintf</span><span class="p">(</span><span class="n">str</span><span class="p">);</span>
 
-end
+<span class="k">end</span>
 </code></pre></div>
 <p>In pratica, creeremo una stringa <code>str</code> a cui concateneremo, ad ogni iterazione, il valore <code>i</code>-mo di <code>V</code> seguito dall'escape character <code>\n</code>. Al termine, visualizzeremo la stringa creata mediante la funzione <code>fprintf</code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Utilizzo di disp</p>
-<p>Si potrebbe anche pensare di usare opportunamente la funzione <code>disp</code>, tenendo però conto delle sequenze di escape.</p>
-</div>
+<p>Se volessimo usare la funzione <code>fprintf</code> all'interno di un ciclo, dovremmo procedere come segue:</p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">stampa</span><span class="p">(</span>V<span class="p">)</span>
+
+<span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;Il vettore ordinato è: \n&quot;</span><span class="p">);</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">fprintf</span><span class="p">(</span><span class="s">&quot;%d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">V</span><span class="p">(</span><span class="nb">i</span><span class="p">));</span>
+<span class="k">end</span>
+</code></pre></div>
+<p>Infine, usando la funzione <code>disp</code>:</p>
+<div class="highlight"><pre><span></span><code><span class="k">function</span><span class="w"> </span><span class="nf">stampa</span><span class="p">(</span>V<span class="p">)</span>
+
+<span class="nb">disp</span><span class="p">(</span><span class="s">&quot;Il vettore ordinato è: &quot;</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="nb">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">1</span><span class="p">:</span><span class="nb">length</span><span class="p">(</span><span class="n">V</span><span class="p">)</span>
+<span class="w">    </span><span class="nb">disp</span><span class="p">(</span><span class="n">V</span><span class="p">(</span><span class="nb">i</span><span class="p">))</span>
+<span class="k">end</span>
+</code></pre></div>
 <h3 id="script-complessivo_1">Script complessivo<a class="headerlink" href="#script-complessivo_1" title="Permanent link">&para;</a></h3>
 <p>Combiniamo tutte le funzioni in quello che è lo script complessivo risultante.</p>
 <div class="highlight"><pre><span></span><code><span class="nb">clear</span>
@@ -899,6 +993,10 @@ end
 <span class="n">stampa</span><span class="p">(</span><span class="n">V</span><span class="p">);</span>
 </code></pre></div>
 <p>Da notare che il valore <code>modCar</code> viene utilizzato immediatamente dopo la chiamata a <code>caricaVettore()</code>: infatti, se questo è pari a <code>0</code>, entreremo nell'istruzione condizionale mostrata alla riga 6, che terminerà immediatamente il programma grazie all'istruzione <code>return</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Gestione della modalità sconosciuta</p>
+<p>In questa versione del programma, abbiamo scelto di gestire sia una modalità di inserimento non conosciuta, lanciando un errore, sia di dare all'utente la possibilità di terminare il programma. Altre modalità di gestione di tale scelta (ad esempio, forzando la scelta a soli due valori mediante un'istruzione condizionale) sono altrettanto valide nel contesto della traccia.</p>
+</div>
 
 
 
@@ -974,10 +1072,10 @@ end
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.c011b7c0.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "search": "../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.7389ff0e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
       
         <script src="../../../js/config.js"></script>
       

@@ -1,0 +1,685 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.5">
+    
+    
+      
+        <title>15 - Algoritmi di ricerca - Informatica per l'Ingegneria (classe N)</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.50c56a3b.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-J2XESD8WDV",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#15-algoritmi-di-ricerca" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../../../.." title="Informatica per l&#39;Ingegneria (classe N)" class="md-header__button md-logo" aria-label="Informatica per l'Ingegneria (classe N)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Informatica per l'Ingegneria (classe N)
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              15 - Algoritmi di ricerca
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var media,input,key,value,palette=__md_get("__palette");if(palette&&palette.color){"(prefers-color-scheme)"===palette.color.media&&(media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']"),palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent"));for([key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../../.." title="Informatica per l&#39;Ingegneria (classe N)" class="md-nav__button md-logo" aria-label="Informatica per l'Ingegneria (classe N)" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Informatica per l'Ingegneria (classe N)
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home del corso
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Tracce di esame svolte
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tracce di esame svolte
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../exams/17_01_2024/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Traccia del 17 gennaio 2024
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Algoritmi di ordinamento
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Algoritmi di ordinamento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../xx_sorting/01_selection_sort/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Selection sort
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#151-ricerca-binaria" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.1 - Ricerca binaria
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduzione-al-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduzione al problema
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrizione dell'algoritmo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fase-di-progettazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fase di progettazione.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#todo-flow-chart" class="md-nav__link">
+    <span class="md-ellipsis">
+      TODO: flow chart
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complessita-computazionale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complessità computazionale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#152-ricerca-in-ampiezza" class="md-nav__link">
+    <span class="md-ellipsis">
+      15.2 - Ricerca in ampiezza
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#descrizione-dellalgoritmo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrizione dell'algoritmo
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Descrizione dell'algoritmo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bfs-sugli-alberi" class="md-nav__link">
+    <span class="md-ellipsis">
+      BFS sugli alberi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analisi-della-bfs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analisi della BFS
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="15-algoritmi-di-ricerca">15 - Algoritmi di ricerca<a class="headerlink" href="#15-algoritmi-di-ricerca" title="Permanent link">&para;</a></h1>
+<p>Vediamo in ultimo gli algoritmi di ricerca.</p>
+<h2 id="151-ricerca-binaria">15.1 - Ricerca binaria<a class="headerlink" href="#151-ricerca-binaria" title="Permanent link">&para;</a></h2>
+<h2 id="introduzione-al-problema">Introduzione al problema<a class="headerlink" href="#introduzione-al-problema" title="Permanent link">&para;</a></h2>
+<p>Supponiamo di voler trovare un determinato elemento all'interno di una lista di valori, come ad esempio il numero di un nostro contatto all'interno della nostra rubrica (ovviamente, supponiamo di <em>non</em> voler utilizzare la funzionalità di ricerca integrata nella rubrica stessa).</p>
+<p>Supponiamo di voler trovare il nostro gruppo tra quello dei partecipanti al tema d'anno. Ovviamente, l'idea sarebbe quella di scrivere un programma che faccia la ricerca del nostro gruppo in maniera automatica.</p>
+<p>Una prima idea potrebbe essere quindi quella di esaminare ogni gruppo, partendo dal primo, mediante un approccio chiamato <em>ricerca lineare</em> (<em>linear search</em>). Ciò significa che il nostro programma dovrebbe esaminare una quarantina di gruppi per trovare quello di cui ha bisogno; non molti, giusto?</p>
+<p>Beh, immaginiamo adesso di voler trovare Betelgeuse nel catalogo stellare <a href="https://www.cosmos.esa.int/web/hipparcos/tycho-2"><em>Tycho-2</em></a>, che contiene non quaranta studenti, ma più di due milioni e mezzo di stelle. L'impresa non sembra più tanto semplice.</p>
+<p>Non disperiamo, però. Esiste un approccio che ci permette di ridurre in maniera drastica il numero di operazioni da eseguire, ovvero la <em>ricerca dicotomica</em> o, più comunemente, la <em>binary search</em>. </p>
+<div class="admonition note">
+<p class="admonition-title">Definizione del problema</p>
+<p>Abbiamo dimenticato una parte fondamentale nella descrizione dell'algoritmo, ovvero definire più o meno formalmente quale problema risolve. In breve, la <em>ricerca dicotomica serve a trovare un oggetto in una lista ordinata</em>.</p>
+</div>
+<h2 id="descrizione-dellalgoritmo">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo" title="Permanent link">&para;</a></h2>
+<p>L'idea alla base della binary search è <em>tenere traccia di un intervallo di ipotesi ragionevoli</em>. Facciamo un rapido esempio per capire al meglio di cosa si tratta.</p>
+<p>Immaginiamo che noi, Alice, chiediamo al nostro collega, Bob, di pensare ad un numero compreso tra <em>uno</em> e <em>cento</em>. Il nostro obiettivo è quello di indovinare il numero in meno di otto mosse: facendolo, costringeremo Bob a pagare il caffè (anche al Docente). Le regole dicono che, ad ogni mossa, diremo a Bob un numero, e lui ci dirà soltanto se quello che ha pensato è <em>inferiore</em> o <em>superiore</em>.</p>
+<p>Bob già gongola, pensando al caffè che gusterà a nostre spese: in realtà, però, non sa che noi abbiamo seguito l'insegnamento del Docente, e quindi siamo pronti a fargli sparire il sorriso dalle labbra.</p>
+<p>La nostra strategia è semplice: scartare, ad ogni mossa, il maggior numero possibile di <em>ipotesi false</em>, ovvero di numeri che <em>non</em> coincidono con quello pensato da Bob. Per farlo, partiamo con una mossa standard: diciamo a Bob che, a nostro avviso, il numero cui ha pensato è 50. Bob, ovviamente, sogghigna: non è quello, e si limita a dirci che è <em>superiore</em>. Quello che lui non afferra al volo è che ha appena ridotto di metà il nostro spazio delle ipotesi, che da cento possibilità è passato a cinquanta.</p>
+<p>La seconda mossa è altrettanto semplice: infatti, gli proponiamo la metà del nuovo intervallo, ovvero 75. Bob continua a godersela, dicendoci che è <em>inferiore</em>. Ma noi abbiamo ulteriormente delimitato il nostro range di possibilità.</p>
+<p>Il gioco prosegue come segue.</p>
+<div class="highlight"><pre><span></span><code>ROUND 3
+--------------------------------
+ALICE -&gt; 62 --- BOB -&gt; INFERIORE
+--------------------------------
+ROUND 4
+--------------------------------
+ALICE -&gt; 56 --- BOB -&gt; SUPERIORE
+--------------------------------
+ROUND 5
+--------------------------------
+ALICE -&gt; 59 --- BOB -&gt; SUPERIORE
+--------------------------------
+ROUND 6 (BOB IMPALLIDISCE)
+--------------------------------
+ALICE -&gt; 61 --- BOB -&gt; INFERIORE
+--------------------------------
+ROUND 7 (BOB TREMANTE...)
+--------------------------------
+ALICE -&gt; 60 --- BOB -&gt; PAGARE
+</code></pre></div>
+<p>In sole sette mosse, abbiamo trovato il valore immaginato da Bob e, mentre sorseggiamo il meritato caffè, ringraziamo il Docente di Informatica per averci illuminato.</p>
+<h2 id="fase-di-progettazione">Fase di progettazione.<a class="headerlink" href="#fase-di-progettazione" title="Permanent link">&para;</a></h2>
+<p>Potremmo voler implementare questo algoritmo in un linguaggio di programmazione, di modo da serializzare la vittoria di caffè con gli altri nostri amici Charlie, Dave, etc.</p>
+<p>Per farlo, è necessario per prima cosa scrivere l'algoritmo in <em>pseudocodice</em>, e poi definirne il flow chart.</p>
+<p>TODO: da qui</p>
+<p>Per questo gioco, posso usare poche variabili. Possiamo usare la variabile <em>min</em> per indicare l'ipotesi minima più ragionevole, e la variabile <em>max</em> per l'ipotesi massima ragionevole.</p>
+<p>Ecco un'implementazione step-by-step:</p>
+<ol>
+<li>sia min = 1 e max = n</li>
+<li>troviamo il valore medio tra min e max, arrotondato ad un intero</li>
+<li>se abbiamo trovato il numero, fermiamoci. altrimenti</li>
+<li>se l'ipotesi era troppo bassa, impostiamo min a n/2 + 1</li>
+<li>se l'ipotesi era troppo altra, impostiamo max a n/2 - 1</li>
+<li>torniamo al passo 2</li>
+</ol>
+<h2 id="todo-flow-chart">TODO: flow chart<a class="headerlink" href="#todo-flow-chart" title="Permanent link">&para;</a></h2>
+<h2 id="complessita-computazionale">Complessità computazionale<a class="headerlink" href="#complessita-computazionale" title="Permanent link">&para;</a></h2>
+<p>Sappiamo che la ricerca lineare di un array di <span class="arithmatex">\(n\)</span> elementi potrebbe dover consultare fino ad <span class="arithmatex">\(n\)</span> ipotesi.</p>
+<p>Vediamo come capire qual è il numero massimo di ipotesi che invece porta avanti la ricerca dicotomica.</p>
+<p>L'idea chiave è che quando la ricerca dicotomica fa un'ipotesi incorretta, la porzione dell'array che contiene le ipotesi ragionevoli è ridotta di metà. Se la porzione ragiovenole ha 32 elemnti, un'ipotesi non corretta la riduce di 16. Quindi, la ricerca dicotomica dimezza la diemnsione della porzioe ragionevole ad ogni ipotesi non corretta.</p>
+<p>Quindi, se iniziamo con un array lungo 8, la prima ipotesi non corretta riduce la dimensione delk problema a 4, quindi a 2, e quindi a 1. Una volta che la poszione ragionevole contiene solo unn elemento, non c'è bvisogno di ulteriori ipotesi; infatti, in questo caso, l'ipotesi può essere corretta o incorretta, e comunque abbiamo finito. POer cui con un array di otto elmenti sono necessari al più quattro valutazioni.</p>
+<p>Cosa accade con 16? Beh, è semplice verificare che serve un passaggio in più, e quindi sono necessarie cinque valutazioni.</p>
+<p>Questo ci porta ad un pattern. Ogni volta che raddoppiamo la dimensione dell'array, abbiamo bisogno di soltanto una nuova ipotesi. Supponendo di avere <span class="arithmatex">\(m\)</span> ipotesi per un array di lunghezza <span class="arithmatex">\(n\)</span>. Quindi, se la lunghezza dell'array raddoppia a $2 * n", il numero di ipotesi diventa <span class="arithmatex">\(m + 1\)</span>.</p>
+<p>Possiamo quinid esprimere il numero di ipotesi, nel caso peggiore, come "il numero di volte che dobbiamo ripetutatmente dimezzare, aprtendo da <span class="arithmatex">\(n\)</span>, fino ad arrivare ad 1, più 1". Questo significa che dobbiamo usare un log_2 (n). Questo significa che, se n come nel nostro caso è circa 64, avremo che il numero di ricerche è pari a 6. Per i 2.600.000 stelle, il numero di ipotesi è pari a 22.</p>
+<div class="admonition note">
+<p class="admonition-title">Nota</p>
+<p>I numeri che abbiamo indicato non sono potenze di 2. in questo caso, valuteremo la potenza di deu immediatamente inferiroe, e vi aggiungeremo 1. Ecco perché per gli studenti abbiamo 7, mentre per le stelle abbiamo 22.</p>
+</div>
+<p>Il vantaggio di una complessità logaritmica è che cresce molto lentamente, essendo l'inverso della funzione esponenziale, che invece cresce molto rapidamente.</p>
+<h2 id="152-ricerca-in-ampiezza">15.2 - Ricerca in ampiezza<a class="headerlink" href="#152-ricerca-in-ampiezza" title="Permanent link">&para;</a></h2>
+<h2 id="descrizione-dellalgoritmo_1">Descrizione dell'algoritmo<a class="headerlink" href="#descrizione-dellalgoritmo_1" title="Permanent link">&para;</a></h2>
+<p>La <strong>ricerca in ampiezza</strong>, o, in inglese, <strong>breath-first search</strong> (<strong>BFS</strong>), è un algoritmo di ricerca che lavora su grafi e, per estensione, alberi.</p>
+<p>Le sue applicazioni sono svariate: può ad esempio, trovare i collegamenti tra due nodi ad una distanza pari a <span class="arithmatex">\(k\)</span>, oppure individuare i nodi adiacenti all'interno di una rete, o, ancora, trovare il cammino minimo tra due nodi.</p>
+<p>Per far questo, la BFS opera "attraversando" tutti i nodi presenti ad una data distanza dal nodo sorgente. Una volta esplorati questi nodi, la distanza viene incrementata, ed i nodi a distanza immediatamente maggiore sono esplorati. In tal senso, esistono diverse possibili implementazioni della BFS; quella che esploreremo prevede l'utilizzo di una <em>coda</em>.</p>
+<p>Per semplicità, comunque, partiremo vedendo l'applicazione della BFS sugli alberi.</p>
+<h3 id="bfs-sugli-alberi">BFS sugli alberi<a class="headerlink" href="#bfs-sugli-alberi" title="Permanent link">&para;</a></h3>
+<p>Visualizzare l'applicazione della BFS su un albero è molto semplice. Supponiamo di dover considerare il seguente albero.</p>
+<p><img alt="starting_tree" src="../../assets/images/05_algoritmi/06_bfs/starting_tree.png# images" /></p>
+<p>La BFS opera considerando due parametri:</p>
+<ol>
+<li>il nodo attualmente ispezionato;</li>
+<li>i <em>figli</em> di questo nodo, ovvero quelli adiacenti al nodo attualmente attraversato.</li>
+</ol>
+<p>In particolare, alla prima iterazione il nodo attualmente ispezionato è proprio i</p>
+<ol>
+<li>il nodo <em>radice</em>, ovvero quello da cui parte la ricerca;</li>
+<li>la <em>distanza</em> dal nodo radice, ovvero il numero di archi che separano un dato nodo dal nodo radice;</li>
+<li>il <em>predecessore</em> del nodo</li>
+</ol>
+<p>Il primo nodo che dovremo considerare è quello relativo al nodo radice, ovvero il nodo <span class="arithmatex">\(1\)</span>.</p>
+<p>Il primo valore che andremo a considerare è proprio quello relativo al nodo radice, ovvero il nodo <span class="arithmatex">\(1\)</span>.</p>
+<p>Il primo valore è la <em>distanza</em>, che ci dà il numeor minimo di archi in un qualsiasi percorso presente dal vertice sorgente al vertice <span class="arithmatex">\(v\)</span>.</p>
+<p>Il seocndo è il vertice <em>predecessore</em> di <span class="arithmatex">\(v\)</span> lunco il percorso più breve dal vertice sorgente. Il predecessore del sorgente, ovviamente, non c'è.</p>
+<p>Se non vi è alcun path dal vertice sorgente al vertice <span class="arithmatex">\(v\)</span>, la distnaza di <span class="arithmatex">\(v\)</span> è infinita ed il suo predecessore non esiste.</p>
+<p>TODO: esempio vertice isolato</p>
+<p>Nella BFS, impostiamo inizialmente la distanza ed il predecessore di ogni vertice al valore null. Iniziamo a cercare dal nodo sorgente, e vi assegniamo una distanza pari a 0. Quindi, visitiamo tutti i vicini del nodo sorgente, e vi assegnamo una distanza di 1, impostando il predecessore come sorgente. Quindi, visitiamo tutti i vicini dei vertici la cui distanza è 1 e che nono sono stati viistati prima, e diamo a ciascuno di quesi vertici una distanza di 2, ed impostiamo il loro predecessore come l vertice a partire dal quale abbiamo fatto la visita. Procediamo iterativamente con questa procedura fino a che tutti i veritci raggiungibili dal nodo radice non sono stati visitati, sempre visitando tutti i vertici a distanza <span class="arithmatex">\(k\)</span> dalla sorgente prima di visitare un qualsiasi vertice a distanza di <span class="arithmatex">\(k + 1\)</span>.</p>
+<p>TODO: ESEMPIO SU ALBERO</p>
+<p>Una volta completato l'esempio, possono sorgere un paio di domande. la prima è come determianre se un vertice è già stato visitato. Questo è in realtà semplice: la distanza di un vertice è nulla prima che è stata visitata, nel qual momento assume un valore numerico. Quindi, quando siesaminano i vicini di un vertice, visitiamo solo quelli la cui distanza è auttlamente a null.</p>
+<p>L'altra domanda è come tener traccia di quali vertici sono già stati visitati ma che devono essere ancora analizzati. Si usa in questo caso una coda.</p>
+<p>In particoalre, quando visitiamo un vertice, lo mettiamo in una coda. All'inizio, mettiamo nella coda il vertice sorgente perché è sempre il primo che visiteremo. Per decidere quale vertice vgisitare in seguito, scegliamo il vertice che è stato maggiormente in coda, e lo rimuoviamo dalla coda - in altre parole, usiamo il vertice che viene restituito dall'operazione di dequeue().</p>
+<p>TODO: esempio su albero</p>
+<p>Notiamo che, in ogni momento, la coda o contiene tutti i vertici alla stessa distanza, o contiene i vertici con distanza <span class="arithmatex">\(k\)</span> seguiti dai vertici con distanza <span class="arithmatex">\(k + 1\)</span>. In questo modo, ci assicuriamo di visitare tutti i vertici a distanza <span class="arithmatex">\(k\)</span> prima di visitare un qualsiasi vertice a distanza <span class="arithmatex">\(k + 1\)</span>.</p>
+<h2 id="analisi-della-bfs">Analisi della BFS<a class="headerlink" href="#analisi-della-bfs" title="Permanent link">&para;</a></h2>
+<p>Quanto impiega la BFS per un grafo con un insieme di vertici <span class="arithmatex">\(V\)</span> ed un insieme di archi <span class="arithmatex">\(E\)</span>? La risposta è un tempo pari a <span class="arithmatex">\(O(V + E)\)</span>.</p>
+<p>Vediamo il perché. Ipotizziamo che <span class="arithmatex">\(|E| \geq |V|\)</span>, che è il caso per la maggior parte dei grafi, specialmente quelli per i quali eseguiamo la BFS. Quindi:</p>
+<div class="arithmatex">\[
+|V| + |E| \leq |E| + |E| = 2 \times |E|
+\]</div>
+<p>Dato che ignoriamo i fattori costanti nella notazione asintotica, vediamo che quando <span class="arithmatex">\(|E| \geq |V|\)</span>, allora <span class="arithmatex">\(O(V + E)\)</span> è in pratica <span class="arithmatex">\(O(E)\)</span>. Se, però, abbiamo <span class="arithmatex">\(|E| &lt; |V|\)</span>, allora:</p>
+<div class="arithmatex">\[
+|V| + |E| \leq |V| + |V| = 2 \times |V|
+\]</div>
+<p>per cui <span class="arithmatex">\(O(V + E)\)</span> significa in realtà <span class="arithmatex">\(O(V)\)</span>. Possiamo mettere i casi insieme dicendo che <span class="arithmatex">\(O(V + E)\)</span> significa <span class="arithmatex">\(O(max(V, E))\)</span>.</p>
+<p>In generale, se abbiamo dei parametri <span class="arithmatex">\(x\)</span> ed <span class="arithmatex">\(y\)</span>, <span class="arithmatex">\(O(x + y)\)</span> significa in realtà <span class="arithmatex">\(O(max(x, y))\)</span>.</p>
+<p>Perché la BFS quindi viene eseguita in <span class="arithmatex">\(O(V+E)\)</span>? E' necessario <span class="arithmatex">\(O(V)\)</span> per inizializzare la distanza ed i predecessori per ciascun vertice. Ognif vertice è visitato almeno una volta, perchè soltanto la prima volta che viene raggiunto la sua distanza è pari a <code>null</code>, per cui ogni vertice è messo nella coda almeno una volta. Dal momento in cui esaminiamo gli archi indicednti s un vertice solo quando lo usiamo come putno di partenza, ogni edge è esaminato almeno due volte, una per ognuno dei veritci su cui incide. Di conseguenza, la BFS spende <span class="arithmatex">\(O(V+E)\)</span> tempo visitando i vertici.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Angelo Cardellicchio - MIT License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/anhelus" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:angelo.cardellicchio@poliba.it" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.5.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../../..", "features": [], "search": "../../../../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../../../../assets/javascripts/bundle.c18c5fb9.min.js"></script>
+      
+        <script src="../../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
