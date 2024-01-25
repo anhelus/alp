@@ -4,6 +4,8 @@ nav:
   - Home del corso: index.md
   - Tracce di esame svolte:
     - Traccia del 17 gennaio 2024: material/exams/17_01_2024.md
+  - Algoritmi di ordinamento:
+    - Selection sort: material/xx_sorting/01_selection_sort.md
   # - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
   # - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
   # - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
