@@ -1,6 +1,21 @@
 # 4 - Algebra booleana
 
-## 4.1 - I circuiti elettronici digitali.
+TODO: INTRODUZIONE
+
+## 4.1 - I circuiti elettronici digitali
+
+Prima di introdurre l'algebra di Boole, è necessario fare una doverosa premessa riguardante i *circuiti elettronici digitali*, ovvero gli elementi alla base dei dispositivi elettronici che utilizziamo al giorno d'oggi, dalle lavatrici fino ai super-computer utilizzati per elaborare i dati provenienti dal James Webb Telescope.
+
+Se volessimo analizzarli ad "altissimo livello", potremmo vedre i circuiti digitali come un insieme più o meno complesso di *interruttori*, proprio come quelli presenti in un normalissimo impianto elettrico.
+
+Per capirci meglio, pensiamo agli interrutori presenti nelle nostre case: questi sono caratterizzati esclusivamente da due stati di funzionamento, ovvero *aperto* e *chiuso*. Nello stato di funzionamento *aperto*, il circuito viene "interrotto", il che rende impossibile il passaggio della corrente (e, di conseguenza, l'illuminazione delle lampadine nella stanza!). In questi casi, si dice che il circuito ha *resistenza infinita*, e che quindi la *differenza di potenziale* ai capi dell'interruttore è massima. Nello stato di funzionamento *chiuso*, invece, la corrente scorre normalmente nel circuito, illuminando le lampadine presenti nella stanza, e minimizzando la differenza di potenziale ai capi dell'interruttore.
+
+Questi due stati di funzionamento determinano il passaggio della corrente attraverso una serie più o meno complessa di configurazioni, che possono essere interpretate e manipolate dall'essere umano per veicolare informazione. Per esempio, immaginiamo due interruttori, presenti in due stanze adiacenti, ciascuna con un qualche tipo di apertura (sia porte, sia finestre) dalla quale è possibile dedurre se la luce sia accesa o meno. Se, per esempio, notassimo che la luce è accesa in entrambe le stanze, potremmo dedurre che sono presenti almeno due persone, una per stanza; ancora, se soltanto una delle due luci fosse accesa, potremmo dedurre la presenza di almeno una persona in una stanza, e zero nell'altra, e via dicendo.
+
+In linea generale, quindi, non siamo in grado di dare una valutazione prettamente *quantitativa* dello stato delle due stanze, ma possiamo darne un'interpretazione *booleana*. In altre parole, non possiamo dire *quante* persone vi sono in una stanza, ma soltanto *se vi sono persone* in una stanza.
+
+
+
 
 I circuiti elettronici digitali sono costruiti con elementi caratterizzati soltanto da due possibili stati di funzionamento, ovvero *alto* e *basso*.
 

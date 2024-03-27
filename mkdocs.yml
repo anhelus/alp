@@ -1,11 +1,15 @@
-site_name: Informatica per l'Ingegneria (classe N)
+site_name: Corso di Informatica
 
 nav:
-  - Home del corso: index.md
-  - Tracce di esame svolte:
-    - Traccia del 17 gennaio 2024: material/exams/17_01_24/exam.md
+  - Home: index.md
+  # - Tracce di esame svolte:
+  #   - Traccia del 17 gennaio 2024: material/exams/17_01_24/exam.md
+  #   - Traccia del 07 febbraio 2024: material/exams/07_02_24/exam.md
+  - 1. Introduzione:
+    - 1.1. L'Informatica: material/01_intro/01_informatics/lecture.md
+    - 1.2. L'Informazione: material/01_intro/02_information/lecture.md
   - Algoritmi di ordinamento:
-    - Selection sort: material/xx_sorting/01_selection_sort.md
+    - Selection sort: material/new/13_algorithms/01_selection_sort.md
   # - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
   # - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
   # - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
