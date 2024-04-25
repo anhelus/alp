@@ -27,7 +27,7 @@ Di seguito riportiamo le risposte ai quesiti posti dall'esercizio 3.
     10. ...si basa sullo schema di flusso del ciclo.
 
 1.  :man_raising_hand: I simboli sono due, ovvero lo `0` e l'`1`.
-2.  :man_raising_hand: Nei sistemi di numerazione addizionali, come ad esempio l'alfabeto romano, il valore di ciascun simbolo è fisso, a differenza dei sistemi posizionali.
+2.  :man_raising_hand: Nei sistemi di numerazione addizionali, come ad esempio quello romano, il valore di ciascun simbolo è fisso, a differenza dei sistemi posizionali.
 3.  :man_raising_hand: La legge dell'idempotenza indica che `k + k = k x k = k`, e discende direttamente dalla definizione algebrica generale.
 4.  :man_raising_hand: Ricordiamo che i diagrammi a blocchi rappresentano la struttura dell'algoritmo, e non sono in alcun modo vincolati al linguaggio di programmazione usato.
 5.  :man_raising_hand: La programmazione strutturata si basa sui tre tipi di struttura identificati dal teorema di Bohm-Jacopini, e permette ovviamente l'uso di diagrammi strutturati.
