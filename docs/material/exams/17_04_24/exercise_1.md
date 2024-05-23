@@ -1,24 +1,24 @@
 # Soluzione all'esercizio 1
 
-## Parte 1: `caricaVettore()`
+## Parte 1: `caricaVoti()`
 
-La funzione `caricaVettore()` è mostrata nella seguente figura. Da notare come la modalità di caricamento (`modCar`) debba essere specificata tra i parametri formali. Inoltre, dato che non viene specificato altrimenti, si utilizza per semplicità la funzione composta `round(random()*10)` per generare un numero casuale compreso tra `0` ed `1` (mediante `round()`), moltiplicarlo per `10`, ed arrotondarlo.
+In figura 1 è mostrata la funzione `caricaVoti()`. Da notare che, rispetto all'implementazione che vedremo in MATLAB, la funzione non prevede il controllo del valore intero, ma "forza" lo stesso mediante una chiamata alla funzione `dtoi()` che, ricorderemo, trasforma un `double` (tipo accettato di default da Algobuild) in un `int`.
 
 <figure markdown>
-  ![carica](./images/caricaVettore.png)
-  <figcaption>Figura 1 - La funzione caricaVettore()</figcaption>
+  ![carica](./images/caricaVoti.png)
+  <figcaption>Figura 1 - La funzione caricaVoti()</figcaption>
 </figure>
 
-## Parte 2: `ordinaVettore()`
+## Parte 2: `ordinaVoti()`
 
-L'ordinamento del vettore avviene per selezione (*selection sort*). Il funzionamento dell'algoritmo è standard.
+L'ordinamento del vettore avviene usando un algoritmo di bubble sort standard, come quello mostrato in figura 2.
 
 <figure markdown>
   ![ordina](./images/ordinaVettore.png)
   <figcaption>Figura 1 - La funzione ordinaVettore()</figcaption>
 </figure>
 
-## Parte 3: `calcolaStatistiche()`
+## Parte 3: `calcolaMedia()`
 
 La procedura `calcolaStatistiche()` sfrutta l'ordinamento crescente del vettore. Da notare che, dato che `N` è rimasto `double` (formato di default di Algobuild), utilizziamo la funzione `dtoi` per creare una variabile temporanea `len` di tipo intero, a cui sottraiamo il valore `1` (sempre intero), e che utilizziamo per recuperare il massimo del vettore.
 
@@ -27,7 +27,16 @@ La procedura `calcolaStatistiche()` sfrutta l'ordinamento crescente del vettore.
   <figcaption>Figura 1 - La procedura calcolaStatistiche()</figcaption>
 </figure>
 
-## Parte 4: `stampa()`
+## Parte 3: `calcolaVotoLaurea()`
+
+La procedura `calcolaStatistiche()` sfrutta l'ordinamento crescente del vettore. Da notare che, dato che `N` è rimasto `double` (formato di default di Algobuild), utilizziamo la funzione `dtoi` per creare una variabile temporanea `len` di tipo intero, a cui sottraiamo il valore `1` (sempre intero), e che utilizziamo per recuperare il massimo del vettore.
+
+<figure markdown>
+  ![calcola](./images/calcolaStatistiche.png)
+  <figcaption>Figura 1 - La procedura calcolaStatistiche()</figcaption>
+</figure>
+
+## Parte 5: `stampaRisultati()`
 
 Nella procedura `stampa` creiamo una singola stringa che man mano popolata con i valori del vettore `V`, opportunamente convertiti in stringhe mediante la funzione `dtos()`, e stampati a schermo al termine dell'iterazione.
 
