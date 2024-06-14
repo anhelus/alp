@@ -5,10 +5,10 @@ nav:
   - Tracce di esame svolte:
     - Traccia del 17 gennaio 2024: material/exams/17_01_24/exam.md
     # - Traccia del 07 febbraio 2024: material/exams/07_02_24/exam.md
-    - Traccia del 17 aprile 2024: material/exams/17_04_24/exam.md
+    # - Traccia del 17 aprile 2024: material/exams/17_04_24/exam.md
   - 1. Introduzione:
-    - 1.1. L'Informatica: material/01_intro/01_informatics/lecture.md
-    - 1.2. L'Informazione: material/01_intro/02_information/lecture.md
+    - 1.1 Introduzione all'informatica: material/01_intro/01_intro_inf.md
+    - 1.2 Rappresentazione dei dati: material/01_intro/02_data_repr.md 
   - Algoritmi di ordinamento:
     - Selection sort: material/new/13_algorithms/01_selection_sort.md
   # - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
