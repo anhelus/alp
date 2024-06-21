@@ -11,6 +11,7 @@ nav:
     - 1.2 Rappresentazione dei dati: material/01_intro/02_data_repr.md
     - 1.3 Codifica digitale ed analogica: material/01_intro/03_dig_an.md
     - 1.4 Sistemi di numerazione: material/01_intro/04_num_sis.md
+    - 1.5 Sistema binario: material/01_intro/05_sis_bin.md
   - Algoritmi di ordinamento:
     - Selection sort: material/new/13_algorithms/01_selection_sort.md
   # - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
