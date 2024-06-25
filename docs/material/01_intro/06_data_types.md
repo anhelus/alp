@@ -1,29 +1,24 @@
-# 4 - I tipi di dato
+# 6 - Dimensione dei dati
 
-Nel [capitolo precedente](../02_algorithms/lecture.md) abbiamo accennato al fatto che i calcolatori hanno a disposizione una determinata *parola*, la cui dimensione dipende dall'architettura, che determina il numero massimo di bit che possono essere rappresentati nei dati gestiti in fase di elaborazione. Questo, ovviamente, comporta un limite: vediamone in breve le implicazioni, approfittando per introdurre i diversi *tipi* di dato.
+Nella [lezione precedente](05_sis_bin.md) abbiamo accennato al fatto che i calcolatori hanno a disposizione una word la cui dimensione dipende dall'architettura del processore; ciò implica che ogni tipo di dato (cui abbiamo [già accennato](02_data_repr.md)) avrà una dimensione prefissata. Scendiamo più nel dettaglio.
 
-## 4.1 - Dati numerici
+## Dati numerici
 
-Il primo tipo di dati che vediamo è quello *numerico*, che comprende, in linea generale, i numeri interi e reali.
+### Numeri interi
 
-!!!note "I numeri complessi"
-    I più attenti potrebbero chiedersi perché i numeri complessi non sono stati menzionati in precedenza. Infatti, i numeri complessi non sono contemplati come dati *primitivi* in numerosi linguaggi di programmazione, anche se, come vedremo, Python prevede un'apposita struttura dedicata allo scopo.
-
-### 4.1.1 - Numeri interi
-
-Il limite imposto alla lunghezza della parola comporta che il valore numerico massimo trattabile da un calcolatore sia finito: ad esempio, nel caso di un'architettura con parola a 64 bit (come la maggior parte dei processori odierni), sarà possibile rappresentare "soltanto" $2^{64}$ possibili valori.
+Partiamo dai dati di tipo numerico intero. In questo caso, il limite legato alla dimensione della word impone che il massimo valore numerico trattabile da un calcolatore sia pari a $2^N$, con $N$ dimensione della parola. Nella pratica, se abbiamo una parola a $32$ bit, il valore massimo gestibile dal processore sarà pari a $2^{32}$ (o, considerando lo $0$, $2^{32}-1$). Nella maggior parte dei processori odierni, la parola è a $64$ bit, per cui il valore massimo gestibile dal processore sarà di $2^{64}$.
 
 !!!note "Nota"
-    Ricordiamo che $2^{64} = 18.446.743.073.709.551.616$. Il limite appare quindi abbastanza permissivo.
+    Ricordiamo che $2^{64} = 18.446.743.073.709.551.616$. Il limite appare quindi abbastanza permissivo. Tuttavia, se sommassimo $1$ a $2^{64}$, il valore restituito sarebbe pari a zero o, più probabilmente, il programma andrebbe in errore.
 
-Cosa accade, quindi, se dovessimo raggiungere $2^{64}$? Molto semplice: il conteggio ricomincia da zero (o il programma va in errore).
+##### Interi e segno
 
-Altrettanto importante è il notare come i numeri possano essere dotati di segno. Questo, ovviamente, va ad influenzare gli *estremi* dell'intervallo dei valori rappresentabili, ma non la *cardinalità* dello stesso. Infatti, se si considera il segno anteposto al numero, potremo trattare valori che vanno nell'intervallo da $-2^{63}$ a $2^{63}$.
+Ricordiamo come i numeri interi siano dotati di segno: avremo quindi sia numeri negativi, sia numeri positivi. Ciò non andrà a modificare il numero di valori rappresentabili, che saranno sempre $2^{64}$, quanto piuttosto il *range* dei valori rappresentati, che sarà egualmente suddiviso tra valori negativi e positivi, e quindi centrato sullo $0$. Avremo quindi $\frac{2^{64}}{2}$ valori positivi, e $\frac{2^{64}}{2}$ valori negativi; in altre parole, potremo rappresentare i numeri tra $-2^{63}$ a $2^{63}$.
 
-Facciamo un breve esempio pratico, con una lunghezza della parola di otto bit. In questo caso:
+Facciamo un esempio più facilmente digeribile, considerando come word una parola ad otto bit. In questo caso:
 
-- considerando solo lo zero ed i valori strettamente positivi, sarà possibile rappresentare tutti i numeri interi compresi tra $0$ e $255 = 2^{8-1}$;
-- considerando anche i valori negativi, sarà possibile rappresentare tutti i numeri interi compresi tra $-128 = -2^{8-1}$ e $127 = -2^{8-1}-1$.
+- considerando solo lo zero ed i valori strettamente positivi, sarà possibile rappresentare tutti i numeri interi compresi tra $0$ e $255 = 2^{8}-1$;
+- considerando anche i valori negativi, sarà possibile rappresentare tutti i numeri interi compresi tra $-128 = -2^{8-1}$ e $127 = -2^{8-1}-1$. Ovviamente, anche in questo caso consideriamo lo zero.
 
 Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più comune, differenziati a seconda della loro lunghezza.
 
@@ -34,79 +29,66 @@ Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più c
 | `byte`       | 8 bit     | -128                     | 127                       |
 | `ushort`     | 16 bit    | 0                        | $2^{16} - 1$ = 65535      |
 | `short`      | 16 bit    | -32768                   | 32767                     |
-| `uint`       | 32 bit    | 0                        | $2^{32} - 1$ = 4294967295   |
-| `int`        | 32 bit    | $-2^{31}$ = 2147483648     | $2^{31} - 1$ = 2147483647   |
-| `ulong`      | 64 bit    | 0                        | $2^{64} - 1$                |
-| `long`       | 64 bit    | $-2^{63}$                  | $2^{63} - 1$                |
-
-!!!note "Il `bit`"
-    Il bit è il tipo di dato numerico più "limitato" rappresentabile, e viene spesso utilizzato come valore booleano.
+| `uint`       | 32 bit    | 0                        | $2^{32} - 1$ = 4294967295 |
+| `int`        | 32 bit    | $-2^{31}$ = 2147483648   | $2^{31} - 1$ = 2147483647 |
+| `ulong`      | 64 bit    | 0                        | $2^{64} - 1$              |
+| `long`       | 64 bit    | $-2^{63}$                | $2^{63} - 1$              |
 
 !!!note "Il simbolo `u`"
     I più attenti avranno notato la presenza del simbolo `u` nelle notazioni che includono solo i valori positivi. Intuitivamente, la `u` sta per *unsigned*, ovvero "senza segno".
 
-!!!note "Tipi e lunghezza"
-    I tipi riportati nella tabella precedente, assieme alla loro lunghezza, sono quelli "standard", cui aderiscono la maggior parte dei linguaggi di programmazione (ma *non tutti*).
+### Numeri reali
 
-### 4.1.2 Rappresentazione di numeri reali
+Così come i numeri interi, anche i numeri reali devono essere rappresentati mediante un'approssimazione finita che tenga conto della dimensione della word. Dato che i numeri reali sono composti da una parte intera e da una frazionaria, dovremo trovare una maniera per rappresentare entrambe utilizzando i bit messi a disposizione dalla word. Per farlo, avremo due possibili rappresentazioni, che vediamo di seguito.
 
-Così come per l'insieme dei numeri naturali, anche quello dei numeri reali $\mathbb{R}$ deve essere rappresentato mediante un'approssimazione finita. Ricordiamo che ogni numero reale è composto da una parte intera ed una *razionale*; di conseguenza, considerato che il numero di bit per la rappresentazione è sempre lo stesso, occorre trovare un modo per conciliare la presenza di queste due parti.
+##### Rappresentazione a virgola fissa
 
-In tal senso, esistono due possibili rappresentazioni che è possibile utilizzare.
+Nella rappresentazione a virgola fissa (in inglese *fixed point*) viene usato un numero prefissato di bit per la parte intera, mentre i rimanenti sono usati per la parte decimale. Quindi, supponendo di usare $32$ bit per la parte intera, ed altrettanti per la parte decimale, il numero più grande che sarà possibile rappresentare avrà $2^{32}-1$, ed altrettanto come parte frazionaria.
 
-Nella rappresentazione **a virgola fissa**, o **fixed point**, si usa un numero fisso di bit per la parte intera del numero da rappresentare, con i rimanenti usati per la parte decimale. Più interessante è invece la rappresentazione **a virgola mobile**, o **floating point**, basata sui concetti di *mantissa* (ovvero, parte decimale) ed *esponente*.
+Questa rappresentazione, seppur semplice da utilizzare, ha un grosso problema legato all'ottimizzazione delle risorse. Immaginiamo ad esempio di avere una word ad $8$ bit, equalmente ripartiti tra parte intera e frazionaria, e voler rappresentare il numero $1.62515$: per rappresentare la parte intera avremo bisogno soltanto di un bit, mentre per la parte frazionaria dovremmo usare più dei quattro bit riservati, per cui avremo necessità di troncare il risultato, con una rappresentazione quindi incompleta.
 
-Formalmente, definiamo la mantissa di un numero reale $n$ è pari al valore del numero diminuito della sua parte intera $n_{int}$:
+##### Rappresentazione a virgola mobile
 
-$$
-M = n - n_{int}
-$$
-
-E' facile verificare che la mantissa $M$ è sempre compresa tra $-1$ ed $1$.
-
-La rappresentazione in virgola mobile di $n$ è definita quindi come:
+La rappresentazione a virgola mobile (in inglese *floating point*) si basa sui concetti di *mantissa*, o *significando*, *base*, ed *esponente*. Formalmente, un numero $n$ può essere espresso come:
 
 $$
-n = M * b^e
+n = M \cdot b^e
 $$
 
-con $b$ base scelta, ed $e$ esponente.
-
-Ad esempio, per rappresentare il numero $5.2$ in virgola mobile, potremo scrivere:
+In particolare, la mantissa $M$ sarà compresa tra $0$ ed $1$, e sarà quel numero che, moltiplicato per la base $b$ elevata all'esponente $e$, darà di nuovo $n$. Ad esempio, volendo rappresentare il valore $n = 5.2$ in virgola mobile, scriveremo:
 
 $$
-n = 0.52 * 10^1
+n = 0.52 \cdot 10^1
 $$
 
-da cui $M = 0.52$ ed $e = 1$. Questa notazione, detta *normalizzata*, prevede che la parte razionale sia sempre minore di uno, mentre quella intera sia pari a zero. Equivalentemente, potremmo scrivere:
+Questa notazione, in cui la parte frazionaria è compresa tra $0$ ed $1$, mentre quella intera è pari a $0$, è detta *normalizzata*. 
+
+!!!note "Notazioni equivalenti
+    Equivalentemente, potremmo scrivere $n = 0.052 * 10^2$, oppure $n = 52 * 10^{-1}$. Tuttavia, è la notazione normalizzata quella ad essere usata per convenzione.
+
+La rappresentazione in virgola mobile ha il vantaggio di popter rappresentare un insieme di valori molto più ampio rispetto a quello rappresentabile in virgola fissa. Immaginiamo, ad esempio, di voler rappresentare il numero $100000$, avendo però a disposizione soltanto $5$ simboli. Con una rappresentazione a virgola fissa non potremmo farlo; con una rappresentazione a virgola mobile, invece, potremo usare l'equivalenza:
 
 $$
-n = 0.052 * 10^2
+n = 0.1 \cdot 10^5
 $$
 
-così come:
+Dato che dovremo memorizzare esclusivamente la mantissa e l'esponente, avremo bisogno soltanto di due simboli, rispettando i vincoli imposti.
 
-$$
-n = 52 * 10^{-1}
-$$
+!!!warning "Mantissa e base decimale"
+    In questo esempio, abbiamo utilizzato la base decimale per semplicità. Tuttavia, gli stessi concetti si estendono all'utilizzo della base binaria.
 
-Tuttavia, è la notazione normalizzata ad essere usata per convenzione.
+## Caratteri
 
-Il vantaggio legato all'utilizzo della rappresentazione in virgola mobile sta nel fatto che è possibile rappresentare un range di numeri molto più ampio rispetto a quello a virgola fissa. Ad esempio, immaginiamo di voler utilizzare quattro simboli (*notate che non stiamo utilizzando la rappresentazione binaria, quindi non parliamo di bit*) per rappresentare il numero $63500$. Se usassimo una rappresentazione a virgola fissa, così come una intera, *non potremmo in alcun modo rappresentarlo*; invece, con la rappresentazione a virgola mobile, avremmo:
+Anche la rappresentazione dei caratteri che troviamo sulle nostre tastiere deve avvenire in binario e, di conseguenza, è soggetta alle stesse limitazioni che abbiamo visto sussistere nel caso dei numeri.
 
-$$
-M = 635 \\
-e = 5 \\
-n = 0.635 * 10^5
-$$
+Alcuni potrebbero pensare, di primo acchitto, che questo non sia un problema: nell'alfabeto latino, ad esempio, abbiamo al più 26 caratteri, per cui basterebbero $5$ bit per rappresentarli tutti. Giusto? Beh, non proprio.
 
-e, dovendo memorizzare esclusivamente la mantissa (che richiede tre simboli) e l'esponente (che ne richiede uno), riusciremmo nel nostro intento.
+Quando si parla di carattere, si parla di *qualsiasi simbolo che è possibile rappresentare sul nostro calcolatore*, inclusi anche, ad esempio, la chiocciola, o l'underscore, così come caratteri dell'alfabeto greco o cirillico.
 
-## 4.2 - Caratteri
+Ciò implica la presenza di un'*enorme* varietà di caratteri, che ha portato alla necessità di una rappresentazione comprensiva ed uniforme, richiedendo quindi molti più bit dei $5$ inizialmente preventivati. Inoltre, è necessario usare una corrispondenza biunivoca tra simbolo e numero intero, definita mediante opportune tabelle, e che segue standard come l'ASCII e l'UNICODE.
 
-Anche i caratteri che troviamo normalmente sulle nostre tastiere devono essere rappresentati in binario. In generale, il concetto di *carattere* deve essere assimilato a quello di *simbolo*, in quanto i calcolatori devono poter rappresentare simboli "speciali" (ad esempio, la chiocciola @ o l'underscore _), così come caratteri in altri tipi di alfabeti (ad esempio, il cirillico o il mandarino).
+## Conclusioni
 
-L'enorme varietà di caratteri ha portato alla necessità di uniformarne la rappresentazione, creando una corrispondenza biunivoca tra simboli e numeri interi. Questa corrispondenza è stata codificata in standard ben precisi, tra i quali vale la pena citare l'ASCII e l'UNICODE. Quello che però questo comporta dal punto di vista pratico è che, così come i dati di tipo numerico, anche il numero totale di caratteri rappresentabili sarà limitato dalla lunghezza della parola utilizzata dall'architettura del calcolatore.
+Abbiamo visto come siano rappresentati in memoria alcuni tipi di dati, e come la dimensione occupata da questi cambi con le caratteristiche della parola usata pepr rappresentarli.
 
-!!! note "Curiosità"
-    Complessivamente, lo standard UNICODE è in grado di rappresentare più di diecimila caratteri; essendo però codificato a sedici bit, vi è spazio ancora per un bel po' di lingue morte.
+A questo punto, ci manca un ultimo tassello per la nostra panoramica sui concetti alla base dell'informatica: infatti, dovremo vedere come le variabili binarie si combinano tra loro sfruttando i concetti dell'[algebra booleana](07_boole.md).
