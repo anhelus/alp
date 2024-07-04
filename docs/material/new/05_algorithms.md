@@ -1,1 +1,0 @@
-# 5 - Introduzione agli algoritmi
