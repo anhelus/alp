@@ -1,4 +1,6 @@
-# 5 - I diagrammi di flusso
+# 8 - I diagrammi di flusso
+
+Abbiamo visto come 
 
 In una delle [lezioni precedenti](../02_algorithms/lecture.md), abbiamo visto come un algoritmo può essere espresso come una sequenza arbitrariamente complessa di operazioni atomiche.
 

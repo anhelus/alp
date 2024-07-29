@@ -1,4 +1,4 @@
-# 4 - Algebra booleana
+# 7.1 - Algebra booleana
 
 [Abbiamo già detto](../01_intro_inf.md) che gli elaboratori si basano sui *circuiti elettronici digitali* che, ad *alto livello*, possono essere visti come un insieme più o meno complesso di *interruttori*, proprio come quelli che possiamo trovare in un normalissimo impianto elettrico.
 
@@ -20,67 +20,14 @@ Se ponessimo quindi la domanda *c'è qualcuno in casa*, potremmo rispondere in m
 
 A questo punto è lecito farsi una domanda: esiste un modo *formale* per determinare se è presente una persona in casa a partire dalle precedenti considerazioni partendo da una serie di regole ben definite? Prevedibilmente, la risposta a questa domanda è affermativa, ed è definita grazie alle regole introdotte dall'*algebra di Boole*.
 
+Formalmente, l'algebra di Boole venne introdotta nel XIX secolo da Boole allo scopo di *scomporre* ed *analizzare* in maniera algebrica problemi di [logica proposizionale](https://it.wikipedia.org/wiki/Logica_proposizionale).
 
+Questo tipo di logica si basa sulla presenza delle cosiddette *proposizioni logiche*, ovvero degli "enunciati" che possono assumere valore *vero* o *falso*. Per fare un esempio "banale", proviamo ad osservare la seguente figura.
 
-## 4.2 - L'algebra di Boole
+![ball_box](./images/ball_box.png)
 
-L'algebra di Boole venne introdotta nel XIX secolo da Boole per analizzare algebricamente problemi di calcolo proposizionale, al fine di studiare le leggi del pensiero.
+Guardando l'immagine precedente, è facile dire che la proposizione *la palla è dentro la scatola* assume valore vero, così come lo assumono proposizioni del tipo *la palla è verde* e *la scatola è blu*. Ciò non vale per altre proposizioni, come ad esempio *la scatola è dentro la palla* oppure *la scatola è rossa*.
 
-L'algebra di Boole è fondata su un insieme di teoremi e regole che goveranon le operazioni logiche e che ne consentono una rappresentazione matematica.
+Da notare come ognuna di queste proposizioni sia *atomica*, o *semplice*, nel senso che viene espresso esclusivamente un predicato: ad esempio, il rapporto intercorrente tra palla e scatola, oppure ancora il colore di uno dei due oggetti. Un quadro completo della situazione richiederebbe l'uso di predicati *composti* da più proposizioni atomiche: ad esempio, *la palla è dentro la scatola* E *la palla è verde* E *la scatola è blu*.
 
-Sull'algebra di Boole si basa l'elettronica digitale ed il suo sviluppo.
-
-L'algebra di Boole contempla due costanti 0 e 1, rispettivamente falso e vero. I due stati sono mutualmente esclusivi: ciò significa che si escludono a vicenda.
-
-In pratica, possono descrivere lo stato di apertura (0) o chiusura di un generico contatto, o di un circuito a più contatti.
-
-Sui valori booleani si definiscono diverse operazioni, tra cui le più importanti sono AND, OR, NOT e XOR.
-
-Le operazioni AND ed OR sono di tipo binario, assieme alla XOR, mentre l'operazione NOT è unaria.
-
-Nella valutazione delle espressioni booleane esiste una relazione di precedenza tra gli oepratori NOT, AND e OR, nell'ordine in cui sono stati elencati.
-
-Gli operatori dell'algebra booleana possono essere rappresentati in vari modi.
-
-Spesso sono descritti semplicemente come AND, OR e NOT. Nella descrizione dei circuiti appaiono sotto forma di porte logiche. In matematica si usa + per OR e x per AND, mentre si rappresenta il NOT con una barra posta sopra l'espressione che viene negata.
-
-### 4.2.1 - L'operazione di AND
-
-L'operazione di $AND$ è definita anche come *prodotto logico*. In particolare, il valore del prodotto logico è pari al simbolo $1$ se e solo se il valore di entrambi gli operandi coinvolti è pari ad $1$.
-
-| A | B | $\times$ |
-| - | - | -------- |
-| $0$ | $0$ | $0$ |
-| $0$ | $1$ | $0$ |
-| $1$ | $0$ | $0$ |
-| $1$ | $1$ | $1$ |
-
-![and_port](./images/and_port.png)
-
-### 4.2.2 - L'operazione di OR
-
-L'operazione $OR$ è anche definita come *somma logica*.
-
-In particolare, il valore della somma logica è il simbolo $1$ se e solo se almeno uno dei due operandi ha valore $1$.
-
-| A | B | $+$ |
-| - | - | -------- |
-| $0$ | $0$ | $0$ |
-| $0$ | $1$ | $1$ |
-| $1$ | $0$ | $1$ |
-| $1$ | $1$ | $1$ |
-
-![or_port](./images/or_port.png)
-
-### 4.2.3 - L'operazione NOT
-
-L'operazione $NOT$ è definita come *negazione logica*.
-
-In particolare, l'operatore inverte il valore della costante su cui opera.
-
-| A | $\hat{A}$ |
-| - | - |
-| $0$ | $0$ |
-| $0$ | $1$ |
-| $1$ | $0$ |
-| $1$ | $1$ |
+L'algebra Booleana si occupa di formulare un insieme di regole per definire se i predicati composti siano veri o falsi a partire dai singoli predicati che li compongono. Per farlo, si avvale di una serie di operazioni fondamentali, che approfondiremo nella [prossima lezione](02_ops.md).

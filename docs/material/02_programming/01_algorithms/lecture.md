@@ -1,4 +1,14 @@
-# 2 - Introduzione agli algoritmi
+# 2.1 - Gli algoritmi
+
+La realtà che ci circonda è piena di *problemi*, esprimibili sia in senso "lato" (*cosa mangio stasera? quando andrò in pensione?*), sia in senso più "tangibile" (*come monto il mobile appena acquistato all'Ikea? come ordino in maniera crescente un vettore di numeri interi?*). Questi problemi sono normalmente risolvibili utilizzando un approccio specifico, che il più delle volte consiste nell'individuare una *soluzione* composta da una serie di "piccoli" passi da seguire per "scardinare" il problema e risolverlo parte dopo parte. Partiamo da questo aspetto.
+
+## Formulare un problema
+
+Possiamo dare una definizione del concetto di *problema* come un *quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza*. Ok, cerchiamo di respirare e comprendere quello che abbiamo appena letto.
+
+DA QUI
+
+Il problema è un *quesito*, ovvero una domanda "aperta" che richiede di essere affrontata; se ci pensiamo, all'inizio abbiamo posto il problema *sempre* sotto questa forma (*cosa mangio?*). Ovviamente, dobbiamo dare una rispota a questo problema, risolvendolo: in particolare, questa risoluzione dipenderà da un *ente*, sia esso fisico o logico che, dato uno stato "iniziale" del mondo, il quale deve essere conosciuto, seguirà una sequenza di istruzioni predefinite fino a risolvere con successo il problema.
 
 ## 2.1 - Formulare un problema
 
