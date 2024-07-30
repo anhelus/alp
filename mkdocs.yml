@@ -2,7 +2,7 @@ site_name: Corso di Informatica
 
 nav:
   - Home: index.md
-  - Tracce di esame svolte:
+  - Tracce di esame svolte e commentate:
     - Traccia del 17 gennaio 2024: material/exams/17_01_24/exam.md
   - Parte 1:
     - 1 Introduzione all'informatica: material/01_intro/01_intro_inf.md
