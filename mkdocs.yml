@@ -1,27 +1,40 @@
-site_name: Informatica per l'Ingegneria (classe N)
+site_name: Corso di Informatica
 
 nav:
-  - Home del corso: index.md
-  - Tracce di esame svolte:
+  - Home: index.md
+  - Tracce di esame svolte e commentate:
     - Traccia del 17 gennaio 2024: material/exams/17_01_24/exam.md
-  - Algoritmi di ordinamento:
-    - Selection sort: material/xx_sorting/01_selection_sort.md
-  # - 1 - Introduzione all'informatica: material/01_intro/01_introduction/lecture.md
-  # - 2 - Introduzione agli algoritmi: material/01_intro/02_algorithms/lecture.md
-  # - 3 - Numeri decimali e binari: material/01_intro/03_dec_bin/lecture.md
-  # - 4 - Tipi di dato: material/01_intro/04_data_type/lecture.md
-  # - 5 - Diagrammi di flusso: material/01_intro/05_flow_chart/lecture.md
-  # - 6 - Programmazione strutturata: material/01_intro/06_structured/lecture.md
-  # - 7 - Variabili: material/01_intro/07_variables/lecture.md
-  # - 8 - Funzioni: material/01_intro/08_functions/lecture.md
-  # - 9 - Complessità computazionale:
-  #   - Dispense: material/01_intro/09_complexity/lecture.md
-  #   - Esercizi: material/01_intro/09_complexity/exercises.md
-  # - 10 - Strutture dati: material/01_intro/10_data_structures/lecture.md
-  # - 11 - Ricorsione: material/01_intro/11_recursion/lecture.md
-  # - 12 - Paradigmi di programmazione: material/01_intro/12_paradigms/lecture.md
-  # - 13 - Strutture dati avanzate: material/01_intro/13_adv_data_structures/lecture.md
-  # - 14 - Selection sort: material/02_algorithms/14_sorting/selection_sort.md
+  - Parte 1:
+    - 1 Introduzione all'informatica: material/01_intro/01_intro_inf.md
+    - 2 Rappresentazione dei dati: material/01_intro/02_data_repr.md
+    - 3 Codifica digitale ed analogica: material/01_intro/03_dig_an.md
+    - 4 Sistemi di numerazione: material/01_intro/04_num_sis.md
+    - 5 Sistema binario: material/01_intro/05_sis_bin.md
+    - 6 Dimensione dei dati: material/01_intro/06_data_types.md
+    - 7 Algebra di Boole:
+      - 7.1 Introduzione: material/01_intro/07_boole/01_intro.md
+      - 7.2 Operazioni fondamentali: material/01_intro/07_boole/02_ops.md
+      - 7.3 Proprietà delle operazioni fondamentali: material/01_intro/07_boole/03_ops_properties.md
+      - 7.4 Leggi dell'algebra booleana: material/01_intro/07_boole/04_laws.md
+  # - 2 Programmare:
+  #   - 2.1 Diagrammi di flusso: material/02_programming/01_flow_chart/lecture.md
+  #   - 2.2 Programmazione strutturata: material/02_programming/02_structured/lecture.md
+  #   - 2.3 Ricorsione: material/02_programming/03_recursion/lecture.md
+  #   - 2.4 Variabili: material/02_programming/04_variables/lecture.md
+  #   - 2.5 Funzioni: material/02_programming/05_functions/lecture.md
+  #   - 2.6 Complessità computazionale: material/02_programming/06_complexity/lecture.md
+  #   - 2.7 Strutture dati: material/02_programming/07_data_structures/lecture.md
+  #   - 2.8 Strutture dati avanzate: material/02_programming/08_adv_data_structures/lecture.md
+  #   - 2.9 Paradigmi di programmazione: material/02_programming/09_paradigms/lecture.md
+  - Parte 3:
+    # - 3.1 Introduzione agli algoritmi: material/03_algorithms/01_intro/lecture.md
+    # - 3.2 Algoritmi di ordinamento:
+    - 3.2.1 Selection sort: material/new/13_algorithms/01_selection_sort.md
+    # - 3.3 Algoritmi di ricerca: material/03_algorithms/03_search/lecture.md
+  # - 4 Architettura e principi dei calcolatori:
+  #   - 4.1 Architettura: material/04_architecture/01_architecture.md
+  #   - 4.2 Sistemi operativi: material/04_architecture/02_os.md
+    
 
 theme:
   name: material
@@ -64,9 +77,9 @@ markdown_extensions:
   - tables
   - md_in_html
 
-plugin:
-  - search
-  - encryptcontent: {}
+# plugin:
+#   - search
+#   - encryptcontent: {}
 
 extra:
   social:
