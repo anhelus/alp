@@ -1,63 +1,45 @@
-# XX - L'architettura dei calcolatori
+# Architettura dei calcolatori
 
-## La macchina di Von Neumann
+Immaginiamo di dover guidare un'automobile per andare da un punto $A$ ad un punto $B$. Indipendentemente dal percorso che vorremo seguire, o dal mezzo a disposizione, potremo essere abbastanza confidenti a riguardo del fatto che la nostra automobile avrà un volante, quattro (o più!) ruote, un motore (di qualsiasi tipo), e due o più pedali per accelerare e frenare. In altre parole, le automobili sono tutte più o meno basate su un'*architettura comune*.
 
-La macchina di Von Neumann venne per la prima volta teorizzata e progettata dal matematico ungherese John Von Neumann attorno alla metà del secolo scorso.
+Ciò avviene per molti degli oggetti che adoperiamo comunemente: il frigorifero, ad esempio, avrà sempre degli scompartimenti, uno o più sportelli, ed una pompa di calore, così come gli edifici in cui viviamo e lavoriamo. Di conseguenza, è facile dedurre che anche i calcolatori si basino su uno schema di massima condiviso, declinato poi nello specifico al variare di fattori quali produttore, sistema operativo, e via discorrendo.
 
-Una macchina di Von Neumann si basa su quattro componenti fondamentali, come quelli mostrati in figura 1.
+Storicamente, i primi calcolatori utilizzavano un'architettura *fixed program*, ovvero *fissa*. In altre parole, i primi calcolatori erano programmati (anche meccanicamente) per eseguire un'unica funzione, e non potevano essere in alcun modo espansi o riprogrammati. Un esempio basilare di un calcolatore a programmazione fissa sono le calcolatrici non programmabili. Va da sè che l'utilizzabilità di un calcolatore di questo tipo è, giocoforza, limitata, e profondamente inadatta a come indendiamo il computer al giorno d'oggi. Pensiamo ad esempio a cosa accadrebbe se avessimo degli smartphone fixed program: dovremmo portare con noi almeno due telefoni, uno per effettuare le chiamate, ed uno per inviare messaggi!
 
-TODO FIGURA
+!!!warning "Smartphone fixed program"
+    L'esempio precedente è volutamente esagerato, e la realtà è molto più complessa di questa ovvia semplificazione.
 
-In particolare, abbiamo la **central processing unit** (CPU), la **memoria centrale**, l'interfaccia di I/O, ed il bus di sistema.
+Per ovviare a quello che, se non superato, sarebbe stato un ostacolo insormontabile alla pervasiva diffusione odierna dei computer, venne quindi introdotto il concetto di computer *stored program*, ovvero macchine riprogrammabili alla bisogna, ed adattabili a task differenti. Tale concetto venne per la prima volta introdotto dall'*architettura di Von Neumann*.
 
-Vediamo queste componenti nel dettaglio.
+## Architettura di Von Neumann
 
-### CPU
+L'*architettura di Von Neumann* venne teorizzata dal matematico ungherese John Von Neumann (del quale, come ovvio, eredita il nome) nel Secondo Dopoguerra, come modello di architettura di calcolatore *stored program* in grado di eseguire essenzialmente operazioni di tipo matematico interfacciandosi con il mondo esterno mediante opportuni supporti. In pratica, l'architettura di Von Neumann poteva combinare dei *dati* in modi *eterogenei* basandosi su un insieme di *istruzioni* dinamico e dipendente dal programma eseguito in quello specifico istante.
 
-La CPU è la parte centrale di elaborazione della macchina di Von Neumann, e possiamo pensarla come una sorta di "cervello" dell'elaboratore. Il suo compito principale è quello di eseguire le istruzioni di calcolo e 
+Per far questo, l'architettura proposta da Von Neumann è caratterizzata da tre componenti fondamentali, ovvero l'unità di elaborazione principale (in inglese *central processing unit*, o *CPU*), la *memoria*, e l'*interfaccia di input/output* (I/O); tutte queste componenti saranno tra loro collegate medinate il cosiddetto *bus di sistema*. Vediamole più nel dettaglio.
 
-### La memoria
+##### Central Processing Unit
 
-Dal punto di vista delle macchine moderne, sono stati inseriti uno o più livelli di *memoria cache*
+La CPU è il "cuore" (o forse più propriamente il *cervello*) dell'architettura di Von Neumann. Il compito della CPU è "semplice": combinare tra loro dei *dati* seguendo determinate *istruzioni*. In pratica, la CPU è l'elemento dell'architettura che si occuperà, ad esempio, di verificare che $2$ sommato a $3$ faccia $5$, o che $-1$ sia uguale a sè stesso. Per farlo, la CPU si affida a tre diverse componenti:
 
-Lo schema si basa su 4 componenti fondamentali:
+* un'unità di controllo (*control unit*, CU), delegata alla gestione di tutti i segnali di controllo del processore. Nella pratica, la CPU si occupa di controllare il flusso di istruzioni e dati all'interno del processore, coordinando quindi le attività delle altre due componenti;
+* un'unità aritmetico - logica (*arithmetic logical unit*, ALU), che si occupa di gestire tutte le operazioni di natura aritmetica e logica che la CPU può effettuare;
+* una serie di *registri*, ovvero delle aree nelle quali la CPU può memorizzare tutta una serie di informazioni.
 
-CPU
-RAM
-Interfaccia di I/O (Input/Output)
-Bus di sistema
-CPU
-La CPU (Central Processing Unit) è l'unità centrale di elaborazione e si può definire come il “cervello” del computer. La CPU esegue le istruzioni di calcolo e di controllo, coordinando le altre componenti nell’esecuzione delle istruzioni stesse. La CPU, detta anche processore, si suddivide in:
-
-ALU (Arithmetic Logic Unit), che effettua i calcoli aritmetici e logici;
-CU (Control Unit), è l'unità di controllo, che sovrintende al funzionamento delle altre componenti.
-La CPU coordina le altre componenti del sistema utilizzando un circuito temporizzatore, detto clock di sistema o semplicemente clock. Utilizzando una metafora, si può dire che il clock detta il tempo nell'esecuzione delle istruzioni così come il beat detta il tempo all'interno di una canzone.
-
-Memoria
-Per quanto riguarda la memoria del computer, una prima distinzione si può fare tra memoria principale e memoria secondaria. La RAM (Random Access Memory) è la memoria centrale, può essere considerata una delle memorie principali assieme ai registri ed alla cache. La RAM riveste un ruolo fondamentale nell’architettura di Von Neumann: tutte le istruzioni ed i dati devono risiedere in RAM per poter essere utilizzati dalla CPU. La RAM è però volatile, dunque le informazioni in essa contenute si perderanno allo spegnimento del computer. Memorie volatili sono anche i registri, fra cui citiamo i registri MAR, MDR, PC, IR e PSW, che assumono un ruolo fondamentale nel ciclo delle istruzioni macchina, affrontato in questo post. 
-
-Può essere classificata come memoria principale anche la ROM (Read Only Memory), che è una memoria persistente a sola lettura. La ROM contiene il programma di bootstrap, ovvero il programma che consente al sistema di avviarsi e caricare il software principale, che tipicamente è il sistema operativo.
-
-Per quanto riguarda la memoria secondaria, citiamo il disco rigido (hard disk) ed i dischi a stato solido (SSD), sui quali vengono conservati dati e programmi in maniera persistente. Essendo persistenti, in tali dischi i dati si mantengono anche dopo lo spegnimento del computer.
-
-Input/Output
-Gli hard disk, assieme ai lettori CD/DVD, alle tastiere, ai mouse, alle webcam, possono inoltre essere considerati dispositivi di input dell’architettura. Dispositivi di output sono invece stampanti e schermi. Dunque, i dispositivi di input servono ad inserire dati e/o a dare comandi al sistema, mentre i dispositivi di output servono a comunicare all’utente i dati elaborati dalla macchina. I vari dispositivi (detti anche periferiche) sono diversi tra loro e dunque necessitano di un’interfaccia comune per poter comunicare con gli altri componenti dell’architettura. Tale interfaccia è appunto l’interfaccia di I/O.
-
-Bus
-Infine, il bus è il canale di comunicazione che permette di collegare tra loro i componenti dell’architettura, consentendo il transito delle informazioni. In particolare, nell’architettura di Von Neumann possiamo distinguere diverse linee nel bus di sistema:
-
-bus di controllo, per abilitare la memoria in lettura o scrittura
-bus di indirizzi, per individuare gli indirizzi di memoria
-bus dati, per contenere i dati da leggere o scrivere
-Una particolarità dell’architettura di Von Neumann è che istruzioni e dati viaggiano senza distinzione all’interno dell’unico bus di sistema presente. Questo non avviene invece nell'architettura Harvard, su cui sono basati i più famosi microcontrollori moderni, come ad esempio Arduino. Arduino è sicuramente uno dei microcontrollori più utilizzati in ambito didattico.
+DA QUI
 
 
 
 
-Analizziamo singolarmente ciascuna delle componenti.
+I registri si riferiscono a aree di memorizzazione ad alta velocità nella CPU. I dati elaborati dalla CPU sono estratti dai registri. Ci sono diversi tipi di registri usati nelle architeture.
+- Accumualtore: meomoirizza i risultati dei calcoli fatti dall'ALU. Mantiene i risultati intermedi delle operazioni aritmentiche e logiche. Agisce come locazione temporanea di memoria su un dispositivo.
+- Program Counter (PC) tiene traccia delle posizioni di memoria dell'istruzione successiv ada eseguire. Il PC quindi passa questo indirizzo successivo al Memory Address Register.
+- Il Memory Address Register memorizza le posizioni in memoria delle istruzioni che devono essere estratte dalla memoria, o memorizzate.
+- Current Instruction Register (CIR): memorizza le istruzioni di ppiù recente estrazione mentre attende che vengano codificate ed eseguite.
+- Instruction Buffer Register (IBR): l'istruzione che non deve essere eseguita immediatamente viene messa in questo registro.
 
-Processore
-Il processore (CPU, Central Processing Unit) è un interprete di istruzioni, costituito da tre componenti:
+
+La CPU è l'unità centrale di elaborazione o, in altre parole, il *cervello* del computer, ed è delegata ad eseguire le istruzioni di calcolo, coordinando contestualmente le altre componenti del sistema. La CPU è a sua volta composta da una *Arithmetic Logic Unit* (ALU), che effettua tutte le operazioni aritmetiche e di logica booleana, ed una *Control Unit* (CU), responsabile per il controllo del funzionamento delle altre componenti. In particolare, la supervisione delle altre componenti avviene mediante un circuito "temporizzatore", comunemente chiamato *clock di sistema*.
+
 
 ALU (Unità Aritmetico Logica): esegue le operazioni matematiche e logiche (addizione binaria, AND e OR) richieste dalle istruzioni;
 Unità di Controllo: legge le istruzioni, le decodifica e le esegue ed effettua i controlli delle attività necessarie per l’esecuzione
@@ -72,6 +54,7 @@ Benché in memoria ci siano più dati e istruzioni, il processore li estrae uno 
 
 La velocità della CPU viene misurata in Megahertz (1 milione di cicli al secondo) o Gigahertz (1 miliardo di cicli al secondo).
 
+##### Memoria centrale
 La memoria
 La Memoria contiene i dati e i programmi e la sua capacità è espressa in multipli del Byte.
 Il Byte è una sequenza di otto bit, che insieme rappresentano un singolo carattere alfabetico e/o numerico. Le dimensioni della memoria sono espresse come multipli molto più grandi:
@@ -92,6 +75,21 @@ La memoria CACHE è invece destinata ad ospitare dati di frequente utilizzo, e c
 
 La Memoria secondaria (o di massa) è più lenta, ha una elevata capacità di immagazzinare i dati (di uso non frequente) ed è stabile, ossia mantiene la memorizzazione delle informazioni anche dopo lo spegnimento del computer, per questo è utilizzata per la memorizzazione permanente di dati e programmi.
 
+
+Memoria
+Per quanto riguarda la memoria del computer, una prima distinzione si può fare tra memoria principale e memoria secondaria. La RAM (Random Access Memory) è la memoria centrale, può essere considerata una delle memorie principali assieme ai registri ed alla cache. La RAM riveste un ruolo fondamentale nell’architettura di Von Neumann: tutte le istruzioni ed i dati devono risiedere in RAM per poter essere utilizzati dalla CPU. La RAM è però volatile, dunque le informazioni in essa contenute si perderanno allo spegnimento del computer. Memorie volatili sono anche i registri, fra cui citiamo i registri MAR, MDR, PC, IR e PSW, che assumono un ruolo fondamentale nel ciclo delle istruzioni macchina, affrontato in questo post. 
+
+Può essere classificata come memoria principale anche la ROM (Read Only Memory), che è una memoria persistente a sola lettura. La ROM contiene il programma di bootstrap, ovvero il programma che consente al sistema di avviarsi e caricare il software principale, che tipicamente è il sistema operativo.
+
+Per quanto riguarda la memoria secondaria, citiamo il disco rigido (hard disk) ed i dischi a stato solido (SSD), sui quali vengono conservati dati e programmi in maniera persistente. Essendo persistenti, in tali dischi i dati si mantengono anche dopo lo spegnimento del computer.
+
+
+##### Dispositivi di input/output
+
+
+Input/Output
+Gli hard disk, assieme ai lettori CD/DVD, alle tastiere, ai mouse, alle webcam, possono inoltre essere considerati dispositivi di input dell’architettura. Dispositivi di output sono invece stampanti e schermi. Dunque, i dispositivi di input servono ad inserire dati e/o a dare comandi al sistema, mentre i dispositivi di output servono a comunicare all’utente i dati elaborati dalla macchina. I vari dispositivi (detti anche periferiche) sono diversi tra loro e dunque necessitano di un’interfaccia comune per poter comunicare con gli altri componenti dell’architettura. Tale interfaccia è appunto l’interfaccia di I/O.
+
 Dispositivi di I/O
 I Dispositivi di Input/Output (o periferiche), sotto il controllo e coordinamento del processore, consentono l’interazione tra il computer e l’utente (più in generale, l’interazione tra il computer e l’ambiente), in particolare consentono l’immissione dei dati all’interno del computer e la comunicazione all’esterno dei risultati ottenuti con l’elaborazione.
 
@@ -104,112 +102,92 @@ Monitor touch screen: è un dispositivo costituito da uno schermo ed un digitali
 
 
 
-L'architettura di Von Neumann venne inizialmente proposta nel 1945 da John Von Neumann.
+##### Bus di sistema
 
-Storicamente, esistono due tipi di architetture:
+Bus
+Infine, il bus è il canale di comunicazione che permette di collegare tra loro i componenti dell’architettura, consentendo il transito delle informazioni. In particolare, nell’architettura di Von Neumann possiamo distinguere diverse linee nel bus di sistema:
 
-1. **fixed program computers**, il cui funzionamento è speicfico e non possono essere riprogrammati, come ad esempio le calcolatrici
-2. **stored program computers**, il cui funzionamento può essere riprogrammato per effettuare diversi task differnti
-
-I moderni computer sono ovviamente basati sul concetto di stored-program introdotto da John VOn Neumann. IN questo concetto, i programmi ed i dati sono memorizzati in uno spazio riservato chiamato *memoria*é Questa idea, all'ìepoca innovativa, implicava cheun comptuer costruito con l'archiettura di Von Neumann sarebbe stato molto più semplice da riprogrammare.
-
-La struttura base 
-
-The basic structure is like this, 
-
-
-
-It is also known as ISA (Instruction set architecture) computer and is having three basic units:  
-
-The Central Processing Unit (CPU) 
-The Main Memory Unit 
-The Input/Output Device Let’s consider them in detail.
-         1. Central Processing Unit-
-
-          The central processing unit is defined as the it is an electric circuit used for the executing the instruction of computer program.
-
-          It has following major components:
-
-          1.Control Unit(CU)
-
-          2.Arithmetic and Logic Unit(ALU)
-
-          3.variety of Registers
-
-Control Unit – 
-A control unit (CU) handles all processor control signals. It directs all input and output flow, fetches code for instructions, and controls how data moves around the system. 
-Arithmetic and Logic Unit (ALU) – 
-The arithmetic logic unit is that part of the CPU that handles all the calculations the CPU may need, e.g. Addition, Subtraction, Comparisons. It performs Logical Operations, Bit Shifting Operations, and Arithmetic operations. 
-
-
-Figure – Basic CPU structure, illustrating ALU 
-
-Registers – Registers refer to high-speed storage areas in the CPU. The data processed by the CPU are fetched from the registers. There are different types of registers used in architecture :-
-Accumulator: Stores the results of calculations made by ALU. It holds the intermediate of arithmetic and logical operatoins.it act as  a temporary storage location or device.
-Program Counter (PC): Keeps track of the memory location of the next instructions to be dealt with. The PC then passes this next address to the Memory Address Register (MAR). 
-Memory Address Register (MAR): It stores the memory locations of instructions that need to be fetched from memory or stored in memory. 
-Memory Data Register (MDR): It stores instructions fetched from memory or any data that is to be transferred to, and stored in, memory. 
-Current Instruction Register (CIR): It stores the most recently fetched instructions while it is waiting to be coded and executed. 
-Instruction Buffer Register (IBR): The instruction that is not to be executed immediately is placed in the instruction buffer register IBR. 
- 
-Buses – Data is transmitted from one part of a computer to another, connecting all major internal components to the CPU and memory, by the means of Buses. Types: 
-Data Bus: It carries data among the memory unit, the I/O devices, and the processor. 
-Address Bus: It carries the address of data (not the actual data) between memory and processor. 
-Control Bus: It carries control commands from the CPU (and status signals from other devices) in order to control and coordinate all the activities within the computer.
-Input/Output Devices – Program or data is read into main memory from the input device or secondary storage under the control of CPU input instruction. Output devices are used to output information from a computer. If some results are evaluated by the computer and it is stored in the computer, then with the help of output devices, we can present them to the user.
-Von Neumann bottleneck – 
-Whatever we do to enhance performance, we cannot get away from the fact that instructions can only be done one at a time and can only be carried out sequentially. Both of these factors hold back the competence of the CPU. This is commonly referred to as the ‘Von Neumann bottleneck’. We can provide a Von Neumann processor with more cache, more RAM, or faster components but if original gains are to be made in CPU performance then an influential inspection needs to take place of CPU configuration. 
-
-This architecture is very important and is used in our PCs and even in Super Computers.
+bus di controllo, per abilitare la memoria in lettura o scrittura
+bus di indirizzi, per individuare gli indirizzi di memoria
+bus dati, per contenere i dati da leggere o scrivere
+Una particolarità dell’architettura di Von Neumann è che istruzioni e dati viaggiano senza distinzione all’interno dell’unico bus di sistema presente. Questo non avviene invece nell'architettura Harvard, su cui sono basati i più famosi microcontrollori moderni, come ad esempio Arduino. Arduino è sicuramente uno dei microcontrollori più utilizzati in ambito didattico.
 
 
 
 
-In a normal computer that follows von Neumann architecture, instructions, and data both are stored in the same memory. So same buses are used to fetch instructions and data. This means the CPU cannot do both things together (read the instruction and read/write data). Harvard Architecture is the computer architecture that contains separate storage and separate buses (signal path) for instruction and data. It was basically developed to overcome the bottleneck of Von Neumann’s Architecture. The main advantage of having separate buses for instruction and data is that the CPU can access instructions and read/write data at the same time. 
+Analizziamo singolarmente ciascuna delle componenti.
 
-Structure of Harvard Architecture: 
-
-Structure of Harvard Architecture
-Structure of Harvard Architecture
-
-Buses
-
-Buses are used as signal pathways. In Harvard architecture, there are separate buses for both instruction and data. Types of Buses: 
+Processore
+Il processore (CPU, Central Processing Unit) è un interprete di istruzioni, costituito da tre componenti:
 
 
-Data Bus: It carries data among the main memory system, processor, and I/O devices. 
-Data Address Bus: It carries the address of data from the processor to the main memory system. 
-Instruction Bus: It carries instructions among the main memory system, processor, and I/O devices. 
-Instruction Address Bus: It carries the address of instructions from the processor to the main memory system. 
-Operational Registers
 
-There are different types of registers involved in it which are used for storing addresses of different types of instructions. For example, the Memory Address Register and Memory Data Register are operational registers. 
 
-Program Counter: It has the location of the next instruction to be executed. The program counter then passes this next address to the memory address register. 
-Arithmetic and Logic Unit: The arithmetic logic unit is part of the CPU that operates all the calculations needed. It performs addition, subtraction, comparison, logical Operations, bit Shifting Operations, and various arithmetic operations. 
-Control Unit:  The Control Unit is the part of the CPU that operates all processor control signals. It controls the input and output devices and also controls the movement of instructions and data within the system. 
-Input/Output System: Input devices are used to read data into main memory with the help of CPU input instruction. The information from a computer as output is given through Output devices. The computer gives the results of computation with the help of output devices. 
- Features:
 
-Separate memory spaces: In Harvard architecture, there are separate memory spaces for instructions and data. This separation ensures that the processor can access both the instruction and data memories simultaneously, allowing for faster and more efficient data retrieval.
-Fixed instruction length: In Harvard architecture, instructions are typically of fixed length, which simplifies the instruction fetch process and allows for faster instruction processing.
-Parallel instruction and data access: Since Harvard architecture separates the memory spaces for instructions and data, the processor can access both memory spaces simultaneously, allowing for parallel instruction and data processing.
-More efficient memory usage: Harvard architecture allows for more efficient use of memory as the data and instruction memories can be optimized independently, which can lead to better performance.
-Suitable for embedded systems: Harvard architecture is commonly used in embedded systems because it provides fast and efficient access to both instructions and data, which is critical in real-time applications.
-Limited flexibility: The separate memory spaces in Harvard architecture limit the flexibility of the processor to perform certain tasks, such as modifying instructions at runtime. This is because modifying instructions requires access to the instruction memory, which is separate from the data memory.
-Advantage of Harvard Architecture: 
 
-Harvard architecture has two separate buses for instruction and data. Hence, the CPU can access instructions and read/write data at the same time. This is the major advantage of Harvard architecture. 
 
-In practice, Modified Harvard Architecture is used where we have two separate caches (data and instruction). This is common and used in X86 and ARM processors.
 
-Fast and efficient data access: Since Harvard architecture has separate memory spaces for instructions and data, it allows for parallel and simultaneous access to both memory spaces, which leads to faster and more efficient data access.
-Better performance: The use of fixed instruction length, parallel processing, and optimized memory usage in Harvard architecture can lead to improved performance and faster execution of instructions.
-Suitable for real-time applications: Harvard architecture is commonly used in embedded systems and other real-time applications where speed and efficiency are critical.
-Security: The separation of instruction and data memory spaces can also provide a degree of security against certain types of attacks, such as buffer overflow attacks.
-Disadvantages of Harvard Architecture:
 
-Complexity: The use of separate memory spaces for instructions and data in Harvard architecture adds to the complexity of the processor design and can increase the cost of manufacturing.
-Limited flexibility: Harvard architecture has limited flexibility in terms of modifying instructions at runtime because instructions and data are stored in separate memory spaces. This can make certain types of programming more difficult or impossible to implement.
-Higher memory requirements: Harvard architecture requires more memory than Von Neumann architecture, which can lead to higher costs and power consumption.
-Code size limitations: Fixed instruction length in Harvard architecture can limit the size of code that can be executed, making it unsuitable for some applications with larger code bases.
+L'architettura di von neumann è anche detta ISA (Instruction Set Architecture) ed ha le tre compopnet di cui sopra.
+
+
+
+Bus: i dati sono trasmessi da una paprte all'altra del computer mediante dei bus, connettendo tutti i componenti interni principali alla CPU ed alla memoria, per mezzo dei bus. Ve ne sono di diverso tipo:
+- data buys: porta i dati tra l'unità di memoria, i dispositivi di I/O, ed il processore.
+- address bus: porta l'indirizzo dei dati (non i dati veri e propri) tra la memorai ed il porocessore
+- control bus: porta i comandi di controllo dalla CPU (ed i segnali di stato da altri dispositiv) per conrtrollare e coordinare tutte le attività all'interno del computer
+
+
+dispsotiviti Input/Outpu:  i progrmami o i dati sono letti nlla mmeoria principale dal dispppositivo di input, o da memoria secondaria sotto il controllo delle istruzioni di input della CPU. I dispositivi di output sono suati per mandare in output informazioni da un computer. Se alcuni risultati sono valutati dal computer e memorizzati nel computer, allora, con l'aiuto dei dispositiiv di output, possono essere mostrati all'utente.
+
+
+## Oltre i limiti dell'architettura di Von Neumann
+
+L'architettura di Von Neumann presenta un importante collo di bottiglia, legato alla *sequenzialità* nell'esecuzione delle istruzioni. In altre parole, non possiamo svincolarci dal fatto che le istruzioni possono soltanto essere eseguiti in maniera sequenziale. In pratica, possiamo dare ad una CPU di Von Neumann con un quantiatitvo semprpe maggiore di cache, RAM, e componenti più veloci, ma il collo di bottiglia di Von Neumann limiterà sempre le prestazioni della CPU.
+
+Inoltre, in un normale computer che segue l'architettura di von Neumann, le istruzioni ed i dati sono già memorizzate nella stessa area di memoria. Quindi gli stessi bus sono usati per spostare le istruzioni ed i dati. Questo implica che la CPU non può fare le due cose insieme, ovvero leggere le isturzioni e leggere o scrivere i dati. L'architettura di Harvard cerca di andare oltre, separando la memoria ed i bus per le istruzioni ed i dati. In pratica, è stata sviluppata per andare oltre il collo di bottiglia dell'architettura di Von Neumann. Il vantaggio principale di avere bus separati per le isturzioni ed i dati è che la CPU può accedere alle istruzioni e leggere o scrivere datin allo stesso tempo.
+
+##### Struttura dell'architettura harvard
+
+Bus: i bus sono usati come percorsi per i segnali. Nelle architettture Harvard, ci sono diversi bus per le istruzioni ed i dati. 
+
+I *data bus* portano i dati tra la memoria di sistema, il processore, e i dispositivi di I/O.
+
+Il data address bus porta l'indirizzo dei dati dal processore alla memoria di sistema principale di sistema.
+
+L'instruction bus porta le isturzioni tra la memoria principale di sistema, il processore, ed i dispositivi I/O.
+
+L'instruction address bus porta gli indirizzi delle istruzioni dal processore alla memoria principale.
+
+##### Registri operazionali
+
+CI sono diversi tipi di registri coinvolti che sono usati per memorizzare indirizzi di diversi tipi di istruzioni. Per esempio, il Memory Address Register ed il Memory Data Register sono registri operazionali.
+
+Il pprogram counter memorizza la posizione dell'istruzione successiva da eseguire. Il program counter passa questo nbuovo indirizzo al memory address register.
+
+L'Arithmetic and Logic Unit: la ALU è pparte della CPU che fa tutte i calcoli richiesti. Effettua addizioni, sottrazioni, comparazione, operazioni logiche, operazioni di bit shifting, e varie operazioni di natura aritmetica.
+
+Control Unit: la control unit è la parte della CPPU che oppera tutti i segnali di controllo del processore. Controlla i dispositivi di input ed output fisici e controlla anche il movimento di istruzioni e dei dati nelm sistema.
+
+Sistema di I/O: i dispositivi di input sono usati per leggere i dati nella memoria principale con l'aiuto delle istruzioni di input CPU. L'informazione da un computer come output è data attraverso i dispositivi di output. Il computer dà i risultati di calcolo con l'aiuto dei dispositivi di output.
+
+Nell'harvard architecture ci sono spazi di memoria separata per le istruzioni ed i dati. Questa separazione assicura che il processore ppossa accedere contemporantamente alle memorie per istruzioni ed id ati, permettendo un recupero dei dati più rapido ed efficiente.
+
+inoltre, c'è la questione della fixed instruction length. Nell'architettura harvard, le istruzioni sono tipicamente di lunghezza fissa, il che semplifica il processo di estrazione delle istruzioni e permette un'elabroazione delle istruzioni più rapida.
+
+istruzioni parallelo ed accesso ai dati: dal momento che l'arhcitettura harvard separa gli spazi di memoria per le istruzioni ed i dati, il processore può accedere entrambi gli spazi di memoria simultaneaemnte, permettendo la parallelizzazione delle istruzioni e del processing dei dati.
+
+Uso della memmoria più efficiente: l'architettura Harvard permette un uso della memoria più efficientein quanto le memorie per i dati e le istruzioni possono essere ottimizzate in maneira indiependetne, ottenendo performance migliori,
+
+Adatta a sistemi integrati: l'architettura Harvard viene spesso usata in sistemi integrati perché fornisce un accesso veloce ed efficiente sia alle istruzioni, sia ai dati, che è critico in applicazion real-time.
+
+Flessibilità limitata: gli spazi di memoria separati nell'architettura Harvard limitano la flessibilità del processore nell'effettuare alcuen task, come la modifica delle istruzioni a runtime. Questo è lefato al fatto che modificare le istruzioni richiede l'accesso alla relativa memoria, che è seaparata dalla data memory.
+
+Sicurezza: la separazione degli spazi di istruzione e memoria può fornire un (teorico) grado di sicurezza contro alcuni tipi di attacchi informatici come il buffer overflow.
+
+SVANTAGGI
+
+* complessità: l'uso di spazi di memoria separati per le istruzioni ed i dati nelle architetture harvard aggiunge alla complessità del design del processore, e può quindi tradursi in un aumento nel costo di produzione.
+* flessibilità limitata: l'architettura Harvard ha flessibilità limitata in termini di modifica di istruzioni a runtime, perché le istruzioni ed i dati sono memorizzati in spazi di memoria separati. questo può rendere ceerti tipi di programmazione più difficili, o anche impossibili, da implementare.
+* maggiori requisiti di memoria: l'architettura harvard richied epiù memoria di quella di Von Neumann, con maggiori costi e consumi energetici.
+* limitazione della code size: la fixed instruction length nell'architettura harvard può limitare la dimensioen del codice che può essere eseguito, rendendo il tutto non adatto ad alcune applicazioni con delle code base più larghe.
