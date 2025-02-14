@@ -19,7 +19,21 @@ Possiamo a questo punto passare alla prima funzione, ovvero la `caricaVoti()`.
 
 ## Parte 1: `caricaVoti()`
 
-La funzione `caricaVoti()` è delegata al caricamento dei voti sul libretto. Creiamo una nuova funzione, ed inseriamo il seguente codice:
+La funzione `caricaVoti()` è delegata al caricamento dei voti sul libretto. In particolare, questa funzione dovrà:
+
+1. chiedere all'utente, in maniera iterativa, di inserire un valore numerico per un voto;
+2. verificare che il voto sia intero;
+3. verificare che il voto sia compreso tra 18 e 30.
+
+Terminate queste verifiche, il voto potrà essere inserito nel libretto. Al solito:
+
+1. la prima richiesta può essere esaudita utilizzando la funzione `input()`;
+2. la seconda richiesta può essere esaudita (ad esempio) verificando che il resto della divisione del valore inserito dall'utente sia pari ad `1`;
+3. la terza ed ultima verifica può essere fatta verificando il valore effettivo assunto dal voto.
+
+Ovviamente, la seconda e la terza verifica richiedono l'utilizzo di un approccio di tipo "while-do", reiterando l'input dell'utente fino a quando il valore inserito non sarà coerente con la richiesta effettuata.
+
+A partire da queste condizioni, possiamo creare una nuova funzione MATLAB, ed inserire il seguente codice.
 
 ```Matlab linenums="1"
 function L = caricaVoti(N)
@@ -87,11 +101,53 @@ end
 end
 ```
 
-La funzione è molto semplice, e prevede il confronto tra i due elementi adiacenti del vettore, scambiandoli di posto se necessario. Ciò avviene usando due variabili di appoggio, ovvero `i` e `j`; la funzione restituisce quindi il vettore ordinato.
+La funzione è un'implementazione standard dell'algoritmo di Bubble Sort, per il quale potete trovare ulteriori informazioni a [questo indirizzo](../../03_algorithms/02_sorting/bubble_sort.md).
 
 ## Parte 3: `calcolaMedia()`
 
-La funzione `calcolaMedia()` permette il calcolo del voto medio di ingresso di laurea.
+Creiamo adesso la funzione `calcolaMedia()`, il cui scopo è quello di calcolare il voto per l'ingresso alla seduta di laurea.
+
+La funzione è molto semplice, per cui dovremo soltanto calcolare una media mediante un ciclo e successivamente effettuare una moltiplicazione ed una divisione. Tuttavia, dobbiamo ricordare che i due voti più bassi non saranno inclusi nel calcolo del valore medio, per cui dobbiamo escluderli dal calcolo. Per farlo, possiamo utilizzare lo slicing offerto da MATLAB, che ha una forma del tipo:
+
+```matlab
+V_sel = V(start_idx:step:end_idx)
+```
+
+dove:
+
+* `V` è il vettore di partenza;
+* `V_sel` è il vettore a valle del processo di slicing;
+* `start_idx` è l'indice del primo elemento da considerare;
+* `end_idx` è l'indice dell'ultimo elemento da considerare;
+* `step` è il passo con il quale saranno considerati gli elementi.
+
+Ad esempio:
+
+```matlab
+>> V = [1, 2, 3, 4, 5]
+>> % Selezioniamo gli elementi che vanno dal secondo al quarto indice
+>> V(2:4)
+
+ans =
+
+     2     3     4
+
+>> % Selezioniamo gli elementi che vanno dal secondo al quinto a passo 2
+>> V(2:2:5)
+
+ans =
+
+     2     4
+
+>> % Selezioniamo gli elementi che vanno dal quinto al primo in ordine inverso (passo -1)
+>> V(5:-1:1)
+
+ans =
+
+     5     4     3     2     1
+```
+
+A questo punto, possiamo scrivere la funzione `calcolaMedia()`.
 
 ```matlab
 function M = calcolaMedia(L_ord)
@@ -107,7 +163,7 @@ M = media / length(L_ord_utile);
 end
 ```
 
-Ricordando che il calcolo della media prevede lo *scarto* dei due voti più bassi, e presupponendo di utilizzare la funzione sul vettore *già ordinato*, la funzione parte selezionando la parte utile del vettore dei voti ordinato (`L_ord`):
+La funzione parte selezionando la parte utile del vettore dei voti ordinato (`L_ord`):
 
 ```matlab
 L_ord_utile = L_ord(3:length(L_ord));
