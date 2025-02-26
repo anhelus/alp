@@ -70,3 +70,81 @@ aiutra a costruire altri software (strumenti software)
 9. interoprerabilità: capacità di due o più unitaà funzioanli di elabroare i dati in maniera cooperativa
 
 <!-- https://www.geeksforgeeks.org/software-engineering-introduction-to-software-engineering/?ref=header_outind -->
+
+## Programma vs prodotto software
+
+| Parametro | Programma | Prodotto software |
+| --------- | --------- | ----------------- |
+| Definizione | Insieme di istruzioni date ad un computer per svolgere uno specifico compito | Un softawre è un programma reso disponibile per qualche scopo di tipo solitamente commerciale, documentato e concesso in licenza |
+| Stage | Il programma è uno degli stage nello sviluppo del software | IL software development segue un ciclo di vita, che prevede lo studio di fattibilità del progetto, la raccolta dei rquisiti, lo sviluppo di un protoctipo, il desgin, la codifica ed il testing. |
+
+
+Advantages of Software Engineering
+There are several advantages to using a systematic and disciplined approach to software development, such as:
+
+Improved Quality: By following established software engineering principles and techniques, the software can be developed with fewer bugs and higher reliability.
+Increased Productivity: Using modern tools and methodologies can streamline the development process, allowing developers to be more productive and complete projects faster.
+Better Maintainability: Software that is designed and developed using sound software engineering practices is easier to maintain and update over time.
+Reduced Costs: By identifying and addressing potential problems early in the development process, software engineering can help to reduce the cost of fixing bugs and adding new features later on.
+Increased Customer Satisfaction: By involving customers in the development process and developing software that meets their needs, software engineering can help to increase customer satisfaction.
+Better Team Collaboration: By using Agile methodologies and continuous integration, software engineering allows for better collaboration among development teams.
+Better Scalability: By designing software with scalability in mind, software engineering can help to ensure that software can handle an increasing number of users and transactions.
+Better Security: By following the Software Development Life Cycle (SDLC) and performing security testing, software engineering can help to prevent security breaches and protect sensitive data.
+In summary, software engineering offers a structured and efficient approach to software development, which can lead to higher-quality software that is easier to maintain and adapt to changing requirements. This can help to improve customer satisfaction and reduce costs, while also promoting better collaboration among development teams.
+
+Disadvantages of Software Engineering
+While Software Engineering offers many advantages, there are also some potential disadvantages to consider:
+
+High upfront costs: Implementing a systematic and disciplined approach to software development can be resource-intensive and require a significant investment in tools and training.
+Limited flexibility: Following established software engineering principles and methodologies can be rigid and may limit the ability to quickly adapt to changing requirements.
+Bureaucratic: Software Engineering can create an environment that is bureaucratic, with a lot of processes and paperwork, which may slow down the development process.
+Complexity: With the increase in the number of tools and methodologies, software engineering can be complex and difficult to navigate.
+Limited creativity: The focus on structure and process can stifle creativity and innovation among developers.
+High learning curve: The development process can be complex, and it requires a lot of learning and training, which can be challenging for new developers.
+High dependence on tools: Software engineering heavily depends on the tools, and if the tools are not properly configured or are not compatible with the software, it can cause issues.
+High maintenance: The software engineering process requires regular maintenance to ensure that the software is running efficiently, which can be costly and time-consuming.
+Conclusion:
+In summary, software engineering can be expensive and time-consuming, and it may limit flexibility and creativity. However, the benefits of improved quality, increased productivity, and better maintainability can outweigh the costs and complexity. It’s important to weigh the pros and cons of using software engineering and determine if it is the right approach for a particular software project.
+
+## Domande
+
+Questions For Practice
+1. A software configuration management tool helps in:
+(A) keeping track of the schedule based on the milestone reached
+
+(B) maintaining different versions of the configurable items
+
+(C) managing manpower distribution by changing the project structure
+
+(D) all of the above
+
+Solution: Correct Answer is (B).
+
+2. Which of the following statements is/are true?
+P: Software Reengineering is preferable for software products having high failure rates, poor design, and/or poor code structure.
+
+Q: Software Reverse Engineering is the process of analyzing software with the objective of recovering its design and requirement specification.
+
+(A) P only
+
+(B) Neither P nor Q
+
+(C) Q only
+
+(D) Both P and Q
+
+Solution: Correct Answer is (D).
+
+3. The diagram that helps in understanding and representing user requirements for a software project using UML (Unified Modeling Language) is:
+(A) Entity Relationship Diagram
+
+(B) Deployment Diagram
+
+(C) Data Flow Diagram
+
+(D) Use Case Diagram
+
+Solution: Correct Answer is (D).
+
+Conclusion
+Software engineering is a key field that involves creating and maintaining software. It combines technical skills, creativity, and problem-solving. As technology advances, the need for software engineers increases, making it a great career choice. Whether you’re new to the field or want to learn more, understanding software engineering is crucial. Keep exploring, learning, and enjoying the challenges and opportunities this field offers.
