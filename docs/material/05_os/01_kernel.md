@@ -62,4 +62,34 @@ Questo tipo di kernel è una combinazione di kernel monolitico e microkernel. Ri
 
 I vantaggi stanno nelle performance, perché riducono rispetto ai microkernel il numero di context switch richiesto tra lo user space ed il kernel space. Poi vi è l'affidabilità, in quanto è più affidabile perché isola i driver ed altre componenti del kernel in sdomini separati. I kernel ibridi sono anche più flessibili di quelli monolitici, anche perché permettono a diversi servizi dei sistemi operativi di essere aggiunti o rimossi senza influenzare l'intero sistema. La compatibilità dei kernel ibridi può essere superiore ai microkernel perché possono suporater eun range più ampio dei driver del dispositivo.
 
+PEr quello che riguarda invece gli svantaggi, questi sono in termini di complessità, in quanto i kernel ibridi sono più complessi perché incluudono sia componenti mmonolitiche sia microkernel, il che può rendere il desgin e l'implementazione più difficile. I kernel ibridi possono essere meno sicure dei mircokernel perché hanno una superficie di "attacco" meno grande a causa dell'inclusione dei componenti monolitici. Anche in termini di manutenibilità, i kernel ibrdii possono essere più difficil da mantener edei mircokernel perché hanno un design ed un'implementazione più complesse. Alla fine, l'utilizzo di risorse nei kernel ibridi sono più intensi dei microkernel, perché includono sia i componenti monolitici sia i microkernel.
+
+##### Exo kernel
+
+E' il tipo di kernel che segue dei principi end-to-end. Ha il minor numero di astrazioni hardware possibile. Alloca risorse fisiche alle applicazioni.
+
+I vantaggi sono in termini di flessibilità (offrono il livello più alto possibile di flessibilità, permettendo agli sviluppatopi di customizzare e dottimizzare il sistema operativo per gli specifici obiettivi dell'applcazione). In termini di performanfe, gli exokernel sono progettati per fornire performance migliori ai kenrel traidzionali percé eliminano astrazioni non necessari e permettono alle applicazioni di accedere direttamente alle risorse hardware. In termini di sicurezza, gli exokernel forniscono una migliore sicurezza rispetto ai kernel tradizionali perché opermettono un controllo più fine sull'allocazione delle risorse di sistema, come memoria e tempo CPU. INfine gli exokernel sono estremamente modulari, poeremttendo l'aggiunta o rimozione facile di servizi dei sistemi operativi.
+
+In termini di complessità, invece, gli exokernel risultano più complessi da sviluppare dei kernele tradizionali in quanot rihicedono una maggiore attenzione ai dettagli e considerazioni attente sull'allocazione delle risorse. Inoltre sviluppare applicazioni per gli exokernel è più difficile perché queste devono essere scritte in modo da accdere direttamente alle risorse harware. vi è anche un supporto limitato agli exokernel, in quanto sono ancora una tecnologia emergente e potrebbero nona vere lo stesso livello di supporto e risorse dei kernel tradizionali. Infine, effettuare il debuig di applicazioni e servizi del sistema operativo sugli exokernel potrebbe essere pià difficile a causa dell'accesso diretto alle risorse hardware.
+
+##### Nano kernel
+
+E' il tipo di kernel che offre l'astrazione dell'hardware ma senza servizi di sistema, un po' come i micro kernel, per cui sono diventati sinonimi.
+
+##### Funzzioni del kernel
+
+Il kernel è responsabile di diverse funzioni critiche che assicurano il funzionamento del sistema. Queste includono:
+
+1. gestione dei processi, ovvero scheduling ed esecuzione dei processi, context switching tra processi, creazione e terminazione dei processi
+2. gestione della memoria, ovvero allocazione e deallocazione dello spazio in memoria, gestione della memoria virtuale, gestione della protezione della memoria e condivisione
+3. gestione del dispositivo, gestendo i dispositivi di input/outpèut, fornire un'interfaccia unificata ai dispositivi hardware, e gestiere la comunciazione dei driver di dispositivo
+4. gestione del file system: gestire le operazioni sui file e in memoria, gestire il mounting e l'unmounting del file system,. fornire l'interfaccai del file system alle applcaizion.
+5. gestione risorse;: gestire le risorse di sistema come temmpo CPU, spazio su disco e banda, allocare e deallocare le risorse quanbdo ncecessario, monitorare l'utilizzo delle risorse se forzare dei limiti
+6. sicurezza e controllo degli accessi: forzare delle policy di controlloa ccessi, gestire l'autenticazione e i permessi utente, assicurare la sicurezza e l'integrità del sistema
+7. inter-processo communication, facilitando la comunciazione tra processi, e fornendo i meccanismi come il message passing e la memorai condivisa
+
+#### Fuznioanmento del kernel
+
+Un kernel è caricato in memoria immedaitamente quanod viene caricato un sistema operativo, e vi rimane fino a che questo non viene spento. E' responsabile per diversi trask come la gestione del disco e quella della memoria.
+
 <!-- https://www.geeksforgeeks.org/kernel-in-operating-system/ -->
