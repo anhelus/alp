@@ -15,7 +15,7 @@ nav:
       - 1.7.3 Proprietà delle operazioni fondamentali: material/01_intro/07_boole/03_ops_properties.md
       - 1.7.4 Leggi dell'algebra booleana: material/01_intro/07_boole/04_laws.md
   - 2. Ingegneria del software:
-    - 2.1 Introduzione all'ingegneria del software: material/02_isw/01_intro.md 
+    - 2.1 Introduzione all'ingegneria del software: material/06_isw/01_intro.md 
 
 theme:
   name: material
