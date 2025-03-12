@@ -1,150 +1,89 @@
 # 6.1 - L'Ingegneria del Software
 
-Per definire il concetto di *Ingegneria del Software* dobbiamo partire due definizioni. In primis abbiamo il concetto di *software*, inteso come:
+Avete mai scritto un programma? Se state leggendo questo documento, la risposta è, presumibilmente, *sì*. Adesso, possiamo avere diverse situazioni, sinteticamente raggruppabili in due diverse casistiche. 
+
+1. Avete scritto software abbastanza basilare, contenuto in una manciata di file sorgenti.
+2. Avete scritto anche software complesso, con dipendenze multiple, magari stipulando contratti specifici con committenti, o lavorando in un team.
+
+Nel primo caso, è probabile che siate riusciti ad organizzare il tutto semplicemente "tenendo a mente" i requisiti base del software e le relazioni che intercorrono tra funzioni, script, e via discorrendo. Nel secondo caso, invece, è plausibile che abbiate dovuto in qualche modo utilizzare tecniche e strumenti per strutturare al meglio il vostro lavoro, utilizzando magari dei processi agili, interagendo con i clienti alla scoperta dei requisiti, oppure ancora testando e manutenendo il software.
+
+E' quindi chiaro come progetti software più complessi implichino una gestione necessariamente più strutturata: in tal senso, la disciplina dell'*Ingegneria del Software* si occupa proprio di fornire gli strumenti e le tecniche necessarie a produrre software di qualità e che rispecchino i requisiti posti dall'utente. Per approfondire il concetto, dobbiamo partire da due definizioni. In primis, abbiamo il concetto di *software*:
 
 !!!quote "Il software"
-    Il *software* è un programma, o un insieme di programmi, che forniscono una o più funzioni all'utente.
+    Per software si intende un programma, o un insieme di programma, che soddisfano uno o più requisiti dell'utente.
 
-Bene, cosa intendiamo quindi per *ingegneria* o, ancora meglio, *ingegnerizzazione*?
+Abbiamo poi il concetto di *ingegneria* o, per meglio dire, *ingegnerizzazione*:
 
 !!!quote "Ingegnerizzazione"
-    L'*ingegnerizzazione* è un processo che prevede la progettazione e realizzazione di un manufatto, bene, o servizio che serve ad un particolare scopo, e trova una soluzione efficace in termini di costo ad un problema.
+    L'*ingegnerizzazione* è un processo che prevede la progettazione e realizzazione di un manufatto, bene, o servizio atto a soddisfare un particolare scopo, trovando una soluzione efficace in termini di costi ad un determinato problema.
 
-A partire da queste definizioni, possiamo definire l'*Ingegneria del Software* come il processo di progettazione, sviluppo, test e manutenzione di un softawre. L'ISW è un approccio *sistematico* e *disciplinato* allo sviluppo software, mirato alla creazione di software di alta qualità, affidabile, e manutenibile.
+L'Ingegneria del Software (ISW) è quindi il processo di progettazione, sviluppo, test e manutenzione di  un software. L'ISW è quindi un approccio *sistematico* e *disciplinato* allo sviluppo software, mirato alla creazione di software di alta qualità, affidabile e manutenibile.
 
-L'ISW è quindi un campo in rapida evoluzione, nel quale vengono costantemente sviluppati nuovi tool e tecnologie per migliroare il processo di sviluppo software. Seguendo i principi dell'ISW e questi tool e metodologie, è possibile creare software di alta qualità, affidabile e manutenibile, che rispòetti i requisiti degli utenti. Seguire l'ISW assicura inoltre che il software costruito sia consistente, corretto, e soprattutto rientri nel budiget e nel tempo richiesti.
+L'ISW è un campo in rapida evoluzione, nel quale vengono costantemente sviluppati e proposti nuovi tool e tecnologie per migliorare lo sviluppo software, utilizzando i quali è possibile creare software di alta qualità, affidabile e manutenibile, rispettando contestualmente i requisiti posti dagli utenti, creando programmi consistenti, funzionali e, soprattutto, rispettosi dei vincoli di sviluppo.
 
-Ovviamente, l'ISW è usata soprattutto per progettiu di grandi dimensioni, e perde senso se applicata ad un piccolo programma o applicazione.
+!!!warning "Le dimensioni contano"
+    Ricollegandoci a quanto abbiamo detto prima, l'ISW "mostrano i muscoli" soprattutto nel caso di progetti di grandi dimensioni, perdendo senso nel caso siano applicati a programmi "limitati".
 
-## Principi chiave dell'ISW
+##### Principi chiave dell'ISW
 
-I principi chiave dell'ISW sono:
+Riassumiamo in breve alcuni dei principi alla base dei concetti dell'ISW.
 
-1. MOdulairtà: suddividendo il softrware in componenti di piccola dimensione riutilizzabili che possono essere sviluppati e testati in maniera indipendente.
-2. Astrazione: questo prevede che i dettagli implementativi di un compolnetne siano nascosti, mostrando soltanto le funzionalità encessarie ad altre parti del softwarte.
-3. Incapsulamento: racchiuudere i dati e ele funzioni di un oggetto in una singola unità, proteggendo lo stanto interno di un oggetto dalle modifiche esterne.
-4. Riutilizzabvilità, ovvero creare componenti che possono essere usati in più progetti, conseguentemente risparmiando tepo e riisorse.
-5. Manutenibilità, ovvero aggiornare e migliroare il software con regoalrità per risolvere bug, aggiungere nuove feature,e risolvere vulnerabilità.
-6. Testing: veriuficare chje il software rispetti i requisiti indicati e sia scevro da bug.
-7. Design patterns: risolòvere problemi ricorrenti della progettazione del software fornendo dei template per risolverli.
-8. Metodologie agile: usare processi di sviluppo iteratrivo ed incrementale che si focalizzano sulla soddisfazione utente, consegna rapida di nuove versioni e flessibilità.
-9. Integrazione e sviluppo continui: integrare continuamente i cambi del codice e rilasciarli in ambiente di produzione.
+| Principio | Breve descrizione |
+| --------- | ----------------- |
+| **Modularità** | Suddividere il software in componenti di piccola dimensione, sviluppabili, testabili e, soprattutto, riutilizzabili in maniera indipendente. |
+| **Astrazione** | Nascondere i dettagli implementativi di ciascun componente software, esponendo agli altri componenti soltanto le funzionalità necessarie. |
+| **Incapsulamento** | Racchiudere i dati e le funzioni di un oggetto in una singola unità, proteggendone lo stato interno da interferenze esterne. |
+| **Riutilizzabilità** | Creare componenti che possano essere utilizzati in più progetti, risparmiando di conseguenza tempo e risorse. |
+| **Manutenibilità** | Aggiornare e migliorare il software in maniera regolare, allo scopo di risolvere bug, aggiungere nuove feature, e risolvere eventuali vulnerabilità. |
+| **Test** | Verificare che il software rispetti i requisiti indicati, e risulti essere scevro da bug. |
+| **Design pattern** | Proporre dei pattern per la soluzione di problemi ricorrenti della progettazione del software. |
+| **Sviluppo Agile** | Usare processi di sviluppo iterativi ed incrementali, focalizzandosi su soddisfazione dell'utente, rilascio rapido di nuove versioni e flessibilità. |
+| **Integrazione continua** | Integrare in maniera rapida e continua i cambiamenti nel sorgente, rilasciandoli il prima possibile in ambiente di produzione. |
 
-L'ISW è quindi un approccio sistematico, disciplinato e quantificabile al design, sviluppo, funzionamento e manutenzione di un sistema osftwarew. QVis ono quattro attributi per la ISW:
+##### Obiettivi dell'ISW
 
-1. Efficienza: fornisce una misura dei requisiti in termini di risorse di un prodotto software efficiente.
-2. Affidabilità: si assicura che il prodotto diua lo stesso risultato quando usato in simili ambienti di lavoro:;
-3. riutilizzabilità: questo mattributo si assicuar che il modulo possa essere ustao in aplpicazioni multipel
-4. manutenibilità: abilità del software di essere modificato, riparato o migliroato facliklmente con requisiti cangianti
+Possiamo anche definire una serie di obiettivi che l'ISW vuole peseguire.
 
-## Ruolo duale del software
+| Obiettivo | Breve descrizione |
+| --------- | ----------------- |
+| **Manutenibilità** | Il software dovrebbe poter evolvere rispettando requisiti mutevoli nel tempo. |
+| **Efficienza** | Il software non dovrebbe usare in maniera inefficace le capacità di calcolo dei dispositivi utilizzati. |
+| **Correttezza** | Il software dovrebbe rispettare i requisiti specificati dai suoi utilizzatori. |
+| **Riusabilità** | Il software dovrebbe essere suddiviso in moduli, i quali dovrebbero essere facilmente riutilizzati allo scopo di sviluppare nuovi prodotti software. |
+| **Testabilità** | Il software dovrebbe essere progettato per facilitare cicli di test per valutare il rispetto dei requisiti e delle funzionalità. |
+| **Affidabilità** | Il software dovrebbe essere in grado di svolgere i suoi compiti prefissati in un certo periodo di tempo. |
+| **Portabilità** | Il software dovrebbe poter essere trasferito in maniera semplice da un sistema ad un altro. |
+| **Adattabilità** | Il software dovrebbe garantire il rispetto di vincoli di sistema ed utente anche nel caso di modifiche sostanziali. |
+| **Interoperabilità** | Diverse unità funzionali del software dovrebbero essere in grado di elaborare i dati in maniera cooperativa e non concorrente. |
 
-C'è un ruolo duale del software nell'industria. Il primo è un  prpdotto, mentre l'altro è un veicolo per consegnare il prodtoto. Vediamoli assieme.
+##### Programmi e software
 
-1. Come prodotto
+Quando parliamo di *programma* non parliamo necessariamente di (prodotto) *software*. Infatti, possiamo definire il programma come un insieme di istruzioni date ad un computer per svolgere un compito specifico; invece, il software è un programma reso disponibile per scopi solitamente commerciali, documentato, e fornito di un'apposita licenza. Di conseguenza, possiamo affermare che il programma è uno degli step nello sviluppo del software.
 
-Fornisce del potentziale di computation tra reti di hardwre
+##### Vantaggi e svantaggi dell'ISW
 
-permette all'hardware di dare la funzionalità attesa
+I vantaggi nell'uso di un approccio sistematico e disciplinato allo sviluppo del software sono:
 
-agisce come trasformatore di infoprmazione, perché produce, gestisce, acquisisce, modifcia, visualizaz o trasmette informazione
+| Vantaggio | Breve descrizione |
+| --------- | ----------------- |
+| **Qualità** | Seguire i principi dell'ISW permette di ottenere software con un numero limitato di bug ed un'affidabilità più elevata. |
+| **Produttività** | L'utilizzo di strumenti e metodologie moderne può rendere più lineare il processo di sviluppo, aumentando quindi la produttività degli sviluppatori. |
+| **Manutenibilità** | Il software progettato e sviluppato usando le pratiche dell'ISW è più facile da manutenere ed aggiornare nel tempo. |
+| **Riduzione dei costi** | Identificando e risolvendo i potenziali problemi nei primi stage del processo di sviluppo, l'ISW può aiutare a ridurre il costo nel tempo legato all'introdurre nuove feature e risolvere bug. |
+| **Soddisfazione utente** | Coinvolgendo gli utenti nel processo di sviluppo, e creando del software che rispetta le loro necessità, l'ISW può aumentare la soddisfazione utente. |
+| **Collaborazione** | L'uso dell'approccio agile e dell'integrazione continua permette ai team di collaborare al meglio. |
+| **Scalabilità** | Un software progettato per essere scalabile può gestire un numero variabile di utenti e transazioni. |
+| **Sicurezza** | Un software opportunamente testato secondo i principi definiti dall'ISW è spesso meno vulnerabile e più sicuro. |
 
-Come veicolo per consegnare un prodtotto
+Per ciò che riguarda gli svantaggi invece:
 
-fornisce delle funzionalità di sistema (payroll system)
-
-controlla altri software (sistema operativo)
-
-aiutra a costruire altri software (strumenti software)
-
-## Obiettivi dell'ISW
-
-1. manutenibilità: dovrebbe essere fattibile per il softawre evolvere per rispettare dei requisiti cangianti
-2. Efficienza: il software non dovrebbe usare in maneira sprecona i dispositivi di comptuazione come la memoria o i cicli di processore
-3. correttezza. un softarwe è corretto se i diversi requisiti specificati nel documento SRS (Software REquirement SPeciifcation) sono stati correttamente implementati
-4. Riiusabilità: un prodotto software ha una buona riusabilità se diversi moduli del prodotto possono essere facilmente risuati per sviluppare nuovi prodotti
-5. testabilità: il software facilita lo stabilire rcirri di test e la valutaizone dlw software che riguarda questic riteri
-6. affdibalità: è un atrributo della qualità software. in pratica è la quantificazione di quanto iun programma può effettaure la sua funzione desidderata in un periodo di tempo arbitarrio
-7. portabilità: in questo caso, il software può essere trasferito da un sistema o ambiente ad un altro
-8. adattabilòità: in questo caso, il sosftware permette a diversi vincoli di sistema e all'uitente di essere soddisfatti facendo cambi al softweare
-9. interoprerabilità: capacità di due o più unitaà funzioanli di elabroare i dati in maniera cooperativa
-
-<!-- https://www.geeksforgeeks.org/software-engineering-introduction-to-software-engineering/?ref=header_outind -->
-
-## Programma vs prodotto software
-
-| Parametro | Programma | Prodotto software |
-| --------- | --------- | ----------------- |
-| Definizione | Insieme di istruzioni date ad un computer per svolgere uno specifico compito | Un softawre è un programma reso disponibile per qualche scopo di tipo solitamente commerciale, documentato e concesso in licenza |
-| Stage | Il programma è uno degli stage nello sviluppo del software | IL software development segue un ciclo di vita, che prevede lo studio di fattibilità del progetto, la raccolta dei rquisiti, lo sviluppo di un protoctipo, il desgin, la codifica ed il testing. |
-
-
-Advantages of Software Engineering
-There are several advantages to using a systematic and disciplined approach to software development, such as:
-
-Improved Quality: By following established software engineering principles and techniques, the software can be developed with fewer bugs and higher reliability.
-Increased Productivity: Using modern tools and methodologies can streamline the development process, allowing developers to be more productive and complete projects faster.
-Better Maintainability: Software that is designed and developed using sound software engineering practices is easier to maintain and update over time.
-Reduced Costs: By identifying and addressing potential problems early in the development process, software engineering can help to reduce the cost of fixing bugs and adding new features later on.
-Increased Customer Satisfaction: By involving customers in the development process and developing software that meets their needs, software engineering can help to increase customer satisfaction.
-Better Team Collaboration: By using Agile methodologies and continuous integration, software engineering allows for better collaboration among development teams.
-Better Scalability: By designing software with scalability in mind, software engineering can help to ensure that software can handle an increasing number of users and transactions.
-Better Security: By following the Software Development Life Cycle (SDLC) and performing security testing, software engineering can help to prevent security breaches and protect sensitive data.
-In summary, software engineering offers a structured and efficient approach to software development, which can lead to higher-quality software that is easier to maintain and adapt to changing requirements. This can help to improve customer satisfaction and reduce costs, while also promoting better collaboration among development teams.
-
-Disadvantages of Software Engineering
-While Software Engineering offers many advantages, there are also some potential disadvantages to consider:
-
-High upfront costs: Implementing a systematic and disciplined approach to software development can be resource-intensive and require a significant investment in tools and training.
-Limited flexibility: Following established software engineering principles and methodologies can be rigid and may limit the ability to quickly adapt to changing requirements.
-Bureaucratic: Software Engineering can create an environment that is bureaucratic, with a lot of processes and paperwork, which may slow down the development process.
-Complexity: With the increase in the number of tools and methodologies, software engineering can be complex and difficult to navigate.
-Limited creativity: The focus on structure and process can stifle creativity and innovation among developers.
-High learning curve: The development process can be complex, and it requires a lot of learning and training, which can be challenging for new developers.
-High dependence on tools: Software engineering heavily depends on the tools, and if the tools are not properly configured or are not compatible with the software, it can cause issues.
-High maintenance: The software engineering process requires regular maintenance to ensure that the software is running efficiently, which can be costly and time-consuming.
-Conclusion:
-In summary, software engineering can be expensive and time-consuming, and it may limit flexibility and creativity. However, the benefits of improved quality, increased productivity, and better maintainability can outweigh the costs and complexity. It’s important to weigh the pros and cons of using software engineering and determine if it is the right approach for a particular software project.
-
-## Domande
-
-Questions For Practice
-1. A software configuration management tool helps in:
-(A) keeping track of the schedule based on the milestone reached
-
-(B) maintaining different versions of the configurable items
-
-(C) managing manpower distribution by changing the project structure
-
-(D) all of the above
-
-Solution: Correct Answer is (B).
-
-2. Which of the following statements is/are true?
-P: Software Reengineering is preferable for software products having high failure rates, poor design, and/or poor code structure.
-
-Q: Software Reverse Engineering is the process of analyzing software with the objective of recovering its design and requirement specification.
-
-(A) P only
-
-(B) Neither P nor Q
-
-(C) Q only
-
-(D) Both P and Q
-
-Solution: Correct Answer is (D).
-
-3. The diagram that helps in understanding and representing user requirements for a software project using UML (Unified Modeling Language) is:
-(A) Entity Relationship Diagram
-
-(B) Deployment Diagram
-
-(C) Data Flow Diagram
-
-(D) Use Case Diagram
-
-Solution: Correct Answer is (D).
-
-Conclusion
-Software engineering is a key field that involves creating and maintaining software. It combines technical skills, creativity, and problem-solving. As technology advances, the need for software engineers increases, making it a great career choice. Whether you’re new to the field or want to learn more, understanding software engineering is crucial. Keep exploring, learning, and enjoying the challenges and opportunities this field offers.
+| Svantaggio | Breve descrizione |
+| ---------- | ----------------- |
+| **Costi iniziali** | Implementare un approccio sistematico e disciplinato allo sviluppo può richiedere parecchie risorse, oltre che un investimento significativo in termini di strumentazione e training. |
+| **Flessibilità** | Seguire dei principi prestabiliti può comportare delle rigidità, limitando in alcune situazioni il rapido adattamento a requisiti mutevoli. |
+| **Burocrazia** | Usare l'ISW può creare un ambiente burocratizzato, in cui è necessario redigere un gran numero di documenti, il che può rallentare lo sviluppo. |
+| **Complessità** | Con l'aumento del numero di strumenti e meotodologie, i principi dell'ISW può diventare complessa e difficile da gestire. |
+| **Creatività** | Il focus sul processo di sviluppo può limitare la creatività e l'innovazione. |
+| **Curva di apprendimento** | Il processo di sviluppo può essere complesso e richiede l'apprendimento di numerosi strumenti. |
+| **Dipendenza dai tool** | L'ISW fa largo affidamento a degli strumenti che, se non propriamente  configurati o incompatibili con il software in uso, possono causare diversi problemi. |
+| **Manutenzione** | I processi alla base dell'ISW richiedono una manutenzione regolare per assicurarsi che il software venga eseguito in maniera efficiente. |
