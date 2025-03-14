@@ -14,8 +14,14 @@ nav:
       - 1.7.2 Operazioni fondamentali: material/01_intro/07_boole/02_ops.md
       - 1.7.3 Proprietà delle operazioni fondamentali: material/01_intro/07_boole/03_ops_properties.md
       - 1.7.4 Leggi dell'algebra booleana: material/01_intro/07_boole/04_laws.md
+  # - 2. Programmare:
+  #   - 2.1 Gli algoritmi: material/02_programmi/01_algorithms/lecture.md
+  # Nota: cambiare anche la numerazione all'interno del file md
   - 2. Ingegneria del software:
     - 2.1 Introduzione all'ingegneria del software: material/06_isw/01_intro.md 
+    - 2.2 Classificazione del software: material/06_isw/02_classification.md
+    - 2.3 Caratteristiche del software: material/06_isw/03_characteristics.md
+    - 2.4 Qualità del software: material/06_isw/04_quality.md
 
 theme:
   name: material

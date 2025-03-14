@@ -1,4 +1,4 @@
-# 1 - Introduzione all'informatica
+# 1.1 - Introduzione all'informatica
 
 ## Una definizione di Informatica
 

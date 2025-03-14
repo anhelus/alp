@@ -1,4 +1,4 @@
-# 7.2 - Le operazioni fondamentali dell'algebra booleana
+# 1.7.2 - Le operazioni fondamentali dell'algebra booleana
 
 Le tre operazioni fondamentali dell'algebra di Boole sono quelle di $AND$, $OR$ e $NOT$. Queste operazioni ci permettono di verificare la veridicità di predicati composti di complessità arbitraria: ad esempio, nel caso [visto in precedenza](01_intro.md), i tre predicati semplici sono combinati tra loro utilizzando una regola di tipo $AND$.
 

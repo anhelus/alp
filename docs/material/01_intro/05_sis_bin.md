@@ -1,4 +1,4 @@
-# 5 - Sistema binario
+# 1.5 - Sistema binario
 
 Nella [precedente lezione](04_num_sis.md) abbiamo introdotto il concetto di sistema di numerazione, parlando in maniera approfondita di sistema addizionale e sistema posizionale, facendo quindi l'esempio di numeri romani ed arabi, rispettivamente.
 

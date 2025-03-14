@@ -1,4 +1,4 @@
-# 4 - Sistemi di numerazione
+# 1.4 - Sistemi di numerazione
 
 Nella [precedente lezione](03_dig_an.md) abbiamo visto la differenza tra codifica analogica e digitale, ma non abbiamo parlato di un aspetto fondamentale, ovvero del sistema da utilizzare, nei fatti, per rappresentare le nostre informazioni.
 

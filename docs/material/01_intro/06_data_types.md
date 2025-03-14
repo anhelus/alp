@@ -1,4 +1,4 @@
-# 6 - Dimensione dei dati
+# 1.6 - Dimensione dei dati
 
 Nella [lezione precedente](05_sis_bin.md) abbiamo accennato al fatto che i calcolatori hanno a disposizione una word la cui dimensione dipende dall'architettura del processore; ciò implica che ogni tipo di dato (cui abbiamo [già accennato](02_data_repr.md)) avrà una dimensione prefissata. Scendiamo più nel dettaglio.
 

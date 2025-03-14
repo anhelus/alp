@@ -1,4 +1,4 @@
-# 7.4 - Leggi dell'algebra booleana
+# 1.7.4 - Leggi dell'algebra booleana
 
 Nella [scorsa lezione](03_ops_properties.md) abbiamo esplicitato le più importanti proprietà delle operazioni fondamentali dell'algebra booleana. Vediamo quindi quali sono alcune tra le leggi fondamentali che governano questa disciplina.
 

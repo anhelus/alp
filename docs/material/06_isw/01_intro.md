@@ -1,4 +1,4 @@
-# 6.1 - L'Ingegneria del Software
+# 2.1 - L'Ingegneria del Software
 
 Avete mai scritto un programma? Se state leggendo questo documento, la risposta è, presumibilmente, *sì*. Adesso, possiamo avere diverse situazioni, sinteticamente raggruppabili in due diverse casistiche. 
 

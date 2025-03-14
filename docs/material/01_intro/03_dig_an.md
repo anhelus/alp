@@ -1,4 +1,4 @@
-# 3 - Codifica analogica e digitale
+# 1.3 - Codifica analogica e digitale
 
 Nella [lezione precedente](03_dig_an.md) abbiamo introdotto i diversi tipi di dato che possono essere sfruttati per la rappresentazione dell'informazione. Abbiamo però accennato anche ad un limite intrinseco di questa rappresentazione, ovvero la necessità di poterla rappresentare *all'interno di un calcolatore reale*.
 
