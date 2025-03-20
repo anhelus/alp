@@ -1,1 +1,0 @@
-https://www.geeksforgeeks.org/software-engineering-software-characteristics/?ref=next_article_top
