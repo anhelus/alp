@@ -106,7 +106,7 @@ b = 8 bit \Rightarrow \\
 \Rightarrow C_S(X) = C_{S_F}(C) + C_{S_V}(C) = (1 + 3) \cdot 8 = 32 bit
 $$
 
-### 9.3.2 - Complessità temporale
+### Complessità temporale
 
 Abbiamo già visto come la complessità temporale di un algoritmo risulti essere associata alla quantità di tempo richiesto ad una completa esecuzione dello stesso. Anche questa complessità può essere espressa da una funzione numerica del tipo:
 

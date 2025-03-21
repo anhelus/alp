@@ -57,7 +57,7 @@ $$
 \Rightarrow (n-1)! * n = n! \Rightarrow \\
 $$
 
-#### 11.1.2.1 - Caso base e ricorsione
+#### Caso base e ricorsione
 
 Risulta quindi che:
 

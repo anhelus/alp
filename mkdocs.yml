@@ -15,7 +15,7 @@ nav:
       - 1.7.3 Proprietà delle operazioni fondamentali: material/01_intro/07_boole/03_ops_properties.md
       - 1.7.4 Leggi dell'algebra booleana: material/01_intro/07_boole/04_laws.md
   - 2. Principi di programmazione:
-    - 2.1 Gli algoritmi: material/02_programming/01_algorithms/lecture.md
+    # - 2.1 Gli algoritmi: material/02_programming/01_algorithms/lecture.md
     - 2.2 La programmmazione strutturata: 
       - 2.2.1 Introduzione: material/02_programming/02_structured/01_intro/lecture.md
       - 2.2.2 I diagrammi di flusso: material/02_programming/02_structured/02_flow_charts/lecture.md
@@ -44,12 +44,12 @@ nav:
   # - 5 - Sistemi operativi:
   #   - 5.1 Introduzione ai sistemi operativi: material/05_os/01_intro/lecture.md
   #   - 5.2 Il Kernel: material/05_os/02_kernel/lecture.md
-  - 6 Ingegneria del software:
-    - 6.1.1 Introduzione all'ingegneria del software: material/06_isw/01_intro/01_intro.md 
-    - 6.1.2 Classificazione del software: material/06_isw/01_intro/02_classification.md
-    - 6.1.3 Caratteristiche del software: material/06_isw/01_intro/03_characteristics.md
-    - 6.1.4 Qualità del software: material/06_isw/01_intro/04_quality.md
-    - 6.1.5 Requisiti del software: material/06_isw/01_intro/05_requirements.md
+  # - 6 Ingegneria del software:
+  #   - 6.1.1 Introduzione all'ingegneria del software: material/06_isw/01_intro/01_intro.md 
+  #   - 6.1.2 Classificazione del software: material/06_isw/01_intro/02_classification.md
+  #   - 6.1.3 Caratteristiche del software: material/06_isw/01_intro/03_characteristics.md
+  #   - 6.1.4 Qualità del software: material/06_isw/01_intro/04_quality.md
+  #   - 6.1.5 Requisiti del software: material/06_isw/01_intro/05_requirements.md
 
 theme:
   name: material
