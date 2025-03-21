@@ -1,4 +1,4 @@
-# 7 - Le variabili
+# 2.4 Le variabili
 
 Comprendere il concetto di *variabile* è fondamentale (o, per meglio dire, *propedeutico*) all'acquisizione dei fondamentali della programmazione.
 
@@ -9,7 +9,7 @@ Una variabile può essere quindi qualsiasi dato contenuto nel nostro programma: 
 !!!note "Nota"
     Non tutti i dati contenuti in un programma sono delle variabili: esistono anche delle *costanti*, che si differenziano dalle variabili per la caratteristica di *non* poter variare durante l'esecuzione del programma. Di solito, le costanti vengono utilizzate per modellare valori ben definiti, come ad esempio il $\pi$.
 
-## 7.1 - Dichiarare ed inizializzare una variabile
+## Dichiarare ed inizializzare una variabile
 
 Per poter utilizzare una variabile all'interno del nostro programma dovremo seguire due step fondamentali, *indipendentemente dal linguaggio di programmazione scelto*. In particolare:
 
@@ -37,7 +37,7 @@ type identifier = value;
 !!!note "Nota"
     Vedremo un gran numero di esempi pratici di dichiarazione ed inizializzazione.
 
-## 7.2 - Identificatore della variabile
+## Identificatore della variabile
 
 In genere, la scelta dell'identificatore da associare ad una variabile lascia vasta libertà di scelta al programmatore. Tuttavia, occorre tenere a mente che, indipendentemente dal linguaggio, non sarà possibile usare come identificatore una keyword (ad esempio, non è possibile chiamare una variabile `if` o `long`); inoltre, è fortemente consigliato attenersi allo *styling code* del linguaggio.
 
@@ -56,9 +56,9 @@ integer_variable = 1
 !!!note "Sulla scelta del nome"
     La scelta del nome da assegnare ad una variabile *non* è casuale. Il suggerimento è quello di assegnare nomi *esplicativi*, oltre che *univoci*: ad esempio, un contatore chiamato `cnt` sarà sicuramente più riconoscibile di un contatore chiamato `pippo_joy`.
 
-## 7.3 - Tipo della variabile
+## Tipo della variabile
 
-Il tipo della variabile definisce il tipo di dato associato alla stessa; come abbiamo visto nella [lezione 4](../../01_intro/04_data_type/lecture.md), quindi, ciò influenzerà il range di valori che questa può rappresentare. Ponderare adeguatamente il tipo di dato da usare per una variabile è quindi *estremamente importante*, principalmente per due ragioni:
+Il tipo della variabile definisce il tipo di dato associato alla stessa; come abbiamo visto nella [lezione 4](../07_data_structures/01_intro/lecture.md), quindi, ciò influenzerà il range di valori che questa può rappresentare. Ponderare adeguatamente il tipo di dato da usare per una variabile è quindi *estremamente importante*, principalmente per due ragioni:
 
 1. *flusso logico*;
 2. *complessità computazionale spaziale*.

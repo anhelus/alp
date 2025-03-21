@@ -115,7 +115,6 @@ Per semplicità, comunque, partiremo vedendo l'applicazione della BFS sugli albe
 
 Visualizzare l'applicazione della BFS su un albero è molto semplice. Supponiamo di dover considerare il seguente albero.
 
-![starting_tree](../../assets/images/05_algoritmi/06_bfs/starting_tree.png# images)
 
 La BFS opera considerando due parametri:
 

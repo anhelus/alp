@@ -1,10 +1,10 @@
-# 13 - Ancora sulle strutture dati
+# 2.7.2 Strutture dati avanzate
 
 In questa lezione, vedremo prima come progettare una pila ed una coda come degli array, per poi passare a presentare un altro tipo di strutture dati estremamente utilizzate, ovvero *grafi* ed *alberi*.
 
-## 13.1 - Pila come array
+## Pila come array
 
-### 13.1.1 - Variabili da utilizzare
+### Variabili da utilizzare
 
 Proviamo adesso ad implementare una pila utilizzando un array. Per farlo, avremo bisogno di tre elementi:
 
@@ -17,7 +17,7 @@ Da qui consegue che:
 * lo `stack` è pieno quando `top` è pari a `capacity`;
 * lo `stack` è vuoto quando `top` è pari a `0`.
 
-### 13.1.2 - Operazioni di `push` e `pop`
+### Operazioni di `push` e `pop`
 
 Ricordiamo che lo stack segue una strategia LIFO, per cui una `push` prevede che sia inserito un nuovo elemento nella parte superiore dell'array (ovvero, all'indice `top`). Quindi:
 
@@ -55,9 +55,9 @@ Ciò implica che:
 * allo `STEP 3` il valore di `top` viene ridotto di uno;
 * allo `STEP 4` viene restituito il valore estratto dallo `stack`.
 
-## 13.2 - Coda come array
+## Coda come array
 
-### 13.2.1 - Variabili da utilizzare
+### Variabili da utilizzare
 
 Anche in questo caso dovremo usare tre diversi elementi:
 
@@ -67,7 +67,7 @@ Anche in questo caso dovremo usare tre diversi elementi:
 
 Ovviamente, come nel caso precedente, se `first` è uguale a `capacity` allora la coda è piena.
 
-### 13.2.2 - Operazioni di enqueue e dequeue
+### Operazioni di enqueue e dequeue
 
 Ricordiamo che la strategia seguita da una coda è di tipo FIFO, per cui dovremo definire i metodi `enqueue` e `dequeue`.
 
@@ -103,7 +103,7 @@ In altre parole:
 * allo `STEP 1` viene rimosso il primo elemento dalla coda;
 * allo `STEP 2` il valore di first viene aggiornato, assegnandovi quello associato all'elemento immediatamente precedente.
 
-## 13.3 - Grafi
+## Grafi
 
 Il concetto di grafo può essere compreso in maniera intuitiva partendo da quelli che sono i nostri contatti sulle reti sociali (possiamo tranquillamente pensare a Facebook).
 
@@ -117,7 +117,7 @@ Questo modo di schematizzare una rete sociale avviene mediante una struttura not
 
 Formalmente, un grafo è definito come una coppia $G=(V, E)$, dove $V$ è l'insieme dei *vertici*, o *nodi* (quelli che abbiamo prima chiamato "punti"), mentre $E$ è l'insieme degli *archi*, o *lati* che connette detti vertici (le "linee"). Interessante notare come un arco possa essere rappresentato mediante i nodi che connette: infatti, si può dire che l'arco che connette i vertici $u$ e $v$ è descrivibile mediante la coppia $(u, v)$.
 
-### 13.3.1 - Grafi diretti e non diretti
+### Grafi diretti e non diretti
 
 Nell'esempio precedente, abbiamo visto come le relazioni all'interno di un social network siano perlopiù bidirezionali. Non è quindi possibile individuare una direzione "specifica" nell'arco che collega due nodi: l'arco che collega i nodi $u$ e $v$ può essere inteso sia come un collegamento che da $u$ va verso $v$, sia, al contrario, come un collegamento che va da $v$ verso $u$. Una situazione di questo tipo implica la presenza di un grafo *non diretto*. In un grafo non diretto l'arco $(u, v)$ coincide quindi con l'arco $(v, u)$.
 
@@ -143,7 +143,7 @@ Per un grafo diretto dovremo ridefinire il concetto di *grado*, separandolo in d
 !!!info "Grado interno"
 	Si definisce *grado interno*, o *in-degree*, di un vertice $u$ il numero di archi in ingresso su $u$.
 
-### 13.3.2 - Cammini e cicli
+### Cammini e cicli
 
 Prendendo una licenza ed usando un "gioco di parole", immaginiamo di voler contattare il contatto di un nostro contatto. Per farlo, potremmo semplicemente chiedere al nostro amico di presentarci il suo amico il quale, ovviamente, non ha un collegamento diretto con noi, ma che risulta essere in qualche modo "raggiungibile": esiste, quindi, un *percorso* o, più propriamente, un *cammino*, che mette in relazione noi con la nostra conoscenza futura.
 
@@ -157,7 +157,7 @@ Definiamo inoltre altre due condizioni.
 !!!info "Connessione del grafo"
 	Un grafo si dice connesso quando esiste almeno un percorso che colleghi due nodi $(u, v)$, $\forall (u, v) \in V$.
 
-#### 13.3.2.1 - Un esempio
+#### Un esempio
 
 Facciamo un esempio pratico. Immaginiamo che Bob voglia conoscere Eric; come è possibile notare, non esiste alcun grafo che li collega. Tuttavia, Bob ha due strade: la prima è quella di chiedere ad Alice di presentargli Charlie, che potrebbe a sua volta introdurgli Eric. La seconda, invece, prevede che Bob si metta in contatto con David, che potrà direttamente introdurgli Eric.
 
@@ -167,7 +167,7 @@ Abbiamo quindi individuato due cammini tra Bob ed Eric, di cui uno (quello che p
 
 Per quello che riguarda i cicli, quello che va da Alice verso Bob verso David e torna poi ad Alice è da considerarsi appunto come tale.
 
-### 13.3.3 - Grafo pesato
+### Grafo pesato
 
 E' possibile che a tutti gli archi di un grafo sia associato un *peso*, ovvero un valore numerico. In uno degli esempi precedenti, ovvero quello delle vie e degli incroci, potremmo associare ad ogni strada un numero indicativo della sua lunghezza in metri:
 
@@ -175,7 +175,7 @@ E' possibile che a tutti gli archi di un grafo sia associato un *peso*, ovvero u
 
 Un grafo i cui archi hanno dei pesi è chiamato *grafo pesato*. Ovviamente, per trovare il cammino minimo in un grafo di questo tipo, dovremo tenere conto del valore dei pesi: nella figura precedente, infatti, TODO: esempio
 
-## 13.4 - Alberi
+## Alberi
 
 Un concetto *cugino* di quello di grafo è quello di *albero*, struttura dati particolarmente usata soprattutto in ambito informatico, che permette di modellare una struttura gerarchica fatta di un nodo radice e di una serie di nodi figli, fino ai nodi *foglia*, ovvero quelli che non hanno ulteriori successori.
 

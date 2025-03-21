@@ -1,4 +1,4 @@
-# 2.1 - Introduzione agli algoritmi
+# 2.1 Introduzione agli algoritmi
 
 In questa sezione discuteremo uno degli strumenti fondamentali dell'informatica, ma non solo: gli *algoritmi*.
 

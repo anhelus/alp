@@ -1,4 +1,4 @@
-# 14.2 - Bubble sort
+# 3.1.2 Bubble sort
 
 ## Idea di base
 

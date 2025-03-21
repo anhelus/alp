@@ -1,4 +1,4 @@
-# 6 - La Programmazione Strutturata
+# 2.2.1 La Programmazione Strutturata
 
 Ai più "esperti" tra i lettori sarà capitato di leggere del codice prodotto negli anni '70 ed '80, in linguaggi come il BASIC, simile a qualcosa di questo tipo:
 

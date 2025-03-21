@@ -19,31 +19,31 @@ nav:
     - 2.2 La programmmazione strutturata: 
       - 2.2.1 Introduzione: material/02_programming/02_structured/01_intro/lecture.md
       - 2.2.2 I diagrammi di flusso: material/02_programming/02_structured/02_flow_charts/lecture.md
-      - 2.2.3 Pseudocodice: material/02_programming/02_structured/03_pseudocode/lecture.md
+      # - 2.2.3 Pseudocodice: material/02_programming/02_structured/03_pseudocode/lecture.md
     - 2.3 La ricorsione: material/02_programming/03_recursion/lecture.md
     - 2.4 Le variabili: material/02_programming/04_variables/lecture.md
     - 2.5 Le funzioni:
       - 2.5.1 Introduzione: material/02_programming/05_functions/01_intro/lecture.md
-      - 2.5.2 Parametri formali ed attuali: material/02_programming/05_functions/02_parameters/lecture.md
-      - 2.5.3 Funzioni e procedure: material/02_programming/05_functions/03_procedures/lecture.md
+      # - 2.5.2 Parametri formali ed attuali: material/02_programming/05_functions/02_parameters/lecture.md
+      # - 2.5.3 Funzioni e procedure: material/02_programming/05_functions/03_procedures/lecture.md
     - 2.6 Complessità computazionale: material/02_programming/06_complexity/lecture.md
     - 2.7 Strutture dati:
-      - 2.7.1 Strutture dati normmali: material/02_programming/07_data_structures/01_intro/lecture.md
+      - 2.7.1 Strutture dati base: material/02_programming/07_data_structures/01_intro/lecture.md
       - 2.7.2 Strutture dati avanzate: material/02_programming/07_data_structures/02_advanced/lecture.md
     - 2.8 Paradigmi di programmazione: material/02_programming/08_paradigms/lecture.md
   - 3. Algoritmi:
     - 3.1 Algoritmi di ordinammento:
       - 3.1.1 Selection sort: material/03_algorithms/01_sorting/01_selection/lecture.md
-      - 3.1.2 Bubble sort: material/03_algorithms/01_sorting/02_bubble/lecture.md
-      - 3.1.3 Insertion sort: material/03_algorithms/01_sorting/03_insertion/lecture.md
-    - 3.2 Algoritmi di ricerca:
-      - 3.2.1 Ricerca lineare: material/03_algorithms/02_search/01_linear/lecture.md
-      - 3.2.2 Ricerca binaria: material/03_algorithms/02_search/02_binary/lecture.md
-  - 4. Architettura dei calcolatori:
-    - 4.1 L'architettura di Von Neumann: material/04_architecture/01_von_neumann/lecture.md 
-  - 5 - Sistemi operativi:
-    - 5.1 Introduzione ai sistemi operativi: material/05_os/01_intro/lecture.md
-    - 5.2 Il Kernel: material/05_os/02_kernel/lecture.md
+      # - 3.1.2 Bubble sort: material/03_algorithms/01_sorting/02_bubble/lecture.md
+      # - 3.1.3 Insertion sort: material/03_algorithms/01_sorting/03_insertion/lecture.md
+    # - 3.2 Algoritmi di ricerca:
+    #   - 3.2.1 Ricerca lineare: material/03_algorithms/02_search/01_linear/lecture.md
+    #   - 3.2.2 Ricerca binaria: material/03_algorithms/02_search/02_binary/lecture.md
+  # - 4. Architettura dei calcolatori:
+  #   - 4.1 L'architettura di Von Neumann: material/04_architecture/01_von_neumann/lecture.md 
+  # - 5 - Sistemi operativi:
+  #   - 5.1 Introduzione ai sistemi operativi: material/05_os/01_intro/lecture.md
+  #   - 5.2 Il Kernel: material/05_os/02_kernel/lecture.md
   - 6 Ingegneria del software:
     - 6.1.1 Introduzione all'ingegneria del software: material/06_isw/01_intro/01_intro.md 
     - 6.1.2 Classificazione del software: material/06_isw/01_intro/02_classification.md

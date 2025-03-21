@@ -1,12 +1,12 @@
-# 10 - Strutture dati
+# 2.7.1 Strutture dati base
 
-Nelle [lezioni precedenti](../08_functions/lecture.md) abbiamo ad un certo punto parlato di "insieme" dei voti relativi ai nostri esami, senza però ben specificare come rappresentarlo con i concetti a nostra disposizione. Se ci pensiamo, infatti, non abbiamo (apparentemente) strumenti per rappresentare degli insiemi: non possiamo certamente utilizzare un singolo dato numerico, così come neanche un dato booleano o un carattere.
+Nelle [lezioni precedenti](../../05_functions/01_intro/lecture.md) abbiamo ad un certo punto parlato di "insieme" dei voti relativi ai nostri esami, senza però ben specificare come rappresentarlo con i concetti a nostra disposizione. Se ci pensiamo, infatti, non abbiamo (apparentemente) strumenti per rappresentare degli insiemi: non possiamo certamente utilizzare un singolo dato numerico, così come neanche un dato booleano o un carattere.
 
 Per risolvere questo problema (e, in realtà, mille altri) dobbiamo utilizzare una serie di concetti che vanno sotto il nome collettivo di *strutture dati*, ovvero dei costrutti progettati per organizzare e gestire un insieme di valori nella maniera più efficiente possibile.
 
 Esistono diversi tipi di struttura dati, ognuno dei quali adatto ad un determinato scopo. Vediamo quelli più diffusi.
 
-## 10.1 - Array
+## Array
 
 La maniera più rapida di rappresentare i nostri voti è quella di immaginarli come un vettore di numeri interi; per far questo esiste una struttura dati apposita chiamata *array*.
 
@@ -27,7 +27,7 @@ In particolare, il precedente array è composto da elementi di tipo intero, ed h
 
 ![array](./images/array.png){: .center}
 
-## 10.2 - Liste
+## Liste
 
 Una *lista*, conosciuta anche con il nome di *linked list*, è una struttura dati simile all'array, ma che consta di una differenza fondamentale. Nella lista, infatti, ogni elemento contiene un riferimento esplicito a quello successivo. Questo concetto è esplicitato nella seguente figura:
 
@@ -44,7 +44,7 @@ Il fatto che ogni elemento della lista contenga un riferimento al successivo ha 
 1. la prima consiste nel fatto che la lista è una struttura dati ad *accesso sequenziale*, il che significa che occorrerà "scorrere" tutti gli elementi della stessa fino ad arrivare a quello desiderato;
 2. la seconda sta nel fatto che risulta essere molto più semplice aggiungere o rimuovere un elemento da una lista che da un array: infatti, basterà semplicemente modificare i riferimenti dagli elementi contigui a quello che si sta aggiungendo o rimuovendo.
 
-## 10.3 - Struct
+## Struct
 
 Una *struct* contiene un insieme di valori tipicamente chiamati *membri* o *campi*, il cui numero, sequenza e tipo sono tipicamente prefissati. Le struct trovano ampia applicazione in linguaggi come il C, ed hanno una sintassi di questo tipo:
 
@@ -57,7 +57,7 @@ struct nome_struct {
 
 Questa sintassi ci permette di definire quindi un tipo di struct chiamato `nome_struct` ed avente, in questo caso, due campi, ovvero un primo campo di tipo `tipo_campo_uno` ed identificatore `id_campo_uno`, ed un secondo campo di tipo `tipo_campo_due` ed identificatore `id_campo_due`.
 
-## 10.4 - Union
+## Union
 
 Una *union* è un tipo di struttura dati che permette di specificare il tipo del valore che può essere memorizzato al suo interno tra un certo numero di tipi primitivi. Nonostante sia sintatticamente affine alla struct, ne differisce quindi dal punto di vista funzionale: non è una "struttura", ma piuttosto un "ventaglio di possibili tipi" da cui selezionare. La sintassi di una union è simile alla seguente:
 
@@ -73,11 +73,11 @@ In questo caso, la union di nome `nome_union` potrà assumere uno tra due possib
 !!!note "Nota"
 	Per adesso, non facciamo un esempio "concreto" di union; lo vedremo più avanti, quando ritorneremo su queste due strutture dati in C.
 
-## 10.5 - Pile e code
+## Pile e code
 
 Abbiamo visto in precedenza due tipi di accesso ai dati, ovvero quello *casuale*, proprio degli array, e quello *sequenziale*, proprio dell eliste. Esiste un altro tipo di accesso ai dati, chiamato *accesso limitato*, usato da specifiche strutture dati come *pile* e *code*. Vediamo brevemente entrambi questi tipi di struttura dati.
 
-### 10.5.1 - Pile
+### Pile
 
 Una *pila* (in inglese, *stack*) è una struttura dati che contiene al suo interno variabili inserite e/o rimosse seguendo il principio *Last-In, First-Out* (*LIFO*). In altre parole, ciò significa che l'ultimo elemento che accede ad una pila è anche il primo ad uscirne.
 
@@ -90,7 +90,7 @@ Il funzionamento della pila è schematizzato all'interno della seguente figura.
 !!!note "Nota"
 	Il motivo alla base dell'aggettivo "limitato" è da ricercarsi proprio nel fatto che sia il push sia il pop possono essere effettuati soltanto sugli elementi in cima alla pila.
 
-### 10.5.2 - Code
+### Code
 
 Una *coda* (in inglese, *queue*) è una struttura dati concettualmente simile alla pila, ma che segue il principio (*First-In, First-Out*) (*FIFO*); in questo caso, il primo ad uscire dalla coda sarà il primo ad esservi entrato.
 

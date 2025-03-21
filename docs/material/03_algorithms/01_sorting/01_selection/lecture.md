@@ -1,12 +1,10 @@
-# 14 - Algoritmi di ordinamento
+# 3.1.1 Selection sort
 
-Uno dei problemi più "classici" nello studio degli algoritmi è quello di ordinare una lista di elementi affini (ovvero dello stesso tipo). Questo problema, soltanto apparentemnete banale, ha in realtà numerosi riscontri pratici, in quanto capita molto spesso di dover ordinare una lista secondo un certo criterio (ad esempio, un elenco di nomi in ordine alfabetico, oppure i prezzi di diversi beni in ordine ascendente). Per far questo, nel tempo sono stati definiti diversi algoritmi detti di *ordinamento* o, in inglese, *sorting algorithms*. Vediamone alcuni tra i più conosciuti.
-
-## 14.1 - Selection sort
+Uno dei problemi più "classici" nello studio degli algoritmi è quello di ordinare una lista di elementi affini (ovvero dello stesso tipo). Questo problema, soltanto apparentemnete banale, ha in realtà numerosi riscontri pratici, in quanto capita molto spesso di dover ordinare una lista secondo un certo criterio (ad esempio, un elenco di nomi in ordine alfabetico, oppure i prezzi di diversi beni in ordine ascendente). Per far questo, nel tempo sono stati definiti diversi algoritmi detti di *ordinamento* o, in inglese, *sorting algorithms*.
 
 Il primo algoritmo che vedremo è chiamato *selection sort*. Questo è un algoritmo di tipo *iterativo*, che analizza quindi un elemento della lista alla volta alla ricerca dell'elemento minore; per comprendere appieno il funzionamento dell'algoritmo, è opportuno utilizzare un esempio concreto.
 
-### 14.1.1 - Esempio e formalizzazione
+### Esempio e formalizzazione
 
 Immaginiamo quindi di voler ordinare un mazzo di dieci carte dalla più piccola alla più grande. Per farlo, seguiamo questi passi:
 
@@ -24,7 +22,7 @@ Volendo, è possibile formalizzare i passi precedenti come segue. Dato un vettor
 4. Aumentare il valore di $i$ di un'unità.
 5. Reiterare le istruzioni 3-4 fino a che $i = x(n-1)$.
 
-### 14.1.2 - Esempio pratico
+### Esempio pratico
 
 Immaginiamo di avere un array di numeri interi, i cui elementi assumono valore `[12, 4, 8, 7, 2]`. Seguiamo i passi evidenziati in precedenza per l'algoritmo.
 
@@ -62,7 +60,7 @@ i = 4; j = 4; min = x(4) = 12;
 STOP
 ```
 
-### 14.1.3 - Analisi della complessità computazionale dell'algoritmo
+### Analisi della complessità computazionale dell'algoritmo
 
 L'algoritmo di selection sort cicla su tutti gli $n$ indici di un array. Per comprendere quante operazioni sono necessarie a completare l'ordinamento, dovremo contare il numero di comparazioni necessarie ad individuare l'elemento "minore" attualmente presente all'interno dell'array.
 

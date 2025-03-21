@@ -1,4 +1,4 @@
-# 9 - La complessità computazionale degli algoritmi
+# 2.6 La complessità computazionale degli algoritmi
 
 Il concetto di *complessità computazionale* di un algoritmo è direttamente correlato al numero di operazioni che occorre svolgere per portarlo a termine, oppure ancora alla quantità di memoria occupata nel sistema durante l'esecuzione dello stesso.
 
@@ -9,7 +9,7 @@ In particolare, avremo due tipi di complessità:
 
 Torneremo più avanti su questi aspetti; per adesso, limitiamoci a fare un breve esempio a titolo meramente illustrativo.
 
-## 9.1 - Un primo, rapido, esempio
+## Un primo, rapido, esempio
 
 Facciamo un rapido esempio introduttivo (nel prosieguo, formalizzeremo al meglio i concetti espressi).
 
@@ -48,13 +48,13 @@ La complessità computazionale spaziale sarà quindi pari a 64 bit.
 
 Importantissimo comunque sottolineare come questo esempio sia puramente *introduttivo*. Nel seguito, forniremo una definizione formale di complessità spaziale e temporale; per adesso, concentriamoci brevemente su due tipi di analisi che è possibile effettuare, ovvero quelle *a priori* ed *a posteriori*.
 
-## 9.2 - Tipi di analisi computazionale
+## Tipi di analisi computazionale
 
-### 9.2.1 - Analisi a priori
+### Analisi a priori
 
 L'*analisi a priori* è un'analisi di tipo prettamente *teorico* dell'efficienza dell'algoritmo. Questa viene misurata assumendo che tutti i fattori contestuali, quali (ad esempio) la velocità del processore utilizzato e la quantità di memoria disponibile siano costanti e non abbiano alcun effetto tangibile sull'algoritmo stesso.
 
-### 9.2.2 - Analisi a posteriori
+### Analisi a posteriori
 
 L'*analisi a posteriori* è un'analisi di tipo prettamente *empirico* dell'efficienza dell'algoritmo. Ciò significa che l'algoritmo viene valutato *dopo* essere stato eseguito su una macchina target, mediante indicazioni di tipo numerico come il tempo necessario all'esecuzione e la memoria occupata.
 
@@ -64,9 +64,9 @@ L'*analisi a posteriori* è un'analisi di tipo prettamente *empirico* dell'effic
 
 Vediamo adesso come è possibile formalizzare i due diversi tipi di analisi computazionale per la complessità spaziale e per quella temporale.
 
-## 9.3 - Complessità spaziale e temporale
+## Complessità spaziale e temporale
 
-### 9.3.1 - Complessità spaziale
+### Complessità spaziale
 
 La complessità spaziale di un algoritmo indica il quantitativo di spazio che l'algoritmo occupa in memoria durante la sua esecuzione. Formalmente, questo è pari alla somma di due componenti:
 
@@ -81,7 +81,7 @@ $$
 
 con $C_{S_F}$ parte fissa e $C_{S_V}$ parte variabile; entrambe possono essere influenzate dalle caratteristiche $C$ come linguaggio di programmazione ed hardware sottostante.
 
-#### 9.3.1.1 - Un esempio più strutturato - Parte 1
+#### Un esempio più strutturato - Parte 1
 
 Consideriamo il seguente algoritmo (in pseudocodice):
 
@@ -116,7 +116,7 @@ $$
 
 con $t_i$ tempo necessario all'esecuzione di uno step atomico dell'algoritmo, e $C$ dipendendente anche stavolta dalle caratteristiche hardware del nostro dispositivo.
 
-#### 9.3.1.2 Un esempio più strutturato - Parte 2
+#### Un esempio più strutturato - Parte 2
 
 Torniamo all'algoritmo precedente, ed effettuiamone una valutazione a priori.
 
@@ -124,7 +124,7 @@ Abbiamo elencato tre step, anche se, nei fatti, ci saranno soltanto due addizion
 
 Per quello che riguarda l'analisi a posteriori, invece, sarà necessario anche stavolta fissare una condizione al contorno, ovvero la velocità con cui il nostro processore riesce ad eseguire una singola istruzione. Supponendo che questa sia pari ad un microsecondo, l'analisi a posteriori ci porterà a stabilire che la complessità computazionale sarà pari a 2 microsecondi.
 
-## 9.4 - Complessità di caso peggiore
+## Complessità di caso peggiore
 
 Nelle applicazioni reali, è abbastanza difficile che si riesca a calcolare *esattamente* la complessità computazionale di un programma, in quanto il numero di ramificazioni e le variabili da tenere in considerazione sono tali da rendere un approccio deterministico realisticamente non percorribile. Di conseguenza, si ricorre ad approcci che ci permettano di avere un'idea *veritiera* della complessità dell'algoritmo, stimata assumendo la *casistica peggiore*, ovvero calcolando la quantità massima di tempo e memoria che, nel peggiore dei casi, il nostro algoritmo richiederà per essere eseguito.
 
@@ -133,9 +133,9 @@ Per far questo, si utilizza la cosiddetta *O-big notation*, che in matematica ci
 !!!note "Nota"
 	Nella notazione precedente, `n` indica una variabile che può influenzare il numero di operazioni eseguite dall'algoritmo. Il perché occorra specificarla sarà più chiaro grazie ai prossimi esempi.
 
-### 9.4.1 Alcuni esempi
+### Alcuni esempi
 
-#### 9.4.1.1 Ciclo for (semplice)
+#### Ciclo for (semplice)
 
 Supponiamo di dover calcolare la complessità di questo semplice ciclo `for`:
 
@@ -151,7 +151,7 @@ Notiamo innanzitutto che il valore del contatore `i` varia da 1 ad $n=10$. Ciò 
 
 Per quello che riguarda quella nello spazio, supponendo che ad ogni iterazione le variabili create all'interno del corpo del ciclo (righe 3-4) siano anche cancellate, l'algoritmo avrà una complessità spaziale di caso peggiore pari a 2; in questi casi, ovvero quando la complessità di caso peggiore è costante, si dice che $C_S = O(1)$
 
-#### 9.4.1.2 Cicli for annidati
+#### Cicli for annidati
 
 Vediamo cosa accade nel caso si considerino due cicli `for` l'uno annidato all'interno dell'altro.
 
