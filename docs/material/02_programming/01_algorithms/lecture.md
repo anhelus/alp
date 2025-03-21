@@ -1,60 +1,46 @@
-# 2.1 - Gli algoritmi
+# 2.1 Introduzione agli algoritmi
 
-La realtà che ci circonda è piena di *problemi*, esprimibili sia in senso "lato" (*cosa mangio stasera? quando andrò in pensione?*), sia in senso più "tangibile" (*come monto il mobile appena acquistato all'Ikea? come ordino in maniera crescente un vettore di numeri interi?*). Questi problemi sono normalmente risolvibili utilizzando un approccio specifico, che il più delle volte consiste nell'individuare una *soluzione* composta da una serie di "piccoli" passi da seguire per "scardinare" il problema e risolverlo parte dopo parte. Partiamo da questo aspetto.
+In questa sezione discuteremo uno degli strumenti fondamentali dell'informatica, ma non solo: gli *algoritmi*.
 
-## Formulare un problema
+## Problemi e soluzioni
 
-Possiamo dare una definizione del concetto di *problema* come un *quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza*. Ok, cerchiamo di respirare e comprendere quello che abbiamo appena letto.
+Tutti avremo notato come la realtà che ci circonda sia piena di problemi. Ad esempio:
+
+* *come mi preparerò da mangiare per stasera?*
+* *riuscirò ad avere una misera pensione?*
+* *come monto il mobile Ikea?*
+* *come supero l'esame di Informatica?*
+
+Questi problemi (soprattutto l'ultimo) sono risolvibili utilizzando un semplice approccio che, di base, consiste nell'individuare una *soluzione*. Ad esempio:
+
+* *per mangiare, dovrò prendere gli ingredienti, mescolarli secondo una ricetta e, una volta completata la preparazione, godermeli.*
+* *per avere una misera pensione, devo lavorare per i prossimi (tanti) anni, versare i contributi, crearmi un fondo pensione integrativo, ed incrociare le dita (soprattutto).*
+* *per montare il mobile Ikea, devo seguire le singole, comprensibilissime, istruzioni presenti sul manuale di montaggio.*
+* *per superare l'esame, devo studiare l'intero programma e preparare gli opportuni esercizi.*
+
+!!!tip "Nota"
+	Per l'ultima soluzione, si consiglia anche l'uso di strumenti scaramantici e votivi di vario tipo.
+
+##### Formulazione di un problema
+
+A questo punto è lecita una domanda: cosa significa *formulare un problema*? E' presto detto: il problema è un *quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza*. Ok, cerchiamo di scomporre questa formulazione.
+
+1. Il problema è un *quesito*, ovvero una domanda che richiede una risposta, alle volte aperta (*cosa mangio? dove andiamo?*), altre chiusa (*come monto il mobile?*).
+2. Per trovare una soluzione al quesito posto dal problema, avremo bisogno di almeno un *ente risolutore*, inteso come entità, fisica o logica, che si occuperà di implementare tutti gli step atti a risolvere il problema. Ad esempio, nel caso del mobile Ikea, l'ente risolutore saremo noi, o chi ci aiuterà a montarlo.
+3. L'ente deve poter quindi partire da *elementi noti* e *condizioni fissate* e, quindi, avere una visione dello stato iniziale del mondo. Ad esempio, dovrà conoscere il senso della vite (orario).
+
+Alcuni esempi di quesito, ente e stato iniziale sono riportati nella seguente tabella.
+
+| Quesito | Ente risolutore | Stato iniziale del mondo |
+| ------- | --------------- | ------------------------ |
+| *Come montare il mobile che abbiamo appena acquistato dall'IKEA?* | Montatore | Collocazione desiderata del mobile, numero e tipo di pezzi, attrezzi necessari... |
+| *Come calcolare l'ipotenusa di un triangolo rettangolo?* | Studente | Base, altezza, teorema di Pitagora |
+| *Come dimostare l'ipotesi di Riemann?* | Studente | Banali regole basilari di aritmetica |
+
+##### Risoluzione di un problema
+
 
 DA QUI
-
-Il problema è un *quesito*, ovvero una domanda "aperta" che richiede di essere affrontata; se ci pensiamo, all'inizio abbiamo posto il problema *sempre* sotto questa forma (*cosa mangio?*). Ovviamente, dobbiamo dare una rispota a questo problema, risolvendolo: in particolare, questa risoluzione dipenderà da un *ente*, sia esso fisico o logico che, dato uno stato "iniziale" del mondo, il quale deve essere conosciuto, seguirà una sequenza di istruzioni predefinite fino a risolvere con successo il problema.
-
-## 2.1 - Formulare un problema
-
-Per comprendere gli algoritmi, partiamo definendo il concetto di _problema_.
-
-In tal senso, il dizionario De Mauro - Paravia ci viene in aiuto definendolo come:
-
-!!!quote "Definizione di problema"
-	_...quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza._
-
-Questa definizione ci dà gli elementi necessari alla formulazione compiuta di un problema. Analizziamoli più nel dettaglio.
-
-### 2.1.1 - Il problema come _compito_
-
-Un problema è dunque in primis un _quesito_ (o, analogamente, un _compito_) che necessita di una _risoluzione_ (o _svolgimento_). Esempi concreti di problema sono:
-
-- _"Come montare il mobile che abbiamo appena acquistato dall'IKEA?"_
-- _"Come calcolare l'ipotenusa di un triangolo rettangolo?"_
-- _"Come dimostrare l'ipotesi di Riemann?"_
-
-Possiamo vedere che i problemi possono essere di ogni tipo e difficoltà; sono tutti accomunati però dal fatto che, _qualora siano risolvibili_, per farlo è necessario adoperare un _algoritmo_.
-
-### 2.1.2 - L'_ente risolutore_
-
-La risoluzione del problema è delegata ad un o più _enti_, propriamente intesi come _esecutori_ di una serie di step necessari a risolvere il problema.
-
-Rimanendo agli esempi precedenti, il risolutore del primo problema è il montatore del mobile; quello per il secondo è lo studente che calcola l'area del triangolo mediante il teorema di Pitagora; nel terzo caso invece abbiamo il matematico teorico, che dimostra (o confuta) l'ipotesi di Riemann.
-
-### 2.1.3 - Gli _elementi noti_ e le _condizioni fissate_
-
-La risoluzione del problema non può prescindere dalla conoscenza degli _elementi noti_ e delle _condizioni fissate_ per lo stesso. Intuitivamente, questo significa _conoscere lo stato del mondo_ a partire dal quale dovremo risolvere il problema.
-
-Torniamo ai nostri esempi.
-
-In primis, per montare il mobile IKEA, avremo bisogno della conoscenza di dettagli quali:
-
-- collocazione desiderata del mobile;
-- numero e tipo di pezzi nella confezione del mobile;
-- attrezzi di cui abbiamo bisogno.
-
-Oltre questo, potrebbero esserci alcune _condizioni_ da rispettare, come ad esempio cercare (invano) di montare il mobile prima che tramonti il sole, o il provare a non rompere nulla.
-
-Analogamente, per calcolare l'area di un triangolo rettangolo, dovremo conoscerne base ed altezza, e rispettare i vincoli imposti dalla geometria di base.
-
-!!!note "Nota"
-	La determinazione degli elementi noti e delle condizioni fissate per la dimostrazione dell'ipotesi di Riemann è lasciata come banale esercizio al lettore.
 
 ## 2.2 - Risolvere un problema
 

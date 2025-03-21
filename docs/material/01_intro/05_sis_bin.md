@@ -1,4 +1,4 @@
-# 5 - Sistema binario
+# 1.5 - Sistema binario
 
 Nella [precedente lezione](04_num_sis.md) abbiamo introdotto il concetto di sistema di numerazione, parlando in maniera approfondita di sistema addizionale e sistema posizionale, facendo quindi l'esempio di numeri romani ed arabi, rispettivamente.
 
@@ -82,6 +82,3 @@ Dalla definizione di bit segue quella (altrettanto importante) di *byte*, comune
     Quanti sono i valori che è possibile rappresentare mediante un byte? Per rispondere alla domanda, riprendiamo le nozioni viste quando abbiamo parlato di informazione. In particolare, sappiamo che una sequenza di $K$ bit può rappresentare al più $2^K$ combinazioni di bit; quindi, se $K=8$, allora potremo rappresentare al più $2^8=256$ valori.
 
 Possiamo infine definire come *word* (parola) una sequenza di $N$ byte, con $N$ dipendente da fattori contestuali, come il tipo di processore utilizzato. Ad esempio, i processori dei nostri PC sono in grado di gestire parole ad otto byte, ovvero $64$ bit. Ciò influenza il numero di valori che può essere gestito dal processore: vedremo questo argomento maggiormente nel dettaglio nella [prossima lezione](06_data_types.md).
-
-!!!note "Basi notevoli"
-    Esistono altre due basi notevoli, ovvero quella *ottale* ed *esadecimale*. Nell'[appendice A](../appendix/a_bases.md) ne approfondiamo il funzionamento.

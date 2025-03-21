@@ -1,4 +1,4 @@
-# 6 - Dimensione dei dati
+# 1.6 - Dimensione dei dati
 
 Nella [lezione precedente](05_sis_bin.md) abbiamo accennato al fatto che i calcolatori hanno a disposizione una word la cui dimensione dipende dall'architettura del processore; ciò implica che ogni tipo di dato (cui abbiamo [già accennato](02_data_repr.md)) avrà una dimensione prefissata. Scendiamo più nel dettaglio.
 
@@ -91,4 +91,4 @@ Ciò implica la presenza di un'*enorme* varietà di caratteri, che ha portato al
 
 Abbiamo visto come siano rappresentati in memoria alcuni tipi di dati, e come la dimensione occupata da questi cambi con le caratteristiche della parola usata pepr rappresentarli.
 
-A questo punto, ci manca un ultimo tassello per la nostra panoramica sui concetti alla base dell'informatica: infatti, dovremo vedere come le variabili binarie si combinano tra loro sfruttando i concetti dell'[algebra booleana](07_boole.md).
+A questo punto, ci manca un ultimo tassello per la nostra panoramica sui concetti alla base dell'informatica: infatti, dovremo vedere come le variabili binarie si combinano tra loro sfruttando i concetti dell'[algebra booleana](./07_boole/01_intro.md).

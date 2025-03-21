@@ -1,4 +1,4 @@
-# 7.3 - Proprietà delle operazioni fondamentali
+# 1.7.3 - Proprietà delle operazioni fondamentali
 
 ## Operazioni con $n$ predicati
 

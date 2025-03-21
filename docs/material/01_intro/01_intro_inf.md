@@ -1,4 +1,4 @@
-# 1 - Introduzione all'informatica
+# 1.1 - Introduzione all'informatica
 
 ## Una definizione di Informatica
 
@@ -62,4 +62,4 @@ La scelta di un linguaggio segue essenzialmente due criteri, esplicitati di segu
 
 Ovviamente, esiste un linguaggio che soddisfa entrambi i requisiti precedentemente menzionati. Questo linguaggio deve adottare un sistema di simboli quanto più semplice possibile, ed essere adatto ad effettuare operazioni di tipo numerico; un linguaggio che soddisfa tutti questi requisiti è quello *binario*, nel quale sono contenuti esclusivamente i simboli $0$ ed $1$.
 
-Prima di approfondire i concetti alla base dell'utilizzo del codice binario, tuttavia, è importante discutere di come si [rappresentano i dati in un elaboratore](../02_data_repr/lecture.md).
+Prima di approfondire i concetti alla base dell'utilizzo del codice binario, tuttavia, è importante discutere di come si [rappresentano i dati in un elaboratore](02_data_repr.md).

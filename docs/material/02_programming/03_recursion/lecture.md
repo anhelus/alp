@@ -1,10 +1,10 @@
-# 11 - Ricorsione
+# 2.3 Ricorsione
 
 Quella della *ricorsione* è una tecnica di programmazione che permette di "spezzare" un problema in diverse piccole parti, da trattare una alla volta fino alla risoluzione completa dello stesso. E' quindi in qualche modo assimilabile al paradigma "divide-et-impera", tanto caro agli strateghi dell'antica Roma.
 
 Nella pratica, si tratta di riapplicare una serie di istruzioni (e, quindi, una funzione) ad istanze sempre più piccole del problema originario, fino a che non è possibile giungere ad una risoluzione diretta; tuttavia, per comprenderne appieno il funzionamento, è opportuno procedere con un esempio pratico.
 
-## 11.1 - Calcolo del fattoriale
+## Calcolo del fattoriale
 
 Il *fattoriale* di un numero $n$ è indicato con $n!$ ed è dato dal prodotto di tutti i numeri che vanno da $1$ ad $n$. Formalmente:
 
@@ -16,7 +16,7 @@ Ad esempio, $3! = 6$, mentre $4! = 24$, $5! = 120$, e via dicendo. Il fattoriale
 
 Proviamo per prima cosa a calcolare il fattorale usando un ciclo.
 
-### 11.1.1 - Calcolo iterativo del fattoriale
+### Calcolo iterativo del fattoriale
 
 Calcolare il fattoriale mediante un ciclo è molto semplice. Infatti, basta usare la formulazione stessa di fattoriale:
 
@@ -28,7 +28,7 @@ endfor
 return fatt;
 ```
 
-### 11.1.2 - Calcolo ricorsivo del fattoriale
+### Calcolo ricorsivo del fattoriale
 
 "Complichiamoci" la vita, e vediamo come è possibile calcolare il fattoriale in maniera ricorsiva. Riprendiamo la definizione di fattoriale, applicando la proprietà commutativa:
 
@@ -57,7 +57,7 @@ $$
 \Rightarrow (n-1)! * n = n! \Rightarrow \\
 $$
 
-#### 11.1.2.1 - Caso base e ricorsione
+#### Caso base e ricorsione
 
 Risulta quindi che:
 
@@ -66,7 +66,7 @@ Risulta quindi che:
 
 Il caso $n =0$ assume il nome di *caso base*, ed è la situazione che cerchiamo per "terminare" la ricorsione; alternativamente, dovremo procedere a richiamare ricorsivamente la funzione desiderata.
 
-#### 11.1.2.2 - Implementazione della ricorsione
+#### Implementazione della ricorsione
 
 Proviamo ad implementare la funzione ricorsiva in pseudocodice. Scriviamo:
 

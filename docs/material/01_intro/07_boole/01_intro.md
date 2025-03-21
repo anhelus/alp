@@ -1,4 +1,4 @@
-# 7.1 - Algebra booleana
+# 1.7.1 - Algebra booleana
 
 [Abbiamo già detto](../01_intro_inf.md) che gli elaboratori si basano sui *circuiti elettronici digitali* che, ad *alto livello*, possono essere visti come un insieme più o meno complesso di *interruttori*, proprio come quelli che possiamo trovare in un normalissimo impianto elettrico.
 

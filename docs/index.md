@@ -13,7 +13,4 @@ Cosa significa questo per l'ignaro studente? In pratica, due cose:
 1. Il materiale contenuto in questo sito *non* è strettamente rappresentativo del materiale dell'esame a cui lo studente fa riferimento. In pratica, se (per esempio) siamo studenti del Corso di Informatica dell'Ingegneria, vedremo qui e lì riferimenti ad argomenti *non* trattati durante il corso, e che *non* saranno quindi oggetto di esame.
 2. Il materiale contenuto in questo sito è un *approfondimento* degli argomenti trattati durante il corso, quindi studiarlo non può far altro che aumentare le possibilità di prendere un voto molto alto.
 
-Fatta questa doverosa premessa, che invito i miei malcapitati studenti a **leggere e comprendere**, non mi resta che augurarvi buona lettura, andando ad introdurre il concetto di [Informatica](./material/01_intro/01_informatics/lecture.md).
-
-!!!tip "Esercizi e tracce passate"
-    Onde evitare emozioni eccessive negli studenti ancora sotto esame, le [tracce di esame svolte](./material/exams/index.md) restano ancora disponibili.
+Fatta questa doverosa premessa, che invito i malcapitati studenti a **leggere e comprendere**, non mi resta che augurarvi buona lettura, andando ad introdurre il concetto di [Informatica](./material/01_intro/01_intro_inf.md).

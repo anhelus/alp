@@ -1,6 +1,6 @@
-# 2 - Rappresentazione dei dati
+# 1.2 - Rappresentazione dei dati
 
-Nella [scorsa lezione](01_intro_inf.md.md) abbiamo introdotto i concetti legati alla rappresentazione dell'informazione all'interno di sistemi automatici. Tuttavia, è importante approfondire ulteriormente il modo in cui questa informazione viene gestita.
+Nella [scorsa lezione](01_intro_inf.md) abbiamo introdotto i concetti legati alla rappresentazione dell'informazione all'interno di sistemi automatici. Tuttavia, è importante approfondire ulteriormente il modo in cui questa informazione viene gestita.
 
 ## I tipi di dato
 
