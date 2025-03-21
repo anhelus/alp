@@ -1,0 +1,1379 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>2.1 - L'Ingegneria del Software - Corso di Informatica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-J2XESD8WDV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#21-lingegneria-del-software" class="md-skip">
+          Vai al contenuto
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../../.." title="Corso di Informatica" class="md-header__button md-logo" aria-label="Corso di Informatica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              2.1 - L'Ingegneria del Software
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Corso di Informatica" class="md-nav__button md-logo" aria-label="Corso di Informatica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Corso di Informatica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Introduzione all'informatica
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Introduzione all'informatica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_intro_inf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Introduzione all'informatica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/02_data_repr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Rappresentazione dei dati
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/03_dig_an/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Codifica digitale ed analogica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/04_num_sis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Sistemi di numerazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/05_sis_bin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Sistema binario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/06_data_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Dimensione dei dati
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1.7 Algebra di Boole
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            1.7 Algebra di Boole
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/01_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.1 Introduzione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/02_ops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.2 Operazioni fondamentali
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/03_ops_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.3 Proprietà delle operazioni fondamentali
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/04_laws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.4 Leggi dell'algebra booleana
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Principi di programmazione
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. Principi di programmazione
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.2 La programmmazione strutturata
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            2.2 La programmmazione strutturata
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/02_structured/01_intro/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.1 Introduzione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/02_structured/02_flow_charts/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.2 I diagrammi di flusso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/03_recursion/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 La ricorsione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/04_variables/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Le variabili
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.5 Le funzioni
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2.5 Le funzioni
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/05_functions/01_intro/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.1 Introduzione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/06_complexity/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Complessità computazionale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.7 Strutture dati
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            2.7 Strutture dati
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/07_data_structures/01_intro/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7.1 Strutture dati base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/07_data_structures/02_advanced/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7.2 Strutture dati avanzate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/08_paradigms/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.8 Paradigmi di programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Algoritmi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. Algoritmi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3.1 Algoritmi di ordinammento
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            3.1 Algoritmi di ordinammento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_algorithms/01_sorting/01_selection/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.1 Selection sort
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Indice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#principi-chiave-dellisw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Principi chiave dell'ISW
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obiettivi-dellisw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Obiettivi dell'ISW
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#programmi-e-software" class="md-nav__link">
+    <span class="md-ellipsis">
+      Programmi e software
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vantaggi-e-svantaggi-dellisw" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vantaggi e svantaggi dell'ISW
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="21-lingegneria-del-software">2.1 - L'Ingegneria del Software<a class="headerlink" href="#21-lingegneria-del-software" title="Permanent link">&para;</a></h1>
+<p>Avete mai scritto un programma? Se state leggendo questo documento, la risposta è, presumibilmente, <em>sì</em>. Adesso, possiamo avere diverse situazioni, sinteticamente raggruppabili in due diverse casistiche. </p>
+<ol>
+<li>Avete scritto software abbastanza basilare, contenuto in una manciata di file sorgenti.</li>
+<li>Avete scritto anche software complesso, con dipendenze multiple, magari stipulando contratti specifici con committenti, o lavorando in un team.</li>
+</ol>
+<p>Nel primo caso, è probabile che siate riusciti ad organizzare il tutto semplicemente "tenendo a mente" i requisiti base del software e le relazioni che intercorrono tra funzioni, script, e via discorrendo. Nel secondo caso, invece, è plausibile che abbiate dovuto in qualche modo utilizzare tecniche e strumenti per strutturare al meglio il vostro lavoro, utilizzando magari dei processi agili, interagendo con i clienti alla scoperta dei requisiti, oppure ancora testando e manutenendo il software.</p>
+<p>E' quindi chiaro come progetti software più complessi implichino una gestione necessariamente più strutturata: in tal senso, la disciplina dell'<em>Ingegneria del Software</em> si occupa proprio di fornire gli strumenti e le tecniche necessarie a produrre software di qualità e che rispecchino i requisiti posti dall'utente. Per approfondire il concetto, dobbiamo partire da due definizioni. In primis, abbiamo il concetto di <em>software</em>:</p>
+<div class="admonition quote">
+<p class="admonition-title">Il software</p>
+<p>Per software si intende un programma, o un insieme di programma, che soddisfano uno o più requisiti dell'utente.</p>
+</div>
+<p>Abbiamo poi il concetto di <em>ingegneria</em> o, per meglio dire, <em>ingegnerizzazione</em>:</p>
+<div class="admonition quote">
+<p class="admonition-title">Ingegnerizzazione</p>
+<p>L'<em>ingegnerizzazione</em> è un processo che prevede la progettazione e realizzazione di un manufatto, bene, o servizio atto a soddisfare un particolare scopo, trovando una soluzione efficace in termini di costi ad un determinato problema.</p>
+</div>
+<p>L'Ingegneria del Software (ISW) è quindi il processo di progettazione, sviluppo, test e manutenzione di  un software. L'ISW è quindi un approccio <em>sistematico</em> e <em>disciplinato</em> allo sviluppo software, mirato alla creazione di software di alta qualità, affidabile e manutenibile.</p>
+<p>L'ISW è un campo in rapida evoluzione, nel quale vengono costantemente sviluppati e proposti nuovi tool e tecnologie per migliorare lo sviluppo software, utilizzando i quali è possibile creare software di alta qualità, affidabile e manutenibile, rispettando contestualmente i requisiti posti dagli utenti, creando programmi consistenti, funzionali e, soprattutto, rispettosi dei vincoli di sviluppo.</p>
+<div class="admonition warning">
+<p class="admonition-title">Le dimensioni contano</p>
+<p>Ricollegandoci a quanto abbiamo detto prima, l'ISW "mostrano i muscoli" soprattutto nel caso di progetti di grandi dimensioni, perdendo senso nel caso siano applicati a programmi "limitati".</p>
+</div>
+<h5 id="principi-chiave-dellisw">Principi chiave dell'ISW<a class="headerlink" href="#principi-chiave-dellisw" title="Permanent link">&para;</a></h5>
+<p>Riassumiamo in breve alcuni dei principi alla base dei concetti dell'ISW.</p>
+<table>
+<thead>
+<tr>
+<th>Principio</th>
+<th>Breve descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modularità</strong></td>
+<td>Suddividere il software in componenti di piccola dimensione, sviluppabili, testabili e, soprattutto, riutilizzabili in maniera indipendente.</td>
+</tr>
+<tr>
+<td><strong>Astrazione</strong></td>
+<td>Nascondere i dettagli implementativi di ciascun componente software, esponendo agli altri componenti soltanto le funzionalità necessarie.</td>
+</tr>
+<tr>
+<td><strong>Incapsulamento</strong></td>
+<td>Racchiudere i dati e le funzioni di un oggetto in una singola unità, proteggendone lo stato interno da interferenze esterne.</td>
+</tr>
+<tr>
+<td><strong>Riutilizzabilità</strong></td>
+<td>Creare componenti che possano essere utilizzati in più progetti, risparmiando di conseguenza tempo e risorse.</td>
+</tr>
+<tr>
+<td><strong>Manutenibilità</strong></td>
+<td>Aggiornare e migliorare il software in maniera regolare, allo scopo di risolvere bug, aggiungere nuove feature, e risolvere eventuali vulnerabilità.</td>
+</tr>
+<tr>
+<td><strong>Test</strong></td>
+<td>Verificare che il software rispetti i requisiti indicati, e risulti essere scevro da bug.</td>
+</tr>
+<tr>
+<td><strong>Design pattern</strong></td>
+<td>Proporre dei pattern per la soluzione di problemi ricorrenti della progettazione del software.</td>
+</tr>
+<tr>
+<td><strong>Sviluppo Agile</strong></td>
+<td>Usare processi di sviluppo iterativi ed incrementali, focalizzandosi su soddisfazione dell'utente, rilascio rapido di nuove versioni e flessibilità.</td>
+</tr>
+<tr>
+<td><strong>Integrazione continua</strong></td>
+<td>Integrare in maniera rapida e continua i cambiamenti nel sorgente, rilasciandoli il prima possibile in ambiente di produzione.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="obiettivi-dellisw">Obiettivi dell'ISW<a class="headerlink" href="#obiettivi-dellisw" title="Permanent link">&para;</a></h5>
+<p>Possiamo anche definire una serie di obiettivi che l'ISW vuole peseguire.</p>
+<table>
+<thead>
+<tr>
+<th>Obiettivo</th>
+<th>Breve descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Manutenibilità</strong></td>
+<td>Il software dovrebbe poter evolvere rispettando requisiti mutevoli nel tempo.</td>
+</tr>
+<tr>
+<td><strong>Efficienza</strong></td>
+<td>Il software non dovrebbe usare in maniera inefficace le capacità di calcolo dei dispositivi utilizzati.</td>
+</tr>
+<tr>
+<td><strong>Correttezza</strong></td>
+<td>Il software dovrebbe rispettare i requisiti specificati dai suoi utilizzatori.</td>
+</tr>
+<tr>
+<td><strong>Riusabilità</strong></td>
+<td>Il software dovrebbe essere suddiviso in moduli, i quali dovrebbero essere facilmente riutilizzati allo scopo di sviluppare nuovi prodotti software.</td>
+</tr>
+<tr>
+<td><strong>Testabilità</strong></td>
+<td>Il software dovrebbe essere progettato per facilitare cicli di test per valutare il rispetto dei requisiti e delle funzionalità.</td>
+</tr>
+<tr>
+<td><strong>Affidabilità</strong></td>
+<td>Il software dovrebbe essere in grado di svolgere i suoi compiti prefissati in un certo periodo di tempo.</td>
+</tr>
+<tr>
+<td><strong>Portabilità</strong></td>
+<td>Il software dovrebbe poter essere trasferito in maniera semplice da un sistema ad un altro.</td>
+</tr>
+<tr>
+<td><strong>Adattabilità</strong></td>
+<td>Il software dovrebbe garantire il rispetto di vincoli di sistema ed utente anche nel caso di modifiche sostanziali.</td>
+</tr>
+<tr>
+<td><strong>Interoperabilità</strong></td>
+<td>Diverse unità funzionali del software dovrebbero essere in grado di elaborare i dati in maniera cooperativa e non concorrente.</td>
+</tr>
+</tbody>
+</table>
+<h5 id="programmi-e-software">Programmi e software<a class="headerlink" href="#programmi-e-software" title="Permanent link">&para;</a></h5>
+<p>Quando parliamo di <em>programma</em> non parliamo necessariamente di (prodotto) <em>software</em>. Infatti, possiamo definire il programma come un insieme di istruzioni date ad un computer per svolgere un compito specifico; invece, il software è un programma reso disponibile per scopi solitamente commerciali, documentato, e fornito di un'apposita licenza. Di conseguenza, possiamo affermare che il programma è uno degli step nello sviluppo del software.</p>
+<h5 id="vantaggi-e-svantaggi-dellisw">Vantaggi e svantaggi dell'ISW<a class="headerlink" href="#vantaggi-e-svantaggi-dellisw" title="Permanent link">&para;</a></h5>
+<p>I vantaggi nell'uso di un approccio sistematico e disciplinato allo sviluppo del software sono:</p>
+<table>
+<thead>
+<tr>
+<th>Vantaggio</th>
+<th>Breve descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Qualità</strong></td>
+<td>Seguire i principi dell'ISW permette di ottenere software con un numero limitato di bug ed un'affidabilità più elevata.</td>
+</tr>
+<tr>
+<td><strong>Produttività</strong></td>
+<td>L'utilizzo di strumenti e metodologie moderne può rendere più lineare il processo di sviluppo, aumentando quindi la produttività degli sviluppatori.</td>
+</tr>
+<tr>
+<td><strong>Manutenibilità</strong></td>
+<td>Il software progettato e sviluppato usando le pratiche dell'ISW è più facile da manutenere ed aggiornare nel tempo.</td>
+</tr>
+<tr>
+<td><strong>Riduzione dei costi</strong></td>
+<td>Identificando e risolvendo i potenziali problemi nei primi stage del processo di sviluppo, l'ISW può aiutare a ridurre il costo nel tempo legato all'introdurre nuove feature e risolvere bug.</td>
+</tr>
+<tr>
+<td><strong>Soddisfazione utente</strong></td>
+<td>Coinvolgendo gli utenti nel processo di sviluppo, e creando del software che rispetta le loro necessità, l'ISW può aumentare la soddisfazione utente.</td>
+</tr>
+<tr>
+<td><strong>Collaborazione</strong></td>
+<td>L'uso dell'approccio agile e dell'integrazione continua permette ai team di collaborare al meglio.</td>
+</tr>
+<tr>
+<td><strong>Scalabilità</strong></td>
+<td>Un software progettato per essere scalabile può gestire un numero variabile di utenti e transazioni.</td>
+</tr>
+<tr>
+<td><strong>Sicurezza</strong></td>
+<td>Un software opportunamente testato secondo i principi definiti dall'ISW è spesso meno vulnerabile e più sicuro.</td>
+</tr>
+</tbody>
+</table>
+<p>Per ciò che riguarda gli svantaggi invece:</p>
+<table>
+<thead>
+<tr>
+<th>Svantaggio</th>
+<th>Breve descrizione</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Costi iniziali</strong></td>
+<td>Implementare un approccio sistematico e disciplinato allo sviluppo può richiedere parecchie risorse, oltre che un investimento significativo in termini di strumentazione e training.</td>
+</tr>
+<tr>
+<td><strong>Flessibilità</strong></td>
+<td>Seguire dei principi prestabiliti può comportare delle rigidità, limitando in alcune situazioni il rapido adattamento a requisiti mutevoli.</td>
+</tr>
+<tr>
+<td><strong>Burocrazia</strong></td>
+<td>Usare l'ISW può creare un ambiente burocratizzato, in cui è necessario redigere un gran numero di documenti, il che può rallentare lo sviluppo.</td>
+</tr>
+<tr>
+<td><strong>Complessità</strong></td>
+<td>Con l'aumento del numero di strumenti e meotodologie, i principi dell'ISW può diventare complessa e difficile da gestire.</td>
+</tr>
+<tr>
+<td><strong>Creatività</strong></td>
+<td>Il focus sul processo di sviluppo può limitare la creatività e l'innovazione.</td>
+</tr>
+<tr>
+<td><strong>Curva di apprendimento</strong></td>
+<td>Il processo di sviluppo può essere complesso e richiede l'apprendimento di numerosi strumenti.</td>
+</tr>
+<tr>
+<td><strong>Dipendenza dai tool</strong></td>
+<td>L'ISW fa largo affidamento a degli strumenti che, se non propriamente  configurati o incompatibili con il software in uso, possono causare diversi problemi.</td>
+</tr>
+<tr>
+<td><strong>Manutenzione</strong></td>
+<td>I processi alla base dell'ISW richiedono una manutenzione regolare per assicurarsi che il software venga eseguito in maniera efficiente.</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Angelo Cardellicchio - MIT License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/anhelus" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:angelo.cardellicchio@poliba.it" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,1402 @@
+
+<!doctype html>
+<html lang="it" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.9">
+    
+    
+      
+        <title>Xx evaluation - Corso di Informatica</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.4af4bdda.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-J2XESD8WDV"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-J2XESD8WDV",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-J2XESD8WDV",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Intestazione">
+    <a href="../../../.." title="Corso di Informatica" class="md-header__button md-logo" aria-label="Corso di Informatica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Corso di Informatica
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Xx evaluation
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Cerca" placeholder="Cerca" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Cerca">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Cancella" aria-label="Cancella" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inizializza la ricerca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigazione" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Corso di Informatica" class="md-nav__button md-logo" aria-label="Corso di Informatica" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Corso di Informatica
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1. Introduzione all'informatica
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            1. Introduzione all'informatica
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/01_intro_inf/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.1 Introduzione all'informatica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/02_data_repr/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.2 Rappresentazione dei dati
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/03_dig_an/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.3 Codifica digitale ed analogica
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/04_num_sis/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.4 Sistemi di numerazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/05_sis_bin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.5 Sistema binario
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/06_data_types/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.6 Dimensione dei dati
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_7" id="__nav_2_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    1.7 Algebra di Boole
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_7">
+            <span class="md-nav__icon md-icon"></span>
+            1.7 Algebra di Boole
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/01_intro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.1 Introduzione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/02_ops/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.2 Operazioni fondamentali
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/03_ops_properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.3 Proprietà delle operazioni fondamentali
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../01_intro/07_boole/04_laws/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1.7.4 Leggi dell'algebra booleana
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2. Principi di programmazione
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            2. Principi di programmazione
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.2 La programmmazione strutturata
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            2.2 La programmmazione strutturata
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/02_structured/01_intro/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.1 Introduzione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/02_structured/02_flow_charts/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2.2 I diagrammi di flusso
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/03_recursion/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3 La ricorsione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/04_variables/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4 Le variabili
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.5 Le funzioni
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            2.5 Le funzioni
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/05_functions/01_intro/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5.1 Introduzione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/06_complexity/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.6 Complessità computazionale
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_6" id="__nav_3_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    2.7 Strutture dati
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_6">
+            <span class="md-nav__icon md-icon"></span>
+            2.7 Strutture dati
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/07_data_structures/01_intro/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7.1 Strutture dati base
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/07_data_structures/02_advanced/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7.2 Strutture dati avanzate
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../02_programming/08_paradigms/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.8 Paradigmi di programmazione
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3. Algoritmi
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            3. Algoritmi
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    3.1 Algoritmi di ordinammento
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            3.1 Algoritmi di ordinammento
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../03_algorithms/01_sorting/01_selection/lecture/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1.1 Selection sort
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Indice">
+  
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Xx evaluation</h1>
+
+<p>Ok, capito. Niente prototipo completo, focus sulle pratiche dell'ingegneria del software. Ecco un esercizio di gruppo che si concentra sulla pianificazione, l'architettura e la gestione del processo di sviluppo di un videogioco, senza la necessità di creare un prototipo giocabile.</p>
+<p><strong>Esercizio: Progettazione Ingegneristica di un Videogioco Modulare</strong></p>
+<p><strong>Obiettivo:</strong> Progettare l'architettura software e definire il processo di sviluppo di un videogioco, applicando principi di ingegneria del software.</p>
+<p><strong>Vincoli:</strong></p>
+<ul>
+<li><strong>Tempo:</strong> 6 settimane (adattabile)</li>
+<li><strong>Team:</strong> Gruppi di 4-5 studenti.</li>
+<li><strong>Genere:</strong> A scelta (e.g., RPG, platformer, strategico).</li>
+<li><strong>Target:</strong> Definire a chi è diretto il gioco (es: bambini, hardcore gamers, casual players).</li>
+<li><strong>Budget Ipotetico:</strong> Definire un budget realistico per il gioco (es: indie, AA, AAA).</li>
+</ul>
+<p><strong>Fasi del Progetto:</strong></p>
+<ol>
+<li>
+<p><strong>Settimana 1: Analisi dei Requisiti e Definizione Ambito (Focus Ingegneristico)</strong></p>
+<ul>
+<li>Definire il concetto del gioco (genere, ambientazione, storia, personaggi).</li>
+<li>Analizzare il target di riferimento (gusti, aspettative, piattaforme preferite).</li>
+<li>Identificare i requisiti funzionali (cosa dovrà fare il gioco) e non funzionali (performance, usabilità, affidabilità, portabilità, sicurezza - se applicabile).</li>
+<li>Stimare i costi e i tempi di sviluppo (ipotesi basata sul budget).</li>
+<li><strong>Documento da Produrre:</strong> Documento dei requisiti, analisi di mercato (target e budget).</li>
+</ul>
+</li>
+<li>
+<p><strong>Settimana 2: Architettura Software e Design Modulare</strong></p>
+<ul>
+<li>Progettare l'architettura software del gioco utilizzando diagrammi UML (o altri strumenti di modellazione).</li>
+<li>Identificare i principali moduli (es: modulo di rendering, modulo di fisica, modulo di AI, modulo audio, modulo di networking).</li>
+<li>Definire le interfacce tra i moduli (come comunicheranno i moduli tra loro).</li>
+<li>Scegliere le tecnologie e i linguaggi di programmazione più appropriati per ogni modulo.</li>
+<li><strong>Documento da Produrre:</strong> Diagrammi UML (classi, componenti, sequenze), descrizione delle API tra moduli, scelta delle tecnologie.</li>
+</ul>
+</li>
+<li>
+<p><strong>Settimana 3: Progettazione del Database e Persistenza dei Dati (Se Applicabile)</strong></p>
+<ul>
+<li>Se il gioco richiede persistenza dei dati (es: salvataggi, progressi del giocatore, inventario), progettare lo schema del database.</li>
+<li>Scegliere il tipo di database più adatto (es: relazionale, NoSQL).</li>
+<li>Definire le strategie di backup e recovery dei dati.</li>
+<li><strong>Documento da Produrre:</strong> Schema del database, descrizione delle strategie di persistenza.</li>
+</ul>
+</li>
+<li>
+<p><strong>Settimana 4: Pianificazione del Processo di Sviluppo e Gestione del Team (Focus Ingegneristico)</strong></p>
+<ul>
+<li>Definire il processo di sviluppo (es: agile, waterfall, ibrido).</li>
+<li>Suddividere il progetto in task e milestones.</li>
+<li>Assegnare i ruoli e le responsabilità ai membri del team.</li>
+<li>Scegliere gli strumenti di project management (es: Jira, Trello).</li>
+<li>Definire le strategie di testing (es: unit testing, integration testing, system testing).</li>
+<li><strong>Documento da Produrre:</strong> Piano di progetto (WBS, Gantt chart), matrice dei ruoli e delle responsabilità, piano di testing.</li>
+</ul>
+</li>
+<li>
+<p><strong>Settimana 5: Strategie di Test e Controllo Qualità</strong></p>
+<ul>
+<li>Definire i tipi di test necessari (unit test, integration test, system test, acceptance test).</li>
+<li>Scrivere casi di test per i moduli principali del gioco.</li>
+<li>Pianificare l'integrazione continua e l'automazione dei test (se possibile).</li>
+<li>Definire le metriche per misurare la qualità del software (es: numero di bug, copertura del codice).</li>
+<li><strong>Documento da Produrre:</strong> Piano di test, casi di test, metriche di qualità.</li>
+</ul>
+</li>
+<li>
+<p><strong>Settimana 6: Presentazione Finale e Analisi del Rischio</strong></p>
+<ul>
+<li>Presentare l'intero progetto al resto del corso.</li>
+<li>Spiegare le scelte di design, le decisioni tecniche e il piano di sviluppo.</li>
+<li>Identificare i principali rischi del progetto (es: problemi tecnici, ritardi, mancanza di risorse).</li>
+<li>Proporre strategie per mitigare i rischi.</li>
+<li><strong>Documento da Produrre:</strong> Presentazione finale, analisi dei rischi.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Valutazione:</strong></p>
+<ul>
+<li><strong>Completezza della Progettazione:</strong> Quanto è dettagliata e completa l'architettura software, il piano di sviluppo e il piano di test?</li>
+<li><strong>Applicazione dei Principi di Ingegneria del Software:</strong> Quanto sono ben applicati i principi di modularità, astrazione, incapsulamento e separazione delle responsabilità?</li>
+<li><strong>Realismo del Piano:</strong> Quanto è realistico il piano di sviluppo, considerando il budget, i tempi e le risorse disponibili?</li>
+<li><strong>Gestione del Rischio:</strong> Quanto sono ben identificati e gestiti i rischi del progetto?</li>
+<li><strong>Presentazione:</strong> Chiarezza, completezza, capacità di rispondere alle domande.</li>
+<li><strong>Qualità dei Documenti:</strong> Chiarezza, completezza e organizzazione dei documenti prodotti.</li>
+</ul>
+<p><strong>Suggerimenti Aggiuntivi:</strong></p>
+<ul>
+<li>Incoraggiare l'uso di strumenti di modellazione UML (o equivalenti) per progettare l'architettura software.</li>
+<li>Fornire feedback regolare durante il processo di progettazione.</li>
+<li>Organizzare sessioni di "design review" tra i gruppi per condividere idee e best practice.</li>
+<li>Invitare un professionista del settore a fare da giudice per la presentazione finale.</li>
+<li>Enfatizzare l'importanza della comunicazione e della collaborazione nel team.</li>
+</ul>
+<p>Questo esercizio permette agli studenti di concentrarsi sugli aspetti fondamentali dell'ingegneria del software, come la pianificazione, la progettazione dell'architettura, la gestione del progetto e la garanzia della qualità, senza la necessità di implementare effettivamente il gioco. Il focus è sul "come" costruire il software, piuttosto che sul "cosa". Pensa a questo come alla costruzione di un ponte: prima di posare una singola pietra, devi avere un progetto dettagliato che tenga conto di ogni aspetto, dalla resistenza dei materiali alla gestione del traffico. Questo esercizio simula proprio quella fase di progettazione.</p>
+<p>Certo, ecco degli esempi di come i gruppi potrebbero affrontare alcune delle fasi chiave dell'esercizio "Progettazione Ingegneristica di un Videogioco Modulare", per darti un'idea più concreta di cosa ci si aspetta.</p>
+<p><strong>Esempio: Gruppo A - Gioco Strategico a Turni con Microgestione di Risorse (Target: Hardcore Gamers su PC)</strong></p>
+<ul>
+<li><strong>Genere:</strong> Strategico a turni con elementi di gestione di risorse.</li>
+<li><strong>Target:</strong> Giocatori esperti di giochi strategici su PC, abituati a meccaniche complesse e a lunghe sessioni di gioco.</li>
+<li><strong>Budget Ipotetico:</strong> AA (circa 5-10 milioni di dollari).</li>
+</ul>
+<p><strong>1. Analisi dei Requisiti e Definizione Ambito:</strong></p>
+<ul>
+<li><strong>Requisiti Funzionali:</strong><ul>
+<li>Il gioco deve avere una mappa del mondo generata proceduralmente.</li>
+<li>Il giocatore deve poter costruire basi, raccogliere risorse e addestrare unità.</li>
+<li>Il giocatore deve poter attaccare e difendere territori.</li>
+<li>Il gioco deve avere un sistema di ricerca tecnologica.</li>
+<li>Il gioco deve supportare il multiplayer online fino a 8 giocatori.</li>
+<li>Il gioco deve avere una campagna single-player con una trama complessa.</li>
+</ul>
+</li>
+<li><strong>Requisiti Non Funzionali:</strong><ul>
+<li>Il gioco deve girare a 60 FPS su PC di fascia media.</li>
+<li>L'interfaccia utente deve essere intuitiva e personalizzabile.</li>
+<li>Il gioco deve essere stabile e affidabile (pochi crash).</li>
+<li>Il gioco deve essere facile da moddare (supporto per modding community).</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Architettura Software e Design Modulare:</strong></p>
+<ul>
+<li><strong>Moduli Principali:</strong><ul>
+<li><strong>Modulo di Rendering:</strong> Gestisce la grafica del gioco.<ul>
+<li><em>Tecnologia:</em> Unreal Engine o Unity.</li>
+</ul>
+</li>
+<li><strong>Modulo di Gameplay:</strong> Gestisce le meccaniche di gioco, le regole e l'IA.<ul>
+<li><em>Tecnologia:</em> C++ o C#.</li>
+</ul>
+</li>
+<li><strong>Modulo di AI:</strong> Gestisce il comportamento dei nemici e delle unità alleate.<ul>
+<li><em>Tecnologia:</em> C++ o C# con librerie di AI (es: TensorFlow).</li>
+</ul>
+</li>
+<li><strong>Modulo di Risorse:</strong> Gestisce la raccolta, la produzione e la distribuzione delle risorse.<ul>
+<li><em>Tecnologia:</em> C++.</li>
+</ul>
+</li>
+<li><strong>Modulo di Rete:</strong> Gestisce il multiplayer online.<ul>
+<li><em>Tecnologia:</em> C++ con librerie di networking (es: Photon Engine).</li>
+</ul>
+</li>
+<li><strong>Modulo di Interfaccia Utente:</strong> Gestisce l'interfaccia utente del gioco.<ul>
+<li><em>Tecnologia:</em> UMG (Unreal Motion Graphics) o Unity UI.</li>
+</ul>
+</li>
+<li><strong>Modulo di Audio:</strong> Gestisce gli effetti sonori e la musica.<ul>
+<li><em>Tecnologia:</em> Wwise o FMOD.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><strong>Interfacce:</strong><ul>
+<li>Il Modulo di Gameplay comunica con il Modulo di Rendering per visualizzare gli effetti delle azioni del giocatore.</li>
+<li>Il Modulo di AI comunica con il Modulo di Gameplay per controllare il comportamento delle unità.</li>
+<li>Il Modulo di Rete comunica con il Modulo di Gameplay per sincronizzare lo stato del gioco tra i giocatori.</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Progettazione del Database e Persistenza dei Dati:</strong></p>
+<ul>
+<li><strong>Database:</strong> Relazionale (PostgreSQL) per gestire i dati del mondo di gioco, le statistiche dei giocatori e le transazioni.</li>
+<li><strong>Schema:</strong> Tabelle per giocatori, unità, edifici, risorse, tecnologie, missioni, ecc.</li>
+<li><strong>Strategie di Persistenza:</strong> Salvataggi automatici regolari, backup giornalieri del database.</li>
+</ul>
+<p><strong>4. Pianificazione del Processo di Sviluppo e Gestione del Team:</strong></p>
+<ul>
+<li><strong>Processo di Sviluppo:</strong> Agile (Scrum).</li>
+<li><strong>Team:</strong><ul>
+<li>Project Manager (1): Gestisce il progetto, comunica con il team e coordina le attività.</li>
+<li>Lead Programmer (1): Definisce l'architettura software e supervisiona lo sviluppo del codice.</li>
+<li>Game Designer (1): Progetta le meccaniche di gioco, le regole e l'IA.</li>
+<li>Artist (1): Crea gli asset grafici del gioco.</li>
+<li>Sound Designer (1): Crea gli effetti sonori e la musica.</li>
+</ul>
+</li>
+<li><strong>Strumenti:</strong> Jira per il task management, Git per il version control, Slack per la comunicazione.</li>
+</ul>
+<p><strong>5. Strategie di Test e Controllo Qualità:</strong></p>
+<ul>
+<li><strong>Tipi di Test:</strong> Unit test (per testare singoli componenti), integration test (per testare l'interazione tra i componenti), system test (per testare l'intero gioco).</li>
+<li><strong>Casi di Test:</strong><ul>
+<li>Verificare che le unità si muovano correttamente sulla mappa.</li>
+<li>Verificare che le risorse vengano raccolte e distribuite correttamente.</li>
+<li>Verificare che gli attacchi e le difese funzionino correttamente.</li>
+<li>Verificare che il multiplayer online sia stabile e sincronizzato.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Esempio: Gruppo B - Platformer 2D con Meccaniche di Puzzle (Target: Casual Players su Mobile)</strong></p>
+<ul>
+<li><strong>Genere:</strong> Platformer 2D con puzzle.</li>
+<li><strong>Target:</strong> Giocatori occasionali su mobile, che cercano un gioco facile da imparare ma stimolante.</li>
+<li><strong>Budget Ipotetico:</strong> Indie (circa 100.000 - 500.000 dollari).</li>
+</ul>
+<p><strong>1. Analisi dei Requisiti e Definizione Ambito:</strong></p>
+<ul>
+<li><strong>Requisiti Funzionali:</strong><ul>
+<li>Il giocatore deve poter saltare, correre e interagire con l'ambiente.</li>
+<li>Il gioco deve avere livelli con puzzle da risolvere.</li>
+<li>Il gioco deve avere un sistema di punteggio e di ricompense.</li>
+<li>Il gioco deve supportare controlli touch intuitivi.</li>
+<li>Il gioco deve avere una grafica colorata e accattivante.</li>
+</ul>
+</li>
+<li><strong>Requisiti Non Funzionali:</strong><ul>
+<li>Il gioco deve girare a 30 FPS su smartphone di fascia bassa.</li>
+<li>Il gioco deve consumare poca batteria.</li>
+<li>Il gioco deve essere facile da imparare e da giocare.</li>
+<li>Il gioco deve essere disponibile su Android e iOS.</li>
+</ul>
+</li>
+</ul>
+<p><strong>2. Architettura Software e Design Modulare:</strong></p>
+<ul>
+<li><strong>Moduli Principali:</strong><ul>
+<li><strong>Modulo di Movimento:</strong> Gestisce il movimento del personaggio.<ul>
+<li><em>Tecnologia:</em> C# (Unity).</li>
+</ul>
+</li>
+<li><strong>Modulo di Collisione:</strong> Gestisce le collisioni tra il personaggio e l'ambiente.<ul>
+<li><em>Tecnologia:</em> C# (Unity).</li>
+</ul>
+</li>
+<li><strong>Modulo di Puzzle:</strong> Gestisce la logica dei puzzle.<ul>
+<li><em>Tecnologia:</em> C# (Unity).</li>
+</ul>
+</li>
+<li><strong>Modulo di Interfaccia Utente:</strong> Gestisce l'interfaccia utente del gioco.<ul>
+<li><em>Tecnologia:</em> Unity UI.</li>
+</ul>
+</li>
+<li><strong>Modulo di Audio:</strong> Gestisce gli effetti sonori e la musica.<ul>
+<li><em>Tecnologia:</em> Unity Audio.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>3. Progettazione del Database e Persistenza dei Dati:</strong></p>
+<ul>
+<li><strong>Database:</strong> Semplice sistema di salvataggio basato su file (PlayerPrefs in Unity) per salvare il progresso del giocatore e i punteggi.</li>
+</ul>
+<p><strong>4. Pianificazione del Processo di Sviluppo e Gestione del Team:</strong></p>
+<ul>
+<li><strong>Processo di Sviluppo:</strong> Agile (Kanban).</li>
+<li><strong>Team:</strong><ul>
+<li>Lead Developer (1): Sviluppa il codice e gestisce il progetto.</li>
+<li>Game Designer (1): Progetta i livelli e i puzzle.</li>
+<li>Artist (1): Crea gli asset grafici del gioco.</li>
+<li>Sound Designer (1): Crea gli effetti sonori e la musica.</li>
+</ul>
+</li>
+<li><strong>Strumenti:</strong> Trello per il task management, Git per il version control.</li>
+</ul>
+<p><strong>5. Strategie di Test e Controllo Qualità:</strong></p>
+<ul>
+<li><strong>Tipi di Test:</strong> Unit test (per testare singoli componenti), playtesting (per testare l'esperienza di gioco).</li>
+<li><strong>Casi di Test:</strong><ul>
+<li>Verificare che il personaggio si muova correttamente.</li>
+<li>Verificare che i puzzle siano risolvibili.</li>
+<li>Verificare che l'interfaccia utente sia intuitiva.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Analisi del Rischio (Esempio per entrambi i gruppi):</strong></p>
+<ul>
+<li><strong>Rischio:</strong> Ritardo nella consegna degli asset grafici.<ul>
+<li><strong>Mitigazione:</strong> Stabilire scadenze chiare, comunicare regolarmente con l'artista, utilizzare asset provvisori in attesa degli asset definitivi.</li>
+</ul>
+</li>
+<li><strong>Rischio:</strong> Problemi tecnici imprevisti.<ul>
+<li><strong>Mitigazione:</strong> Prevedere un margine di tempo per la risoluzione dei problemi, avere a disposizione un programmatore esperto, consultare la documentazione e i forum online.</li>
+</ul>
+</li>
+<li><strong>Rischio:</strong> Mancanza di feedback da parte dei tester.<ul>
+<li><strong>Mitigazione:</strong> Organizzare sessioni di playtesting regolari, incentivare i tester a fornire feedback dettagliato, utilizzare strumenti di analisi per monitorare il comportamento dei giocatori.</li>
+</ul>
+</li>
+</ul>
+<p>Questi sono solo esempi, ovviamente. L'obiettivo è che i gruppi dimostrino di aver compreso i principi di ingegneria del software e di saperli applicare alla progettazione di un videogioco, anche senza implementarlo completamente. L'attenzione è sulla pianificazione, l'organizzazione e la gestione del processo di sviluppo, piuttosto che sul risultato finale.</p>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; Angelo Cardellicchio - MIT License
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/anhelus" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="mailto:angelo.cardellicchio@poliba.it" target="_blank" rel="noopener" title="" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.8l167.6-182.8c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copiato", "clipboard.copy": "Copia", "search.result.more.one": "1 altro in questa pagina", "search.result.more.other": "# altri in questa pagina", "search.result.none": "Nessun documento trovato", "search.result.one": "1 documento trovato", "search.result.other": "# documenti trovati", "search.result.placeholder": "Scrivi per iniziare a cercare", "search.result.term.missing": "Non presente", "select.version": "Seleziona la versione"}}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.c8b220af.min.js"></script>
+      
+        <script src="../../../../js/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
