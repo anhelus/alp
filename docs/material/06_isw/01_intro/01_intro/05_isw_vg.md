@@ -1,4 +1,3 @@
-Ok, immagina di voler fare un panino. Se hai solo due fette di pane e del formaggio, lo fai in fretta e senza pensarci troppo. Ma se devi preparare un buffet per 100 persone, con panini diversi, esigenze alimentari particolari, decorazioni e tempi precisi, hai bisogno di un piano, di organizzazione e di un metodo, giusto?
 
 Ecco, lo sviluppo di un videogioco è molto più simile al buffet per 100 persone che al panino veloce. **L'ingegneria del software è necessaria perché i videogiochi moderni sono progetti incredibilmente complessi, che richiedono organizzazione, pianificazione e un approccio sistematico per essere realizzati con successo.**
 
