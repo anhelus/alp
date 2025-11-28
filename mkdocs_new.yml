@@ -1,0 +1,131 @@
+site_name: Corso di Informatica
+
+nav:
+  - Home: index.md
+  - 1. Fondamenti di Informatica e Rappresentazione dell'Informazione:
+    - 1.1 Introduzione all'Informatica per l'Ingegneria: material/01_intro/01_intro.md
+    - 1.2 Dall'Analogico al Digitale - Campionamento e Quantizzazione: material/01_intro/02_dig_an.md
+    - 1.3 Rappresentazione dei Dati: 
+      - 1.3.1 Sistemi di numerazione (decimale, binario, esadecimale): material/01_intro/03_num_sis/01_intro.md
+      - 1.3.2 Conversioni di base: material/01_intro/03_num_sis/02_conversions.md
+      - 1.3.3 Aritmetica binaria: material/01_intro/03_num_sis/03_binary_arith.md
+    - 1.4 Codifica dell'Informazione (testo, immagini, suono): material/01_intro/04_data_encoding.md
+    - 1.5 Algebra di Boole e Porte Logiche: material/01_intro/05_boole.md
+
+  - 2. Pensiero Computazionale e Algoritmi:
+    - 2.1 Il concetto di Algoritmo e le sue proprietà: material/02_programming/01_algorithms/lecture.md
+    - 2.2 Progettazione di Algoritmi con i Diagrammi di Flusso:
+      - 2.2.1 I blocchi fondamentali (sequenza, selezione, iterazione): material/02_programming/02_flow_charts/01_blocks.md
+      - 2.2.2 Esercitazione pratica con Flowgorithm: material/02_programming/02_flow_charts/02_flowgorithm_lab.md
+    - 2.3 Dagli Algoritmi al Codice: lo Pseudocodice: material/02_programming/03_pseudocode/lecture.md
+    - 2.4 Complessità Computazionale: un'introduzione (O-grande): material/02_programming/04_complexity/lecture.md
+
+  - 3. Programmazione Strutturata:
+    - 3.1 Variabili, Tipi di Dato e Assegnamenti: material/03_structured/01_variables/lecture.md
+    - 3.2 Strutture di Controllo:
+      - 3.2.1 Sequenza e Selezione (if-else): material/03_structured/02_control_flow/01_selection.md
+      - 3.2.2 Cicli (for, while): material/03_structured/02_control_flow/02_loops.md
+    - 3.3 Funzioni: Modularizzare il Codice:
+      - 3.3.1 Definizione e Chiamata di Funzioni: perché usarle: material/03_structured/03_functions/01_intro.md
+      - 3.3.2 Parametri e Valori di Ritorno: Comunicare con le Funzioni:
+          - 3.3.2.1 Parametri formali e parametri attuali: material/03_structured/03_functions/02_parameters_def.md
+          - 3.3.2.2 Il Passaggio dei Parametri: per Valore e per Riferimento: material/03_structured/03_functions/03_pass_by_value_ref.md
+          - 3.3.2.3 Ottenere un risultato: l'istruzione `return`: material/03_structured/03_functions/04_return_value.md
+      - 3.3.3 Ambito di Visibilità (Scope) delle Variabili:
+          - 3.3.3.1 Variabili Locali: "proprietà privata" di una funzione: material/03_structured/03_functions/05_local_scope.md
+          - 3.3.3.2 Variabili Globali: rischi e benefici: material/03_structured/03_functions/06_global_scope.md
+      - 3.3.4 Esempio Pratico: Dalla Progettazione all'Implementazione: material/03_structured/03_functions/07_full_example.md
+    - 3.4 Strutture Dati Fondamentali:
+      - 3.4.1 Array e Vettori: material/03_structured/04_data_structures/01_arrays.md
+      - 3.4.2 Matrici (Array bidimensionali): material/03_structured/04_data_structures/02_matrices.md
+      - (Opzionale) 3.4.3 Cenni a Strutture Dati Avanzate (liste, pile, code): material/03_structured/04_data_structures/03_advanced.md
+    - 3.5 La Ricorsione: un approccio alternativo all'iterazione: material/03_structured/05_recursion/lecture.md
+
+  - 4. Introduzione al Calcolo Scientifico con MATLAB:
+    - 4.1 L'ambiente MATLAB: Command Window, Editor, Workspace, Figure: material/04_matlab/01_environment/lecture.md
+    - 4.2 Lavorare con Vettori e Matrici:
+      - 4.2.1 Creazione e manipolazione: material/04_matlab/02_vectors_matrices/01_creation.md
+      - 4.2.2 Operazioni elemento per elemento e algebra lineare: material/04_matlab/02_vectors_matrices/02_operations.md
+    - 4.3 Scripting e Funzioni in MATLAB:
+      - 4.3.1 Creare uno script (.m file): material/04_matlab/03_scripting/01_scripts.md
+      - 4.3.2 Scrivere funzioni personalizzate: material/04_matlab/03_scripting/02_functions.md
+    - 4.4 Visualizzazione Dati: il comando plot: material/04_matlab/04_plotting/lecture.md
+    - 4.5 Esempi di Ingegneria in MATLAB: material/04_matlab/05_eng_examples/lecture.md
+
+  - 5. Algoritmi Fondamentali (con implementazioni in MATLAB):
+    - 5.1 Algoritmi di Ricerca:
+      - 5.1.1 Ricerca Lineare: material/05_algorithms/01_search/01_linear.md
+      - 5.1.2 Ricerca Binaria (su vettori ordinati): material/05_algorithms/01_search/02_binary.md
+    - 5.2 Algoritmi di Ordinamento:
+      - 5.2.1 Selection Sort: material/05_algorithms/02_sorting/01_selection.md
+      - 5.2.2 Bubble Sort: material/05_algorithms/02_sorting/02_bubble.md
+      - (Opzionale) 5.2.3 Cenni a Merge Sort e Quick Sort: material/05_algorithms/02_sorting/03_advanced.md
+
+  - 6. Architettura dei Sistemi di Calcolo (Cenni):
+    - 6.1 L'architettura di Von Neumann (CPU, Memoria, I/O): material/06_architecture/01_von_neumann/lecture.md
+    - 6.2 Il Ruolo del Sistema Operativo: gestione delle risorse: material/06_architecture/02_os_intro/lecture.md
+
+theme:
+  name: material
+  language: it
+
+markdown_extensions:
+  - admonition # notes make pret4ty
+  - attr_list
+  - footnotes
+  - meta # page-specific context
+  - toc:
+      permalink: true # inserts an anchor
+  - sane_lists # better ul and ol
+  - nl2br # newline hard break
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem: # better italic and bold
+      smart_enable: asterisk
+  - pymdownx.caret # insert text and superscript
+  - pymdownx.details # details and summary; work with admonition
+  - pymdownx.emoji:
+      emoji_index: !!python/name:pymdownx.emoji.twemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.highlight: # better code, instead of CodeHilite           <--------
+      anchor_linenums: false
+  - pymdownx.inlinehilite # like codehilite but inline
+  - pymdownx.magiclink # auto links
+  - pymdownx.mark # highlight text
+  - pymdownx.smartsymbols # special symbols
+  - pymdownx.superfences: # nest code blocks under other blocks   <-------
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tasklist: # better tasks lists
+      custom_checkbox: true
+  - pymdownx.tabbed: # auto tabs
+      alternate_style: true # auto tabs
+  - pymdownx.tilde # strike through cross out text
+  - tables
+  - md_in_html
+
+# plugin:
+#   - search
+#   - encryptcontent: {}
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/anhelus
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:angelo.cardellicchio@poliba.it
+  analytics:
+    provider: google
+    property: G-J2XESD8WDV
+
+extra_javascript:
+  - js/config.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+copyright: Copyright &copy; Angelo Cardellicchio - MIT License
