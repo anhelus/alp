@@ -79,6 +79,9 @@ Anche alla somma logica è associata una porta, mostrata nella figura successiva
 
 ![or_port](./images/or_port.png)
 
+!!!info "XOR: OR esclusivo"
+    Esiste anche l'operazione *XOR* (OR esclusivo), che dà $1$ solo se *esattamente uno* dei due predicati è vero. Non è un'operazione fondamentale come AND, OR e NOT, ma è molto usata in crittografia e nei circuiti sommatori.
+
 !!!tip "Perché somma?"
     Il fatto che questa operazione sia detta di *somma* deriva dal fatto che, così come per il prodotto, il risultato sia in qualche modo riconducibile a quello ottenibile seguendo le regole dell'aritmetica standard.
 

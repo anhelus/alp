@@ -7,7 +7,7 @@ Nella [precedente lezione](04_num_sis.md) abbiamo introdotto il concetto di sist
 
 ##### Perché binario?
 
-Adesso, posto che abbiamo messo un punto sul fatto che, per far gestire informazione al nostro calcolatore, dovremo utilizzare un sistema numerico, ci interessa trovare quello che, in qualche modo, sia il più vicino possibile al funzionamento fisico dell'elaboratore. Di conseguenza, dobbiamo proprio ppartire da quest'ultimo: *cosa è, quindi, un elaboratore?*
+Adesso, posto che abbiamo messo un punto sul fatto che, per far gestire informazione al nostro calcolatore, dovremo utilizzare un sistema numerico, ci interessa trovare quello che, in qualche modo, sia il più vicino possibile al funzionamento fisico dell'elaboratore. Di conseguenza, dobbiamo proprio partire da quest'ultimo: *cosa è, quindi, un elaboratore?*
 
 Detto nella maniera più semplice possibile, un elaboratore è un insieme di circuiti elettrici che, organizzati in maniera opportuna, fanno scorrere della corrente in maniera tale da trasformare un input in un output. Semplice, giusto? Beh, non proprio: questi "circuiti" sono di dimensione nanometrica, e ve ne sono miliardi per ogni singolo processore. Tuttavia, il funzionamento è sempre lo stesso: ognuno di questi circuiti viene governato da degli interruttori, chiamati *transistor*, che possono essere *aperti* (e, quindi, senza passaggio di corrente al loro interno) o *chiusi* (e che quindi permettono il passaggio di corrente). Dato che il funzionamento del processore è legato a due differenti situazioni (aperto e chiuso), avremo bisogno di un sistema di numerazione in grado di modellare proprio questi due stati, ovvero il *sistema binario*.
 
@@ -22,7 +22,7 @@ Il sistema binario presenta quindi il vantaggio fondamentale di permettere di st
 
 ## Conversioni di base
 
-L'esempio legato alla diversa complessità della rappresentazione di un dato numero in sistemi differenti ci permette di introdurre il concetto di *conversione di base*. I numeri, infatti, sono concetti astratti, rappresentabili in modo equivalente in qualsiasi base di numerazione, a seconda di quanti simboli possono essere tra loro combinati; la conversione di base è l'operazione matematica con cui si passa da una base di numerazione adll'altra.
+L'esempio legato alla diversa complessità della rappresentazione di un dato numero in sistemi differenti ci permette di introdurre il concetto di *conversione di base*. I numeri, infatti, sono concetti astratti, rappresentabili in modo equivalente in qualsiasi base di numerazione, a seconda di quanti simboli possono essere tra loro combinati; la conversione di base è l'operazione matematica con cui si passa da una base di numerazione all'altra.
 
 ### Conversione da decimale a base $B$
 
@@ -41,14 +41,17 @@ Facciamo un esempio con base $2$: dovremo dividere ripetutamente il numero $N$ p
 
 In base alla tabella precedente, ed alla regola che abbiamo definito, il risultato della conversione è dato da $1010$.
 
+!!!tip "Verifica"
+    Possiamo sempre verificare il risultato riconvertendo in decimale: $1010_2 = 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 8 + 0 + 2 + 0 = 10$.
+
 ##### Numeri frazionari
 
 Gli stessi principi si applicano ai numeri frazionari. In questi casi, è necessario moltiplicare ripetutamente la parte frazionaria per la base $B$, e considerare il risultato $P$ di questo prodotto. In particolare, $P$ avrà una parte intera (che chiameremo *P.I.*) ed una parte frazionaria (che chiameremo *P.F.*); ai nostri scopi, continueremo a moltiplicare fino a che non otterremo una P.F. pari a $0$, e considereremo come risultato della conversione le parti intere prese nell'ordine di moltiplicazione. Ad esempio:
 
 | Valore moltiplicato | Base | Prodotto | P.I. | P.F. |
 | ----------------- | ---- | -------- | ---- | ---- |
-| $0.25$            | $2$  | $0.5$    | $0$  | $5$  |
-| $0.5$             | $2$  | $1$      | $1$  | $0$  | 
+| $0.25$            | $2$  | $0.5$    | $0$  | $0.5$  |
+| $0.5$             | $2$  | $1$      | $1$  | $0$    | 
 
 In questo caso, la rappresentazione in binario di $0.25$ sarà quindi $01$. Di conseguenza, se volessimo rappresentare in binario $10.25$, dovremmo scrivere $1010.01$.
 
@@ -56,18 +59,24 @@ Esiste, per i numeri frazionari, anche la possibilità di trovarsi davanti a rap
 
 | Valore moltiplicato | Base | Prodotto | P.I. | P.F. |
 | ----------------- | ---- | -------- | ---- | ---- |
-| $0.6$             | $2$  | $1.2$    | $1$  | $2$  |
-| $0.2$             | $2$  | $0.4$    | $0$  | $4$  |
-| $0.4$             | $2$  | $0.8$    | $0$  | $8$  |
-| $0.8$             | $2$  | $1.6$    | $0$  | $4$  |
-| $0.6$             | $2$  | $1.2$    | $1$  | $2$  |
+| $0.6$             | $2$  | $1.2$    | $1$  | $0.2$ |
+| $0.2$             | $2$  | $0.4$    | $0$  | $0.4$ |
+| $0.4$             | $2$  | $0.8$    | $0$  | $0.8$ |
+| $0.8$             | $2$  | $1.6$    | $1$  | $0.6$ |
+| $0.6$             | $2$  | $1.2$    | $1$  | $0.2$ |
 
 Notiamo due cose:
 
 1. quando il prodotto ha una parte intera superiore ad $1$, questa andrà riportata a zero nella moltiplicazione successiva;
 2. potremmo continuare ad effettuare un numero indefinito di moltiplicazioni, e non convergeremmo *mai*.
 
-In quest'ultimo caso, quindi, dovremo imporre un'ulteriore condizione, ovvero quella relativa al *numero massimo di bit da utilizzare*, giunti al quale termineremo l'operazione di conversione, approssimando il risultato ottenuto. Nel nostro caso, volendo usare una rappresentazione a $9$ bit, $10.6$ sarà dato da $1010.10001$.
+In quest'ultimo caso, quindi, dovremo imporre un'ulteriore condizione, ovvero quella relativa al *numero massimo di bit da utilizzare*, giunti al quale termineremo l'operazione di conversione, approssimando il risultato ottenuto. Nel nostro caso, volendo usare una rappresentazione a $9$ bit, $10.6$ sarà dato da $1010.10011$.
+
+!!!tip "Da binario a esadecimale"
+    Un numero binario può essere convertito in esadecimale raggruppando le cifre a $4$ a $4$ (da destra) e sostituendo ogni gruppo con la corrispondente cifra esadecimale ($0$–$9$, $A$–$F$). Ad esempio, $1010_2 = A_{16}$ e $1111_2 = F_{16}$. Questa compattezza è il motivo per cui l'esadecimale è così usato in informatica.
+
+!!!question "Esercizio"
+    Converti in binario il numero $42$ (suggerimento: dalla lezione precedente sai che $42_{10} = 32 + 8 + 2$). Poi verifica il risultato con la formula delle potenze di $2$.
 
 ## Bit, byte e word
 

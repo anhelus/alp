@@ -124,11 +124,20 @@ Abbiamo elencato tre step, anche se, nei fatti, ci saranno soltanto due addizion
 
 Per quello che riguarda l'analisi a posteriori, invece, sarà necessario anche stavolta fissare una condizione al contorno, ovvero la velocità con cui il nostro processore riesce ad eseguire una singola istruzione. Supponendo che questa sia pari ad un microsecondo, l'analisi a posteriori ci porterà a stabilire che la complessità computazionale sarà pari a 2 microsecondi.
 
+!!!tip "Classi di complessità comuni"
+    Dalla più efficiente alla meno efficiente:
+    - $O(1)$ — costante (accesso a un array)
+    - $O(\log n)$ — logaritmica (ricerca binaria)
+    - $O(n)$ — lineare (scorrere una lista)
+    - $O(n \log n)$ — linearitmica (ordinamento efficiente)
+    - $O(n^2)$ — quadratica (cicli annidati)
+    - $O(2^n)$ — esponenziale (molti problemi intrattabili)
+
 ## Complessità di caso peggiore
 
 Nelle applicazioni reali, è abbastanza difficile che si riesca a calcolare *esattamente* la complessità computazionale di un programma, in quanto il numero di ramificazioni e le variabili da tenere in considerazione sono tali da rendere un approccio deterministico realisticamente non percorribile. Di conseguenza, si ricorre ad approcci che ci permettano di avere un'idea *veritiera* della complessità dell'algoritmo, stimata assumendo la *casistica peggiore*, ovvero calcolando la quantità massima di tempo e memoria che, nel peggiore dei casi, il nostro algoritmo richiederà per essere eseguito.
 
-Per far questo, si utilizza la cosiddetta *O-big notation*, che in matematica ci permette di descrivere il limite asintotico superiore di una funzione rispetto ad un'altra. In parole povere, un algoritmo che ha (ad esempio) una complessità temporale $C_T(n) = \mathbb{O}(n^2)$ richiederà un tempo di esecuzione pari *al massimo* ad $n^2$, mentre un algoritmo con una complessità $C_S(n) = O(n * log(n))$ occuperà al massimo $n*log(n)$ unità di memoria.
+Per far questo, si utilizza la cosiddetta notazione *Big-O* (o *O-grande*), che in matematica ci permette di descrivere il limite asintotico superiore di una funzione rispetto ad un'altra. In parole povere, un algoritmo che ha (ad esempio) una complessità temporale $C_T(n) = \mathbb{O}(n^2)$ richiederà un tempo di esecuzione pari *al massimo* ad $n^2$, mentre un algoritmo con una complessità $C_S(n) = O(n * log(n))$ occuperà al massimo $n*log(n)$ unità di memoria.
 
 !!!note "Nota"
 	Nella notazione precedente, `n` indica una variabile che può influenzare il numero di operazioni eseguite dall'algoritmo. Il perché occorra specificarla sarà più chiaro grazie ai prossimi esempi.
@@ -165,4 +174,4 @@ for i da 1 a n:
 endfor
 ```
 
-Per ogni iterazione del ciclo esterno (quello che usa come contatore la variabile `i`) avremo *n* iterazioni del ciclo interno (quello che usa come contatore la variabile `j`). La complessità temporale di caso peggiore sarà quindi $O(n^2)$; per quello che riguarda invece la complessità spaziale, invece, assumendo un meccanismo analogo al precedente, avremo sempre $O(1)$.V
+Per ogni iterazione del ciclo esterno (quello che usa come contatore la variabile `i`) avremo *n* iterazioni del ciclo interno (quello che usa come contatore la variabile `j`). La complessità temporale di caso peggiore sarà quindi $O(n^2)$; per quello che riguarda invece la complessità spaziale, invece, assumendo un meccanismo analogo al precedente, avremo sempre $O(1)$.

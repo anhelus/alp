@@ -75,7 +75,7 @@ In questo caso, la union di nome `nome_union` potrà assumere uno tra due possib
 
 ## Pile e code
 
-Abbiamo visto in precedenza due tipi di accesso ai dati, ovvero quello *casuale*, proprio degli array, e quello *sequenziale*, proprio dell eliste. Esiste un altro tipo di accesso ai dati, chiamato *accesso limitato*, usato da specifiche strutture dati come *pile* e *code*. Vediamo brevemente entrambi questi tipi di struttura dati.
+Abbiamo visto in precedenza due tipi di accesso ai dati, ovvero quello *casuale*, proprio degli array, e quello *sequenziale*, proprio delle liste. Esiste un altro tipo di accesso ai dati, chiamato *accesso limitato*, usato da specifiche strutture dati come *pile* e *code*. Vediamo brevemente entrambi questi tipi di struttura dati.
 
 ### Pile
 

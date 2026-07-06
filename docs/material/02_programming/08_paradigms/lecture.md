@@ -18,6 +18,6 @@ In particolare, nell'approccio procedurale il programma viene suddiviso in picco
 
 Il paradigma di programmazione dichiarativa prevede che il risultato richiesto sia *descritto*, e che non siano invece specificate le singole istruzioni da parte dello sviluppatore.
 
-In pratica, a differenza del paradigma imperativo, che definisce *come* arrivare ad un risultato, il paradigma dichiarativo si limita a descrivere cià che si vuole ottenere, posizionandosi di conseguenza più vicino all'essere umano che al calcolatore (ovvero ad un *livello di astrazione* più elevato). Esempi di linguaggi di programmazione che seguono il paradigma imperativo sono Prolog, Lisp o SQL.
+In pratica, a differenza del paradigma imperativo, che definisce *come* arrivare ad un risultato, il paradigma dichiarativo si limita a descrivere ciò che si vuole ottenere, posizionandosi di conseguenza più vicino all'essere umano che al calcolatore (ovvero ad un *livello di astrazione* più elevato). Esempi di linguaggi di programmazione che seguono il paradigma imperativo sono Prolog, Lisp o SQL.
 
 In analogia al paradigma imperativo, anche quello dichiarativo vede due possibili stili di programmazione, ovvero quello *funzionale* e quello *logico*. In ogni caso, i paradigmi dichiarativi sono generalmente più complessi da utilizzare rispetto a quelli imperativi, in quanto richiedono un elevato apporto logico da parte del programmatore, che invece nel paradigma imperativo deve "limitarsi" ad implementare correttamente una sequenza di istruzioni.

@@ -2,7 +2,7 @@
 
 Comprendere il concetto di *variabile* è fondamentale (o, per meglio dire, *propedeutico*) all'acquisizione dei fondamentali della programmazione.
 
-Per capire di cosa si tratta, possiamo analizzare il significato della parola nella lingua italiana: intuitivamente, una variabile rappresenta una *quantità* (o, in maniera molto più "lasca", un dato) a cui è "concesso" di variare durante l'esecuzione del programma. Risulta importantissimo sottolineare come una variabile non sia quindi necessariamente un dato di ingresso o un risultato atteso: si tratta piuttosto di una rappresentazione (parziale) dello stato interno del programma ad un dato istante.
+Per capire di cosa si tratta, possiamo analizzare il significato della parola nella lingua italiana: intuitivamente, una variabile rappresenta una *quantità* (o, in maniera molto più "lassa", un dato) a cui è "concesso" di variare durante l'esecuzione del programma. Risulta importantissimo sottolineare come una variabile non sia quindi necessariamente un dato di ingresso o un risultato atteso: si tratta piuttosto di una rappresentazione (parziale) dello stato interno del programma ad un dato istante.
 
 Una variabile può essere quindi qualsiasi dato contenuto nel nostro programma: ci sono variabili che contano il numero di operazioni eseguite, ad esempio, oppure ancora variabili di supporto, che ci permettono di memorizzare stati intermedi durante l'esecuzione di iterazioni complesse.
 
@@ -58,7 +58,7 @@ integer_variable = 1
 
 ## Tipo della variabile
 
-Il tipo della variabile definisce il tipo di dato associato alla stessa; come abbiamo visto nella [lezione 4](../07_data_structures/01_intro/lecture.md), quindi, ciò influenzerà il range di valori che questa può rappresentare. Ponderare adeguatamente il tipo di dato da usare per una variabile è quindi *estremamente importante*, principalmente per due ragioni:
+Il tipo della variabile definisce il tipo di dato associato alla stessa; come abbiamo visto nella [lezione sulla dimensione dei dati](../../01_intro/06_data_types.md), quindi, ciò influenzerà il range di valori che questa può rappresentare. Ponderare adeguatamente il tipo di dato da usare per una variabile è quindi *estremamente importante*, principalmente per due ragioni:
 
 1. *flusso logico*;
 2. *complessità computazionale spaziale*.
@@ -74,7 +74,7 @@ z = x + y;
 
 Cosa accadrà? Consideriamo che il valore che ci attendiamo che `z` assuma è pari `2.3`: tuttavia, avremo come output `2`, principalmente a causa del tipo di `z`. Ciò comporterà quindi un *errore di troncamento* pari a `0.3`.
 
-Per quello che riguarda invece la complessità computazionale spaziale, ricordiamo, sempre dalla lezione 4, che ogni tipo di dato richiede una quantità di memoria differente, ma al tempo stesso permette di memorizzare un range di valori più o meno ampio.
+Per quello che riguarda invece la complessità computazionale spaziale, ricordiamo, sempre dalla lezione sulla dimensione dei dati, che ogni tipo di dato richiede una quantità di memoria differente, ma al tempo stesso permette di memorizzare un range di valori più o meno ampio.
 
 Questa caratteristica può e deve essere usata a nostro vantaggio: infatti, qualora fossimo sicuri che le nostre variabili intere assumono *sempre* valori compresi tra 0 e 100, potremmo utilizzare dati di tipo `byte`. Tuttavia, se per qualche motivo una variabile si trovasse ad assumere un valore *superiore* a 256, avremmo un *errore di buffer overflow*, che porterebbe la variabile a "ritornare" a zero, con conseguenze facilmente intuibili.
 

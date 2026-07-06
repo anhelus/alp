@@ -6,7 +6,7 @@ Per introdurre questo aspetto, dovremo dare un'ulteriore definizione di informaz
 
 ##### Messaggi, linguaggi ed informazione
 
-Formalmente, il messaggio è una delle possibili combinazioni dei simboli appartenenti ad un certo linguaggio: per esempio, tutte le frasi che trovate in queste dispense sono dei messaggi, appartenenti (si spera!) ad un insieme di regole sintattiche e semantiche definite come "linguaggio italiano". L'informazione può quindi essere definita come la *misura dell'ampiezza della classe* alla quale appaprtiene un dato messaggio.
+Formalmente, il messaggio è una delle possibili combinazioni dei simboli appartenenti ad un certo linguaggio: per esempio, tutte le frasi che trovate in queste dispense sono dei messaggi, appartenenti (si spera!) ad un insieme di regole sintattiche e semantiche definite come "linguaggio italiano". L'informazione può quindi essere definita come la *misura dell'ampiezza della classe* alla quale appartiene un dato messaggio.
 
 La definizione è un po' criptica, quindi cerchiamo di spiegarla tramite un esempio. Consideriamo un messaggio del tipo *XXXX*, con *X* uno dei simboli dell'alfabeto anglosassone, ovvero quello composto da $26$ caratteri. Possibili messaggi di questo tipo sono quindi *CIAO*, *OKAY*, *CARA*, *VELA*, e via discorrendo. Ciò implica che il numero di *possibili combinazioni* sarà dato dal numero di possibili caratteri ($26$) elevato per il numero di caratteri contenuti nel messaggio ($4$). L'informazione sarà *esattamente questo valore*, ovvero $26^4$.
 
@@ -22,6 +22,9 @@ Per adesso, ci basti sapere che il numero di informazione associato ad ogni mess
 $$
 Informazione = \log_{2} 26^4
 $$
+
+!!!tip "Perché il logaritmo?"
+    Il logaritmo in base $2$ risponde alla domanda: "quanti bit servono per rappresentare tutte le possibili combinazioni?" In questo caso, $\log_2(26^4) \approx 18.8$, quindi servono $19$ bit per rappresentare qualsiasi messaggio di $4$ lettere dell'alfabeto anglosassone. Il logaritmo ci dà quindi la *quantità di informazione* in bit.
 
 Facciamo un esempio. Sia dato un messaggio di tipo *XXYYY*, con *X* simbolo dell'alfabeto anglosassone, ed *Y* simbolo numerico. In questo caso, l'informazione totale sarà data da:
 
@@ -39,7 +42,7 @@ $$
 
 Dopo aver definito il concetto di informazione in relazione a quello di messaggio, ed aver visto come calcolarne il contributo in bit, possiamo introdurre i sistemi di numerazione che, come suggerisce la parola stessa, altro non sono se non degli *schemi* per la *codifica di numeri*. Semplice.
 
-Per asservire a questo scopo, un sistema di numerazione deve avere alcune caratteristiche e proprietà, ovvero essere definito da:
+Per servire a questo scopo, un sistema di numerazione deve avere alcune caratteristiche e proprietà, ovvero essere definito da:
 
 * *cifre*, per rappresentare i numeri;
 * *regole*, da applicare per costruire e combinare numeri.
@@ -50,7 +53,7 @@ Sulla base di queste definizioni, è possibile definire due categorie di sistemi
 
 Nei sistemi addizionali, ogni simbolo ha un valore fisso, indipendentemente dalla posizione che occupa.
 
-Un esempio classico di sistema di numerazione addizionale è quello *romano*. In particolare, in questo sistema a sette simboli (che ricordiamo essere $I=5,V=5,X=10,L=50,C=100,M=1000$), il valore di ciascun simbolo viene sempre sommato a quello alla sua destra, a patto che quest'ultimo sia minore o uguale. Ad esempio:
+Un esempio classico di sistema di numerazione addizionale è quello *romano*. In particolare, in questo sistema a sette simboli (che ricordiamo essere $I=1,V=5,X=10,L=50,C=100,M=1000$), il valore di ciascun simbolo viene sempre sommato a quello alla sua destra, a patto che quest'ultimo sia minore o uguale. Ad esempio:
 
 $$
 XV = 10 + 5
@@ -106,5 +109,11 @@ N = c_{m-1} \cdot b^{m-1} + c_{m-2} \cdot b^{m-2} + \ldots + c_1 \cdot b^1 + c_0
 $$
 
 dove $c_{m-1}, c_{m-2}, \ldots, c_0$ sono i coefficienti associati a ciascuna delle cifre presenti nel numero.
+
+!!!tip "Altre basi in informatica"
+    Oltre alla base $10$ (decimale) e alla base $2$ (binaria), in informatica si usano comunemente anche la base $8$ (sistema *ottale*, cifre $0$–$7$) e la base $16$ (sistema *esadecimale*, cifre $0$–$9$ e lettere $A$–$F$). Queste basi sono utili come "scorciatoie" per rappresentare lunghe sequenze binarie in modo più compatto. Ad esempio, un byte ($8$ bit) può essere scritto con sole $2$ cifre esadecimali.
+
+!!!question "Esercizio"
+    Usando la formula generale $N = c_{m-1} \cdot b^{m-1} + \ldots + c_0 \cdot b^0$, prova a scrivere il numero decimale $42$ come somma di potenze in base $2$. (Suggerimento: parti dalla potenza di $2$ più grande minore o uguale a $42$.)
 
 Il sistema di numerazione correntemente usato, come i lettori più attenti avranno avuto modo di intuire, è un sistema di numerazione posizionale in base decimale. Nella [prossima lezione](05_sis_bin.md) vedremo come il sistema più usato in informatica sia quello *binario*.

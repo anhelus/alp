@@ -66,33 +66,26 @@ AGGIORNAMENTO:  j ==> 2
 
 ## Pseudocodice
 
-## Complessità numerica
-
-## Codice
-
-```matlab
-function sortedArray = bubbleSort(array)
-    n = length(array); % Lunghezza dell'array
-    for i = 1:n-1
-        for j = 1:n-i
-            if array(j) > array(j+1)
-                % Scambia gli elementi
-                temp = array(j);
-                array(j) = array(j+1);
-                array(j+1) = temp;
-            end
-        end
-    end
-    sortedArray = array; % Restituisce l'array ordinato
-end
-
-% Esempio di array
-array = [64, 34, 25, 12, 22, 11, 90];
-
-% Ordinamento con Bubble Sort
-sortedArray = bubbleSort(array);
-
-% Visualizza il risultato
-disp('Array ordinato:');
-disp(sortedArray);
+```linenums="1"
+function bubbleSort(array):
+    n = length(array)
+    for i = 1 to n-1:
+        for j = 1 to n-i:
+            if array[j] > array[j+1]:
+                temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
+            endif
+        endfor
+    endfor
+    return array
 ```
+
+## Complessità computazionale
+
+| Caso | Complessità temporale | Complessità spaziale |
+| ---- | --------------------- | -------------------- |
+| Migliore (array già ordinato) | $O(n)$ | $O(1)$ |
+| Peggiore (array in ordine inverso) | $O(n^2)$ | $O(1)$ |
+
+Il numero di confronti nel caso peggiore è $\frac{n(n-1)}{2} = O(n^2)$, mentre nel caso migliore (array già ordinato) bastano $n-1$ confronti se l'algoritmo rileva che non ci sono stati scambi in una passata.

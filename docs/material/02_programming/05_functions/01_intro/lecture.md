@@ -28,7 +28,7 @@ for i che va da 1 a numero_esami:
 	somma_voti_b = somma_voti_b + voto_esame_i;
 endfor
 voto_medio_b = somma_voti_b / numero_esami;
-voto_accesso_b = voto_medio / 3 * 11;
+voto_accesso_b = voto_medio_b / 3 * 11;
 ```
 
 Cosa accadrebbe se volessimo aggiungere un altro studente? Ovviamente, dovremmo aggiungere altre righe di codice; è facile quindi intuire che, in breve tempo, la situazione diventerebbe ingestibile.
@@ -91,13 +91,13 @@ Come si può notare, il numero di righe di codice scritte diminuisce in maniera 
 
 ## Il concetto di modularità
 
-Abbiamo visto come una funzione serva ad evitare di dover ripetere numerose volte lo stesso insieme di istruzioni. Tuttavia, abbiamo accennato in precedenza anche al fatto che ogni funzione è un contenitore logico di una sequena di istruzioni da utilizzare per risolvere un problema: ciò ci conduce direttamente al concetto di *modularità*, per il quale una funzione deve contenere *esclusivamente* le istruzioni necessarie ad eseguire lo scopo per cui è stata concepita.
+Abbiamo visto come una funzione serva ad evitare di dover ripetere numerose volte lo stesso insieme di istruzioni. Tuttavia, abbiamo accennato in precedenza anche al fatto che ogni funzione è un contenitore logico di una sequenza di istruzioni da utilizzare per risolvere un problema: ciò ci conduce direttamente al concetto di *modularità*, per il quale una funzione deve contenere *esclusivamente* le istruzioni necessarie ad eseguire lo scopo per cui è stata concepita.
 
 Per fare un esempio, immaginiamo adesso di dover calcolare, oltre al voto medio di accesso all'esame di laurea, anche quello finale, tenendo conto della votazione della commissione e dell'eventuale lode. Sottolineamo comunque come sia sempre importante per noi (e, nello specifico, per la segreteria e la commissione) tenere traccia del voto medio, per cui le due cose andranno, in qualche modo, separate.
 
 L'approccio da utilizzare è quindi quello di creare un'altra funzione che asserva allo scopo di calcolare il voto finale:
 
-```linenums=1"
+```linenums="1"
 int calcolo_voto_finale_laurea(float voto_accesso, int voto_esame, float soglia_lode):
 	voto_cumulativo = voto_accesso + voto_esame;
 	if (voto_cumulativo > (110 + soglia_lode)):
@@ -140,4 +140,4 @@ Da ciò seguono alcune considerazioni:
 2. la variabile restituita *cambia identificatore*, ma il valore è quello calcolato all'interno della funzione;
 3. occorre fare estrema attenzione alla modifica delle variabili globali in ambito locale, ovvero all'interno delle singole funzioni.
 
-Imparare ad utilizzare l'ambito delle variabili è propedeutico al corretto utilizzo delle tecniche di programmazione, e tenere a mente queste tre semplici regole ci aiuterà enormemente nella scrittura dle nsotro codice.
+Imparare ad utilizzare l'ambito delle variabili è propedeutico al corretto utilizzo delle tecniche di programmazione, e tenere a mente queste tre semplici regole ci aiuterà enormemente nella scrittura del nostro codice.

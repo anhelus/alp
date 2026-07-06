@@ -14,7 +14,7 @@ $$
 
 Ad esempio, $3! = 6$, mentre $4! = 24$, $5! = 120$, e via dicendo. Il fattoriale è definito per ogni numero intero strettamente positivo, oltre che per lo $0$, per il quale vale $0!=1$.
 
-Proviamo per prima cosa a calcolare il fattorale usando un ciclo.
+Proviamo per prima cosa a calcolare il fattoriale usando un ciclo.
 
 ### Calcolo iterativo del fattoriale
 
@@ -84,3 +84,6 @@ Analizziamo il comportamento della funzione. Se `n` è maggiore di zero, la funz
 Ci si potrebbe chiedere come faccia la funzione ricorsiva a restituire il valore complessivo di $n!$. La risposta è da ricercarsi nel modo in cui sono memorizzati i dati durante la ricorsione: infatti, questi vengono organizzati secondo un *call stack* (traducibile in "stack di chiamate"), che conserva al suo interno i risultati derivanti dalle precedenti chiamate a funzione. Questo concetto è riassunto nella seguente figura, che mostra il call stack per il calcolo ricorsivo del fattoriale di 4.
 
 ![recursion](./images/call_stack.png){: .center}
+
+!!!warning "Rischio stack overflow"
+    Se la ricorsione è troppo profonda (migliaia di chiamate), il call stack può esaurire la memoria disponibile, causando un *stack overflow*. Per questo, i linguaggi di programmazione impongono un limite alla profondità della ricorsione. Quando possibile, è preferibile usare un ciclo (approccio iterativo) per problemi con molti passaggi.

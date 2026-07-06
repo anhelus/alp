@@ -15,7 +15,7 @@ Ai più "esperti" tra i lettori sarà capitato di leggere del codice prodotto ne
 
 Un codice in questa forma (per la cronaca: il codice è tratto direttamente da [Wikipedia](https://it.wikipedia.org/wiki/Spaghetti_code)) "intreccia" le istruzioni tra loro: ad esempio, alla riga `80` notiamo come la presenza della (famigerata) istruzione `goto` imponga di tornare alla riga `30`, con la `70` richiamata dalla `40` qualora si verifichi una determinata condizione.
 
-Il codice appare quindi simile ad un "piatto di spaghetti", i quali si intrecciano ed ingarbugliano tra loro, confondendosi alla vista; ed è proprio per questo che scrivere un codice com il precedente è associato alla pratica, divenuta con tempo un *antipattern* (ovvero, una pratica da sconsigliare), dello *spaghetti coding*.
+Il codice appare quindi simile ad un "piatto di spaghetti", i quali si intrecciano ed ingarbugliano tra loro, confondendosi alla vista; ed è proprio per questo che scrivere un codice come il precedente è associato alla pratica, divenuta con tempo un *antipattern* (ovvero, una pratica da sconsigliare), dello *spaghetti coding*.
 
 Lo spaghetti coding rende il nostro programma difficile da interpretare, non solo da parte di altri, ma anche da noi stessi quando lo andiamo a riaprire dopo un po' di tempo. Per questo motivo, nel tempo, sono andati sempre più diffondendosi nuovi e più efficaci paradigmi di programmazione, come quella imperativa, orientata agli oggetti e, più recentemente, funzionale. Tutti, però, partivano da un presupposto: dare una *struttura* al codice. E, in tal senso, l'assunto da cui si parte è sempre e solo uno, ovvero il *teorema di Bohm e Jacopini*.
 

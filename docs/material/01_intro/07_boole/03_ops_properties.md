@@ -220,7 +220,7 @@ la palla è tonda OR la palla non è tonda
 
 In questo caso, vediamo come il precedente predicato composto sia *sempre* vero. Ciò è legato al fatto che i due predicati semplici si complementano andando, se considerati congiuntamente, a coprire la totalità dei possibili casi esperibili nel mondo reale. Volendo essere meno formali, quindi, potremmo dire che il precedente predicato esprime il concetto al fatto che la palla o è tonda, o non lo è.
 
-Formalmente, quindi, potremo scriivere:
+Formalmente, quindi, potremo scrivere:
 
 $$
 p + \overline{p} = 1
@@ -235,7 +235,7 @@ la palla è tonda AND la palla non è tonda
 Estendendo il ragionamento precedente, questo predicato non potrà mai essere vero, perché implicherebbe che la palla sia contestualmente tonda e non tonda, il che, ovviamente, non avviene nella realtà. Formalmente:
 
 $$
-p + \overline{p} = 0
+p \times \overline{p} = 0
 $$
 
 Infine, consideriamo l'espressione:

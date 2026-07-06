@@ -1,6 +1,6 @@
 # 3.1.1 Selection sort
 
-Uno dei problemi più "classici" nello studio degli algoritmi è quello di ordinare una lista di elementi affini (ovvero dello stesso tipo). Questo problema, soltanto apparentemnete banale, ha in realtà numerosi riscontri pratici, in quanto capita molto spesso di dover ordinare una lista secondo un certo criterio (ad esempio, un elenco di nomi in ordine alfabetico, oppure i prezzi di diversi beni in ordine ascendente). Per far questo, nel tempo sono stati definiti diversi algoritmi detti di *ordinamento* o, in inglese, *sorting algorithms*.
+Uno dei problemi più "classici" nello studio degli algoritmi è quello di ordinare una lista di elementi affini (ovvero dello stesso tipo). Questo problema, soltanto apparentemente banale, ha in realtà numerosi riscontri pratici, in quanto capita molto spesso di dover ordinare una lista secondo un certo criterio (ad esempio, un elenco di nomi in ordine alfabetico, oppure i prezzi di diversi beni in ordine ascendente). Per far questo, nel tempo sono stati definiti diversi algoritmi detti di *ordinamento* o, in inglese, *sorting algorithms*.
 
 Il primo algoritmo che vedremo è chiamato *selection sort*. Questo è un algoritmo di tipo *iterativo*, che analizza quindi un elemento della lista alla volta alla ricerca dell'elemento minore; per comprendere appieno il funzionamento dell'algoritmo, è opportuno utilizzare un esempio concreto.
 
@@ -20,7 +20,7 @@ Volendo, è possibile formalizzare i passi precedenti come segue. Dato un vettor
 2. Associare alla variabile $m$ il valore di $x(0)$, supponendo che $m$ sia il valore più piccolo attualmente presente all'interno dell'array.
 3. Confrontare $m$ con tutti gli elementi $x(k), k \in (0, n-1]$. Se $x(k) < m$ per qualche $k$, allora $m = x(k)$.
 4. Aumentare il valore di $i$ di un'unità.
-5. Reiterare le istruzioni 3-4 fino a che $i = x(n-1)$.
+5. Reiterare le istruzioni 3-4 fino a che $i = n-1$.
 
 ### Esempio pratico
 

@@ -173,7 +173,7 @@ E' possibile che a tutti gli archi di un grafo sia associato un *peso*, ovvero u
 
 ![weighted_graph](./images/weighted_graph.png){: .center}
 
-Un grafo i cui archi hanno dei pesi è chiamato *grafo pesato*. Ovviamente, per trovare il cammino minimo in un grafo di questo tipo, dovremo tenere conto del valore dei pesi: nella figura precedente, infatti, TODO: esempio
+Un grafo i cui archi hanno dei pesi è chiamato *grafo pesato*. Ovviamente, per trovare il cammino minimo in un grafo di questo tipo, dovremo tenere conto del valore dei pesi: nella figura precedente, infatti, il percorso più breve in termini di distanza potrebbe non essere quello con meno archi.
 
 ## Alberi
 

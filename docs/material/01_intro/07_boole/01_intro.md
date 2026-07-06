@@ -7,7 +7,7 @@ Per capirci meglio, pensiamo agli interruttori presenti nelle nostre case: quest
 !!!tip "Interruttori e resistenza"
     I più esperti noteranno che il circuito aperto ha *resistenza infinita*, il che significa che la corrente che scorre è nulla. Invece, il circuito chiuso ha *resistenza nulla*, il che significa che la corrente che scorre è massima (non infinita).
 
-Sfruttando il funzionamento base dei circuiti, è possibile modellare delle situazioni più o meno complesse. Facciamo un semplice esempio nel mondo reale: immaginiamo due stanze adiancenti, ciascuna dotata di una porta dalla quale è possibile dedurre se la luce sia o meno accesa all'interno della singola stanza. Ponendoci come osservatori esterni, potremo trovarci in una tra le seguenti casistiche:
+Sfruttando il funzionamento base dei circuiti, è possibile modellare delle situazioni più o meno complesse. Facciamo un semplice esempio nel mondo reale: immaginiamo due stanze adiacenti, ciascuna dotata di una porta dalla quale è possibile dedurre se la luce sia o meno accesa all'interno della singola stanza. Ponendoci come osservatori esterni, potremo trovarci in una tra le seguenti casistiche:
 
 * *caso 1*: entrambe le luci sono accese, per cui è plausibile che ci siano due persone, una in ciascuna stanza;
 * *caso 2*: entrambe le luci sono spente, per cui è plausibile che non ci sia nessuno;
@@ -31,3 +31,6 @@ Guardando l'immagine precedente, è facile dire che la proposizione *la palla è
 Da notare come ognuna di queste proposizioni sia *atomica*, o *semplice*, nel senso che viene espresso esclusivamente un predicato: ad esempio, il rapporto intercorrente tra palla e scatola, oppure ancora il colore di uno dei due oggetti. Un quadro completo della situazione richiederebbe l'uso di predicati *composti* da più proposizioni atomiche: ad esempio, *la palla è dentro la scatola* E *la palla è verde* E *la scatola è blu*.
 
 L'algebra Booleana si occupa di formulare un insieme di regole per definire se i predicati composti siano veri o falsi a partire dai singoli predicati che li compongono. Per farlo, si avvale di una serie di operazioni fondamentali, che approfondiremo nella [prossima lezione](02_ops.md).
+
+!!!tip "Dalla logica ai circuiti"
+    Ogni operazione booleana può essere realizzata fisicamente con un *circuito elettronico* chiamato **porta logica** (AND, OR, NOT). Un moderno processore contiene miliardi di queste porte, combinate per eseguire operazioni aritmetiche, prendere decisioni e gestire la memoria. Capire l'algebra booleana significa capire come funziona un calcolatore al livello più fondamentale.

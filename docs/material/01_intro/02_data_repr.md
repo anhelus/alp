@@ -26,7 +26,7 @@ Ragioniamoci su un attimo: scopriremo che abbiamo diverse *tipologie* di dato ch
 
 Partiamo dal metodo di costruzione della casa. In questo caso, come abbiamo potuto vedere, sono stati utilizzati dei mattoni; tuttavia, sappiamo benissimo che esistono diverse tecniche di costruzione, alcune che prevedono l'utilizzo del cemento armato, altre che prevedono l'uso del legno, altre ancora ibride. Avremo, quindi, diverse *categorie* di case; il dato associato a questa informazione, quindi, risulterà essere di tipo *categorico*. 
 
-!!! question "Altri dati categorici"
+!!!question "Altri dati categorici"
     Il lettore più attento noterà che vi è un altro dato categorico all'interno della rappresentazione precedente. Stiamo, ovviamente, parlando del colore dei mattoni utilizzati.
 
 ##### Quante mura abbiamo?
@@ -45,10 +45,13 @@ Riassumendo, abbiamo quattro tipologie di dati, come mostrati nella seguente tab
 
 | Tipo di dato | Descrizione | Esempio |
 | ------------ | ----------- | ------- |
-| Categorico | Dato che descrive informazione il cui valore è all'interno di un insieme limitato di categorie | Rosso, verde, blu |
+| Categorico | Dato che descrive informazione il cui valore è all'interno di un insieme limitato di categorie | Mattoni, cemento, legno |
 | Ordinale | Dato che descrive informazione il cui valore è semanticamente ordinabile | Orrendo, brutto, bello, fantastico |
 | Numerale discreto | Dato che descrive informazione associata a numeri interi | 1, 2, 100 |
 | Numerale continuo | Dato che descrive informazione associata a numeri continui | $\pi$, 2.45, $\sqrt{2}$ |
+
+!!!info "Una precisazione sui tipi categorici"
+    Il tipo ordinale è in realtà un *sottotipo* del tipo categorico: un dato ordinale è sempre categorico (appartiene a categorie), ma con l'aggiunta di una relazione d'ordine. Per esempio, "bello" e "orrendo" sono categorie, e in più sono ordinabili. Non tutti i dati categorici, però, sono ordinabili: il colore o il materiale non hanno un ordine intrinseco.
 
 ## Come rappresentare i dati in un sistema informativo
 
@@ -68,18 +71,18 @@ Per rappresentare un dato categorico come intero, dovremo usare il cosiddetto *m
 
 | Categoria | Intero associato |
 | --------- | ---------------- |
-| Rosso | 1 |
-| Blu | 2 |
-| Verde | 3 |
+| Mattoni | 1 |
+| Cemento armato | 2 |
+| Legno | 3 |
 
-Grazie al dizionario definito nella tabella precedente, potremo rappresentare la categoria "rosso" mediante il numero 1, la "verde" mediante il 3, e via discorrendo. L'aggiornamento del dizionario a seguito di una nuova categoria è volutamente lasciato al lettore.
+Grazie al dizionario definito nella tabella precedente, potremo rappresentare la categoria "mattoni" mediante il numero 1, il "cemento armato" mediante il 2, e via discorrendo. L'aggiornamento del dizionario a seguito di una nuova categoria è volutamente lasciato al lettore.
 
 !!!note "Operazioni definite sul tipo categorico"
-    Da sottolineare come l'unica operazione definibile su un tipo di dato categorico sia quella di uguaglianza, che risponde alla domanda *la categoria di X è uguale alla categoria di Y*? Per metterla in italiano, *il colore del primo mattone è uguale a quello del secondo"? Ovviamente, questa operazione è *preservata* dal dizionario: se due mattoni sono rossi, la loro rappresentazione in numero intero sarà sempre pari ad $1$.
+    Da sottolineare come l'unica operazione definibile su un tipo di dato categorico sia quella di uguaglianza, che risponde alla domanda *la categoria di X è uguale alla categoria di Y*? Per metterla in italiano, *il colore del primo mattone è uguale a quello del secondo*? Ovviamente, questa operazione è *preservata* dal dizionario: se due mattoni sono rossi, la loro rappresentazione in numero intero sarà sempre pari ad $1$.
 
 ##### Ordinali come interi
 
-La rappresentazione di un dato ordinale come intero usiamo invece il *metodo dell'enumerazione*. Innazitutto, ordinamo i valori secondo il loro significato semantico. Ad esempio:
+La rappresentazione di un dato ordinale come intero usiamo invece il *metodo dell'enumerazione*. Innanzitutto, ordiniamo i valori secondo il loro significato semantico. Ad esempio:
 
 1. *orrendo*
 2. *brutto*
@@ -96,9 +99,14 @@ Fatto questo, potremo associare un numero intero ad ogni valore, in maniera cres
 | Fantastico | 4 |
 
 !!!note "Operazioni definite sul tipo ordinale"
-    In caso di tipo ordinale, possiamo definire la *relazione di ordine*, che ovviamente l'enumerazione preserva. In altre parole, se consideriamo "migliore" un qualcosa di bello rispetto ad un qualcosa di orrendo, il valore associato al bello (ovvero, tre) sarà maggiore o uguale a quello associato all'orrendo (nella nostra enumerazione, uno).
+    In caso di tipo ordinale, possiamo definire la *relazione di ordine*, che l'enumerazione preserva. In altre parole, se "bello" è meglio di "orrendo", il valore associato a "bello" (3) sarà maggiore di quello associato a "orrendo" (1).
 
-Siamo quindi adesso in grado di individuare le diverse tipologie di dato che è possibile avere all'interno di un contenitore informativo. Nella [prossima lezione](03_dig_an.md) andremo a vedere come vengono codificate, dal punto di vista "fisico", le informazioni all'interno di un calcolatore.
+Siamo quindi adesso in grado di individuare le diverse tipologie di dato che è possibile avere all'interno di un contenitore informativo.
+
+!!!tip "Anteprima: i tipi nella programmazione"
+    I quattro tipi che abbiamo visto trovano un corrispettivo diretto nei linguaggi di programmazione: gli interi (`int`), i numeri con virgola (`float`, `double`), i caratteri (`char`) e i valori vero/falso (`bool`). Il **booleano** è un caso speciale di tipo categorico con esattamente due valori: *vero* e *falso*. Sarà fondamentale quando parleremo di algebra booleana.
+
+Nella [prossima lezione](03_dig_an.md) andremo a vedere come vengono codificate, dal punto di vista "fisico", le informazioni all'interno di un calcolatore.
 
 !!!warning "Numeri reali e numeri interi"
-    Abbiamo volutamente tralasciato la questione relativa ai numeri reali, che tratteremo più estesamente quando parleremo della rappresentazione a virgola mobile nel sistema binario; per adesso, ciò che ci interessa è che la risposta è *sì, possiamo usare i numerali discreti per rappresentare numerali continui*.
+    Abbiamo volutamente tralasciato la questione relativa ai numeri reali, che tratteremo più estesamente quando parleremo della rappresentazione a virgola mobile nel sistema binario. Per adesso, ciò che ci interessa sapere è che i numerali discreti possono *approssimare* i numerali continui, ma con un inevitabile margine di errore dovuto alla precisione limitata.

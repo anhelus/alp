@@ -13,12 +13,12 @@ Partiamo dai dati di tipo numerico intero. In questo caso, il limite legato alla
 
 ##### Interi e segno
 
-Ricordiamo come i numeri interi siano dotati di segno: avremo quindi sia numeri negativi, sia numeri positivi. Ciò non andrà a modificare il numero di valori rappresentabili, che saranno sempre $2^{64}$, quanto piuttosto il *range* dei valori rappresentati, che sarà egualmente suddiviso tra valori negativi e positivi, e quindi centrato sullo $0$. Avremo quindi $\frac{2^{64}}{2}$ valori positivi, e $\frac{2^{64}}{2}$ valori negativi; in altre parole, potremo rappresentare i numeri tra $-2^{63}$ a $2^{63}$.
+Ricordiamo come i numeri interi siano dotati di segno: avremo quindi sia numeri negativi, sia numeri positivi. Ciò non andrà a modificare il numero di valori rappresentabili, che saranno sempre $2^{64}$, quanto piuttosto il *range* dei valori rappresentati, che sarà egualmente suddiviso tra valori negativi e positivi, e quindi centrato sullo $0$. Avremo quindi $\frac{2^{64}}{2}$ valori positivi, e $\frac{2^{64}}{2}$ valori negativi; in altre parole, potremo rappresentare i numeri tra $-2^{63}$ e $2^{63} - 1$.
 
 Facciamo un esempio più facilmente digeribile, considerando come word una parola ad otto bit. In questo caso:
 
 - considerando solo lo zero ed i valori strettamente positivi, sarà possibile rappresentare tutti i numeri interi compresi tra $0$ e $255 = 2^{8}-1$;
-- considerando anche i valori negativi, sarà possibile rappresentare tutti i numeri interi compresi tra $-128 = -2^{8-1}$ e $127 = -2^{8-1}-1$. Ovviamente, anche in questo caso consideriamo lo zero.
+- considerando anche i valori negativi, sarà possibile rappresentare tutti i numeri interi compresi tra $-128 = -2^{8-1}$ e $127 = 2^{8-1} - 1$. Ovviamente, anche in questo caso consideriamo lo zero.
 
 Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più comune, differenziati a seconda della loro lunghezza.
 
@@ -30,12 +30,18 @@ Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più c
 | `ushort`     | 16 bit    | 0                        | $2^{16} - 1$ = 65535      |
 | `short`      | 16 bit    | -32768                   | 32767                     |
 | `uint`       | 32 bit    | 0                        | $2^{32} - 1$ = 4294967295 |
-| `int`        | 32 bit    | $-2^{31}$ = 2147483648   | $2^{31} - 1$ = 2147483647 |
+| `int`        | 32 bit    | $-2^{31}$ = -2147483648  | $2^{31} - 1$ = 2147483647 |
 | `ulong`      | 64 bit    | 0                        | $2^{64} - 1$              |
 | `long`       | 64 bit    | $-2^{63}$                | $2^{63} - 1$              |
 
 !!!note "Il simbolo `u`"
     I più attenti avranno notato la presenza del simbolo `u` nelle notazioni che includono solo i valori positivi. Intuitivamente, la `u` sta per *unsigned*, ovvero "senza segno".
+
+!!!info "Come si rappresentano i numeri negativi?"
+    Nei calcolatori, i numeri negativi non vengono memorizzati con un semplice segno `-`. Si usa invece la tecnica del *complemento a due*: per ottenere il negativo di un numero, si invertono tutti i suoi bit e si aggiunge $1$. Ad esempio, in 8 bit, $5 = 00000101_2$, il suo complemento a due è $11111011_2 = -5$. Questo meccanismo permette di usare lo stesso circuito per somma e sottrazione.
+
+!!!warning "Overflow"
+    Cosa succede se si supera il massimo valore rappresentabile? Si verifica un *overflow*: il risultato "gira" tornando al valore minimo (o viceversa). Ad esempio, in un `byte` senza segno, $255 + 1 = 0$, mentre in un `byte` con segno, $127 + 1 = -128$. Questo è un errore sottile che i programmatori devono sempre tenere d'occhio.
 
 ### Numeri reali
 
@@ -63,10 +69,10 @@ $$
 
 Questa notazione, in cui la parte frazionaria è compresa tra $0$ ed $1$, mentre quella intera è pari a $0$, è detta *normalizzata*. 
 
-!!!note "Notazioni equivalenti
+!!!note "Notazioni equivalenti"
     Equivalentemente, potremmo scrivere $n = 0.052 * 10^2$, oppure $n = 52 * 10^{-1}$. Tuttavia, è la notazione normalizzata quella ad essere usata per convenzione.
 
-La rappresentazione in virgola mobile ha il vantaggio di popter rappresentare un insieme di valori molto più ampio rispetto a quello rappresentabile in virgola fissa. Immaginiamo, ad esempio, di voler rappresentare il numero $100000$, avendo però a disposizione soltanto $5$ simboli. Con una rappresentazione a virgola fissa non potremmo farlo; con una rappresentazione a virgola mobile, invece, potremo usare l'equivalenza:
+La rappresentazione in virgola mobile ha il vantaggio di poter rappresentare un insieme di valori molto più ampio rispetto a quello rappresentabile in virgola fissa. Immaginiamo, ad esempio, di voler rappresentare il numero $100000$, avendo però a disposizione soltanto $5$ simboli. Con una rappresentazione a virgola fissa non potremmo farlo; con una rappresentazione a virgola mobile, invece, potremo usare l'equivalenza:
 
 $$
 n = 0.1 \cdot 10^5
@@ -76,6 +82,9 @@ Dato che dovremo memorizzare esclusivamente la mantissa e l'esponente, avremo bi
 
 !!!warning "Mantissa e base decimale"
     In questo esempio, abbiamo utilizzato la base decimale per semplicità. Tuttavia, gli stessi concetti si estendono all'utilizzo della base binaria.
+
+!!!tip "IEEE 754: lo standard per i float"
+    Nella pratica, i numeri in virgola mobile seguono lo standard **IEEE 754**, che definisce due formati principali: il `float` a $32$ bit (1 bit di segno, 8 per l'esponente, 23 per la mantissa) e il `double` a $64$ bit (1 bit di segno, 11 per l'esponente, 52 per la mantissa). Il `double` offre maggiore precisione ma occupa il doppio della memoria.
 
 ## Caratteri
 
@@ -87,8 +96,14 @@ Quando si parla di carattere, si parla di *qualsiasi simbolo che è possibile ra
 
 Ciò implica la presenza di un'*enorme* varietà di caratteri, che ha portato alla necessità di una rappresentazione comprensiva ed uniforme, richiedendo quindi molti più bit dei $5$ inizialmente preventivati. Inoltre, è necessario usare una corrispondenza biunivoca tra simbolo e numero intero, definita mediante opportune tabelle, e che segue standard come l'ASCII e l'UNICODE.
 
+!!!example "Esempio: ASCII"
+    Nella tabella ASCII, ogni carattere è associato a un numero tra $0$ e $127$. Ad esempio, `'A' = 65`, `'B' = 66`, `'a' = 97`, `'0' = 48$. In binario, `'A'` diventa $01000001_2$, occupando esattamente un byte. ASCII basta per l'inglese, ma non per caratteri accentati o alfabeti non latini: per quelli serve UNICODE (tipicamente UTF-8), che usa da $1$ a $4$ byte per carattere.
+
 ## Conclusioni
 
-Abbiamo visto come siano rappresentati in memoria alcuni tipi di dati, e come la dimensione occupata da questi cambi con le caratteristiche della parola usata pepr rappresentarli.
+Abbiamo visto come siano rappresentati in memoria alcuni tipi di dati, e come la dimensione occupata da questi cambi con le caratteristiche della parola usata per rappresentarli.
+
+!!!tip "Perché tutto questo è utile in programmazione"
+    Quando scriverai codice, dovrai scegliere il tipo giusto per ogni variabile: usare un `int` invece di un `long` ti fa risparmiare memoria, ma rischi l'overflow se i numeri crescono troppo. Usare un `float` invece di un `double` è più veloce ma meno preciso. Conoscere la rappresentazione dei dati ti aiuterà a fare scelte consapevoli.
 
 A questo punto, ci manca un ultimo tassello per la nostra panoramica sui concetti alla base dell'informatica: infatti, dovremo vedere come le variabili binarie si combinano tra loro sfruttando i concetti dell'[algebra booleana](./07_boole/01_intro.md).

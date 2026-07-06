@@ -9,16 +9,16 @@ La pseudocodifica è un linguaggio per descrivere gli algoritmi strutturati. Per
 
 Sappiamo che il tipo di una variabile rappresenta l'insieme dei valori che possono essere ad essa assegnati.
 
-SOno permessi quattro tipi, ovvero **integer**, **real**, boolean e string-q. In particoalre:
+Sono permessi quattro tipi, ovvero **integer**, **real**, boolean e string-q. In particolare:
 
 * gli integer rappresentano i numeri interi;
-* i real rappresentano i numeri decimali, rappresentabili sia in notazione decmiale che in notazione scientifica;
-* i boolean rappresetano un valore booleano che può assumere valore pari a vero o falso;
+* i real rappresentano i numeri decimali, rappresentabili sia in notazione decimale che in notazione scientifica;
+* i boolean rappresentano un valore booleano che può assumere valore pari a vero o falso;
 * le string-q sono parole (o stringhe) costituite da *q* caratteri.
 
-## La dichiaraizone delle variabili
+## La dichiarazione delle variabili
 
-La dichiarazione elel varaibili è un elenco preceduto dalla parola chiave **var**.
+La dichiarazione delle variabili è un elenco preceduto dalla parola chiave **var**.
 
 La dichiarazione prevede che queste siano suddivise per tipo. La forma è del tipo:
 
@@ -46,11 +46,11 @@ Gli schemi di selezione sono rappresentati mediante la struttura if then else, c
 
 ### Schemi di iterazione
 
-Gli schemi di iterazione sono rappresentati mediante la struttura while Cond Do S, con S sequenza nel caso di controllo in coda, mentre con contro0llo in testa abbiamo un repeat S until C.
+Gli schemi di iterazione sono rappresentati mediante la struttura while Cond Do S, con S sequenza nel caso di controllo in coda, mentre con controllo in testa abbiamo un repeat S until C.
 
 ##### Schema enumerativo
 
-Esistonod elle situaizoni particolari nei quali ci sono detrerminate schemi linguistici. Ad esempio, nel caso di un for 
+Esistono delle situazioni particolari nelle quali ci sono determinati schemi linguistici. Ad esempio, nel caso di un for 
 
 
 ```

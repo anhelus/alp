@@ -6,19 +6,19 @@ Nella [scorsa lezione](03_ops_properties.md) abbiamo esplicitato le più importa
 
 Immaginiamo il seguente predicato:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda OR vero
 </p>
 
 Il predicato è una somma logica tra il valore *vero* ed una proposizione semplice. Come è facile intuire, il predicato composto sarà *sempre* vero, grazie alla presenza del valore *vero*. Se invece il predicato composto fosse nella forma:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda OR falso
 </p>
 
 allora sarà vero se e solo se la palla è tonda. Proviamo adesso a scrivere il seguente predicato composto:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda OR la palla è tonda
 </p>
 
@@ -36,19 +36,19 @@ Appare quindi evidente come lo $0$ logico, ovvero il *falso*, sia l'*elemento ne
 
 Cosa accade se consideriamo il prodotto logico al posto della somma? Nel primo caso, avremo:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda AND vero
 </p>
 
 La precedente proposizione è strettamente dipendente dal valore di $p$: infatti, se $p$ è vero, anche il predicato lo sarà. Il seguente predicato invece:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda AND falso
 </p>
 
 sarà sempre falso, in quanto risulterà essere il prodotto di un predicato logico $p$ per uno zero logico. Infine:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda AND la palla è tonda
 </p>
 
@@ -77,7 +77,7 @@ $$
 
 Partiamo dalla seguente espressione.
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda OR la palla è tonda AND la palla è verde
 </p>
 
@@ -108,13 +108,13 @@ Le leggi di De Morgan mettono in relazione le funzioni base dell'algebra boolean
 
 Per comprendere le leggi di De Morgan, possiamo partire dal solito esempio.
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 NOT (la palla è tonda OR la palla è verde)
 </p>
 
 L'espressione precedente valuta la veridicità della negazione della somma logica tra i predicati *la palla è tonda* e *la palla è verde*. In pratica, il predicato tra parentesi $p_{OR}$ sarà vero soltanto se la palla è tonda o verde. Tuttavia, dato che il predicato composto *nega* $p_{OR}$, per cui il risultato complessivo sarà vero soltanto se $p_{OR}$ è falso (e quindi se la palla non è tonda e non è verde). Questo ci porta ad un'altra possibile formulazione del predicato:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 NOT la palla è tonda AND NOT la palla è verde
 </p>
 
@@ -122,13 +122,13 @@ In questo caso, effettuiamo il prodotto logico tra due negazioni, ottenendo un v
 
 Analogamente possiamo verificare che un predicato nella forma:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 NOT (la palla è tonda AND la palla è verde)
 </p>
 
 sarà vero soltanto se la palla non è tonda o non è verde, per cui la forma equivalente è:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 NOT la palla è tonda OR NOT la palla è verde
 </p>
 
@@ -184,15 +184,15 @@ Le equazioni 1 e 2 rappresentano le due leggi di De Morgan.
 
 Le tabelle della verità possono essere utilizzate anche per definire funzioni composte e non riconducibili a combinazioni "standard" delle tre funzioni logiche fondamentali. Immaginiamo ad esempio di avere i tre seguenti predicati:
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è tonda
 </p>
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è verde
 </p>
 
-<p style="text-align:center; font-style=italic">
+<p style="text-align:center; font-style:italic">
 la palla è nella scatola
 </p>
 
@@ -228,6 +228,15 @@ In altre parole, la nostra funzione composta sarà vera se una delle tre condizi
 * la palla è tonda e verde, ma non nella scatola.
 
 Questa tecnica può essere quindi usata per creare funzioni composte di complessità arbitraria.
+
+## Riepilogo delle leggi
+
+!!!summary "Leggi fondamentali dell'algebra booleana"
+    - **Idempotenza**: $p + p = p$, $p \times p = p$
+    - **Assorbimento**: $p_1 + p_1 \times p_2 = p_1$
+    - **De Morgan**: $\overline{(x_1 + x_2)} = \overline{x_1} \times \overline{x_2}$, $\overline{(x_1 \times x_2)} = \overline{x_1} + \overline{x_2}$
+    - **Complemento**: $p + \overline{p} = 1$, $p \times \overline{p} = 0$
+    - **Doppia negazione**: $\overline{\overline{x}} = x$
 
 ## Conclusioni
 

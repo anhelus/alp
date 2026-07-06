@@ -35,15 +35,15 @@ nav:
     - 3.1 Algoritmi di ordinammento:
       - 3.1.1 Selection sort: material/03_algorithms/01_sorting/01_selection/lecture.md
       # - 3.1.2 Bubble sort: material/03_algorithms/01_sorting/02_bubble/lecture.md
-      # - 3.1.3 Insertion sort: material/03_algorithms/01_sorting/03_insertion/lecture.md
-    # - 3.2 Algoritmi di ricerca:
-    #   - 3.2.1 Ricerca lineare: material/03_algorithms/02_search/01_linear/lecture.md
-    #   - 3.2.2 Ricerca binaria: material/03_algorithms/02_search/02_binary/lecture.md
-  # - 4. Architettura dei calcolatori:
-  #   - 4.1 L'architettura di Von Neumann: material/04_architecture/01_von_neumann/lecture.md 
-  # - 5 - Sistemi operativi:
-  #   - 5.1 Introduzione ai sistemi operativi: material/05_os/01_intro/lecture.md
-  #   - 5.2 Il Kernel: material/05_os/02_kernel/lecture.md
+      - 3.1.3 Insertion sort: material/03_algorithms/01_sorting/03_insertion/lecture.md
+    - 3.2 Algoritmi di ricerca:
+      - 3.2.1 Ricerca lineare: material/03_algorithms/02_search/01_linear/lecture.md
+      - 3.2.2 Ricerca binaria: material/03_algorithms/02_search/02_binary/lecture.md
+  - 4. Architettura dei calcolatori:
+    - 4.1 L'architettura di Von Neumann: material/04_architecture/01_von_neumann/lecture.md 
+  - 5. Sistemi operativi:
+    - 5.1 Introduzione ai sistemi operativi: material/05_os/01_intro/lecture.md
+    - 5.2 Il Kernel: material/05_os/02_kernel/lecture.md
   # - 6 Ingegneria del software:
   #   - 6.1.1 Introduzione all'ingegneria del software: material/06_isw/01_intro/01_intro.md 
   #   - 6.1.2 Classificazione del software: material/06_isw/01_intro/02_classification.md

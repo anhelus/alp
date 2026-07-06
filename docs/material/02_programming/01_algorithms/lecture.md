@@ -23,7 +23,7 @@ Questi problemi (soprattutto l'ultimo) sono risolvibili utilizzando un semplice 
 
 ##### Formulazione di un problema
 
-A questo punto è lecita una domanda: cosa significa *formulare un problema*? E' presto detto: il problema è un *quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza*. Ok, cerchiamo di scomporre questa formulazione.
+A questo punto è lecita una domanda: cosa significa *formulare un problema*? È presto detto: il problema è un *quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza*. Ok, cerchiamo di scomporre questa formulazione.
 
 1. Il problema è un *quesito*, ovvero una domanda che richiede una risposta, alle volte aperta (*cosa mangio? dove andiamo?*), altre chiusa (*come monto il mobile?*).
 2. Per trovare una soluzione al quesito posto dal problema, avremo bisogno di almeno un *ente risolutore*, inteso come entità, fisica o logica, che si occuperà di implementare tutti gli step atti a risolvere il problema. Ad esempio, nel caso del mobile Ikea, l'ente risolutore saremo noi, o chi ci aiuterà a montarlo.
@@ -35,12 +35,11 @@ Alcuni esempi di quesito, ente e stato iniziale sono riportati nella seguente ta
 | ------- | --------------- | ------------------------ |
 | *Come montare il mobile che abbiamo appena acquistato dall'IKEA?* | Montatore | Collocazione desiderata del mobile, numero e tipo di pezzi, attrezzi necessari... |
 | *Come calcolare l'ipotenusa di un triangolo rettangolo?* | Studente | Base, altezza, teorema di Pitagora |
-| *Come dimostare l'ipotesi di Riemann?* | Studente | Banali regole basilari di aritmetica |
+| *Come dimostrare l'ipotesi di Riemann?* | Studente | Banali regole basilari di aritmetica |
 
 ##### Risoluzione di un problema
 
-
-DA QUI
+Una volta formulato il problema, è possibile quindi procedere alla sua risoluzione, seguendo i criteri che esamineremo di seguito.
 
 ## 2.2 - Risolvere un problema
 
@@ -76,7 +75,7 @@ Esempi di operazioni _non_ atomiche sono invece:
 - effettuare un versamento ed un prelievo sul proprio conto corrente bancario.
 
 !!!note "Nota sulla somma"
-	Il lettore più zelante potrebbe pensare che una somma è suddivisibile usando l'inverso della proprietà associativa. Ciò porterebbe però a scomporre una somma in due somme, che potrebbero essere scomposte in tre somme, e via dicendo. Questa operazione risulta essere controproducente, oltre che contraria al senso comune; si invita quindi il lettore zelante ad adeguarsi al senso comune ed evitare una
+	Il lettore più zelante potrebbe pensare che una somma è suddivisibile usando l'inverso della proprietà associativa. Ciò porterebbe però a scomporre una somma in due somme, che potrebbero essere scomposte in tre somme, e via dicendo. Questa operazione risulta essere controproducente, oltre che contraria al senso comune; si invita quindi il lettore zelante ad adeguarsi al senso comune ed evitare una scomposizione fine a sé stessa.
 
 !!!note "Nota sul conto corrente bancario"
 	La singola transazione sul proprio corrente bancario è in realtà scomponibile, dal punto di vista informatico, in un gran numero di operazioni atomiche: il correntista, infatti, effettua l'autenticazione, completa un form, finalizza la transazione e la esegue. Dato che tutte queste operazioni devono però essere necessariamente _completate_ in un ordine ben definito, i sistemi bancari le vedono come un'unica operazione, che è possibile annullare qualora sopravvenga un problema qualsiasi (problemi di autenticazione, rete non disponibile, mancanza di energia elettrica su uno dei sistemi, etc.).
@@ -105,7 +104,7 @@ Individuare le operazioni atomiche e trovare dei modi per combinarle permette qu
 
 La soluzione sarà quindi definita come un operatore composto nel linguaggio di processo, il cui compito è trasformare lo stato iniziale del mondo (ovvero problema aperto) in quello che definisce la situazione desiderata (ovvero problema risolto).
 
-L'algoritmo è la serie di istruzioni che specifica l'insieme delel azioni che è necessario compiere per risolvere il problema.
+L'algoritmo è la serie di istruzioni che specifica l'insieme delle azioni che è necessario compiere per risolvere il problema.
 
 ## 2.3 - Un esempio
 
@@ -164,8 +163,9 @@ Tornando al nostro esempio, il metodo di individuazione dell'ipotenusa rispetta 
 
 1. può essere risolto in un numero di passi finito, che non occupa uno spazio (ad esempio su carta o nella memoria di un computer) infinito;
 2. può risolvere ogni problema di determinazione dell'ipotenusa, anche cambiando i valori dei cateti (a patto ovviamente che si tratti sempre di un triangolo rettangolo, e che quindi si sia nell'ambito della stessa classe dei problemi);
-3. le istruzioni sono chiare e non equivocabili;
-4. le istruzioni possono essere eseguite da chiunque sia in grado di calcolare un quadrato ed una radice quadrata.
+3. è completo, e copre tutte le possibili istanze del problema (qualsiasi coppia di cateti);
+4. le istruzioni sono chiare e non equivocabili;
+5. le istruzioni possono essere eseguite da chiunque sia in grado di calcolare un quadrato ed una radice quadrata.
 
 ### 2.4.1 Determinismo
 
