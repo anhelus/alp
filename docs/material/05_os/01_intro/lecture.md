@@ -1,4 +1,4 @@
-# 5.1 - Introduzione ai sistemi operativi
+﻿# 5.1 Introduzione ai sistemi operativi
 
 ## Cos'è un sistema operativo?
 
@@ -13,7 +13,7 @@ Il sistema operativo svolge diverse funzioni fondamentali:
 - **gestione della sicurezza**: protegge le risorse da accessi non autorizzati;
 - **interfaccia utente**: fornisce una shell (testuale) o un ambiente grafico (GUI) per interagire con il sistema.
 
-!!!note "Sistemi operativi noti"
+!!! note "Sistemi operativi noti"
     Esempi di sistemi operativi includono Microsoft Windows, macOS, Linux, Android e iOS. Ciascuno è progettato per specifici tipi di dispositivi (PC, server, smartphone, embedded).
 
 ## Evoluzione storica
@@ -42,3 +42,5 @@ Un sistema operativo moderno è composto da diversi moduli, il più importante d
 - **file system**: organizza i dati in file e directory su supporti di memorizzazione;
 - **driver**: software che permette al sistema operativo di comunicare con i dispositivi hardware;
 - **librerie di sistema**: insiemi di funzioni predefinite che i programmi possono utilizzare (ad esempio, per leggere un file o aprire una connessione di rete).
+
+

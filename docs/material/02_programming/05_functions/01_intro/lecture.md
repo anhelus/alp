@@ -1,4 +1,4 @@
-# 2.5.1 - Le funzioni
+﻿# 2.5.1 Le funzioni
 
 Immaginiamo di dover calcolare il nostro voto di accesso all'esame laurea. Supponendo che nel nostro corso di studi ci siano esattamente venti esami, le istruzioni necessarie a calcolarlo sono molto semplici:
 
@@ -59,7 +59,7 @@ tipo_ritorno nome_funzione(tipo_par_1 par_1, tipo_par_2 par_2):			// Questa è l
 
 Da notare la presenza della parola chiave `return`, che serve ad indicare il valore (o, per meglio dire, la variabile) che sarà "restituita" dalla funzione. 
 
-!!!note "Nota"
+!!! note "Nota"
 	Quando la funzione trova la parola chiave `return`, si "ferma" immediatamente, e l'esecuzione del programma continua.
 
 Facciamo un esempio creando una pseudo-funzione per il calcolo del voto di accesso all'esame di laurea; chiamiamola, in maniera originale, `calcolo_voto_accesso_laurea`, e supponiamo restituisca un `float` (il voto di accesso non approssimato) a partire da un insieme di valori `interi` (i voti dei singoli esami). Allora:
@@ -86,7 +86,7 @@ voto_accesso_collega = calcolo_voto_accesso_laurea(voti_collega);
 
 Come si può notare, il numero di righe di codice scritte diminuisce in maniera tanto più rilevante quanto più si usa la funzione!
 
-!!!note "Nota sulle parentesi quadre"
+!!! note "Nota sulle parentesi quadre"
 	Abbiamo usato in precedenza le parentesi quadre (`[]`) per indicare un "insieme" di valori. In realtà, questa notazione indica spesso un *array*, o una *lista*, a seconda del linguaggio; ne parleremo più diffusamente nel seguito.
 
 ## Il concetto di modularità
@@ -141,3 +141,5 @@ Da ciò seguono alcune considerazioni:
 3. occorre fare estrema attenzione alla modifica delle variabili globali in ambito locale, ovvero all'interno delle singole funzioni.
 
 Imparare ad utilizzare l'ambito delle variabili è propedeutico al corretto utilizzo delle tecniche di programmazione, e tenere a mente queste tre semplici regole ci aiuterà enormemente nella scrittura del nostro codice.
+
+

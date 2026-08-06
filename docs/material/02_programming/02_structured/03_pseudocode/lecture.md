@@ -1,61 +1,138 @@
-# Pseudocodifica
+﻿# 2.2.3 Pseudocodifica
 
-La pseudocodifica è un linguaggio per descrivere gli algoritmi strutturati. Per farlo, dobbiamo codificare l'algoritmo in due parti:
+La pseudocodifica è un linguaggio informale per descrivere algoritmi in modo strutturato, senza legarsi alla sintassi di un linguaggio di programmazione specifico. È utile per ragionare sulla logica di un algoritmo prima di implementarlo.
 
-* la prima è quella della *dichiarazione* delle variabili;
-* la seconda è la *descrizione* delle azioni dell'algoritmo.
+## Caratteristiche
 
-## Tipo delle variabili
+Un buon pseudocodice dovrebbe:
 
-Sappiamo che il tipo di una variabile rappresenta l'insieme dei valori che possono essere ad essa assegnati.
+* essere **leggibile** da un essere umano senza conoscere un linguaggio specifico;
+* essere **strutturato** con blocchi ben delimitati (inizio/fine, if/else, cicli);
+* usare **costrutti standard** (sequenza, selezione, iterazione) senza dettagli sintattici.
 
-Sono permessi quattro tipi, ovvero **integer**, **real**, boolean e string-q. In particolare:
+## Dichiarazione delle variabili
 
-* gli integer rappresentano i numeri interi;
-* i real rappresentano i numeri decimali, rappresentabili sia in notazione decimale che in notazione scientifica;
-* i boolean rappresentano un valore booleano che può assumere valore pari a vero o falso;
-* le string-q sono parole (o stringhe) costituite da *q* caratteri.
-
-## La dichiarazione delle variabili
-
-La dichiarazione delle variabili è un elenco preceduto dalla parola chiave **var**.
-
-La dichiarazione prevede che queste siano suddivise per tipo. La forma è del tipo:
-
-var nome_variabile_1: tipo_1;
-    nome_variabile_2: tipo_2;
-    nome_variabile_3: tipo_3.
-
-## La descrizione delle azioni
-
-Regole fondamentali:
-1. prima della prima azione vi è un begin
-2. dopo l'ultima vi è un  end
-3. la lettura è read
-4. la scrittura è write
-
-### Schema sequenziale
-
-Le istruzioni in una sequenza sono rappresentate secondo uno schema sequenziale. In altre parole, supponendo una sequenza del tipo...
-
-le istruzioni sono fatte in modo sequenziale
-
-### Schema di selezione
-
-Gli schemi di selezione sono rappresentati mediante la struttura if then else, con un endif finale.
-
-### Schemi di iterazione
-
-Gli schemi di iterazione sono rappresentati mediante la struttura while Cond Do S, con S sequenza nel caso di controllo in coda, mentre con controllo in testa abbiamo un repeat S until C.
-
-##### Schema enumerativo
-
-Esistono delle situazioni particolari nelle quali ci sono determinati schemi linguistici. Ad esempio, nel caso di un for 
-
+Le variabili si dichiarano specificandone il nome e il tipo:
 
 ```
-for idx from val_in to val_fin step incr do
-    S
+var
+    eta: integer;
+    prezzo: real;
+    valido: boolean;
+    nome: string;
+```
+
+## I costrutti fondamentali
+
+### Sequenza
+
+Le istruzioni vengono eseguite una dopo l'altra, dall'alto verso il basso:
+
+```
+begin
+    read(x)
+    read(y)
+    somma = x + y
+    write(somma)
+end
+```
+
+`read` legge un valore dall'esterno (input), `write` stampa un risultato (output).
+
+### Selezione (`if-then-else`)
+
+```
+if condizione then
+    istruzioni_se_vera
+else
+    istruzioni_se_falsa
+endif
+```
+
+Esempio:
+
+```
+if eta >= 18 then
+    write("Maggiorenne")
+else
+    write("Minorenne")
+endif
+```
+
+### Iterazione con controllo in testa (`while`)
+
+```
+while condizione do
+    istruzioni
+endwhile
+```
+
+Esempio: sommare i primi 10 numeri
+
+```
+var
+    somma: integer;
+    i: integer;
+
+begin
+    somma = 0
+    i = 1
+    while i <= 10 do
+        somma = somma + i
+        i = i + 1
+    endwhile
+    write(somma)
+end
+```
+
+### Iterazione con controllo in coda (`repeat-until`)
+
+```
+repeat
+    istruzioni
+until condizione
+```
+
+Il corpo viene eseguito **almeno una volta**, perché la condizione è controllata alla fine.
+
+### Ciclo enumerativo (`for`)
+
+```
+for i = valore_iniziale to valore_finale step incremento do
+    istruzioni
 endfor
 ```
-Esistono anche delle rappresentazioni
+
+## Esempio completo: massimo di tre numeri
+
+```
+var
+    a, b, c, max: integer;
+
+begin
+    read(a)
+    read(b)
+    read(c)
+
+    if a >= b and a >= c then
+        max = a
+    else if b >= a and b >= c then
+        max = b
+    else
+        max = c
+    endif
+
+    write(max)
+end
+```
+
+## Vantaggi della pseudocodifica
+
+* **Indipendenza dal linguaggio**: lo stesso algoritmo può essere tradotto in C, Java, Python, ecc.
+* **Chiarezza**: ci si concentra sulla logica, non sulla sintassi (punto e virgola, parentesi, ecc.).
+* **Comunicazione**: è più facile discutere un algoritmo con altri programmatori usando uno pseudocodice comune.
+* **Progettazione**: permette di progettare la soluzione prima di sporcarsi le mani con il codice.
+
+!!! tip "Dallo pseudocodice al C"
+    Una volta scritto l'algoritmo in pseudocodice, tradurlo in C è quasi meccanico: ogni costrutto ha un equivalente diretto (`if` → `if`, `while` → `while`, `for` → `for`, `write` → `printf`, `read` → `scanf`).
+

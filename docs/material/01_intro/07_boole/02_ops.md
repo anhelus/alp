@@ -1,4 +1,4 @@
-# 1.7.2 - Le operazioni fondamentali dell'algebra booleana
+﻿# 1.7.2 Le operazioni fondamentali dell'algebra booleana
 
 Le tre operazioni fondamentali dell'algebra di Boole sono quelle di $AND$, $OR$ e $NOT$. Queste operazioni ci permettono di verificare la veridicità di predicati composti di complessità arbitraria: ad esempio, nel caso [visto in precedenza](01_intro.md), i tre predicati semplici sono combinati tra loro utilizzando una regola di tipo $AND$.
 
@@ -33,7 +33,7 @@ La costruzione della tabella delle verità è strettamente dipendente dal numero
 
 La tabella rispecchia ciò che abbiamo detto in precedenza, ovvero che il prodotto è vero soltanto se i due predicati semplici sono veri. Associando, al solito, il valore $1$ alla verità, ed il valore $0$ al falso, vediamo come la tabella delle verità faccia in modo che il risultato sia $1$ soltanto se $p_1=1$ e $p_2=1$. In definitiva, possiamo dedurre che:
 
-!!!quote "Prodotto logico"
+!!! quote "Prodotto logico"
     L'output atteso del prodotto logico sarà *vero* se e solo se $p_1$ è vero e $p_2$ è vero. In caso contrario, l'output atteso del prodotto logico sarà *falso*.
 
 Proviamo a vedere cosa accade nella nostra situazione, sostituendo $p_1$ e $p_2$ con i valori "effettivi" del predicato:
@@ -47,7 +47,7 @@ Al prodotto logico è associata una *porta logica*, mostrata nella figura sottos
 
 ![and_port](./images/and_port.png)
 
-!!!tip "Perché prodotto?"
+!!! tip "Perché prodotto?"
     Il lettore più attento si starà chiedendo da dove derivi la dicitura *prodotto*. Per capirlo, basta osservare la tabella delle verità: il risultato sarà $1$ soltanto quando entrambi i predicati hanno valore $1$, proprio come il classico prodotto algebrico.
 
 ## L'operazione di OR logico
@@ -72,17 +72,17 @@ Cerchiamo anche in questo caso di comprendere cosa accada basandoci su valori di
 
 Da ciò deriva la definizione della somma logica.
 
-!!!quote "Somma logica"
+!!! quote "Somma logica"
     L'output atteso della somma logica sarà *vero* se *almeno uno* tra i predicati $p_1$ e $p_2$ risulta essere vero, e falso altrimenti.
 
 Anche alla somma logica è associata una porta, mostrata nella figura successiva.
 
 ![or_port](./images/or_port.png)
 
-!!!info "XOR: OR esclusivo"
+!!! info "XOR: OR esclusivo"
     Esiste anche l'operazione *XOR* (OR esclusivo), che dà $1$ solo se *esattamente uno* dei due predicati è vero. Non è un'operazione fondamentale come AND, OR e NOT, ma è molto usata in crittografia e nei circuiti sommatori.
 
-!!!tip "Perché somma?"
+!!! tip "Perché somma?"
     Il fatto che questa operazione sia detta di *somma* deriva dal fatto che, così come per il prodotto, il risultato sia in qualche modo riconducibile a quello ottenibile seguendo le regole dell'aritmetica standard.
 
 ## L'operazione di NOT logico
@@ -99,3 +99,5 @@ Capirne il funzionamento è semplice: ad esempio, negare il fatto che *la palla 
 Anche alla negazione logica è associata una porta, mostrata nella figura successiva.
 
 ![not_port](./images/not_port.png)
+
+

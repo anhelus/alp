@@ -1,4 +1,4 @@
-# 2.3 Ricorsione
+﻿# 2.3 Ricorsione
 
 Quella della *ricorsione* è una tecnica di programmazione che permette di "spezzare" un problema in diverse piccole parti, da trattare una alla volta fino alla risoluzione completa dello stesso. E' quindi in qualche modo assimilabile al paradigma "divide-et-impera", tanto caro agli strateghi dell'antica Roma.
 
@@ -85,5 +85,6 @@ Ci si potrebbe chiedere come faccia la funzione ricorsiva a restituire il valore
 
 ![recursion](./images/call_stack.png){: .center}
 
-!!!warning "Rischio stack overflow"
+!!! warning "Rischio stack overflow"
     Se la ricorsione è troppo profonda (migliaia di chiamate), il call stack può esaurire la memoria disponibile, causando un *stack overflow*. Per questo, i linguaggi di programmazione impongono un limite alla profondità della ricorsione. Quando possibile, è preferibile usare un ciclo (approccio iterativo) per problemi con molti passaggi.
+

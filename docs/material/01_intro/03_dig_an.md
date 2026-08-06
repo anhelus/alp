@@ -1,10 +1,10 @@
-# 1.3 - Codifica analogica e digitale
+﻿# 1.3 Codifica analogica e digitale
 
 Nella [lezione precedente](02_data_repr.md) abbiamo classificato i dati in tipi (categorici, ordinali, numerici) e visto come rappresentarli come numeri interi. Ora dobbiamo fare un passo avanti: quei numeri devono essere rappresentati *fisicamente* all'interno di un calcolatore reale.
 
 Cerchiamo di capire cosa questa necessità implichi. Un computer, per quanto potente ed avanzato, ha una capacità di memorizzazione *finita*. Ciò significa, in altre parole, che la quantità di dati che è possibile immagazzinarvi non può andare oltre un certo quantitativo, per grande che questo sia. Questo è contrario ai principi fisici del mondo che ci circonda, che risulta essere composto da un numero *praticamente* infinito di informazioni.
 
-!!!warning "Finitezza del mondo"
+!!! warning "Finitezza del mondo"
     Prima di imbracciare torce e forconi, i fisici vorranno porre particolare accento alla parola *praticamente*.
 
 La conseguenza di questa contraddizione è che *non è possibile immagazzinare tutta l'informazione del mondo reale all'interno di un calcolatore elettronico*. Possiamo, però, codificarla in maniera tale che risulti essere (*virtualmente*) indistinguibile; per farlo, però, dovremo introdurre i concetti di *segnali* e *codifica analogica* e *digitale*.
@@ -17,10 +17,10 @@ I segnali analogici sono quelli propri del mondo che ci circonda. Un esempio è 
 
 Un segnale analogico, per essere trasmesso, deve essere *codificato*, ovvero tradotto in qualche altro tipo di segnale gestibile dall'apparato di trasmissione e/o ricezione. Pensiamo ai telefoni di una volta: questi non prevedevano certo un "magico" altoparlante che interconnetteva i due interlocutori, ma un vero e proprio circuito, che collegava il microfono nel nostro apparecchio all'altoparlante di quello del nostro amico (e viceversa), lungo il quale veniva trasmesso il segnale relativo alla voce dei conversanti. Questo circuito, ovviamente, non aveva alcun calcolatore al suo interno: doveva limitarsi a replicare una versione *compatta* della nostra voce da un capo all'altro, per cui era necessario trovare un modo per farlo senza perdere troppa informazione presente nel segnale originario. Il modo per farlo era modificare questo segnale agendo sulla sua rappresentazione in frequenza, ampiezza, o fase.
 
-!!!tip "Modulazione"
+!!! tip "Modulazione"
     Tutto sarà più chiaro quando vi interfaccerete con materie come Teoria dei Segnali e Comunicazioni Elettriche. O forse no.
 
-Ora, la codifica analogica permette di mantenere una certa *analogia* tra la struttura dell'entità di informazione originaria e quella codificata. Tuttavia, è una codifica difficile da gestire, prona ad interferenze, rumore e ad un fenomeno chiamato *aliasing* (di cui parleremo meglio tra poco). Inoltre, non è adatta a situazioni nelle quali il segnale può essere rappresentato sotto un'altra forma, non continua, ma *numerica*. In questi casi, è necessario guardare alla *codifica digitale*.
+Ora, la codifica analogica permette di mantenere una certa *analogia* tra la struttura dell'entità di informazione originaria e quella codificata. Tuttavia, è una codifica difficile da gestire, prona ad interferenze e rumore. Inoltre, non è adatta a situazioni nelle quali il segnale può essere rappresentato sotto un'altra forma, non continua, ma *numerica*. In questi casi, è necessario guardare alla *codifica digitale*.
 
 ### Segnali digitali
 
@@ -40,7 +40,7 @@ Ciò è evidentemente un problema in caso di rappresentazione analogica, in quan
 
 Immaginiamo di visualizzare il segnale analogico associato alla nostra voce. Per farlo, pensiamo a quali informazioni vengono veicolate, ed al modo in cui lo sono. Intuitivamente, avremo due componenti: una potenzialmente "illimitata", data dal "tempo" associato all'emissione di un particolare suono, ed un'altra "limitata" all'interno di un range, associata (ad esempio) all'intensità del nostro tono. 
 
-!!!tip "Rappresentare la voce"
+!!! tip "Rappresentare la voce"
     Ovviamente, potremmo estendere questa analisi ad altri "assi", come ad esempio la frequenza della nostra voce, ma, per semplicità, evitiamo.
 
 Questa rappresentazione può essere visualizzata su un semplice piano cartesiano, in cui all'asse delle ascisse viene associato il tempo $t$, mentre all'asse delle ordinate l'intensità della nostra voce a quel determinato istante temporale.
@@ -49,12 +49,19 @@ Ora, è facile verificare come questa informazione sia continua *su entrambi gli
 
 In breve, dovremo dapprima *campionare* il segnale, misurandolo ad intervalli regolari, per poi *quantizzarlo*, suddividendo il range in cui possono ricadere questi valori in $N$ possibili intervalli, anch'essi regolari, ognuno dei quali rappresentato da un unico valore in uscita (ad esempio, quello medio).
 
-!!!example "Esempio: campionamento di un segnale"
-    Immaginiamo un segnale che varia tra $0$ e $10$ volt, e decidiamo di quantizzarlo in $5$ intervalli (quindi $N=5$, ogni quanto vale $2$V). Se campioniamo il segnale a $4$ istanti di tempo e otteniamo i valori $1.3$V, $6.7$V, $9.1$V, $4.2$V, dopo la quantizzazione avremo rispettivamente $0$V (intervallo $0-2$), $6$V (intervallo $6-8$), $10$V (intervallo $8-10$), $4$V (intervallo $4-6$). L'informazione originale è approssimata, ma rappresentabile con soli $3$ bit.
+!!! example "Esempio: campionamento di un segnale"
+    Immaginiamo un segnale che varia tra $0$ e $8$ volt, e decidiamo di quantizzarlo in $4$ intervalli (quindi $N=4$, ogni quanto vale $2$V). Se campioniamo il segnale a $4$ istanti di tempo e otteniamo i valori $1.3$V, $6.7$V, $7.9$V, $4.2$V, dopo la quantizzazione avremo rispettivamente $0$V (intervallo $0-2$), $6$V (intervallo $6-8$), $6$V (intervallo $6-8$), $4$V (intervallo $4-6$). L'informazione originale è approssimata, ma rappresentabile con soli $3$ bit; presenterà comunque un certo *errore*, definito anche come *errore di quantizzazione*.
 
-!!!info "Il teorema di Nyquist"
+!!! info "Il teorema di Nyquist-Shannon"
     Per poter ricostruire fedelmente un segnale analogico a partire dai suoi campioni digitali, è necessario campionarlo ad una frequenza almeno doppia rispetto alla frequenza massima presente nel segnale stesso. Se si campiona a una frequenza inferiore, si incorre in un fenomeno chiamato *aliasing* (lo stesso accennato prima), che produce artefatti e distorsioni.
+
+Per riassumere, possiamo dire che:
+
+* il *campionamento* prevede la discretizzazione lungo l'asse del *tempo*, spesso rappresentata sull'asse delle ascisse;
+* la *quantizzazione* prevede la discretizzazione lungo l'asse delle *ampiezze*, spesso rappresentata sull'asse delle ordinate.
 
 ## Conclusioni
 
 Abbiamo accennato in breve alla differenza tra segnale (e codifica) analogico e digitale. Tuttavia, manca ancora un pezzo al nostro puzzle, che vedremo nella prossima lezione, relativo al [sistema numerico](04_num_sis.md) che usiamo per rappresentare la nostra codifica.
+
+

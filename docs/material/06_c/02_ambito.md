@@ -1,10 +1,9 @@
+﻿# 6.6 Ambito delle Variabili
 
-
-## 2. Visibilità e Ciclo di Vita delle Variabili
-
+## Visibilità e Ciclo di Vita delle Variabili
 Una volta compreso dove "vive" fisicamente il codice, dobbiamo capire dove "vivono" logicamente i dati. Questo ci porta ai concetti di ambito e tempo di vita di una variabile.
 
-### 2.1 Ambito di Visibilità (Scope)
+### Ambito di Visibilità (Scope)
 
 L'ambito definisce la regione di un programma in cui un identificatore (come il nome di una variabile) è visibile e può essere utilizzato.
 
@@ -12,7 +11,7 @@ L'ambito definisce la regione di un programma in cui un identificatore (come il 
 
 *   **Ambito Globale**: Una variabile dichiarata al di fuori di qualsiasi funzione ha un ambito globale. È visibile e accessibile da **qualsiasi punto** del programma (in tutti i file sorgente, se opportunamente dichiarata). Sebbene utili in alcuni scenari, le variabili globali sono spesso considerate una cattiva pratica perché rendono il codice più difficile da comprendere e possono generare effetti collaterali inaspettati.
 
-### 2.2 Il Tempo di Vita (Lifetime)
+### Il Tempo di Vita (Lifetime)
 
 Mentre l'ambito è un concetto "spaziale" (dove una variabile è visibile), il tempo di vita è un concetto "temporale" (per quanto tempo una variabile esiste in memoria).
 

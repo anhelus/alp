@@ -1,4 +1,4 @@
-# 2.4 Le variabili
+﻿# 2.4 Le variabili
 
 Comprendere il concetto di *variabile* è fondamentale (o, per meglio dire, *propedeutico*) all'acquisizione dei fondamentali della programmazione.
 
@@ -6,7 +6,7 @@ Per capire di cosa si tratta, possiamo analizzare il significato della parola ne
 
 Una variabile può essere quindi qualsiasi dato contenuto nel nostro programma: ci sono variabili che contano il numero di operazioni eseguite, ad esempio, oppure ancora variabili di supporto, che ci permettono di memorizzare stati intermedi durante l'esecuzione di iterazioni complesse.
 
-!!!note "Nota"
+!!! note "Nota"
     Non tutti i dati contenuti in un programma sono delle variabili: esistono anche delle *costanti*, che si differenziano dalle variabili per la caratteristica di *non* poter variare durante l'esecuzione del programma. Di solito, le costanti vengono utilizzate per modellare valori ben definiti, come ad esempio il $\pi$.
 
 ## Dichiarare ed inizializzare una variabile
@@ -34,7 +34,7 @@ Le due operazioni non sono necessariamente separate, e possono essere combinate 
 type identifier = value;
 ```
 
-!!!note "Nota"
+!!! note "Nota"
     Vedremo un gran numero di esempi pratici di dichiarazione ed inizializzazione.
 
 ## Identificatore della variabile
@@ -53,7 +53,7 @@ Python, invece, utilizza per convenzione lo stile *snake case*, che prevede che 
 integer_variable = 1
 ```
 
-!!!note "Sulla scelta del nome"
+!!! note "Sulla scelta del nome"
     La scelta del nome da assegnare ad una variabile *non* è casuale. Il suggerimento è quello di assegnare nomi *esplicativi*, oltre che *univoci*: ad esempio, un contatore chiamato `cnt` sarà sicuramente più riconoscibile di un contatore chiamato `pippo_joy`.
 
 ## Tipo della variabile
@@ -78,5 +78,6 @@ Per quello che riguarda invece la complessità computazionale spaziale, ricordia
 
 Questa caratteristica può e deve essere usata a nostro vantaggio: infatti, qualora fossimo sicuri che le nostre variabili intere assumono *sempre* valori compresi tra 0 e 100, potremmo utilizzare dati di tipo `byte`. Tuttavia, se per qualche motivo una variabile si trovasse ad assumere un valore *superiore* a 256, avremmo un *errore di buffer overflow*, che porterebbe la variabile a "ritornare" a zero, con conseguenze facilmente intuibili.
 
-!!!note "Curiosità"
+!!! note "Curiosità"
     Errori di questo tipo possono portare ad esiti catastrofici. Ad esempio, nel 1995, il razzo spaziale [Ariane 5 esplose 39 secondi dopo il lancio](https://www.laserfiche.com/ecmblog/whats-worst-software-bug-history/) perché nel software di controllo dell'altitudine era stato usato un intero a 16 bit piuttosto che a 64 bit.
+

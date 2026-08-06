@@ -1,4 +1,4 @@
-# 1.1 - Introduzione all'informatica
+﻿# 1.1 Introduzione all'informatica
 
 ## Una definizione di Informatica
 
@@ -16,12 +16,12 @@ Proviamo ad arricchire questa prima, un po' generica, definizione. Per farlo, sf
 
 L'ultimo fattore da tenere in conto è che l'informatica rappresenta un vero e proprio _pilastro_ della società moderna. Tutto ciò che utilizziamo al giorno d'oggi, dallo smartphone che stiamo usando per leggere questo documento, al computer mediante il quale è stato scritto, fino ad arrivare alle nostre auto, o anche ai termostati nelle nostre caldaie, sono basati su tutte le evoluzioni informatiche (ed elettroniche) succedutesi a partire dal Secondo Dopoguerra.
 
-!!!info "Cenni storici"
+!!! info "Cenni storici"
     Le radici dell'informatica affondano nel XIX secolo con **Charles Babbage**, che progettò la *Macchina Analitica*, antesignana del computer moderno. Negli anni '30, **Alan Turing** formalizzò il concetto di algoritmo con la *Macchina di Turing*, ponendo le basi teoriche della disciplina. Negli anni '40, **John von Neumann** definì l'architettura a programma memorizzato che ancora oggi è alla base di quasi tutti i computer.
 
 Ecco, quindi, che possiamo dare una definizione più completa di informatica, presa direttamente dal dizionario Oxford Languages:
 
-!!!quote "L'informatica"
+!!! quote "L'informatica"
     L'informatica è la scienza che si occupa dell'_ordinamento_, del _trattamento_ e della _trasmissione_ delle _informazioni_ per mezzo dell'_elaborazione elettronica_, la quale rende possibile gestire e organizzare le ingenti masse di dati prodotte dal moderno sviluppo sociale, scientifico e tecnologico.
 
 Ora, non è tanto importante memorizzare questa definizione, quanto piuttosto comprenderne la portata: l'informatica è ovunque, e conoscerla ci dà l'accesso alle porte di quello che è il mondo odierno.
@@ -30,22 +30,26 @@ Ora, non è tanto importante memorizzare questa definizione, quanto piuttosto co
 
 Esiste un'altra definizione di informatica, questa volta legata al concetto di *informazione*, quest'ultima a sua volta definita come insieme di *dati* ed *interpretazione* degli stessi.
 
-!!!tip "Dato vs Informazione"
+!!! tip "Dato vs Informazione"
     Il *dato* è un elemento grezzo e privo di contesto: ad esempio, il numero "35" da solo non significa nulla. L'*informazione* nasce quando diamo un'interpretazione a quel dato: "35°C è la temperatura attuale". Lo stesso dato può generare informazioni diverse a seconda del contesto (35°C è caldo per l'Italia, fresco per il deserto).
 
-In particolare, l'informatica può essere definita come *studio teorico, analisi, progettazione, realizzazione ed applicazione degli algoritmi che descrivono e trasformano l'informazione*. 
+In particolare, l'informatica può essere definita come *studio teorico, analisi, progettazione, realizzazione ed applicazione degli algoritmi che descrivono e trasformano l'informazione*. In altre parole:
 
-!!!tip "Cosa sono gli algoritmi?"
-    Un *algoritmo* è una sequenza finita e ordinata di passaggi che, eseguiti meccanicamente, portano alla soluzione di un problema. La parola deriva dal matematico persiano **Al-Khwarizmi** (IX secolo). Ogni ricetta di cucina è un algoritmo: hai degli ingredienti (input), segui delle istruzioni e ottieni un piatto (output). Ne riparleremo più avanti.
+```
+Informazione = Dati + Interpretazione (Contesto)
+```
 
-!!!tip "L'informatica ai tempi dei mobilifici svedesi"
+!!! tip "Cosa sono gli algoritmi?"
+    Un *algoritmo* è una sequenza finita, ordinata e non ambigua di passi che, eseguiti meccanicamente, portano alla soluzione di un problema. La parola deriva dal matematico persiano **Al-Khwarizmi** (IX secolo). Ogni ricetta di cucina è un algoritmo: hai degli ingredienti (input), segui delle istruzioni e ottieni un piatto (output). Ne riparleremo più avanti.
+
+!!! tip "L'informatica ai tempi dei mobilifici svedesi"
     Immaginiamo di doverci recare presso una nota catena di mobilifici svedesi per acquistare un tavolino. Questo sarà composto da una serie di componenti, come viti, bulloni, o pannelli, che andranno a costituire i *dati* a nostra disposizione. Contestualmente, avremo a disposizione un manuale da utilizzare per realizzare il mobile, che rappresenta l'*interpretazione* da dare agli stessi. Concettualmente, l'informatica studia l'algoritmo, definito sul manuale (interpretazione), che, a partire dalle componenti (dati) permette di ottenere il risultato desiderato.
 
 I più attenti avranno sicuramente notato come manchi ancora qualcosa alle definizioni ed ai concetti che abbiamo introdotto finora. Infatti, l'informatica è così presente nelle nostre vite perché permette di svolgere in maniera semplice e *trasparente* compiti complessi. Ad esempio, il sistema di controllo della stabilità della nostra auto si abilita in maniera automatica, e ci impedisce di fare staccate degne del Valentino Rossi del 2004 grazie ad un sistema informatico. Lo stesso vale per il sistema che ci permette di acquistare l'ultimo gadget alla moda dal nostro sito di e-commerce preferito: con la semplice pressione di un tasto svolgeremo "automaticamente" una serie di operazioni che, un tempo, avrebbero previsto il recarsi fisicamente in negozio, scegliere il prodotto, consegnare i contanti al commesso, e ritornare a casa col bottino.
 
 Ciò ci riconduce al concetto di *automazione*: l'informatica, infatti, utilizza quasi sempre sistemi *automatizzati* di gestione dell'informazione.
 
-!!!info "Hardware e Software"
+!!! info "Hardware e Software"
     Per comprendere l'informatica è utile distinguere due componenti fondamentali: l'**hardware**, ovvero la parte fisica del computer (circuiti, processore, memoria, disco), e il **software**, ovvero la parte logica (programmi, sistemi operativi, app). L'hardware fornisce la materia prima, il software le istruzioni per trasformarla. Senza l'altro, nessuno dei due avrebbe senso.
 
 Ovviamente, esistono sorgenti di informazioni diverse: ad esempio, l'informazione può provenire da Internet, oppure da un hard disk attaccato al nostro computer, o anche in un video visto su YouTube. Contestualmente, le tipologie di informazione sono eterogenee: le informazioni provenienti da Internet sono di tipo testuale, mentre i video sono chiaramente multimediali. La natura eterogenea delle informazioni richiede quindi una rappresentazione *uniforme*. Vediamo come questo sia reso possibile dal concetto di *linguaggio*.
@@ -54,7 +58,7 @@ Ovviamente, esistono sorgenti di informazioni diverse: ad esempio, l'informazion
 
 Ora, per comprendere e veicolare l'informazione dobbiamo tenere in conto alcuni fattori. Il primo, e forse il più intuitivo, è che l'informazione deve essere in qualche modo "scritta" o "letta" su un *supporto fisico*. Il secondo, invece, è che per veicolare con efficacia l'informazione è necessario adottare un insieme di regole condivise che ne permettano l'interpretazione; questo insieme di regole è comunemente chiamato *linguaggio*.
 
-!!!tip "L'informatica ai tempi dei mobilifici svedesi"
+!!! tip "L'informatica ai tempi dei mobilifici svedesi"
     Nel mobilificio di cui sopra il supporto fisico scelto per veicolare l'informazione è (come prevedibile) il manuale, sia esso cartaceo o in formato PDF. Il linguaggio usato per veicolare l'informazione è invece di tipo grafico, anche se ai più può apparire poco comprensibile.
 
 Un linguaggio è costituito da due componenti:
@@ -64,17 +68,19 @@ Un linguaggio è costituito da due componenti:
 
 Esempio classico di alfabeto è quello latino, che utilizziamo comunemente per scrivere in occidente; tale alfabeto, se strutturato secondo regole sintattiche e semantiche proprie di una grammatica, permette di veicolare informazione scritta in un certo linguaggio. Ad esempio, il testo che state leggendo è, sperabilmente, italiano.
 
-!!!tip "Quanti simboli in un alfabeto?"
+!!! tip "Quanti simboli in un alfabeto?"
     Affinché abbia un senso compiuto, un alfabeto deve avere almeno due simboli distinti. Usare un unico simbolo sarebbe quantomeno *irrealistico*.
 
 La scelta di un linguaggio segue essenzialmente due criteri, esplicitati di seguito.
 
-1. *Universalità*: questo criterio implica che i sistemi che elaborano l'informazione adottino un linguaggio universalmente condiviso, di modo tale che due dispositivi differenti siano in grado di comunicare tra loro. Immaginiamo ad esempio che problema sarebbe non poter comunicare con la nostra dolce metà se questa avesse uno smartphone basato su un sistema operativo diverso da quello del nostro!
-2. *Semplicità*: questo criterio è legato alla natura *reale*, e non astratta, dei dispositivi coinvolti nell'elaborazione automatica dell'informazione. I nostri computer e smartphone, infatti, altro non sono se non un "ammasso" di circuiti elettronici, i quali operano essenzialmente come *interruttori*. Sì, esattamente come quello che vi permette di accendere o spegnere la luce nella vostra stanza, soltanto *molto più in piccolo*: infatti, ciascuno di questi interruttori, chiamati *transistor*, occupa soltanto un paio di nanometri. La nostra esperienza ci dice che gli interruttori sono estremamente semplici da operare: infatti, possono essere soltanto *aperti*, non facendo quindi scorrere la corrente (e facendo sì che la lampadina sia spenta), o *chiusi*, facendo scorrere la corrente al loro interno, ed accendendo la lampadina. In altri termini, gli interruttori hanno soltanto due possibili *stati*: aperti o chiusi.
+1. *Universalità*: questo criterio implica che i sistemi che elaborano l'informazione adottino un linguaggio universalmente condiviso, di modo tale che due dispositivi differenti siano in grado di comunicare tra loro. Immaginiamo ad esempio che problema sarebbe non poter comunicare con la nostra dolce metà se questa avesse uno smartphone basato su un sistema operativo diverso da quello del nostro! In informatica, l'universalità è garantita da *protocolli* e *standard* condivisi.
+2. *Semplicità*: questo criterio è legato alla natura *reale*, e non astratta, dei dispositivi coinvolti nell'elaborazione automatica dell'informazione. I nostri computer e smartphone, infatti, altro non sono se non un "ammasso" di circuiti elettronici, i quali operano essenzialmente come *interruttori*. Sì, esattamente come quello che vi permette di accendere o spegnere la luce nella vostra stanza, soltanto *molto più in piccolo*: infatti, ciascuno di questi interruttori, chiamati *transistor*, occupa soltanto uno spazio nell'ordine dei nanometri. La nostra esperienza ci dice che gli interruttori sono estremamente semplici da operare: infatti, possono essere soltanto *aperti*, non facendo quindi scorrere la corrente (e facendo sì che la lampadina sia spenta), o *chiusi*, facendo scorrere la corrente al loro interno, ed accendendo la lampadina. In altri termini, gli interruttori hanno soltanto due possibili *stati*: aperti o chiusi.
 
 Questa corrispondenza tra stato fisico e simbolo ci porta dritti al linguaggio che soddisfa entrambi i criteri appena visti. Deve adottare un sistema con soli due simboli — per rispecchiare i due possibili stati degli interruttori — ed essere adatto a operazioni numeriche. Il candidato naturale è il sistema *binario* (dal latino *bis*, "due volte"), nel quale sono contenuti esclusivamente i simboli $0$ ed $1$.
 
-!!!tip "Anteprima: il bit"
+!!! tip "Anteprima: il bit"
     Ogni singolo $0$ o $1$ è chiamato **bit**, contrazione di *binary digit* ("cifra binaria"). Un transistor memorizza esattamente un bit. Per rappresentare numeri o caratteri servono più bit, e vedremo come si organizzano tra poco.
 
 Prima di approfondire i concetti alla base dell'utilizzo del codice binario, tuttavia, è importante discutere di come si [rappresentano i dati in un elaboratore](02_data_repr.md).
+
+

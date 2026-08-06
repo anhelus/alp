@@ -1,4 +1,4 @@
-# 01 - Programmare in Linguaggio C
+﻿# 6.1 Introduzione al C
 
 Esploriamo alcuni concetti fondamentali della programmazione in C, essenziali per scrivere dei programmi non solo funzionanti, ma anche manutenibili e robusti. In questa prima lezione, partiremo dai concetti fondamentali dell'organizzazione del codice.
 
@@ -17,7 +17,7 @@ Queste keyword sono riservate esclusivamente per il loro scopo specifico definit
 int for = 10; 
 ```
 
-### 1.2 La Programmazione Modulare: Dividere per Governare
+### La Programmazione Modulare: Dividere per Governare
 
 L'approccio modulare consiste nel suddividere il codice sorgente di un programma in più file, chiamati **moduli**. Ciascun modulo ha la responsabilità di fornire una specifica funzionalità, raggruppando dati e funzioni correlati. Ad esempio, in un'applicazione di calcolo scientifico, potremmo avere:
 
@@ -27,7 +27,7 @@ L'approccio modulare consiste nel suddividere il codice sorgente di un programma
 
 Questa separazione rende il codice più facile da leggere, da manutenere e da riutilizzare.
 
-### 1.3 Moduli, Prototipi e File Header
+### Moduli, Prototipi e File Header
 
 Per far sì che i moduli possano comunicare tra loro, il C utilizza una convenzione basata su due tipi di file:
 
@@ -79,11 +79,12 @@ Per compilare questo programma modulare, è necessario fornire al compilatore tu
 gcc programma.c aritmetica.c -o mio_programma
 ```
 
-### 1.4 Le Guardie di Inclusione (Header Guards)
+### Le Guardie di Inclusione (Header Guards)
 
 Un problema comune in progetti complessi è l'**inclusione multipla**: lo stesso file header potrebbe essere incluso più volte all'interno di una singola unità di compilazione, portando a errori di ridefinizione. Per prevenire questo problema, si usa una costruzione del preprocessore chiamata **guardia di inclusione** (o *header guard*).
 
-È una buona pratica fondamentale inserire una guardia in ogni file header:
+!!! tip "Buona pratica"
+    È buona norma inserire una guardia in ogni file header:
 
 ```c
 #ifndef ARITMETICA_H
@@ -96,3 +97,4 @@ int moltiplica(int a, int b);
 #endif // ARITMETICA_H
 ```
 Questo meccanismo assicura che il contenuto del file venga processato dal compilatore una sola volta, anche se viene incluso decine di volte.
+

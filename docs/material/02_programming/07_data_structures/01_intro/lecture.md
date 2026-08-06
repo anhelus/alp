@@ -1,4 +1,4 @@
-# 2.7.1 Strutture dati base
+﻿# 2.7.1 Strutture dati base
 
 Nelle [lezioni precedenti](../../05_functions/01_intro/lecture.md) abbiamo ad un certo punto parlato di "insieme" dei voti relativi ai nostri esami, senza però ben specificare come rappresentarlo con i concetti a nostra disposizione. Se ci pensiamo, infatti, non abbiamo (apparentemente) strumenti per rappresentare degli insiemi: non possiamo certamente utilizzare un singolo dato numerico, così come neanche un dato booleano o un carattere.
 
@@ -14,7 +14,7 @@ Un array contiene quindi una sequenza di elementi, tipicamente dello stesso tipo
 
 La presenza dell'indice permette di definire la modalità di accesso ai dati dell'array, indicata come *accesso diretto*. Nella pratica, possiamo estrarre qualsiasi elemento nell'array mediante l'indice stesso, in maniera diretta, senza dover "scorrere" l'intero vettore; questo fa sì che l'accesso abbia sempre una complessità $O(1)$, dato che è richiesta un'unica operazione.
 
-!!!note "Nota"
+!!! note "Nota"
 	A far da contraltare all'efficienza in termini di accesso vi è una certa laboriosità legata all'inserimento o rimozione di un elemento dall'array.
 
 Tipicamente, un array viene rappresentato come una serie di singole variabili racchiuse tra due parentesi quadre. Ad esempio:
@@ -70,7 +70,7 @@ union nome_union {
 
 In questo caso, la union di nome `nome_union` potrà assumere uno tra due possibili valori, ovvero `id_union_tipo_uno` di tipo `tipo_union_uno` o `id_union_tipo_due` di tipo `id_union_tipo_due`.
 
-!!!note "Nota"
+!!! note "Nota"
 	Per adesso, non facciamo un esempio "concreto" di union; lo vedremo più avanti, quando ritorneremo su queste due strutture dati in C.
 
 ## Pile e code
@@ -87,7 +87,7 @@ Il funzionamento della pila è schematizzato all'interno della seguente figura.
 
 ![stack](./images/stack.png){: .center}
 
-!!!note "Nota"
+!!! note "Nota"
 	Il motivo alla base dell'aggettivo "limitato" è da ricercarsi proprio nel fatto che sia il push sia il pop possono essere effettuati soltanto sugli elementi in cima alla pila.
 
 ### Code
@@ -99,3 +99,4 @@ Le operazioni definite sulla coda sono concettualmente simili a quelle definite 
 Il funzionamento della coda è schematizzato all'interno della seguente figura.
 
 ![queue](./images/queue.png){: .center}
+

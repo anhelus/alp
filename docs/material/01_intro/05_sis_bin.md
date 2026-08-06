@@ -1,8 +1,8 @@
-# 1.5 - Sistema binario
+﻿# 1.5 Sistema binario
 
 Nella [precedente lezione](04_num_sis.md) abbiamo introdotto il concetto di sistema di numerazione, parlando in maniera approfondita di sistema addizionale e sistema posizionale, facendo quindi l'esempio di numeri romani ed arabi, rispettivamente.
 
-!!!warning "Numeri arabi"
+!!! warning "Numeri arabi"
     Prima di "aiutarli a casa loro", ricordiamoci sempre che l'intera scienza moderna si basa su una simbologia che non abbiamo inventato noi europei.
 
 ##### Perché binario?
@@ -15,7 +15,7 @@ Detto nella maniera più semplice possibile, un elaboratore è un insieme di cir
 
 Il sistema di numerazione binario è basato sulla base $2$, ovvero quella più piccola possibile. Essendo la base pari a $2$, saranno permesse soltanto due cifre, ovvero $0$ ed $1$.
 
-!!!tip "Sistema binario e bit"
+!!! tip "Sistema binario e bit"
     Se ricordate, abbiamo in precedenza introdotto il concetto di *bit*, affermando fosse una crasi di *binary* e *digit*, ovvero *cifra binaria*. Ecco spiegato il motivo.
 
 Il sistema binario presenta quindi il vantaggio fondamentale di permettere di stabilire, in maniera relativamente semplice, una *corrispondenza biunivoca* con i possibili stati di funzionamento dei circuiti elettrici ed elettronici. Ciò viene tuttavia al costo di una maggiore complessità, dato che è necessario utilizzare un numero di cifre più elevato per rappresentare lo stesso numero. Ad esempio, per rappresentare un numero a $2$ cifre decimali, ovvero tutti quelli compresi tra $10$ e $99$, sono necessarie da $3$ a $7$ cifre binarie, ovvero quelle che servono a rappresentare i numeri compresi tra $8$ (che è pari a $2^3$) fino a $128$ (che è pari a $2^7$).
@@ -41,7 +41,7 @@ Facciamo un esempio con base $2$: dovremo dividere ripetutamente il numero $N$ p
 
 In base alla tabella precedente, ed alla regola che abbiamo definito, il risultato della conversione è dato da $1010$.
 
-!!!tip "Verifica"
+!!! tip "Verifica"
     Possiamo sempre verificare il risultato riconvertendo in decimale: $1010_2 = 1 \cdot 2^3 + 0 \cdot 2^2 + 1 \cdot 2^1 + 0 \cdot 2^0 = 8 + 0 + 2 + 0 = 10$.
 
 ##### Numeri frazionari
@@ -72,22 +72,24 @@ Notiamo due cose:
 
 In quest'ultimo caso, quindi, dovremo imporre un'ulteriore condizione, ovvero quella relativa al *numero massimo di bit da utilizzare*, giunti al quale termineremo l'operazione di conversione, approssimando il risultato ottenuto. Nel nostro caso, volendo usare una rappresentazione a $9$ bit, $10.6$ sarà dato da $1010.10011$.
 
-!!!tip "Da binario a esadecimale"
+!!! tip "Da binario a esadecimale"
     Un numero binario può essere convertito in esadecimale raggruppando le cifre a $4$ a $4$ (da destra) e sostituendo ogni gruppo con la corrispondente cifra esadecimale ($0$–$9$, $A$–$F$). Ad esempio, $1010_2 = A_{16}$ e $1111_2 = F_{16}$. Questa compattezza è il motivo per cui l'esadecimale è così usato in informatica.
 
-!!!question "Esercizio"
+!!! question "Esercizio"
     Converti in binario il numero $42$ (suggerimento: dalla lezione precedente sai che $42_{10} = 32 + 8 + 2$). Poi verifica il risultato con la formula delle potenze di $2$.
 
 ## Bit, byte e word
 
 Abbiamo già visto una rappresentazione *informale* di bit, come componente "fondamentale" dell'informazione. In maniera più formale, possiamo adesso darne una definizione.
 
-!!!quote "Il Bit"
+!!! quote "Il Bit"
     Il **bit** è l'unità di informazione fondamentale interpretabile da un calcolatore, e può assumere valori $0$ (interpretabile come *falso*, o *circuito aperto*) o $1$ (interpretabile come *vero*, o *circuito chiuso*).
 
 Dalla definizione di bit segue quella (altrettanto importante) di *byte*, comunemente associata ad una sequenza di valori binari arbitrari ma con lunghezza pari ad otto bit.
 
-!!!tip "I valori del byte"
+!!! tip "I valori del byte"
     Quanti sono i valori che è possibile rappresentare mediante un byte? Per rispondere alla domanda, riprendiamo le nozioni viste quando abbiamo parlato di informazione. In particolare, sappiamo che una sequenza di $K$ bit può rappresentare al più $2^K$ combinazioni di bit; quindi, se $K=8$, allora potremo rappresentare al più $2^8=256$ valori.
 
 Possiamo infine definire come *word* (parola) una sequenza di $N$ byte, con $N$ dipendente da fattori contestuali, come il tipo di processore utilizzato. Ad esempio, i processori dei nostri PC sono in grado di gestire parole ad otto byte, ovvero $64$ bit. Ciò influenza il numero di valori che può essere gestito dal processore: vedremo questo argomento maggiormente nel dettaglio nella [prossima lezione](06_data_types.md).
+
+

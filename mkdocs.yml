@@ -1,4 +1,4 @@
-site_name: Corso di Informatica
+﻿site_name: Corso di Informatica
 
 nav:
   - Home: index.md
@@ -12,21 +12,21 @@ nav:
     - 1.7 Algebra di Boole:
       - 1.7.1 Introduzione: material/01_intro/07_boole/01_intro.md
       - 1.7.2 Operazioni fondamentali: material/01_intro/07_boole/02_ops.md
-      - 1.7.3 Proprietà delle operazioni fondamentali: material/01_intro/07_boole/03_ops_properties.md
+      - 1.7.3 ProprietÃ  delle operazioni fondamentali: material/01_intro/07_boole/03_ops_properties.md
       - 1.7.4 Leggi dell'algebra booleana: material/01_intro/07_boole/04_laws.md
   - 2. Principi di programmazione:
-    # - 2.1 Gli algoritmi: material/02_programming/01_algorithms/lecture.md
-    - 2.2 La programmmazione strutturata: 
+    - 2.1 Gli algoritmi: material/02_programming/01_algorithms/lecture.md
+    - 2.2 La programmazione strutturata: 
       - 2.2.1 Introduzione: material/02_programming/02_structured/01_intro/lecture.md
       - 2.2.2 I diagrammi di flusso: material/02_programming/02_structured/02_flow_charts/lecture.md
-      # - 2.2.3 Pseudocodice: material/02_programming/02_structured/03_pseudocode/lecture.md
+      - 2.2.3 Pseudocodice: material/02_programming/02_structured/03_pseudocode/lecture.md
     - 2.3 La ricorsione: material/02_programming/03_recursion/lecture.md
     - 2.4 Le variabili: material/02_programming/04_variables/lecture.md
     - 2.5 Le funzioni:
       - 2.5.1 Introduzione: material/02_programming/05_functions/01_intro/lecture.md
-      # - 2.5.2 Parametri formali ed attuali: material/02_programming/05_functions/02_parameters/lecture.md
-      # - 2.5.3 Funzioni e procedure: material/02_programming/05_functions/03_procedures/lecture.md
-    - 2.6 Complessità computazionale: material/02_programming/06_complexity/lecture.md
+      - 2.5.2 Parametri formali ed attuali: material/02_programming/05_functions/02_parameters/lecture.md
+      - 2.5.3 Funzioni e procedure: material/02_programming/05_functions/03_procedures/lecture.md
+    - 2.6 ComplessitÃ  computazionale: material/02_programming/06_complexity/lecture.md
     - 2.7 Strutture dati:
       - 2.7.1 Strutture dati base: material/02_programming/07_data_structures/01_intro/lecture.md
       - 2.7.2 Strutture dati avanzate: material/02_programming/07_data_structures/02_advanced/lecture.md
@@ -34,29 +34,62 @@ nav:
   - 3. Algoritmi:
     - 3.1 Algoritmi di ordinammento:
       - 3.1.1 Selection sort: material/03_algorithms/01_sorting/01_selection/lecture.md
-      # - 3.1.2 Bubble sort: material/03_algorithms/01_sorting/02_bubble/lecture.md
+      - 3.1.2 Bubble sort: material/03_algorithms/01_sorting/02_bubble/lecture.md
       - 3.1.3 Insertion sort: material/03_algorithms/01_sorting/03_insertion/lecture.md
     - 3.2 Algoritmi di ricerca:
       - 3.2.1 Ricerca lineare: material/03_algorithms/02_search/01_linear/lecture.md
       - 3.2.2 Ricerca binaria: material/03_algorithms/02_search/02_binary/lecture.md
   - 4. Architettura dei calcolatori:
-    - 4.1 L'architettura di Von Neumann: material/04_architecture/01_von_neumann/lecture.md 
+    - 4.1 L'architettura di Von Neumann: material/04_architecture/01_von_neumann/lecture.md
+    - 4.2 Ciclo di istruzione e pipeline: material/04_architecture/02_pipeline/lecture.md
+    - 4.3 Gerarchia di memoria e cache: material/04_architecture/03_cache/lecture.md
   - 5. Sistemi operativi:
     - 5.1 Introduzione ai sistemi operativi: material/05_os/01_intro/lecture.md
     - 5.2 Il Kernel: material/05_os/02_kernel/lecture.md
-  # - 6 Ingegneria del software:
-  #   - 6.1.1 Introduzione all'ingegneria del software: material/06_isw/01_intro/01_intro.md 
-  #   - 6.1.2 Classificazione del software: material/06_isw/01_intro/02_classification.md
-  #   - 6.1.3 Caratteristiche del software: material/06_isw/01_intro/03_characteristics.md
-  #   - 6.1.4 Qualità del software: material/06_isw/01_intro/04_quality.md
-  #   - 6.1.5 Requisiti del software: material/06_isw/01_intro/05_requirements.md
+    - 5.3 Gestione dei processi: material/05_os/03_processi/lecture.md
+    - 5.4 Scheduling della CPU: material/05_os/04_scheduling/lecture.md
+    - 5.5 Gestione della memoria e memoria virtuale: material/05_os/05_memoria_virtuale/lecture.md
+    - 5.6 File system: material/05_os/06_file_system/lecture.md
+  - 6. Programmazione in C:
+    - 6.1 Introduzione al C: material/06_c/01_programmazione_c.md
+    - 6.2 Basi del C: material/06_c/05_basi.md
+    - 6.3 Funzioni: material/06_c/11_funzioni.md
+    - 6.4 Operatori: material/06_c/03_operatori.md
+    - 6.5 Array: material/06_c/04_array.md
+    - 6.6 Ambito delle variabili: material/06_c/02_ambito.md
+    - 6.7 Puntatori: material/06_c/06_puntatori.md
+    - 6.8 File: material/06_c/07_file.md
+    - 6.9 Struct e Union: material/06_c/08_str_union.md
+    - 6.10 Allocazione dinamica: material/06_c/09_allocazione_dinamica.md
+    - 6.11 Tipi enumerativi: material/06_c/10_enum.md
+    - 6.12 Preprocessore: material/06_c/12_preprocessore.md
+    - 6.13 Qualificatori e size_t: material/06_c/13_qualificatori.md
+    - 6.14 Liste concatenate: material/06_c/14_liste_concatenate.md
+    - 6.15 Libreria standard: material/06_c/15_librerie.md
+    - 6.16 Puntatori a funzione: material/06_c/16_puntatori_funzione.md
+    - 6.17 Stack e Coda: material/06_c/17_stack_coda.md
+    - 6.18 Esercizi guidati: material/06_c/18_esercizi.md
+    - 6.19 Tracce d'esame svolte:
+      - 30/01/2026 — Libretto: material/06_c/esami_svolti/01_30-01-26.md
+      - 17/02/2026 T1 — Braccio robotico: material/06_c/esami_svolti/02_17-02-26_T1.md
+      - 17/02/2026 T2 — Auto da corsa: material/06_c/esami_svolti/03_17-02-26_T2.md
+      - 17/02/2026 T3 — PoliBanca: material/06_c/esami_svolti/04_17-02-26_T3.md
+      - 17/04/2026 — Bubble sort: material/06_c/esami_svolti/05_17-04-26.md
+      - 24/06/2026 — Selection sort: material/06_c/esami_svolti/06_24-06-26.md
+      - 09/07/2026 — Vettori e ricerca: material/06_c/esami_svolti/07_09-07-26.md
+      - 27/07/2026 — Pari e decrescente: material/06_c/esami_svolti/08_27-07-26.md
+  - 7. Appendici:
+    - 7.1 Configurazione di VS Code: material/new/appendix/00_vscode.md
+    - 7.2 Git e controllo di versione: material/new/appendix/01_git/lecture.md
+    - 7.3 Terminale e riga di comando: material/new/appendix/02_terminale/lecture.md
+    - 7.4 Makefile e automazione build: material/new/appendix/03_makefile/lecture.md
 
 theme:
   name: material
   language: it
 
 markdown_extensions:
-  - admonition # notes make pret4ty
+  - admonition # notes make pretty
   - attr_list
   - footnotes
   - meta # page-specific context
@@ -115,3 +148,4 @@ extra_css:
   - stylesheets/extra.css
 
 copyright: Copyright &copy; Angelo Cardellicchio - MIT License
+

@@ -1,4 +1,4 @@
-# 5.2 - Il kernel
+﻿# 5.2 Il kernel
 
 Per *kernel* si intende il "nucleo" del sistema operativo, ovvero quell'insieme di funzionalità che agiscono da "ponte" tra gli applicativi software ad alto livello e l'hardware del computer. In particolare:
 
@@ -107,3 +107,4 @@ Il kernel è responsabile di diverse funzioni critiche:
 Un kernel è caricato in memoria immediatamente quando viene avviato il sistema operativo, e vi rimane fino a quando questo non viene spento. È responsabile per diverse task come la gestione del disco e quella della memoria.
 
 <!-- https://www.geeksforgeeks.org/kernel-in-operating-system/ -->
+

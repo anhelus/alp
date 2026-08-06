@@ -1,4 +1,4 @@
-# 2.2.1 La Programmazione Strutturata
+﻿# 2.2.1 La Programmazione Strutturata
 
 Ai più "esperti" tra i lettori sarà capitato di leggere del codice prodotto negli anni '70 ed '80, in linguaggi come il BASIC, simile a qualcosa di questo tipo:
 
@@ -47,7 +47,7 @@ La *selezione* prevede invece che il flusso delle istruzioni possa diramarsi tra
 
 In particolare, la selezione è rappresentata mediante il costrutto *IF - THEN - ELSE*, il cui funzionamento può essere riassunto in linguaggio naturale come segue:
 
-!!!cite "L'IF - THEN - ELSE in linguaggio naturale"
+!!! cite "L'IF - THEN - ELSE in linguaggio naturale"
 	*IF* (se) la condizione è verificata, *THEN* (allora) esegui le istruzioni su di un ramo, *ELSE* (altrimenti) esegui le istruzioni sull'altro ramo.
 
 Per comprendere meglio il funzionamento della selezione, immaginiamo di voler comparare due numeri $a$ e $b$. Di nuovo, esprimiamo la selezione in pseudo-codice:
@@ -105,7 +105,7 @@ switch (a)
 
 L'ultimo tipo di struttura di controllo è l'*iterazione*, chiamata anche *ciclo*; in questo caso, un'istruzione verrà reiterata fino a che una certa condizione è verificata.
 
-!!!note "Nota"
+!!! note "Nota"
 	In un certo senso, l'iterazione è una "summa" di struttura e selezione.
 
 Per comprendere il funzionamento dell'iterazione, proviamo ad utilizzarla, sempre in pseudocodice, per scrivere i numeri che vanno da uno a dieci:
@@ -124,7 +124,7 @@ Schematizziamo il funzionamento dell'iterazione nella figura successiva:
 
 Risulta particolarmente interessante notare come l'iterazione (espressa in questo caso da un'istruzione FOR) non faccia altro che verificare una condizione su una variabile contatore (ovvero che i sia minore od uguale a 10), modificando la stessa ad ogni iterazione. Una volta che la condizione sul contatore non sarà più verificata, il programma continuerà la sua esecuzione.
 
-!!!note "Nota"
+!!! note "Nota"
 	Modificare la variabile contatore ad ogni iterazione è *estremamente importante*. Se il contatore non fosse mai modificato, infatti, il programma non potrebbe mai uscire dal ciclo.
 
 #### Costrutti FOR e WHILE-DO
@@ -143,13 +143,14 @@ endwhile
 
 In pratica, il costrutto WHILE-DO verifica ad ogni iterazione che la condizione sia vera; se ciò avviene, sono eseguite le istruzioni specificate nel DO, ed è aggiornata la condizione (che, prima o dopo, non dovrà essere più verificata).
 
-!!!note "L'importanza di aggiornare la condizione"
+!!! note "L'importanza di aggiornare la condizione"
 	Nel WHILE-DO, l'importanza dell'aggiornamento della condizione è *ancora* più evidente rispetto al FOR, ed è molto spesso delegata al programmatore. Ciò comporta maggiore libertà nell'aggiornamento della condizione, ma anche maggiori responsabilità (semi-cit.).
 
-!!!note "Il costrutto DO-WHILE"
+!!! note "Il costrutto DO-WHILE"
 	Esiste una variante del costrutto WHILE-DO chiamata DO-WHILE, nella quale le istruzioni specificate nel DO vengono effettuate prima della verifica della condizione. Non tutti i linguaggi di programmazione supportano tale costrutto; inoltre, con pochi accorgimenti, è possibile usare indifferentemente il WHILE-DO ed il DO-WHILE. Tuttavia, occorre tener presente che il DO-WHILE sarà eseguito *almeno* una volta, dato che la condizione è verificata dopo l'esecuzione delle istruzioni, mentre il WHILE-DO potrebbe non essere mai eseguito, dato che la condizione è verificata prima dell'esecuzione delle istruzioni.
 
 ## Esercizi
 
 1. Schematizzare, sotto forma di diagramma di flusso, un programma che utilizzi il costrutto WHILE-DO.
 2. Schematizzare, sotto forma di diagramma di flusso, un programma che utilizzi il costrutto SWITCH.
+

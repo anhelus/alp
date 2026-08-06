@@ -1,4 +1,4 @@
-# 2.7.2 Strutture dati avanzate
+﻿# 2.7.2 Strutture dati avanzate
 
 In questa lezione, vedremo prima come progettare una pila ed una coda come degli array, per poi passare a presentare un altro tipo di strutture dati estremamente utilizzate, ovvero *grafi* ed *alberi*.
 
@@ -123,12 +123,12 @@ Nell'esempio precedente, abbiamo visto come le relazioni all'interno di un socia
 
 Per un grafo non diretto possiamo definire la condizione di *adiacenza* per due vertici $u$ e $v$:
 
-!!!info "Vertici adiacenti"
+!!! info "Vertici adiacenti"
 	Due vertici $u$ e $v$ sono definiti *adiacenti* o *vicini* quando vi è un arco che li connette.
 
 Contestualmente, possiamo definire il concetto di *grado* di un vertice:
 
-!!!info "Grado di un vertice"
+!!! info "Grado di un vertice"
 	Si definisce *grado* di un vertice $u$ il numero di archi che vi incidono.
 
 Ad esempio, se abbiamo cento contatti su Facebook, il nostro "grado" all'interno del social network sarà proprio pari a 100.
@@ -137,10 +137,10 @@ Viceversa, se ad ogni arco è associata una direzione, otterremo un grafo *diret
 
 Per un grafo diretto dovremo ridefinire il concetto di *grado*, separandolo in due concetti distinti.
 
-!!!info "Grado esterno"
+!!! info "Grado esterno"
 	Si definisce *grado esterno*, o *out-degree*, di un vertice $u$ il numero di archi in uscita da $u$.
 
-!!!info "Grado interno"
+!!! info "Grado interno"
 	Si definisce *grado interno*, o *in-degree*, di un vertice $u$ il numero di archi in ingresso su $u$.
 
 ### Cammini e cicli
@@ -151,10 +151,10 @@ Ovviamente, il numero di cammini esistenti tra due nodi $u$ e $v$ è potenzialme
 
 Definiamo inoltre altre due condizioni.
 
-!!!info "Cicli"
+!!! info "Cicli"
 	Un cammino che ha come punto di partenza e di arrivo lo stesso vertice è chiamato *ciclo*.
 
-!!!info "Connessione del grafo"
+!!! info "Connessione del grafo"
 	Un grafo si dice connesso quando esiste almeno un percorso che colleghi due nodi $(u, v)$, $\forall (u, v) \in V$.
 
 #### Un esempio
@@ -185,7 +185,8 @@ Per comprendere al meglio la struttura di un albero, vediamo quella che è la "g
 
 In particolare, notiamo come a partire da un "antenato comune" (il famoso "anello mancante") si siano evoluti diversi *rami* dell'albero, ognuno afferente ad un diverso genere, di cui gli ultimi esemplari rappresentano i nodi foglia; nel nostro caso, l'Homo sapiens è la foglia del ramo rappresentativo del genere Homo.
 
-!!!note "Nota"
+!!! note "Nota"
 	L'albero *è* un grafo, con delle particolari caratteristiche: infatti, è non diretto, connesso ed aciclico (ovvero, non presenta alcun ciclo al suo interno).
 
 Concludiamo questo excursus citando infine gli alberi *binari*, caratterizzati dal fatto che ciascun nodo ha (al più) due figli.
+

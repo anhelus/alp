@@ -1,4 +1,4 @@
-# 2.1 Introduzione agli algoritmi
+﻿# 2.1 Introduzione agli algoritmi
 
 In questa sezione discuteremo uno degli strumenti fondamentali dell'informatica, ma non solo: gli *algoritmi*.
 
@@ -18,10 +18,10 @@ Questi problemi (soprattutto l'ultimo) sono risolvibili utilizzando un semplice 
 * *per montare il mobile Ikea, devo seguire le singole, comprensibilissime, istruzioni presenti sul manuale di montaggio.*
 * *per superare l'esame, devo studiare l'intero programma e preparare gli opportuni esercizi.*
 
-!!!tip "Nota"
+!!! tip "Nota"
 	Per l'ultima soluzione, si consiglia anche l'uso di strumenti scaramantici e votivi di vario tipo.
 
-##### Formulazione di un problema
+### Formulazione di un problema
 
 A questo punto è lecita una domanda: cosa significa *formulare un problema*? È presto detto: il problema è un *quesito da risolvere mediante la determinazione di uno o più enti, partendo da elementi noti e condizioni fissate in precedenza*. Ok, cerchiamo di scomporre questa formulazione.
 
@@ -37,15 +37,15 @@ Alcuni esempi di quesito, ente e stato iniziale sono riportati nella seguente ta
 | *Come calcolare l'ipotenusa di un triangolo rettangolo?* | Studente | Base, altezza, teorema di Pitagora |
 | *Come dimostrare l'ipotesi di Riemann?* | Studente | Banali regole basilari di aritmetica |
 
-##### Risoluzione di un problema
+### Risoluzione di un problema
 
 Una volta formulato il problema, è possibile quindi procedere alla sua risoluzione, seguendo i criteri che esamineremo di seguito.
 
-## 2.2 - Risolvere un problema
+## Risolvere un problema
 
 La formulazione di un problema implica quindi la determinazione del _cosa_ (il quesito da risolvere), del _chi_ (l'esecutore materiale della risoluzione) e del _da dove_ (lo stato di partenza e le condizioni fissate). In particolare, diamo a questi ultimi il nome di _dati_: i dati caratterizzano, anche parzialmente, lo stato iniziale del mondo, e possono essere forniti in un linguaggio naturale che permetta di descrivere delle _situazioni_, o _stati_, e le differenze tra di essi.
 
-### 2.2.1 Problemi e soluzioni
+### Problemi e soluzioni
 
 Il lettore più attento noterà che manca ancora un elemento fondamentale, ovvero il _come_. Questo è definito individuando un apposito _metodo di risoluzione_ o, più semplicemente, una _soluzione_ al problema.
 
@@ -53,14 +53,14 @@ Dal punto di vista formale, l'individuazione del metodo di risoluzione può esse
 
 Informalmente, possiamo dire che _per ogni problema_ (se risolvibile) _esiste almeno una soluzione_.
 
-### 2.2.2 - Costruire la soluzione
+### Costruire la soluzione
 
 Il compito del risolutore è quindi quello di "costruire", o "individuare", la soluzione. La possibilità di farlo è legata ad alcune condizioni fondamentali, ovvero:
 
 - le operazioni _atomiche_ disponibili;
 - il modo in cui le operazioni di cui sopra possono essere combinate per realizzare operazioni più complesse.
 
-#### 2.2.2.1 Operazioni atomiche
+#### Operazioni atomiche
 
 Per operazione "atomica" intendiamo un'operazione che non è possibile _semplificare_ (ovvero suddividere) in alcun modo. Esempi di operazione atomica possono essere:
 
@@ -74,13 +74,13 @@ Esempi di operazioni _non_ atomiche sono invece:
 - correre per dieci metri;
 - effettuare un versamento ed un prelievo sul proprio conto corrente bancario.
 
-!!!note "Nota sulla somma"
+!!! note "Nota sulla somma"
 	Il lettore più zelante potrebbe pensare che una somma è suddivisibile usando l'inverso della proprietà associativa. Ciò porterebbe però a scomporre una somma in due somme, che potrebbero essere scomposte in tre somme, e via dicendo. Questa operazione risulta essere controproducente, oltre che contraria al senso comune; si invita quindi il lettore zelante ad adeguarsi al senso comune ed evitare una scomposizione fine a sé stessa.
 
-!!!note "Nota sul conto corrente bancario"
+!!! note "Nota sul conto corrente bancario"
 	La singola transazione sul proprio corrente bancario è in realtà scomponibile, dal punto di vista informatico, in un gran numero di operazioni atomiche: il correntista, infatti, effettua l'autenticazione, completa un form, finalizza la transazione e la esegue. Dato che tutte queste operazioni devono però essere necessariamente _completate_ in un ordine ben definito, i sistemi bancari le vedono come un'unica operazione, che è possibile annullare qualora sopravvenga un problema qualsiasi (problemi di autenticazione, rete non disponibile, mancanza di energia elettrica su uno dei sistemi, etc.).
 
-#### 2.2.2.2 Combinare operazioni atomiche
+#### Combinare operazioni atomiche
 
 Le operazioni atomiche possono essere combinate in due modi:
 
@@ -96,36 +96,36 @@ Il primo problema è di importanza cruciale. Immaginate di voler montare assieme
 
 Il secondo è meno evidente, ma altrettanto degno di attenzione. Infatti, voi e vostro cugino dovrete necessariamente coordinarvi per non urtarvi, usare gli stessi attrezzi, e via dicendo. L'alternativa sarebbe fare a meno del cugino, e simulare il parallelismo montando i due mobili da voi contemporaneamente; in questo caso, però, il tempo che impieghereste è sicuramente maggiore, ed avreste la necessità di ottimizzare le operazioni da fare cercando di minimizzare lo sforzo necessario a terminare i lavori.
 
-#### 2.2.2.3 Determinare l'insieme di operatori
+#### Determinare l'insieme di operatori
 
 Individuare le operazioni atomiche e trovare dei modi per combinarle permette quindi di definire un _insieme di operatori_ che possono essere applicati ad un problema per modificarne lo stato (idealmente, da "aperto" a "risolto", considerando eventualmente gli step intermedi). Per essere comprensibili dal risolutore, questi operatori dovranno essere espressi in un _linguaggio_ che faccia riferimento _esplicito_ al contesto del problema.
 
-#### 2.2.2.4 Da _soluzione_ ad _algoritmo_
+#### Da _soluzione_ ad _algoritmo_
 
 La soluzione sarà quindi definita come un operatore composto nel linguaggio di processo, il cui compito è trasformare lo stato iniziale del mondo (ovvero problema aperto) in quello che definisce la situazione desiderata (ovvero problema risolto).
 
 L'algoritmo è la serie di istruzioni che specifica l'insieme delle azioni che è necessario compiere per risolvere il problema.
 
-## 2.3 - Un esempio
+## Un esempio
 
 Proviamo a formulare e risolvere un semplice problema matematico, ovvero il calcolo dell'ipotenusa di un triangolo rettangolo.
 
-### 2.3.1 - Formulazione del problema
+### Formulazione del problema
 
 _Dati due numeri interi $c_1$ e $c_2$, rappresentanti le lunghezze dei due cateti di un triangolo rettangolo $T$, calcolarne l'ipotenusa $i$._
 
-### 2.3.2 - Dati
+### Dati
 
 Sia $c_1$ la lunghezza del primo cateto, e $c_2$ quella del secondo.
 
-### 2.3.3 - Algoritmo risolutivo (in operazioni atomiche, o quasi)
+### Algoritmo risolutivo (in operazioni atomiche, o quasi)
 
 1. Calcolare il quadrato di $c_1$.
 2. Calcolare il quadrato di $c_2$.
 3. Sommare i quadrati calcolati ai punti **1** e **2**.
 4. Calcolare la radice quadrata della somma ottenuta al punto **3**.
 
-### 2.3.4 Svolgimento numerico
+### Svolgimento numerico
 
 #### Dati
 
@@ -149,7 +149,7 @@ $$
 
 Il risultato è $v_4 = 5$.
 
-## 2.4 - Caratteristiche degli algoritmi risolutivi
+## Caratteristiche degli algoritmi risolutivi
 
 Un algoritmo è contraddistinto da cinque caratteristiche principali.
 
@@ -167,13 +167,13 @@ Tornando al nostro esempio, il metodo di individuazione dell'ipotenusa rispetta 
 4. le istruzioni sono chiare e non equivocabili;
 5. le istruzioni possono essere eseguite da chiunque sia in grado di calcolare un quadrato ed una radice quadrata.
 
-### 2.4.1 Determinismo
+### Determinismo
 
 Un algoritmo si dice _deterministico_ quando al momento dell'esecuzione di ogni istruzione è nota l'istruzione successiva. Ciò comporta che eseguire due volte un algoritmo deterministico sugli stessi dati produce gli stessi effetti. L'algoritmo di esempio è a tutti gli effetti un algoritmo deterministico.
 
 Gli algoritmi non deterministici sono invece affetti da fenomeni di tipo casuale, o stocastico; sono in genere algoritmi avanzati, usati perlopiù in applicazioni di statistica e machine learning, che non tratteremo durante questo corso.
 
-### 2.4.2 Input, Output e Variabili
+### Input, Output e Variabili
 
 Generalmente, i dati in ingresso ad un algoritmo sono anche chiamati _input_ dell'algoritmo, mentre la "risposta" che restituisce l'algoritmo stesso è chiamata _output_.
 
@@ -182,3 +182,7 @@ E' importante sottolineare come gli algoritmi possano accettare sia input sia ou
 Un esempio è dato dall'algoritmo per determinare se una stringa è palindroma: questo accetta come dati una serie di caratteri, e dà una risposta di tipo binario (VERO o FALSO).
 
 Oltre ad input ed output, gli algoritmi spesso utilizzano dei dati di _supporto_, chiamati _variabili_. Ne tratteremo molto più estesamente durante il prosieguo del corso.
+
+
+
+

@@ -1,4 +1,4 @@
-# 3.2.2 - Ricerca binaria
+﻿# 3.2.2 Ricerca binaria
 
 ## Introduzione
 
@@ -99,3 +99,4 @@ function binarySearch(array, target):
 - Richiede che l'array sia *ordinato*
 - Complessità temporale: $O(\log n)$
 - Complessità spaziale: $O(1)$ (versione iterativa)
+

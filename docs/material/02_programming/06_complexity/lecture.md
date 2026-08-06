@@ -1,4 +1,4 @@
-# 2.6 La complessità computazionale degli algoritmi
+﻿# 2.6 La complessità computazionale degli algoritmi
 
 Il concetto di *complessità computazionale* di un algoritmo è direttamente correlato al numero di operazioni che occorre svolgere per portarlo a termine, oppure ancora alla quantità di memoria occupata nel sistema durante l'esecuzione dello stesso.
 
@@ -32,7 +32,7 @@ distanza_quad = distanza_x + distanza_y
 distanza = (distanza_quad)^(1/2);
 ```
 
-!!!note "Nota"
+!!! note "Nota"
 	Per semplicità, non teniamo conto dei singoli passaggi che un calcolatore potrebbe impiegare nell'effettuare un'elevazione a potenza, ma consideriamo la stessa un'operazione unitaria.
 
 Avremo quindi un totale di $N=6$ operazioni; supponendo che ognuna di queste richieda esattamente un ciclo del nostro processore, e che questo effettui un ciclo al secondo, la complessità computazionale temporale sarà proprio pari a 6.
@@ -124,7 +124,7 @@ Abbiamo elencato tre step, anche se, nei fatti, ci saranno soltanto due addizion
 
 Per quello che riguarda l'analisi a posteriori, invece, sarà necessario anche stavolta fissare una condizione al contorno, ovvero la velocità con cui il nostro processore riesce ad eseguire una singola istruzione. Supponendo che questa sia pari ad un microsecondo, l'analisi a posteriori ci porterà a stabilire che la complessità computazionale sarà pari a 2 microsecondi.
 
-!!!tip "Classi di complessità comuni"
+!!! tip "Classi di complessità comuni"
     Dalla più efficiente alla meno efficiente:
     - $O(1)$ — costante (accesso a un array)
     - $O(\log n)$ — logaritmica (ricerca binaria)
@@ -139,7 +139,7 @@ Nelle applicazioni reali, è abbastanza difficile che si riesca a calcolare *esa
 
 Per far questo, si utilizza la cosiddetta notazione *Big-O* (o *O-grande*), che in matematica ci permette di descrivere il limite asintotico superiore di una funzione rispetto ad un'altra. In parole povere, un algoritmo che ha (ad esempio) una complessità temporale $C_T(n) = \mathbb{O}(n^2)$ richiederà un tempo di esecuzione pari *al massimo* ad $n^2$, mentre un algoritmo con una complessità $C_S(n) = O(n * log(n))$ occuperà al massimo $n*log(n)$ unità di memoria.
 
-!!!note "Nota"
+!!! note "Nota"
 	Nella notazione precedente, `n` indica una variabile che può influenzare il numero di operazioni eseguite dall'algoritmo. Il perché occorra specificarla sarà più chiaro grazie ai prossimi esempi.
 
 ### Alcuni esempi
@@ -175,3 +175,4 @@ endfor
 ```
 
 Per ogni iterazione del ciclo esterno (quello che usa come contatore la variabile `i`) avremo *n* iterazioni del ciclo interno (quello che usa come contatore la variabile `j`). La complessità temporale di caso peggiore sarà quindi $O(n^2)$; per quello che riguarda invece la complessità spaziale, invece, assumendo un meccanismo analogo al precedente, avremo sempre $O(1)$.
+

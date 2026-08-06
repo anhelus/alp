@@ -1,4 +1,4 @@
-# 3.2.1 - Ricerca lineare
+﻿# 3.2.1 Ricerca lineare
 
 Vediamo in ultimo gli algoritmi di ricerca.
 
@@ -29,4 +29,5 @@ function linearSearch(array, target):
 ## Complessità computazionale
 
 La ricerca lineare potrebbe dover consultare fino a $n$ elementi nel caso peggiore, per cui la sua complessità temporale è $O(n)$. La complessità spaziale è $O(1)$, poiché usa solo poche variabili di appoggio indipendentemente dalla dimensione dell'input.
+
 

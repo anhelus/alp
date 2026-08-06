@@ -1,4 +1,4 @@
-# 1.7.3 - Proprietà delle operazioni fondamentali
+﻿# 1.7.3 Proprietà delle operazioni fondamentali
 
 ## Operazioni con $n$ predicati
 
@@ -120,7 +120,7 @@ Il valore di verità di questo predicato sarà equivalente a quello dei seguenti
 
 In pratica, nel secondo predicato, verificheremo dapprima che la palla sia tonda e verde, e poi che sia nella scatola, laddove nel primo verificheremo le tre condizioni contemporaneamente. Stesse considerazioni valgono per le operazioni di somma logica. 
 
-!!!warning "Causalità delle verifiche"
+!!! warning "Causalità delle verifiche"
     Da notare come questa formulazione abbia come ipotesi "forte" il fatto che non vi sia alcuna relazione di causalità tra le proprietà associate. In pratica, si suppone che il fatto che si verifichi in primis che la palla sia tonda e verde *non abbia alcuna influenza o causalità* sul fatto che la palla sia nella scatola.
 
 Formalmente, dati $3$ predicati del tipo $p_1,p_2,p_3$:
@@ -251,3 +251,5 @@ $$
 $$
 
 Queste sono le basi per l'interpretazione dei principi dell'algebra booleana; nella [prossima lezione](04_laws.md) andremo ad approfondire alcune leggi notevoli.
+
+

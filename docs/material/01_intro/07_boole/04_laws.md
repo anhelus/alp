@@ -1,4 +1,4 @@
-# 1.7.4 - Leggi dell'algebra booleana
+﻿# 1.7.4 Leggi dell'algebra booleana
 
 Nella [scorsa lezione](03_ops_properties.md) abbiamo esplicitato le più importanti proprietà delle operazioni fondamentali dell'algebra booleana. Vediamo quindi quali sono alcune tra le leggi fondamentali che governano questa disciplina.
 
@@ -143,7 +143,7 @@ $$
 
 Le equazioni 1 e 2 rappresentano le due leggi di De Morgan.
 
-!!!note "Tabelle della verità"
+!!! note "Tabelle della verità"
     Verifichiamo le leggi di De Morgan sfruttando le tabelle della verità. Per la prima legge potremo scrivere:
 
     | $x_1$ | $x_2$ | $x_1 + x_2$ | $\overline{x_1 + x_2}$ |
@@ -231,7 +231,7 @@ Questa tecnica può essere quindi usata per creare funzioni composte di compless
 
 ## Riepilogo delle leggi
 
-!!!summary "Leggi fondamentali dell'algebra booleana"
+!!! summary "Leggi fondamentali dell'algebra booleana"
     - **Idempotenza**: $p + p = p$, $p \times p = p$
     - **Assorbimento**: $p_1 + p_1 \times p_2 = p_1$
     - **De Morgan**: $\overline{(x_1 + x_2)} = \overline{x_1} \times \overline{x_2}$, $\overline{(x_1 \times x_2)} = \overline{x_1} + \overline{x_2}$
@@ -241,3 +241,5 @@ Questa tecnica può essere quindi usata per creare funzioni composte di compless
 ## Conclusioni
 
 Nel corso di questa parte, abbiamo visto quali sono i concetti base dell'informatica, parlando della trattazione numerica binaria e delle relazioni legate all'algebra booleana. Nella prossima parte, prenderemo dimestichezza con le basi della programmazione.
+
+

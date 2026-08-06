@@ -1,4 +1,4 @@
-# 4.1 - L'architettura di Von Neumann
+﻿# 4.1 L'architettura di Von Neumann
 
 ## Introduzione
 
@@ -28,7 +28,7 @@ L'**unità aritmetico-logica** (*Arithmetic Logic Unit*, o **ALU**) è il compon
 
 La **memoria centrale** (o memoria primaria) è il componente che memorizza sia i dati che le istruzioni del programma. È organizzata in celle, ciascuna delle quali ha un indirizzo univoco. La CPU può leggere o scrivere il contenuto di una cella specificandone l'indirizzo.
 
-!!!note "RAM"
+!!! note "RAM"
     La memoria centrale è solitamente una memoria **RAM** (*Random Access Memory*), ovvero una memoria ad accesso casuale che permette di accedere a qualsiasi cella con tempi simili, indipendentemente dalla sua posizione. La RAM è una memoria *volatile*: quando il computer viene spento, il suo contenuto viene perso.
 
 ### Bus di sistema
@@ -52,7 +52,7 @@ La CPU esegue un programma seguendo un ciclo continuo chiamato **ciclo fetch-exe
 3. **Execute**: la CU attiva i circuiti necessari (tipicamente l'ALU) per eseguire l'operazione richiesta.
 4. **Write-back**: il risultato dell'operazione viene scritto nella destinazione appropriata (un registro o la memoria).
 
-!!!tip "Ciclo continuo"
+!!! tip "Ciclo continuo"
     Il ciclo fetch-execute si ripete continuamente fino a quando il programma non termina o il computer viene spento. Ogni ciclo corrisponde all'esecuzione di una singola istruzione.
 
 ## I registri della CPU
@@ -111,3 +111,5 @@ ADD R1, R2, R3   ; somma il contenuto di R2 e R3, salva il risultato in R1
 ## Conclusioni
 
 L'architettura di Von Neumann è il fondamento su cui si basa la stragrande maggioranza dei calcolatori moderni. Comprendere il funzionamento della CPU, dei registri e del ciclo fetch-execute è essenziale per capire come i programmi vengono effettivamente eseguiti a livello hardware.
+
+

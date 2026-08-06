@@ -1,68 +1,75 @@
-# Parametri formali ed attuali
+﻿# 2.5.2 Parametri Formali e Attuali
 
-Certamente, cercherò di spiegare i parametri formali e attuali in modo chiaro e adatto a studenti del primo anno, usando un esempio in MATLAB.
+Quando definiamo una funzione, dobbiamo stabilire quali dati riceve in ingresso e come li utilizza. I concetti di **parametro formale** e **parametro attuale** ci permettono di distinguere tra la definizione astratta della funzione e la sua chiamata concreta.
 
-**Concetti chiave: Funzioni e Parametri**
+## Parametri Formali
 
-Prima di parlare di parametri formali e attuali, è importante capire cosa sono le funzioni e perché usiamo i parametri.
+I **parametri formali** sono le variabili definite nell'intestazione della funzione. Fungono da "segnaposto": specificano *cosa* la funzione si aspetta di ricevere, senza indicare *quale* valore concreto.
 
-*   **Funzione:** Immagina una funzione come una piccola "macchina" che prende degli "ingredienti" (dati), li elabora e produce un "risultato".  Le funzioni ci permettono di organizzare il codice, renderlo più leggibile e riutilizzabile. Invece di riscrivere lo stesso blocco di codice più volte, lo mettiamo in una funzione e la chiamiamo quando serve.
-*   **Parametri:**  I parametri sono come gli "ingredienti" che passiamo alla "macchina-funzione".  Servono per far sapere alla funzione quali dati deve usare per svolgere il suo compito.
+```
+function calcolaAreaRettangolo(base, altezza)
+    return base * altezza
+endfunction
+```
 
-**Parametri Formali (o Argomenti Formali)**
+Qui `base` e `altezza` sono parametri formali. La funzione dichiara di aver bisogno di due valori per funzionare, chiamandoli internamente `base` e `altezza`.
 
-*   **Definizione:** I parametri formali sono le variabili che vengono *definite* all'interno della definizione della funzione.  Sono dei "segnaposto" che indicano cosa la funzione si aspetta di ricevere quando viene chiamata.  Immaginali come i nomi degli ingredienti scritti sulla ricetta (es. "farina", "uova", "zucchero").
-*   **Scopo:** Servono a definire come la funzione userà i dati che riceverà.  All'interno del corpo della funzione, usiamo i nomi dei parametri formali per riferirci ai valori che verranno passati.
-*   **Esempio (MATLAB):**
+## Parametri Attuali
 
-    ```matlab
-    function area = calcolaAreaRettangolo(base, altezza)
-        % Questa funzione calcola l'area di un rettangolo.
-        % base e altezza sono i parametri formali.
+I **parametri attuali** sono i valori *effettivi* che passiamo alla funzione quando la chiamiamo:
 
-        area = base * altezza;
-    end
-    ```
+```
+larghezza = 5
+lunghezza = 3
+area = calcolaAreaRettangolo(larghezza, lunghezza)
+```
 
-    In questo esempio, `base` e `altezza` sono i parametri formali della funzione `calcolaAreaRettangolo`.  La funzione si aspetta di ricevere due valori numerici, che internamente chiamerà `base` e `altezza`, e li userà per calcolare l'area.
+In questo caso, `larghezza` (con valore 5) e `lunghezza` (con valore 3) sono i parametri attuali. All'atto della chiamata:
 
-**Parametri Attuali (o Argomenti Attuali)**
+* il valore di `larghezza` (5) viene copiato nel parametro formale `base`;
+* il valore di `lunghezza` (3) viene copiato nel parametro formale `altezza`.
 
-*   **Definizione:** I parametri attuali sono i valori *effettivi* che vengono passati alla funzione quando la si chiama (cioè quando la si "usa"). Sono gli ingredienti *veri* che mettiamo nella "macchina-funzione".
-*   **Scopo:** Forniscono alla funzione i dati specifici su cui deve lavorare.
-*   **Esempio (MATLAB):**
+## Corrispondenza
 
-    ```matlab
-    lunghezza = 5;
-    larghezza = 3;
+L'ordine dei parametri attuali deve corrispondere all'ordine dei parametri formali:
 
-    areaRettangolo = calcolaAreaRettangolo(lunghezza, larghezza);
-    % lunghezza e larghezza sono i parametri attuali.
+```
+function dividi(dividendo, divisore)
+    return dividendo / divisore
+endfunction
 
-    disp(['L''area del rettangolo è: ', num2str(areaRettangolo)]);
-    ```
+dividi(10, 2)    // corretto: 10 / 2 = 5
+dividi(2, 10)    // SBAGLIATO: 2 / 10 = 0.2 (logica diversa!)
+```
 
-    In questo esempio, `lunghezza` (con valore 5) e `larghezza` (con valore 3) sono i parametri attuali.  Quando chiamiamo `calcolaAreaRettangolo(lunghezza, larghezza)`, il valore di `lunghezza` (5) viene passato al parametro formale `base`, e il valore di `larghezza` (3) viene passato al parametro formale `altezza`.  La funzione esegue i calcoli usando questi valori specifici.
+I nomi, invece, **non devono per forza coincidere**: l'importante è la posizione.
 
-**Riassumendo in una Tabella:**
+## Passaggio per valore vs riferimento
 
-| Caratteristica      | Parametri Formali                                      | Parametri Attuali                                            |
-| -------------------- | ------------------------------------------------------ | ------------------------------------------------------------ |
-| Dove si trovano     | Nella definizione della funzione                         | Nella chiamata alla funzione                                 |
-| Cosa sono            | Segnaposto per i valori che la funzione riceverà       | I valori effettivi che vengono passati alla funzione         |
-| Scopo                | Definire come la funzione userà i dati                 | Fornire alla funzione i dati specifici su cui lavorare        |
-| Esempio (MATLAB)    | `function miaFunzione(parametro1, parametro2)`       | `miaFunzione(valore1, valore2)`                             |
+Nella maggior parte dei linguaggi (C, Java, Python), il passaggio avviene **per valore**: la funzione riceve una copia del parametro attuale. Modificare il parametro formale all'interno della funzione **non** modifica la variabile originale:
 
-**Analogia con una Ricetta:**
+```
+function raddoppia(x)
+    x = x * 2     // modifica solo la copia
+    return x
+endfunction
 
-*   **Ricetta:** La funzione
-*   **Ingredienti elencati nella ricetta (es. "farina", "uova"):** Parametri Formali
-*   **Ingredienti che usi effettivamente per cucinare (es. 200g di farina, 3 uova):** Parametri Attuali
+n = 5
+risultato = raddoppia(n)
+// n vale ancora 5, risultato vale 10
+```
 
-**Punti importanti da ricordare:**
+In alcuni linguaggi (o tramite puntatori, come in C), è possibile il passaggio **per riferimento**, dove la funzione opera direttamente sulla variabile originale.
 
-*   **Corrispondenza:** L'ordine dei parametri attuali deve corrispondere all'ordine dei parametri formali nella definizione della funzione.  Se la funzione si aspetta `(base, altezza)`, devi passare i valori in quell'ordine: `calcolaArea(5, 3)` è corretto, `calcolaArea(3, 5)` darebbe un risultato diverso (e potenzialmente inatteso).
-*   **Nomi diversi:** I nomi dei parametri attuali e formali *non* devono necessariamente essere gli stessi.  Nell'esempio, abbiamo usato `lunghezza` e `larghezza` come parametri attuali e `base` e `altezza` come parametri formali.  L'importante è che i *valori* vengano passati correttamente.
-*   **Tipi di dati:**  Idealmente, i tipi di dati dei parametri attuali dovrebbero essere compatibili con i tipi di dati che la funzione si aspetta (anche se MATLAB è meno rigido di altri linguaggi in questo).  Se la funzione si aspetta un numero, dovresti passare un numero, non una stringa di testo.
+## Tabella riassuntiva
 
-Spero che questa spiegazione e l'esempio in MATLAB ti siano utili! Se hai altre domande, non esitare a chiedere.
+| Caratteristica | Parametri Formali | Parametri Attuali |
+|----------------|-------------------|-------------------|
+| Dove si trovano | Nella definizione della funzione | Nella chiamata alla funzione |
+| Cosa sono | Segnaposto per i valori attesi | I valori effettivi passati |
+| Scopo | Definire come la funzione userà i dati | Fornire i dati specifici su cui lavorare |
+| Esempio | `function f(x, y)` | `f(valore1, valore2)` |
+
+!!! tip "Analogia con una ricetta"
+    La **funzione** è la ricetta. I **parametri formali** sono gli ingredienti elencati nella ricetta ("farina", "uova"). I **parametri attuali** sono gli ingredienti veri che mettete nella ciotola (200 g di farina, 3 uova). La ricetta dice cosa fare con gli ingredienti, indipendentemente dalle quantità specifiche.
+

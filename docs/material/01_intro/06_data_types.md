@@ -1,4 +1,4 @@
-# 1.6 - Dimensione dei dati
+﻿# 1.6 Dimensione dei dati
 
 Nella [lezione precedente](05_sis_bin.md) abbiamo accennato al fatto che i calcolatori hanno a disposizione una word la cui dimensione dipende dall'architettura del processore; ciò implica che ogni tipo di dato (cui abbiamo [già accennato](02_data_repr.md)) avrà una dimensione prefissata. Scendiamo più nel dettaglio.
 
@@ -8,7 +8,7 @@ Nella [lezione precedente](05_sis_bin.md) abbiamo accennato al fatto che i calco
 
 Partiamo dai dati di tipo numerico intero. In questo caso, il limite legato alla dimensione della word impone che il massimo valore numerico trattabile da un calcolatore sia pari a $2^N$, con $N$ dimensione della parola. Nella pratica, se abbiamo una parola a $32$ bit, il valore massimo gestibile dal processore sarà pari a $2^{32}$ (o, considerando lo $0$, $2^{32}-1$). Nella maggior parte dei processori odierni, la parola è a $64$ bit, per cui il valore massimo gestibile dal processore sarà di $2^{64}$.
 
-!!!note "Nota"
+!!! note "Nota"
     Ricordiamo che $2^{64} = 18.446.743.073.709.551.616$. Il limite appare quindi abbastanza permissivo. Tuttavia, se sommassimo $1$ a $2^{64}$, il valore restituito sarebbe pari a zero o, più probabilmente, il programma andrebbe in errore.
 
 ##### Interi e segno
@@ -34,13 +34,13 @@ Nella seguente tabella, sono riassunti alcuni tra i tipi di valore intero più c
 | `ulong`      | 64 bit    | 0                        | $2^{64} - 1$              |
 | `long`       | 64 bit    | $-2^{63}$                | $2^{63} - 1$              |
 
-!!!note "Il simbolo `u`"
+!!! note "Il simbolo `u`"
     I più attenti avranno notato la presenza del simbolo `u` nelle notazioni che includono solo i valori positivi. Intuitivamente, la `u` sta per *unsigned*, ovvero "senza segno".
 
-!!!info "Come si rappresentano i numeri negativi?"
+!!! info "Come si rappresentano i numeri negativi?"
     Nei calcolatori, i numeri negativi non vengono memorizzati con un semplice segno `-`. Si usa invece la tecnica del *complemento a due*: per ottenere il negativo di un numero, si invertono tutti i suoi bit e si aggiunge $1$. Ad esempio, in 8 bit, $5 = 00000101_2$, il suo complemento a due è $11111011_2 = -5$. Questo meccanismo permette di usare lo stesso circuito per somma e sottrazione.
 
-!!!warning "Overflow"
+!!! warning "Overflow"
     Cosa succede se si supera il massimo valore rappresentabile? Si verifica un *overflow*: il risultato "gira" tornando al valore minimo (o viceversa). Ad esempio, in un `byte` senza segno, $255 + 1 = 0$, mentre in un `byte` con segno, $127 + 1 = -128$. Questo è un errore sottile che i programmatori devono sempre tenere d'occhio.
 
 ### Numeri reali
@@ -69,7 +69,7 @@ $$
 
 Questa notazione, in cui la parte frazionaria è compresa tra $0$ ed $1$, mentre quella intera è pari a $0$, è detta *normalizzata*. 
 
-!!!note "Notazioni equivalenti"
+!!! note "Notazioni equivalenti"
     Equivalentemente, potremmo scrivere $n = 0.052 * 10^2$, oppure $n = 52 * 10^{-1}$. Tuttavia, è la notazione normalizzata quella ad essere usata per convenzione.
 
 La rappresentazione in virgola mobile ha il vantaggio di poter rappresentare un insieme di valori molto più ampio rispetto a quello rappresentabile in virgola fissa. Immaginiamo, ad esempio, di voler rappresentare il numero $100000$, avendo però a disposizione soltanto $5$ simboli. Con una rappresentazione a virgola fissa non potremmo farlo; con una rappresentazione a virgola mobile, invece, potremo usare l'equivalenza:
@@ -80,10 +80,10 @@ $$
 
 Dato che dovremo memorizzare esclusivamente la mantissa e l'esponente, avremo bisogno soltanto di due simboli, rispettando i vincoli imposti.
 
-!!!warning "Mantissa e base decimale"
+!!! warning "Mantissa e base decimale"
     In questo esempio, abbiamo utilizzato la base decimale per semplicità. Tuttavia, gli stessi concetti si estendono all'utilizzo della base binaria.
 
-!!!tip "IEEE 754: lo standard per i float"
+!!! tip "IEEE 754: lo standard per i float"
     Nella pratica, i numeri in virgola mobile seguono lo standard **IEEE 754**, che definisce due formati principali: il `float` a $32$ bit (1 bit di segno, 8 per l'esponente, 23 per la mantissa) e il `double` a $64$ bit (1 bit di segno, 11 per l'esponente, 52 per la mantissa). Il `double` offre maggiore precisione ma occupa il doppio della memoria.
 
 ## Caratteri
@@ -96,14 +96,16 @@ Quando si parla di carattere, si parla di *qualsiasi simbolo che è possibile ra
 
 Ciò implica la presenza di un'*enorme* varietà di caratteri, che ha portato alla necessità di una rappresentazione comprensiva ed uniforme, richiedendo quindi molti più bit dei $5$ inizialmente preventivati. Inoltre, è necessario usare una corrispondenza biunivoca tra simbolo e numero intero, definita mediante opportune tabelle, e che segue standard come l'ASCII e l'UNICODE.
 
-!!!example "Esempio: ASCII"
+!!! example "Esempio: ASCII"
     Nella tabella ASCII, ogni carattere è associato a un numero tra $0$ e $127$. Ad esempio, `'A' = 65`, `'B' = 66`, `'a' = 97`, `'0' = 48$. In binario, `'A'` diventa $01000001_2$, occupando esattamente un byte. ASCII basta per l'inglese, ma non per caratteri accentati o alfabeti non latini: per quelli serve UNICODE (tipicamente UTF-8), che usa da $1$ a $4$ byte per carattere.
 
 ## Conclusioni
 
 Abbiamo visto come siano rappresentati in memoria alcuni tipi di dati, e come la dimensione occupata da questi cambi con le caratteristiche della parola usata per rappresentarli.
 
-!!!tip "Perché tutto questo è utile in programmazione"
+!!! tip "Perché tutto questo è utile in programmazione"
     Quando scriverai codice, dovrai scegliere il tipo giusto per ogni variabile: usare un `int` invece di un `long` ti fa risparmiare memoria, ma rischi l'overflow se i numeri crescono troppo. Usare un `float` invece di un `double` è più veloce ma meno preciso. Conoscere la rappresentazione dei dati ti aiuterà a fare scelte consapevoli.
 
 A questo punto, ci manca un ultimo tassello per la nostra panoramica sui concetti alla base dell'informatica: infatti, dovremo vedere come le variabili binarie si combinano tra loro sfruttando i concetti dell'[algebra booleana](./07_boole/01_intro.md).
+
+
